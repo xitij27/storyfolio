@@ -1,5 +1,16 @@
 # Handover
 
+## Accepted improvements in progress
+
+On 10 October 2026 the author said: "yes, I like your recommendations.
+Let us implement them". The plan is
+`docs/superpowers/plans/2026-10-10-accepted-improvements.md`.
+Opening and closing candidates will be committed and evaluated separately
+under the unchanged v1 rubric. Parallel work prepares a versioned physics
+evidence fixture, optional diagnostic v2 judging and a privacy enforcement
+investigation. Existing runs and scores remain intact. No result for these
+new candidates is established yet.
+
 ## Recommendations after reviewing the completed results
 
 On 10 October 2026 the author asked: "okay so now we have the test results.

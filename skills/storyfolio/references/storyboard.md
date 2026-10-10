@@ -30,6 +30,8 @@ Under each chapter, a row to a beat. A beat is one settled state of the scene an
 
 Say how a visitor who does not scroll gets the name, what the person does, one proof of it, and how to reach them. The first screen carries the first three. A rail jumps to any chapter, and one link skips to the close.
 
+Specify what the opening tells someone outside the field about the person's work, in ordinary words supported by the fact sheet. Explain any unfamiliar title or technical term there. This meaning is part of the plan even while the final captions wait.
+
 ## Without the scene
 
 Say what a visitor gets in each case. The text is ordinary HTML over the scene, so all of it is there in every row. Say what stands in for the pieces.
