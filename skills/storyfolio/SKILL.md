@@ -50,6 +50,6 @@ In the person's own folder, so that a later session can go on from the files alo
 
 ## What holds from the first stop on
 
-- **Nothing about the person is invented.** You know that a number, an employer, a title and a quote are facts. So is a sentence about what was wrong before they came, how often a thing is used, why something happened, or what a project taught them. A sentence like that sounds like writing, and it is a claim. If the fact sheet does not hold it, ask for it or leave it out.
+- **Nothing about the person is invented.** You know that a number, an employer, a title and a quote are facts. So is every small thing a sentence says on its way: what was wrong before they came, how often a thing is used, which came first, why, how a thing was left, what it taught them. That sounds like writing, and it is a claim. Before you hand anything over, read each sentence about the person and find the line of the fact sheet it stands on. A sentence with no line goes, or becomes a question.
 - **A number is used as the person confirmed it,** with what it measures and whose result it is.
 - **What is someone else's is asked about before it is planned for:** a photograph a photographer took, a friend's drawing, a quote, an employer's screens, a story with a patient or a client in it.

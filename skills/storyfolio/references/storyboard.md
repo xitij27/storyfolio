@@ -8,23 +8,23 @@ A plan covers what its asker thought to ask for. Most people ask for the idea an
 
 A row to a chapter:
 
-| Chapter | Its name in the form | The role it holds | What you read | What the pieces do | What you can touch |
+| Chapter | Its name in the form | The role it holds | What it tells, in a few words | What the pieces do | What you can touch |
 |---|---|---|---|---|---|
 
 ## The beats
 
 Under each chapter, a row to a beat. A beat is one settled state of the scene and one block of text.
 
-| Beat | Screens | How the pieces stand | What is on their faces | What the chapter adds | Its caption |
+| Beat | Screens | How the pieces stand | What is on their faces | What the chapter adds | What its caption stands on |
 |---|---|---|---|---|---|
 
 - **Screens:** how much scroll the beat takes. One, or more where the scroll works something.
 - **How the pieces stand:** a stack, a fan, a ring, a row, a wall, or what the chapter needs. The same pieces in every beat.
 - **What is on their faces:** the person's real pictures and words. Name the picture.
 - **What the chapter adds:** anything in the scene besides the pieces. Often nothing.
-- **Its caption:** a title and a sentence or two, written from the fact sheet.
+- **What its caption stands on:** a working title of a few words, and the lines of the fact sheet the caption will be written from. Not the caption.
 
-A caption says nothing the fact sheet does not say. What a project taught the person, what was wrong before they came, how often a thing is used: those are theirs to tell you. Where you want such a sentence and do not have it, write the question in its place.
+**Write no captions yet.** The words are written at a later stop, where the person chooses them. A sentence written now, to make the script read well, is where a detail gets in that nobody told you: a hall that was "standing empty", a wheel that is "true again". So a beat names its facts and stops there. Where a beat wants something the fact sheet does not hold, such as what the work taught them or what was wrong before they came, put the question in its place.
 
 ## Someone with thirty seconds
 

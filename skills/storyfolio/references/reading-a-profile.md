@@ -44,7 +44,7 @@ So put these to every line of the fact sheet. Where the material does not answer
 |---|---|
 | Figure | What does it measure, and over what time? Is it measured, modelled or a guess? Whose result is it: theirs, or a team's? |
 | Result of a team, a firm or a club | Were they in it when it happened, and what was their part? |
-| Job, employer or lab | What did they themselves do there? Its name is not an answer. |
+| Job, employer or lab | What did they themselves do there, in a sentence of their own? Its name is not an answer, and neither is a line such as "operations" or "supported the team". |
 | Project | What was it: something in use, a course exercise, a script? Did it ever run anywhere? Who else made it? |
 | Title | Is it what they are on paper, or what they are called? |
 | Picture, drawing or quote | Who made it? Whose is it to use? Who or what does it show? |
@@ -63,11 +63,14 @@ One message, which is the whole of your reply:
 
 1. Two or three sentences on who you take them to be.
 2. Your questions, numbered, so that they can answer by number. Plain words. Say why you ask wherever that is not plain. Every disagreement and every item under "To confirm" is one of them.
-3. Four more, which no material answers:
+3. These, which no material answers:
    - Who is the site for, and what should a visitor do when they reach its end?
    - What must not be shown?
    - What do you work from, day to day? The documents, lists and rituals of your trade, by the names you call them.
    - What did you learn from?
+   - If they have a site already: what becomes of it?
 4. Nothing else. No concept, no outline, no look.
 
 When they answer, write each answer into the fact sheet beside its fact, before you do anything else.
+
+Every question then stands as one of two: answered, in their words, or not answered. One they passed over is not answered, and it stays under "To confirm". Silence is not a yes. That they have photographs does not say whose the photographs are.

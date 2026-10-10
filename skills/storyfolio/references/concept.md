@@ -72,7 +72,7 @@ Rework or drop one that fails.
 | Backdrop | With the 3D deleted, is meaning lost, or only decoration? |
 | Depth | Has it a beginning, a middle and an end that follow from one another? |
 | Emblem | Is the object the picture that stands for the job? |
-| Honesty | Does anything in it claim more than the fact sheet? |
+| Honesty | Does any sentence in it say more than the fact sheet does: a ranking, a reason, which came first, how a thing was left, a day, a place? |
 | Thirty seconds | Can someone who does not scroll get the name, the work, some proof, and how to reach them? |
 
 ## Three cases
