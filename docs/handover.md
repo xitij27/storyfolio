@@ -17,6 +17,31 @@ Wednesday 14 October at 07:00. The batch needs more than was left.
 
 ## What this is
 
+### Test status checked on 10 October 2026
+
+The author asked to read the docs and see whether tests remain. Checked the
+saved artifacts: only iteration 1 exists, with 40 conversations (each has its
+third reply) and 40 judgements, and no `.err` files. Round 2, the final batch
+and the stronger-model batch have no saved runs. The five changes at
+`e178be2` still need their first evaluation.
+
+The local checks were run again: `node evals/check-skill.mjs`,
+`node evals/check-people.mjs` and `npm test` all passed. There are 29 test
+declarations across three test files; this environment's test output reports
+three passing file subtests and no failures.
+
+Remaining stage 1 validation is round 2 (ten cases twice, then judging and
+reporting), rounds 3 and 4 if needed, the final all-case evaluation specified
+by Task 8, two stronger-model cases (chef and analyst), and the fresh review
+of the whole repository. Section B says round 2 also covers all cases with
+the current skill; if it is the last revision, settle whether that satisfies
+the final-batch requirement before paying for a duplicate batch. The existing
+question about how to judge fair inference is still unresolved in these
+docs. The author's assessment of whether the concepts are worth building is
+also outstanding. Engine checks and the complete-site proof belong to later
+stages that have not begun. No paid evaluations were started for this status
+check.
+
 A skill, `skills/storyfolio/`, that takes an agent from a person's profile to
 a portfolio site of one kind: one long scroll that tells one story, carried by
 one object in 3D taken from the person's own work.
