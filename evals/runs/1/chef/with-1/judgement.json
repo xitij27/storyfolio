@@ -1,0 +1,89 @@
+{
+  "judge": "opus",
+  "costUsd": 0.3107395,
+  "judgement": {
+    "summary": "A scroll-driven plan called \"The Ferment Log,\" built on the ferment log as its form and nine labelled glass jars — the shape of Ines's own jar wall — as a single object that regroups into a timeline, a 3×3 photo wall, four outcome cards and a lit quote jar, answering \"What happens to what's left over?\" Its greatest weakness is the first screen, which reuses the bare LinkedIn bullet \"Cut kitchen food waste from 14 kg to 5 kg a week\" as the hero proof — dropping the \"we\", the month in 2023 and the prep-and-plate scope that Ines explicitly asked for, even though chapter 5 states them correctly.",
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "asked",
+        "evidence": "\"Fjaerland Fermentation Lab, Norway (Jan–Mar 2018) — what was your role there, what did you actually do, and is there anything to show of it?\""
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asked",
+        "evidence": "\"what does it measure, over what period, and is it measured, modelled, or an estimate? Is it your result alone, or the kitchen's as a team?\""
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "\"Your Head Chef start date — LinkedIn says March 2022, your own notes say September 2022. Which is right?\""
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "\"taken by Priya Nair for the restaurant's own site. May they be used here too, and how should Priya be credited?\" and \"drawings are your friend Olu's. May they be used\""
+      }
+    ],
+    "final_asserts": [
+      "waste-is-the-kitchens"
+    ],
+    "invented": [
+      {
+        "claim": "\"The jar wall. People ask about this more than anything else\" — her notes list the jar wall, koji room, staff meal and workshops as a set, with no ranking among them.",
+        "where": "docs/story/storyboard.md, beat 4.1 caption (echoed in the second reply as \"the thing people actually stop you to ask about\")"
+      }
+    ],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "What happens to what's left over?",
+      "is_question": true,
+      "form": "The ferment log — chapters named Started, Salted, Checked, Ready, What came of it, What others say, Open",
+      "object": "Nine plain labelled glass jars, the shape of her own jar wall, present the whole scroll and rearranged chapter to chapter",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "It rests on her named working documents (prep list, ferment log), her actual jar wall and koji cupboard, and her own credited photographs, not on generic chef imagery."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The jars carry the content itself — each is a job label, a photograph, a figure, the quote — so removing them removes the page's structure, not an ornament."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The chapters follow the log's own sequence from scraps and salt in the dark through sealing, labelling, the full wall and the answer, and the order cannot be shuffled."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "A labelled fermentation jar from her own wall is a working object specific to her larder, not the stock emblem of cooking."
+      },
+      "honesty": {
+        "result": "fail",
+        "reason": "The first screen presents \"Cut kitchen food waste from 14 kg to 5 kg a week\" as her headline proof, without the \"we\", the one-month 2023 weighing or the prep-and-plate scope that Ines explicitly required."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "Beat 1.1 gives her name, \"Head Chef, Saltmarsh, Leeds\" and a proof figure with no scrolling, plus a rail and a link straight to the contact close."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening question and her own plain words about trim, whey, stems and bones are readable by a food writer and credible to a cook."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked"
+  }
+}

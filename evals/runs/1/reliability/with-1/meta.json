@@ -1,0 +1,71 @@
+{
+  "person": "reliability",
+  "arm": "with",
+  "rep": 1,
+  "iteration": "1",
+  "model": "sonnet",
+  "skill": {
+    "commit": "aff5bca",
+    "uncommitted": false
+  },
+  "called": false,
+  "complete": true,
+  "said": [
+    "I want a portfolio website that really stands out. Not a template. I like the award-winning kind, with 3D and things that move as you scroll, but it should feel like me and my work and not like a demo.\n\nEverything about me is in the material folder here.\n\nPlan it for me before anything is built: the idea behind it, what happens as you scroll from top to bottom, what each part shows, the colours and the type, how it holds up on a phone, and what else the site needs. Do not build anything yet.\n",
+    "Thanks. Here is what you should know, whether or not you asked.\n\n- \"Zero downtime\" on my resume is too strong. There were two incidents during\n  the migration, both under ten minutes, both internal. 99.98% is the\n  measured figure. Use that, and say what it measures: the order API, over\n  the 26 months.\n- Pages per week, 85 to 22: that was the on-call team of nine, over about a\n  year, and half of it was deleting alerts nobody needed. Say \"we\".\n- ferry: I did not create it. A former colleague did. I have maintained it\n  since 2022, and I wrote its cutover command.\n- The runbook: I wrote its first version and I still own it. 40 teams use it.\n- Lumen Pay: nothing of theirs can be shown or described beyond the line on\n  my LinkedIn. Kestrel: the talk and its slides are public. Internal diagrams\n  are not.\n- The first production outage I caused was in 2014, at the library. I dropped\n  a table. I tell that story at the start of my talk. It is why I care about\n  rollbacks.\n- Who it is for: I am going independent next year. I want a company that is\n  about to do a migration it is afraid of to find me and write to me.\n  Conference organisers too.\n- The old site can go. Nothing that matters links to it.\n- What I work from: the runbook, the cutover checklist and the rollback\n  plan. A postmortem only when something has gone wrong, which is the point.\n- Books: the Google SRE book, and Release It! by Michael Nygard.\n\nFor anything I have not covered, use your judgement and tell me what you assumed. Carry on.\n",
+    "Go with the direction you recommend. Give me the whole plan now, in full: every part of the page in order, what the 3D does in each, what a visitor can click, the look, how it works on a phone and without the 3D, and the list of everything else the site needs. Still no building.\n"
+  ],
+  "written": [
+    "docs/story/facts.md",
+    "docs/story/concepts.md",
+    "docs/story/storyboard.md",
+    "docs/story/decided-for-you.md",
+    "docs/story/handover.md"
+  ],
+  "refused": [],
+  "turns": [
+    {
+      "costUsd": 0.1492356,
+      "durationMs": 73985,
+      "failed": false,
+      "tools": [
+        "Skill",
+        "Read",
+        "Glob",
+        "Read",
+        "Read",
+        "Read",
+        "Write"
+      ],
+      "skillUsed": true
+    },
+    {
+      "costUsd": 0.268212,
+      "durationMs": 216626,
+      "failed": false,
+      "tools": [
+        "Edit",
+        "Edit",
+        "Read",
+        "Write"
+      ],
+      "skillUsed": false
+    },
+    {
+      "costUsd": 0.2587838,
+      "durationMs": 182400,
+      "failed": false,
+      "tools": [
+        "Edit",
+        "Read",
+        "Write",
+        "Write",
+        "Write"
+      ],
+      "skillUsed": false
+    }
+  ],
+  "skillUsed": true,
+  "readPrivate": false,
+  "leakedPrivate": false
+}

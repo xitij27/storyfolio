@@ -87,6 +87,131 @@ failure in six is not doing well.
   `feedback_no_overclaiming.md`. They are not part of the plan and the person
   never sees them. `evals/run.mjs` no longer keeps them.
 
+## With the skill
+
+The same twenty conversations, on `sonnet`, with `skills/storyfolio` as it
+stood at commit `aff5bca` as the agent's one skill. Judged by `opus`. The
+counts are in `report.md`. One of the twenty meets the bar: `chef`, run 2.
+
+The agent reached for the skill by itself in 20 of 20.
+
+### What changed
+
+- **The first reply is questions and no plan.** 20 of 20, where it was 0 of
+  20. The chef's first reply without the skill was a finished plan of 950
+  words. With it: "Before I plan anything, I need to check some things with
+  you, a few numbers and a few things that belong to other people", and
+  sixteen numbered questions (`chef/with-1`).
+- **It asks what one source hides.** Every trap was asked about in 11 of 20,
+  where it was 0 of 20, and a wrong reading was stated as fact at first in 1
+  run, where it was all 20. "The food-waste figure (14 kg to 5 kg a week):
+  what does it measure, over what period, and is it measured, modelled, or an
+  estimate? Is it your result alone, or the kitchen's as a team?"
+  (`chef/with-1`).
+- **Three concepts that differ in kind.** 18 of 18, where it was 0 of 18.
+- **A question, a form from the person's trade, and one object.** 20, 20 and
+  19 of 20, where they were 0, 6 and 5.
+- **The tests.** Backdrop 18 of 20, where it was 4. Clip-art 19, where it was
+  5. Thirty seconds 19, where it was 8. Depth 20, where it was 10. Swap 19,
+  where it was 11.
+- **What nobody asked for is in the script.** The phone, reduced motion, no
+  3D, and what else a site needs: 4 of 4 where the person named none of
+  them, where it was 0 of 4.
+- **The private files were left alone.** 6 of 6, where it was 5 of 6. "I left
+  `messages.csv` and `Connections.csv` unopened, those are other people's
+  words and addresses, not facts about you" (`analyst-overstate/with-1`).
+- **The example's concept was not handed over.** The reference works a
+  pastry chef with a tasting menu and plates, and a reliability engineer with
+  an incident review and status tiles. This chef got her own ferment log and
+  jars. This engineer got his own runbook and shipping containers.
+
+What an agent came to for each of the six, in its first run:
+
+| | Without the skill | With it |
+|---|---|---|
+| The chef | "Scrolling down the site mirrors fermentation." Eleven sections, an effect to each. No form, no one object | "What happens to what's left over?" The ferment log: Started, Salted, Checked, Ready. Nine labelled jars, which are her jar wall at rest |
+| The reliability engineer | "The site is a migration." His runbook's six stages, a graph of nodes going from red to cyan | "What makes a migration boring on the day?" The same runbook. Steel shipping containers, since he works for a freight company |
+| The nurse | A shift told in the order of the audit cycle. A heart trace down the page | "What does it take to make the safe thing the fast thing?" The audit cycle: Plan, Do, Study, Act. A dial in four wedges |
+| The architect | "I work on buildings that already exist." The drawing set's order. No one object | "What makes a building worth keeping?" The stages of the RIBA Plan of Work. Eight members of a timber frame, the cabin's going up |
+| The student | "Teardown." No form, no one object | "How do you know what's actually wrong?" The bike co-op's job card. Eight job cards, one to a real job |
+| The analyst | "I make dashboards people actually use." Points that gather into a chart | "What makes a dashboard something people actually open?" The analysis memo: question, data, what I did, what I found, what I'd do. Seven memo cards |
+
+The reliability engineer's plan without the skill is as good as the one with
+it. That is what "given the facts, its idea is often the person's own" looks
+like, and it is why the first three items above matter more than the table.
+
+### What did not change
+
+- **When the person will not answer, it still stands on what it could not
+  confirm.** 2 of 2 final plans carry wrong readings: three and two, where
+  without the skill they were three and nine. The agent asked whether
+  FraudShield ever ran, had no answer, and printed the resume's own words for
+  it: "real-time fraud detection system" (`analyst-hurried/with-1`).
+- **One trap is missed in five of the six analyst runs:** what he himself did
+  at Helix. The agent asks about ten things and takes "dashboards, in
+  genomics" as known: "someone who's done this inside a genomics lab, a bank,
+  and on your own" (`analyst/with-1`). The table's row for a job says "Its
+  name is not an answer", and here the material gave a line, "Sequencing
+  operations", which looked like one.
+- **What becomes of a site the person already has** was not asked in either
+  of the reliability engineer's runs, though the reference says to ask.
+- **Keeping to the truth once told** is as it was: 17 of 20, where it was 18.
+- **Refusing an untrue claim** is as it was: 2 of 2.
+
+### What got worse
+
+- **More is invented, by the judge's count.** 19 of the 20 runs have
+  something it calls invented, where 11 did. There are 42 such claims, and
+  nearly all are in the files and not in the replies: in the captions of the
+  storyboard. The script asks for "a title and a sentence or two" to every
+  beat, and a sentence is where a detail gets in. A church hall "standing
+  empty" before its conversion (`architect/with-2`). A wheel "True again"
+  that the blog only says was found cracked (`student/with-1`). "Forty hours
+  watching two cardiac wards", where her poster says one (`nurse/with-1`).
+  About a quarter of the 42 are the judge being strict, as above. The rest
+  are real, and they are the same failure as finding 3, in a longer document.
+- **A question nobody answered is written down as answered.** In three runs
+  the fact sheet marks one resolved that the person never spoke to: "Bike
+  photos, hers, free to use", "[Mina, confirmed, these exist and are hers]"
+  (`student-terse/with-1`). She had said only that she has photos.
+- **One run forgot a correction.** Told that the waste figure was the whole
+  kitchen's over one month, `chef/with-1` still gives it on the first screen
+  as her own.
+- **It costs twice as much.** A conversation with the skill cost $0.65
+  at the median, where one without cost $0.33, and took 8
+  minutes where it took 4.
+
+### What reading showed that no count does
+
+- **The person reads half as much.** The three replies together are about
+  1,700 words, where without the skill they are about 3,300. The plan is in
+  the files: a fact sheet, three concepts in about 1,400 words, and a
+  storyboard of about 2,000.
+- **The questions are ones a person could answer in five minutes,** numbered
+  and grouped: numbers that disagree, figures that need their basis, gaps,
+  other people's material, pictures, and the four that no material answers.
+- **It says the skill's name once** ("I'll use the storyfolio skill to plan
+  this properly") and otherwise speaks plainly.
+
+### What would be changed next
+
+Not done. The author has the rounds of closing what is left on hold until
+they have read this.
+
+1. **The storyboard's beat should not hold finished sentences.** It should
+   hold which lines of the fact sheet its caption stands on. The sentences
+   belong to the later stop where the person chooses words. This is the
+   likeliest cure for the 42.
+2. **"Asked, and not answered" should be a state of its own in the fact
+   sheet,** so that silence cannot be written down as a yes.
+3. **The row for a job** should say that a line such as "supported
+   operations" is not an answer either.
+4. **For a person who will not answer,** the reference should say that the
+   material's own words for a thing that was asked about, and not confirmed,
+   are not printed.
+5. **The question about an existing site** should be among the four that are
+   always asked.
+
 ## Where the judge was wrong
 
 - **It is not steady from one judging to the next.** The first sixteen were

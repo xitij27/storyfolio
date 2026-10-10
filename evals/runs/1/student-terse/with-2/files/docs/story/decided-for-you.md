@@ -1,0 +1,10 @@
+# Decided without asking — Mina Park
+
+- **7 tags, and which 7.** The object needed 5–12 similar pieces; I picked one per real project/story on the fact sheet (bike frame, wheel, bottom bracket, paint, bracket, charger) plus one left blank for the bracket's untested state. Why: each tag maps to something already confirmed, nothing invented to fill a slot. To change: add or drop a tag if a project should carry more or less weight.
+- **Three "look" options, not one.** Workshop kraft, shop-floor dark, clean service desk. Why: the skill has Mina pick the look by scrolling once it's built, not from a description now. To change: say now if one is clearly wrong and it won't be built.
+- **Two typefaces, not named yet.** A humanist sans for body text, a stamped/typewriter face for the tags. Why: exact fonts are a build-time choice, not a planning one. To change: say if you have a typeface preference already.
+- **Side rail + one skip-to-contact link, not a top navbar.** Why: the form is a stack of chapters, not a set of pages; a rail matches how the object moves. To change: say if you'd rather a conventional top nav.
+- **A page per project: later, not now.** Why: the brief is a two-minute read for someone screening placements; Chapter 5 already shows each project. To change: ask for one if you want a deeper page behind a project later.
+- **The blog stays at slowmiles.example; the site links out rather than rebuilding it.** Why: it already exists and works. To change: say if you'd rather the posts live on this site.
+- **No legal notice, no chat, no language switcher.** Why: none were asked for, and nothing on the fact sheet needs them. To change: say if any becomes necessary (for example, if a contact form is added later that collects data).
+- **A link-preview line and a small icon.** Why: every shared link needs something to show; I haven't picked the exact wording or icon yet, just confirmed it'll exist. To change: nothing to decide yet, just flagging it'll need a one-line preview and a simple mark, not a photo.

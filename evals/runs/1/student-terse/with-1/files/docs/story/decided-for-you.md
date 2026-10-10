@@ -1,0 +1,5 @@
+# Decided for you
+
+- **"Second-year"** kept as her year, since she didn't say otherwise and it's what cv.md states. If she's moved to third year by the time this goes live, change every "second-year" reference (there should be few — the site leans on what she's done, not her year label).
+- **What she learned from** (book/person/failure) — she didn't answer this in her last reply. Not treating it as blocking: the material already gives a strong failure to build on (the charger's 4-minutes-for-1%-charge result, and the bracket not yet tested). Will not invent a quote or lesson beyond what's in the facts; if a concept needs one, it'll be asked for by name rather than guessed.
+- **The hand-crank charger piece has no photo on record.** Built plain: real proportions (a housing shell, a small gear train visible inside or alongside it), no texture standing in for a photo that doesn't exist. If she has a photo of the actual charger, swap it in before build; otherwise it stays a plain modelled part, same as the other pieces would be if their photos ever ran out.

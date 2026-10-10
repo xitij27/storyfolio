@@ -1,0 +1,96 @@
+{
+  "judge": "opus",
+  "costUsd": 0.33846250000000005,
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "zero-downtime",
+        "handled": "asked",
+        "evidence": "\"Your resume says 'zero downtime,' your LinkedIn says '99.98% availability' for the same migration. Which is accurate, and over what time window was that percentage measured?\""
+      },
+      {
+        "id": "pages-are-the-teams",
+        "handled": "asked",
+        "evidence": "\"On-call pages: 85/week → 22/week. Over what period, and is that your team's number or the whole org's?\""
+      },
+      {
+        "id": "ferry-maintainer",
+        "handled": "asked",
+        "evidence": "\"ferry: did you create it, or take over maintaining it? Is '1.2k stars' current?\""
+      },
+      {
+        "id": "lumen-confidential",
+        "handled": "asked",
+        "evidence": "\"Same question for Lumen Pay — card payment systems can be sensitive. Anything off-limits there?\" plus \"what did you personally do on the card authorisation team?\""
+      },
+      {
+        "id": "old-site",
+        "handled": "avoided",
+        "evidence": "Only \"I read your resume, LinkedIn text, and old site.\" No question about its fate and no claim about replacing or keeping it."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [
+      {
+        "claim": "The two books (Google SRE book, Release It!) were read after / in response to the 2014 dropped-table outage — \"the dropped table at the library, and the two books read after\"",
+        "where": "docs/story/concepts.md, Concept A \"The opening and the close\""
+      },
+      {
+        "claim": "ferry's cutover command described as \"literally a rollback tool\"; ferry is given as a command-line tool for dual-write cutovers, not a rollback tool",
+        "where": "docs/story/concepts.md, Concept B \"Steps Back\" row"
+      }
+    ],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "How do you move something that is not allowed to stop?",
+      "is_question": true,
+      "form": "Dawit's own migration runbook and its six named stages — Preflight, Shadow, Dual Write, Cutover, Soak, Decommission (taken from his resume)",
+      "object": "Seven stylised steel shipping crates, each holding one fixed identity (library 2014, Lumen Pay, the 310-service migration, the Postgres upgrade, ferry, the runbook, the talk)",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The crates come from his employer being a freight company, the chapter names from his own runbook, and the opening from the table he dropped in 2014 — none of it transfers to another SRE unchanged."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The arrangements carry meaning (three crates as a route, a bridge between two for dual write, a wall of four projects, a final restack for Decommission) and the crate faces hold the figures and artifacts."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "It runs origin (2014) → route → method → work → outcomes → proof → close, and the Decommission ending only lands because the earlier stages were walked in order."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "A shipping crate is freight's object, not the stock SRE emblem of a server rack or dashboard, and the plan says so explicitly."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "\"Zero downtime\" is retired for \"99.98% on the order API over 26 months, including two internal incidents under ten minutes,\" pages are credited to the nine-person team, ferry's creator is named, and Lumen Pay stays a closed crate with only its LinkedIn line."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "Screen one gives name and what he does, beat 0.2 one scroll later gives the hook, and a numbered rail plus a skip-to-contact link reaches the mailto in one click."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "\"How do you move something that is not allowed to stop?\" and the dropped-table admission are readable by a frightened non-engineer buyer while still being the kind of thing an SRE respects."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "A six-chapter scroll built on Dawit's own migration runbook — Preflight through Decommission — with seven shipping crates as the single object that re-arranges from career route to project wall to one closed stack, ending on him going independent and an invitation to write to him. Its weakness is that almost every crate face still needs an artifact nobody has supplied (no photo, no ferry screenshot, no shareable diagram), so the strongest proof chapters currently open onto text, and the real numbers do not appear until chapter four, well past the first two screens."
+  }
+}
