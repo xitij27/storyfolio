@@ -4,8 +4,8 @@
 
 On 10 October 2026 the author asked to use Codex and not Claude Code. Use
 these commands for new runs. The Claude commands below document iteration 1
-only. The skill is unchanged. The main `codex-sol-1` comparison runs ten
-people twice in each arm on `gpt-6.1-sol`, medium reasoning, followed by
+only. The original `codex-sol-1` comparison runs ten
+cases twice in each arm on `gpt-6.1-sol`, medium reasoning, followed by
 independent `gpt-6-astra` judging at medium reasoning with the same rubric.
 An earlier partial Astra-only experiment remains in `codex-1`. Do not mix
 its results with the Sol comparison. The author questioned using the same
@@ -88,6 +88,38 @@ specificity. Verify the saved cohort without model calls using
 original ten-case cohort, pass
 `--people analyst,analyst-hurried,analyst-overstate,architect,chef,chef-terse,nurse,reliability,student,student-terse`
 explicitly. Do not extend a completed historical iteration by accident.
+
+## Focused refinements
+
+Later candidates have their own saved inputs, evidence, conversations and
+judgements. They are not extensions of the original full comparison:
+
+- [Source checks](runs/codex-sol-2/findings.md): chef, analyst,
+  analyst-hurried and student twice each. Factual measures improve in this
+  sample, while the full bar declines from 3/8 to 2/8.
+- [Private-file boundary](runs/codex-privacy-1/findings.md): PhD, analyst and
+  student twice each. Both PhD agents read the revised rule and still open
+  the private file. Both analyst cases leave their private files unopened.
+  This candidate clarifies scope but does not establish reliable protection.
+- [Summary and question premises](runs/codex-premise-1/findings.md):
+  analyst-hurried and student twice each, using the same model roles and
+  unchanged rubric. Both analysts avoid the unsupported genomics premise;
+  all four final plans are factually clean, but the full bar is 0/4. The
+  privacy clarification is also present, so comparison with `codex-sol-2`
+  does not isolate only the premise wording.
+- [Creative review](runs/codex-creative-review-1/findings.md): an offline
+  comparison of saved concepts and scoring boundaries. No new conversation,
+  rubric change or replacement judgement.
+
+Use each iteration's `comparison.md` for its pinned prior cases. A standard
+report without `--baseline` shows only its new cohort. Historical groups and
+unequal repetition counts should not be pooled into a matched pass rate.
+Verify these two later batches without paid calls:
+
+```bash
+node evals/runs/codex-privacy-1/verify.mjs
+node evals/runs/codex-privacy-1/verify.mjs evals/runs/codex-premise-1
+```
 
 ## Historical Claude workflow
 

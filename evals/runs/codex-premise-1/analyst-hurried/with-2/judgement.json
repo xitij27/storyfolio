@@ -1,0 +1,126 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 25161,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1144,
+    "reasoning_output_tokens": 61
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "helix-not-genomics",
+        "handled": "asked",
+        "evidence": "What did “sequencing operations” involve for you personally?"
+      },
+      {
+        "id": "paper-thanked-not-author",
+        "handled": "asked",
+        "evidence": "Which paper did you contribute to, and how?"
+      },
+      {
+        "id": "reporting-40-or-60",
+        "handled": "asked",
+        "evidence": "Reporting time fell by **40% in the résumé but 60% on LinkedIn**—which is correct, for what process and period, and whose result was it?"
+      },
+      {
+        "id": "fraudshield-not-real-time",
+        "handled": "asked",
+        "evidence": "Did FraudShield operate in real time?"
+      },
+      {
+        "id": "autopilot-is-a-script",
+        "handled": "asked",
+        "evidence": "For FraudShield, AutoPilot and Lisbon Rent Map, give a sentence each about your contribution, collaborators, whether it was independent/employer/course work, and whether it actually ran"
+      },
+      {
+        "id": "efficiency-35-unmeasured",
+        "handled": "asked",
+        "evidence": "What improved by 35%, how was it measured, and was that your result or a team’s?"
+      },
+      {
+        "id": "bank-confidential",
+        "handled": "asked",
+        "evidence": "What must stay private? Which employer work can be described or shown?"
+      },
+      {
+        "id": "rent-map-3000-or-5000",
+        "handled": "asked",
+        "evidence": "Was traffic **3,000 or 5,000 visitors a month**, during which period, and measured how?"
+      },
+      {
+        "id": "msc-dates",
+        "handled": "asked",
+        "evidence": "Did your MSc finish in **2021 or 2022**?"
+      },
+      {
+        "id": "hackathon-was-a-team",
+        "handled": "asked",
+        "evidence": "What won the 2023 hackathon, was it a team award, and what was your role?"
+      },
+      {
+        "id": "founder-title",
+        "handled": "asked",
+        "evidence": "What was DataTugas, what did you personally do, and does your founder role continue?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "What makes a dashboard useful?",
+      "is_question": true,
+      "form": "",
+      "object": "One dashboard made of seven shallow panels representing identity, background, three projects, skills and contact.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "fail",
+        "reason": "Another dashboard-focused analyst could use the same concept unchanged by substituting names, dates and project titles."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "The panels duplicate ordinary HTML navigation and content, so removing the 3D loses visual choreography rather than substantive explanation."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The whole board separates into context and project selection, focuses on individual entries, then reunites as a navigable overview."
+      },
+      "clipart": {
+        "result": "fail",
+        "reason": "The dashboard is a generic emblem of dashboard work, populated with portfolio categories rather than a particular working artifact."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "Unresolved claims, disputed metrics, attribution and permission-sensitive material remain explicitly excluded from public copy."
+      },
+      "thirty_seconds": {
+        "result": "fail",
+        "reason": "The opening supplies identity and dashboard focus but no evidence of personal contribution, and contact remains an unresolved dependency."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The name, location and plain dashboard description are understandable without specialist knowledge and avoid inflated claims."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a carefully bounded portfolio plan built around seven rearranging dashboard panels, with thorough visual, accessibility and fallback specifications. Its greatest weakness is that conventional portfolio sections and project titles carry the concept, leaving little personal evidence or narrative that makes the 3D specific to Rafael."
+  }
+}

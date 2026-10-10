@@ -53,3 +53,25 @@ fails, preserve the result and explain the remaining limitation. Broader
 validation waits for a stable candidate. Commit each skill candidate before
 its runs and run the required local checks before each commit. Record all
 outcomes in `evals/runs/` and current state in `docs/handover.md`.
+
+## Outcome
+
+Completed the declared order with ten conversations and ten judgements,
+without retries. Privacy candidate `8adaaa3` fails both PhD repetitions;
+the two analysts preserve private files. Its general boundary is retained
+as a scope clarification, not a demonstrated fix. Full bar: 1/6.
+
+Premise candidate `94faf60` removes the saved unsupported genomics framing
+in both new hurried-analyst repetitions. All four final plans are factually
+clean; the full bar is 0/4, down from 1/4 for the matched earlier cases.
+Keep the targeted factual result distinct from overall quality.
+
+The creative step is an offline evidence review, saved in
+`evals/runs/codex-creative-review-1/findings.md`. No new creative rule or rubric
+change was justified in this round. It identifies actual explanatory
+relationships, missing public work evidence and a review interpretation of
+the closing-answer requirement. All original scores remain unchanged.
+
+Both cohort verifiers, skill/fixture checks, unit tests and skill-creator
+validation pass. The privacy problem is unresolved. Further enforcement
+work, concrete concept review and broader validation remain separate work.

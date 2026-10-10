@@ -4,6 +4,9 @@ On 10 October 2026, after the targeted source-check results, the author
 asked: "okay what now". This records the recommendation, not an approved
 implementation or a new paid evaluation batch.
 
+The author subsequently accepted this order. Execution and outcomes are
+recorded in `2026-10-10-ordered-refinements.md`.
+
 1. Address the private-file boundary first. The completed STEM comparison
    records the PhD skill agent reading the participant-contact export after
    reading the profile reference. That reference says to read all supplied

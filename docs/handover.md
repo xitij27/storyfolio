@@ -1,6 +1,6 @@
 # Handover
 
-## In progress: premise test after a failed privacy candidate
+## Completed ordered follow-up: privacy still fails, premise improves
 
 On 10 October 2026 the author said: "okay then let us proceed with this
 order". The accepted order is the private-file boundary, the remaining
@@ -23,13 +23,42 @@ student's swap test. Full evidence and per-case comparisons are in
 `evals/runs/codex-privacy-1/findings.md` and `comparison.md`. The verifier
 checks committed skill/input hashes and unchanged original artifacts.
 
-The next candidate targets the introduction and question premise directly:
+Premise candidate `94faf60` targets the introduction and question directly:
 summarize established work, and check what the question assumes against
-unanswered factual questions. Evidence and pinned inputs are in
-`evals/runs/codex-premise-1/`. The planned comparison is analyst-hurried and
-student twice each. The failed privacy wording remains present; this is not
-an isolated test of only the premise edit against the old source-check batch.
-Creative review uses saved evidence. No full-suite batch or rubric change.
+unanswered factual questions. `evals/runs/codex-premise-1/` now holds four
+complete conversations and four judgements: analyst-hurried and student twice
+each. All four read both changed instructions. Both analysts avoid the
+unsupported genomics framing in their introductions and final questions.
+Against the same four cases in `codex-sol-2`, no wrong final claim improves
+from 3/4 to 4/4; nothing invented stays 4/4. The privacy wording is also
+present, so this does not isolate only the premise edit.
+
+Full bar falls from 1/4 to 0/4. Both analysts still fail form, swap and
+thirty-second proof; one also fails backdrop and emblem. Both student plans
+preserve factual boundaries. One fails the first-reply padding check and one
+fails swap. Retain the premise change as a provisional targeted factual
+improvement, not evidence of overall quality or a ready-to-release skill.
+All ten conversations and ten judges in these two rounds completed without
+a runner failure or retry. No original score was replaced.
+
+The offline creative review is `evals/runs/codex-creative-review-1/findings.md`.
+It compares actual explanations, not just paper surfaces: the backend's
+repeat-request comparison has a specified relationship, while the physics
+alternatives mostly rearrange document roles. Physics lacks an actual public
+procedure/schematic in its fixture. The review also distinguishes a specified
+closing meaning from an answer placeholder without requiring polished copy
+at the planning stage. Accessible HTML is not a backdrop failure by itself.
+No creative instruction, fixture change, rubric rewrite or paid creative
+round was added. The existing scoring variability remains visible.
+
+Both candidates are committed and their complete evidence is recorded.
+Local checks pass: skill form (687 main words, four references), sixteen
+fixtures, all four test-file subtests, skill-creator validation and whitespace.
+Offline verifiers pass for both focused cohorts. Next: investigate an
+enforceable private-file boundary and review one concrete shareable work
+example for creative specificity. Do not hide the private fixture or start
+a duplicate full batch. Broader validation and the author's concept review
+remain outstanding; no engine or website was built.
 
 ## Completed comparison: broader technical and academic coverage
 
