@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 25327,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 850,
+    "reasoning_output_tokens": 90
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "asked",
+        "evidence": "What was your role at Fjaerland Fermentation Lab, and what did you actually do there?"
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asked",
+        "evidence": "What was counted, how was it measured, and when? What did you personally change, and who else deserves credit?"
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "LinkedIn says Head Chef from March 2022; your notes say you took over in September. What explains the difference?"
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "Which would you like included, and what reuse permission or credit is needed for each"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "What happens before the menu is written?",
+      "is_question": true,
+      "form": "A ferment log: Started, Salt, Checks and Ready, extended with Review and Next batch.",
+      "object": "Six paper leaves of a ferment log that regroup throughout the scroll.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The sequence rests on Ines’s named log fields, menu-last practice, influences, teaching and qualified kitchen waste result."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The leaves carry the records, photographs and evidence, and their arrangements explain relationships that the fallback explicitly reconstructs."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The page progresses from beginnings through recording and checking to readiness, evidence and the menu written last."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The central object is a document Ines actually uses, rather than a generic emblem of cooking."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves the corrected stage, dates, collective measurement scope and asset permissions without inventing achievements."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening specifies her name, role, location, qualified evidence and immediate routes for all three audiences."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening question uses ordinary language, and the plan explains the log through concrete fields without overstating expertise."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a carefully qualified, comprehensive scroll plan using a ferment log to reveal the work before Ines writes the menu. Its greatest weakness is narrow concept exploration: the three alternatives largely repeat the same six paper carriers and narrative progression."
+  }
+}

@@ -1,0 +1,123 @@
+The site should now be a portfolio for your independent practice: **a company facing a migration it is afraid of should recognise its problem, see evidence of your judgement, and write to you.** Conference organisers get a clear second route.
+
+I’d keep the visual ambition, but centre it on **a migration with a way back**. Your concern for rollbacks, grounded in the 2014 library outage, gives the site a much more personal organising idea than uninterrupted flow alone.
+
+The earlier “Service continues” concept was too absolute. The revised experience should show preparation, controlled change and recovery options, supported by precisely scoped results.
+
+**The opening should make your offer clear.**
+
+Proposed copy:
+
+> Dawit Bekele  
+> **Move forward. Know the way back.**  
+> I help teams plan and carry out migrations of systems they depend on.  
+> Staff Platform Engineer · Rotterdam · Going independent in 2027
+
+Primary link: **Tell me about your migration**  
+Secondary link: **Explore my work**
+
+A small navigation offers Work, Approach, Speaking and Contact.
+
+Alongside the headline, a custom 3D model shows a migration midway through: the existing environment, the destination and a clearly marked return route. The initial image should be striking even without animation.
+
+The scroll then unfolds like this:
+
+1. **Evidence first: the Kestrel migration.**
+
+   Large typography introduces **310 services · two data centres · 26 months**.
+
+   The model changes gradually as services move. Beside it, show the result with its scope attached:
+
+   > **99.98% order API availability over the 26-month migration.**  
+   > There were two internal incidents during the migration, both under ten minutes.
+
+   Keep that qualification in ordinary readable text beside the result. Don’t make visitors open a footnote to understand the claim.
+
+   The case study explains your role and decisions using the public talk and slides as its source. The model is labelled as a conceptual illustration, with no reproduction of internal topology.
+
+2. **Your working method: three documents that make change possible.**
+
+   The central visual becomes a work surface containing the **runbook, cutover checklist and rollback plan**. These are the heart of the site’s design, rather than generic project cards.
+
+   The runbook supplies the sequence:
+
+   **Preflight → Shadow → Dual write → Cutover → Soak → Decommission**
+
+   As the visitor progresses, the corresponding part of the model changes. Short annotations explain the decision at each stage. The cutover checklist represents readiness to proceed; the rollback plan represents how to respond if the change fails.
+
+   Show the return route only where reversal is actually supported. At decommission, the visual makes its removal explicit. The sequence must not suggest every migration can be reversed instantly.
+
+   Place your ownership statement here:
+
+   > I wrote the first version of the migration runbook and still own it. Forty teams use it.
+
+   Any document excerpts must come from public material or be clearly labelled illustrative examples. These are not replicas of confidential working documents.
+
+3. **Why the rollback plan matters.**
+
+   Pause the elaborate motion. Use a short, direct passage in your voice:
+
+   > In 2014, at the university library, I caused my first production outage. I dropped a table. It is why I care about rollbacks.
+
+   Follow it with a link to the talk where you tell the story.
+
+   This is the personal centre of the page. It explains a professional conviction through a specific experience. Don’t invent the recovery details or turn the incident into a theatrical failure animation.
+
+4. **Two further examples of the work.**
+
+   Present these as distinct editorial sections.
+
+   **The database upgrade:** a 4 TB Postgres database, dual writes and a carefully managed cutover. Use a clear schematic and a concise explanation drawn from what is public. Leave the exact version path out until the conflicting source wording is resolved.
+
+   **The on-call work:**
+
+   > Over about a year, we reduced pages from 85 to 22 per week across our nine-person on-call team. About half of that reduction came from deleting alerts nobody needed.
+
+   A simple before-and-after graphic is sufficient. This section shows judgement about what deserves attention, with credit given to the team.
+
+5. **Public work: ferry and speaking.**
+
+   For ferry, use explicit attribution:
+
+   > Created by a former colleague. I have maintained ferry since 2022 and wrote its cutover command.
+
+   Link to the verified repository and, if available publicly, the command documentation. A real command example will communicate more than a decorative terminal.
+
+   Give **“Boring Migrations,” SRE North 2024** a substantial speaking entry: recording, public slides and a short factual description. Add a direct **Invite me to speak** link. A dedicated speaking page can hold the talk links, a short biography and eventually an approved photograph.
+
+6. **A compact biography and an invitation.**
+
+   Trace your work from library systems in Addis Ababa to payments in Amsterdam and freight platforms in Rotterdam. For Lumen Pay, use only the LinkedIn line: **Site Reliability Engineer — card payment systems.**
+
+   Include a small “Books I return to” note with the Google SRE book and *Release It!* by Michael Nygard. This belongs beside your approach, with no invented endorsements or personal annotations.
+
+   Close with:
+
+   > **What are you preparing to move?**  
+   > Tell me what is changing, what has to keep working, and when you need help.
+
+   Use a visible email address and a simple email link. These prompts should help someone start a conversation without making them complete a questionnaire. Keep a separate speaking enquiry link.
+
+**The visual direction stays warm, precise and spacious.** Use chalk `#F2F0E9` backgrounds, ink `#182326` text, deep teal `#006B63` for active paths and burnt orange `#B64C2E` for decision points. Labels and line patterns distinguish routes as well as colour.
+
+Use Space Grotesk for headlines, Source Sans 3 for reading and IBM Plex Mono sparingly for document annotations. Large numbers provide emphasis, but every metric keeps its scope alongside it.
+
+The distinctive element is the relationship between the model and your working documents: a decision in the checklist changes the system beside it. Keep readable text outside the 3D canvas. No invented dashboards, live telemetry or internal diagrams.
+
+**On phones, the documents and evidence lead.** Replace the long desktop sticky scene with compact illustrations between text sections. Stack the migration stages vertically; show the rollback route through labelled diagrams. Keep contact links easy to reach and every explanation available without hovering or dragging.
+
+Native scrolling, keyboard access, visible focus states and reduced-motion support are requirements. Reduced-motion visitors get the same story through static diagrams. Load essential content first, then enhance it with 3D on capable devices; pause rendering offscreen.
+
+**The supporting site should stay small:** the main page, a Kestrel migration case study and a speaking page. Give the database upgrade its own page only if there is enough public detail to make it useful. Add an accessible résumé, clear search and social previews, and working contact links. The old site needs no visual or structural preservation.
+
+Before building, the next design deliverables should be the page copy, desktop and mobile wireframes, a visual style frame, and a storyboard mapping each scroll transition to its content. Public talk material should determine the case-study detail.
+
+I’m assuming:
+
+- “Next year” means **2027**. The proposed site invites conversations now without claiming you are already operating independently.
+- Your initial offer centres on migration planning and execution; specific packages, rates and availability remain unstated.
+- Confidentiality also limits newly written technical detail. Kestrel content will use your supplied facts and public talk material; Lumen receives only the permitted line.
+- The repository, recording, slides and real contact details still need verified links.
+- No authentic document excerpts or photographs are available yet, so the design does not depend on them.
+
+This remains a plan. Nothing has been built or changed.

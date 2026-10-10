@@ -1,0 +1,103 @@
+This changes the emphasis: the site should help a company facing a difficult migration trust you enough to write. Conference organisers are the second audience. The visual ambition stays, but your preparation, judgment, and honesty become the centre of the story.
+
+The revised concept is **“A way forward. A way back.”** Your migration experience proves the first half; the table you dropped in 2014 explains why you care about the second. That gives the site a personal foundation without turning it into a spectacle about failure.
+
+Keep **“I move systems that are not allowed to stop”** as the opening headline. Follow it with explicit positioning:
+
+> I’m Dawit Bekele, a platform engineer preparing to work independently in 2027. I help teams plan migrations, prepare cutovers, and know how they’ll get back if something goes wrong.
+
+The primary link becomes **“Tell me about your migration.”** A secondary link points to your talk.
+
+**The revised scroll sequence**
+
+1. **The live system.**  
+   Open with your introduction alongside a restrained 3D illustration of a system carrying traffic. Show both the proposed destination and a visible return route. That return route becomes the site’s recurring visual detail.
+
+   The scene is illustrative, labelled as such, and built from public concepts—not Kestrel’s internal topology.
+
+2. **The reason for the rollback plan.**  
+   A short personal passage introduces the library incident:
+
+   > In 2014, at the university library, I dropped a table and caused my first production outage. It is why I care about rollbacks.
+
+   Keep this direct. No invented recovery details, dramatic error screen, or simulated destruction. Link to the talk for the fuller story.
+
+3. **The migration, with the actual numbers.**  
+   Present Kestrel’s migration as the main evidence: **310 services, two data centres, 26 months.**
+
+   As services move through the illustration, show the measured outcome prominently:
+
+   > **99.98% order API availability over the 26-month migration.**
+
+   Nearby, in ordinary readable text:
+
+   > There were two internal incidents during the migration, both lasting under ten minutes.
+
+   Drop “zero downtime” throughout the planned site. The illustration should explain the migration process; it should not masquerade as an uninterrupted historical replay or availability graph.
+
+4. **What you work from.**  
+   Make the **runbook, cutover checklist, and rollback plan** the visual and editorial centre of the page. Give each a distinct, readable panel:
+   
+   - **Runbook:** the sequence and responsibilities.
+   - **Cutover checklist:** the conditions that must be satisfied before proceeding.
+   - **Rollback plan:** the route back when those conditions no longer hold.
+
+   These are proposed explanatory summaries, not quotations from your documents. Any displayed excerpt would be newly written for public use or drawn from your public slides.
+
+   The runbook credit should be precise: **“I wrote the first version and still own it. Forty teams use it.”** Its six stages can organise the scroll: preflight, shadow, dual write, cutover, soak, decommission.
+
+   At cutover, the movement stays small. The preparation is the interesting part. A postmortem appears only in discussion of an incident, not as a routine deliverable for every migration.
+
+5. **Two closer looks at the work.**  
+   Introduce the 4 TB Postgres 11 → 15 upgrade and ferry together, while keeping their relationship factual rather than implying ferry was used for that upgrade.
+
+   For ferry:
+
+   > Created by a former colleague. Maintained by me since 2022; I wrote its cutover command.
+
+   For the database upgrade, retain dual writes and “no maintenance window.” Do not add a zero-downtime claim. Technical detail comes from the public talk and slides, supplemented by information you explicitly make public.
+
+6. **Reliability after the change.**  
+   Transition from infrastructure to a quieter typographic section:
+
+   > Over about a year, we reduced pages for our nine-person on-call team from 85 to 22 per week. About half of that reduction came from deleting alerts nobody needed.
+
+   A simple before-and-after graphic is enough. This section shows your willingness to remove unnecessary work and gives the team proper credit.
+
+7. **Speaking, background, and contact.**  
+   Give **“Boring Migrations,” SRE North 2024** a substantial entry with its video, slides, and an invitation to conference organisers.
+
+   Keep the career history compact. Lumen Pay gets only its existing LinkedIn description: **“Site Reliability Engineer · Card payment systems.”** No case study, architecture, or further operational detail.
+
+   Include a small reading note naming *Site Reliability Engineering* and Michael Nygard’s *Release It!* without inventing commentary or implying endorsement.
+
+   End with a contact prompt aimed at the right client:
+
+   > **Planning a migration you’re worried about?**  
+   > Tell me what needs to move, what must keep running, and your timeframe.
+
+   Provide a separate “Speaking enquiries” email link.
+
+**Visual direction and interaction**
+
+Retain warm paper, dark ink, evergreen, and copper, with Instrument Sans and IBM Plex Mono. The document panels should feel like carefully typeset working material, with readable annotations and numbered steps. Avoid fake terminal output and decorative status badges.
+
+Use one coherent 3D scene. Scrolling reveals preparation, movement, and the available rollback route; it never forces visitors to perform a cutover to access the content. The route should be labelled, not communicated through colour alone.
+
+On phones, convert that scene into a sequence of compact diagrams beside the relevant text. Keep every claim, caption, and contact link available without animation. Reduced-motion users receive the same static sequence. Desktop gets the richer spatial treatment, with normal scrolling and brief pinning only.
+
+**Site scope and assumptions**
+
+I would plan a homepage, one substantial Kestrel migration case study with a database section, and a speaking page. Splitting the database work into its own case study can wait until the public material supports enough depth. Contact stays on the homepage; no form is necessary initially.
+
+The case study must distinguish your contribution, the team’s contribution, measured outcomes, and illustrative explanations. Use public talk material for evidence and newly drawn conceptual diagrams. Internal diagrams and internal documents are excluded.
+
+My assumptions are:
+
+- “Next year” means **2027**. Until you provide a start month, the site invites conversations about 2027 work without claiming immediate availability.
+- Migration planning, cutover preparation, and rollback readiness are your proposed service areas. I would avoid inventing fixed packages, prices, or delivery guarantees.
+- The old site’s design and copy can be replaced. Preserve the domain if you still control it; no elaborate legacy migration is needed.
+- The supplied email and repository URL remain placeholders until verified. The talk, slides, and professional profile links also need their real destinations.
+- No client logos, testimonials, portrait, or additional performance claims will be invented.
+
+The remaining practical requirements are accessibility, fast loading, static fallbacks, search and social metadata, and an updated downloadable résumé that uses the corrected claims and credits. Nothing has been built or changed; this remains the revised plan.

@@ -21,7 +21,7 @@ export async function disabledSkills() {
   return paths.flatMap(path => [path, dirname(path)]);
 }
 
-export function codexArgs({ model = MODEL, sessionId, judge = false, schema, disabled = [] } = {}) {
+export function codexArgs({ model, sessionId, judge = false, schema, disabled = [] } = {}) {
   const config = {
     model_reasoning_effort: EFFORT,
     approval_policy: "never",
@@ -43,7 +43,7 @@ export function codexArgs({ model = MODEL, sessionId, judge = false, schema, dis
     "features.unbounded_connection_retries": false,
     ...(judge ? { "features.shell_tool": false, "features.unified_exec": false } : {}),
   };
-  const args = ["exec", ...(sessionId ? ["resume"] : []), "--ignore-user-config", "--ignore-rules", "--skip-git-repo-check", "--json", "--model", model];
+  const args = ["exec", ...(sessionId ? ["resume"] : []), "--ignore-user-config", "--ignore-rules", "--skip-git-repo-check", "--json", "--model", model ?? (judge ? JUDGE_MODEL : MODEL)];
   for (const [key, value] of Object.entries(config)) args.push("-c", `${key}=${JSON.stringify(value)}`);
   if (disabled.length) args.push("-c", `skills.config=[${disabled.map(path => `{path=${JSON.stringify(path)},enabled=false}`).join(",")}]`);
   if (schema) args.push("--output-schema", schema);

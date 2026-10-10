@@ -1,0 +1,27 @@
+The **job card and workshop logbook should become the organising idea**. That comes directly from how you work, and gives an engineering placement reviewer a clear story within two minutes. The 3D and scroll movement can help explain the work.
+
+Still planning only; nothing will be built yet.
+
+The page would follow this order:
+
+1. **A ten-second introduction.**  
+   “Mina Park. Second-year mechanical engineering student.” A short line about mechanical and product design placements, with visible links to projects, CV, and contact. The placement dates remain to be updated.
+
+2. **Pedal-box bracket: the main project.**  
+   Lead with: **“18% lighter in CAD. Machining planned for November; physical testing pending.”**  
+   Present it as a logbook entry: the requirement, your contribution, design decisions, simulation findings, and next checks. A rotating CAD model would reveal relevant features as their annotations appear on scroll. Describe the simulation only as far as your evidence supports. Omit the team’s pre-joining competition result.
+
+3. **Bike restoration: the diagnostic story.**  
+   Use your garage-floor photographs as a parts inventory. On scroll, selected parts move gently into focus alongside a job-card sequence: **reported problem → what I found → parts → work done → check**. The cracked hub flange could make a strong example, provided the full account supports it. Clearly distinguish restoration work from customer repairs at the co-op.
+
+4. **Phone charger: an honest project review.**  
+   “Four-person project. My contribution: gear train and housing.” Include the reported result—four minutes of cranking for one percent charge—with its measurement context where available. Show what worked poorly, what you learned, and what you would change. That gives a reviewer useful evidence of your judgment.
+
+5. **Workshop experience and contact.**  
+   “Saturday mechanic at Second Gear Bike Co-op, since 2023.” Describe the work without a bike-count claim. Follow with your skills at their actual levels and a direct placement enquiry link. No testimonials or invented figures.
+
+Each project would have a short summary that works without interaction, with optional detail underneath. A reviewer should immediately see **what you personally did, what evidence exists, and what remains untested**.
+
+Visually, I’d keep the warm paper, graphite, and orange palette, with job-card fields, restrained rules, and large photographs. Concentrate the movement in the bracket model and bike inventory; avoid lengthy pinned sequences that delay reading. Mobile and reduced-motion versions would show the same story through static views.
+
+The next planning step is an annotated wireframe and asset list: bracket CAD views and simulation evidence, bike inventory photos and diagnostic close-ups, and charger images. Those materials would determine the precise animations before implementation.

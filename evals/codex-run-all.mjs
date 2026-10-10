@@ -21,8 +21,14 @@ for (const person of people) for (let rep = 1; rep <= Number(args.reps); rep++) 
 }
 console.error(`${waiting.length} to run`);
 let failed = false;
+let stopping = false;
+// Drain active children instead of losing a paid conversation on shutdown.
+for (const signal of ["SIGTERM", "SIGINT"]) process.on(signal, () => {
+  stopping = true;
+  console.error("stop requested: finishing active conversations, queuing no more");
+});
 async function worker() {
-  while (!failed && waiting.length) {
+  while (!failed && !stopping && waiting.length) {
     const { person, rep } = waiting.shift();
     const code = await new Promise(resolve => {
       const child = spawn("node", [join(ROOT, "evals/codex-run.mjs"), "--iteration", args.iteration, "--arm", args.arm, "--rep", String(rep), "--person", person, "--model", args.model], { stdio: "inherit" });
@@ -32,5 +38,5 @@ async function worker() {
   }
 }
 await Promise.all(Array.from({ length: Number(args.jobs) }, worker));
-console.error(failed ? "stopped after a failure; completed runs are preserved" : "all complete");
-process.exit(failed ? 1 : 0);
+console.error(failed ? "stopped after a failure; completed runs are preserved" : stopping ? "stopped after active conversations finished" : "all complete");
+process.exit(failed ? 1 : stopping ? 130 : 0);

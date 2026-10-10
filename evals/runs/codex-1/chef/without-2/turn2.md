@@ -1,0 +1,51 @@
+That changes the centre of the plan: **“Before service” should follow the prep list and ferment log, with the menu appearing after the work that makes it possible.** Those records give the site a visual identity that comes directly from your kitchen.
+
+The main audience is prospective apprentices, food writers and workshop guests. The navigation should therefore be **The kitchen · Apprentices · Workshops · Brine · About**, with **Workshop details** as the main action.
+
+**The revised scroll**
+
+1. **Before service.** Open with your name, “Head Chef at Saltmarsh, Leeds,” and proposed copy:  
+   > “We start with the prep list and the ferment log. The menu comes last.”
+
+   A small dimensional arrangement of jars sits beside the introduction. Its labels use approved information from real ferments. Scrolling brings one label into focus, introducing the records behind the food.
+
+2. **The ferment log.** Move from the jars into a legible sequence: **started → salt → checks → ready**. A real entry and accompanying photographs show what you track and how you judge readiness. Scroll movement follows the recorded timeline; it should never imply that every ferment progresses predictably or at the same speed. The full story also works as static text.
+
+3. **The prep list.** Show how the kitchen decides what needs attention, what can be used, and what needs more time. Pair selected, transcribed entries with your phone photographs. Use approved excerpts rather than exposing an entire working document.
+
+   Put the waste result here, with its context visible:
+   > “Over one month in 2023, we weighed the whole kitchen’s prep and plate waste. We brought it down from 14 kg to 5 kg a week. Bones weren’t included; they go to stock.”
+
+   This stays a dated team achievement, not an implied current measurement. Callum’s approved quote can sit alongside it.
+
+4. **Then, the menu.** Introduce three real cooking stories connecting preparation and preservation to finished dishes. This is where the restaurant’s polished photography has the greatest impact: readers have already seen the work behind the plate. Each story credits the kitchen’s contribution accurately.
+
+5. **Learning in this kitchen.** Give apprentices a substantial section, before the biography. Explain what they learn, what daily work involves, how you teach, and how to enquire. Include staff meal and the koji cupboard as concrete parts of kitchen life. Photograph hands, tools and spaces; identifiable staff appear only after you have asked them.
+
+6. **Come to a workshop.** Give visitors a clear route to the next confirmed session, with subject, date, duration, location, price, accessibility information and booking details. Keep the first-Monday rhythm as context. This section also gets its own linkable page so someone arriving from an event listing can go straight to practical information.
+
+7. **Brine, influences and shared meals.** Present the four issues, your grandmother’s pot, the books you named and Sunday Pot. Let your own account connect them. Until Olu agrees, the Brine section uses issue information and authorised text; scans containing his drawings stay unpublished.
+
+8. **About and contact.** Finish with a short biography and separate routes for apprentice enquiries, workshop questions and press enquiries. Food writers get an easily found factual biography, selected stories and photography credits. The career history is supporting context.
+
+**What stays in the visual direction**
+
+Keep the warm paper, dark ink, seaweed green and restrained yellow palette, with Newsreader and IBM Plex Sans. The ferment log supplies the structure: dates, fine rules, small annotations and generous space. Use actual handwriting sparingly where it is legible.
+
+The opening remains the main 3D moment. Later movement helps readers follow records and transformations. On phones, the log becomes a vertical timeline, all pinned passages become ordinary sections, and the opening can use a prepared still. Reduced-motion and static versions retain every piece of information.
+
+**Factual and editorial rules**
+
+- **Head Chef, Saltmarsh — September 2022–present.** Where useful, add that you ran the kitchen as acting head chef from March 2022.
+- **Fjaerland Fermentation Lab — ten-week unpaid stage, 2018.** Describe washing and labelling jars and helping with two batches of garum. No research language.
+- Restaurant-owned photographs require confirmed reuse permission and Priya’s credit. Your phone photographs and pot photograph form the initial asset pool.
+- No supplier prices. No identifiable staff photographs without your clearance.
+- Apprentice and workshop information should show current availability explicitly.
+
+**Assumptions I’m making**
+
+You want enquiries from prospective apprentices even when no place is open, but the site must distinguish an enquiry from an advertised vacancy. Workshop booking can initially use your existing booking route; I’m not assuming a new payment system. Press contact can use email, with downloadable photographs added only if distribution rights are confirmed.
+
+I’m also treating the ferment log as evidence of your working practice, rather than publishing complete fermentation instructions. We would choose a few accurate, approved entries and write the surrounding explanation with you.
+
+The next planning deliverable is a content outline and asset shortlist based on this revised sequence. No site implementation has begun.

@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 16241,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 832,
+    "reasoning_output_tokens": 137
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "avoided",
+        "evidence": "No mention of Fjaerland or its work."
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asserted",
+        "evidence": "kitchen waste reduced from 14 kg to 5 kg per week"
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "Confirm how those dates relate before publishing."
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "Confirm permission and credits for Priya’s photography and Olu’s drawings"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "The menu comes last.",
+      "is_question": false,
+      "form": "The kitchen’s sequence of ferment logging and preparation before writing the menu.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The sequence rests on Ines’s ferment log, prep-led menu, koji cupboard, Brine and grandmother’s pot."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "Deleting the jar animation preserves the log, narrative and all practical information, losing primarily visual atmosphere."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The story progresses from logging and preparation through learning and results to the finished menu."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The preserving jars represent her actual larder rather than a generic emblem of being a chef."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan accurately qualifies the stage, title dates and collective historical waste measurement."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening identifies Ines and her role, while accessible navigation lets visitors jump directly to evidence and contact information."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "“The menu comes last” is understandable outside cooking and grounded in her actual kitchen practice."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": false,
+    "overstatement": "not_asked",
+    "summary": "The plan is an editorial journey through Ines’s preparation-led kitchen, supported by a 3D jar shelf and practical apprenticeship and workshop pages. Its greatest weakness is that the 3D illustrates the story without becoming a continuing object whose changes carry the narrative."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 19446,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 821,
+    "reasoning_output_tokens": 57
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "avoided",
+        "evidence": "No mention of Fjaerland or a laboratory role."
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asserted",
+        "evidence": "Put the waste result—14 kg to 5 kg a week—beside the larder stories, where readers can understand what produced it."
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "Confirm the career dates: LinkedIn lists Head Chef from March 2022; your notes say you took over the kitchen in September 2022."
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "Select photographs and scans, confirm permission to reuse them, and agree credits for Priya and Olu."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "A journey through your kitchen in the order the work actually happens—ferment log, prep list, then menu",
+      "is_question": false,
+      "form": "The ferment log and prep list structure the work before the menu, followed by teaching, workshops and personal influences.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The sequence depends on Ines’s ferment records, prep lists, koji cupboard, Brine and grandmother’s ogiri pot."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "Removing the jars’ dimensional treatment loses atmosphere but no information or essential narrative relationship."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "Records lead to preparation and finished dishes, then to learning in the kitchen and ways to participate."
+      },
+      "clipart": {
+        "result": "fail",
+        "reason": "There is no central object carried through the whole story; the jar scene ends after the ferment log."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan accurately qualifies the stage, dates, team waste measurement and asset permissions."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening identifies Ines and her role, the next section supplies concrete larder evidence, and navigation provides direct contact access."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening uses clear kitchen language and describes a credible working practice without inflated claims."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "“Before service” is a detailed portfolio organised around Ines’s ferment log, prep list and the cooking and teaching they support. Its greatest weakness is that the 3D remains an optional opening illustration rather than an essential storytelling device."
+  }
+}

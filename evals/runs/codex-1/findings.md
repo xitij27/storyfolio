@@ -7,6 +7,14 @@ No results are discarded or pooled across models. The two batch coordinators
 were stopped so already-started conversations could finish without launching
 the remainder. Counts below are observations made during this partial run.
 
+Shutdown outcome: 23 conversations were complete (20 without the skill,
+three with it). `chef-terse/with-2` had completed two turns and retained a
+partial third-turn event stream. The process supervisor ended that remaining
+conversation when its coordinator exited. Its partial evidence is retained;
+its generated documents are copied into `partial-files/`. It is not scored
+as complete. The runner now handles termination signals by
+draining active conversations before exiting, to prevent this in later runs.
+
 Started on 10 October 2026 at the author's request. Uses Codex CLI 0.162.1,
 `gpt-6-astra`, medium reasoning, for both planning and independent judging.
 The current skill is compared with no skill. This does not isolate the

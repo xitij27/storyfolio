@@ -29,3 +29,9 @@ test("Codex resume retains isolation and judge disables shell tools", () => {
   assert.deepEqual(args.slice(-2), ["abc", "-"]);
   assert.ok(args.some(a => a.includes("enabled=false")));
 });
+test("test agents default to Sol and judges to Astra; explicit choices are preserved", () => {
+  const model = options => { const args = codexArgs(options); return args[args.indexOf("--model") + 1]; };
+  assert.equal(model({}), "gpt-6.1-sol");
+  assert.equal(model({ judge: true }), "gpt-6-astra");
+  assert.equal(model({ model: "gpt-6-astra" }), "gpt-6-astra");
+});

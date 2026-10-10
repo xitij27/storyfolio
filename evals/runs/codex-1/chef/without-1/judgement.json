@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 19893,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 827,
+    "reasoning_output_tokens": 78
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "avoided",
+        "evidence": "Confirm how the Norway placement overlapped with Brassica"
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asked",
+        "evidence": "kitchen food waste reduced from 14 kg to 5 kg a week. Date and contextualise those figures before publication."
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "reconcile the March/September 2022 dates before publishing."
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "confirm personal-site use with Priya, use of Olu’s drawings, and consent for identifiable staff or apprentices."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "the prep list leads to the ferment log, the ferment log helps shape the food, and the menu is written last.",
+      "is_question": false,
+      "form": "Prep list → ferment log → menu written last, followed by editorial and practical sections.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The sequence rests on Ines’s prep lists, ferment records, menu-last practice, Brine and personal influences."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "Removing the jar animation preserves every record, relationship and interaction, losing only visual staging."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "Preparation leads to recorded fermentation decisions and then finished food, establishing a consequential beginning, middle and end."
+      },
+      "clipart": {
+        "result": "fail",
+        "reason": "There is no central object spanning the page: the jar scene ends when the food section begins."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan accurately qualifies the stage, kitchen waste result, title dates and asset permissions."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening provides her name and role, an actual prep-list extract as evidence, and direct navigation to enquiry and booking destinations."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening identifies her plainly and uses an accessible statement about writing the menu last."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed, accurate portfolio plan organised initially around Ines’s prep list, ferment log and menu, with strong practical and accessibility coverage. Its greatest weakness is that the 3D remains dispensable staging and disappears before most of the page, rather than carrying the story throughout."
+  }
+}

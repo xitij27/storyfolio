@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 24075,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 914,
+    "reasoning_output_tokens": 122
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "asked",
+        "evidence": "What happened at Fjaerland Fermentation Lab? What was your role and actual work, and was it a placement during your Brassica job?"
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asked",
+        "evidence": "For waste falling from 14 to 5 kg a week, when and how was it measured?"
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "LinkedIn says March 2022; your notes say you took over the kitchen in September. Are those separate milestones?"
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "Which material may be used publicly, with what credits? This includes Priya’s restaurant photographs, your larder photographs, Brine scans and Olu’s drawings"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "What happens before the menu is written?",
+      "is_question": true,
+      "form": "A ferment log, organised as Started, Date, Salt, Checks, Ready and Next batch.",
+      "object": "One persistent assembly of six paper log leaves.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The log fields, menu-last process, grandmother’s pot and qualified kitchen waste result ground the story in Ines’s particular material."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The leaves carry evidence and arrange it into chronology, working fields and comparisons, providing a visual reading of the story beyond background decoration."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence moves from origins and experience through recording and checking to results and invitations, answering the opening question."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The ferment-log assembly comes from her actual working documents rather than a stock chef emblem."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves the stage responsibilities, corrected title date, team measurement context and asset permissions without inventing achievements."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The first viewport specifies her name, role, practice, qualified proof and an immediate enquiry shortcut."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening question uses ordinary language and the supporting claims remain precise enough for readers familiar with kitchens."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a carefully sourced portfolio organised around a ferment log, with six moving paper leaves carrying Ines’s process, experience and evidence. Its greatest weakness is that the log remains an interpreted container for portfolio content rather than a concrete ferment’s story, making some chapter names and transitions feel imposed."
+  }
+}

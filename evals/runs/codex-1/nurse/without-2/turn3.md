@@ -1,0 +1,268 @@
+The site should feel like entering your working process: noticing a difficulty on the ward, examining what causes it, and helping a team make the system work better.
+
+The direction is **“From bedside observation to better systems.”** Its visual signature is a clinical document surface that begins in subtle 3D, settles into readable evidence, and becomes a diagram when movement helps explain a change.
+
+Below is the full plan. All copy is proposed; nothing is being built.
+
+**1. Navigation**
+
+A compact header contains **Aoife Brennan** on the left and **Work · Approach · About · Contact** on the right. A separate **CV** link makes the hiring task easy.
+
+- Your name returns to the top.
+- The section links move to their corresponding page sections.
+- CV opens an accessible document, with a download option.
+- The header stays available while scrolling, without occupying much screen space.
+- There is no 3D in the navigation.
+
+On a phone, show your name and a labelled **Menu** button. The menu offers the same links, works with a keyboard and closes after a selection.
+
+**2. Opening: your professional point of view**
+
+Proposed opening:
+
+> **The safe thing should be the easy thing.**
+>
+> I’m Aoife Brennan, a Clinical Nurse Manager 1 and Nursing Informatics Link Nurse in Dublin. I bring bedside experience, observation and practical improvement to the systems nurses use.
+>
+> Seeking a full-time clinical informatics role in 2026.
+
+Below that: **Explore my work** and **View my CV**.
+
+The first screen should establish who you are, what you contribute and what you want. The one-day-a-week arrangement belongs in a short factual line nearby: **“Currently combining clinical leadership with an informatics link role one day a week.”**
+
+**3D behaviour:** A paper-like surface sits beside the text, slightly tilted. Five bands carry the ISBAR headings. They have shallow depth and soft shadows, with an editorial rather than photorealistic treatment. This is an illustrative composition, not a proposed replacement form.
+
+As the visitor scrolls, the bands align and the surface turns toward a flat reading position. No continuous spinning, pointer chasing or opening sequence. Visitors can read and click immediately.
+
+**Phone and fallback:** Use a static crop below the introduction. Without 3D, the same graphic still introduces the five-part structure. No meaning is lost.
+
+**3. Clinical grounding: where your perspective comes from**
+
+Proposed heading:
+
+> **Built from the realities of a shift.**
+
+A short paragraph establishes your work in a 28-bed cardiac step-down ward at St Brendan’s University Hospital, your nursing experience and your responsibility for leading shifts. The focus is on information that must be understood and acted on under pressure.
+
+Three concise facts provide context:
+
+- Eleven years in nursing.
+- CNM1 since 2019.
+- Preceptor to 14 newly qualified nurses.
+
+These facts should be verified against the eventual publication date.
+
+**3D behaviour:** The opening surface finishes flattening and becomes a quiet ruled background at the transition. It then leaves the viewport. The section itself is still and readable.
+
+**Clicks:** A discreet **More about my experience** link jumps to the career section.
+
+**Phone and fallback:** The paragraph and facts stack vertically.
+
+The bed-14 incident is omitted entirely. The whiteboard photograph is excluded from both visible content and site assets. Neither is needed to make this section credible.
+
+**4. Featured project: understanding missed scans**
+
+Proposed heading:
+
+> **Understanding the workarounds behind missed scans.**
+
+This is the first and largest case study because it contains a clear investigation, practical interventions and a measured ward result.
+
+The homepage presents it in four successive beats:
+
+| Beat | Visible content | Visual treatment |
+|---|---|---|
+| **Observe** | Forty hours observing day and night shifts, alongside short interviews with 22 nurses. | A simple observation summary, with no invented notes or quotations. |
+| **Understand** | Three workarounds: wristbands that would not scan after showers, scanners located away from the medication room, and printed barcode sheets carried in pockets. | Three clearly labelled diagram elements. The line **“None was laziness”** introduces the explanation that each saved time. |
+| **Change** | Your contribution: identifying the workarounds and getting scanners moved to the medication room door. Wristband stock changes and stopping printed sheets appear as wider team interventions. | A schematic scanner moves from a separated location to the medication room doorway. |
+| **Review** | Ward scanning increased from 71% to 94% over nine months. | A static before-and-after comparison with direct labels and attribution beside it. |
+
+Proposed attribution:
+
+> A shared ward improvement involving pharmacy, IT, night staff and nursing colleagues. My contribution was forty hours of observation, identifying three recurring workarounds, and getting scanners moved to the medication room door.
+
+**3D behaviour:** On a wide screen, a shallow diagram stays beside the project text for a short portion of the section. Ordinary page scrolling changes its state. The scanner’s relocation is the only substantial movement; wristband and printed-sheet changes use simple labels.
+
+The diagram is explicitly schematic. It must not imply the actual ward layout, measured distances or a simulated patient journey. It ends in a settled view before the result appears.
+
+**Clicks:**
+
+- **Read the case study** opens a dedicated project page.
+- **View conference abstract** opens an accessible version of the supplied 2025 abstract.
+- The three workarounds are explained directly; essential information is not hidden behind clicks.
+
+**Phone and fallback:** Show successive static diagrams between the relevant paragraphs. No pinned scene. The before-and-after result is unchanged.
+
+The result is a **23 percentage-point increase in scanning**. Do not present it as a measured reduction in medication errors, attribute it solely to you, or invent a monthly trend.
+
+**5. Featured project: the ISBAR handover**
+
+Proposed heading:
+
+> **A clearer handover, developed together.**
+
+The introduction states:
+
+> I led a group of five redesigning our ISBAR handover form. The revised form is now used on six wards.
+
+Expand ISBAR once—Identify, Situation, Background, Assessment, Recommendation—for visitors outside nursing. Then focus on what the group changed and why.
+
+This section shows:
+
+- The problem with the previous form, once established from your account.
+- Empty before-and-after sheets.
+- Two or three annotated changes supported by those sheets.
+- Your role in leading the group.
+- Six-ward adoption as the documented result.
+
+**3D behaviour:** Two document planes briefly separate to introduce the old and new versions, then settle into flat, aligned panels. Reading the documents never requires interacting with 3D.
+
+**Clicks:**
+
+- **Before / After** controls switch between equivalent excerpts.
+- **Enlarge empty form** opens a keyboard-accessible viewer.
+- **Read the case study** opens the complete project account.
+
+Annotations remain visible beside the comparison. Avoid a drag-only slider.
+
+**Phone and fallback:** Stack corresponding excerpts, each labelled “Before” or “After,” followed by its explanation. Offer the complete empty sheets separately, so the main story does not require reading tiny A4 pages.
+
+Until the sheets are supplied, reserve their place in the design. Do not fabricate form contents, design decisions or claims about time saved.
+
+**6. Approach: how you turn observation into improvement**
+
+Proposed heading:
+
+> **Observe the work. Test a change. Check what happens.**
+
+A compact **Plan → Do → Study → Act** diagram organises your approach. Each stage has a short explanation and, where supported, a link to relevant project evidence.
+
+This section also introduces two supporting strands:
+
+- **Audit and data:** falls and pressure-ulcer audit dashboards; Power BI and basic SQL.
+- **Supporting colleagues:** preceptorship of 14 newly qualified nurses.
+
+The early warning score chart and care plan influence the composition: clear hierarchy, aligned information and visible relationships between assessment and action. They are not presented as projects you designed.
+
+**3D behaviour:** None. The audit cycle is a flat, readable diagram. A subtle highlight may follow the text through its stages, but the entire cycle stays visible.
+
+**Clicks:** Evidence links take visitors to relevant project passages. Dashboard work gets a project link only when a suitable example and account are available.
+
+**Phone and fallback:** Display the four stages in a numbered vertical sequence. Do not force them into a small circular diagram.
+
+Avoid implying that either featured project followed a fully documented PDSA cycle unless the supporting account establishes that.
+
+**7. About and experience**
+
+Proposed heading:
+
+> **A nurse moving deeper into informatics.**
+
+Use a concise first-person introduction about bringing clinical judgement and an understanding of everyday workflows into system improvement. Keep it specific to your experience; no invented personal interests or origin story.
+
+A compact timeline contains:
+
+- **2019–present:** Clinical Nurse Manager 1, Cardiac Step-Down, St Brendan’s University Hospital.
+- **Current additional responsibility:** Nursing Informatics Link Nurse, one day a week. Do not invent a start date.
+- **2015–2019:** Staff Nurse, Coronary Care Unit.
+- **Education:** BSc General Nursing; MSc Health Informatics with completion status confirmed before publication.
+
+An optional natural portrait can sit beside the introduction.
+
+**3D behaviour:** None. This is a quiet, human section.
+
+**Clicks:** **View CV**, **LinkedIn**, and **Contact me**.
+
+**Phone and fallback:** One column, with the portrait above or below the text. Experience remains ordinary selectable text.
+
+Use the formal titles throughout, including page metadata and the CV. Do not use “Clinical Informatics Lead” as a job title.
+
+**8. Contact and footer**
+
+Proposed closing:
+
+> **Bringing clinical practice into better systems.**
+>
+> I’m seeking a full-time clinical informatics role in 2026, in a hospital or with a company building clinical systems.
+
+Show a direct email link, LinkedIn and CV. A short line can identify Dublin as your base without implying relocation or remote-work preferences.
+
+**3D behaviour:** None. Finish with warm paper, strong typography and clear links.
+
+**Clicks:** Email opens the visitor’s email application; LinkedIn opens your profile; CV opens the accessible document. Display the email address as selectable text too.
+
+The footer includes your name, copyright, and a brief statement that this is a personal portfolio. Name the hospital in your experience, but use no hospital logo or implied endorsement.
+
+**The overall look**
+
+| Element | Direction |
+|---|---|
+| Background | Warm paper, `#F4F0E7` |
+| Main text | Deep ink, `#172D32` |
+| Links and emphasis | Deep teal, `#246A67` |
+| Small decorative annotations | Clay, `#B5684E`, subject to contrast checks |
+| Headlines | Source Serif 4 |
+| Body, navigation and figures | Source Sans 3 |
+| Layout | Large margins, disciplined columns, fine rules and generous spacing |
+| Imagery | Empty documents, explanatory diagrams and an optional portrait |
+
+The site should have the precision of a well-organised clinical document and the pace of a carefully edited feature article. Large typography establishes personality; close-up document evidence gives it substance.
+
+Avoid clinical alarm colours as decoration, generic hospital stock photography, simulated patient records and floating medical props. The early warning chart’s influence is structural, not a borrowed scoring system.
+
+**How the experience works without 3D**
+
+All text, results, links and project navigation exist independently of the visual scene. The 3D illustrates information already available in the page.
+
+- On phones, default to static compositions.
+- With reduced motion enabled, show settled scenes and skip animated transitions.
+- If 3D fails or is unavailable, use matching illustrations.
+- On slower connections, load the readable page first.
+- Keep native scrolling, with no scroll hijacking.
+- Pause rendering when the scene is outside the viewport.
+- Never require sound, dragging, hovering or animation playback to understand the work.
+
+Accessibility also requires semantic headings, visible keyboard focus, sufficient contrast, labelled controls, generous touch targets, meaningful alternative text and accessible document viewers. Check the page at enlarged text sizes and with a screen reader.
+
+**Supporting pages**
+
+The two featured projects should each have a dedicated, shareable page using the same readable structure:
+
+1. Problem and setting.
+2. Your role and collaborators.
+3. Evidence gathered.
+4. Changes made.
+5. Result and what it establishes.
+6. Limitations and reflections, supplied or confirmed by you.
+7. Relevant source documents.
+8. Links to the other project and contact.
+
+These pages should prioritise reading. They do not need to repeat the homepage’s 3D sequence.
+
+The conference abstract should also have an accessible text view, with its title, author, conference and year.
+
+**Everything else needed before launch**
+
+| Area | What is needed |
+|---|---|
+| Project material | Empty old and new handover sheets; verified explanation of their differences; your account of leading the group of five |
+| Supporting work | Suitable dashboard examples and context if they are to appear beyond a brief mention |
+| Personal material | Current CV, email, LinkedIn URL, optional portrait |
+| Factual confirmation | MSc status, current roles, publication-date wording and continued accuracy of the figures |
+| Publication clearance | Confirmation that the selected empty forms and any other workplace artifacts may be published; inspection for hidden or identifying content |
+| Content boundaries | Exclude the near-miss and whiteboard photo entirely; no hospital logo; preserve shared credit for the scanning result |
+| Site identity | Domain, favicon based on your name, and consistent page titles |
+| Discoverability | Search descriptions, sitemap, social-sharing images, and direct URLs for each project |
+| Delivery | Hosting, HTTPS, compressed images, lightweight fonts and a budget for 3D assets |
+| Maintenance | Editable content separated from visual effects, a short update guide, and periodic checks of dates, links and availability |
+| Privacy | Start without tracking analytics or a contact form; assess any data collection if added later |
+| Quality checks | Mobile and desktop browsers, keyboard and screen-reader checks, reduced motion, no-3D fallback, slow connections, document downloads and broken links |
+| Finishing details | Useful 404 page, clear document filenames, accessible PDFs and source credits where relevant |
+
+**Assumptions**
+
+I’m assuming English is the only launch language; both hospital and supplier-side hiring audiences matter equally; two substantial case studies are enough for launch; and direct email is your preferred contact route.
+
+I’m also assuming the 2026 job-search statement remains accurate at publication. Your MSc status, location flexibility and any further outcomes remain unclaimed until confirmed.
+
+This is the complete recommended scope: one carefully paced homepage, two evidence-led project pages, an accessible conference abstract and CV, with selective 3D serving the story of your work. No building or file changes have been made.

@@ -1,0 +1,126 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 21076,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1224,
+    "reasoning_output_tokens": 182
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "helix-not-genomics",
+        "handled": "asserted",
+        "evidence": "A short supporting line connects banking, genomics, and housing."
+      },
+      {
+        "id": "paper-thanked-not-author",
+        "handled": "avoided",
+        "evidence": "the publication citation"
+      },
+      {
+        "id": "reporting-40-or-60",
+        "handled": "asked",
+        "evidence": "Résumé: **40%**; LinkedIn: **60%** | Omit the percentage until confirmed."
+      },
+      {
+        "id": "fraudshield-not-real-time",
+        "handled": "avoided",
+        "evidence": "**AutoPilot**, **FraudShield**, and **DataTugas** show initiative beyond your employment history."
+      },
+      {
+        "id": "autopilot-is-a-script",
+        "handled": "avoided",
+        "evidence": "Give each a concise purpose, your role, dates/status, and a link where available."
+      },
+      {
+        "id": "efficiency-35-unmeasured",
+        "handled": "asked",
+        "evidence": "Both sources state **35%** | Explain what improved and how it was measured."
+      },
+      {
+        "id": "bank-confidential",
+        "handled": "asked",
+        "evidence": "The remaining inputs are authentic project visuals, your exact role in each project, what employer work can be shown publicly"
+      },
+      {
+        "id": "rent-map-3000-or-5000",
+        "handled": "asked",
+        "evidence": "Résumé: **5,000/month**; LinkedIn: **3,000/month** | Confirm the figure and measurement period."
+      },
+      {
+        "id": "msc-dates",
+        "handled": "asked",
+        "evidence": "Résumé ends in **2021**; LinkedIn ends in **2022** | Confirm before publishing the timeline."
+      },
+      {
+        "id": "hackathon-was-a-team",
+        "handled": "avoided",
+        "evidence": "education, and the Health Data Hackathon award"
+      },
+      {
+        "id": "founder-title",
+        "handled": "asked",
+        "evidence": "Clarify whether there is a current founder role."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "The work behind the dashboard",
+      "is_question": false,
+      "form": "",
+      "object": "Three dimensional documents: the analysis memo, the dashboard, and the weekly report.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "fail",
+        "reason": "The memo–dashboard–report concept could transfer unchanged to another product analyst, with project content substituted."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "The sheets introduce and decorate evidence that remains fully explained by ordinary text and static graphics."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The documents separate to introduce the work, reveal its analysis and operational use, and settle into an ordered stack at the end."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The central composition uses the person's three stated working artefacts rather than a single stock emblem of analytics."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan corrects inflated claims, preserves confidentiality, and leaves unsupported case-study details to be documented."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening provides name, role and contact access, with the public Rent Map and its approximate audience immediately following."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening promise is understandable, concrete, and consistent with the person's actual work."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed, honest portfolio plan organised around selected work and three animated working documents. Its greatest weakness is that the 3D decorates a conventional portfolio structure rather than carrying an indispensable, distinctly personal story."
+  }
+}
