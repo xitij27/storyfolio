@@ -112,10 +112,12 @@ function ask(text, cwd) {
       clearTimeout(timer);
       try {
         const answer = JSON.parse(stdout);
-        if (answer.is_error || !answer.structured_output) throw new Error("no structured answer");
-        resolve({ judgement: answer.structured_output, why: "" });
+        // What went wrong, in the command's own words: a usage limit reads here.
+        if (answer.is_error) throw new Error(String(answer.result ?? "the judge ended in an error"));
+        if (!answer.structured_output) throw new Error("no structured answer");
+        resolve({ judgement: answer.structured_output, costUsd: answer.total_cost_usd ?? 0, why: "" });
       } catch (error) {
-        resolve({ judgement: null, why: `exit ${code}: ${error.message}\n${stderr}\n${stdout.slice(0, 2000)}` });
+        resolve({ judgement: null, why: `exit ${code}: ${error.message}\n${stderr}\n${stdout.slice(0, 600)}` });
       }
     });
     child.stdin.end(text);
@@ -159,7 +161,7 @@ async function worker() {
   for (let job = waiting.shift(); job; job = waiting.shift()) {
     const { runDir, meta } = job;
     const person = await loadPerson(meta.person);
-    const { judgement, why } = await ask(await brief(runDir, meta, person), judgeDir);
+    const { judgement, costUsd, why } = await ask(await brief(runDir, meta, person), judgeDir);
     const where = relative(ROOT, runDir);
     if (judgement === null) {
       failed += 1;
@@ -169,7 +171,7 @@ async function worker() {
     }
     await writeFile(
       join(runDir, "judgement.json"),
-      JSON.stringify({ judge: args.model, judgement }, null, 2) + "\n",
+      JSON.stringify({ judge: args.model, costUsd, judgement }, null, 2) + "\n",
     );
     console.error(`${where}: judged`);
   }

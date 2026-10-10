@@ -32,6 +32,14 @@ On 10 October 2026, each from choices shown to them:
    theirs to change: the name `storyfolio`, the MIT licence, and their
    portfolio named in the README as where the skill came from.
 
+5. That day too, once the runs had used up their account's usage for some
+   hours and stopped this work with it: asked whether it had to go on, and
+   shown what was left, they chose "Write it, test once, show me". So the
+   skill is written, the conversations are held with it once, and they read
+   the before and after. The rounds of closing what is left, and the two
+   runs on the stronger model (Tasks 8 and 9 of the plan), wait for their
+   word.
+
 What they asked for, word for word, is in the portfolio's
 `docs/project-notes.md`, under "A skill for making sites like this one".
 
