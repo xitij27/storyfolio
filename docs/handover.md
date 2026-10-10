@@ -35,13 +35,15 @@ rate. Earlier factual refinements and their evidence remain in the
 [study catalogue](../evals/studies.md).
 
 The root [README](../README.md) now provides public-facing installation and
-usage guidance for the planning-only skill. It documents both Codex's
-repository-local `.agents/skills/` placement and Claude Code's
-`.claude/skills/` placement, as well as the three approval points, privacy
-boundaries, contribution checks and the current private-repository status.
-[LICENSE](../LICENSE) adds the MIT license selected in the original design
-record; `package.json` declares the same SPDX identifier. This documentation
-change did not alter the skill or run a paid evaluation.
+usage guidance for the planning-only skill. It presents Storyfolio as a
+portable instruction directory for any agent that supports local skills or
+can read attached files, with concrete Codex and Claude Code paths and a
+prompt-based fallback for other capable agents. It also records the three
+approval points, privacy boundaries, contribution checks and the current
+private-repository status. [LICENSE](../LICENSE) adds the MIT license selected
+in the original design record; `package.json` declares the same SPDX
+identifier. This documentation change did not alter the skill or run a paid
+evaluation.
 
 The other accepted work added a richer physics fixture, optional diagnostic
 v2 judging and a privacy prototype. It did not change creative guidance.
@@ -153,6 +155,7 @@ pauses and reversals.
 | 11 October: "make this skill better by evaluating" the Steve checkout | Evaluate the supplied real example now, before the fictional case. Improve instructions only if the run needs it. This pilot found no such miss; retain the skill and preserve its evidence. [Pilot plan](superpowers/plans/2026-10-11-steve-review-pilot.md). |
 | 11 October: "frame a professional README.md describing how people can install and use this skill. Add all necessary information and license too" | Root README now documents the supported local installation, activation, scope, usage, safeguards and contributor checks. MIT licensing is in `LICENSE` and package metadata. The repository is still private, so access is required to clone it. |
 | 11 October: "Why just codex, this skillshould be able to work with claude too" | README now gives Claude Code equal first-class guidance: install under `.claude/skills/storyfolio`, start a new session and invoke `/storyfolio`. No Claude-specific instruction is needed because the Agent Skills directory and its references are already portable. |
+| 11 October: "or rather any AI agent" | README now leads with agent-neutral installation. It distinguishes portable skill-capable agents from interfaces that must receive the directory as instructions, and does not promise compatibility with agents unable to read files or attachments. |
 | Repository input for deeper portfolio evaluation | Accept GitHub repository URLs and local checkouts alongside deployed URLs. Source, local runtime and deployed evidence have separate provenance. Exact examples and planning update are recorded below. |
 | Better organization "without losing any details and information"; then "yes lets get it done" | Implement the documentation proposal with verbatim archives and evidence preservation. [Migration plan](superpowers/plans/2026-10-10-documentation-organization.md). |
 | Commit on main; push only on the author's word | Preserve the exact date-scoped push direction in [AGENTS.md](../AGENTS.md). This documentation migration does not need a push or publication. |

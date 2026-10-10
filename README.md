@@ -1,9 +1,9 @@
 # Storyfolio
 
-Storyfolio is an Agent Skill for shaping a personal portfolio site from a
-resume, LinkedIn profile, GitHub profile, existing site, or other profile
-material. It guides an agent to plan one long-scrolling portfolio story built
-around an object from the person's own work.
+Storyfolio is a portable Agent Skill for shaping a personal portfolio site
+from a resume, LinkedIn profile, GitHub profile, existing site, or other
+profile material. It guides an AI agent to plan one long-scrolling portfolio
+story built around an object from the person's own work.
 
 It is for people who want a portfolio that feels specific to their work,
 rather than a generic template or a list of projects.
@@ -31,8 +31,20 @@ Those later stages are intentionally not part of the skill yet.
 ## Install
 
 Storyfolio is currently in a private repository. You need access to clone it.
-The skill has no npm dependencies or build step: install its directory in the
-project where you want the agent to use it.
+The skill has no npm dependencies or build step. It is a `SKILL.md` directory
+with supporting references, so it can be used by any agent that supports local
+Agent Skills or can read an instruction directory.
+
+### Any agent with skill support
+
+Copy the complete `skills/storyfolio/` directory to the local-skill directory
+used by your agent, preserving `SKILL.md` and `references/`. Then start a new
+agent session and activate the `storyfolio` skill by name, or ask the agent to
+use it when planning a personal portfolio.
+
+Skill directories are not discovered in the same place by every agent. The
+Codex and Claude Code commands below are ready-to-use examples. For another
+agent, use its documented skill directory and activation syntax.
 
 ### Codex
 
@@ -79,12 +91,20 @@ In Claude Code, invoke the skill with `/storyfolio`, then provide the profile
 material and ask it to begin with the factual review. Start a new session
 after copying the skill so Claude Code discovers it.
 
-### Other Agent Skills clients
+### Agents without native skill support
 
-The skill follows the open Agent Skills layout: a `SKILL.md` file with related
-reference files. Copy `skills/storyfolio/` to the directory your client uses
-for local skills, preserving the directory structure. Consult that client's
-documentation for its discovery path and activation method.
+Make the complete `skills/storyfolio/` directory available in the agent's
+working context, then use this prompt:
+
+```text
+Read skills/storyfolio/SKILL.md and follow the Storyfolio skill. Open its
+reference files only when the skill directs you to. Plan my portfolio from the
+material I provide, beginning with the factual review only.
+```
+
+An agent that cannot read files or accept attached instructions cannot load a
+skill reliably. In that case, use an agent interface that can attach or expose
+the directory first.
 
 ## Use it well
 
