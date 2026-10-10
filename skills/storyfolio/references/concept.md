@@ -16,6 +16,8 @@ The second stop: from the fact sheet to three concepts the person can choose bet
 
 Write it as a question, with a question mark. "Teardown" and "Signal from noise" are themes: they give a page a mood. A question gives the page somewhere to go, and gives the ending a job.
 
+Before choosing the question, state what must be true about the person for it to make sense. Check those premises against the fact sheet's unanswered questions. An employer's field is not the person's contribution. If a premise is unconfirmed, change the question instead of treating it as creative framing.
+
 **One form.** A document or a ritual of the person's own trade that already runs from a beginning to an end, with section names a colleague would know: a paper, a runbook, a job card, a shift handover, a set of drawings. List at least five that the trade has, and take one the person said they work from. Its section names become the chapters, in its order, and no jokes are made in its voice. A chapter holds what its name says.
 
 "Hero, About, Work, Skills, Contact" is the form of a website. It belongs to nobody.

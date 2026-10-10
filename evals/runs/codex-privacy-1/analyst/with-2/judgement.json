@@ -1,0 +1,126 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 25214,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1152,
+    "reasoning_output_tokens": 60
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "helix-not-genomics",
+        "handled": "asked",
+        "evidence": "What did you actually do there?"
+      },
+      {
+        "id": "paper-thanked-not-author",
+        "handled": "asked",
+        "evidence": "Which paper did you contribute to, and what was your contribution?"
+      },
+      {
+        "id": "reporting-40-or-60",
+        "handled": "asked",
+        "evidence": "Your sources give **40% and 60%** reporting-time reductions—which is correct, what was measured, how, and whose result was it?"
+      },
+      {
+        "id": "fraudshield-not-real-time",
+        "handled": "asked",
+        "evidence": "Was this coursework, a prototype, or a system people used?"
+      },
+      {
+        "id": "autopilot-is-a-script",
+        "handled": "asked",
+        "evidence": "Same questions—and which tasks does it automate? Is it connected to your employer’s work?"
+      },
+      {
+        "id": "efficiency-35-unmeasured",
+        "handled": "asked",
+        "evidence": "What do “200+ staff” and “35% efficiency improvement” measure, over what period, and how?"
+      },
+      {
+        "id": "bank-confidential",
+        "handled": "asked",
+        "evidence": "What employer material is permitted?"
+      },
+      {
+        "id": "rent-map-3000-or-5000",
+        "handled": "asked",
+        "evidence": "Your sources say **3,000 and 5,000 visitors a month**. Which figure applies, for what period, and how was it measured?"
+      },
+      {
+        "id": "msc-dates",
+        "handled": "asked",
+        "evidence": "Did your MSc end in **2021 or 2022**, or do those represent attendance and graduation?"
+      },
+      {
+        "id": "hackathon-was-a-team",
+        "handled": "asked",
+        "evidence": "Was the 2023 win individual or a team award? For which project/category, and what did you contribute?"
+      },
+      {
+        "id": "founder-title",
+        "handled": "asked",
+        "evidence": "Are the listed job titles your formal titles, and does “Founder” still describe you today?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "What makes a dashboard worth using?",
+      "is_question": false,
+      "form": "Rafael’s analysis memo: the question, the data, what I did, what I found, what I would do.",
+      "object": "Five thin, matte paper sheets forming one working memo.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The memo uses Rafael’s exact working sequence and connects his public rent map, operational reporting and academic notebook."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The sheets carry evidence and arrange it into an index, project exhibits and a before-and-after comparison rather than serving as background scenery."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence establishes the question and evidence, explains his contribution, presents outcomes and closes with his intended next role."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The memo comes from his stated working practice rather than a stock emblem of analytics."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan corrects inflated claims, preserves attribution and uncertainty, and excludes confidential material."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening supplies his name, dashboard identity, Rent Map audience estimate and an immediate Contact shortcut."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "“I make dashboards people actually use” is accessible and supported by appropriately scoped evidence."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "The plan turns Rafael’s five-part analysis memo into a continuous portfolio carried by rearranging 3D paper sheets, with careful factual boundaries and complete fallback requirements. Its greatest weakness is that the closing states his job objective without actually articulating an answer to the opening question, leaving that narrative connection to deferred captions."
+  }
+}

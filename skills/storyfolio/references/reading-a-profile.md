@@ -63,7 +63,7 @@ End the fact sheet with three lists:
 
 One message, which is the whole of your reply:
 
-1. Two or three sentences on who you take them to be.
+1. Two or three sentences on what the material establishes about the person. Describe their own work, not an employer's field. If their responsibilities need confirming, give the employer and listed role without turning its name or their profile slogan into a speciality.
 2. Your questions, numbered, so that they can answer by number. Plain words. Say why you ask wherever that is not plain. Every disagreement and every item under "To confirm" is one of them.
 3. These, which no material answers:
    - Who is the site for, and what should a visitor do when they reach its end?
