@@ -144,6 +144,16 @@ not establish whether the earlier publication review was completed.
    because its addresses are placeholders, and 4 of 10 student runs fail
    only on the wording of the padding trap. What remains is creative
    consistency and PhD private-file access, as item 2 and item 3 say.
+6. **Building is the end goal, and stages 2 and 3 now have a plan for Codex
+   to implement:**
+   [stage 2 engine and stage 3 build](superpowers/plans/2026-10-11-stage-2-engine-stage-3-build.md).
+   Claude wrote it on 11 October after reading V3's sources read-only; the
+   author said "NO IMPLEMENTATION FROM YOU", so nothing in it is built. It
+   copies the engine out of V3 into `skills/storyfolio/engine/`, proves it
+   on a plain story at six check settings, and stops for the author to
+   scroll it. Stage 3 then writes stops 4 to 6 and six references against
+   baseline build runs, with other skills recommended and never required.
+   Its first unfinished items are in its Task 0.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
@@ -169,6 +179,9 @@ pauses and reversals.
 | 11 October: "Why just codex, this skillshould be able to work with claude too" | README now gives Claude Code equal first-class guidance: install under `.claude/skills/storyfolio`, start a new session and invoke `/storyfolio`. No Claude-specific instruction is needed because the Agent Skills directory and its references are already portable. |
 | 11 October: "or rather any AI agent" | README now leads with agent-neutral installation. It distinguishes portable skill-capable agents from interfaces that must receive the directory as instructions, and does not promise compatibility with agents unable to read files or attachments. |
 | 11 October: "okay I have made it public. Now make the readme feel more illustrative and inviting" | Author reports public GitHub visibility. README now has a concept illustration, examples, a three-step walkthrough, starter prompts and output-file preview. Agent portability and the planning scope remain explicit. [Full record](history/2026-10-11-readme-and-publication.md). |
+| 11 October: "Id want the end goal of my skill to be able to build stuff right? so we need to have these things in the skill as well." | Building is the end goal, as the approved design already says. Stages 2 and 3 are planned in [the stage 2 and 3 plan](superpowers/plans/2026-10-11-stage-2-engine-stage-3-build.md). |
+| 11 October, answers to two questions: "Plan stage 2 now" and "Recommend; person installs" | Plan the engine now; stage 1's closing items stay open and may run alongside. Other UI, 3D and frontend skills are named at each stop with how to install them, the person installs, and none is required (design lines 498 to 506). |
+| 11 October: "You just come up with the implementation plan. Codex will implement it."; then "No commit this plan somewhere so that codex can implement it. NO IMPLEMENTATION FROM YOU" | Claude committed the plan only. Codex implements it. |
 | Repository input for deeper portfolio evaluation | Accept GitHub repository URLs and local checkouts alongside deployed URLs. Source, local runtime and deployed evidence have separate provenance. Exact examples and planning update are recorded below. |
 | Better organization "without losing any details and information"; then "yes lets get it done" | Implement the documentation proposal with verbatim archives and evidence preservation. [Migration plan](superpowers/plans/2026-10-10-documentation-organization.md). |
 | Commit on main; push only on the author's word | Preserve the exact date-scoped push direction in [AGENTS.md](../AGENTS.md). This documentation migration does not need a push or publication. |
