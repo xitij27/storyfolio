@@ -132,6 +132,20 @@ test("what the agent was given is not kept, even if it wrote over it", () => {
   assert.equal(keptAs(work, work, []), null);
 });
 
+test("a note the agent wrote to its own memory is not kept", () => {
+  // Claude Code keeps notes for an agent, by itself, in a folder named for
+  // the one the agent runs in. The person never sees them.
+  const work = "/tmp/storyfolio-evals/1/chef-with-1";
+  const memory = "/home/someone/.claude/projects/-tmp-storyfolio-evals-1-chef-with-1/memory";
+  assert.equal(keptAs(work, `${memory}/MEMORY.md`, []), null);
+  assert.equal(keptAs(work, `${memory}/feedback_modest_framing.md`, []), null);
+  // A file of the person's that only has such a name is theirs, and is kept.
+  assert.deepEqual(keptAs(work, "docs/memory/notes.md", []), {
+    from: "/tmp/storyfolio-evals/1/chef-with-1/docs/memory/notes.md",
+    kept: "docs/memory/notes.md",
+  });
+});
+
 test("a private file is touched when a tool that reads is pointed at it", () => {
   const privateFiles = ["material/linkedin-export/messages.csv"];
   const reads = summariseTurn([

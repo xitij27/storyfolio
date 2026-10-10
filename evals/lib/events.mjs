@@ -89,17 +89,23 @@ export function lastWrites(turns) {
   return words;
 }
 
+/** A file in the memory folder Claude Code keeps for the project an agent runs in. */
+const MEMORY_NOTE = /\/\.claude\/projects\/[^/]+\/memory\//;
+
 /**
  * Where a file the agent wrote is to be found, and the name it is kept under
  * among a run's results. A file in the agent's own folder, `work`, is kept
  * under its path there. One written anywhere else is kept under outside/ by
- * its name, with a number in front if that name is `taken`. What the agent
- * was given, its material and its skills, is not kept: null.
+ * its name, with a number in front if that name is `taken`. Two things are
+ * not kept, and give null: what the agent was given, its material and its
+ * skills, and the notes Claude Code keeps for an agent in a memory folder of
+ * its own, which the person never sees.
  */
 export function keptAs(work, given, taken) {
   const from = isAbsolute(given) ? given : resolve(work, given);
   const inside = relative(work, from);
   if (inside === "" || inside.startsWith("material/") || inside.startsWith(".claude/")) return null;
+  if (MEMORY_NOTE.test(from)) return null;
   let kept = inside.startsWith("..") ? join("outside", basename(from)) : inside;
   for (let n = 2; taken.includes(kept); n++) kept = join("outside", `${n}-${basename(from)}`);
   return { from, kept };

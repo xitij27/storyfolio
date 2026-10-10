@@ -66,7 +66,10 @@ if (!args.person || !["with", "without"].includes(args.arm ?? "") || (args.call 
 
 const person = await loadPerson(args.person);
 const name = `${args.person}-${args.arm}-${args.rep}`;
-const work = join(WORK, args.iteration, name);
+// Named for the moment as well as for the run. Claude Code keeps notes for an
+// agent by the folder it runs in, and a run started again in the same folder
+// would begin with what its first go had noted down.
+const work = join(WORK, args.iteration, `${name}-${Date.now()}`);
 const out = join(RUNS, args.iteration, args.person, `${args.arm}-${args.rep}`);
 
 /** The person's three messages. */
@@ -155,8 +158,10 @@ for (let i = 0; i < said.length; i++) {
 // person who had been there would have allowed it and read them.
 const written = [];
 const refused = [];
-const texts = turns.map((turn) => turn.reply);
 const meant = lastWrites(turns);
+// Everything the agent said and wrote, wherever it wrote it, its own memory
+// notes too: this is what is searched for words from a private file.
+const texts = [...turns.map((turn) => turn.reply), ...meant.values()];
 for (const given of filesWritten(turns)) {
   const place = keptAs(work, given, written);
   if (place === null) continue;
