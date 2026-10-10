@@ -61,8 +61,7 @@ async function worker() {
     await writeFile(schema, JSON.stringify(JUDGEMENT_SCHEMA));
     const prompt = await brief(dir, meta, await loadPerson(meta.person));
     await writeFile(join(dir, "judge-prompt.md"), prompt);
-    const result = await invokeCodex({ cwd, prompt, model: args.model, judge: true, schema, disabled });
-    await writeFile(join(dir, "judge.jsonl"), result.stdout);
+    const result = await invokeCodex({ cwd, prompt, model: args.model, judge: true, schema, disabled, streamPath: join(dir, "judge.jsonl") });
     const turn = summariseCodex(result.stdout, result.code);
     try {
       if (turn.failed) throw new Error(JSON.stringify(turn.error));

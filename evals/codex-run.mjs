@@ -49,8 +49,7 @@ let sessionId;
 const replies = [], commands = [];
 for (let i = 0; i < said.length; i++) {
   console.error(`${args.person}-${args.arm}-${args.rep}: message ${i + 1} of 3`);
-  const result = await invokeCodex({ cwd: work, prompt: said[i], sessionId, model: args.model, disabled });
-  await writeFile(join(out, `turn${i + 1}.jsonl`), result.stdout);
+  const result = await invokeCodex({ cwd: work, prompt: said[i], sessionId, model: args.model, disabled, streamPath: join(out, `turn${i + 1}.jsonl`) });
   const turn = summariseCodex(result.stdout, result.code);
   await writeFile(join(out, `turn${i + 1}.md`), turn.reply + "\n");
   meta.turns.push({ ...turn, durationMs: result.durationMs, costUsd: null });

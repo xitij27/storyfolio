@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import { createWriteStream } from "node:fs";
 import { homedir } from "node:os";
 import { join, dirname } from "node:path";
 import { walk } from "./files.mjs";
@@ -64,17 +65,22 @@ export function summariseCodex(stdout, code = 0) {
   };
 }
 
-export function invokeCodex({ cwd, prompt, timeoutMs = 25 * 60 * 1000, ...options }) {
+export function invokeCodex({ cwd, prompt, streamPath, timeoutMs = 25 * 60 * 1000, ...options }) {
   return new Promise(resolve => {
     const started = Date.now();
     const args = codexArgs(options);
+    const log = streamPath ? createWriteStream(streamPath) : null;
     const child = spawn("codex", args, { cwd, stdio: ["pipe", "pipe", "pipe"] });
     let stdout = "", stderr = "", timedOut = false;
     const timer = setTimeout(() => { timedOut = true; child.kill("SIGTERM"); }, timeoutMs);
-    child.stdout.on("data", chunk => stdout += chunk);
+    child.stdout.on("data", chunk => { stdout += chunk; log?.write(chunk); });
     child.stderr.on("data", chunk => stderr += chunk);
-    child.on("error", error => { clearTimeout(timer); resolve({ stdout, stderr: String(error), code: -1, durationMs: Date.now() - started, args }); });
-    child.on("close", code => { clearTimeout(timer); resolve({ stdout, stderr, code: timedOut ? -1 : code, durationMs: Date.now() - started, args }); });
+    child.on("error", error => { clearTimeout(timer); log?.end(); resolve({ stdout, stderr: String(error), code: -1, durationMs: Date.now() - started, args }); });
+    child.on("close", code => {
+      clearTimeout(timer);
+      const done = () => resolve({ stdout, stderr, code: timedOut ? -1 : code, durationMs: Date.now() - started, args });
+      if (log) log.end(done); else done();
+    });
     child.stdin.on("error", () => {});
     child.stdin.end(prompt);
   });
