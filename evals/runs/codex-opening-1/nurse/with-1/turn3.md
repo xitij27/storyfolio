@@ -1,0 +1,217 @@
+I’ll record your approval of the ISBAR direction and give you the complete plan, including each scroll beat, interaction, fallback, and site requirement. This stays planning only; I won’t build the site.
+
+
+The site will follow **ISBAR—Identify, Situation, Background, Assessment, Recommendation**—using the handover form you helped redesign as its continuing 3D object.
+
+The page answers one question: **How can clinical systems fit the work nurses actually do?**
+
+It leads a hiring manager from your formal roles, through your specific contributions, to a conversation about full-time clinical informatics work. The complete plan is saved in [storyboard.md](/tmp/storyfolio-evals/codex-nurse-with-eHZwsK/docs/story/storyboard.md). Nothing has been built.
+
+**The object and the overall experience**
+
+One form consists of five matching paper sections. Assembled, they read as a complete ISBAR document. As visitors scroll, those same sections separate, turn, enlarge, and rearrange to explain the work.
+
+All five remain present throughout. There are no unrelated objects or effects introduced halfway down the page. The opening establishes their origin in your daily handover and redesign work.
+
+The detailed text sits in ordinary HTML beside the scene. Paper faces carry short labels, approved document images, and evidence annotations. Visitors never need to decipher moving text or manipulate an object to understand your work.
+
+On desktop, the sequence occupies approximately seven to eight screen heights. Scrolling remains normal: no locked wheel steps or forced transitions.
+
+**1. Identify — who you are**
+
+The opening contains:
+
+- Aoife Brennan.
+- Clinical Nurse Manager 1.
+- Nursing Informatics Link Nurse, one day a week.
+- Your interest in full-time clinical informatics roles with hospitals and system vendors.
+- One immediate piece of evidence: you led a group of five redesigning an ISBAR handover form.
+- The question guiding the page.
+
+ISBAR receives a short explanation for visitors outside nursing: a structured handover covering identify, situation, background, assessment, and recommendation. Your informatics work is explained through the confirmed examples of observing practice and improving documents and scanner placement.
+
+**3D:** The five blank paper sections align into one form. ISBAR headings appear first, followed by your portfolio information. This makes the document’s origin clear before it becomes an exhibit.
+
+**Visitors can click:** A jump to the work, contact access, and the five chapter links. The first screen provides enough information for a recruiter who does not scroll.
+
+**2. Situation — where you are now and where you want to go**
+
+This section distinguishes your current formal roles from your intended move:
+
+- CNM1.
+- Nursing Informatics Link Nurse for one day a week.
+- Full-time clinical informatics as your professional direction.
+- Hospitals and clinical-system vendors as the intended audience.
+
+It does not present “Clinical Informatics Lead” as your job title.
+
+**3D:** The five sections separate into a shallow sequence. The active faces show your formal roles, time allocation, professional direction, and target employers. The composition makes the relationship between present work and intended move visible.
+
+**Visitors can click:** A brief explanation of the formal titles, chapter navigation, and contact. Essential information remains visible without opening anything.
+
+**3. Background — observing the work**
+
+This has two scroll beats.
+
+The first presents your confirmed contribution to the scanning work:
+
+- Forty hours watching practice.
+- Identification of three workarounds.
+- The observed issues described in the abstract: wristbands that would not scan after a shower, scanners on a trolley away from the medication room, and printed barcode sheets.
+
+These are presented as observations from this work, without claiming they explain every missed scan or establishing an unsupported ranking.
+
+**3D:** The sections spread into an observation ledger. One carries the forty-hour contribution, three carry the findings, and the fifth provides context.
+
+**Visitors can click:** Each finding to read its explanation. The same findings are also available as a normal text list.
+
+The second beat introduces the documents and processes you work from:
+
+- ISBAR handover.
+- Early warning score chart.
+- Care plan.
+- Plan, do, study, act audit cycle.
+
+**3D:** The ledger widens, exposing these tool names on the same pieces. No real patient chart or clinical record appears.
+
+**Visitors can click:** Short explanations of unfamiliar terms.
+
+The site may name St Brendan’s University Hospital. It will not infer additional duties, claim that this project followed a documented PDSA process, or add an unconfirmed career timeline.
+
+**4. Assessment — the work, shown clearly**
+
+This is the longest section, with two exhibits.
+
+**The handover redesign**
+
+The exhibit explains that you led a group of five working on the ISBAR form. It displays the approved empty old and new sheets, with comparison notes based on their actual contents.
+
+**3D:** Two sections enlarge into a side-by-side document comparison. The remaining three carry the exhibit index, your contribution, and supporting annotations.
+
+The precise differences cannot be planned as facts until the sheets are supplied. There will be no invented changes, claims of faster handovers, or six-ward adoption claim.
+
+**Visitors can click:**
+
+- Old and new document buttons.
+- An enlarged document view.
+- Individual comparison notes.
+- A concise contribution summary.
+
+Dragging may supplement the comparison, but buttons and keyboard controls provide the complete interaction.
+
+**The scanner relocation**
+
+This exhibit separates your contribution from the ward’s result:
+
+- You conducted forty hours of observation.
+- You found three workarounds.
+- You got scanners moved to the medication room door.
+- The wider improvement involved pharmacy, IT, night staff, and you.
+
+**3D:** The same five sections form a simple spatial sequence showing the earlier scanner location and the medication room door. The remaining faces carry contribution and team attribution.
+
+This is a labelled explanatory schematic. It does not reproduce a ward floor plan, show patient locations, or invent distances.
+
+**Visitors can click:** Before/after location states and a contribution-and-evidence explanation.
+
+The **71%–94% figures stay out initially**. You have confirmed ownership of the result, but the measure, dates, and collection method still need clarification. If added later, the figures must appear with that context and explicit ward-team credit.
+
+**5. Recommendation — the professional next step**
+
+The final section brings together the evidence already shown:
+
+- Observation of actual ward practice.
+- Leadership of the handover redesign group.
+- Identification of scanning workarounds.
+- A concrete scanner-placement change.
+- Your intention to work in clinical informatics full time.
+
+The ending answers the page’s question through those contributions, then invites the relevant hiring conversation. It makes no promise of clinical outcomes beyond the evidence.
+
+**3D:** The five pieces return to one complete form. The final assembled document carries your confirmed contributions and professional direction.
+
+**Visitors can click:** Your chosen contact route, a CV download if supplied, and a return to either work exhibit.
+
+There will be no invented email address or inactive contact button at launch.
+
+**The look and type**
+
+The selected palette comes from the paper object:
+
+| Element | Choice |
+|---|---|
+| Page background | Warm paper — `#F5F2EB` |
+| Main text | Deep navy — `#162D3B` |
+| Links and active details | Teal — `#176B68` |
+| Document surfaces | Near-white — `#FFFEFA` |
+
+The sheets have matte surfaces, restrained edge shadows, and gentle perspective. Teal marks links, active chapters, and document rules; it does not imply a clinical status.
+
+**Inter** handles titles, prose, and controls. **IBM Plex Mono** handles ISBAR labels and small evidence annotations. Both use locally hosted font files with system fallbacks.
+
+The layout uses generous readable text, aligned document labels, and clear hierarchy. Body text is at least 16px on phones, with desktop prose kept to a comfortable line length.
+
+Two alternatives are recorded for review: cool white paper with blue accents, and a graphite background with cream sheets. The recommended warm-paper direction is the selected design.
+
+**Motion and controls**
+
+On desktop, the scene stays beside the text while short scroll-linked transitions move it between settled arrangements. Text remains level and readable. Scrolling upward reverses the sequence naturally.
+
+There is no endless spinning, custom cursor, forced scrolling, flashing scan effect, or sound.
+
+Every interactive control has keyboard support, visible focus, a clear label, and a touch equivalent. Essential evidence is visible outside the 3D scene.
+
+**Phones and fallback experiences**
+
+| Condition | What the visitor gets |
+|---|---|
+| **Phone** | A single-column page with the same five chapters, compact navigation, static document compositions, and contact access. Old/new sheets stack with labelled comparison buttons. No pinned full-screen scene. |
+| **Reduced motion** | Static settled illustrations for each chapter. No animated camera, parallax, scrolling transforms, or smooth anchor scrolling. |
+| **No WebGL or a failed scene** | Static SVG or image compositions replace the canvas. Text, document exhibits, navigation, and contact remain available. |
+| **No JavaScript** | Pre-rendered HTML contains all chapters, both document images, static illustrations, contact, and any CV link. No essential content sits inside a closed interactive panel. |
+
+Phone controls have touch targets of at least 44px. The layout must remain readable at 320px width and require no hovering.
+
+**Everything else the site needs**
+
+Here, “include” means part of a future implementation. It does not authorize building now.
+
+| Requirement | Decision |
+|---|---|
+| Chapter navigation | Include all five anchors, a contact shortcut, and a skip link |
+| Work coverage | Include the two confirmed examples: handover redesign and scanner work |
+| Separate project pages | Defer until there is enough approved material to justify them |
+| Contact | Include your chosen public address or profile |
+| CV | Include only when supplied and checked against the formal titles |
+| Testimonials | Defer; none have been supplied with permission |
+| Languages | English initially, with clinical terminology explained |
+| Search metadata | Include your name, formal roles, professional direction, and an accurate page description |
+| Shared-link preview | Include a five-section document illustration and approved professional information |
+| Site icon | Use an abstract form motif |
+| Missing-page handling | Include a simple 404 with home and contact links |
+| Blog | Defer unless you want to maintain public writing |
+| Chat | Exclude from this scope |
+| Analytics | Defer; launch without tracking |
+| Privacy and legal information | Match the eventual hosting and contact-data handling; determine applicable requirements before publication |
+| Domain and hosting | Choose later, before separately authorized publication |
+| Existing website | Make no replacement or redirect decision until its existence and desired treatment are confirmed |
+| Accessibility | Check headings, landmarks, focus, keyboard use, screen-reader equivalents, contrast, and document descriptions |
+| Performance | Load content first, reserve scene space, optimize images, and test on a representative mid-range phone |
+| Fallback testing | Check reduced motion, disabled JavaScript, unavailable WebGL, and loss of the 3D context |
+
+A future builder should use a statically rendered content page with progressive 3D enhancement. Five simple paper shapes and one canvas are sufficient. Rendering should stop when unnecessary, and the scene should load after the essential content.
+
+**Content boundaries and remaining inputs**
+
+The whiteboard photograph, hospital logo, and near-miss story are excluded entirely. The photo will not be blurred and reused. Unconfirmed dashboard work, preceptor figures, six-ward adoption, study interview and time-saving figures, and MSc completion will not become public claims.
+
+Before implementation, the essential inputs are:
+
+1. The approved empty old and new handover sheets.
+2. Your preferred public contact route.
+3. A CV, if you want a download.
+4. The scanning metric’s definition, period, and method, only if the numerical result is to be included.
+
+I chose the concept, visual direction, order, English language, static phone treatment, and initial feature scope under your instruction to use judgment. Missing facts remain omitted.
+
+Your approval is recorded. The planning handover is complete; building is outside this version of the storyfolio skill, and no site code has been created.

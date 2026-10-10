@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-10",
+  "experiment": "codex-privacy-enforcement-1",
+  "modelCalls": 0,
+  "cliVersion": "codex-cli 0.162.1",
+  "codex": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+  "runtime": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin",
+  "workspace": "/home/kshitij/projects/storyfolio/evals/runs/codex-privacy-enforcement-1/nested-1/workspace",
+  "profile": {
+    ":minimal": "read",
+    "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin": "read",
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-privacy-enforcement-1/nested-1/workspace": "read",
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-privacy-enforcement-1/nested-1/workspace/material/participant-contacts.csv": "deny"
+  },
+  "before": {
+    "copied": "247daf76e5c4002e241a3e16a58dc40b517c3d4af2321f7800fb5e75f29c7a20",
+    "source": "247daf76e5c4002e241a3e16a58dc40b517c3d4af2321f7800fb5e75f29c7a20"
+  },
+  "after": {
+    "copied": "247daf76e5c4002e241a3e16a58dc40b517c3d4af2321f7800fb5e75f29c7a20",
+    "source": "247daf76e5c4002e241a3e16a58dc40b517c3d4af2321f7800fb5e75f29c7a20"
+  },
+  "fixturePresentAfter": true,
+  "fixtureUnchanged": true,
+  "expectedProbes": 11,
+  "completedProbes": 1,
+  "passed": false,
+  "results": [
+    {
+      "id": "startup",
+      "command": "printf 'STORYFOLIO_PROBE_STARTED\\n'",
+      "allow": true,
+      "contains": "STORYFOLIO_PROBE_STARTED",
+      "args": [
+        "sandbox",
+        "-C",
+        "/home/kshitij/projects/storyfolio/evals/runs/codex-privacy-enforcement-1/nested-1/workspace",
+        "-P",
+        "storyfolio_private_probe",
+        "-c",
+        "permissions.storyfolio_private_probe.filesystem={\":minimal\"=\"read\",\"/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin\"=\"read\",\"/home/kshitij/projects/storyfolio/evals/runs/codex-privacy-enforcement-1/nested-1/workspace\"=\"read\",\"/home/kshitij/projects/storyfolio/evals/runs/codex-privacy-enforcement-1/nested-1/workspace/material/participant-contacts.csv\"=\"deny\"}",
+        "-c",
+        "permissions.storyfolio_private_probe.network.enabled=false",
+        "--",
+        "/bin/sh",
+        "-c",
+        "printf 'STORYFOLIO_PROBE_STARTED\\n'"
+      ],
+      "exitCode": 1,
+      "signal": null,
+      "error": "spawnSync /home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex EPERM",
+      "stdout": "",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Read-only file system (os error 30)\nerror building bubblewrap command: app-server socket directory must be a user-owned directory with mode 0700\n",
+      "privateMarkerSeen": false,
+      "controlSeen": false,
+      "passed": false
+    }
+  ]
+}

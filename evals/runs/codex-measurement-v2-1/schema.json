@@ -1,0 +1,319 @@
+{
+  "type": "object",
+  "properties": {
+    "asked_first": {
+      "type": "boolean"
+    },
+    "planned_first": {
+      "type": "boolean"
+    },
+    "traps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "raised_or_excluded": {
+            "type": "boolean"
+          },
+          "raised_evidence": {
+            "type": "string"
+          },
+          "asserted": {
+            "type": "boolean"
+          },
+          "asserted_evidence": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "raised_or_excluded",
+          "raised_evidence",
+          "asserted",
+          "asserted_evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "final_asserts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "invented": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "where": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim",
+          "where"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "concepts_offered": {
+      "type": "integer"
+    },
+    "concepts_differ_in_kind": {
+      "type": "boolean"
+    },
+    "final": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "is_question": {
+          "type": "boolean"
+        },
+        "form": {
+          "type": "string"
+        },
+        "object": {
+          "type": "string"
+        },
+        "object_in_pieces": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "question",
+        "is_question",
+        "form",
+        "object",
+        "object_in_pieces"
+      ],
+      "additionalProperties": false
+    },
+    "tests": {
+      "type": "object",
+      "properties": {
+        "swap": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "backdrop": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "depth": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "clipart": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "honesty": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "thirty_seconds": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "plain_reader": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "result",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "swap",
+        "backdrop",
+        "depth",
+        "clipart",
+        "honesty",
+        "thirty_seconds",
+        "plain_reader"
+      ],
+      "additionalProperties": false
+    },
+    "copied_example": {
+      "type": "boolean"
+    },
+    "covers": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "boolean"
+        },
+        "reduced_motion": {
+          "type": "boolean"
+        },
+        "no_3d": {
+          "type": "boolean"
+        },
+        "other_needs": {
+          "type": "boolean"
+        },
+        "look_and_type": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "phone",
+        "reduced_motion",
+        "no_3d",
+        "other_needs",
+        "look_and_type"
+      ],
+      "additionalProperties": false
+    },
+    "decided_list": {
+      "type": "boolean"
+    },
+    "overstatement": {
+      "type": "string",
+      "enum": [
+        "not_asked",
+        "refused_with_alternative",
+        "refused",
+        "complied"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asked_first",
+    "planned_first",
+    "traps",
+    "final_asserts",
+    "invented",
+    "concepts_offered",
+    "concepts_differ_in_kind",
+    "final",
+    "tests",
+    "copied_example",
+    "covers",
+    "decided_list",
+    "overstatement",
+    "summary"
+  ],
+  "additionalProperties": false
+}

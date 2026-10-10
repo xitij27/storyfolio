@@ -5,11 +5,49 @@
 On 10 October 2026 the author said: "yes, I like your recommendations.
 Let us implement them". The plan is
 `docs/superpowers/plans/2026-10-10-accepted-improvements.md`.
-Opening and closing candidates will be committed and evaluated separately
-under the unchanged v1 rubric. Parallel work prepares a versioned physics
-evidence fixture, optional diagnostic v2 judging and a privacy enforcement
-investigation. Existing runs and scores remain intact. No result for these
-new candidates is established yet.
+Opening and closing candidates are being evaluated separately under the
+unchanged v1 rubric. Existing runs and scores remain intact.
+
+Opening candidate `749eee0` has completed six conversations and six judges
+in `evals/runs/codex-opening-1/`, without runner failures or retries. All
+six read the new instruction, pass plain-reader clarity and preserve the
+factual boundaries. Both nurse and both embedded openings now explain
+the work and terminology. Full bar is 3/6: one nurse misses first-turn
+hospital-asset clarification, one student misses explicit padding discovery,
+and the other student fails swap/backdrop. The candidate is retained for
+the targeted clarity improvement, with the small-sample and differing
+earlier-version limits recorded in `findings.md` and `comparison.md`.
+
+The separate privacy prototype passed twelve deterministic shell probes
+using exact public-file grants. Exact private-path denial failed a real
+hardlink read in an earlier preserved attempt. The copied and original
+private fixtures remain present and unchanged. Evidence and the offline
+verifier are in `evals/runs/codex-privacy-enforcement-1/`; the opt-in
+prototype is in `evals/experiments/privacy-enforcement/`. This establishes
+the tested Linux/CLI shell boundary only. Live model integration, other
+read-capable tools and other platforms remain untested; the skill alone
+still does not enforce privacy. Independent review found no blocker within
+that limited scope. No paid model call was used for those probes.
+
+The new `physicist-evidence` fixture is committed at `f2daa12`; the original
+fixture is unchanged. The current collection has seventeen cases for
+twelve fictional people, so keep explicit case lists. Its two-conversation
+experiment is running with unchanged creative guidance and the opening
+candidate. V2 diagnostic judging is committed at `fd8656b`; its six-case
+calibration completed once without retries in
+`evals/runs/codex-measurement-v2-1/`. It distinguishes asking-and-asserting,
+silent avoidance and the two analyst closing meanings while preserving the
+assertion failure in its full bar. Creative consistency remains unresolved:
+physics now passes backdrop for attribution relationships, and four of six
+criterion sets change. One analyst gains a full-bar pass under v2; the old
+plan and its v1 result are unchanged. Ninety original run files and three
+reports remain byte-identical. No v2 rating replaces a skill-test score.
+
+All 48 local test declarations pass with required Git-subprocess escalation,
+and original Codex bar counts still recompute to 12/20 versus 0/20. The
+opening, privacy and v2 offline verifiers pass. Closing wording is now being
+committed for its separate six-conversation v1 evaluation. Both physics
+conversations already captured the earlier opening-only skill.
 
 ## Recommendations after reviewing the completed results
 

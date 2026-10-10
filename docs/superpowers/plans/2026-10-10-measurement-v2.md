@@ -74,23 +74,24 @@ skill pass rate.
 Commands, with the same explicit selection on each judge invocation:
 
 ```bash
-node evals/codex-judge-v2.mjs --output codex-rubric-v2-1 --runs codex-sol-1/analyst-hurried/with-1,codex-sol-2/student/with-2,codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2,codex-stem-1/backend/with-1,codex-stem-1/physicist/with-1 --dry
-node evals/codex-judge-v2.mjs --output codex-rubric-v2-1 --runs codex-sol-1/analyst-hurried/with-1,codex-sol-2/student/with-2,codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2,codex-stem-1/backend/with-1,codex-stem-1/physicist/with-1 --prepare
-node evals/codex-judge-v2.mjs --output codex-rubric-v2-1 --runs codex-sol-1/analyst-hurried/with-1,codex-sol-2/student/with-2,codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2,codex-stem-1/backend/with-1,codex-stem-1/physicist/with-1 --jobs 2
-node evals/report-v2.mjs --output codex-rubric-v2-1
+node evals/codex-judge-v2.mjs --output codex-measurement-v2-1 --runs codex-sol-1/analyst-hurried/with-1,codex-sol-2/student/with-2,codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2,codex-stem-1/backend/with-1,codex-stem-1/physicist/with-1 --dry
+node evals/codex-judge-v2.mjs --output codex-measurement-v2-1 --runs codex-sol-1/analyst-hurried/with-1,codex-sol-2/student/with-2,codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2,codex-stem-1/backend/with-1,codex-stem-1/physicist/with-1 --prepare
+node evals/codex-judge-v2.mjs --output codex-measurement-v2-1 --runs codex-sol-1/analyst-hurried/with-1,codex-sol-2/student/with-2,codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2,codex-stem-1/backend/with-1,codex-stem-1/physicist/with-1 --jobs 2
+node evals/report-v2.mjs --output codex-measurement-v2-1
 ```
 
 `--dry` is read-only and starts no model. `--prepare` freezes reviewable
 inputs without a model call. The third command spends account usage. Commit
-the implementation and prepared inputs before running it. A rerun skips
+the implementation and prepare the frozen inputs before running it; commit
+all calibration inputs and outputs in the same piece of work. A rerun skips
 completed valid v2 judgements; failures remain under each case's `attempts/`.
 Changed inputs or implementation require a new output cohort. Reporting
 requires all selected cases and refuses to replace an existing report.
 
 ## Verification and current outcome
 
-Implementation and local verification are complete. No v2 model call has
-been made by this workstream. The six-case `--dry` succeeds and finds fifteen
+Implementation and local verification completed before paid calibration.
+The six-case `--dry` succeeds and finds fifteen
 original files per case. Rendered prompts are 64,382 to 76,807 bytes. The
 source evidence prefix is preserved, and no output directory is created.
 
@@ -125,7 +126,26 @@ remain untouched. Before calibration, the original report SHA-256 values are:
 | `codex-sol-2/report.md` | `1ea6ad7cf7a5cbf701a1a171bf1aee2805e425bda341c3ec4fc03419cd49dec4` |
 | `codex-stem-1/report.md` | `9a4fcfe0b14241ae0c7a26e88e3a222928bdb4111f7e3ad0b7cb27da3f206e8d` |
 
-The calibration's reviewed findings and judge outcomes belong under its new
-run directory once completed. This diagnostic rubric is separate from the
-v1 comparisons testing the concurrent skill changes. No old failure is
-relabelled, and different rubrics must not be pooled into a performance trend.
+After implementation commit `fd8656b`, the coordinator authorized the exact
+six cases once in `evals/runs/codex-measurement-v2-1/`. All completed on Astra
+medium, at most two at once, with one attempt each and no runner failure or
+retry. Snapshots were saved before invocation and preserved with results in
+the same piece of work. The report and reviewed `findings.md` are there.
+
+The split captures both asking and asserting for the hurried analyst, with
+the safety failure retained; it distinguishes student avoidance from
+discovery without calling it invention. Both analyst closing verdicts retain
+their expected fail/pass distinction. The creative comparison remains
+unsettled: backend passes backdrop, but physics now passes it too because
+the judge credits attribution relationships. Analyst repetition 2 gains the
+only full-bar change, from a backdrop pass for its scaled time comparison.
+These are changed judgements of unchanged plans, not improvements to agent
+behaviour. All ratings, including unrelated swap and closing changes, stay
+visible, and no favourable rejudging was done.
+
+The offline cohort verifier passes for six complete ratings and their
+successful single attempts, frozen inputs, ninety unchanged source files
+and three unchanged original reports. No v1 scoring or harness file changed.
+This diagnostic rubric remains separate from the v1 comparisons testing the
+concurrent skill changes. No old failure is relabelled, and different rubrics
+must not be pooled into a performance trend.

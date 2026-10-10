@@ -1,0 +1,222 @@
+{
+  "rubricVersion": "2",
+  "model": "gpt-6-astra",
+  "reasoningEffort": "medium",
+  "sources": [
+    "codex-sol-1/analyst-hurried/with-1",
+    "codex-sol-2/analyst/with-1",
+    "codex-sol-2/analyst/with-2",
+    "codex-sol-2/student/with-2",
+    "codex-stem-1/backend/with-1",
+    "codex-stem-1/physicist/with-1"
+  ],
+  "implementationHashes": {
+    "evals/prompts/judge-v2.md": "88febca37bb6487bc6c5bb0e65ddf3b97dfe6113286d21456d514feeb037101b",
+    "evals/lib/score-v2.mjs": "545c4f0bf103e10ad7cdfa85d384628d2c144864789107de937c6308d7fd3f7d",
+    "evals/lib/measurement-v2.mjs": "d05641a20714db1d75997fa00aff9afdea117b2a0222df46e7cbe77b7d02f69c",
+    "evals/codex-judge-v2.mjs": "ce49744794f8ec699fbc03967f1433e8497fdcc7a8b0d82c31090bba84b0b7ff",
+    "evals/report-v2.mjs": "51bded72ccfb035a2d42f376681408450492edb37b511060e7a542a46e0f1924",
+    "evals/lib/codex.mjs": "cbb1c19d5382c9012d7b6055044c240a7f78a0eb8eff6c5c9aec85ef22f48308",
+    "evals/lib/score.mjs": "b93c20b70ba6f57fe112048c9ab72a6882196fa189ceca8610566c5d84f0b757"
+  },
+  "originalReportHashes": {
+    "codex-sol-1/report.md": "3e8ec08a6778717f56167216427239a85e4afd54a8ed4d2e076a8f93afb7aa46",
+    "codex-sol-2/report.md": "1ea6ad7cf7a5cbf701a1a171bf1aee2805e425bda341c3ec4fc03419cd49dec4",
+    "codex-stem-1/report.md": "9a4fcfe0b14241ae0c7a26e88e3a222928bdb4111f7e3ad0b7cb27da3f206e8d"
+  },
+  "schemaSha256": "aba238e7ede1a789d94ca654e36d731a9a9217621e55b5546ef0d3a611d9d748",
+  "cases": {
+    "codex-sol-1/analyst-hurried/with-1": {
+      "fixture": {
+        "harnessCommit": "13f7ced",
+        "hashes": {
+          "evals/people/analyst-hurried/person.json": "ad2a798463356ecac4afb9da19f3fbd201e2b82052dadb4d68bab77ea925ee30",
+          "evals/people/analyst/truth.md": "63b6a199aa59d77ac0acd611eb1a49479af0d153a40e02e0006fd213bafd2428"
+        }
+      },
+      "sourceHashes": {
+        "files/docs/story/concepts.md": "1559563577a6793861ed646feffd261d0c43194c240a974b0745725770002416",
+        "files/docs/story/decided-for-you.md": "f267b57cdbf9b5e258e0f62e623116cdb7df090f978012c665bf83b2ee743708",
+        "files/docs/story/facts.md": "a64a07748118692f7383f3e96099fb928a044f729af6ed1b251e269725511324",
+        "files/docs/story/handover.md": "69ca4fd886d3b0fdd5785b27675fb9da748f0222846238ed7bd9d29df04a5d21",
+        "files/docs/story/storyboard.md": "2a3660ab7def81c5f962a4d2b56a36186e1e487827e7648e41e9407ddd3b8c44",
+        "judge-prompt.md": "38c3fa1167dfe3376dda3f6b70097e0defade3639fb2752770a888a1f51e4bae",
+        "judge.jsonl": "d12b442fca40fe32e06f10795bedf61efe3aabab65d6252472609c7be3c6a50f",
+        "judgement.json": "af712beb0bcd37356a8c96feb0ab42c139ac11e83064d1b253737c025250b656",
+        "meta.json": "09fc773eaa9dc4ed503e74e98574fc825348a3166549c9c3877ada2bcb3ae327",
+        "turn1.jsonl": "dc5ffb9268db6bba6aca5a7179802df55fb3f3d68bef0c725ef3df08178191de",
+        "turn1.md": "c411f057baa100fdd0d116b9af3e9eea440ae3aafe1e42f1f778dd57e1cf1fb0",
+        "turn2.jsonl": "fbbbeeee4d0ee17e40cd6efe101892666eb21318fa853d220452c7116ed5efe6",
+        "turn2.md": "fb1f3f12ebb698179f8337137cd17f4bd46b837d8a8b7ba7b598c06ae8fd907c",
+        "turn3.jsonl": "7f888e434bc33ae9c784ac7a5f807e442c175e9993dcd1de6934d2b6598ee52b",
+        "turn3.md": "50b1f71c466a01baa1bcf21398874874a485900527db897b9d2e77f4686140e7"
+      },
+      "snapshotHashes": {
+        "source-meta.json": "09fc773eaa9dc4ed503e74e98574fc825348a3166549c9c3877ada2bcb3ae327",
+        "person.json": "05d3823663f5389824bf630f04afa2c867c502afb227a67bc6e5d7f4b2c93f01",
+        "original-judgement.json": "af712beb0bcd37356a8c96feb0ab42c139ac11e83064d1b253737c025250b656",
+        "judge-prompt.md": "cd196f2829948a5eefea92f7b199c34dca338f1081d47e6708063a74deab6324"
+      }
+    },
+    "codex-sol-2/analyst/with-1": {
+      "fixture": {
+        "harnessCommit": "e485f53",
+        "hashes": {
+          "evals/people/analyst/person.json": "7edcb317abaab823ad7dc28e91474208dbf0a228e4d817cd211504fcc58a511c",
+          "evals/people/analyst/truth.md": "63b6a199aa59d77ac0acd611eb1a49479af0d153a40e02e0006fd213bafd2428"
+        }
+      },
+      "sourceHashes": {
+        "files/docs/story/concepts.md": "7d7457409012819fae09f42e20cc7d8d7e8baa416bfbde1ef432b35252b0a9b5",
+        "files/docs/story/decided-for-you.md": "4e3cbf4e29c4fd19e963647bf8b0e6a7f0754f69876bb8f4fc700fc2fcae8d5a",
+        "files/docs/story/facts.md": "6b45e8abea4678b015fb00e210f25c4510fef1b4dcf262e7672788371ed2e241",
+        "files/docs/story/handover.md": "d9364fd9b82262641784ac2dd092967ac3f54ad5846528de7e8f342b91a73a08",
+        "files/docs/story/storyboard.md": "b93f6719d6e46a28e7303d2e52de5ef5f41efc59456ff1f63b3417ae1449e4f7",
+        "judge-prompt.md": "f4f84185b50f5a64863255a1736411631ee7035e397046700432b756768b0a26",
+        "judge.jsonl": "ebebd20f04f6a08ca12ebbc677e4b6f537974837ffb5d546ef727bc6f1e81d33",
+        "judgement.json": "f9c3f07e2b6059c940b4bd87f1e7bf4fa80776ac4d57f12a8258a0eefd70ce5d",
+        "meta.json": "67ad2f5863d4131566cc23fa72c8d825a58a911d5afc4b97eb7986026d701dba",
+        "turn1.jsonl": "f9201ab93d831a8be0fad13191bbe93e9cd441088343e3c1a628a3643516f5d1",
+        "turn1.md": "ff3bc5c53c9344a9b40942aeb63e490c3c4d6c2bdc29282cae676551238ee53f",
+        "turn2.jsonl": "32e6839f99bda60221902597469f128825ad7c1664b7b47044a1aa5e00861131",
+        "turn2.md": "77167b4bcd8ff807e55822fc7941bc321312881b6cbc02a0043f5938031b1d61",
+        "turn3.jsonl": "4de7055784b7ca201120f9d0a6b2e130695725c2087647450a977cd0947e8a61",
+        "turn3.md": "ce33a11d22f61c9df022680be7fd89ec67ed7539b420782c7cb34e4e62ede247"
+      },
+      "snapshotHashes": {
+        "source-meta.json": "ab6b1c2187d51435c83f51332ba630020b3c70b4216fb39a9c65fe071e175e43",
+        "person.json": "a5ef62f2f97b2039ef5479b50d0d67a388ab30484f687947241de58c93e9cede",
+        "original-judgement.json": "f9c3f07e2b6059c940b4bd87f1e7bf4fa80776ac4d57f12a8258a0eefd70ce5d",
+        "judge-prompt.md": "c5a1150cfa7396f3041ded26ba9a9e364b79c8ade5d910f5734b74735a9425c0"
+      }
+    },
+    "codex-sol-2/analyst/with-2": {
+      "fixture": {
+        "harnessCommit": "e485f53",
+        "hashes": {
+          "evals/people/analyst/person.json": "7edcb317abaab823ad7dc28e91474208dbf0a228e4d817cd211504fcc58a511c",
+          "evals/people/analyst/truth.md": "63b6a199aa59d77ac0acd611eb1a49479af0d153a40e02e0006fd213bafd2428"
+        }
+      },
+      "sourceHashes": {
+        "files/docs/story/concepts.md": "d0a846b90cb8752e50767b33ada4bb21607c3f85e073e7e3916707c5cdec1a01",
+        "files/docs/story/decided-for-you.md": "c155e7e32b4c5f28af3e69dbf37c3e69274863a505d92e213405b68afcbe1c81",
+        "files/docs/story/facts.md": "bdc601dd97e74431556fbad2ef61b993968edf5e46a14c79e5b5a2109ca66330",
+        "files/docs/story/handover.md": "ac593f911f50d6b0a305841918d89cad1c431be5b6eb7cdaf09e6a2e7961815e",
+        "files/docs/story/storyboard.md": "d527690da95fea3f907b696826f00f6a003389a525100c38ed48098dbaebd5dd",
+        "judge-prompt.md": "ff69540c3d3ee7bd555bca9a74a39d8a3720470381bad99e4c2059a0becbd833",
+        "judge.jsonl": "e0456ad862520e77812e99487a573848a063eb68ee57083c1f43af392f85dc2f",
+        "judgement.json": "13e153cec3f5b61c97642b4555d29dc3136ab9de9621f24a51deea94fb354a2c",
+        "meta.json": "f6f725944c6deae3bddede7127cd939b14a74b88f0db52d5b181e823c851020b",
+        "turn1.jsonl": "7fade9b6ff32feb040af90fdfa2a8bc0470994d09db582f27d6cdea2aa4af0df",
+        "turn1.md": "da3c317d1bb2e4be36e5c03d5fcd1c95930bd5ca9739fcad2ed2e30cda8e71bc",
+        "turn2.jsonl": "2b91d3ff7b593778d5e315174ea7b4a6f611ecd0af7e31c275ca8b5d9bb14bc0",
+        "turn2.md": "61b21cbaa8a6d6fbf1d5ccba4ae3c620d89e6d991c9502496ddeafb6e2f2cf88",
+        "turn3.jsonl": "02f03107dfcb23a31faffe12f58aca154c5adabb68db9894ac8a8e615796dd8e",
+        "turn3.md": "a88e435ec64afefebdb154be876a8a425edefed436fdaee8ab6be6eba840178e"
+      },
+      "snapshotHashes": {
+        "source-meta.json": "99a22496d20382bf82940375f9b4fd61786909122ce960a8bb1312f1ea348360",
+        "person.json": "a5ef62f2f97b2039ef5479b50d0d67a388ab30484f687947241de58c93e9cede",
+        "original-judgement.json": "13e153cec3f5b61c97642b4555d29dc3136ab9de9621f24a51deea94fb354a2c",
+        "judge-prompt.md": "12945d60f86886f4a22827c8dc6adda409e997b6a52abc7409ee9e3aabc9ed01"
+      }
+    },
+    "codex-sol-2/student/with-2": {
+      "fixture": {
+        "harnessCommit": "6b05309",
+        "hashes": {
+          "evals/people/student/person.json": "b4c996b4277f0246e23e5874ce888fafa2ab4699ff896dfe8622d661e98fc991",
+          "evals/people/student/truth.md": "82e11b20af79423e67531969fa335fc90db6a6ea563c106d4e72d5c42573c047"
+        }
+      },
+      "sourceHashes": {
+        "files/docs/story/concepts.md": "52bc1e5b4022c7d59797ed7a7ff508bff410446b4e8410f7ca3d7f472e68cbf3",
+        "files/docs/story/decided-for-you.md": "fed56bda93d51930804d82666c6c73c6f81c1e554cf2f1e3053701e41fef734a",
+        "files/docs/story/facts.md": "9b81dd46ebcd5921e99410a4dc5fd315821d2014f439b501a9c11ea889a2e4e6",
+        "files/docs/story/handover.md": "85ec1e616327b3949c4bc97c49dfab593457b3195562d9366720e0b9cad3aea9",
+        "files/docs/story/storyboard.md": "676a77593fb6633e0f20cc1ba19d181fb8a270ad27c8d3f98c015af55880bae6",
+        "judge-prompt.md": "1363728ef5b13c452060e47343c38f9335c57ce6aef7aa080be413c88836b2f0",
+        "judge.jsonl": "686cd928b240fd37256ae30bb0ae50db3a19a9887b97851368e1ee8f23f8b073",
+        "judgement.json": "3becd2a0abb87761ef2271d4bc804af8972e3007751bcc4b53249f783e97320d",
+        "meta.json": "19d8f44a571addeb971a3e5a3d47a0c8f3c1789d9c6b9a6765e765ff28d8e5c7",
+        "turn1.jsonl": "f073ced5fd7321af984d94b340d43793bd342589a791ff7ecb0a0176b8f1eda5",
+        "turn1.md": "35f807db93139aee683901c4e1a11f898cbc606ef62108c38b3ab5f4d4710334",
+        "turn2.jsonl": "de46fc0f0816bf36a8475fe2fc6745691f576324546ef9eb1745951d60f16800",
+        "turn2.md": "1e407e0fbe53c76f998b32167e93625890fd6d9eb040aebfe8329555173e0412",
+        "turn3.jsonl": "8c7b19ef8431d7a386facf6d141ef073060215f9878c12bb3e789073dfbe9c09",
+        "turn3.md": "c52a31d42067e465259f3cf1b91898ca4d2993c990b06816a16b0b8f5a701520"
+      },
+      "snapshotHashes": {
+        "source-meta.json": "19d8f44a571addeb971a3e5a3d47a0c8f3c1789d9c6b9a6765e765ff28d8e5c7",
+        "person.json": "596395e3e6137313c550e290cda2d35a6395be696cbe9975e5698390c678566a",
+        "original-judgement.json": "3becd2a0abb87761ef2271d4bc804af8972e3007751bcc4b53249f783e97320d",
+        "judge-prompt.md": "5043a5e4dcc17267ea5c096677d20900253c9ef6b5c655e7af7dbab7a1ae9d36"
+      }
+    },
+    "codex-stem-1/backend/with-1": {
+      "fixture": {
+        "harnessCommit": "6b05309",
+        "hashes": {
+          "evals/people/backend/person.json": "4b6975c981865fa4aa13ec5828a7b43e69a296df6104c942f3ae82ed26e183d4",
+          "evals/people/backend/truth.md": "5e0fd3db1ded3953ea9ddf4f9fcf8e98203204f2681425e37c0c6e629361875f"
+        }
+      },
+      "sourceHashes": {
+        "files/docs/story/concepts.md": "abbfb478df8c56d41cea60a50ff163e8719fa174555eadf2441defcee358e2ce",
+        "files/docs/story/decided-for-you.md": "c84ca0646d4a5e70d95275c1b8f5b6b397b1353d5f5132b87c7b9a0ad717d4fa",
+        "files/docs/story/facts.md": "649ce6f8a2ab76b5173a33bbffd96ae5b0ba77e0852fb58d3b33f1f409732460",
+        "files/docs/story/handover.md": "5133f1c5f6c1a176f0710790416801697eb6a20fd76386e10e93273011ac9a94",
+        "files/docs/story/storyboard.md": "7a8170a67a0227661b8fc454e1c5dd602707fc5e9c239db9031cde1ac6a42ff1",
+        "judge-prompt.md": "ed622e32ecda768c51e6eebb7a35608f36329140acb6798c82e071fb6e1586ae",
+        "judge.jsonl": "4545c8070f145cf17832e1d698010af80eb2ed3c7ec4076ab3f4209f34402183",
+        "judgement.json": "605f333f127378fd9c529e9cc77ca4285431d23bdc5e24f418e2ae52e1ab8683",
+        "meta.json": "acd85e4d710016e1371d9b25ffa8796e50ed9fa339360b1e1f9f0ecc5c5d921f",
+        "turn1.jsonl": "0b0ee0e64e423424c92572dfd411738abce459a9b6581450ce35d997497e7652",
+        "turn1.md": "deca9afd1fdd6f27165cbbbea899e9ed9b4135b7f04af08a247885361cadc3ab",
+        "turn2.jsonl": "9b631c5baf0c8bfc7660f10439f5971a98f69ae69100b2c29ff76e75fa9778a8",
+        "turn2.md": "843c38841a67f2b296da330cba6d974b4447703c472bee80ca22df6cf4a07e58",
+        "turn3.jsonl": "3ea333a48ca5921d1ba99aff12413ecc40449230154752ce2696e44b9c4ddf8d",
+        "turn3.md": "659cce2943c97e67d520292a675b078a742335f9116f6413a06e4d4ed6de9ff4"
+      },
+      "snapshotHashes": {
+        "source-meta.json": "acd85e4d710016e1371d9b25ffa8796e50ed9fa339360b1e1f9f0ecc5c5d921f",
+        "person.json": "e5df8625194703badcfb977e1c0015c059e879c5855b56a0d3d993929577ff3c",
+        "original-judgement.json": "605f333f127378fd9c529e9cc77ca4285431d23bdc5e24f418e2ae52e1ab8683",
+        "judge-prompt.md": "212a080763fd8bd518188faad34ff78d2ec4a79e7bc59f2b547ed5e9cc5aaf9c"
+      }
+    },
+    "codex-stem-1/physicist/with-1": {
+      "fixture": {
+        "harnessCommit": "6b05309",
+        "hashes": {
+          "evals/people/physicist/person.json": "bd4ba58c0bdda5de82d5cf2ce90a0cd4beb55ee1d60c52e63d7c965c719b17ea",
+          "evals/people/physicist/truth.md": "1edd6f3d3b9dc10ad7c593822ebf34effb2a6d10eb68d7cc2748961d2ea56708"
+        }
+      },
+      "sourceHashes": {
+        "files/docs/story/concepts.md": "b559ac8931c78c2866d08b99d065d0013dd257d0b735ab0357badfc0c96296a5",
+        "files/docs/story/decided-for-you.md": "8056c816f50ce3bae9ded5f72a6b157fb6d61808bd7023f5d9164ff7ca9fceae",
+        "files/docs/story/facts.md": "074372990008f7e4ce2ca9187a1a9da0ca8d42399ac1e6eb11768586368646b4",
+        "files/docs/story/handover.md": "01ce76eaa860c425e74c2185d68e787272d1f229393d9465e9eb3fa4ab6819be",
+        "files/docs/story/storyboard.md": "23bac15855f3a559ebc82d449f678bb535e3a5b697f563d5f33e8e2300b0fc09",
+        "judge-prompt.md": "553a6d4a7519ea0f12d033b05ebd3e36aa2683286f97fe04f29b6656dffe2b13",
+        "judge.jsonl": "946c7227ac6ab56a42162add605b2a8ff93913aed5081697e7a452c3fa9526dc",
+        "judgement.json": "bf910731b985c97c334a23632b663cf5f9d4a4581a92207724884f1c4f5b746f",
+        "meta.json": "0c997721b850a8f5cd140c756401ab6936c3828d073594c2e3e18d7fa46a2fb8",
+        "turn1.jsonl": "0b1f33501ddebefaa2b70fbdd045c2ba73e91bdb2621fcc88fd09bb61552aa24",
+        "turn1.md": "90fe48bbed67b9903a90fadc6bf1aceaf58b4a151a6b3eb3ca4f0cfe5be6c588",
+        "turn2.jsonl": "08990efe62c4bdeaea7ebfa48a148f4fd373041886b6e50c90cb04e276f703b6",
+        "turn2.md": "16aecae70dcc92eec7f99b3899b40655fb1dccaf76344034da120ab8e855ea7f",
+        "turn3.jsonl": "31c5f309290d21d62237c162ea3d92f7cda7a848592549845f6b9f349f08a797",
+        "turn3.md": "753343ec2cb5143898544aad39e10ae72cfcc6d327ce7c049bff55c98d1cb473"
+      },
+      "snapshotHashes": {
+        "source-meta.json": "0c997721b850a8f5cd140c756401ab6936c3828d073594c2e3e18d7fa46a2fb8",
+        "person.json": "8fa86a4c4123b3ee49568e90003003526d2bf0ef6d1c0fd23335c85b0203d1a0",
+        "original-judgement.json": "bf910731b985c97c334a23632b663cf5f9d4a4581a92207724884f1c4f5b746f",
+        "judge-prompt.md": "5aa7780cb3a4ca958bc6d8dc7de9add5f8be8e519914778063ce45e7676edb2f"
+      }
+    }
+  }
+}
