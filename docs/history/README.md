@@ -5,6 +5,10 @@ The files indexed here preserve historical wording, including instructions
 and status statements that were later superseded. Their commands are not
 the current execution instructions.
 
+The [11 October publication and README record](2026-10-11-readme-and-publication.md)
+preserves the author's public-status update, the earlier private-status
+guidance and the illustrated README work.
+
 ## Capture and scope
 
 Captured on 10 October 2026 from the working tree at commit
@@ -122,4 +126,6 @@ regenerate evaluation reports. The saved completion result is
 
 The full outcome and local validation are in
 [the migration plan](../superpowers/plans/2026-10-10-documentation-organization.md#implementation-outcome).
-Archives remain subject to the private repository's pre-publication review.
+Archives retain the contextual material described by the earlier publication
+guidance. See the [current publication record](2026-10-11-readme-and-publication.md)
+for the author's public-status update.

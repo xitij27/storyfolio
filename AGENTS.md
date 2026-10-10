@@ -42,8 +42,8 @@ by one object in 3D. Read `docs/handover.md` before working on it.
   on 10 October 2026, "push it to remote and continue with our work here",
   so that another session could take the work up, and that day's work was
   pushed as it was done. A later day's push needs their word again.
-- The repository on GitHub is private. Making it public is the author's to
-  do, and `docs/handover.md` says what has to come out of it first.
+- The author made the GitHub repository public on 11 October 2026.
+  `docs/handover.md` records that change and the earlier publication guidance.
 - The people in `evals/people/` are made up. No real person, employer or
   product is described in them.
 - No em dashes in the skill or in these files. A comma, a colon, a full stop

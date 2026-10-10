@@ -35,15 +35,16 @@ rate. Earlier factual refinements and their evidence remain in the
 [study catalogue](../evals/studies.md).
 
 The root [README](../README.md) now provides public-facing installation and
-usage guidance for the planning-only skill. It presents Storyfolio as a
-portable instruction directory for any agent that supports local skills or
-can read attached files, with concrete Codex and Claude Code paths and a
-prompt-based fallback for other capable agents. It also records the three
-approval points, privacy boundaries, contribution checks and the current
-private-repository status. [LICENSE](../LICENSE) adds the MIT license selected
-in the original design record; `package.json` declares the same SPDX
-identifier. This documentation change did not alter the skill or run a paid
-evaluation.
+usage guidance for the planning-only skill. Following the author's report
+that the repository is public, it now has a paper-object concept illustration,
+examples from the concept reference, the three approval points, installation
+guidance for capable agents and the five planning files users receive.
+Codex and Claude Code are concrete installation examples; file-reading agents
+have a prompt-based path. The README restores the originating portfolio
+credit and links current official client documentation. [LICENSE](../LICENSE)
+adds the MIT license selected in the original design record; `package.json`
+declares the same SPDX identifier. The [publication and README record](history/2026-10-11-readme-and-publication.md)
+preserves author wording, earlier status statements, review and verification.
 
 The other accepted work added a richer physics fixture, optional diagnostic
 v2 judging and a privacy prototype. It did not change creative guidance.
@@ -78,8 +79,10 @@ The source HEAD is `9a5603d51463eb2564f8b5a117b2242678c660b1`.
 Thirteen allowlisted real source/assets files and source context are saved
 under `evals/reviews/steve-source/`, outside fictional people. The original
 checkout and its modified lockfile are preserved; `Profile.pdf` remains
-unopened. This real person's source and assets need review before any
-public release of Storyfolio, alongside the existing publication checklist.
+unopened. The earlier source-review note is preserved verbatim in the
+[publication and README record](history/2026-10-11-readme-and-publication.md#earlier-publication-guidance).
+The author now reports that Storyfolio is public. This README change does
+not establish whether the earlier publication review was completed.
 
 1. The author accepted a separate existing-portfolio review direction,
    with feedback before redesign and general usefulness distinguished
@@ -162,9 +165,10 @@ pauses and reversals.
 | "yes, I like your recommendations. Let us implement them" | Five workstreams completed within scope; only two storyboard paragraphs were the latest direct skill changes. [Completion record](history/2026-10-10-handover.md#accepted-improvements-implemented-and-evaluated). |
 | Existing-portfolio review direction accepted | The broader path remains proposed; the first real repository pilot is complete. [Accepted direction](history/2026-10-10-handover.md#existing-portfolio-review-direction-accepted-implementation-planned) and [pilot findings](../evals/runs/codex-steve-review-before-1/findings.md). |
 | 11 October: "make this skill better by evaluating" the Steve checkout | Evaluate the supplied real example now, before the fictional case. Improve instructions only if the run needs it. This pilot found no such miss; retain the skill and preserve its evidence. [Pilot plan](superpowers/plans/2026-10-11-steve-review-pilot.md). |
-| 11 October: "frame a professional README.md describing how people can install and use this skill. Add all necessary information and license too" | Root README now documents the supported local installation, activation, scope, usage, safeguards and contributor checks. MIT licensing is in `LICENSE` and package metadata. The repository is still private, so access is required to clone it. |
+| 11 October: "frame a professional README.md describing how people can install and use this skill. Add all necessary information and license too" | README documents installation, activation, scope, usage and contribution. MIT is declared in `LICENSE` and package metadata. Its earlier private-access wording is preserved in the [publication and README record](history/2026-10-11-readme-and-publication.md). |
 | 11 October: "Why just codex, this skillshould be able to work with claude too" | README now gives Claude Code equal first-class guidance: install under `.claude/skills/storyfolio`, start a new session and invoke `/storyfolio`. No Claude-specific instruction is needed because the Agent Skills directory and its references are already portable. |
 | 11 October: "or rather any AI agent" | README now leads with agent-neutral installation. It distinguishes portable skill-capable agents from interfaces that must receive the directory as instructions, and does not promise compatibility with agents unable to read files or attachments. |
+| 11 October: "okay I have made it public. Now make the readme feel more illustrative and inviting" | Author reports public GitHub visibility. README now has a concept illustration, examples, a three-step walkthrough, starter prompts and output-file preview. Agent portability and the planning scope remain explicit. [Full record](history/2026-10-11-readme-and-publication.md). |
 | Repository input for deeper portfolio evaluation | Accept GitHub repository URLs and local checkouts alongside deployed URLs. Source, local runtime and deployed evidence have separate provenance. Exact examples and planning update are recorded below. |
 | Better organization "without losing any details and information"; then "yes lets get it done" | Implement the documentation proposal with verbatim archives and evidence preservation. [Migration plan](superpowers/plans/2026-10-10-documentation-organization.md). |
 | Commit on main; push only on the author's word | Preserve the exact date-scoped push direction in [AGENTS.md](../AGENTS.md). This documentation migration does not need a push or publication. |
@@ -231,13 +235,13 @@ its runs, preserve originals and record manual corrections with their evidence.
 The current models are `gpt-6.1-sol` agents and `gpt-6-astra` judges, both at
 medium reasoning; use the runbook rather than historical Claude commands.
 
-## Before publication
+## Publication status
 
-The GitHub repository is private. Making it public is the author's decision.
-The existing publication note requires removing raw turn streams before a
-public release and reviewing machine paths, account usage and personal
-project context. Later nested judge streams, privacy-probe records and
-source-file symlinks also need that review; the original glob is incomplete.
-Archives now contain copies of those contextual notes and need the same
-review. [Full original publication record](history/2026-10-10-handover.md#what-this-is).
-No removal or publication is part of this documentation work.
+On 11 October 2026 the author said, "okay I have made it public. Now make the
+readme feel more illustrative and inviting". Current guidance reflects that
+reported change; older private-status statements in archived records describe
+their original moment. The original pre-publication guidance is preserved
+[verbatim](history/2026-10-11-readme-and-publication.md#earlier-publication-guidance),
+with the [full earlier record](history/2026-10-10-handover.md#what-this-is)
+still available. This README work did not perform the earlier publication
+review or change remote visibility, remove artifacts or push commits.

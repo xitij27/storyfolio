@@ -19,6 +19,7 @@ For a new session, read:
 |---|---|
 | Current state, author directions, open decisions and startup guidance | [Handover](handover.md) |
 | What Storyfolio is, how to install and use it, and its licence | [Repository README](../README.md) and [MIT License](../LICENSE) |
+| README concept illustration and publication-status update | [Illustration](assets/storyfolio-overview.png), [SVG source](assets/storyfolio-overview.svg) and [publication and README record](history/2026-10-11-readme-and-publication.md) |
 | Repository-wide working rules | [AGENTS.md](../AGENTS.md) |
 | Current instructions followed by the test agent | [Skill and references](../skills/storyfolio/SKILL.md) |
 | Design rationale and intended scope | [Original approved design](superpowers/specs/2026-10-10-portfolio-skill-design.md) and [existing-portfolio review design](superpowers/specs/2026-10-10-existing-portfolio-review.md) |
