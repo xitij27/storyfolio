@@ -212,6 +212,34 @@ they have read this.
 5. **The question about an existing site** should be among the four that are
    always asked.
 
+## Round 2
+
+Half made, on 10 October 2026. The five changes under "What would be changed
+next" were all made, at commit `e178be2`, on the author's word to go on. The
+runs that would show whether they worked were not made: 95% of the account's
+usage for the week was spent, and twenty conversations and their judging need
+more than was left. `docs/handover.md` has the commands, under "B. Task 8".
+
+What was changed, and the form each change took:
+
+- **The storyboard's beat holds what its caption stands on,** a working title
+  and the lines of the fact sheet, and "Write no captions yet" says why. The
+  failure was a detail getting into a sentence, so the place for sentences was
+  taken away. An instruction not to invent was already there and had not
+  worked.
+- **"Before you hand anything over, read each sentence about the person and
+  find the line of the fact sheet it stands on."** A thing to do, in place of
+  a longer list of what counts as a fact. The concept's honesty test names
+  the kinds that got through: a ranking, a reason, which came first, how a
+  thing was left, a day, a place.
+- **A question is answered or not answered,** and silence is not a yes.
+- **"Its name is not an answer, and neither is a line such as operations."**
+- **For a person who will not answer, their own resume is no exception.**
+- **"If they have a site already: what becomes of it?"** is among the
+  questions always asked.
+
+What the runs showed: not known yet.
+
 ## Where the judge was wrong
 
 - **It is not steady from one judging to the next.** The first sixteen were

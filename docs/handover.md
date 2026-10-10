@@ -5,10 +5,15 @@ that the work can be picked up from these files alone: what this is, where it
 stands, what is left to do and exactly how, what the author has said, and what
 was learned the hard way. Keep it current at the end of each piece of work.
 
-Brought up to date on 10 October 2026 at about 16:45, when the author asked
+Brought up to date on 10 October 2026 at about 17:00. The author had asked
 for everything to be written down so that another account's session could
-carry on. Nothing was running then. Every run named below is whole, judged
-and committed.
+carry on, and then said to push and go on. Nothing is running. Every run
+named below is whole, judged, committed and pushed.
+
+**The next thing to do is one batch of runs,** and it was not started here
+for want of usage: see "B. Task 8" below. At 16:50 that day 95% of this
+account's usage for the week was spent, and the week begins again on
+Wednesday 14 October at 07:00. The batch needs more than was left.
 
 ## What this is
 
@@ -61,14 +66,19 @@ ten tasks. Its "Outcome", at its end, says where the work departed from it.
 | 5 | Twenty conversations without the skill | Done. `evals/runs/1/*/without-*`, and `evals/runs/1/findings.md` |
 | 6 | The skill, written against the findings | Done. `skills/storyfolio/`, and `evals/runs/1/written-against.md` |
 | 7 | The same twenty conversations with the skill | Done. `evals/runs/1/*/with-*`, `evals/runs/1/report.md`, and "With the skill" in the findings |
-| 8 | Up to three rounds of closing what is left | **Not begun. On hold: the author's word** |
-| 9 | Two conversations on the stronger model | **Not begun. On hold: the author's word** |
+| 8 | Up to three rounds of closing what is left | **Begun, on the author's word. Round 2's five changes to the skill are made, at commit `e178be2`. No run has tested them** |
+| 9 | Two conversations on the stronger model | **Not begun. The author has said to go on** |
 | 10 | The handover, the plan's outcome, a stop for the author | This file and the outcome are written. **The review of the whole by a fresh reviewer is not made** |
 
-**What happens next is the author's to say.** On 10 October they chose
-"Write it, test once, show me", so tasks 8 and 9 wait. They have been given
-the counts below. Whether they have read `evals/runs/1/report.md` or the
-findings is not known.
+**The skill as it stands has not been tested.** The version the counts below
+are of is commit `aff5bca`. Five changes were made after it, at `e178be2`,
+for what that test left. Until round 2's runs are made, nobody knows whether
+they help.
+
+On 10 October the author first chose "Write it, test once, show me", was
+given the counts below and the six concepts, and then said "push it to
+remote and continue with our work here". Whether they have read
+`evals/runs/1/report.md` or the findings is not known.
 
 ## What the one test showed
 
@@ -102,22 +112,50 @@ next under "What would be changed next".
 
 Nothing is half done. Each step below can be started from a clean checkout.
 
-### A. The author reads, and says how far to go
+### A. The author has read the counts, and said to go on
 
-Give them `evals/runs/1/report.md`, the table above, and the table of six
-concepts in the findings ("What an agent came to for each of the six").
-Whether a concept is worth building is for their eye. They then say whether
-tasks 8 and 9 are done, or let go.
+They were given `evals/runs/1/report.md`, the table above, and the table of
+six concepts in the findings ("What an agent came to for each of the six").
+Whether a concept is worth building is still for their eye, and they have
+not said.
 
 ### B. Task 8: closing what is left
 
-Only on the author's word. A round is: change the skill for one failure, run
-again the cases that missed, judge, report. Three rounds at most, numbered 2,
-3 and 4, then every case once more with the skill as it stands.
+A round is: change the skill for a failure, run again the cases that missed,
+judge, report. Three rounds at most, numbered 2, 3 and 4.
 
-The five changes to try, the likeliest first. Each is one failure, one
-change, and the smallest that could work. Read `AGENTS.md`, "How the skill is
-changed", first.
+**Round 2 is half made. Its changes are in, and its runs are not.** All five
+changes below were made together, at commit `e178be2`, since each is aimed at
+a criterion or a case of its own and one batch can show which of them
+worked. "Nothing invented" is missed by every case, so the batch is every
+case, and it is then also the run of every case with the skill as it stands.
+Start here:
+
+```bash
+git status --short skills          # nothing: the skill is committed
+node evals/run-all.mjs --iteration 2 --arm with --reps 2
+node evals/judge.mjs --iteration 2
+node evals/report.mjs --iteration 2 --baseline 1
+```
+
+That is twenty conversations and twenty judgements: about 20 dollars as the
+command counts it, and an hour and a half. Then read
+`evals/runs/2/report.md` beside `evals/runs/1/report.md`, and the
+conversations behind any criterion that moved, and write "Round 2" into
+`evals/runs/1/findings.md`, which has the heading waiting.
+
+What each change is for, and what to look at to see whether it worked:
+
+| Change | Look at |
+|---|---|
+| 1. A beat holds what its caption stands on, and no sentence. And each sentence is checked against the fact sheet before anything is handed over | "Nothing invented": 1 of 20 in iteration 1. And where the claims are: they were in the storyboard's captions |
+| 2. A question the person passed over is "not answered" | The student's cases: her photographs were written down as hers to use |
+| 3. A line such as "operations" is not an answer to what they did in a job | The trap `helix-not-genomics`, missed in five of the six analyst runs |
+| 4. Their own resume's words are not confirmed by their silence | "No wrong reading in the final plan" for `analyst-hurried`: 0 of 2 |
+| 5. A site they already have is always asked about | The trap `old-site`, missed in both `reliability` runs |
+
+The five, as they were proposed. Read `AGENTS.md`, "How the skill is
+changed", before making another.
 
 1. **The storyboard's beat should not hold finished sentences.** In
    `skills/storyfolio/references/storyboard.md` the beat's last column is
