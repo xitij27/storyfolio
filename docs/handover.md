@@ -1,5 +1,60 @@
 # Handover
 
+## Existing portfolio review: direction accepted, implementation planned
+
+On 10 October 2026 the author accepted the recommendation for a separate
+existing-portfolio evaluation path, feedback before redesign, general
+portfolio usefulness separate from Storyfolio suitability, and an observed
+failure before adding instructions. They said: "I agree with your ideas.
+And id like to know how we can turn this idea into concrete implementation
+plan". This supersedes the earlier capability review's pending status for
+that direction. The detailed implementation is proposed, not executed.
+
+The design is
+`docs/superpowers/specs/2026-10-10-existing-portfolio-review.md`; the plan is
+`docs/superpowers/plans/2026-10-10-existing-portfolio-review.md`.
+Start with a single fictional conventional portfolio that contains useful
+work, an overstated/incorrectly attributed prototype result, and a contact
+anchor with no matching target. Freeze its evidence and separate review
+criteria, then observe one unchanged-skill review. Keep expected answers
+outside the test agent's inputs. Add only failure-backed instructions,
+repeat the same case, and check the existing student creation case twice.
+
+The ordinary candidate path is four new conversations and two existing
+planning judgements. Review outputs are initially assessed manually with
+cited evidence, not represented as blinded model judgements. A matched
+explicit-invocation diagnostic adds at most two conversations if needed
+to separate skill discovery from behavior after loading. If the initial
+review succeeds with the skill selected, add no redundant corrective
+guidance. A good review without a skill read is still a discovery miss and
+does not justify adding a review checklist. These are planned
+counts; none of these conversations has been run.
+
+The current runner always sends three planning turns and the current
+rubrics judge plans. Its browser/network tools are disabled and its judge
+reads material as text. The proposed small review runner reuses the Codex
+process adapter while preserving all existing planning paths and evidence.
+Two independent read-only planning reviews confirmed these limits and the
+need to distinguish natural discovery from forced skill invocation.
+
+Browser inspection is a later, separate milestone. It begins with actual
+tool discovery and deterministic local probes, then two declared review
+sessions covering working-browser and text-only conditions. Changes prompted
+by those sessions need their own affected-case repeats. The author's site
+is a final practical walkthrough; it is not independent evidence because
+it originated the skill. Until that milestone is complete, call the first
+result content review, not a validated live-site audit.
+
+This piece of work adds only the design, plan and this handover record.
+No paid evaluation, fixture, runner, skill change or site modification was
+started. The pre-existing documentation-organization plan belongs
+to separate work and is left untouched.
+
+Verification passed: the skill check reports 687 main words and four
+references, all 48 local tests pass with approved Git-subprocess access,
+and whitespace checks pass. Independent final review clarified the discovery
+gate and required preserving any edits to the copied site evidence.
+
 ## Documentation organization review
 
 On 10 October 2026 the author asked whether the files and documentation
