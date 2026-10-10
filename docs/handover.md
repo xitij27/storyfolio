@@ -1,5 +1,21 @@
 # Handover
 
+## Current direction: Codex only
+
+On 10 October 2026, after asking to continue the tests, the author said:
+"Why cant you use codex to run the tests? please dont use claude code".
+They approved adapting the harness and making a separate Codex baseline
+and skill comparison. The sandboxed Claude attempt was terminated; its
+restart was cancelled. No completed round 2 results were saved.
+
+The new plan is `docs/superpowers/plans/2026-10-10-codex-evaluations.md`.
+Use `evals/codex-run-all.mjs` and `evals/codex-judge.mjs`, never the historical
+Claude runners, for the current work. Results go under `evals/runs/codex-1/`.
+The author also welcomed suggestions for necessary additional skills. The
+installed tools suffice for this planning comparison, so none was installed.
+The older Claude workflow below is historical context, not the current
+execution instruction.
+
 Start here in a new session, on this account or another. It is written so
 that the work can be picked up from these files alone: what this is, where it
 stands, what is left to do and exactly how, what the author has said, and what

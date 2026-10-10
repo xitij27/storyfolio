@@ -1,5 +1,43 @@
 # The runs
 
+## Codex runs, current workflow
+
+On 10 October 2026 the author asked to use Codex and not Claude Code. Use
+these commands for new runs. The Claude commands below document iteration 1
+only. The skill is unchanged. A new `codex-1` comparison runs ten people
+twice in each arm on `gpt-6-astra`, medium reasoning, followed by independent
+Codex judging with the same rubric.
+
+```bash
+node evals/codex-run-all.mjs --iteration codex-1 --arm without --reps 2
+node evals/codex-run-all.mjs --iteration codex-1 --arm with --reps 2
+node evals/codex-judge.mjs --iteration codex-1
+node evals/report.mjs --iteration codex-1
+```
+
+Validate one conversation and judgement before the full batch. The runners
+stop queuing work after a failure. Failed attempts are archived when retried;
+completed runs are preserved. Use `--people chef --reps 1 --jobs 1` for the
+first conversation. `--model` selects a model explicitly for all three Codex
+entry points. Do not combine models within one iteration.
+
+Codex runs ignore user config, rules and project instructions. Plugins,
+apps, memory and web search are disabled, as are installed global skills.
+Only the with-skill workspace receives the native `.agents/skills/storyfolio`
+folder. Session two and three resume the first thread. The judge runs in a
+fresh folder with shell tools disabled. Codex remains sandboxed and uses
+the existing ChatGPT login; no API key or new skill installation is needed.
+
+Codex reports tokens rather than dollar costs. Its shell events do not give
+exact file read sets: private-file access is conservatively flagged for
+manual review, with command evidence saved in metadata. Skill use is detected
+from a successful command reading its `SKILL.md`; inspect raw events when
+this heuristic is ambiguous. These measurements are not identical to the
+old Claude tool events. The Codex comparison measures with versus without
+the current skill, not the isolated effect of the five round 2 changes.
+
+## Historical Claude workflow
+
 How the skill is tested: a made-up person asks a fresh agent for a portfolio,
 once without the skill and once with it, and another fresh agent judges what
 came of it without being told which it was.
