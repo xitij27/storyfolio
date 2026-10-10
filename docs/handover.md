@@ -132,6 +132,15 @@ public release of Storyfolio, alongside the existing publication checklist.
    supports that narrow proposal after checking the saved counts and notices.
    It retains the limits on causal attribution and two-run conclusions.
    The recommendation itself applies no skill change and starts no runs.
+   The reviewer then recommended stopping, and the author gave no contrary
+   instruction: **the skill stays unchanged and draft 2's runs are not
+   made.** Asked what else is wrong,
+   [a rescoring of every saved Codex skill judgement](superpowers/plans/2026-10-11-skill-wording-review.md#decision-and-what-else-the-saved-judgements-show-11-october-2026)
+   finds no new text defect that a run shows. analyst-hurried is 4 of the 38
+   runs after codex-sol-1 and 22 of their 46 failed criteria, partly
+   because its addresses are placeholders, and 4 of 10 student runs fail
+   only on the wording of the padding trap. What remains is creative
+   consistency and PhD private-file access, as item 2 and item 3 say.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration

@@ -471,3 +471,117 @@ Verification for this follow-up: the skill form check passes at 687 words
 with four references; approved `npm test` passes all 54 tests. Only this
 recommendation and its handover link are changed. No skill edit, portfolio
 evaluation, rejudgement or push was performed.
+
+## Decision, and what else the saved judgements show, 11 October 2026
+
+The author passed on the independent reviewer's later recommendation, which
+reverses the one recorded above:
+
+> **No, we can stop here and leave the skill unchanged.** Draft 2 reduces overlap with a test case, but we have no demonstrated current behavior problem that requires this rewrite.
+>
+> The two runs become necessary **if we apply draft 2**, because your repository rules require testing skill changes.
+>
+> My recommendation: skip the wording change and its runs for now. The review has already served its purpose by correcting our understanding of the evidence.
+
+The author gave no contrary instruction, and asked: "anything else wrong
+with this skill?" The skill is unchanged and draft 2's runs are not made.
+
+To answer from evidence rather than from the text, every Codex skill run
+with a judgement was scored again with `evals/lib/score.mjs` and the current
+fixtures, using the script at the end of this section. It reproduces each
+cohort's documented count of runs meeting the bar: codex-sol-1 12/20,
+codex-sol-2 2/8, codex-stem-1 3/6, codex-privacy-1 1/6, codex-premise-1 0/4,
+codex-opening-1 3/6, codex-closing-1 5/6, codex-physics-evidence-1 1/2.
+
+The 38 runs after codex-sol-1, on the six skill versions from `e485f53` to
+`b85d014`, meet the bar in 15 and fail 46 criteria in all:
+
+| Criterion | Failures | Where |
+|---|---|---|
+| swap | 9 | analyst-hurried 4, student 3, analyst 1, physicist 1 |
+| backdrop | 7 | analyst 3, analyst-hurried 2, physicist 1, student 1 |
+| trapsAsked | 6 | student 4, nurse 1, analyst-hurried 1 |
+| hasForm | 4 | analyst-hurried 4 |
+| thirtySeconds | 4 | analyst-hurried 4 |
+| differInKind | 3 | chef 1, physicist 1, physicist-evidence 1 |
+| privateUntouched | 3 | phd 3, every PhD skill run |
+| hasQuestion | 2 | analyst 2, both before the closing line |
+| depth | 2 | analyst-hurried 2 |
+| clipart | 2 | analyst-hurried 2 |
+| plainReader | 2 | analyst-hurried 1, embedded 1 (before the opening line) |
+| finalClean, honesty | 1 each | analyst-hurried |
+
+Three things in these numbers were not recorded together before.
+
+1. **One case carries half the failures.** analyst-hurried is 4 of the 38
+   runs and 22 of the 46 failures, and fails every time. Its creative
+   limits are already explained in
+   [codex-creative-review-1](../../../evals/runs/codex-creative-review-1/findings.md):
+   the person withholds the evidence a story needs. Two more things hold
+   it down. The judge's `form` is "empty if the parts are a website's usual
+   sections ... under any names", and all four plans take an analysis
+   brief, data atlas or dashboard "as an editorial decision, not a claim
+   about his working routine", then name its chapters by the website roles
+   (Context, Toolkit, Work inventory, Next step), since the person never
+   said what he works from. And five of the six thirty-second failures in
+   all Codex skill runs, every one of them analyst-hurried, cite contact
+   that is not usable: the material's addresses are `rafael@example.com`
+   and `https://rentmap.example`, which agents take for placeholders, as
+   [run 1](../../../evals/runs/1/findings.md) noted, and this person will not
+   give real ones. Part of this case's score measures the fixture.
+2. **The padding trap fails on wording.** 4 of the 10 student runs fail
+   only `trapsAsked`, each on `nothing-to-pad`. The judge marks "asked"
+   where the agent wrote "No testimonials supplied; do not invent them"
+   and "avoided" where it wrote "No testimonial material supplied" or "No
+   testimonials supplied or planned". No student plan pads. Set aside, the
+   34 runs without analyst-hurried meet the bar in 19, not 15.
+3. **What is left is what the handover already names.** Without those two
+   effects, the failures are creative (swap 5, backdrop 5, differInKind 3)
+   and privacy (every PhD run reads the participant export). The two
+   hasQuestion failures and the plainReader failure come from versions
+   before the closing and opening lines that addressed them. The nurse's
+   single trap miss (`codex-opening-1/nurse/with-1`, hospital name and logo)
+   has no second instance.
+
+So the saved runs show no new defect in the skill's text that a run
+demonstrates. Its demonstrated weaknesses remain creative consistency and
+private-file access, both open in the [handover](../../handover.md), and
+neither is shown to be fixable by wording. Nothing here proposes a skill
+change, a rubric change or a rejudgement; the figures above are a reading
+of the original judgements, which stand. If the full-bar rate is used to
+compare skill versions, report analyst-hurried and the padding wording
+separately, as codex-sol-2 and codex-premise-1 already do case by case.
+
+The script, run from the repository root with `node`:
+
+```js
+import { readFileSync, existsSync, readdirSync } from "node:fs";
+import { join, resolve } from "node:path";
+const { criteria, failures, meetsBar } = await import(resolve("evals/lib/score.mjs"));
+const json = (path) => JSON.parse(readFileSync(path, "utf8"));
+const cohorts = ["codex-sol-1", "codex-sol-2", "codex-stem-1", "codex-privacy-1",
+  "codex-premise-1", "codex-opening-1", "codex-closing-1", "codex-physics-evidence-1"];
+const runs = [];
+for (const cohort of cohorts) {
+  for (const person of readdirSync(join("evals/runs", cohort))) {
+    const fixture = join("evals/people", person, "person.json");
+    if (!existsSync(fixture)) continue;
+    for (const run of readdirSync(join("evals/runs", cohort, person)).filter((r) => r.startsWith("with-"))) {
+      const dir = join("evals/runs", cohort, person, run);
+      if (!existsSync(join(dir, "judgement.json"))) continue;
+      const scored = criteria(json(join(dir, "judgement.json")).judgement, json(fixture), json(join(dir, "meta.json")));
+      runs.push({ cohort, person, run, pass: meetsBar(scored), fails: failures(scored) });
+    }
+  }
+}
+const show = (label, rows) => {
+  const count = {};
+  for (const row of rows) for (const name of row.fails) count[name] = (count[name] ?? 0) + 1;
+  console.log(`${label}: ${rows.length} runs, ${rows.filter((r) => r.pass).length} meet the bar`);
+  for (const [name, n] of Object.entries(count).sort((a, b) => b[1] - a[1])) console.log(`  ${name} ${n}`);
+};
+for (const cohort of cohorts) show(cohort, runs.filter((r) => r.cohort === cohort));
+const later = runs.filter((r) => r.cohort !== "codex-sol-1");
+show("after codex-sol-1", later);
+show("after codex-sol-1, without analyst-hurried", later.filter((r) => r.person !== "analyst-hurried"));
+```
