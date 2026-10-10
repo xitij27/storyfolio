@@ -8,8 +8,10 @@ need every context about this project within this repository."
   test run showed.
 - **Nowhere else.** Not an assistant's memory or notes, not a temporary
   folder, not a hosted document, and not the conversation alone.
-- **Where it goes.** Where things stand and what the author has said:
-  `docs/handover.md`. The design: `docs/superpowers/specs/`. Plans:
+- **Where it goes.** Current state and author directions: `docs/handover.md`,
+  with the full historical statements linked from `docs/history/`. Preserve
+  historical records verbatim when shortening the current handover.
+  `docs/README.md` is the reading map. The design: `docs/superpowers/specs/`. Plans:
   `docs/superpowers/plans/`. What agents planned in a test, and how it was
   judged: `evals/runs/`.
 - **Before ending a piece of work, ask:** is there anything I know now that

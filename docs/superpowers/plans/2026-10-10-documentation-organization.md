@@ -1,6 +1,8 @@
 # Documentation organization, preserving the full record
 
-Status: proposed after an organization review, not an executed migration.
+Status: completed and verified.
+The original proposal below is preserved in full in
+[the source archive](../../history/2026-10-10-documentation-sources/organization-proposal.md).
 
 On 10 October 2026 the author asked: "okay anything we can do to improve
 the file organization and structure for documentation here without losing
@@ -123,3 +125,74 @@ Git-subprocess escalation, and `git diff --check` passes. A concurrent
 session committed the shared handover, including this review's entry, in
 `a950bd4`; this proposal is committed separately without changing that
 session's portfolio-review content.
+
+## Implementation outcome
+
+On 10 October 2026 the author accepted the proposal: "yes lets get it done".
+The migration creates the documentation map, plan-status index, study
+catalogue and a current Codex runbook. The current handover is 126 lines,
+down from the captured 1,112-line version, with direct links to evidence
+and the complete historical record. The larger captured version includes
+the concurrent existing-portfolio review direction and its verification.
+
+Every original handover section and author statement survives verbatim in
+`docs/history/2026-10-10-handover.md`. The entire previous evaluation README
+is also archived, in addition to the exact Claude-workflow extraction.
+Original repository instructions, root README and this proposal were saved
+before their navigation/status updates. Existing plans and specifications
+keep their paths and contents; only this migration plan gains an outcome.
+
+`AGENTS.md` now explicitly routes historical statements through the linked
+archive while keeping current author directions in the handover. The root
+README links the map, skill, plans, studies and history. The plan index
+keeps Stage 1 closure and the existing-portfolio implementation visibly
+unfinished. The catalogue distinguishes all fifteen cohort directories,
+including the partial Astra study and empty local iteration 2 remnants;
+it does not pool unlike results or present diagnostic ratings as new runs.
+
+The current runbook uses new iteration placeholders and explicit case lists.
+It retains v1 scoring interpretation, privacy-audit requirements and v2's
+separate diagnostic status. Historical reproduction commands stay available
+in their unchanged sources. Relative hyperlinks inside verbatim archives
+retain their source text; the history index supplies rebased destinations
+and a complete handover section map. No referenced old handover anchors
+were found in maintained repository documents.
+
+The capture records source commit `4c1007b`, index blob IDs and working-tree
+hashes separately. At capture, the existing-portfolio plan/specification
+were untracked and their handover entry uncommitted; their bytes were
+included without taking ownership of that work. The other session committed
+them independently at `8566b5e` during this migration. Its content is intact.
+
+The [preservation inventory](../../history/2026-10-10-documentation-inventory.json)
+contains 2,092 original paths, including 1,961 tracked run artifacts. The
+read-only [checker](../../history/verify-documentation-migration.py) verifies
+five byte-identical source archives, one exact extraction, unchanged
+non-rewritten files and complete run-file membership. Symlink targets are
+hashed without following them. No cohort verifier or report generator was
+run, and no evaluation artifact, fixture, pinned implementation file or
+skill instruction was changed. No model conversation or judgement was made.
+
+The saved result is
+[migration-verification.json](../../history/migration-verification.json).
+The strict `--full` mode describes preservation across this migration;
+later intentional code or fixture changes can legitimately fail it. The
+default mode remains a read-only check of the archives and extraction.
+
+## Completion checks
+
+- Full preservation check passes: five exact archives, one literal
+  extraction, 2,087 unchanged original paths and all 1,961 run artifacts.
+  The evidence tree has no added, removed or renamed files.
+- Local navigation review checks 253 relative links across nine current
+  documents, including heading anchors, with no missing target. Verbatim
+  archives retain their original link text and have the rebased link map.
+- Independent review confirms that current author directions, the actual
+  skill/evaluation distinction, unfinished work and publication requirements
+  remain visible. Its one incorrect scoring-section link was corrected.
+- `node evals/check-skill.mjs` passes at 687 main words and four references;
+  `node evals/check-people.mjs` passes all seventeen cases; `npm test`
+  passes all 48 tests with the required Git-subprocess escalation.
+- Whitespace checks pass, and no existing executable mode is changed.
+  All migration files are committed on main. No paid runs, push or
+  publication form part of this work.

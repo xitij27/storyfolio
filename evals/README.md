@@ -1,292 +1,211 @@
-# The runs
+# Running and reading the evaluations
 
-## Codex runs, current workflow
+Use Codex for new evaluations, as the author directed on 10 October 2026.
+The current roles are `gpt-6.1-sol` agents and independent `gpt-6-astra`
+judges, both at medium reasoning. Each conversation and judgement spends
+model usage. Start with a specific question and its smallest useful study.
 
-On 10 October 2026 the author asked to use Codex and not Claude Code. Use
-these commands for new runs. The Claude commands below document iteration 1
-only. The original `codex-sol-1` comparison runs ten
-cases twice in each arm on `gpt-6.1-sol`, medium reasoning, followed by
-independent `gpt-6-astra` judging at medium reasoning with the same rubric.
-An earlier partial Astra-only experiment remains in `codex-1`. Do not mix
-its results with the Sol comparison. The author questioned using the same
-flagship model for both roles, so the main experiment now matches the
-original workhorse-agent / stronger-judge design.
+For results, read the [study catalogue](studies.md). For project status,
+read the [handover](../docs/handover.md); for documentation navigation,
+read the [documentation map](../docs/README.md). The
+[historical Claude workflow](history/claude-workflow.md) is a verbatim
+archive, not the workflow for new runs. The
+[complete former runbook](../docs/history/2026-10-10-evals-readme.md)
+preserves its original commands, results and explanations.
 
-```bash
-node evals/codex-run-all.mjs --iteration codex-sol-1 --arm without --reps 2 --people analyst,analyst-hurried,analyst-overstate,architect,chef,chef-terse,nurse,reliability,student,student-terse
-node evals/codex-run-all.mjs --iteration codex-sol-1 --arm with --reps 2 --people analyst,analyst-hurried,analyst-overstate,architect,chef,chef-terse,nurse,reliability,student,student-terse
-node evals/codex-judge.mjs --iteration codex-sol-1
-node evals/report.mjs --iteration codex-sol-1
-```
+## What a conversation tests
 
-Validate one conversation and judgement before the full batch. The runners
-stop queuing work after a failure. Failed attempts are archived when retried;
-completed runs are preserved. Use `--people chef --reps 1 --jobs 1` for the
-first conversation. `--model` selects a model explicitly for all three Codex
-entry points. Do not combine models within one iteration.
+A fictional person asks a fresh agent to plan a portfolio, without building
+it. The same three messages are sent regardless of the agent's response:
 
-Codex runs ignore user config, rules and project instructions. Plugins,
-apps, memory and web search are disabled, as are installed global skills.
-Only the with-skill workspace receives the native `.agents/skills/storyfolio`
-folder. Session two and three resume the first thread. The judge runs in a
-fresh folder with shell tools disabled. Codex remains sandboxed and uses
-the existing ChatGPT login; no API key or new skill installation is needed.
+1. Ask for a portfolio and point to `material/`.
+2. Supply the person's answers, or the case's refusal or overstatement.
+3. Ask for the complete plan.
 
-Codex reports tokens rather than dollar costs. Its shell events do not give
-exact file read sets: private-file access is conservatively flagged for
-manual review, with command evidence saved in metadata. Skill use is detected
-from a successful command reading its `SKILL.md`; inspect raw events when
-this heuristic is ambiguous. These measurements are not identical to the
-old Claude tool events. The Codex comparison measures with versus without
-the current skill, not the isolated effect of the five round 2 changes.
+The first reply shows what the agent checks before planning. The final
+reply and written files show how it uses the answers. A fresh judge receives
+the material, truth, conversation and files without the arm label. This
+measures written planning, not a built site's visual or interaction quality.
 
-## Technical and academic coverage
+| Location | Purpose |
+|---|---|
+| [people/](people/) | Fictional input material, private test files, truth sheets and case-specific traps |
+| [prompts/](prompts/) | User messages and versioned judging instructions |
+| [codex-run.mjs](codex-run.mjs) | One three-message conversation |
+| [codex-run-all.mjs](codex-run-all.mjs) | Queue selected cases and repetitions, at most three at once |
+| [codex-judge.mjs](codex-judge.mjs) | Original v1 judging of complete, unjudged Codex conversations |
+| [report.mjs](report.mjs) | Generate the original rubric report for a new cohort |
+| [lib/](lib/) | Shared runner, scoring, provenance and test code |
+| [runs/](runs/) | Saved observations, raw events, plans, judgements and reviewed findings |
 
-The collection now has seventeen cases representing twelve fictional people.
-The original ten cases remain unchanged. Six new profiles broaden the
-platform engineer, data analyst and engineering student coverage:
+## Before spending model usage
 
-| Case | Role | Main distinctions to preserve |
-|---|---|---|
-| `backend` | Backend software engineer | Replay benchmarks, team delivery, open-source credit, internal traces |
-| `ml` | Machine learning engineer | Offline versus deployed, overall accuracy versus rare-defect recall, submission status |
-| `embedded` | Embedded electronics engineer | Battery projection, firmware contribution, preliminary tests, engineering samples |
-| `mechanical` | Mechanical design engineer | Simulation, fit-check model, patent application, drawing permissions |
-| `physicist` | Experimental physics postdoc | Calibration versus discovery, consortium credit, preprints, grant role |
-| `phd` | Computational biology doctoral candidate | Degree status, authorship, association versus causation, teaching scope, private records |
+Record the question, selected cases, repetitions, comparison group and
+stopping rule in a plan. A skill change must link to a saved run that needed
+it, then rerun the relevant cases. Keep fixtures, prompts and rubric fixed
+when testing a skill candidate. A fixture or measurement change is a
+separate experiment. Commit the candidate before running it so metadata
+identifies committed skill bytes.
 
-`physicist-evidence` is a separate version of Iris's case with an approved
-fictional schematic, calibration decision and scoped numerical example.
-The original `physicist` fixture is unchanged. It tests whether concrete
-work evidence enables an explanatory concept under the existing creative
-guidance; its results belong to `codex-physics-evidence-1`, not the original
-STEM cohort. The preparation and limits are recorded in
-`../docs/superpowers/plans/2026-10-10-physics-evidence.md`.
-
-Backend, embedded and PhD use the existing terse messages, which do not
-request device fallbacks or list the other site requirements. Every new
-profile has four factual traps and a separate truth sheet. None prescribes
-a particular object or concept. All people, institutions, employers,
-products and records in these fixtures are fictional.
-
-The first comparison uses a separate iteration, one repetition per arm:
+Run the local checks from the repository root:
 
 ```bash
 node evals/check-people.mjs
-node evals/codex-run-all.mjs --iteration codex-stem-1 --arm without --reps 1 --people backend,ml,embedded,mechanical,physicist,phd
-node evals/codex-run-all.mjs --iteration codex-stem-1 --arm with --reps 1 --people backend,ml,embedded,mechanical,physicist,phd
-node evals/codex-judge.mjs --iteration codex-stem-1
-node evals/report.mjs --iteration codex-stem-1
+node evals/check-skill.mjs
+npm test
 ```
 
-This is exploratory coverage, not a stable estimate of performance by
-profession. Do not pool it with `codex-sol-1` or use that older cohort as its
-baseline. This expansion does not edit the rubric or skill. Run metadata
-records the actual skill commit, including concurrent refinements.
+Choose a new iteration name and pass it explicitly to every command. The
+examples below use `codex-new-question-1`, which is a placeholder for a new
+study, not a completed cohort to resume. Check that your chosen directory
+does not already exist. The runners' defaults still name historical
+iterations, so do not rely on those defaults.
 
-Completed results: [report](runs/codex-stem-1/report.md) and
-[reviewed findings and concepts](runs/codex-stem-1/findings.md). The full bar
-passes in 3/6 skill runs and 0/6 baselines. All twelve final plans preserve
-the supplied facts; both PhD agents nevertheless read the private export.
-The other skill misses concern embedded terminology and physics concept
-specificity. Verify the saved cohort without model calls using
-`node evals/runs/codex-stem-1/verify.mjs`.
+Specify `--people` explicitly. An unfiltered batch selects every current
+fixture, including variants and the evidence-rich physics case. Do not
+extend an old comparison accidentally. Do not combine model choices within
+one iteration. `--model` is available on the three v1 Codex entry points;
+use the established roles unless a different model comparison is the
+question being tested.
 
-**An unfiltered runner selects all current fixtures.** To reproduce the
-original ten-case cohort, pass
-`--people analyst,analyst-hurried,analyst-overstate,architect,chef,chef-terse,nurse,reliability,student,student-terse`
-explicitly. Do not extend a completed historical iteration by accident.
+## Run a new v1 cohort
 
-## Focused refinements
-
-Later candidates have their own saved inputs, evidence, conversations and
-judgements. They are not extensions of the original full comparison:
-
-- [Source checks](runs/codex-sol-2/findings.md): chef, analyst,
-  analyst-hurried and student twice each. Factual measures improve in this
-  sample, while the full bar declines from 3/8 to 2/8.
-- [Private-file boundary](runs/codex-privacy-1/findings.md): PhD, analyst and
-  student twice each. Both PhD agents read the revised rule and still open
-  the private file. Both analyst cases leave their private files unopened.
-  This candidate clarifies scope but does not establish reliable protection.
-- [Summary and question premises](runs/codex-premise-1/findings.md):
-  analyst-hurried and student twice each, using the same model roles and
-  unchanged rubric. Both analysts avoid the unsupported genomics premise;
-  all four final plans are factually clean, but the full bar is 0/4. The
-  privacy clarification is also present, so comparison with `codex-sol-2`
-  does not isolate only the premise wording.
-- [Creative review](runs/codex-creative-review-1/findings.md): an offline
-  comparison of saved concepts and scoring boundaries. No new conversation,
-  rubric change or replacement judgement.
-- [Opening clarity](runs/codex-opening-1/findings.md): nurse, embedded and
-  student twice each. All six read the new instruction, pass plain-reader
-  clarity and preserve factual boundaries. Full bar is 3/6. The earlier
-  comparator cases have unequal repetitions and older skill versions.
-- [Closing meaning](runs/codex-closing-1/findings.md): analyst,
-  analyst-overstate and student twice each. All six specify supported
-  answers and preserve factual boundaries; five pass the full bar. One
-  analyst still fails backdrop. Earlier cohorts include other skill changes.
-- [Concrete physics evidence](runs/codex-physics-evidence-1/findings.md):
-  two conversations using the separate `physicist-evidence` fixture and the
-  opening-only skill. Both explain the calibration comparison and preserve
-  its limits; one passes the full bar, and the other misses diversity.
-  This is an input experiment with no matched previous cohort.
-- [Privacy enforcement probes](runs/codex-privacy-enforcement-1/findings.md):
-  a separate opt-in shell experiment, with no model calls. Exact-path denial
-  fails against a hardlink; exact public-file grants pass twelve probes.
-  This does not change the skill's privacy score or implement a live model
-  runner. The original and copied private fixtures remain unchanged.
-
-Use each iteration's `comparison.md` for its pinned prior cases. A standard
-report without `--baseline` shows only its new cohort. Historical groups and
-unequal repetition counts should not be pooled into a matched pass rate.
-Verify these two later batches without paid calls:
+For a planned comparison that includes the chef, first validate one baseline
+conversation and its judgement:
 
 ```bash
-node evals/runs/codex-privacy-1/verify.mjs
-node evals/runs/codex-privacy-1/verify.mjs evals/runs/codex-premise-1
+node evals/codex-run-all.mjs --iteration codex-new-question-1 --arm without --reps 1 --people chef --jobs 1
+node evals/codex-judge.mjs --iteration codex-new-question-1 --people chef
 ```
+
+Read the three replies, raw events and judgement before the remaining batch.
+Check isolation and private-file evidence where applicable. A with-skill
+trial should also confirm that the agent finds and reads the native skill.
+Use the actual planned case for this trial if the study does not include
+chef, and use only the planned arm for a focused skill rerun.
+
+For example, if the question calls for chef and student twice per arm:
+
+```bash
+node evals/codex-run-all.mjs --iteration codex-new-question-1 --arm without --reps 2 --people chef,student
+node evals/codex-run-all.mjs --iteration codex-new-question-1 --arm with --reps 2 --people chef,student
+node evals/codex-judge.mjs --iteration codex-new-question-1
+node evals/report.mjs --iteration codex-new-question-1
+```
+
+The completed trial is skipped. Conversation failures stop new work from
+being queued; restarting archives failed conversation attempts before
+retrying and preserves completed runs. Interrupting the batch stops queuing
+and lets active conversations drain. The v1 judge skips saved judgements,
+but its failed prompt and stream can be replaced on retry: preserve those
+artifacts before any approved retry. Do not rejudge to select a preferred
+outcome.
+
+Write reviewed observations beside the new runs. Include all failures,
+actual output evidence, input versions, privacy review and limitations.
+Commit the artifacts and update the study catalogue and handover.
+
+## Isolation and measurement limits
+
+The runner ignores user configuration, rules and project instructions. It
+disables plugins, apps, memory, web search and installed global skills.
+Only the with-skill workspace receives `.agents/skills/storyfolio`. Turns
+two and three resume the first thread. Judges use fresh folders with shell
+tools disabled. The harness uses the existing ChatGPT login and sandbox,
+without a new skill installation or API key.
+
+Conversation workspaces are outside the repository so repository
+instructions do not become test inputs. Their retained results belong in
+`runs/`, not just the temporary workspace. The standard sandbox restricts
+writes and network access, but is **not a filesystem read jail**. Inspect
+raw commands for reads of repository instructions, another run or global
+skills. Historical audits found no cross-run content read in the reviewed
+comparison; that does not establish technical prevention.
+
+Codex shell events do not expose exact file read sets. Before treating any
+privacy count as final, inspect every saved command and its output, including
+broad searches, scripts, globs and batched reads. A filename inventory or
+text written about excluded files can trigger a false positive. Confirmed
+private content in a command's output is a read even if the final plan omits
+it. Preserve original heuristic flags and command evidence, and record any
+correction with an explicit review reason in the new cohort's metadata and
+audit. Do not silently rewrite historical evidence.
+
+Skill use is detected heuristically from a successful command reading
+`SKILL.md`. Inspect raw events and reference reads when ambiguous. Token
+usage is recorded; the Codex harness does not report dollar cost. These
+measurements are not identical to the old Claude tool events.
+
+The [privacy enforcement prototype](runs/codex-privacy-enforcement-1/findings.md)
+tests deterministic shell access separately. It is not integrated into the
+standard conversation runner and does not make skill instructions an
+access-control boundary.
+
+## Read v1 scores with the evidence
+
+[score.mjs](lib/score.mjs) defines the bar: every applicable criterion must
+pass except the three reported-only measures, `askedFirst`, `waited` and
+`trapsNotAsserted`. Inspect the conversation before acting on a judgement.
+
+A first-turn trap receives only `asked`, `avoided` or `asserted`. V1 cannot
+represent asking and asserting in the same reply, and specifies no precedence
+for that mixed case. An `asserted` verdict can make `trapsAsked` fail even
+when the agent also asked the relevant question. Silent avoidance is also
+different from explicitly raising or excluding the trap. Read the evidence
+alongside the label.
+
+The question criterion requires an opening question and a closing answer.
+The skill defers finished captions; a supported closing meaning can satisfy
+the planning requirement, while a promise to write an answer later does not.
+The backdrop criterion concerns what the object explains. Equivalent
+accessible HTML or static diagrams are not themselves evidence that a
+scene is decoration. These interpretation notes do not replace the v1
+rubric or any saved judgement.
+
+Keep studies separate. Small independent repetitions, judge variability,
+unequal older groups and intervening edits limit causal conclusions. A
+standard report without `--baseline` shows only the selected iteration.
+`--baseline` adds another iteration's no-skill arm; it does not create a
+matched skill-before/skill-after comparison. Use a focused study's manifest
+and comparison for that purpose. Do not pool different providers, models,
+fixtures, rubric versions, reratings or selected subsets into a success rate.
 
 ## Optional diagnostic rubric v2
 
-The workflows above still use the original rubric. A separate, optional
-diagnostic rubric is implemented in `prompts/judge-v2.md` and
-`lib/score-v2.mjs`. It records whether each first-turn trap was explicitly
-raised or excluded independently of whether its wrong reading was asserted.
-Both requirements gate its full bar. It also clarifies closing meaning
-before captions and explanatory scenes with accessible equivalents.
+V1 remains the normal workflow. [judge-v2.md](prompts/judge-v2.md) and
+[score-v2.mjs](lib/score-v2.mjs) separately record whether each trap was
+raised or excluded and whether its wrong reading was asserted. Both
+requirements gate the v2 bar. It also anchors closing meaning and
+explanatory scenes with accessible equivalents.
 
-The v2 runner takes explicit saved run IDs and writes only to a new cohort:
-
-```bash
-node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output example-v2 --dry
-node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output example-v2 --prepare
-node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output example-v2
-node evals/report-v2.mjs --output example-v2
-```
-
-`--dry` reads only; `--prepare` freezes inputs without calling a model.
-The third command spends model usage. It preserves attempts and skips
-completed judgements. Source conversations, original judgements and their
-cohort reports remain unchanged and are verified by hashes. The report
-refuses to replace an existing report. Frozen cohorts require the recorded
-v2 implementation bytes for verification. A rubric change needs another
-cohort. These are diagnostic reratings, not extra conversations, and must
-not be pooled into the original success rate.
-
-The first [six-case calibration](runs/codex-measurement-v2-1/findings.md)
-completed once. It resolves the mixed asking/asserting and silent-avoidance
-diagnostics and preserves the analyst closing contrast. Creative verdicts
-still vary, including a physics backdrop pass for attribution relationships.
-All original reports and selected run files remain unchanged. Verify the
-saved calibration with
-`node evals/runs/codex-measurement-v2-1/verify.mjs`.
-
-## Historical Claude workflow
-
-How the skill is tested: a made-up person asks a fresh agent for a portfolio,
-once without the skill and once with it, and another fresh agent judges what
-came of it without being told which it was.
-
-A run is a conversation with an agent and is paid for. On the author's
-machine one run is three messages and takes from three to ten minutes.
-
-## What is here
-
-| | |
-|---|---|
-| `people/` | The made-up people. For each: `material/`, what they hand the agent. `truth.md`, what is true and the agent cannot know at first. `person.json`, where a careless reader goes wrong |
-| `prompts/` | The person's three messages, and the judge's brief |
-| `run.mjs` | One conversation |
-| `run-all.mjs` | Every run of an iteration that is not there yet, three at a time |
-| `judge.mjs` | Has a fresh agent judge every run not yet judged |
-| `report.mjs` | Writes `runs/<iteration>/report.md` |
-| `check-people.mjs` | Checks that the people are whole |
-| `check-skill.mjs` | Checks the skill's form |
-| `lib/` | What the commands share, with tests: `npm test` |
-| `runs/` | What agents said and wrote, and how it was judged. Committed |
-
-## A conversation
-
-1. The person asks for a portfolio that stands out, to be planned and not
-   built, and points at `material/`.
-2. The person says what is true: the answers to anything a careful agent
-   would have asked.
-3. The person asks for the whole plan.
-
-The same three messages are sent whatever the agent did. So the first reply
-shows whether it asked before it planned, and the last shows what it made of
-the answers.
-
-## A fresh agent
-
-`claude -p --setting-sources project --strict-mcp-config`, in a new folder.
-It has none of this machine's instructions, plugins, skills or connectors.
-It may read, search and write files and call a skill. It has no shell and no
-web.
-
-Its folder is under the system's temporary folder, in `storyfolio-evals/`,
-and not in this repository. An agent in a folder of a git repository takes
-the repository's root for its project: it would be given this repository's
-`AGENTS.md`, which names the skill, and it would look for its material at the
-root. What a run leaves is copied from there to `runs/`.
-
-With the skill, the folder also has `.claude/skills/storyfolio/`, copied from
-`skills/storyfolio/` as it stands. So commit the skill before the runs that
-test it: each run records the commit, and whether there were changes in no
-commit.
-
-Tried on Linux with Claude Code 2.1.270 on 10 October 2026. Not tried on
-Windows: the commands take `/` for the separator in a path.
-
-## To make the runs of an iteration
+Use explicit saved run IDs and a new output name. `codex-new-diagnostic-1`
+below is a placeholder, separate from the completed calibration:
 
 ```bash
-node evals/check-people.mjs
-node evals/run-all.mjs --iteration 1 --arm without --reps 2
-node evals/run-all.mjs --iteration 1 --arm with --reps 2
-node evals/judge.mjs --iteration 1
-node evals/report.mjs --iteration 1
+node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output codex-new-diagnostic-1 --dry
+node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output codex-new-diagnostic-1 --prepare
+node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output codex-new-diagnostic-1
+node evals/report-v2.mjs --output codex-new-diagnostic-1
 ```
 
-A later iteration that only makes runs with the skill takes its runs without
-it from the first:
+`--dry` is read-only; `--prepare` freezes inputs without a model call. The
+third command spends model usage. V2 preserves attempts, skips completed
+judgements and refuses to replace an existing report. It snapshots scoring
+fixtures from recorded harness commits and verifies source conversations,
+original judgements and original reports by hashes. Frozen cohorts require
+their recorded implementation bytes. A changed rubric needs another cohort.
+These are diagnostic reratings, not additional portfolio conversations or
+evidence of improved agent behavior. See the
+[completed six-case calibration](runs/codex-measurement-v2-1/findings.md).
 
-```bash
-node evals/run-all.mjs --iteration 2 --arm with --reps 2 --people chef,student
-node evals/judge.mjs --iteration 2
-node evals/report.mjs --iteration 2 --baseline 1
-```
+## Inspect saved studies without new runs
 
-Each command can be started again after a stop. It leaves alone what is
-already done.
-
-## The bar
-
-A plan made with the skill meets the bar when it passes every criterion in
-`lib/score.mjs` that applies to its person, but the three that are only
-reported: asking something first, waiting to plan, and not asserting a trap
-at first. The report lists the runs that miss it and what they miss.
-
-The judge is an agent, and can be wrong. Before a judgement is acted on, the
-conversation it is about is read.
-
-The trap result is one of `asked`, `avoided` or `asserted`. It cannot record
-both asking and asserting in the same reply. In the Codex comparison, three
-skill runs asked about Helix duties but first described Rafael's work as
-genomics. Their judges chose `asserted`, so "Every trap asked about" fails.
-Read that metric alongside the evidence, not as a literal count of missing
-questions. The rubric does not specify precedence for this mixed case.
-
-The question criterion requires both an opening question and a closing
-answer. The skill defers finished captions, so inspect whether the closing
-meaning is specified, rather than treating either a question mark or the
-absence of polished copy as decisive. The backdrop criterion concerns an
-explanatory role for the object; having equivalent accessible HTML is not
-itself evidence that the scene is merely decoration. Neither note changes
-the scoring code or original judgements.
-
-Targeted repeated judgements are preserved separately under
-`runs/codex-sol-1-diagnosis/`. They reuse selected conversations to examine
-judgement consistency, and must not be pooled as additional conversations
-or substituted into the original report.
+The [catalogue](studies.md) links each study's findings, reports, manifests
+and available verification scripts. These scripts make no model calls,
+but some regenerate comparisons or audits and some require Git subprocesses.
+Read their write behavior before running them against frozen evidence.
+Likewise, `report.mjs` overwrites a report and reads current fixtures: do not
+regenerate a historical report as an incidental documentation check.
+Preserve original paths and bytes, including symlink targets. V2 freezes
+exact directory membership, so even a new README inside a source run can
+invalidate its provenance checks.
