@@ -3,11 +3,10 @@
 Read [the current handover](../../handover.md) for the next action. This
 index records each plan's present status without rewriting its historical
 instructions. Completed experiments can leave the problem they tested open.
-Dates alone do not establish execution order because these plans share the
-same date and some work ran concurrently.
+Dates alone do not establish execution order because some plans share a
+date and some work ran concurrently.
 
-All plans below are dated 10 October 2026 unless their row gives another
-date. Detailed evaluation versions,
+Plans are dated in their filenames. Detailed evaluation versions,
 counts and artifacts are linked from [the study catalogue](../../../evals/studies.md).
 Use [the current evaluation runbook](../../../evals/README.md) for commands;
 Claude commands and old cohort destinations in original plans are historical.
@@ -26,7 +25,8 @@ Claude commands and old cohort destinations in original plans are historical.
 | [Diagnostic measurement v2](2026-10-10-measurement-v2.md) | Implementation and six-case calibration complete. Separates discovery from assertion and preserves original evidence and ratings. Creative interpretation remains unsettled; v2 stays optional and separate. | [Calibration findings](../../../evals/runs/codex-measurement-v2-1/findings.md). No v2 result replaces a v1 skill-test score. |
 | [Private-file enforcement](2026-10-10-privacy-enforcement.md) | Investigation and deterministic prototype complete. Exact public-file grants pass 12/12 local shell probes; a prior exact-denial candidate fails a hardlink probe. Live runner integration and other reading tools/platforms remain untested. | [Probe findings](../../../evals/runs/codex-privacy-enforcement-1/findings.md). Integration requires separate implementation and evaluation. |
 | [Documentation organization](2026-10-10-documentation-organization.md) | Complete. Added current guidance and indexes, with verified verbatim history and unchanged evaluation evidence. Preservation and completion records are in the history index. | [Documentation map](../../README.md), [history index](../../history/README.md) and [study catalogue](../../../evals/studies.md). |
-| [Existing-portfolio review](2026-10-10-existing-portfolio-review.md) | Direction accepted; detailed implementation proposed, execution not started. Accepts deployed URLs, GitHub repository URLs and local checkouts. First milestone tests review of a frozen fictional repository snapshot. Local/deployed browser inspection is a later milestone; no review mode, fixture, runner or paid evaluation has been implemented for this plan. | [Review design](../specs/2026-10-10-existing-portfolio-review.md); start with the frozen case and unchanged-skill observation described in the plan. |
+| [Existing-portfolio review](2026-10-10-existing-portfolio-review.md) | Partly explored through the subsequent real pilot. A one-turn runner and local snapshot review are implemented. Dedicated skill routing, the fictional control, GitHub/deployed acquisition and browser-enabled test-agent evaluation remain proposed. | [Review design](../specs/2026-10-10-existing-portfolio-review.md); [Steve pilot](2026-10-11-steve-review-pilot.md) superseded the fictional-first sequence. |
+| [Steve repository review pilot](2026-10-11-steve-review-pilot.md) (11 October 2026) | Complete. One natural source-only review used the unchanged skill successfully. No instruction edit or candidate run was justified. Separate local browser observations support the product review. | [Evaluation findings](../../../evals/runs/codex-steve-review-before-1/findings.md) and [portfolio review](../../../evals/runs/codex-steve-review-observations-1/review.md). |
 | [Skill wording review](2026-10-11-skill-wording-review.md) (11 October 2026) | Review given and seven rewrites drafted; none applied and no run made. Finds a scored analyst trap's answer named in `asking.md`. Recommends drafts 1 and 2 first, with eight runs matching codex-sol-2. | Waiting on the author's decision. |
 
 The [original design](../specs/2026-10-10-portfolio-skill-design.md) also sets

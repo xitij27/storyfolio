@@ -156,9 +156,9 @@ the state label changes. These interactions have not been executed here.
   and contact content remains in HTML, so this is not evidence that the
   entire site is unusable without JavaScript.
 - **Intermediate header width.** Desktop navigation persists from 768px
-  upward, while the container uses 96px total gutters and the header and
-  navigation use non-wrapping flex layout (`src/style.css:42`, lines 49
-  through 58, lines 308 through 311, and line 338). Inspect 768px/800px
+  upward, while the container uses 64px total gutters at 768px/800px and the
+  header and navigation use non-wrapping flex layout (`src/style.css:293`,
+  lines 49 through 58, lines 308 through 311, and line 338). Inspect 768px/800px
   before claiming overflow. Source alone does not establish its rendered
   width with the actual fonts.
 - **Specificity and next action.** The large hero slogan, general guiding

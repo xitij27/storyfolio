@@ -1,5 +1,8 @@
 # Using the Steve portfolio as the first review pilot
 
+Status: completed 11 October 2026. One natural unchanged-skill review
+succeeded; no skill edit or conditional follow-up run was needed.
+
 The author asked to improve the skill by evaluating the local
 `portfolio-website-steve` repository. This authorises the real example now,
 before the proposed fictional first case. Keep it separate from fictional
@@ -86,3 +89,40 @@ runner initially hit the known outer-sandbox Codex-subprocess EPERM. Its
 approved rerun validates fourteen material files and twenty-eight frozen
 files without starting a model. These are setup observations, not failed
 portfolio conversations or evidence of skill quality.
+
+## Completed outcome
+
+Preparation was committed at `1787ede` before the single natural run.
+The actor read the skill and profile reference, produced the requested
+source review and changed no supplied material. All nine frozen criteria
+pass the saved manual assessment. No forced diagnostic, candidate,
+student regression or paid judge was needed. The skill remains unchanged.
+[Findings and limitations](../../../evals/runs/codex-steve-review-before-1/findings.md).
+
+Independent runtime inspection completed in an isolated source copy after
+environment setup retries. Build, sampled menu keyboard behavior,
+reduced-motion and JavaScript-off checks passed. No horizontal overflow
+was measured at 320, 390, 768, 800 or 1440 widths. Mobile stage labels,
+pause size and automatic advancement after manual selection are the main
+interaction recommendations. The primary editorial issue is the work CTA
+leading to an empty project area. The suspected tablet-header overflow
+was not reproduced; initial text-transition captures were followed by
+readable settled captures. Preserve both observations rather than calling
+the transient image a persistent defect.
+
+[The product review](../../../evals/runs/codex-steve-review-observations-1/review.md)
+links the source report and runtime evidence, including nineteen screenshots,
+commands, environment failures/retries, versions, hashes and limits. The
+original checkout is preserved, its PDF stays unopened, and the isolated
+preview server was stopped. None of these independent observations changed
+the source-only experiment's inputs.
+
+The broader review plan stays partly proposed. One successful real case
+does not prove general reliability, a causal skill benefit, remote-source
+support or browser-enabled agent review. No additional run is scheduled
+merely to find a reason to change the skill. Final required verification
+passed all 54 local tests, the skill check and frozen-input/output checks;
+all thirteen source hashes, original Git status and nineteen image hashes
+were verified again after the browser checks. Results are saved in
+`evals/runs/codex-steve-review-before-1/validation.json`. No remote push is
+authorised for 11 October.

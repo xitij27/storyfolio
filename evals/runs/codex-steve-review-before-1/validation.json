@@ -1,0 +1,41 @@
+{
+  "localDate": "2026-10-11",
+  "timezone": "Europe/Berlin",
+  "checks": [
+    {
+      "command": "node evals/check-skill.mjs",
+      "exitCode": 0,
+      "result": "687 main words, four references"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "result": "54 tests passed, zero failed or skipped",
+      "execution": "Approved execution with Git subprocess access"
+    },
+    {
+      "command": "node evals/runs/codex-steve-review-before-1/verify.mjs",
+      "exitCode": 0,
+      "result": "Committed inputs and captured outputs verified; skill read; no material changes"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "result": "No whitespace errors"
+    }
+  ],
+  "originalSource": {
+    "reviewedFiles": 13,
+    "allHashesUnchangedAfterRuntimeChecks": true,
+    "head": "9a5603d51463eb2564f8b5a117b2242678c660b1",
+    "status": " M package-lock.json\n?? Profile.pdf\n",
+    "pdfOpened": false
+  },
+  "browserCaptureHashes": {
+    "checked": 19,
+    "allMatchSavedMeasurements": true
+  },
+  "paidHarnessConversations": 1,
+  "paidJudgeSubprocesses": 0,
+  "skillChanged": false
+}

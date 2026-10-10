@@ -1,0 +1,1 @@
+Evaluate this existing portfolio using the local repository snapshot in material/repo/ and the source context in material/source-context.md. Tell me what works and what I should improve first. I want feedback on the existing site, not a rebuild. Save your review in docs/story/review.md.

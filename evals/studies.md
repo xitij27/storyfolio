@@ -2,14 +2,17 @@
 
 This catalogue separates new conversations, repeat judgements, offline
 reviews and deterministic probes. It indexes every cohort present at the
-10 October 2026 documentation migration, including incomplete work. The
+10 October 2026 documentation migration and subsequent studies, including
+incomplete work. The
 linked findings are the authoritative observations; this page is navigation
 and a short account of each study's question and limits.
 
 For new work, use the [Codex runbook](README.md). For current conclusions and
-remaining decisions, read the [handover](../docs/handover.md). All people,
-employers, institutions, products and records in these fixtures are fictional.
-These studies assess plans. None proves the quality of a built website.
+remaining decisions, read the [handover](../docs/handover.md). People,
+employers, institutions, products and records in `evals/people/` are fictional.
+The planning studies do not prove the quality of a built website. The later
+Steve review pilot uses a real source snapshot outside that collection;
+its review criteria and independent runtime observations are separate.
 
 ## Study index
 
@@ -30,10 +33,13 @@ These studies assess plans. None proves the quality of a built website.
 | [codex-creative-review-1](#codex-creative-review-1-offline-concept-review-complete) | Offline review, complete |
 | [codex-measurement-v2-1](#codex-measurement-v2-1-diagnostic-rubric-calibration-complete) | Changed-rubric rerating, complete |
 | [codex-privacy-enforcement-1](#codex-privacy-enforcement-1-shell-access-probes-complete-prototype) | Deterministic probes, complete prototype |
+| [codex-steve-review-before-1](#codex-steve-review-before-1-real-repository-review-complete) | One natural source-only review, complete |
+| [codex-steve-review-observations-1](#codex-steve-review-observations-1-independent-product-review-complete) | Source and local browser observations, complete |
 
 ## Cases and comparison rules
 
-The collection has seventeen cases representing twelve people. The original
+The fictional planning collection has seventeen cases representing twelve
+people. The original
 ten cases represent six people: analyst, analyst-hurried, analyst-overstate,
 architect, chef, chef-terse, nurse, reliability, student and student-terse.
 The hurried, overstatement and terse cases change the conversation, not the
@@ -366,6 +372,56 @@ Evidence: [findings](runs/codex-privacy-enforcement-1/findings.md),
 [plan](../docs/superpowers/plans/2026-10-10-privacy-enforcement.md).
 Offline verifier: `node evals/runs/codex-privacy-enforcement-1/verify.mjs`.
 There is no model report or cohort-wide manifest.
+
+## Existing-portfolio review
+
+### `codex-steve-review-before-1`: real repository review, complete
+
+Question: can the unchanged skill give useful feedback on the author's
+supplied existing repository without forcing its creation workflow?
+One natural source-only conversation, `gpt-6.1-sol` at medium, with inputs
+committed at `1787ede` and frozen by hash. The real case is in
+`evals/reviews/steve-source/`, separate from fictional planning fixtures.
+The skill was selected and read; all nine predeclared review criteria pass
+the saved manual assessment. The actor wrote only its review document and
+changed no supplied material. There were no skill edits, paid judge calls
+or conditional follow-up conversations.
+
+This is one case, with no no-skill arm, repeat sample or blinded judgement.
+It establishes useful behavior in this invocation, not general reliability
+or the skill's causal contribution. Criteria are not planning scores, and
+independent runtime observations were never supplied to the actor.
+
+Evidence: [findings](runs/codex-steve-review-before-1/findings.md),
+[assessment](runs/codex-steve-review-before-1/manual-assessment.md),
+[agent review](runs/codex-steve-review-before-1/steve-source/natural-1/files/docs/story/review.md),
+[frozen manifest](runs/codex-steve-review-before-1/inputs/manifest.json).
+Offline verifier: `node evals/runs/codex-steve-review-before-1/verify.mjs`.
+
+### `codex-steve-review-observations-1`: independent product review, complete
+
+Separate coordinator source and browser inspection of the same real source
+snapshot, with no paid harness conversation. Production build and browser
+checks ran in an isolated copy; nineteen screenshots, measurements, scripts,
+environment versions and command logs are preserved. No horizontal overflow
+was measured at five widths. Sampled keyboard-menu, reduced-motion and
+JavaScript-off behavior worked. Mobile stage names, pause size and autoplay
+after manual selection support usability recommendations. The main content
+priority is replacing the project placeholder with personal work evidence.
+
+The original checkout was unchanged and its untracked PDF stayed unopened.
+Local Chromium checks do not establish deployed parity, accessibility
+conformance, physical-device behavior, cross-browser quality or the review
+agent's ability to perform browser inspection. Initial transition captures
+and settled follow-ups are both preserved; transient text overlap is not
+reported as a persistent layout defect.
+
+Evidence: [combined review](runs/codex-steve-review-observations-1/review.md),
+[source observations](runs/codex-steve-review-observations-1/source-review.md),
+[runtime observations](runs/codex-steve-review-observations-1/runtime-review.md),
+[source preservation](runs/codex-steve-review-observations-1/source-preservation.json).
+The ignored runtime directory contains a disposable app copy and dependencies;
+observations and reproduction evidence are tracked outside it.
 
 ## Preservation when checking evidence
 

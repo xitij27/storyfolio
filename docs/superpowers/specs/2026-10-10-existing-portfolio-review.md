@@ -1,8 +1,13 @@
 # Evaluating an existing portfolio
 
 Date: 10 October 2026.
-Status: the author accepted the direction and asked for an implementation
-plan. The details below are proposed. No review mode is implemented yet.
+Status updated 11 October 2026: the direction is accepted; the broader
+behavior below remains proposed. The subsequent
+[Steve pilot](../plans/2026-10-11-steve-review-pilot.md) implements a minimal
+source-review runner and real case. Its single natural run succeeded with
+the unchanged skill. No dedicated skill review mode was added. Separate
+coordinator browser observations are product evidence, not an evaluation
+of browser-enabled agent review.
 
 ## Accepted direction
 

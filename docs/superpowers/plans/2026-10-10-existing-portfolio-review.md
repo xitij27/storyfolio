@@ -1,7 +1,12 @@
 # Implementing an existing-portfolio review path
 
 Date: 10 October 2026.
-Status: implementation plan prepared, execution has not started.
+Status updated 11 October 2026: partially explored through the
+[Steve pilot](2026-10-11-steve-review-pilot.md). Its one-turn runner and
+real local snapshot case are complete; the unchanged skill handled that
+case successfully. The author prioritised it over the fictional-first
+sequence below. The broader path, fictional control, remote acquisition
+and browser-enabled test-agent evaluation remain proposed.
 
 The author accepted a separate evaluation entry path, feedback before
 redesign, separate general usefulness and Storyfolio suitability, and a

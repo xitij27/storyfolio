@@ -1,6 +1,6 @@
 # Handover
 
-Current state as of 10 October 2026. Start with this page and
+Current state as of 11 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
@@ -46,31 +46,41 @@ and its linked findings.
 
 ## Current directions and open work
 
-The author has now asked to improve the skill by evaluating the supplied
-`portfolio-website-steve` checkout. The active, bounded pilot is
-[the Steve review plan](superpowers/plans/2026-10-11-steve-review-pilot.md).
-It takes priority over creating the previously proposed fictional first
-case. A snapshot of thirteen allowlisted real source/assets files and
-source context is saved under `evals/reviews/steve-source/`, outside the
-fictional people collection. The source HEAD is
-`9a5603d51463eb2564f8b5a117b2242678c660b1`; its modified lockfile is preserved,
-and its untracked `Profile.pdf` stays unopened. A one-turn current-skill
-review comes before any instruction change. Product source/runtime review
-observations stay separate from the fixed source-only skill experiment.
-This real person's source and assets need review before any public release
-of Storyfolio, in addition to the existing publication checklist.
+The author asked to improve the skill by evaluating the supplied
+`portfolio-website-steve` checkout. The bounded
+[Steve review pilot](superpowers/plans/2026-10-11-steve-review-pilot.md)
+ran one natural source-only review with the unchanged skill. The agent
+selected and read the skill, then produced useful evidence-backed feedback
+without entering concept selection or requiring 3D. No observed miss called
+for a skill instruction, so there is no candidate edit or paid rerun.
+[Review findings](../evals/runs/codex-steve-review-before-1/findings.md).
+
+Independent local browser checks accompany the
+[portfolio review](../evals/runs/codex-steve-review-observations-1/review.md).
+The main issue is a primary work link leading to a project placeholder;
+mobile figure controls also need attention. These browser observations
+were not supplied to the source-only test agent. The new one-turn runner,
+frozen source case and review criteria establish a repeatable local case,
+not general review support or a success rate.
+
+The source HEAD is `9a5603d51463eb2564f8b5a117b2242678c660b1`.
+Thirteen allowlisted real source/assets files and source context are saved
+under `evals/reviews/steve-source/`, outside fictional people. The original
+checkout and its modified lockfile are preserved; `Profile.pdf` remains
+unopened. This real person's source and assets need review before any
+public release of Storyfolio, alongside the existing publication checklist.
 
 1. The author accepted a separate existing-portfolio review direction,
    with feedback before redesign and general usefulness distinguished
    from Storyfolio's particular form. The [design](superpowers/specs/2026-10-10-existing-portfolio-review.md)
    and [implementation plan](superpowers/plans/2026-10-10-existing-portfolio-review.md)
-   are prepared; the review runner, fixture, skill path and evaluations have
-   not been implemented. The author clarified that GitHub repository URLs
-   and local checkouts should be accepted for deeper evaluation. The first
-   milestone now reviews a frozen fictional repository snapshot, including
-   content and source evidence. Local-preview/deployed browser inspection
-   is a later milestone, and the author's own site is
-   a walkthrough rather than independent evaluation evidence.
+   remain the broader proposal. A minimal review runner and the real Steve
+   pilot are complete. A dedicated skill entry path, fictional control,
+   GitHub/deployed acquisition and browser-enabled review evaluation remain
+   unimplemented. The real case took priority at the author's request.
+   Independent local browser inspection here does not establish that a test
+   agent can acquire and interpret browser evidence. The author's own site
+   remains a walkthrough rather than independent generalisation evidence.
 2. Creative consistency and the author's assessment of which concepts are
    worth building remain open. The richer physics example provides a
    concrete diversity miss for any future instruction; do not prescribe
@@ -100,8 +110,9 @@ No portfolio evaluation, skill change or paid run is part of that migration.
 
 ## Author directions and decision record
 
-All directions below were recorded on 10 October 2026. Exact historical
-wording and context remain linked, including earlier pauses and reversals.
+Directions below were recorded on 10 October 2026 unless dated otherwise.
+Exact historical wording and context remain linked, including earlier
+pauses and reversals.
 
 | Direction | Current interpretation and full record |
 |---|---|
@@ -110,7 +121,8 @@ wording and context remain linked, including earlier pauses and reversals.
 | "please dont use claude code" | Use Codex for new evaluations, with Sol agents and Astra judges at medium reasoning. [Model-role decision](history/2026-10-10-handover.md#current-direction-codex-only). |
 | More technical, engineering, STEM and academic coverage | The collection has seventeen cases for twelve fictional people. [Coverage record](history/2026-10-10-handover.md#completed-comparison-broader-technical-and-academic-coverage). |
 | "yes, I like your recommendations. Let us implement them" | Five workstreams completed within scope; only two storyboard paragraphs were the latest direct skill changes. [Completion record](history/2026-10-10-handover.md#accepted-improvements-implemented-and-evaluated). |
-| Existing-portfolio review direction accepted | A detailed implementation is proposed, not executed. [Accepted direction](history/2026-10-10-handover.md#existing-portfolio-review-direction-accepted-implementation-planned). |
+| Existing-portfolio review direction accepted | The broader path remains proposed; the first real repository pilot is complete. [Accepted direction](history/2026-10-10-handover.md#existing-portfolio-review-direction-accepted-implementation-planned) and [pilot findings](../evals/runs/codex-steve-review-before-1/findings.md). |
+| 11 October: "make this skill better by evaluating" the Steve checkout | Evaluate the supplied real example now, before the fictional case. Improve instructions only if the run needs it. This pilot found no such miss; retain the skill and preserve its evidence. [Pilot plan](superpowers/plans/2026-10-11-steve-review-pilot.md). |
 | Repository input for deeper portfolio evaluation | Accept GitHub repository URLs and local checkouts alongside deployed URLs. Source, local runtime and deployed evidence have separate provenance. Exact examples and planning update are recorded below. |
 | Better organization "without losing any details and information"; then "yes lets get it done" | Implement the documentation proposal with verbatim archives and evidence preservation. [Migration plan](superpowers/plans/2026-10-10-documentation-organization.md). |
 | Commit on main; push only on the author's word | Preserve the exact date-scoped push direction in [AGENTS.md](../AGENTS.md). This documentation migration does not need a push or publication. |
@@ -126,17 +138,17 @@ github repo link or the cloned repo locally." They supplied these examples:
 | `\\wsl.localhost\Ubuntu\home\kshitij\projects\portfolio-website` | `/home/kshitij/projects/portfolio-website` |
 | `\\wsl.localhost\Ubuntu\home\kshitij\projects\portfolio-website-steve` | `/home/kshitij/projects/portfolio-website-steve` |
 
-Both Linux directories and their Git metadata entries exist. Only those
-existence checks were performed; no project contents, Git history, source
-quality or relationship to a deployment were examined. These are future
-walkthrough inputs, not an instruction to evaluate or modify both now.
+Both Linux directories and their Git metadata entries exist. At that point,
+only existence checks were performed; no project contents, Git history,
+source quality or deployment relationship were examined. The later request
+authorised evaluation of the Steve checkout only, as recorded above.
 
 The review design and plan now include source file/line evidence, source
 revision and working-tree provenance, and running an existing app locally
 when feasible. Repository plus observed runtime is the richest input;
 source alone does not establish deployed behavior or verify personal claims.
-The first unexecuted case becomes a frozen fictional repository snapshot
-with the same two defects, keeping the initial paid run count unchanged.
+At that planning stage the first case became a frozen fictional repository
+snapshot with the same two defects and unchanged initial paid run count.
 Offline acquisition checks cover source capture and working-tree preservation;
 GitHub access and browser execution remain distinct capabilities to verify.
 No skill change, evaluation run, clone, dependency installation or example
@@ -160,7 +172,7 @@ node evals/check-people.mjs
 npm test
 ```
 
-The local suite last passed all 48 tests. In this environment its Git
+The local suite last passed all 54 tests. In this environment its Git
 subprocess tests need approved execution outside the outer workspace sandbox.
 Local checks do not start model conversations. New paid runs need a specific
 question, explicit case lists and a new cohort name. Commit the skill before

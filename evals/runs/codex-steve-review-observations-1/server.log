@@ -1,0 +1,21 @@
+
+> portfolio-website@1.0.0 preview
+> vite preview --host 127.0.0.1 --port 4173 --strictPort
+
+error when starting preview server:
+Error: listen EPERM: operation not permitted 127.0.0.1:4173
+    at Server.setupListenHandle [as _listen2] (node:net:1912:21)
+    at listenInCluster (node:net:1991:12)
+    at node:net:2200:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 4173
+}
+
+> portfolio-website@1.0.0 preview
+> vite preview --host 127.0.0.1 --port 4173 --strictPort
+
+  ➜  Local:   http://127.0.0.1:4173/
