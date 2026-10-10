@@ -167,6 +167,15 @@ repository change was made for this planning amendment.
 
 ## Start the next session
 
+On 11 October the author asked about token consumption for reviewing and
+building portfolios. The [saved usage audit](../evals/runs/codex-token-usage-audit-1/findings.md)
+records Steve's source-only actor at 319,691 input tokens (277,376 cached)
+and 3,972 output, or 323,663 input plus output. It excludes the surrounding
+coordinator/subagent development and browser-review work. Six current-skill
+planning runs have final counters around 249,000 to 439,000 total, with
+resume-counter interpretation explicitly provisional. There is no measured
+full-build budget. No new portfolio run, pricing claim or skill edit was needed.
+
 Read this handover, [AGENTS.md](../AGENTS.md), the relevant
 [plan](superpowers/plans/README.md), and the linked study's actual findings.
 Inspect `git status` before editing: another session may have work in the
