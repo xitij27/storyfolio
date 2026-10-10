@@ -98,3 +98,44 @@ These checks validate the new input and existing local harness, not a
 creative outcome. No paid conversation or judgement was started as part of
 preparing this fixture. The parent implementation coordinates committing
 these inputs, selecting the actual skill revision and recording results.
+
+## Completed evaluation
+
+The coordinated batch ran the richer fixture twice, rather than the one
+conversation initially proposed above, to inspect consistency of the
+creative result. `evals/runs/codex-physics-evidence-1/` holds both complete
+Sol medium conversations and their single Astra medium v1 judgements.
+Both used the opening-only candidate with unchanged creative guidance;
+recorded commits are `f2daa12` and `fd8656b`, with the same skill hashes
+fixed by the cohort manifest. The later closing clarification is absent.
+The coordinator owns the report and committed-input verification.
+
+Both agents successfully read the new extract in their first turn and use
+its precise signed corrections, first-group/held-back-group separation and
+equal-weight mean-absolute-path-mean calculation. Both preserve nonzero
+residuals, numerical and scientific scope, credits, publication status and
+grant ownership. Both selected plans explain the shared reference, fixed
+corrections and signed before/after comparison through the same document
+pieces. The v1 specificity and backdrop criteria pass in both cases.
+
+Full bar: one of two. The first fails only concept diversity. The second
+passes all applicable criteria. Both offer protocol, notebook and
+uncertainty-ledger directions, and manual review still finds strong overlap
+in their correction/check/limits sequences. The ledger changes the emphasis
+to claim boundaries, but a different document label or chapter count does
+not itself demonstrate a different story. Preserve both formal scores and
+report creative range as mixed and unresolved.
+
+The complete review is
+`evals/runs/codex-physics-evidence-1/findings.md`. It compares the actual
+spatial relationships with the old physics plan and the backend's repeated
+request example. The new evidence supports explanatory plans without a new
+creative instruction. It is not a matched causal test: the fixture changed,
+and the historical skill lacks intervening factual, privacy and opening
+edits. No old result is replaced or pooled into a new success rate.
+
+Keep this fixture frozen for later comparisons. The first new run supplies
+an observed diversity failure after the evidence gap was addressed, if a
+future creative clarification is considered. No such skill edit, extra
+conversation or repeated judgement was made by this review. The author's
+concept assessment and a later built-site proof remain open.

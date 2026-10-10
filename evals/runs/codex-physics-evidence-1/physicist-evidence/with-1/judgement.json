@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 25500,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 836,
+    "reasoning_output_tokens": 92
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "calibration-not-discovery",
+        "handled": "asked",
+        "evidence": "It does not establish detector precision, scientific sensitivity, a new physical effect"
+      },
+      {
+        "id": "consortium-authorship",
+        "handled": "asked",
+        "evidence": "Do not describe Iris as sole author or lead author."
+      },
+      {
+        "id": "submitted-not-accepted",
+        "handled": "asked",
+        "evidence": "Is the 2026 manuscript still under review?"
+      },
+      {
+        "id": "grant-role",
+        "handled": "asked",
+        "evidence": "Do not describe the full award as funding Iris personally secured or led."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "How do you check that a timing correction works?",
+      "is_question": true,
+      "form": "Calibration protocol: Scope, Reference, Compare, Correction, Validation, Limits, Record.",
+      "object": "Seven thin protocol leaves carrying the approved schematic, procedure, values, limitations and public record.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The sequence depends on Iris’s specific signed offsets, fixed per-path corrections, held-back check and approved numerical evidence."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The leaves explain reference relationships, separate the two pulse groups and align signed before/after values, providing an explanatory representation beyond decoration."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The story progresses coherently from the measurement problem through Iris’s decision and implementation to validation, limits and her public record."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The protocol leaves carry a specific approved procedure and evidence rather than serving as a stock physics emblem."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves the result’s precise scope, Iris’s contribution, publication statuses, grant attribution and evidence limitations."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening provides her name, role, personal contribution, scoped numerical proof and immediate CV and email access."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening pairs an ordinary-language explanation of checking three timing paths against a reference with the precise measure needed by physicists."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed, scientifically careful portfolio plan built around an unfolding calibration protocol and Iris’s specific held-back reference check. Its greatest weakness is that the three proposed concepts largely repeat the same seven-part document arrangement and methodological sequence rather than offering substantially different directions."
+  }
+}

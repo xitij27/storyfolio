@@ -118,6 +118,24 @@ judgements. They are not extensions of the original full comparison:
 - [Creative review](runs/codex-creative-review-1/findings.md): an offline
   comparison of saved concepts and scoring boundaries. No new conversation,
   rubric change or replacement judgement.
+- [Opening clarity](runs/codex-opening-1/findings.md): nurse, embedded and
+  student twice each. All six read the new instruction, pass plain-reader
+  clarity and preserve factual boundaries. Full bar is 3/6. The earlier
+  comparator cases have unequal repetitions and older skill versions.
+- [Closing meaning](runs/codex-closing-1/findings.md): analyst,
+  analyst-overstate and student twice each. All six specify supported
+  answers and preserve factual boundaries; five pass the full bar. One
+  analyst still fails backdrop. Earlier cohorts include other skill changes.
+- [Concrete physics evidence](runs/codex-physics-evidence-1/findings.md):
+  two conversations using the separate `physicist-evidence` fixture and the
+  opening-only skill. Both explain the calibration comparison and preserve
+  its limits; one passes the full bar, and the other misses diversity.
+  This is an input experiment with no matched previous cohort.
+- [Privacy enforcement probes](runs/codex-privacy-enforcement-1/findings.md):
+  a separate opt-in shell experiment, with no model calls. Exact-path denial
+  fails against a hardlink; exact public-file grants pass twelve probes.
+  This does not change the skill's privacy score or implement a live model
+  runner. The original and copied private fixtures remain unchanged.
 
 Use each iteration's `comparison.md` for its pinned prior cases. A standard
 report without `--baseline` shows only its new cohort. Historical groups and
@@ -155,6 +173,14 @@ refuses to replace an existing report. Frozen cohorts require the recorded
 v2 implementation bytes for verification. A rubric change needs another
 cohort. These are diagnostic reratings, not extra conversations, and must
 not be pooled into the original success rate.
+
+The first [six-case calibration](runs/codex-measurement-v2-1/findings.md)
+completed once. It resolves the mixed asking/asserting and silent-avoidance
+diagnostics and preserves the analyst closing contrast. Creative verdicts
+still vary, including a physics backdrop pass for attribution relationships.
+All original reports and selected run files remain unchanged. Verify the
+saved calibration with
+`node evals/runs/codex-measurement-v2-1/verify.mjs`.
 
 ## Historical Claude workflow
 

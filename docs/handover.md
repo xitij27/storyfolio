@@ -1,11 +1,14 @@
 # Handover
 
-## Accepted improvements in progress
+## Accepted improvements implemented and evaluated
 
 On 10 October 2026 the author said: "yes, I like your recommendations.
 Let us implement them". The plan is
 `docs/superpowers/plans/2026-10-10-accepted-improvements.md`.
-Opening and closing candidates are being evaluated separately under the
+All five workstreams are complete within that plan's scope. Two small
+paragraphs in `skills/storyfolio/references/storyboard.md` clarify opening
+and closing meaning; the main skill and its description are unchanged.
+Each candidate was committed before its separate evaluation under the
 unchanged v1 rubric. Existing runs and scores remain intact.
 
 Opening candidate `749eee0` has completed six conversations and six judges
@@ -17,6 +20,20 @@ hospital-asset clarification, one student misses explicit padding discovery,
 and the other student fails swap/backdrop. The candidate is retained for
 the targeted clarity improvement, with the small-sample and differing
 earlier-version limits recorded in `findings.md` and `comparison.md`.
+
+Closing candidate `b85d014` completed six conversations and six judges in
+`evals/runs/codex-closing-1/`, without failures or retries. All six read the
+new guidance, specify an actual supported answer and preserve factual
+boundaries. Analyst question/answer passes rise from 1/2 to 2/2;
+analyst-overstate from 0/2 to 2/2; student remains 2/2. Full bar is 5/6,
+with analyst repetition 2 still failing backdrop. Both overstatement cases
+refuse the false claim and offer true alternatives. Both students preserve
+group credit, modelling status and pending permissions. Four private-read
+heuristic flags were filename inventories, as the saved manual audit of
+all 35 commands shows; those CSVs were not read. This observed compliance
+does not resolve the failed PhD privacy case. Retain the closing candidate
+for its supported answer result, without attributing unrelated score
+changes to that line or treating this small sample as a release test.
 
 The separate privacy prototype passed twelve deterministic shell probes
 using exact public-file grants. Exact private-path denial failed a real
@@ -32,8 +49,16 @@ that limited scope. No paid model call was used for those probes.
 The new `physicist-evidence` fixture is committed at `f2daa12`; the original
 fixture is unchanged. The current collection has seventeen cases for
 twelve fictional people, so keep explicit case lists. Its two-conversation
-experiment is running with unchanged creative guidance and the opening
-candidate. V2 diagnostic judging is committed at `fd8656b`; its six-case
+experiment completed with unchanged creative guidance and the opening-only
+skill in `evals/runs/codex-physics-evidence-1/`. Both explain the supplied
+calibration comparison and preserve its numerical and scientific limits.
+Full bar is 1/2; the other run fails only concept diversity. Manual review
+also finds overlapping concept structures in both runs, so creative range
+remains mixed. Keep the richer fixture fixed for any later comparison.
+This input experiment has no matched prior cohort and establishes no causal
+effect of the evidence alone.
+
+V2 diagnostic judging is committed at `fd8656b`; its six-case
 calibration completed once without retries in
 `evals/runs/codex-measurement-v2-1/`. It distinguishes asking-and-asserting,
 silent avoidance and the two analyst closing meanings while preserving the
@@ -43,11 +68,21 @@ criterion sets change. One analyst gains a full-bar pass under v2; the old
 plan and its v1 result are unchanged. Ninety original run files and three
 reports remain byte-identical. No v2 rating replaces a skill-test score.
 
-All 48 local test declarations pass with required Git-subprocess escalation,
-and original Codex bar counts still recompute to 12/20 versus 0/20. The
-opening, privacy and v2 offline verifiers pass. Closing wording is now being
-committed for its separate six-conversation v1 evaluation. Both physics
-conversations already captured the earlier opening-only skill.
+The work used fourteen new portfolio conversations and twenty judgements,
+including the six diagnostic ratings of saved conversations. Each received
+one original judgement; none was rerun to seek a pass. Privacy probes used
+no models. All 48 local test declarations pass with required Git-subprocess
+escalation, the skill check and skill-creator validation pass, and the
+seventeen fixtures validate. All five experiment verifiers pass. Original
+Codex bar counts still recompute to 12/20 versus 0/20.
+
+The remaining work is creative consistency, the author's concept review
+and a later built-site proof. Live privacy integration is separate future
+work after the deterministic prototype, not an implemented guarantee here.
+No broad evaluation batch, deployment, publication or remote push was
+performed for these accepted improvements. The outcome details and exact
+verification commands are in the accepted-improvements plan and each
+cohort's `findings.md`.
 
 ## Recommendations after reviewing the completed results
 
@@ -470,6 +505,12 @@ how much of the account's usage was spent at the time. Nothing in the
 repository is a key or a password: it was searched for them before the first
 push. This file and the design also speak of the author's own site and of how
 they like to work, which they may not want read by everyone.
+
+The later v2 calibration also has nested judge streams under `cases/`, and
+the privacy probe records include absolute machine paths and source-file
+symlinks. Include those new artifacts in the same pre-publication review;
+the original turn-stream glob does not cover them. Their private fixture
+contents are fictional. No publication is authorised by saving this evidence.
 
 ## Where stage 1 stands
 
