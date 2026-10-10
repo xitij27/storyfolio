@@ -1,5 +1,21 @@
 # Handover
 
+## In progress: source checks for labels and summaries
+
+On 10 October 2026 the author replied "yes" to the diagnosed next change.
+The focused refinement replaces the sentence-only source check with a check
+of the exact claim in introductions, working titles and object labels,
+including the fact's unanswered questions. It is documented in
+`evals/runs/codex-sol-2/written-against.md` and planned in
+`docs/superpowers/plans/2026-10-10-label-source-check.md`.
+
+The targeted batch is chef, analyst, analyst-hurried and student twice each:
+eight Sol medium conversations and eight Astra medium judgements. Compare
+with the same eight old skill conversations. The rubric and fixtures stay
+fixed. Local checks pass: skill form (687 words), ten fixtures, all four
+test-file subtests, and the skill-creator validator. Next is the paid batch,
+after committing this wording. This is not a full-suite revision result yet.
+
 ## Latest follow-up: why eight skill runs failed
 
 On 10 October 2026 the author asked: "okay so can you test and see why some
