@@ -1,0 +1,73 @@
+# Reading a profile
+
+The first stop. You read everything, write down what you found, and ask. You do not plan yet.
+
+## What to read
+
+Everything the person gave you: a resume, a LinkedIn profile, GitHub, writing, talks, notes to you, a site they already have. Read all of it before you write a word.
+
+A site they already have is a source of facts and pictures. What becomes of it is theirs to say, so ask.
+
+## LinkedIn
+
+You cannot fetch a LinkedIn profile. It turns away anything that is not signed in. It reaches you in one of four ways:
+
+- **A PDF.** On their own profile, in a desktop browser: **More** under their name (some accounts show **Resources**), then **Save to PDF**. The phone app does not have it.
+- **A copy of their data.** **Me**, **Settings & Privacy**, **Data privacy**, **Get a copy of your data**. They can pick only the profile and the positions, and the link then comes by email within minutes. The whole archive can take a day.
+- **The text,** pasted.
+- **Their own browser,** where you have a tool that works it and they have said yes.
+
+These steps were checked against LinkedIn's help pages on 10 October 2026. The names of its buttons change.
+
+**A copy of their data holds more than a profile.** It has their messages, and everyone they are connected to. Those are other people's words and addresses. The person unzipped a folder: they did not hand you their inbox. Open the files that are about the profile: the profile, positions, education, skills, projects, honours, recommendations. Leave messages and connections unopened, and tell the person that you left them. Nothing from the archive goes into the repository but facts about the person.
+
+## The fact sheet
+
+Write `docs/story/facts.md`. Beside every fact, write where it came from.
+
+- **Who they are,** in the words they use for themselves.
+- **Where they have been,** with the years.
+- **Each job:** the employer, the title, the dates, what they did there.
+- **Each project:** what it was, what they did in it, who else did, what there is to show of it.
+- **Each figure.**
+- **What others have said** of them.
+- **What they learned from:** a book, a person, a first failure.
+- **Each picture, drawing or file** they say they have.
+
+## What one source hides
+
+Where two sources disagree, you will see it. The mistakes that reach a site are in one line of one resume, where nothing disagrees with it. A team's result reads as theirs. A lab's name suggests work they never did. A photograph has someone else in it.
+
+So put these to every line of the fact sheet. Where the material does not answer, you have a question for the person.
+
+| Of every | Ask |
+|---|---|
+| Figure | What does it measure, and over what time? Is it measured, modelled or a guess? Whose result is it: theirs, or a team's? |
+| Result of a team, a firm or a club | Were they in it when it happened, and what was their part? |
+| Job, employer or lab | What did they themselves do there? Its name is not an answer. |
+| Project | What was it: something in use, a course exercise, a script? Did it ever run anywhere? Who else made it? |
+| Title | Is it what they are on paper, or what they are called? |
+| Picture, drawing or quote | Who made it? Whose is it to use? Who or what does it show? |
+| Story about a patient, a client or a colleague | May it be told at all, and with what left out? |
+| Anything of an employer's | May it be shown? |
+
+End the fact sheet with three lists:
+
+- **Gaps.** What a site needs and the material lacks: a project with no picture, a job with no outcome.
+- **Disagreements.** Where two sources differ, with both readings. You do not settle one yourself, and you do not take the one that reads better.
+- **To confirm.** Every question the table raised.
+
+## What you put to the person
+
+One message, which is the whole of your reply:
+
+1. Two or three sentences on who you take them to be.
+2. Your questions, numbered, so that they can answer by number. Plain words. Say why you ask wherever that is not plain. Every disagreement and every item under "To confirm" is one of them.
+3. Four more, which no material answers:
+   - Who is the site for, and what should a visitor do when they reach its end?
+   - What must not be shown?
+   - What do you work from, day to day? The documents, lists and rituals of your trade, by the names you call them.
+   - What did you learn from?
+4. Nothing else. No concept, no outline, no look.
+
+When they answer, write each answer into the fact sheet beside its fact, before you do anything else.
