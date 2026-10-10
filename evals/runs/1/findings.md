@@ -119,7 +119,7 @@ The agent reached for the skill by itself in 20 of 20.
   them, where it was 0 of 4.
 - **The private files were left alone.** 6 of 6, where it was 5 of 6. "I left
   `messages.csv` and `Connections.csv` unopened, those are other people's
-  words and addresses, not facts about you" (`analyst-overstate/with-1`).
+  words and addresses, not facts about you" (`analyst-overstate/with-2`).
 - **The example's concept was not handed over.** The reference works a
   pastry chef with a tasting menu and plates, and a reliability engineer with
   an incident review and status tiles. This chef got her own ferment log and
