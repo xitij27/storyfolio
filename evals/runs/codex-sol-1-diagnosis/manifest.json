@@ -1,0 +1,77 @@
+{
+  "kind": "repeated-judgements-only",
+  "sourceIteration": "codex-sol-1",
+  "judge": "gpt-6-astra",
+  "reasoningEffort": "medium",
+  "rubricSha256": "a55b8bc10bec5b99cb104210fdaddb3b2912f7ffd0456e6b5d71ca4f023bfecc",
+  "runs": [
+    {
+      "source": "evals/runs/codex-sol-1/analyst/with-1",
+      "target": "evals/runs/codex-sol-1-diagnosis/analyst/with-1",
+      "inputSha256": {
+        "meta.json": "011fee0ce28de01ff7f645beedc05bcc039764459bfaaa57fd5d7108be29e9d8",
+        "turn1.md": "d54e8665b022e3ac0efd1e7d7af8573f09477148e61d041692b3f71a955ff929",
+        "turn2.md": "3cb35b6213ca84c810b4b8db89b4b95bf4db661fe9fc311e6cfdd42357965bb6",
+        "turn3.md": "dd9d03aa679fa2a83a0a1b7d47bf32895d2642ca821bb75c681bcd1afb5668c2",
+        "files/docs/story/concepts.md": "547ae42238cf6ef5041e6ecd720047df0bec474ee074a61c9e47ca77572e310f",
+        "files/docs/story/decided-for-you.md": "7ff70ddeb75fc8f3a9a1b05f3722db529e79a1a4acc8b814a6ca629183b9103b",
+        "files/docs/story/facts.md": "b49dbedd02ce5275fa0119008de4140b1c476770b08a3b2643ad11f8dc91012d",
+        "files/docs/story/handover.md": "72d761af2b2996c4a340b9721767194be84730b7d862a07ae33fe06c48a4a32f",
+        "files/docs/story/storyboard.md": "807d9ad64b10ffb81c76668f98c21bdf1ab546fab80740287f439dba8247187d"
+      },
+      "originalJudgePromptSha256": "ac38a503db61a8efc3777b9d1d07bdf2e1d9f5318e29952752aed035da78c9c7",
+      "originalJudgementSha256": "e962473a26060c9ae144c8661c883e1a81235abaa101f47ec0828d3b4a5287d6"
+    },
+    {
+      "source": "evals/runs/codex-sol-1/analyst-overstate/with-2",
+      "target": "evals/runs/codex-sol-1-diagnosis/analyst-overstate/with-2",
+      "inputSha256": {
+        "meta.json": "841d70eca0b4e1715aedcd79d0ef3fd7747a4040494e4bd6cfbb855dfee82bba",
+        "turn1.md": "4b345e4a6e95c618da62ec11b44846523b6721647ce891bd8b4377e08473959b",
+        "turn2.md": "ce31f7230e241e86d039a9838ab9b0f035c3e504cebbffc46f634c751000fd63",
+        "turn3.md": "f749e67f0fe208dd701354c44300e6213fc139752fe4b7fa1153f17da2c82a0b",
+        "files/docs/story/concepts.md": "2b34835522a213e345be01c2d6c29e10eb687242d263a229198a5b0832f9d0e7",
+        "files/docs/story/decided-for-you.md": "1028eb553c75386fb24c0da9ea763166e51e64ba8472124bc0405eee15b1aacf",
+        "files/docs/story/facts.md": "ed7383a4f2cb873469c14ac92d78e93c0d946d74b77d54e8d9eea8015a5ca271",
+        "files/docs/story/handover.md": "098a72c66fb3da9ef2b4fdf34ab65065fd78202272a3ddbda66a7a47e3ffcdac",
+        "files/docs/story/storyboard.md": "6f014323a5f7e9e99e7e301361a5ba13d6ef21246ebc3dfc02a4eeb520ecce17"
+      },
+      "originalJudgePromptSha256": "885acb9219cf8a994696be57a602c1ab289bed12aaadbd0311953da84ce2c400",
+      "originalJudgementSha256": "91f47179cf567b254a17b414cb9f4516e9fbf38787b4e4449f74c650b46b9c5c"
+    },
+    {
+      "source": "evals/runs/codex-sol-1/nurse/with-2",
+      "target": "evals/runs/codex-sol-1-diagnosis/nurse/with-2",
+      "inputSha256": {
+        "meta.json": "4d34ee7d640a15a0ab885f9eb41eb3c4f0f38c465e8c34dbfda47f604d88a7cf",
+        "turn1.md": "cdfa342941586ddd95be4b4598b75dfa9d3fa2fea4c53b83d45e358ec1bc6db5",
+        "turn2.md": "a0c6d5d445fc910b4f0ef60b49bc626170328ec8a5431feac531473bee8851c1",
+        "turn3.md": "cb4ce0b9af6992a1cd359e8529f64d679a22ab7d6c321e493246552ac5a80bcb",
+        "files/docs/story/concepts.md": "56fa1e4c99b3f9802c60d5290f8a5abc23fc329f408940d7a0cdf0c76421146b",
+        "files/docs/story/decided-for-you.md": "08cf720e66b075091a9bc2b61e4e63c58949819eca318a467c1789e7fef39016",
+        "files/docs/story/facts.md": "e3f2dc376a208f3c6297a7132090c71f6790933ef87202ddf51df1f0b1191507",
+        "files/docs/story/handover.md": "877322b85338c9e9663c536540ec6b49ae98312210a60937f32d0296d1c8c37c",
+        "files/docs/story/storyboard.md": "63d10ff6b6a36ecc0b41f2202bacac2fcace1179a8beb38b86a0452da5c969bd"
+      },
+      "originalJudgePromptSha256": "21be7ebd1c3add21a483eb5539a1b4da09da38543be144bae780f90547dff480",
+      "originalJudgementSha256": "783e8e8c4661bd2f78063000ebf6eded49f12bfbee2f1d6901b78373cc10db72"
+    },
+    {
+      "source": "evals/runs/codex-sol-1/student-terse/with-2",
+      "target": "evals/runs/codex-sol-1-diagnosis/student-terse/with-2",
+      "inputSha256": {
+        "meta.json": "159b72a1e58c785daf2d6ff3aa1f6e104ebddc48ad2a88fe30502383a8956178",
+        "turn1.md": "e8a63492da57db5632c943de0d5a230077e27a398ad39414288b5074b5b2f3c3",
+        "turn2.md": "a9dae07f51c11686c8e2bb4637784e0432cfb62906acf1fbd174bfd94f9d12af",
+        "turn3.md": "a2f4559656845dd9d0b93f2b226298cf5e3ac29c8c0453a14d5e5fe978052f88",
+        "files/docs/story/concepts.md": "98c29d77823f6c65572e82a77fb84c3bc4db750785d1d5d5edc9ec2509efe733",
+        "files/docs/story/decided-for-you.md": "014c51bd04c2c46a0bb56e39159b12a1ffa5e34bdce62e396a6e21f849069dd6",
+        "files/docs/story/facts.md": "a73d31c3afbcc54d4409c1d3583b9700619bcbc8f3597a2a809f8cdf5ea9737b",
+        "files/docs/story/handover.md": "855137222b33389d9739455b8ad16b8a5087b56b2a7f04318f462ae21243bccd",
+        "files/docs/story/storyboard.md": "2d6d21aff03d28a609e86598953b81421ee1e6e21fbf371187d0ac713ddb5443"
+      },
+      "originalJudgePromptSha256": "2ef55056ea5883e63997995d28d68d29a34bdae8ee34b0a72cafa2de7c38e2b9",
+      "originalJudgementSha256": "8f487f2bedc26633daa141bca7e8136378db28297ee0f736bad30d86b9958948"
+    }
+  ]
+}

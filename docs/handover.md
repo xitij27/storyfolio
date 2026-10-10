@@ -1,5 +1,46 @@
 # Handover
 
+## Latest follow-up: why eight skill runs failed
+
+On 10 October 2026 the author asked: "okay so can you test and see why some
+of the tests failed with the skill? check documentation". The diagnosis is
+`evals/runs/codex-sol-1-diagnosis/findings.md`; its plan is
+`docs/superpowers/plans/2026-10-10-failure-diagnosis.md`.
+
+All local checks pass. Recomputing the 40 original scores confirms 12/20
+skill passes and 0/20 baseline passes. All eight failing agents successfully
+read the main skill and every reference. These are output-quality failures,
+not failures to load instructions or complete the runner.
+
+The strongest causes are claims escaping the fact check through short
+labels and summaries: the chef calls the workshops preserving workshops
+despite recording their subject as unknown; both hurried analysts reuse
+genomics framing while their actual duties remain unconfirmed. The three
+first-reply Helix misses actually contain a question about duties too.
+The judge's single trap enum records the assertion and loses that distinction.
+The nurse's opening leaves CNM1 unexplained. Some analyst objects mostly
+rearrange content instead of explaining relationships.
+
+Four fresh Astra medium judgements used byte-identical saved prompts, with
+original results preserved. The analyst's closing-answer score flips to
+pass; the overstating analyst gains concept-diversity and swap failures;
+the nurse and passing student comparator keep their scores. None changes
+overall pass/fail. The two repeated backdrop failures persist. Closing
+meaning versus deferred captions remains a rubric boundary, not a reason
+to remove the safeguard against writing unsupported copy.
+
+No skill, fixture, rubric or scoring change; no new portfolio conversation.
+The README now correctly names three report-only criteria and explains the
+mixed asking/asserting score. The startup guidance at the end of this file
+now reflects the completed Codex comparison. The original 12/20 report
+stands; do not pool repeated judgements as more conversations.
+
+Next useful work is a focused, evidence-backed refinement of factual checks
+for labels and summaries, followed by the affected chef and analyst cases
+and student coverage. Settle the answer boundary before changing that part.
+The separate whole-repository review, stronger-model comparison and author's
+concept review remain outstanding. No website or engine has been built.
+
 ## Latest result: completed Codex comparison
 
 On 10 October 2026, `evals/runs/codex-sol-1/` completed all 40 conversations
@@ -563,22 +604,25 @@ same list.
 - **`node --test` does not take a folder.** It takes a pattern:
   `node --test "evals/lib/*.test.mjs"`.
 
-## To start a new session
+## To start a new session now
 
 Open it in this folder. Say:
 
-> Read `docs/handover.md` and `AGENTS.md`. Round 2's changes to the skill are
-> made and no run has tested them. Carry out what the handover gives under
-> "B. Task 8": make the batch of runs, have it judged, write the report, and
-> write "Round 2" into the findings. Then tell me in a few lines what moved
-> against the first test, and stop.
+> Read `docs/handover.md`, `AGENTS.md` and
+> `evals/runs/codex-sol-1-diagnosis/findings.md`. The current skill has a
+> completed Codex comparison and a targeted failure diagnosis. Start from
+> those findings, preserve the existing evidence, and use only the Codex
+> evaluation runners for new tests. Do not repeat the full batch without a
+> question it needs to answer.
 
 On this machine the folder is already there, and nothing has to be cloned.
 Anywhere else: `git clone https://github.com/xitij27/storyfolio.git`, which
 needs the author's GitHub login, since the repository is private. It needs
-Node 20.9 or later and Claude Code's command line, `claude`, signed in to the
-account whose usage the runs are to be spent from. The runs are made by that
-command, so they are counted against whoever it is signed in as.
+Node 20.9 or later and the Codex command line, `codex`, signed in to the
+account whose usage the runs are to be spent from. `evals/README.md` gives
+the current commands and model roles. The earlier Claude instructions in
+this handover are historical. Local checks and the diagnosis verifier do
+not start paid model conversations.
 
 A session's own working notes for the plan, if it was carried out with the
 `superpowers` plugin, are in `.superpowers/sdd/`, which git ignores. Nothing

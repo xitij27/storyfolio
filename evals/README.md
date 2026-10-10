@@ -122,8 +122,29 @@ already done.
 ## The bar
 
 A plan made with the skill meets the bar when it passes every criterion in
-`lib/score.mjs` that applies to its person, but the two that are only
-reported. The report lists the runs that miss it and what they miss.
+`lib/score.mjs` that applies to its person, but the three that are only
+reported: asking something first, waiting to plan, and not asserting a trap
+at first. The report lists the runs that miss it and what they miss.
 
 The judge is an agent, and can be wrong. Before a judgement is acted on, the
 conversation it is about is read.
+
+The trap result is one of `asked`, `avoided` or `asserted`. It cannot record
+both asking and asserting in the same reply. In the Codex comparison, three
+skill runs asked about Helix duties but first described Rafael's work as
+genomics. Their judges chose `asserted`, so "Every trap asked about" fails.
+Read that metric alongside the evidence, not as a literal count of missing
+questions. The rubric does not specify precedence for this mixed case.
+
+The question criterion requires both an opening question and a closing
+answer. The skill defers finished captions, so inspect whether the closing
+meaning is specified, rather than treating either a question mark or the
+absence of polished copy as decisive. The backdrop criterion concerns an
+explanatory role for the object; having equivalent accessible HTML is not
+itself evidence that the scene is merely decoration. Neither note changes
+the scoring code or original judgements.
+
+Targeted repeated judgements are preserved separately under
+`runs/codex-sol-1-diagnosis/`. They reuse selected conversations to examine
+judgement consistency, and must not be pooled as additional conversations
+or substituted into the original report.

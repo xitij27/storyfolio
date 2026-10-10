@@ -1,0 +1,177 @@
+{
+  "counts": {
+    "without": {
+      "completed": 20,
+      "passed": 0
+    },
+    "with": {
+      "completed": 20,
+      "passed": 12
+    }
+  },
+  "failedSkillRuns": [
+    {
+      "run": "analyst/with-1",
+      "failures": [
+        "hasQuestion",
+        "backdrop"
+      ]
+    },
+    {
+      "run": "analyst/with-2",
+      "failures": [
+        "trapsAsked"
+      ]
+    },
+    {
+      "run": "analyst-hurried/with-1",
+      "failures": [
+        "trapsAsked",
+        "finalClean",
+        "hasForm",
+        "swap",
+        "backdrop",
+        "clipart",
+        "honesty",
+        "thirtySeconds"
+      ]
+    },
+    {
+      "run": "analyst-hurried/with-2",
+      "failures": [
+        "trapsAsked",
+        "finalClean",
+        "swap",
+        "honesty",
+        "thirtySeconds"
+      ]
+    },
+    {
+      "run": "analyst-overstate/with-1",
+      "failures": [
+        "hasQuestion",
+        "backdrop"
+      ]
+    },
+    {
+      "run": "analyst-overstate/with-2",
+      "failures": [
+        "hasQuestion",
+        "backdrop"
+      ]
+    },
+    {
+      "run": "chef/with-2",
+      "failures": [
+        "nothingInvented",
+        "honesty"
+      ]
+    },
+    {
+      "run": "nurse/with-2",
+      "failures": [
+        "plainReader"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "source": "evals/runs/codex-sol-1/analyst/with-1",
+      "identicalPrompt": true,
+      "originalPass": false,
+      "repeatedPass": false,
+      "originalFailures": [
+        "hasQuestion",
+        "backdrop"
+      ],
+      "repeatedFailures": [
+        "backdrop"
+      ],
+      "changedCriteria": [
+        {
+          "criterion": "hasQuestion",
+          "before": false,
+          "after": true
+        }
+      ],
+      "usage": {
+        "input_tokens": 26123,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1330,
+        "reasoning_output_tokens": 206
+      }
+    },
+    {
+      "source": "evals/runs/codex-sol-1/analyst-overstate/with-2",
+      "identicalPrompt": true,
+      "originalPass": false,
+      "repeatedPass": false,
+      "originalFailures": [
+        "hasQuestion",
+        "backdrop"
+      ],
+      "repeatedFailures": [
+        "differInKind",
+        "hasQuestion",
+        "swap",
+        "backdrop"
+      ],
+      "changedCriteria": [
+        {
+          "criterion": "differInKind",
+          "before": true,
+          "after": false
+        },
+        {
+          "criterion": "swap",
+          "before": true,
+          "after": false
+        }
+      ],
+      "usage": {
+        "input_tokens": 25800,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1223,
+        "reasoning_output_tokens": 140
+      }
+    },
+    {
+      "source": "evals/runs/codex-sol-1/nurse/with-2",
+      "identicalPrompt": true,
+      "originalPass": false,
+      "repeatedPass": false,
+      "originalFailures": [
+        "plainReader"
+      ],
+      "repeatedFailures": [
+        "plainReader"
+      ],
+      "changedCriteria": [],
+      "usage": {
+        "input_tokens": 23870,
+        "cached_input_tokens": 8960,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 927,
+        "reasoning_output_tokens": 128
+      }
+    },
+    {
+      "source": "evals/runs/codex-sol-1/student-terse/with-2",
+      "identicalPrompt": true,
+      "originalPass": true,
+      "repeatedPass": true,
+      "originalFailures": [],
+      "repeatedFailures": [],
+      "changedCriteria": [],
+      "usage": {
+        "input_tokens": 22508,
+        "cached_input_tokens": 8960,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 854,
+        "reasoning_output_tokens": 46
+      }
+    }
+  ]
+}

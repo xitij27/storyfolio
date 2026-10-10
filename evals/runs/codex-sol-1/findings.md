@@ -1,5 +1,12 @@
 # Sol test agents, Astra judges
 
+Follow-up on 10 October 2026: the author asked why the skill runs failed.
+[The diagnosis](../codex-sol-1-diagnosis/findings.md) traces all eight misses
+and records four fresh judgements of unchanged saved conversations. It
+confirms factual failures in labels and summaries and variability at the
+closing-answer boundary. The original judgements and report below remain
+unchanged; the repeat scores are not extra conversations in this comparison.
+
 The main Codex comparison uses `gpt-6.1-sol` for both test arms and
 `gpt-6-astra` for independent judging, all at medium reasoning. It follows
 the author's question about preserving the Sonnet/Opus roles. The earlier
