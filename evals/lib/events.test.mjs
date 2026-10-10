@@ -4,6 +4,7 @@ import { test } from "node:test";
 import {
   filesWritten,
   keptAs,
+  lastWrites,
   leaked,
   parseStream,
   summariseTurn,
@@ -80,6 +81,28 @@ test("the files written are each listed once, in the order they were first writt
   ]);
   assert.deepEqual(filesWritten([first, second]), ["docs/story/facts.md", "/tmp/scratch/plan.md"]);
   assert.deepEqual(filesWritten([]), []);
+});
+
+test("the last words given for each file are remembered, whether or not the write was allowed", () => {
+  const first = summariseTurn([
+    says(
+      calls("Write", { file_path: "plan.md", content: "a first go" }),
+      calls("Write", { file_path: "/elsewhere/notes.md", content: "notes" }),
+    ),
+    ends(),
+  ]);
+  const second = summariseTurn([
+    says(
+      calls("Write", { file_path: "plan.md", content: "the whole plan" }),
+      calls("Edit", { file_path: "other.md", old_string: "a", new_string: "b" }),
+    ),
+    ends(),
+  ]);
+  const words = lastWrites([first, second]);
+  assert.equal(words.get("plan.md"), "the whole plan");
+  assert.equal(words.get("/elsewhere/notes.md"), "notes");
+  // An edit says what changed and not what the file holds.
+  assert.equal(words.has("other.md"), false);
 });
 
 test("a file the agent wrote is kept under its path in its folder, or by name if written elsewhere", () => {

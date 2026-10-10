@@ -56,5 +56,17 @@ The plan of stage 1, task by task.
 - **An agent told to build nothing may write its plan somewhere else:** the
   scratch folder it is given. `evals/run.mjs` keeps what was written from the
   tools the agent called, and not from what is in its folder afterwards.
+- **An agent must not be run in a folder of this repository.** The plan had
+  the agents' folders at `evals/work/`. In the first trial here the agent
+  took the repository's root for its project: it looked for its material at
+  `storyfolio/material/`, was refused, and asked the person for access. It
+  then tried to write its plan to the repository's root and was refused
+  again. Unseen, it would also have been given this repository's
+  `AGENTS.md`, which names the skill, with the skill or without. The folders
+  are under the system's temporary folder now, and a test holds them out.
+- **A refused write is not lost.** With nobody to allow it, a write outside
+  the agent's folder is refused, and the agent's reply then only asks for
+  leave. The words are in the call, and `evals/run.mjs` keeps them and says
+  in `meta.json` which files were refused.
 - **`node --test` does not take a folder.** It takes a pattern:
   `node --test "evals/lib/*.test.mjs"`.

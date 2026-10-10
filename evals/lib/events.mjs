@@ -72,6 +72,24 @@ export function filesWritten(turns) {
 }
 
 /**
+ * The last words these turns gave the Write tool for each file, by the path
+ * as the agent gave it. They are there whether or not the write was allowed:
+ * with nobody to allow it, a write outside the agent's folder is refused,
+ * and the words it meant to write are then nowhere else.
+ */
+export function lastWrites(turns) {
+  const words = new Map();
+  for (const turn of turns) {
+    for (const tool of turn.tools) {
+      if (tool.name !== "Write") continue;
+      const path = String(tool.input.file_path ?? "");
+      if (path) words.set(path, String(tool.input.content ?? ""));
+    }
+  }
+  return words;
+}
+
+/**
  * Where a file the agent wrote is to be found, and the name it is kept under
  * among a run's results. A file in the agent's own folder, `work`, is kept
  * under its path there. One written anywhere else is kept under outside/ by

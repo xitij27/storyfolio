@@ -2,6 +2,7 @@
   Where things are, and reading them. Shared by the commands in this folder.
 */
 import { readFile, readdir } from "node:fs/promises";
+import { tmpdir } from "node:os";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,7 +11,13 @@ export const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 
 export const PEOPLE = join(ROOT, "evals", "people");
 export const RUNS = join(ROOT, "evals", "runs");
-export const WORK = join(ROOT, "evals", "work");
+/**
+ * Where the folders are that agents run in: outside this repository, and in
+ * no other. An agent in a folder of a git repository takes the repository's
+ * root for its project. It would be given this repository's instructions,
+ * which name the skill, and would look for its material at the root.
+ */
+export const WORK = join(tmpdir(), "storyfolio-evals");
 export const PROMPTS = join(ROOT, "evals", "prompts");
 
 /** The skill under test, and where it lives. */
