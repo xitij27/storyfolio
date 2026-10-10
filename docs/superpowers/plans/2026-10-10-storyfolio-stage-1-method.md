@@ -3960,4 +3960,51 @@ Whether a concept is worth building is for their eye. No count stands in for it.
 
 ## Outcome
 
-Written when the plan has been carried out: what was built, and where the build departed from the plan.
+Written on 10 October 2026, with seven of the ten tasks carried out. The
+stage stopped there on the author's word, for them to read what the one test
+showed. `docs/handover.md` says where it stands and what is left.
+
+### What was built
+
+- This repository, with its rule in `AGENTS.md`.
+- The commands under `evals/`, with 29 tests of their own logic: one
+  conversation with a fresh agent, a batch of them, a judge, and a report.
+- Ten made-up cases in `evals/people/`.
+- Twenty conversations without the skill and twenty with it, each judged,
+  in `evals/runs/1/`, with `report.md`, `findings.md` and
+  `written-against.md`.
+- The skill: `skills/storyfolio/SKILL.md` and four references, 3,800 words.
+
+Without the skill none of twenty plans met the bar. With it one did. Nearly
+every criterion rose a long way, and one fell: more is invented, by the
+judge's count, since an agent with the skill writes a caption for every beat.
+
+### Where the work departed from the plan
+
+- **Tasks 8 and 9 were not carried out,** on the author's word: "Write it,
+  test once, show me". Nor was the review of the whole by a fresh reviewer,
+  which belongs to the end of the stage.
+- **The agents' folders are outside the repository,** under the system's
+  temporary folder. The plan had them at `evals/work/`, and the trial of
+  Task 4 showed that an agent in a folder of a git repository takes the
+  repository's root for its project. The plan's `.gitignore` line for that
+  folder is gone. A test holds the folders out.
+- **Three things were added to the commands that the plan did not have:** a
+  refused write is kept from the call that made it, an agent's own memory
+  notes are not kept as files, and a run's folder is named for the moment it
+  starts. Each has a test. So there are 29 tests, where the plan says 24.
+- **Ten cases, where the plan has eight.** `chef-terse` and `student-terse`
+  were added in Task 5, with messages of their own, when three criteria were
+  seen to pass only because the made-up person asked for exactly those
+  things. So a batch is twenty conversations, where the plan says sixteen.
+- **The judge is asked two more things** than the plan's brief has: whether
+  the through-line is a question, and whether the first reply already gives a
+  plan. Its answer also records what it cost.
+- **The first replies were read in extract,** with three whole, where Task 5
+  says to read all sixteen whole. Every one had the same five headings.
+- **One instruction is in the skill though an agent passes it five times in
+  six:** leaving a person's messages unopened.
+- **The judging of Task 5 was made three times.** Once it was stopped for
+  holding memory notes. Once its files were deleted to judge again with the
+  changed brief, and the account's usage limit then stopped the judge. The
+  limit was reached twice in the day, and the work waited for it both times.
