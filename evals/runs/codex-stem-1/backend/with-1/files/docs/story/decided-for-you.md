@@ -1,0 +1,14 @@
+# Planning decisions
+
+- Keep confidential employer artifacts out of all concepts; use only newly invented requests, visibly labelled illustrative. Reason: user's explicit restriction. Change only with a new explicit instruction and usable public material.
+- Omit testimonials, awards, usage figures and learning backstory. Reason: absent or explicitly unavailable; padding would invent evidence. Change by supplying relevant facts and rights.
+- Keep latency evidence separate from personal contribution claims. Reason: benchmark scope is confirmed, optimization ownership is not. Change by supplying attribution and any relevant context.
+- Use six chapters and six simple pieces per concept. Reason: enough to explain the problem, personal work and evidence without padding. Change at storyboard selection if the evidence warrants another length.
+- Keep primary text readable outside the 3D scene and provide a static/reduced-motion reading path in the storyboard. Reason: managers should be able to inspect evidence without needing animation or a particular device. Implementation details remain unplanned. Change the presentation during storyboard review, while preserving readable content.
+- Leave unresolved optional biography out rather than repeat the first questionnaire. Reason: enough confirmed facts exist to make three concepts; unanswered items stay recorded in facts.md. Change by answering those items later.
+- Use ordinary scroll, chapter anchors and an evidence skip; avoid forced scrolling and interaction inside the canvas. Reason: readers need fast access and keyboard/touch parity. Change specific navigation placement in future visual review.
+- Use warm matte cards as the provisional look, with Source Sans 3 prose and IBM Plex Mono labels; retain two other visual candidates. Reason: event-sequence cards should feel like readable working artifacts. Change during visual review; no build or final look selection is implied.
+- Use English, one long page and an email CTA; postpone separate project pages and corrected CV download. Reason: current evidence fits one page, while the source CV needs corrected wording. Change when more public-safe evidence or a verified CV is supplied.
+- Include static social preview/icon and a missing-address page in later scope; omit blog, chat, accounts, forms and analytics. Reason: basic navigation and sharing are useful, while the extras have no supplied content or requested purpose. Change on request.
+- Treat applicable legal notice as a pre-publication question, with no assumed jurisdiction. Reason: environment timezone does not establish residence or site operator jurisdiction. Change when publication details are known.
+- Use lightweight six-card 3D with readable HTML loaded first and static equivalents. Reason: the scene must explain sequence without delaying access to evidence. Change technical stack after inspecting future build context; no implementation started.

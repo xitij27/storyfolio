@@ -1,0 +1,18 @@
+# Planning decisions
+
+- Exclude the accidentally supplied participant contact export from all site planning, assets and outputs, and do not read it further. Why: the supplied research notes explicitly identify it as private and outside the site's material. This exclusion follows the user's material; no private records belong in public content.
+- Hold causal, doctorate-completion, accepted-publication and personally taught-120 claims out of proposed copy. Why: source details do not support them. Change through specific factual clarification and supporting public evidence.
+- Keep this work to Markdown planning records. Why: the user explicitly requested planning and no building. Change only after a subsequent user instruction authorizes implementation.
+- Use seven chapters and one persistent object per concept. Why: enough room for contribution, scope and teaching without inventing more achievements. Change through concept choice and storyboard feedback.
+- Keep ordinary text and direct resource links available alongside 3D, with a static/reduced-motion reading planned. Why: both hiring audiences need quick access to evidence and contact. Adjust the presentation during storyboard review; content remains accessible.
+- Omit whole-course enrolment, scores, awards and outside-lab impact. Why: confirmed personal teaching scope is 24 students in two practical sections; no scores, awards or external impact supplied. Change only through new supported facts.
+- Use original schematic artifact structures until public sources are available and cleared. Why: named working artifacts are not permission to publish restricted or departmental material. Public code/synthetic excerpts require licence and credits; no restricted data may be reconstructed.
+- Do not introduce an influential person or origin story. Why: unanswered and unnecessary. Change if Mira later supplies one.
+- Use native scrolling with a sticky desktop notebook and section anchors; no forced intro or scroll capture. Why: visitors can inspect the work quickly and move backward reliably. Change animation pacing during storyboard review.
+- Plan static inline notebook/diagram views for narrow layouts, reduced motion, no WebGL and no JavaScript. Why: the full story and evidence must be available on every reading path. A later mobile 3D option requires measured usability/performance, not assumption.
+- Recommend Source Sans 3 for prose and IBM Plex Mono for artifact typography, with self-hosting and licence notices in a future build. Why: clear long-form reading and legible notebook/code labels. Change during visual review.
+- Propose warm paper as the starting look, alongside graph-paper and archive-paper alternatives. Why: the selected object's material is paper. No look is claimed approved; Mira can choose or revise it.
+- Keep English, inline work and a simple 404; omit separate project pages, testimonials, blog, chat, tracking and newsletter from current scope. Why: supplied work and stated contact needs do not require them. Change if Mira supplies content or expands scope.
+- Plan original notebook imagery for share preview/icon. Why: it reflects the selected object without assuming portrait rights. Final metadata wording remains a later copy decision.
+- Mark jurisdiction-specific legal content unresolved before publication. Why: publication country/operator details are unknown. Resolve from actual details, not guessed affiliation.
+- Hold final captions for later editorial review; storyboard uses working titles and fact references. Why: the storyboard reference explicitly requires this and prevents unsourced narrative claims. Mira can request a later copy pass.

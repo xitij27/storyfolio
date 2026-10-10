@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 15548,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 898,
+    "reasoning_output_tokens": 145
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "degree-pending",
+        "handled": "avoided",
+        "evidence": "“PhD in progress; thesis submission targeted for December 2026”, without inventing a defence date."
+      },
+      {
+        "id": "preprint-contribution",
+        "handled": "asked",
+        "evidence": "“Manuscript under review”, with second-author credit on a six-author preprint; avoid implying an accepted publication."
+      },
+      {
+        "id": "association-not-cause",
+        "handled": "asked",
+        "evidence": "“Identified a marker associated with inflammatory outcomes”, reflecting the retrospective study rather than claiming disease causation."
+      },
+      {
+        "id": "teaching-role",
+        "handled": "avoided",
+        "evidence": "“Adapted practical exercises and taught two sections within a course enrolling 120 students”, accurately describing your contribution."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "From research questions to reproducible analysis.",
+      "is_question": false,
+      "form": "",
+      "object": "An illustrative 3D dependency graph connecting questions, analysis, checks, software, and exercises.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "fail",
+        "reason": "The abstract question-to-workflow-to-teaching concept could serve another computational biologist unchanged, with different artifact excerpts."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "The illustrative graph mirrors the written sections without encoding specific dependencies or evidence, so removing it loses visual reinforcement rather than substantive explanation."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence develops from the research question through reproducibility and sensitivity checks to teaching and a completed overview."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "A changing dependency graph relates to her working artifacts rather than serving as a stock emblem of her profession."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves doctoral and preprint status, research limitations, contribution boundaries, and the actual teaching role."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening identifies Mira and her work, provides CV and email links, and navigation gives direct access to research evidence."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening explains her activities in accessible language while retaining scientifically credible wording."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a single-page portfolio connecting research, reproducible software, and teaching through an animated dependency graph, with accurate claims and practical fallbacks. Its greatest weakness is that the graph remains a generic illustration rather than an essential explanation of Mira’s particular work."
+  }
+}

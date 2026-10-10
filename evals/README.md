@@ -13,8 +13,8 @@ flagship model for both roles, so the main experiment now matches the
 original workhorse-agent / stronger-judge design.
 
 ```bash
-node evals/codex-run-all.mjs --iteration codex-sol-1 --arm without --reps 2
-node evals/codex-run-all.mjs --iteration codex-sol-1 --arm with --reps 2
+node evals/codex-run-all.mjs --iteration codex-sol-1 --arm without --reps 2 --people analyst,analyst-hurried,analyst-overstate,architect,chef,chef-terse,nurse,reliability,student,student-terse
+node evals/codex-run-all.mjs --iteration codex-sol-1 --arm with --reps 2 --people analyst,analyst-hurried,analyst-overstate,architect,chef,chef-terse,nurse,reliability,student,student-terse
 node evals/codex-judge.mjs --iteration codex-sol-1
 node evals/report.mjs --iteration codex-sol-1
 ```
@@ -75,6 +75,14 @@ This is exploratory coverage, not a stable estimate of performance by
 profession. Do not pool it with `codex-sol-1` or use that older cohort as its
 baseline. This expansion does not edit the rubric or skill. Run metadata
 records the actual skill commit, including concurrent refinements.
+
+Completed results: [report](runs/codex-stem-1/report.md) and
+[reviewed findings and concepts](runs/codex-stem-1/findings.md). The full bar
+passes in 3/6 skill runs and 0/6 baselines. All twelve final plans preserve
+the supplied facts; both PhD agents nevertheless read the private export.
+The other skill misses concern embedded terminology and physics concept
+specificity. Verify the saved cohort without model calls using
+`node evals/runs/codex-stem-1/verify.mjs`.
 
 **An unfiltered runner selects all current fixtures.** To reproduce the
 original ten-case cohort, pass

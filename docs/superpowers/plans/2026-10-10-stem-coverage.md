@@ -58,3 +58,36 @@ references), `npm test` passed all four test-file subtests, and
 a cue in the material and a resolution in the truth sheet; the ML metric
 names remain unknown until the second message. No new harness logic was
 needed. The existing runner discovers the new folders automatically.
+
+## Outcome
+
+Committed the six fixtures and plan at `6b05309`, then completed all twelve
+conversations and twelve Astra judgements in `codex-stem-1`. The backend
+baseline validated the conversation and judge path before the other
+baselines were queued; its skill counterpart finished in parallel. No
+model failures, retries or repeated judgements. Each pair uses its committed
+fixture inputs, and all six skill runs use identical skill bytes. The
+verifier checks 37 input hashes and the recorded Git tree. The skill already
+included concurrent refinement `e485f53`.
+
+The full bar passes in 3/6 skill runs and 0/6 baselines. All final plans
+remain factually bounded. The embedded skill run fails opening clarity,
+physics fails three creative criteria, and both PhD agents read the private
+contact export. The skill-side PhD plan fails only that privacy criterion.
+Reviewed findings, the six selected concepts, raw evidence, the generated
+report and a repeatable offline verifier are committed with this batch.
+
+The new profiles extend coverage to twelve distinct people and sixteen
+cases. They do not establish stable profession-level pass rates. All six
+selected objects remain document-based with similar palettes, a question
+for the author's visual review. Follow-up should target the saved privacy,
+clarity and specificity evidence; no skill change or new full batch was
+made here. The previous fixtures, reports and separate source-check study
+remain intact.
+
+Final fixture and skill checks, all four test-file subtests, verifier syntax,
+the complete cohort verifier and whitespace checks pass. The verifier's
+read-only Git subprocess required approved escalation after sandbox EPERM;
+no paid run failed. Documentation includes explicit original-cohort case
+lists so an unfiltered command cannot accidentally be mistaken for the old
+ten-case experiment.

@@ -1,6 +1,6 @@
 # Handover
 
-## Current work: broader technical and academic coverage
+## Completed comparison: broader technical and academic coverage
 
 On 10 October 2026 the author asked: "For the tests and evals, I'd like to
 see more for tech, engineering, STEM or academia related roles".
@@ -12,21 +12,39 @@ collection now has sixteen cases for twelve people. Each new case has four
 traps; three use terse prompts and the PhD case includes private records.
 This expansion leaves the old fixtures, skill and rubric alone.
 
-The plan is `docs/superpowers/plans/2026-10-10-stem-coverage.md`. The initial
-question is how the current method transfers to these roles, especially
-claim scope, research status and individual contribution. `codex-stem-1`
-will hold one conversation per new case per arm, with Sol medium agents and
-Astra medium judges. This is an exploratory comparison of twelve
-conversations, not a repeat of the older batch or a stable per-role score.
-Results and reviewed concepts will be saved with that iteration.
+The plan is `docs/superpowers/plans/2026-10-10-stem-coverage.md`.
+`evals/runs/codex-stem-1/` now holds twelve complete conversations and twelve
+independent judgements: each new case once per arm, Sol medium agents and
+Astra medium judges. No runner failures or retries. All six agents selected
+the skill automatically. The full bar passes in 3/6 skill runs versus 0/6
+baselines; all twelve final plans preserve the supplied facts. This is
+exploratory coverage, not a stable per-role score or a repeat of an old batch.
 
-Another session is concurrently running the label-source refinement below.
-Preserve its work and record the actual skill commit used by this new
-cohort. Use explicit case lists for historical cohorts: unfiltered runners
-now select sixteen cases. `evals/README.md` documents both lists.
+Backend, ML and mechanical pass with the skill. Embedded fails plain-reader
+clarity; physics fails concept diversity, specificity and explanatory 3D;
+PhD fails privacy. Both PhD agents actually read the private participant
+contact export, though neither repeats record values in the output. The
+reference's explicit unopened-file exception is framed around LinkedIn:
+generalising that boundary is a concrete follow-up question. The physics
+fixture lacks detailed public procedure evidence, so review its creative
+scores before prescribing another rule. All six selected concepts use
+paper or document surfaces with similar colours, another point for the
+author's concept review. Details and plans are in `findings.md` and
+`report.md` beside the runs.
 
-Before running models, all sixteen fixtures, the skill form (687 words,
-four references), all four test-file subtests and the whitespace check pass.
+This batch uses fixture/harness commit `6b05309`, with the same skill bytes
+as the concurrent label-source refinement `e485f53` below. Its old-case
+comparison remains separate. Use explicit case lists for historical cohorts:
+unfiltered runners now select sixteen cases. `evals/README.md` documents
+both lists and pins the old comparison commands to their original cases.
+
+All sixteen fixtures, the skill form (687 words, four references), all four
+test-file subtests and whitespace checks pass. The offline
+`evals/runs/codex-stem-1/verify.mjs` verifies all twelve conversations, their
+models and judgements, 37 committed input hashes and identical skill bytes.
+Its Git subprocess needed approved escalation after a sandbox EPERM. No
+skill or rubric changes were made by this expansion. The next work should
+target the saved misses and include student coverage after any skill edit.
 
 ## Completed targeted test: source checks for labels and summaries
 
@@ -679,12 +697,14 @@ same list.
 
 Open it in this folder. Say:
 
-> Read `docs/handover.md`, `AGENTS.md` and
-> `evals/runs/codex-sol-1-diagnosis/findings.md`. The current skill has a
-> completed Codex comparison and a targeted failure diagnosis. Start from
-> those findings, preserve the existing evidence, and use only the Codex
-> evaluation runners for new tests. Do not repeat the full batch without a
-> question it needs to answer.
+> Read `docs/handover.md`, `AGENTS.md`,
+> `evals/runs/codex-sol-2/findings.md` and
+> `evals/runs/codex-stem-1/findings.md`. The current skill has a completed
+> source-check comparison and broader technical/academic coverage, with
+> remaining factual, privacy and creative misses. Start from those saved
+> findings, preserve the evidence and use only the Codex runners. Use
+> explicit case lists and do not repeat a full batch without a question it
+> needs to answer. The earlier diagnosis remains in `codex-sol-1-diagnosis`.
 
 On this machine the folder is already there, and nothing has to be cloned.
 Anywhere else: `git clone https://github.com/xitij27/storyfolio.git`, which
@@ -692,7 +712,7 @@ needs the author's GitHub login, since the repository is private. It needs
 Node 20.9 or later and the Codex command line, `codex`, signed in to the
 account whose usage the runs are to be spent from. `evals/README.md` gives
 the current commands and model roles. The earlier Claude instructions in
-this handover are historical. Local checks and the diagnosis verifier do
+this handover are historical. Local checks and the saved cohort verifiers do
 not start paid model conversations.
 
 A session's own working notes for the plan, if it was carried out with the
