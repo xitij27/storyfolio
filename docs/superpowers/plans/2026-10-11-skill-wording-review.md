@@ -245,3 +245,116 @@ node evals/codex-run-all.mjs --iteration codex-wording-1 --arm with --reps 2 --p
 node evals/codex-judge.mjs --iteration codex-wording-1
 node evals/report.mjs --iteration codex-wording-1
 ```
+
+## Independent assessment, 11 October 2026
+
+The author requested a second opinion:
+
+> I asked claude to review the skill and it came up with these points:
+> [2026-10-11-skill-wording-review.md](2026-10-11-skill-wording-review.md) . Study them and tell me if it is valid or not
+
+This assessment preserves the original review and drafts above. It checks
+the current skill, commit history and saved evidence, with two independent
+read-only reviews of wording and evaluation claims. It does not apply a
+rewrite or start an evaluation conversation or judgement.
+
+### Verdict on the six points
+
+| Point | Assessment | Basis |
+|---|---|---|
+| 1. Dense claim check | Valid editorial concern, not an established behavioral defect. | The bullet is 154 words. Splitting it can make it easier to scan. However, "It" naturally refers to the supporting line, and "the introduction" follows "introductory summaries" in the same paragraph. The ambiguity claim is stronger than the evidence. The existing check has a documented purpose and partial factual gains in [codex-sol-2](../../../evals/runs/codex-sol-2/findings.md). |
+| 2. Different voice | Plausible style judgement, not evidence of worse agent performance. | The newer passages use more procedural language. Precision can be useful, and the [premise](../../../evals/runs/codex-premise-1/findings.md), [opening](../../../evals/runs/codex-opening-1/findings.md) and [closing](../../../evals/runs/codex-closing-1/findings.md) cohorts support their targeted requirements, with the limitations each study records. No comparison shows that the drafted voice works better. |
+| 3. Scored example in the skill | Valid, and the strongest concern about evaluation independence. | [asking.md](../../../skills/storyfolio/references/asking.md) repeats "real-time system", overlapping the analyst's `fraudshield-not-real-time` trap in [person.json](../../../evals/people/analyst/person.json). The [original failed reply](../../../evals/runs/1/analyst-hurried/with-1/turn3.md) prints "real-time fraud detection system". Git confirms `e178be2` added the example afterward. That trap is partly cued by a known example and provides weaker evidence of generalization. The runs remain useful regression tests; the overlap neither invalidates all results nor measures how much the example affected them. |
+| 4. Two conflicts | One real textual inconsistency and one possible ambiguity. | [reading-a-profile.md](../../../skills/storyfolio/references/reading-a-profile.md) requires reporting unopened files, but its exhaustive first-reply list omits that notice and ends "Nothing else". Asking about an unclear file can already happen in the first-stop questions, so a separate earlier exchange is not required. The abandoned third concern needs no change: [SKILL.md](../../../skills/storyfolio/SKILL.md) requires recording answers at every stop and updating the handover after storyboard approval. |
+| 5. Current interests | Sensible hypothesis, not a demonstrated missing instruction. | The concept should concern current interests, but profile evidence and the existing gap/confirmation questions can establish them. No cited run shows this particular omission causing an invented interest. Observe it before adding a mandatory question. |
+| 6. All changes guard facts; creativity is next | Partly valid direction, inaccurate history and an unproved prediction. | There are six post-initial skill revisions, but privacy concerns file access, opening clarity concerns outsider comprehension, and closing meaning concerns the story's answer. Those are not all factual guards. Concept diversity remains mixed in [the richer physics study](../../../evals/runs/codex-physics-evidence-1/findings.md), which supports further investigation, not a claim that another creative instruction is necessarily the next gain. |
+
+The description, three-stop structure, reference routing and explicit
+storyboard coverage are concrete strengths. Calling `concept.md` the
+strongest file, or declaring one voice easier to read, remains editorial
+judgement. The measured 687-word body and four references are correct.
+One minor historical correction: the earlier claim-check quotation called
+the "first version" above is from `e178be2`, not the initial `aff5bca`.
+
+### Assessment of the drafts
+
+- **Draft 1:** broadly preserves the intended safeguards and usefully
+  separates the rule from the checking step. It grows the passage from
+  154 to 168 words, so it is a readability candidate, not a simplification
+  proven to help agents. Its example of a first-reply summary is narrower
+  than "introductory summaries", although the universal claim check remains.
+- **Draft 2:** a reasonable replacement for the directly cued example.
+  It retains the resume-and-unanswered-question lesson. Reducing overlap
+  does not turn already-used cases into unseen generalization evidence.
+- **Drafts 3 and 4:** largely faithful, but longer. Draft 3 makes positive
+  fact-sheet support more explicit. Draft 4's example concerns inferring a
+  profession from an employer, whereas the saved failure concerned inferring
+  a domain of work. Its general employer/title-only safeguard remains.
+- **Drafts 5 and 6:** largely faithful stylistic alternatives. Draft 5
+  explicitly asks for fact-sheet lines; draft 6 names the first screen,
+  already required by the preceding paragraph. Neither has a demonstrated
+  advantage over the current tested wording.
+- **Draft 7:** potentially useful for making the first-message contract
+  consistent, but more than moving text. It explicitly batches unclear-file
+  questions and asks why files were left unopened. The cited privacy runs
+  do not demonstrate a failure caused by the notice's placement or question
+  timing. Thus the blanket claim that every new instruction already has
+  its required failure evidence is not established. This is not a privacy
+  fix, and the review should not present it as one.
+
+### Corrections to the proposed evaluation
+
+1. **Do not pre-excuse worse behavior.** The statement that a worse
+   `fraudshield-not-real-time` result would be "not a regression caused by
+   the rewrite" is unjustified. If new output again makes an unsupported
+   claim, record that failure. A direct hint's removal may explain it;
+   sampling and judgement variation are also possible. The explanation
+   must follow the evidence, rather than deciding in advance that a decline
+   cannot count. Removing the cue improves independence in one respect,
+   not necessarily portfolio quality.
+2. **The old cohort is not a clean control for these rewrites.** The eight
+   proposed conversations match `codex-sol-2` in cases and repetition counts,
+   but today's skill also contains the intervening privacy, premise/summary,
+   opening and closing changes. Comparing with that cohort cannot isolate
+   drafts 1 and 2, and applying both together cannot isolate their individual
+   effects. Historical runs can supply regression context. If attribution
+   is the question, use unchanged-current-skill comparison runs with fixed
+   fixtures, prompts, models and rubric; if only regression coverage is
+   needed, state the narrower conclusion. No such runs are authorized or
+   started by this assessment.
+3. **Not all the cited targets passed.** The statement that drafts 3 to 7
+   had runs that "passed on the target" is false for the privacy target:
+   [both PhD repetitions read private files](../../../evals/runs/codex-privacy-1/findings.md).
+   If draft 7's target means notice placement instead, that target was not
+   established by the cited study. The original review acknowledges the
+   privacy failure earlier, so its closing generalization contradicts its
+   own evidence.
+
+Recommendation: accept the example-overlap finding and the first-message
+inconsistency, treat the dense paragraph as optional editorial work, and
+correct the evaluation claims before choosing any rewrite. Draft 2 has the
+clearest reason to be prioritized in a future change. Do not bundle the
+seven drafts or commission eight conversations merely for voice consistency.
+Any later skill change still needs the saved-failure rationale and focused
+rerun required by the repository rules. Generalization needs examples not
+used to develop the wording, treated as a separate fixture experiment.
+
+### Scope and verification
+
+Only this assessment and its navigation/status records were edited. Skill
+files, fixtures, saved evaluations and the original review text are unchanged.
+The initial worktree contained another session's Steve-pilot changes. That
+session committed them as `dffa92e` during the read-only investigation;
+the worktree was clean before these documentation edits began.
+An unrelated `evals/runs/codex-token-usage-audit-1/` directory appeared
+during verification and was left untouched.
+
+- `node evals/check-skill.mjs`: passed, 687 words and four references.
+- `npm test`: the sandboxed invocation failed in `measurement-v2.test.mjs`;
+  the approved execution outside the sandbox passed all 54 tests. This is
+  consistent with the documented Git-subprocess sandbox limitation.
+- `git diff --check` and documentation checks passed: all 109 local link
+  targets in the three edited files exist, and none contains an em dash.
+- No skill evaluation conversations or judgements were started. Local
+  checks validate repository integrity, not the effectiveness of a rewrite.
+- Record this work on `main`; no push is part of the author's request.

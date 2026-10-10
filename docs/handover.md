@@ -102,6 +102,17 @@ public release of Storyfolio, alongside the existing publication checklist.
    that trap since `e178be2` partly test whether the agent read it. The
    recommended first step is drafts 1 and 2, with eight runs matching
    codex-sol-2.
+   The author's subsequent request to validate that review is recorded in
+   [the independent assessment](superpowers/plans/2026-10-11-skill-wording-review.md#independent-assessment-11-october-2026).
+   It confirms the example overlap and an inconsistent first-reply list,
+   but qualifies the style claims and the proposed experiment. Historical
+   runs remain useful regression evidence; the old eight-case cohort does
+   not isolate today's rewrites. A renewed unsupported claim must still be
+   recorded as a failure, and the cited privacy target did not pass. The
+   assessment recommends prioritizing the example replacement in any future
+   change, with a specific evaluation question first. No rewrite or model
+   evaluation was made; local checks passed, including all 54 tests after
+   approved execution outside the sandbox.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
