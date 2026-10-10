@@ -1,5 +1,96 @@
 # Handover
 
+## Documentation organization review
+
+On 10 October 2026 the author asked whether the files and documentation
+could be better organised "without losing any details and information".
+The review and proposed migration are in
+[the documentation organization plan](superpowers/plans/2026-10-10-documentation-organization.md).
+Recommend a short current handover with a complete verbatim historical
+archive, a documentation map, plan/status and study indexes, and a clear
+division between current Codex and historical Claude instructions. Keep
+all evidence paths and bytes intact, verified by an inventory; the existing
+manifests and v2 source-tree checks depend on them. No reorganization has
+been executed in this review, and no paid evaluation was started.
+
+The preceding question, "wait so have we improved the skill or just the
+evals?", was clarified: the direct skill changes are two storyboard
+paragraphs, for opening clarity and supported closing meaning. The other
+accepted work improved evaluation, supplied richer fictional evidence and
+prototyped a privacy boundary. Creative guidance was not changed, and live
+privacy enforcement is still unimplemented. This distinction should remain
+prominent in the proposed current handover.
+
+## Existing portfolio evaluation: capability review
+
+On 10 October 2026 the author asked whether the skill can evaluate an
+existing portfolio, giving `https://xitij27.vercel.app` as the example.
+This is an exploration of that use case, not an accepted change to the
+skill or a request to rebuild the site.
+
+The current version explicitly plans a portfolio and stops at an approved
+storyboard; it does not build websites yet. An existing website is already
+supported as source material in `references/reading-a-profile.md`, including
+asking what should become of it. There is no evaluation-only path. The
+three stops still lead through fact confirmation, new concepts and a new
+storyboard. Useful review criteria already exist in `references/concept.md`
+and `references/storyboard.md`: personal specificity, narrative progression,
+an opening question with a supported closing answer, explanatory 3D,
+factual restraint, a quick visitor route and accessible fallback planning.
+
+The supplied URL was inspected through its server-returned HTML on this
+date. The web browsing tool could not access it; sandboxed curl failed DNS
+resolution, and an approved network fetch succeeded. Script and style
+content were stripped for reading. This was a content inspection, not a
+rendered desktop/mobile review, a source-code audit or a paid evaluation
+conversation. Animation, scroll timing, first-screen visibility, contrast,
+keyboard behavior, performance and actual fallback behavior remain untested.
+No biographical or project claim was independently verified.
+
+Observed content and preliminary editorial assessment:
+
+- The opening asks what it takes to move AI from proof of concept to
+  production. The paper's chapters run from Abstract to Conclusion, and
+  Method develops a Data, Model, System sequence. That gives the text a
+  coherent argument to preserve in any review.
+- Experiment descriptions explicitly identify the speech demonstration's
+  synthesised audio and substitute rule, and the robot demonstration's
+  substitute layout and planner. Those disclosures are useful evidence of
+  distinguishing an illustration from the original project; they do not
+  independently establish the accuracy of the underlying claims.
+- The conclusion's answer is chiefly that the author is still learning,
+  followed by a reference to the experiences covered. An editorial review
+  could recommend synthesising the Data, Model, System lessons into a more
+  direct answer to the opening question, using only confirmed facts.
+- The HTML contains chapter links, CV and email links, a skip link and
+  no-JavaScript styling. Their presence is observable; their usability and
+  viewport placement have not been established by this inspection.
+
+Recommendation, not yet accepted: support an explicit review path that
+inspects the existing work, records strengths and problems with evidence,
+marks untested behavior, and prioritises improvements. Clarify the intended
+audience when it would change the advice. An evaluation request alone does
+not authorise a redesign. Separate general portfolio usefulness from fit
+with Storyfolio's particular long-scroll, one-object 3D form. A portfolio
+without that form is not automatically defective.
+
+Before adding instructions, run one focused review-only experiment against
+a fictional portfolio with frozen evidence and known issues. Observe what
+the current agent gets wrong, save that run in `evals/runs/`, then add only
+guidance justified by an actual failure and repeat the affected case.
+Review quality needs its own criteria; the existing harness disables web
+search and its rubric judges plans, so its scores do not validate live
+website audits. Frozen evidence can test critique, while browser inspection
+would need separate capability coverage. The author's paper portfolio is
+already the skill's originating example, so it is useful for a walkthrough
+but weak independent evidence of generalisation. No new fixture, paid run,
+skill edit or website change was made for this capability review.
+
+Verification: `node evals/check-skill.mjs` passes at 687 main words and four
+references, and `git diff --check` passes. The sandboxed `npm test` failed
+its Git-dependent measurement test file; the approved rerun outside the
+sandbox passed all 48 tests. Only this handover was changed.
+
 ## Accepted improvements implemented and evaluated
 
 On 10 October 2026 the author said: "yes, I like your recommendations.
