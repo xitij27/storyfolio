@@ -46,6 +46,20 @@ and its linked findings.
 
 ## Current directions and open work
 
+The author has now asked to improve the skill by evaluating the supplied
+`portfolio-website-steve` checkout. The active, bounded pilot is
+[the Steve review plan](superpowers/plans/2026-10-11-steve-review-pilot.md).
+It takes priority over creating the previously proposed fictional first
+case. A snapshot of thirteen allowlisted real source/assets files and
+source context is saved under `evals/reviews/steve-source/`, outside the
+fictional people collection. The source HEAD is
+`9a5603d51463eb2564f8b5a117b2242678c660b1`; its modified lockfile is preserved,
+and its untracked `Profile.pdf` stays unopened. A one-turn current-skill
+review comes before any instruction change. Product source/runtime review
+observations stay separate from the fixed source-only skill experiment.
+This real person's source and assets need review before any public release
+of Storyfolio, in addition to the existing publication checklist.
+
 1. The author accepted a separate existing-portfolio review direction,
    with feedback before redesign and general usefulness distinguished
    from Storyfolio's particular form. The [design](superpowers/specs/2026-10-10-existing-portfolio-review.md)

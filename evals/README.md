@@ -13,7 +13,7 @@ archive, not the workflow for new runs. The
 [complete former runbook](../docs/history/2026-10-10-evals-readme.md)
 preserves its original commands, results and explanations.
 
-## What a conversation tests
+## What a planning conversation tests
 
 A fictional person asks a fresh agent to plan a portfolio, without building
 it. The same three messages are sent regardless of the agent's response:
@@ -169,6 +169,41 @@ standard report without `--baseline` shows only the selected iteration.
 matched skill-before/skill-after comparison. Use a focused study's manifest
 and comparison for that purpose. Do not pool different providers, models,
 fixtures, rubric versions, reratings or selected subsets into a success rate.
+
+## Single-turn existing-portfolio review pilot
+
+`review-run.mjs` evaluates one review request against an allowlisted local
+source snapshot. This is separate from the three-turn planning protocol
+and its scores. The first real case is `reviews/steve-source/case.json`;
+it is not a fictional person and does not belong under `people/`.
+
+The case supplies an exact request, material root, relative file allowlist,
+criteria path and source provenance. A cohort freezes source bytes, skill,
+request, criteria, implementation and capability settings. Only material
+and the skill enter the agent workspace. Use a fresh cohort name:
+
+```bash
+node evals/review-run.mjs --case evals/reviews/steve-source/case.json --cohort codex-new-review-1 --invocation natural --rep 1 --dry
+node evals/review-run.mjs --case evals/reviews/steve-source/case.json --cohort codex-new-review-1 --invocation natural --rep 1 --prepare
+node evals/review-run.mjs --case evals/reviews/steve-source/case.json --cohort codex-new-review-1 --invocation natural --rep 1
+```
+
+Dry/prepare make no model calls; the last command spends model usage. All
+three inspect the installed Codex version and may need outer-sandbox
+escalation. Explicit invocation appends a skill request and is a separately
+labelled diagnostic, not evidence of automatic discovery.
+
+The runner preserves raw events, replies, generated files and changed or
+deleted source bytes. Completed outputs are verified and preserved; changed
+inputs require a new cohort. Failed runs remain in place and a deliberate
+retry needs a new repetition. Manually assess review criteria and source
+claims, saving findings beside the cohort. Do not use `report.mjs` or either
+planning judge for these reviews. The agent has no network/browser tools;
+the runner is not GitHub acquisition or a live browser audit. Independent
+runtime observations must remain separate from a fixed source-only test.
+
+The active scope and run budget are in
+[the Steve pilot plan](../docs/superpowers/plans/2026-10-11-steve-review-pilot.md).
 
 ## Optional diagnostic rubric v2
 

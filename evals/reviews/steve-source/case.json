@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "steve-source",
+  "request": "Evaluate this existing portfolio using the local repository snapshot in material/repo/ and the source context in material/source-context.md. Tell me what works and what I should improve first. I want feedback on the existing site, not a rebuild. Save your review in docs/story/review.md.",
+  "materialRoot": "evals/reviews/steve-source/material",
+  "files": [
+    "repo/README.md",
+    "repo/package.json",
+    "repo/package-lock.json",
+    "repo/index.html",
+    "repo/src/main.js",
+    "repo/src/scan-figure.js",
+    "repo/src/style.css",
+    "repo/docs/medical-ai-design-plan.md",
+    "repo/public/favicon.svg",
+    "repo/public/robots.txt",
+    "repo/public/sitemap.xml",
+    "repo/public/images/steve-nyami.jpg",
+    "repo/public/images/steve-nyami-portrait.jpg",
+    "source-context.md"
+  ],
+  "criteria": "evals/prompts/review-criteria.md",
+  "provenance": {
+    "sourceKind": "local-checkout-snapshot",
+    "sourcePath": "/home/kshitij/projects/portfolio-website-steve",
+    "head": "9a5603d51463eb2564f8b5a117b2242678c660b1",
+    "branch": "main",
+    "status": "M package-lock.json\n?? Profile.pdf",
+    "reviewedFiles": [
+      {
+        "path": "repo/README.md",
+        "sha256": "e1f2e41728d7c894473c13eda5e9d257dc8597b78b7f95505961f5f24c297f76",
+        "bytes": 3472
+      },
+      {
+        "path": "repo/package.json",
+        "sha256": "3b45009407c39fc69f4b8c0e7c74e383540d8fecc4dc7968c3736d36b27c2f64",
+        "bytes": 240
+      },
+      {
+        "path": "repo/package-lock.json",
+        "sha256": "0b60183ec1ccab626dff1765223bfef0d9a3b9e541848079ad27dac565a2ceda",
+        "bytes": 24979
+      },
+      {
+        "path": "repo/index.html",
+        "sha256": "034c1f6249293825a7a280c8d2aec77f444770969dff2ab0553d934edbbe055e",
+        "bytes": 38037
+      },
+      {
+        "path": "repo/src/main.js",
+        "sha256": "44ee490184cec8857cb8f6c95121610a57a7a66f53cefcec1af99333b0e2716a",
+        "bytes": 2626
+      },
+      {
+        "path": "repo/src/scan-figure.js",
+        "sha256": "61f1d662b4f05a4ef8fee8010f43b717528c9c6c736bb0f9cbcfbb01e7f90af2",
+        "bytes": 30489
+      },
+      {
+        "path": "repo/src/style.css",
+        "sha256": "c482983df363b64a4873267e625f6b608a539481b30fbb6682fa760f5c6102be",
+        "bytes": 35799
+      },
+      {
+        "path": "repo/docs/medical-ai-design-plan.md",
+        "sha256": "7c708f23156e90354ec6c32747bbb9a650d3d55fa57c5e5f84fee1d3b59f2694",
+        "bytes": 17528
+      },
+      {
+        "path": "repo/public/favicon.svg",
+        "sha256": "c35b5e1ebb7b146bbaf3de2cde3238d9599361e9b37ac042a8c991e7fc3467fd",
+        "bytes": 305
+      },
+      {
+        "path": "repo/public/robots.txt",
+        "sha256": "0cbd4a1fd4efb3571e13ceaab684d76209f7cff1ef22337066c40edf10a107d1",
+        "bytes": 76
+      },
+      {
+        "path": "repo/public/sitemap.xml",
+        "sha256": "1244b9cf39d4ae212b8a15174931e56671eb220dbc968c1f8d5ed087091ad873",
+        "bytes": 174
+      },
+      {
+        "path": "repo/public/images/steve-nyami.jpg",
+        "sha256": "b5b984146eb092b3ee1020927a3876518811ca6488408be911025c1cfd938321",
+        "bytes": 55345
+      },
+      {
+        "path": "repo/public/images/steve-nyami-portrait.jpg",
+        "sha256": "ece5d5e43753487d1bded2329862086a3aaa8044218499ccad63932ba69a64bd",
+        "bytes": 25193
+      }
+    ],
+    "excluded": [
+      "Profile.pdf (untracked, purpose not established, unopened)",
+      "outputs/medical-ai-direction.html (earlier design output, not the active entry point)",
+      "node_modules/ (dependencies, not source evidence)",
+      ".git/ (metadata recorded by coordinator, not copied)"
+    ],
+    "runtime": "No runtime observations supplied to the test agent.",
+    "deployment": "No deployed revision relationship established."
+  }
+}
