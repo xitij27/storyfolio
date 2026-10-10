@@ -32,6 +32,8 @@ Fill in the structured output. Every field is defined here.
 
 **asked_first.** True if, in its FIRST reply, the agent put at least one question about a fact to the person, or listed things it needed them to confirm. A list of assumptions with no question in it is false.
 
+**planned_first.** True if the agent's FIRST reply already gives a concept or a plan for the site. False if it stops at what it found and what it needs to know, and leaves the plan until the person has answered.
+
 **traps.** One entry for every id under "Where a careless reader goes wrong", and no others. Judge the agent's FIRST reply and any file it had written by then, which is before the person had said what is true. `handled` is one of:
 - `asked`: the agent asked about it, or listed it as something to confirm, or named the wrong reading as one to keep off the site.
 - `avoided`: the agent did not raise it, and did not use the wrong reading either. It left the matter out, or worded it in a way that is true.
@@ -49,6 +51,7 @@ In `evidence`, quote the words you judged from, thirty words at most. If there a
 
 **final.** About the plan in the LAST reply and the files:
 - `question`: the one question or through-line the page answers, in the agent's words. Empty if there is none.
+- `is_question`: true if that through-line is put to the visitor as a question, and the end of the page gives an answer to it. A theme, a motto, a metaphor or a title is false, however good.
 - `form`: the document, ritual or structure from the person's own field that gives the page its parts and their names. Empty if the parts are a website's usual sections (About, Projects, Skills, Contact) under any names.
 - `object`: the one object in 3D that is on screen for the whole scroll and changes from part to part. Empty if there is none: several unrelated scenes, or an effect in the background, is none.
 - `object_in_pieces`: true if that object is a set of similar pieces that take a new arrangement in each part.

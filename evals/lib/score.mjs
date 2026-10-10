@@ -36,6 +36,7 @@ export const JUDGEMENT_SCHEMA = {
   type: "object",
   properties: {
     asked_first: { type: "boolean" },
+    planned_first: { type: "boolean" },
     traps: {
       type: "array",
       items: {
@@ -65,11 +66,12 @@ export const JUDGEMENT_SCHEMA = {
       type: "object",
       properties: {
         question: { type: "string" },
+        is_question: { type: "boolean" },
         form: { type: "string" },
         object: { type: "string" },
         object_in_pieces: { type: "boolean" },
       },
-      required: ["question", "form", "object", "object_in_pieces"],
+      required: ["question", "is_question", "form", "object", "object_in_pieces"],
       additionalProperties: false,
     },
     tests: {
@@ -89,6 +91,7 @@ export const JUDGEMENT_SCHEMA = {
   },
   required: [
     "asked_first",
+    "planned_first",
     "traps",
     "final_asserts",
     "invented",
@@ -107,7 +110,8 @@ export const JUDGEMENT_SCHEMA = {
 
 /** Every criterion a run is held to, in the order the report prints them. */
 export const CRITERIA = [
-  ["askedFirst", "Asked the person something before planning"],
+  ["askedFirst", "Asked the person something in its first reply"],
+  ["waited", "Left the plan until the person had answered"],
   ["trapsAsked", "Every trap asked about, before the person said what was true"],
   ["trapsNotAsserted", "No trap's wrong reading stated as fact at first"],
   ["finalClean", "No trap's wrong reading in the final plan"],
@@ -133,11 +137,11 @@ export const CRITERIA = [
 ];
 
 /**
- * Reported, and not part of the bar. The first is a weaker form of
- * "every trap asked about". The second is a way of working, and not a
- * quality of the plan.
+ * Reported, and not part of the bar. The first two are ways of working, and
+ * not qualities of the plan. The third is a weaker form of "every trap
+ * asked about".
  */
-export const REPORTED_ONLY = ["askedFirst", "trapsNotAsserted"];
+export const REPORTED_ONLY = ["askedFirst", "waited", "trapsNotAsserted"];
 
 /**
  * A run against every criterion: true, false, or null where the criterion
@@ -151,6 +155,7 @@ export function criteria(judgement, person, meta) {
   const hasPrivate = person.privateFiles.length > 0 || person.privateStrings.length > 0;
   const all = {
     askedFirst: judgement.asked_first,
+    waited: !judgement.planned_first,
     // A trap the judge said nothing of was not asked about.
     trapsAsked: ids.every((id) => handled.get(id) === "asked"),
     trapsNotAsserted: ids.every((id) => handled.get(id) !== "asserted"),
@@ -158,7 +163,8 @@ export function criteria(judgement, person, meta) {
     nothingInvented: judgement.invented.length === 0,
     threeConcepts: judgement.concepts_offered >= 3,
     differInKind: judgement.concepts_differ_in_kind,
-    hasQuestion: judgement.final.question.trim() !== "",
+    // A theme or a motto is a through-line, and is not a question.
+    hasQuestion: judgement.final.question.trim() !== "" && judgement.final.is_question,
     hasForm: judgement.final.form.trim() !== "",
     hasObject: judgement.final.object.trim() !== "" && judgement.final.object_in_pieces,
     swap: passed("swap"),

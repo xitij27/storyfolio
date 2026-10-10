@@ -74,16 +74,17 @@ const out = join(RUNS, args.iteration, args.person, `${args.arm}-${args.rep}`);
 
 /** The person's three messages. */
 async function messages() {
-  const template = (file) => read(join(PROMPTS, file));
-  const second = (await template("turn2.md")).replace("{{truth}}", person.truthText).trim();
+  // A case may have messages of its own, named in its person.json.
+  const template = (file) => read(join(PROMPTS, person.prompts?.[file] ?? `${file}.md`));
+  const second = (await template("turn2")).replace("{{truth}}", () => person.truthText).trim();
   const turn2 =
     person.turn2 === "instead"
       ? person.turn2Text
       : person.turn2 === "truth-and"
         ? `${second}\n\n${person.turn2Text}`
         : second;
-  const first = (args.call ? `/${SKILL}\n\n` : "") + (await template("turn1.md"));
-  return [first, turn2, await template("turn3.md")].map((message) => message.trim() + "\n");
+  const first = (args.call ? `/${SKILL}\n\n` : "") + (await template("turn1"));
+  return [first, turn2, await template("turn3")].map((message) => message.trim() + "\n");
 }
 
 /** Sends one message, and waits for the agent to finish its turn. */

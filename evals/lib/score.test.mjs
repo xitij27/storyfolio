@@ -17,6 +17,7 @@ const fail = { result: "fail", reason: "" };
 /** A judgement of a plan with nothing wrong with it. Tests change one thing. */
 const good = (changes = {}) => ({
   asked_first: true,
+  planned_first: false,
   traps: [
     { id: "one", handled: "asked", evidence: "" },
     { id: "two", handled: "asked", evidence: "" },
@@ -25,7 +26,13 @@ const good = (changes = {}) => ({
   invented: [],
   concepts_offered: 3,
   concepts_differ_in_kind: true,
-  final: { question: "Why?", form: "A job card", object: "Seven parts", object_in_pieces: true },
+  final: {
+    question: "Why?",
+    is_question: true,
+    form: "A job card",
+    object: "Seven parts",
+    object_in_pieces: true,
+  },
   tests: {
     swap: pass,
     backdrop: pass,
@@ -116,6 +123,8 @@ test("each thing the judge reports moves the criterion that is named for it", ()
     [{ concepts_offered: 1 }, "threeConcepts"],
     [{ concepts_differ_in_kind: false }, "differInKind"],
     [{ final: { ...good().final, question: " " } }, "hasQuestion"],
+    // A theme, however good, is not a question for the ending to answer.
+    [{ final: { ...good().final, question: "Teardown", is_question: false } }, "hasQuestion"],
     [{ final: { ...good().final, form: "" } }, "hasForm"],
     [{ final: { ...good().final, object: "" } }, "hasObject"],
     [{ final: { ...good().final, object_in_pieces: false } }, "hasObject"],
@@ -134,6 +143,13 @@ test("each thing the judge reports moves the criterion that is named for it", ()
 test("asking nothing first is reported, and is not in the bar", () => {
   const run = criteria(good({ asked_first: false }), somebody(), clean);
   assert.equal(run.askedFirst, false);
+  assert.equal(meetsBar(run), true);
+});
+
+test("planning before the person has answered is reported, and is not in the bar", () => {
+  const run = criteria(good({ planned_first: true }), somebody(), clean);
+  assert.equal(run.waited, false);
+  assert.equal(criteria(good(), somebody(), clean).waited, true);
   assert.equal(meetsBar(run), true);
 });
 

@@ -10,7 +10,7 @@ import { stat } from "node:fs/promises";
 import { join } from "node:path";
 
 import { CRITERIA } from "./lib/score.mjs";
-import { PEOPLE, peopleIds, read, readJson, walk } from "./lib/files.mjs";
+import { PEOPLE, PROMPTS, peopleIds, read, readJson, walk } from "./lib/files.mjs";
 
 const KEBAB = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const TURN2 = [undefined, "truth", "instead", "truth-and"];
@@ -45,6 +45,13 @@ for (const id of ids) {
     if (!trap.wrong || !trap.truth) say(`trap "${trap.id}" lacks its wrong reading or its truth`);
   }
 
+  // A case may have messages of its own, in place of the three every other case is sent.
+  for (const [turn, file] of Object.entries(person.prompts ?? {})) {
+    if (!["turn1", "turn2", "turn3"].includes(turn)) say(`prompts names "${turn}", which is no message`);
+    const text = await read(join(PROMPTS, String(file))).catch(() => null);
+    if (text === null) say(`its ${turn} is evals/prompts/${file}, which is not there`);
+    else if (turn === "turn2" && !text.includes("{{truth}}")) say(`evals/prompts/${file} has no place for what is true`);
+  }
   if (!TURN2.includes(person.turn2)) say(`turn2 is "${person.turn2}"`);
   if (person.turn2 && person.turn2 !== "truth" && !person.turn2Text) say("turn2 needs turn2Text");
   if (person.exampleConcept !== null && typeof person.exampleConcept !== "string") {
