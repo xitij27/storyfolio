@@ -117,6 +117,10 @@ public release of Storyfolio, alongside the existing publication checklist.
    it, so draft 7 is withdrawn. Current proposal, waiting on the author:
    draft 2 alone, with analyst-hurried run twice as regression coverage for
    that case; draft 1 optional; drafts 3 to 6 not proposed.
+   The [follow-up recommendation](superpowers/plans/2026-10-11-skill-wording-review.md#follow-up-recommendation-11-october-2026)
+   supports that narrow proposal after checking the saved counts and notices.
+   It retains the limits on causal attribution and two-run conclusions.
+   The recommendation itself applies no skill change and starts no runs.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration

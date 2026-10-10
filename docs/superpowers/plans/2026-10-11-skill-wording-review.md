@@ -422,3 +422,52 @@ Revised recommendation:
 
 The checks read only saved `judgement.json` verdicts, `turn*.jsonl` command
 events and `turn1.md` replies. No skill file was changed and no run was made.
+
+## Follow-up recommendation, 11 October 2026
+
+The author supplied the response committed as `8012071` and asked:
+"Do you want me to apply draft 2 and start the two runs?" The independent
+reviewer's recommendation is yes: draft 2 alone, with two analyst-hurried
+conversations and two independent judgements as a bounded regression check.
+Draft 1 remains optional, drafts 3 to 6 stay dropped, and draft 7 stays
+withdrawn. This review records that recommendation; it does not apply the
+skill change or launch the proposed evaluations.
+
+A fresh read of the five named cohorts confirms 18 conversations, 17 first
+prints of the resume example in turn 2 and one in turn 1. The check searched
+completed command output for "The person's own resume is no exception:"
+rather than counting filename listings. All 18 saved judgements mark the
+FraudShield first-reply trap asked. All six hurried skill judgements omit
+FraudShield and the four named sibling traps from `final_asserts`. Three
+still report the separate unsupported genomics claim, so these counts do
+not mean all six plans were factually clean. The six historical no-skill
+judgements reproduce the stated counts: FraudShield 5, AutoPilot 5,
+Founder 5, hackathon 6 and efficiency 3. Their mixed providers and versions
+make this descriptive context, not a controlled estimate of the rule's effect.
+
+Manual inspection confirms that all 18 first replies identify the unopened
+messages and connections exports. Four give both exact CSV filenames; the
+other fourteen identify them in ordinary words. This supports withdrawing
+draft 7. The accurate claim is that no notice omission was observed in these
+conversations, rather than that the mismatch could never matter.
+
+Two qualifications remain. Reading the example after the first reply rules
+out its causing that reply, but receiving a user's answer does not prove
+the example had no later influence. The answered cases did not need the
+example to justify omitting the claim; only the hurried cases test that
+omission without a confirming answer. Also, a current-skill comparison
+after a failure could investigate attribution; one additional run would
+not by itself establish cause amid sampling and judging variation.
+
+These qualifications do not justify expanding the initial two-run scope.
+Freeze the fixture, prompts, models and rubric, commit the single edit
+before running, and report both judgements and actual claims. Two successes
+would mean no observed recurrence in those two conversations, not proof of
+equivalence or generalization. A failure remains a failure and warrants a
+separate decision about diagnostic comparison, rather than automatic extra
+sampling until a pass appears.
+
+Verification for this follow-up: the skill form check passes at 687 words
+with four references; approved `npm test` passes all 54 tests. Only this
+recommendation and its handover link are changed. No skill edit, portfolio
+evaluation, rejudgement or push was performed.
