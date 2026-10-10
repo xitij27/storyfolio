@@ -13,6 +13,13 @@ paid evaluation conversations.
 The proposed behavior is in
 [the review design](../specs/2026-10-10-existing-portfolio-review.md).
 
+The author subsequently clarified that users may provide a GitHub repository
+URL or local checkout, preferably for a deeper review, as well as a deployed
+website URL. This plan incorporates that requirement before any fixture or
+run exists. The first case now uses a frozen repository snapshot. The initial
+conversation count is unchanged; source inspection is evaluated together
+with the original critique question.
+
 ## Outcome and first milestone
 
 An existing-portfolio request produces a useful review with evidence,
@@ -20,9 +27,10 @@ priorities and preserved strengths, without entering the new-site concept
 workflow. The review distinguishes ordinary portfolio quality from the
 benefit of a Storyfolio transformation.
 
-First establish this on one frozen fictional content case. Later establish
-that an agent can collect and interpret browser evidence. Report these as
-different capabilities; passing the first does not complete the second.
+First establish this on one frozen fictional repository case. Later
+establish that an agent can run or browse the existing site and collect and
+interpret browser evidence. Report source review and observed runtime
+behavior separately; passing the first does not complete the second.
 
 ## Constraints confirmed in this repository
 
@@ -51,10 +59,10 @@ Every person, organisation, project and result in it is fictional.
 
 | Proposed file | Contents |
 |---|---|
-| `case.json` | Case/version ID, explicit input allowlist, one user message and evidence scope |
-| `material/portfolio.html` | A conventional portfolio with a clear role, a specific project decision and rationale, and ordinary project navigation |
+| `case.json` | Case/version ID, input kind, explicit input allowlist, one user message, source snapshot identity and evidence scope |
+| `material/repo/` | Frozen small fictional repository: `index.html`, relevant CSS/JavaScript and a setup README. Clear role, a specific project decision and rationale, and ordinary navigation |
 | `material/source-notes.md` | Owner-confirmed contribution and outcome limits |
-| `material/inspection-scope.md` | Supplied HTML/content only; no rendered-browser observations |
+| `material/inspection-scope.md` | Source snapshot only, with file hashes; no local execution or rendered-browser observations |
 | `expected.md` | Judge-only defects, strengths, acceptable interpretations and unknowns |
 
 Seed two defects that can be established without a browser:
@@ -74,7 +82,8 @@ make forced conversion to 3D visibly unnecessary, not make all ordinary
 portfolios look bad.
 
 Use a natural first request along these lines: "Evaluate my existing
-portfolio for service-design hiring managers using the material here.
+portfolio for service-design hiring managers. Its local repository snapshot
+is in material/repo/ and my source notes are beside it.
 Tell me what works and what I should improve first. I want feedback, not
 a rebuild." Do not teach the desired report structure or reveal the defects
 in the request. Pin its exact wording before running.
@@ -91,6 +100,7 @@ behavior and meaning, not particular headings or exact replacement prose:
 | Priorities | The claim and contact problems come before cosmetic preferences |
 | Actionability | Priority findings explain an improvement and how to verify it |
 | Inspection honesty | No invented browser, mobile, performance or accessibility results |
+| Source attribution | Findings cite relevant files/lines and distinguish inspected source from an unobserved deployed site |
 | Format independence | Lack of 3D is not a defect; suitability is assessed separately |
 
 Do not require an exact ranking between the two defects. A short, reasoned
@@ -103,6 +113,12 @@ planning scores.
 
 Deliverable: a committed case and criteria, with an offline check proving
 the contact mismatch and source discrepancy are present. No skill changes.
+
+Label the case `repo-snapshot`: its fixture commit and file hashes identify
+the content. Do not invent a standalone repository HEAD for a directory
+inside this repository. This case tests source interpretation, not GitHub
+authentication, cloning or browser setup. Preserve URL-only support in the
+input design without adding a paid duplicate of the same critique case.
 
 ## 2. Add the smallest isolated review runner, then observe the current skill
 
@@ -126,6 +142,23 @@ Before a paid call, save under `evals/runs/codex-review-before-1/`:
 - Judge-only expectations outside the agent's copied material.
 - After execution, raw events, replies, written artifacts, attempted site
   writes, completion/error state, usage and command evidence of skill reads.
+
+Give the review input loader explicit source kinds: deployed URL, GitHub
+repository/ref, local checkout and frozen repo snapshot. For real source
+reviews record the resolved commit plus relevant working-tree edits and
+untracked files, with hashes of the inspected content. Keep deployed URL,
+source revision and local runtime identity separate in the manifest.
+Do not automatically update, clean, reset or checkout another revision in
+the user's existing working tree. A remote clone belongs in a separate
+review workspace. Missing remote access is an acquisition limit, not a
+critique failure.
+
+Use offline acquisition tests with a disposable local Git repository to
+verify revision recording, dirty-file snapshotting and preservation of the
+original checkout. Test WSL path conversion separately: only resolve a UNC
+path into the current distribution's Linux path after checking that the
+distribution and directory match. A GitHub URL's live access remains a
+separate setup check; an offline test does not establish authentication.
 
 Copy only allowlisted material and the current skill into the isolated
 agent workspace. Use the established external-workspace isolation pattern;
@@ -217,13 +250,21 @@ after the first review if no change is needed. Manual review assessment uses
 no separate judge subprocess. Add automated review judging only when repeated
 studies justify it, with a separate calibrated rubric and preserved scores.
 
-## 4. Validate inspection before claiming live-site review
+## 4. Validate local and deployed runtime inspection
 
-The frozen-content milestone can deliver content feedback. To complete the
-URL use case, first inventory browser tools actually available in the target
+The frozen-source milestone can deliver content and implementation feedback.
+To complete runtime review, first inventory browser tools available in the target
 environment. Do not enable network or browser tools globally in the existing
 planning runner. Choose an explicit browser-capable review configuration and
 record it. No browser package or integration is assumed installed by this plan.
+
+For repository input, inspect project guidance and setup scripts, resolve the
+documented package manager and lockfile, and run the existing app in an
+isolated review copy when feasible. Capture install/build/start/check results
+only for commands actually executed; choose checks relevant to the findings.
+Do not read secrets to make the app start. If required access or dependencies
+are unavailable, complete the supported source review and record the runtime
+limit. Local preview behavior and deployed behavior have separate provenance.
 
 Extend a versioned fictional local site with an independently observable
 mobile layout defect and a harmless interactive/3D example explaining a
@@ -245,8 +286,18 @@ repeat student coverage if shared routing or instructions changed. Those
 conditional calls require a newly recorded bounded study, not automatic
 retries within the two-session experiment.
 
-Finally walk through the author's supplied site using the available browser
-and save the actual review and evidence in this repository. Inspect opening,
+Finally walk through the author's supplied examples using available source
+and runtime evidence, saving the actual review and evidence in this repository.
+The WSL paths supplied are recorded in the current handover and resolve here
+to `/home/kshitij/projects/portfolio-website` and
+`/home/kshitij/projects/portfolio-website-steve`. Both directories and Git
+metadata entries were confirmed present on 10 October 2026; their contents
+have not been inspected for this planning amendment. Select one repository
+for the first walkthrough; the second is an available follow-up example,
+not an automatic extra paid cohort. Do not infer its ownership, design or
+relationship to the first from its directory name. If the original deployed
+URL is used alongside source, verify the version relationship or mark it
+unknown. Inspect opening,
 representative middle content and conclusion on desktop and mobile, the
 visitor's route to proof/contact, keyboard navigation, reduced motion, and
 fallbacks where tools can exercise them. Mark anything not exercised as
@@ -257,7 +308,7 @@ Live-review completion requires observed browser evidence, correct limitation
 reporting in the unavailable-browser case, and a useful author-site report.
 The author walkthrough demonstrates practical usefulness, not independent
 generalisation. If browser access remains unavailable, ship/report only the
-content-review milestone and leave live review explicitly incomplete.
+source/content-review milestone and leave runtime review explicitly incomplete.
 
 ## Verification, review and handover
 
@@ -300,3 +351,23 @@ words and four references; `npm test` passes all 48 tests with approved
 Git-subprocess access; `git diff --check` passes. The new design and plan
 contain no em dashes. The separate documentation-organization plan was
 present before this task and is not part of this change.
+
+### Repository input amendment
+
+The author added GitHub URLs and local clones as richer review inputs after
+the original plan was committed. The unexecuted first case is now a frozen
+repository snapshot, retaining the two seeded defects and original run
+counts. Source capture/acquisition checks are offline; browser tests cover
+local previews as well as deployed pages. An independent read-only review
+confirmed this keeps the experiment small while separating source evidence
+from runtime and deployment claims.
+
+The exact two supplied WSL paths and their Linux equivalents are recorded
+in `docs/handover.md`. Both directories and Git metadata entries exist; no
+example source was opened or modified. This amendment updates only the
+design, implementation plan, plan index and handover. No clone, install,
+new fixture, skill edit or paid evaluation was performed.
+
+Amendment verification: `node evals/check-skill.mjs` passes at 687 main
+words and four references, `npm test` passes all 48 tests with approved
+Git-subprocess access, and `git diff --check` passes.

@@ -13,9 +13,53 @@ format. Establish an observed failure before adding a skill instruction,
 then repeat the affected test after the change.
 
 The author supplied `https://xitij27.vercel.app` as an example. Its prior
-HTML inspection is recorded in `docs/handover.md`. It is also the portfolio
+HTML inspection is recorded in the archived handover linked from
+`docs/handover.md`. It is also the portfolio
 from which the skill originated, so it is a practical walkthrough rather
 than independent evidence of generalisation.
+
+The author then clarified that a GitHub repository link or local clone
+should be accepted, and can support a better evaluation than the deployed
+URL alone. Repository input is part of the first milestone, not a future
+optional extension. This adds evidence sources to the same review path.
+
+## Inputs and inspection depth
+
+| Input | Review evidence available |
+|---|---|
+| Deployed website URL | Served content and visitor behavior where browsing tools can observe it |
+| GitHub repository URL, optionally with a branch or commit | Accessible source at a resolved revision, relevant documentation and assets; a local preview when it can be run |
+| Local repository path | Source and the current working tree, relevant documentation and assets; a local preview when it can be run |
+| Repository plus deployed URL | Implementation evidence together with the actual visitor experience, with their versions distinguished |
+
+Prefer the richer supplied evidence. Repository plus a running site gives
+the most complete review; a deployed URL alone remains a supported input.
+For a GitHub link, inspect or clone into a review workspace using available
+access and record the resolved commit. For a local path, resolve the path,
+read project guidance and inventory files before selecting relevant sources.
+Start from active entry points, routes, content and components; inspect
+styling, assets, motion/fallback logic, build scripts and tests where they
+explain the visitor experience. Avoid reading unrelated private material or
+credential files. A repository is not blanket permission to read every file.
+
+Record the source revision and reviewed-file hashes. For a local checkout,
+also record whether inspected content includes tracked edits or untracked
+files; HEAD alone does not identify a dirty working tree. Tie source findings
+to file/line locations and the active route/component that uses them.
+Documentation and unused code are not proof of rendered behavior.
+
+Run an existing app locally when supported by its documented setup and
+available tooling. Keep generated files in a separate review workspace where
+practical and preserve the supplied working tree. Record actual commands,
+outcomes and the source snapshot used. Missing dependencies or credentials
+limit runtime review; do not turn them into invented website defects.
+Running the existing app for observation is distinct from implementing or
+redesigning a portfolio.
+
+If source and deployment cannot be matched, label findings by source: local
+checkout, local preview or deployed URL. Neither an apparent fix in source
+nor a passing local check proves the deployed version has it. Repository
+content also does not independently verify personal claims or asset rights.
 
 ## Intended behavior
 
@@ -37,7 +81,8 @@ support without declaring it independently verified.
 
 The proposed review contains:
 
-1. Scope: sources, date, audience, environments and states actually inspected.
+1. Scope: sources, date, audience, source revisions/working-tree scope,
+   environments and states actually inspected.
 2. Strengths: specific things to preserve and why they help the visitor.
 3. Prioritised findings: location, evidence, visitor impact, recommended
    improvement and a way to verify the improvement.
@@ -89,10 +134,11 @@ from the main skill. Change the trigger-only description only if the
 discovery experiment establishes a need. Retain the existing shared factual
 rules and creation references unless a saved failure requires an edit.
 
-The first milestone validates critique of frozen content. Live-site review
-remains a separate milestone requiring actual browser evidence. Neither
-milestone implies building, deployment, privacy enforcement or a general
-security audit.
+The first milestone validates critique of frozen repository content and
+source evidence. Runtime review remains a separate milestone requiring
+actual browser evidence from a local preview or deployed site. Neither
+milestone implements a new site, deploys changes, enforces privacy or
+constitutes a general security audit.
 
 Implementation sequence and completion gates:
 [the implementation plan](../plans/2026-10-10-existing-portfolio-review.md).

@@ -51,8 +51,11 @@ and its linked findings.
    from Storyfolio's particular form. The [design](superpowers/specs/2026-10-10-existing-portfolio-review.md)
    and [implementation plan](superpowers/plans/2026-10-10-existing-portfolio-review.md)
    are prepared; the review runner, fixture, skill path and evaluations have
-   not been implemented. The first milestone is frozen content review.
-   Browser inspection is a later milestone, and the author's own site is
+   not been implemented. The author clarified that GitHub repository URLs
+   and local checkouts should be accepted for deeper evaluation. The first
+   milestone now reviews a frozen fictional repository snapshot, including
+   content and source evidence. Local-preview/deployed browser inspection
+   is a later milestone, and the author's own site is
    a walkthrough rather than independent evaluation evidence.
 2. Creative consistency and the author's assessment of which concepts are
    worth building remain open. The richer physics example provides a
@@ -85,8 +88,36 @@ wording and context remain linked, including earlier pauses and reversals.
 | More technical, engineering, STEM and academic coverage | The collection has seventeen cases for twelve fictional people. [Coverage record](history/2026-10-10-handover.md#completed-comparison-broader-technical-and-academic-coverage). |
 | "yes, I like your recommendations. Let us implement them" | Five workstreams completed within scope; only two storyboard paragraphs were the latest direct skill changes. [Completion record](history/2026-10-10-handover.md#accepted-improvements-implemented-and-evaluated). |
 | Existing-portfolio review direction accepted | A detailed implementation is proposed, not executed. [Accepted direction](history/2026-10-10-handover.md#existing-portfolio-review-direction-accepted-implementation-planned). |
+| Repository input for deeper portfolio evaluation | Accept GitHub repository URLs and local checkouts alongside deployed URLs. Source, local runtime and deployed evidence have separate provenance. Exact examples and planning update are recorded below. |
 | Better organization "without losing any details and information"; then "yes lets get it done" | Implement the documentation proposal with verbatim archives and evidence preservation. [Migration plan](superpowers/plans/2026-10-10-documentation-organization.md). |
 | Commit on main; push only on the author's word | Preserve the exact date-scoped push direction in [AGENTS.md](../AGENTS.md). This documentation migration does not need a push or publication. |
+
+### Repository input clarification
+
+On 10 October 2026 the author said: "To evaluate existing portfolio websites,
+the user can provide a link but a better evaluation would be to provide the
+github repo link or the cloned repo locally." They supplied these examples:
+
+| Supplied WSL path | Linux path in this environment |
+|---|---|
+| `\\wsl.localhost\Ubuntu\home\kshitij\projects\portfolio-website` | `/home/kshitij/projects/portfolio-website` |
+| `\\wsl.localhost\Ubuntu\home\kshitij\projects\portfolio-website-steve` | `/home/kshitij/projects/portfolio-website-steve` |
+
+Both Linux directories and their Git metadata entries exist. Only those
+existence checks were performed; no project contents, Git history, source
+quality or relationship to a deployment were examined. These are future
+walkthrough inputs, not an instruction to evaluate or modify both now.
+
+The review design and plan now include source file/line evidence, source
+revision and working-tree provenance, and running an existing app locally
+when feasible. Repository plus observed runtime is the richest input;
+source alone does not establish deployed behavior or verify personal claims.
+The first unexecuted case becomes a frozen fictional repository snapshot
+with the same two defects, keeping the initial paid run count unchanged.
+Offline acquisition checks cover source capture and working-tree preservation;
+GitHub access and browser execution remain distinct capabilities to verify.
+No skill change, evaluation run, clone, dependency installation or example
+repository change was made for this planning amendment.
 
 ## Start the next session
 
