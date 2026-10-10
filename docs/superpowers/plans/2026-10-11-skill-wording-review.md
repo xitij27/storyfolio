@@ -358,3 +358,67 @@ during verification and was left untouched.
 - No skill evaluation conversations or judgements were started. Local
   checks validate repository integrity, not the effectiveness of a rewrite.
 - Record this work on `main`; no push is part of the author's request.
+
+## Response to the assessment, 11 October 2026
+
+The author passed the assessment above back to the conversation that wrote
+the review. That conversation accepts these corrections: the ambiguity in point 1
+was overstated; point 2 is a matter of taste with no evidence behind it; the
+"earlier exchange" in point 4 is not a conflict, since an unclear file can
+be asked about among the first-stop questions; point 6 misdescribes the
+history, since privacy, opening clarity and closing meaning are not fact
+guards; the quotation called "first version" is from `e178be2`; draft 4's
+example is about a profession where the saved failure was about a field of
+work; a worse result after draft 2 would be a failure and is not excused in
+advance; codex-sol-2 is no control for today's skill; and draft 7's target
+did not pass.
+
+Two checks of the saved runs, made after the assessment, weaken findings
+that both the review and the assessment accepted.
+
+**The example reached fewer results than the review said.** The skill has
+not changed since `b85d014`. Of the 18 saved Codex analyst-family runs with
+the skill that have conversation logs (codex-sol-1, codex-sol-2,
+codex-privacy-1, codex-premise-1 and codex-closing-1), the agent first ran
+a command that printed `asking.md` in turn 2 in 17, and in turn 1 in one
+(`codex-sol-2/analyst-hurried/with-1`). So the first-reply question about
+FraudShield, asked in all 18, came before the example was read in all but
+one. In the analyst and analyst-overstate cases the person answers that
+question, so their final plans do not rest on the example. What it could
+have cued is the final plan of the six analyst-hurried runs, all of which
+leave FraudShield's "real-time" out. Without the skill, the same case's
+final plan asserts it in 5 of 6 runs (run 1, codex-1 and codex-sol-1). The
+six skill runs also leave out the sibling traps that `asking.md` does not
+name in words (`autopilot-is-a-script`, `founder-title`,
+`hackathon-was-a-team`, `efficiency-35-unmeasured`). The six no-skill runs
+assert them 5, 5, 6 and 3 times. That fits the rule working beyond its example. It is not evidence of
+generalisation: the general list in the same sentence ("a figure whose
+meaning you do not know, a project you cannot say ever ran, a paper you
+cannot say they wrote, a title you cannot say is theirs") was also written
+against this case.
+
+**The unopened-files inconsistency has not cost anything.** In every saved
+Codex skill conversation that left a private file unopened, the same 18
+analyst-family conversations, the first reply names the file. The PhD runs read their private file,
+so no notice was due. AGENTS.md says what an agent already does well is left
+out, so draft 7 is withdrawn.
+
+Revised recommendation:
+
+- **Draft 2 only.** Its question is narrow: without the named answer, does
+  the analyst-hurried final plan still leave unconfirmed resume wording out?
+  It needs the case it was written for, analyst-hurried, twice: 2
+  conversations and 2 judgements. The conclusion is regression coverage for
+  that case only. Any unsupported claim in the result is recorded as a
+  failure. Attribution would need a current-skill arm as well, since
+  analyst-hurried last ran on `94faf60` and `storyboard.md` has changed since;
+  that is worth paying for only if the result fails.
+- **Draft 1** is optional editing. codex-sol-2 shows agents read and applied
+  the current wording, so it waits for a cohort that has another reason to
+  run its cases.
+- **Drafts 3 to 6** are not proposed. **Draft 7** is withdrawn.
+- Generalisation needs a fixture the wording was not written against, as
+  the assessment says. That is a separate experiment.
+
+The checks read only saved `judgement.json` verdicts, `turn*.jsonl` command
+events and `turn1.md` replies. No skill file was changed and no run was made.

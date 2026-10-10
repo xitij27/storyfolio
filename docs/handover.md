@@ -96,12 +96,8 @@ public release of Storyfolio, alongside the existing publication checklist.
 5. On 11 October 2026 the author asked whether the skill is well written.
    The review and seven drafted rewrites are in
    [the wording review](superpowers/plans/2026-10-11-skill-wording-review.md);
-   none is applied and no run was made. One finding matters whatever is
-   decided about the rest: `asking.md` names the answer to the analyst
-   fixtures' scored `fraudshield-not-real-time` trap, so analyst results on
-   that trap since `e178be2` partly test whether the agent read it. The
-   recommended first step is drafts 1 and 2, with eight runs matching
-   codex-sol-2.
+   none is applied and no run was made. It found that `asking.md` names the
+   answer to the analyst fixtures' scored `fraudshield-not-real-time` trap.
    The author's subsequent request to validate that review is recorded in
    [the independent assessment](superpowers/plans/2026-10-11-skill-wording-review.md#independent-assessment-11-october-2026).
    It confirms the example overlap and an inconsistent first-reply list,
@@ -113,6 +109,14 @@ public release of Storyfolio, alongside the existing publication checklist.
    change, with a specific evaluation question first. No rewrite or model
    evaluation was made; local checks passed, including all 54 tests after
    approved execution outside the sandbox.
+   [The response](superpowers/plans/2026-10-11-skill-wording-review.md#response-to-the-assessment-11-october-2026)
+   accepts those corrections and narrows two findings from saved runs. The
+   example was first printed after the first reply in 17 of 18 logged
+   analyst conversations, and could have cued only the six analyst-hurried
+   final plans. Every first reply that left a private file unopened names
+   it, so draft 7 is withdrawn. Current proposal, waiting on the author:
+   draft 2 alone, with analyst-hurried run twice as regression coverage for
+   that case; draft 1 optional; drafts 3 to 6 not proposed.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
