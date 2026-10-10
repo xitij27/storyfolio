@@ -62,6 +62,23 @@ See OpenAI's [skills guide](https://developers.openai.com/api/docs/guides/tools-
 and its guide to [packaging skills as plugins](https://developers.openai.com/plugins/build/plugins)
 for other Codex and ChatGPT distribution options.
 
+### Claude Code
+
+Claude Code discovers project skills in `.claude/skills/`. Clone this
+repository, then copy the skill into the target portfolio project:
+
+```bash
+git clone https://github.com/xitij27/storyfolio.git
+cd /path/to/your-portfolio-project
+mkdir -p .claude/skills
+cp -R /path/to/storyfolio/skills/storyfolio .claude/skills/storyfolio
+claude
+```
+
+In Claude Code, invoke the skill with `/storyfolio`, then provide the profile
+material and ask it to begin with the factual review. Start a new session
+after copying the skill so Claude Code discovers it.
+
 ### Other Agent Skills clients
 
 The skill follows the open Agent Skills layout: a `SKILL.md` file with related
