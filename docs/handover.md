@@ -1,5 +1,33 @@
 # Handover
 
+## Current work: broader technical and academic coverage
+
+On 10 October 2026 the author asked: "For the tests and evals, I'd like to
+see more for tech, engineering, STEM or academia related roles".
+
+Added six fictional profiles: `backend`, `ml`, `embedded`, `mechanical`,
+`physicist` and `phd`. They cover software, ML, electronics, mechanical
+design, experimental physics and computational biology academia. The
+collection now has sixteen cases for twelve people. Each new case has four
+traps; three use terse prompts and the PhD case includes private records.
+This expansion leaves the old fixtures, skill and rubric alone.
+
+The plan is `docs/superpowers/plans/2026-10-10-stem-coverage.md`. The initial
+question is how the current method transfers to these roles, especially
+claim scope, research status and individual contribution. `codex-stem-1`
+will hold one conversation per new case per arm, with Sol medium agents and
+Astra medium judges. This is an exploratory comparison of twelve
+conversations, not a repeat of the older batch or a stable per-role score.
+Results and reviewed concepts will be saved with that iteration.
+
+Another session is concurrently running the label-source refinement below.
+Preserve its work and record the actual skill commit used by this new
+cohort. Use explicit case lists for historical cohorts: unfiltered runners
+now select sixteen cases. `evals/README.md` documents both lists.
+
+Before running models, all sixteen fixtures, the skill form (687 words,
+four references), all four test-file subtests and the whitespace check pass.
+
 ## In progress: source checks for labels and summaries
 
 On 10 October 2026 the author replied "yes" to the diagnosed next change.

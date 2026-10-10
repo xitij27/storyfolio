@@ -40,6 +40,47 @@ this heuristic is ambiguous. These measurements are not identical to the
 old Claude tool events. The Codex comparison measures with versus without
 the current skill, not the isolated effect of the five round 2 changes.
 
+## Technical and academic coverage
+
+The collection now has sixteen cases representing twelve fictional people.
+The original ten cases remain unchanged. Six new profiles broaden the
+platform engineer, data analyst and engineering student coverage:
+
+| Case | Role | Main distinctions to preserve |
+|---|---|---|
+| `backend` | Backend software engineer | Replay benchmarks, team delivery, open-source credit, internal traces |
+| `ml` | Machine learning engineer | Offline versus deployed, overall accuracy versus rare-defect recall, submission status |
+| `embedded` | Embedded electronics engineer | Battery projection, firmware contribution, preliminary tests, engineering samples |
+| `mechanical` | Mechanical design engineer | Simulation, fit-check model, patent application, drawing permissions |
+| `physicist` | Experimental physics postdoc | Calibration versus discovery, consortium credit, preprints, grant role |
+| `phd` | Computational biology doctoral candidate | Degree status, authorship, association versus causation, teaching scope, private records |
+
+Backend, embedded and PhD use the existing terse messages, which do not
+request device fallbacks or list the other site requirements. Every new
+profile has four factual traps and a separate truth sheet. None prescribes
+a particular object or concept. All people, institutions, employers,
+products and records in these fixtures are fictional.
+
+The first comparison uses a separate iteration, one repetition per arm:
+
+```bash
+node evals/check-people.mjs
+node evals/codex-run-all.mjs --iteration codex-stem-1 --arm without --reps 1 --people backend,ml,embedded,mechanical,physicist,phd
+node evals/codex-run-all.mjs --iteration codex-stem-1 --arm with --reps 1 --people backend,ml,embedded,mechanical,physicist,phd
+node evals/codex-judge.mjs --iteration codex-stem-1
+node evals/report.mjs --iteration codex-stem-1
+```
+
+This is exploratory coverage, not a stable estimate of performance by
+profession. Do not pool it with `codex-sol-1` or use that older cohort as its
+baseline. This expansion does not edit the rubric or skill. Run metadata
+records the actual skill commit, including concurrent refinements.
+
+**An unfiltered runner selects all current fixtures.** To reproduce the
+original ten-case cohort, pass
+`--people analyst,analyst-hurried,analyst-overstate,architect,chef,chef-terse,nurse,reliability,student,student-terse`
+explicitly. Do not extend a completed historical iteration by accident.
+
 ## Historical Claude workflow
 
 How the skill is tested: a made-up person asks a fresh agent for a portfolio,
