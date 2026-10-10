@@ -4,15 +4,19 @@
 
 On 10 October 2026 the author asked to use Codex and not Claude Code. Use
 these commands for new runs. The Claude commands below document iteration 1
-only. The skill is unchanged. A new `codex-1` comparison runs ten people
-twice in each arm on `gpt-6-astra`, medium reasoning, followed by independent
-Codex judging with the same rubric.
+only. The skill is unchanged. The main `codex-sol-1` comparison runs ten
+people twice in each arm on `gpt-6.1-sol`, medium reasoning, followed by
+independent `gpt-6-astra` judging at medium reasoning with the same rubric.
+An earlier partial Astra-only experiment remains in `codex-1`. Do not mix
+its results with the Sol comparison. The author questioned using the same
+flagship model for both roles, so the main experiment now matches the
+original workhorse-agent / stronger-judge design.
 
 ```bash
-node evals/codex-run-all.mjs --iteration codex-1 --arm without --reps 2
-node evals/codex-run-all.mjs --iteration codex-1 --arm with --reps 2
-node evals/codex-judge.mjs --iteration codex-1
-node evals/report.mjs --iteration codex-1
+node evals/codex-run-all.mjs --iteration codex-sol-1 --arm without --reps 2
+node evals/codex-run-all.mjs --iteration codex-sol-1 --arm with --reps 2
+node evals/codex-judge.mjs --iteration codex-sol-1
+node evals/report.mjs --iteration codex-sol-1
 ```
 
 Validate one conversation and judgement before the full batch. The runners

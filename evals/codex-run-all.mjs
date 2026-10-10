@@ -5,7 +5,7 @@ import { parseArgs } from "node:util";
 import { ROOT, RUNS, peopleIds, readJson } from "./lib/files.mjs";
 import { MODEL } from "./lib/codex.mjs";
 const { values: args } = parseArgs({ options: {
-  iteration: { type: "string", default: "codex-1" }, arm: { type: "string" },
+  iteration: { type: "string", default: "codex-sol-1" }, arm: { type: "string" },
   reps: { type: "string", default: "2" }, people: { type: "string" },
   model: { type: "string", default: MODEL }, jobs: { type: "string", default: "3" },
 } });

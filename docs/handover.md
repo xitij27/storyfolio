@@ -2,6 +2,16 @@
 
 ## Current direction: Codex only
 
+The author then asked which models were running and whether equivalents of
+Sonnet and Opus would be better. The initial Astra-only choice matched the
+local configuration but did not preserve the original model roles. The main
+experiment is now `codex-sol-1`: `gpt-6.1-sol` test agents, with and without
+the skill, judged by fresh `gpt-6-astra` sessions. Both use medium reasoning.
+The partial Astra-only `codex-1` experiment is preserved separately. Its
+coordinators were stopped from queuing more conversations while active
+conversations were allowed to save their results. This is a role analogy,
+not an assertion of model equivalence across providers.
+
 On 10 October 2026, after asking to continue the tests, the author said:
 "Why cant you use codex to run the tests? please dont use claude code".
 They approved adapting the harness and making a separate Codex baseline

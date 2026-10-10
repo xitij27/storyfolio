@@ -5,7 +5,8 @@ import { join, dirname } from "node:path";
 import { walk } from "./files.mjs";
 import { parseStream } from "./events.mjs";
 
-export const MODEL = "gpt-6-astra";
+export const MODEL = "gpt-6.1-sol";
+export const JUDGE_MODEL = "gpt-6-astra";
 export const EFFORT = "medium";
 
 export async function disabledSkills() {

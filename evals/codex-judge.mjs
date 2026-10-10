@@ -2,12 +2,13 @@
 import { mkdir, mkdtemp, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { MODEL, EFFORT, disabledSkills, invokeCodex, summariseCodex } from "./lib/codex.mjs";
+import { JUDGE_MODEL, EFFORT, disabledSkills, invokeCodex, summariseCodex } from "./lib/codex.mjs";
 import { JUDGEMENT_SCHEMA } from "./lib/score.mjs";
 import { PEOPLE, PROMPTS, RUNS, WORK, loadPerson, read, readJson, walk } from "./lib/files.mjs";
 
 const { values: args } = parseArgs({ options: {
-  iteration: { type: "string", default: "codex-1" }, model: { type: "string", default: MODEL },
+  iteration: { type: "string", default: "codex-sol-1" }, model: { type: "string", default: JUDGE_MODEL },
+  people: { type: "string" },
 } });
 if (!/^[\w-]+$/.test(args.iteration)) throw new Error("Invalid iteration");
 const fenced = value => `~~~~\n${value.trim()}\n~~~~`;
@@ -41,6 +42,7 @@ const waiting = [];
 const base = join(RUNS, args.iteration);
 for (const entry of await readdir(base, { withFileTypes: true })) {
   if (!entry.isDirectory() || entry.name === "attempts") continue;
+  if (args.people && !args.people.split(",").includes(entry.name)) continue;
   for (const run of await readdir(join(base, entry.name))) {
     const dir = join(base, entry.name, run);
     const meta = await readJson(join(dir, "meta.json")).catch(() => null);

@@ -9,7 +9,7 @@ import { leaked } from "./lib/events.mjs";
 
 const { values: args } = parseArgs({ options: {
   person: { type: "string" }, arm: { type: "string" },
-  iteration: { type: "string", default: "codex-1" },
+  iteration: { type: "string", default: "codex-sol-1" },
   rep: { type: "string", default: "1" }, model: { type: "string", default: MODEL },
 } });
 if (!args.person || !["with", "without"].includes(args.arm) || !/^[\w-]+$/.test(args.iteration) || !/^\d+$/.test(args.rep)) throw new Error("Supply --person ID --arm with|without, a safe iteration and integer rep");

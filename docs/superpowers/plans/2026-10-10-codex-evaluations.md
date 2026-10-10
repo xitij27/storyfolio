@@ -1,5 +1,21 @@
 # Codex evaluation migration
 
+## Model-role correction
+
+After the first Astra runs, the author asked whether equivalents of Sonnet
+and Opus would be better. Yes: a workhorse test agent and stronger judge
+better preserve the original experiment. The main comparison now uses
+`gpt-6.1-sol` for both test arms and `gpt-6-astra` for judging, all at medium
+reasoning, in `evals/runs/codex-sol-1/`. The Astra coordinators were stopped
+from scheduling more work; active conversations may finish. Preserve their
+results in `codex-1` as separate stronger-model evidence. Do not pool the two
+models or compare Sol with an Astra baseline.
+
+This is a mapping of model roles, not a claim of equivalent capabilities
+across vendors. It follows the current
+[official model guide](https://developers.openai.com/api/docs/models).
+The initial implementation notes below explain why Astra was originally used.
+
 The author asked to stop using Claude Code and approved a separate Codex
 comparison, with and without the skill. Preserve iteration 1 as historical
 Claude evidence. Do not launch its runners. No skill wording changes are
