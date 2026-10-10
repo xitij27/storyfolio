@@ -32,10 +32,20 @@ and `docs/design-directions.md` are where the method was learned, and its
 `docs/project-notes.md`, under "A skill for making sites like this one", has
 what the author asked for, word for word.
 
-**This repository is on this machine only.** It has no remote and has never
-been pushed. A session on another account can use it if it is opened in this
-folder: `/home/kshitij-parashar/Downloads/projects/storyfolio`. On another
-machine it does not exist until the folder is copied there.
+**Where it is.** On this machine in
+`/home/kshitij-parashar/Downloads/projects/storyfolio`, and on GitHub as
+`xitij27/storyfolio`, a private repository, pushed for the first time on 10
+October 2026 on the author's word ("push it to remote"). A session on
+another account, or another machine, starts from a clone of that. Each later
+push needs the author's word.
+
+**Before it is ever made public,** which is the author's to do: take the raw
+streams out, `evals/runs/*/*/*/turn*.jsonl`. They are what the command
+printed, and they hold this machine's paths, the names of its folders, and
+how much of the account's usage was spent at the time. Nothing in the
+repository is a key or a password: it was searched for them before the first
+push. This file and the design also speak of the author's own site and of how
+they like to work, which they may not want read by everyone.
 
 ## Where stage 1 stands
 
@@ -338,6 +348,12 @@ On 10 October 2026, each from choices shown to them:
    that if this does not work out, I can put them in another accounts
    session?" This file is that. A little later: "Okay, now you can continue
    with the work here."
+8. Having been given the counts and the six concepts: "okay push it to remote
+   and continue with our work here". So the repository was pushed, as a
+   private one, since they did not say public and private can be undone. And
+   the tasks that were waiting for their word, 8 and 9, are carried out. An
+   assistant's reading of "continue with our work": they have not said it of
+   those two tasks by name.
 
 How they like to work, from the portfolio's handover: they decide by seeing
 and not from descriptions, they say yes in a word, they read a short summary

@@ -36,7 +36,10 @@ by one object in 3D. Read `docs/handover.md` before working on it.
 
 # Rules that hold throughout
 
-- Commit on `main`. Do not push: publishing is the author's to do.
+- Commit on `main`. Push to `origin` only when the author says so: they did
+  on 10 October 2026, and each push since needs their word again.
+- The repository on GitHub is private. Making it public is the author's to
+  do, and `docs/handover.md` says what has to come out of it first.
 - The people in `evals/people/` are made up. No real person, employer or
   product is described in them.
 - No em dashes in the skill or in these files. A comma, a colon, a full stop
