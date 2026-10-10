@@ -392,6 +392,10 @@ On 10 October 2026, each from choices shown to them:
    the tasks that were waiting for their word, 8 and 9, are carried out. An
    assistant's reading of "continue with our work": they have not said it of
    those two tasks by name.
+9. Told that 95% of the account's usage for the week was spent and that the
+   next batch of runs could not finish on what was left, and asked where it
+   should be made: "Other account, I'll start it". So this session stopped
+   there, with round 2's changes made and pushed and its runs not begun.
 
 How they like to work, from the portfolio's handover: they decide by seeing
 and not from descriptions, they say yes in a word, they read a short summary
@@ -479,10 +483,18 @@ same list.
 
 Open it in this folder. Say:
 
-> Read `docs/handover.md` and `AGENTS.md`. Stage 1 of the skill is built and
-> tested once. Tell me in a few lines what the test showed, then wait for me
-> to say whether to do the rounds of fixing (task 8), the check on the
-> stronger model (task 9), or go on to planning stage 2.
+> Read `docs/handover.md` and `AGENTS.md`. Round 2's changes to the skill are
+> made and no run has tested them. Carry out what the handover gives under
+> "B. Task 8": make the batch of runs, have it judged, write the report, and
+> write "Round 2" into the findings. Then tell me in a few lines what moved
+> against the first test, and stop.
+
+On this machine the folder is already there, and nothing has to be cloned.
+Anywhere else: `git clone https://github.com/xitij27/storyfolio.git`, which
+needs the author's GitHub login, since the repository is private. It needs
+Node 20.9 or later and Claude Code's command line, `claude`, signed in to the
+account whose usage the runs are to be spent from. The runs are made by that
+command, so they are counted against whoever it is signed in as.
 
 A session's own working notes for the plan, if it was carried out with the
 `superpowers` plugin, are in `.superpowers/sdd/`, which git ignores. Nothing
