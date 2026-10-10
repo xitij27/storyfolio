@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Answer the author's 11 October 2026 question about portfolio token consumption using already preserved evidence.",
+  "scope": "One source-only portfolio review and six completed three-turn new-portfolio planning conversations. No website implementation, independent browser inspection, judge calls, orchestration or this audit work is included.",
+  "method": {
+    "usageSource": "The single turn.completed usage event in each raw turn JSONL, checked against its duplicate meta.json entry.",
+    "aggregation": "One final counter per resumed conversation, from turn3.jsonl. Earlier turn counters and metadata copies are not added.",
+    "interpretation": "For planning, the runner resumes the same session ID for all three turns and every saved usage field is nondecreasing. This supports a cumulative-counter interpretation, but neither the repository adapter nor the documentation checked establishes the scope of resumed-session usage. Planning statistics are raw final-per-conversation-counter values, provisional when interpreted as full conversation consumption. The single-turn review has no resumed-turn ambiguity.",
+    "inputPlusOutputTokens": "input_tokens + output_tokens",
+    "uncachedInputTokens": "input_tokens - cached_input_tokens",
+    "cachedInputTokens": "Reported separately as a subset of input; not added again to total.",
+    "reasoningOutputTokens": "Preserved as a reported subfield; not added again to output.",
+    "median": "Sort the six per-conversation values; average positions 3 and 4. Each metric is calculated independently, so column medians need not sum.",
+    "money": "No prices or dollar costs inferred. Existing metadata costUsd values are null.",
+    "sampleLimit": "Three fictional cases with two repetitions each, deliberately focused on closing meaning. Descriptive observed usage, not a general forecast or build benchmark."
+  },
+  "measurements": {
+    "sources": [
+      {
+        "path": "evals/codex-run.mjs",
+        "sha256": "4f9dcddce4b138474cf9e0bfac36c7a3a667a6814f37f1f573c1ad4b898e378b",
+        "bytes": 5697
+      },
+      {
+        "path": "evals/lib/codex.mjs",
+        "sha256": "cbb1c19d5382c9012d7b6055044c240a7f78a0eb8eff6c5c9aec85ef22f48308",
+        "bytes": 4127
+      },
+      {
+        "path": "evals/runs/codex-closing-1/findings.md",
+        "sha256": "de740d7fb29807a6da8c2705e3b77667cb4f34a173955d92c66fec8c37dc91ee",
+        "bytes": 5566
+      }
+    ],
+    "review": {
+      "directory": "evals/runs/codex-steve-review-before-1/steve-source/natural-1",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "cliVersion": "codex-cli 0.162.1",
+      "scope": "One source-only review conversation. Independent browser inspection and evaluation development work are excluded.",
+      "meta": {
+        "path": "evals/runs/codex-steve-review-before-1/steve-source/natural-1/meta.json",
+        "sha256": "b691c277da63ea5ee713d8ad4b338f4ad4254299fc227d160baecc5d2ecff0aa",
+        "bytes": 237075
+      },
+      "turn": {
+        "path": "evals/runs/codex-steve-review-before-1/steve-source/natural-1/turn1.jsonl",
+        "sha256": "51f40118eb3c45244ed145714b8b7eb1b5ee2b844213c9b56580af4bc5ff2d3a",
+        "bytes": 235435,
+        "sessionId": "01a127d9-3b49-7f00-8580-93dd718f0ec3",
+        "completedEventLine": 34,
+        "usage": {
+          "input_tokens": 319691,
+          "cached_input_tokens": 277376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3972,
+          "reasoning_output_tokens": 207
+        }
+      },
+      "finalCounterMetrics": {
+        "inputTokens": 319691,
+        "cachedInputTokens": 277376,
+        "uncachedInputTokens": 42315,
+        "outputTokens": 3972,
+        "inputPlusOutputTokens": 323663,
+        "reasoningOutputTokens": 207
+      }
+    },
+    "runs": [
+      {
+        "directory": "evals/runs/codex-closing-1/analyst/with-1",
+        "person": "analyst",
+        "repetition": 1,
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium",
+        "cliVersion": "codex-cli 0.162.1",
+        "skill": {
+          "commit": "b85d014",
+          "uncommitted": false
+        },
+        "meta": {
+          "path": "evals/runs/codex-closing-1/analyst/with-1/meta.json",
+          "sha256": "f28ed40a9b9ed6c03a0cfd65de424d98dff18a91398764719a5c25a728bfccc3",
+          "bytes": 90782
+        },
+        "turns": [
+          {
+            "path": "evals/runs/codex-closing-1/analyst/with-1/turn1.jsonl",
+            "sha256": "6906f7d23546ed4a1b1db02468e1226ddf583d9de8a85c122e2730131cf24c5e",
+            "bytes": 21338,
+            "sessionId": "01a12797-1211-7651-9b82-1509c3aedf6b",
+            "completedEventLine": 19,
+            "usage": {
+              "input_tokens": 69496,
+              "cached_input_tokens": 60800,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 3348,
+              "reasoning_output_tokens": 65
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst/with-1/turn2.jsonl",
+            "sha256": "8d34c3cca2b23d5752c76d5d508427a4034ea25b608a01f2783d49f220265ef7",
+            "bytes": 42811,
+            "sessionId": "01a12797-1211-7651-9b82-1509c3aedf6b",
+            "completedEventLine": 22,
+            "usage": {
+              "input_tokens": 306501,
+              "cached_input_tokens": 278272,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 13294,
+              "reasoning_output_tokens": 462
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst/with-1/turn3.jsonl",
+            "sha256": "1ade736c23c9b0d9b0f387fe26da27fb838419a043f10ae6fb09503a354cf44f",
+            "bytes": 28916,
+            "sessionId": "01a12797-1211-7651-9b82-1509c3aedf6b",
+            "completedEventLine": 9,
+            "usage": {
+              "input_tokens": 422349,
+              "cached_input_tokens": 388352,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 16874,
+              "reasoning_output_tokens": 552
+            }
+          }
+        ],
+        "finalCounterMetrics": {
+          "inputTokens": 422349,
+          "cachedInputTokens": 388352,
+          "uncachedInputTokens": 33997,
+          "outputTokens": 16874,
+          "inputPlusOutputTokens": 439223,
+          "reasoningOutputTokens": 552
+        }
+      },
+      {
+        "directory": "evals/runs/codex-closing-1/analyst/with-2",
+        "person": "analyst",
+        "repetition": 2,
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium",
+        "cliVersion": "codex-cli 0.162.1",
+        "skill": {
+          "commit": "b85d014",
+          "uncommitted": false
+        },
+        "meta": {
+          "path": "evals/runs/codex-closing-1/analyst/with-2/meta.json",
+          "sha256": "6c2140211e3f04488f42bf635902b4cdfa7d078e0e55df61c806a944d3639c04",
+          "bytes": 60593
+        },
+        "turns": [
+          {
+            "path": "evals/runs/codex-closing-1/analyst/with-2/turn1.jsonl",
+            "sha256": "33f9e4b62680d6394923d1a041a0349176064f692c9393ec5d8c24f37a787f26",
+            "bytes": 20604,
+            "sessionId": "01a12797-1210-7850-84f1-77f5ffcc751b",
+            "completedEventLine": 17,
+            "usage": {
+              "input_tokens": 54441,
+              "cached_input_tokens": 36992,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 3227,
+              "reasoning_output_tokens": 144
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst/with-2/turn2.jsonl",
+            "sha256": "eeca73c3b2e45f1b2e143279c58fe64f7d4d97f04453e20540a3f1fabb991e2b",
+            "bytes": 24603,
+            "sessionId": "01a12797-1210-7850-84f1-77f5ffcc751b",
+            "completedEventLine": 16,
+            "usage": {
+              "input_tokens": 171737,
+              "cached_input_tokens": 139136,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 14409,
+              "reasoning_output_tokens": 744
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst/with-2/turn3.jsonl",
+            "sha256": "feedabe835d16692e45c3b4e8fa81ea2967e044f0d012df6c8a1f4a0fd2cedca",
+            "bytes": 15990,
+            "sessionId": "01a12797-1210-7850-84f1-77f5ffcc751b",
+            "completedEventLine": 7,
+            "usage": {
+              "input_tokens": 238126,
+              "cached_input_tokens": 202624,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 18046,
+              "reasoning_output_tokens": 842
+            }
+          }
+        ],
+        "finalCounterMetrics": {
+          "inputTokens": 238126,
+          "cachedInputTokens": 202624,
+          "uncachedInputTokens": 35502,
+          "outputTokens": 18046,
+          "inputPlusOutputTokens": 256172,
+          "reasoningOutputTokens": 842
+        }
+      },
+      {
+        "directory": "evals/runs/codex-closing-1/analyst-overstate/with-1",
+        "person": "analyst-overstate",
+        "repetition": 1,
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium",
+        "cliVersion": "codex-cli 0.162.1",
+        "skill": {
+          "commit": "b85d014",
+          "uncommitted": false
+        },
+        "meta": {
+          "path": "evals/runs/codex-closing-1/analyst-overstate/with-1/meta.json",
+          "sha256": "2f5b8700462c2b1bb3962a0799e0266c93bab913af4f3ffb6a9ef92583a4cbb6",
+          "bytes": 69849
+        },
+        "turns": [
+          {
+            "path": "evals/runs/codex-closing-1/analyst-overstate/with-1/turn1.jsonl",
+            "sha256": "de612feeecb4905d68aacbc6aeb5151cd36a6a969ae93c5fd547fd5685e9d984",
+            "bytes": 19156,
+            "sessionId": "01a12797-1210-7bf3-88f1-20f92bf95d0b",
+            "completedEventLine": 15,
+            "usage": {
+              "input_tokens": 53492,
+              "cached_input_tokens": 36736,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 2537,
+              "reasoning_output_tokens": 46
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst-overstate/with-1/turn2.jsonl",
+            "sha256": "0e02939812007f5d8a63aa3c82f30db95c1a6f265f8a326d78e7f1bf4c1f8ec2",
+            "bytes": 22091,
+            "sessionId": "01a12797-1210-7bf3-88f1-20f92bf95d0b",
+            "completedEventLine": 12,
+            "usage": {
+              "input_tokens": 142842,
+              "cached_input_tokens": 113920,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 10379,
+              "reasoning_output_tokens": 318
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst-overstate/with-1/turn3.jsonl",
+            "sha256": "86d3916cb92647c0334ed7e6aaa306f499814f4e944794ea94a1278a8f3ba8a1",
+            "bytes": 28527,
+            "sessionId": "01a12797-1210-7bf3-88f1-20f92bf95d0b",
+            "completedEventLine": 9,
+            "usage": {
+              "input_tokens": 235777,
+              "cached_input_tokens": 201216,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 13561,
+              "reasoning_output_tokens": 380
+            }
+          }
+        ],
+        "finalCounterMetrics": {
+          "inputTokens": 235777,
+          "cachedInputTokens": 201216,
+          "uncachedInputTokens": 34561,
+          "outputTokens": 13561,
+          "inputPlusOutputTokens": 249338,
+          "reasoningOutputTokens": 380
+        }
+      },
+      {
+        "directory": "evals/runs/codex-closing-1/analyst-overstate/with-2",
+        "person": "analyst-overstate",
+        "repetition": 2,
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium",
+        "cliVersion": "codex-cli 0.162.1",
+        "skill": {
+          "commit": "b85d014",
+          "uncommitted": false
+        },
+        "meta": {
+          "path": "evals/runs/codex-closing-1/analyst-overstate/with-2/meta.json",
+          "sha256": "cf3454da616cd9d693dfd6189b5268d6777be68a1cdc6ca12f3631dc996575fa",
+          "bytes": 75473
+        },
+        "turns": [
+          {
+            "path": "evals/runs/codex-closing-1/analyst-overstate/with-2/turn1.jsonl",
+            "sha256": "5e5d8dabf6f223a4f95d75d592d079aaea2a2d5d69df1f4ef59578f01eee0557",
+            "bytes": 21342,
+            "sessionId": "01a1279c-526b-7be0-8368-270319d72d18",
+            "completedEventLine": 19,
+            "usage": {
+              "input_tokens": 55128,
+              "cached_input_tokens": 37120,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 3720,
+              "reasoning_output_tokens": 236
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst-overstate/with-2/turn2.jsonl",
+            "sha256": "cf17d07f4256942170375c73d1de34a50c89af2159aefa58e459bc8202cc1334",
+            "bytes": 32705,
+            "sessionId": "01a1279c-526b-7be0-8368-270319d72d18",
+            "completedEventLine": 16,
+            "usage": {
+              "input_tokens": 173239,
+              "cached_input_tokens": 123264,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 12349,
+              "reasoning_output_tokens": 791
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/analyst-overstate/with-2/turn3.jsonl",
+            "sha256": "23b319208cbc9e19d3e165b866f41749d43baa4e72c956255e18cdc02e0e74fa",
+            "bytes": 27715,
+            "sessionId": "01a1279c-526b-7be0-8368-270319d72d18",
+            "completedEventLine": 9,
+            "usage": {
+              "input_tokens": 274938,
+              "cached_input_tokens": 205568,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 16745,
+              "reasoning_output_tokens": 1097
+            }
+          }
+        ],
+        "finalCounterMetrics": {
+          "inputTokens": 274938,
+          "cachedInputTokens": 205568,
+          "uncachedInputTokens": 69370,
+          "outputTokens": 16745,
+          "inputPlusOutputTokens": 291683,
+          "reasoningOutputTokens": 1097
+        }
+      },
+      {
+        "directory": "evals/runs/codex-closing-1/student/with-1",
+        "person": "student",
+        "repetition": 1,
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium",
+        "cliVersion": "codex-cli 0.162.1",
+        "skill": {
+          "commit": "b85d014",
+          "uncommitted": false
+        },
+        "meta": {
+          "path": "evals/runs/codex-closing-1/student/with-1/meta.json",
+          "sha256": "c6c3417e2b61c40278e17b64dfaa9c8a732184f0801588ec4ea4e11db5a3def1",
+          "bytes": 77569
+        },
+        "turns": [
+          {
+            "path": "evals/runs/codex-closing-1/student/with-1/turn1.jsonl",
+            "sha256": "ba1fc14985c81fc0b8656709982c6a17f973d85b34963d187dcbe75369995b09",
+            "bytes": 17505,
+            "sessionId": "01a1279d-84ee-7b40-9b3d-91f286cc6a5f",
+            "completedEventLine": 17,
+            "usage": {
+              "input_tokens": 53020,
+              "cached_input_tokens": 36480,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 2735,
+              "reasoning_output_tokens": 85
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/student/with-1/turn2.jsonl",
+            "sha256": "28b022b99c8dff092a4e249a34fa9ddfa84571a2cbb239d9ed2e726204c26436",
+            "bytes": 31811,
+            "sessionId": "01a1279d-84ee-7b40-9b3d-91f286cc6a5f",
+            "completedEventLine": 22,
+            "usage": {
+              "input_tokens": 249257,
+              "cached_input_tokens": 217216,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 12130,
+              "reasoning_output_tokens": 515
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/student/with-1/turn3.jsonl",
+            "sha256": "4854a6f4d98494175a21b772a2b6c20825b71896f7deb909edaa4c62c89a02c5",
+            "bytes": 31383,
+            "sessionId": "01a1279d-84ee-7b40-9b3d-91f286cc6a5f",
+            "completedEventLine": 9,
+            "usage": {
+              "input_tokens": 351637,
+              "cached_input_tokens": 313472,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 15426,
+              "reasoning_output_tokens": 660
+            }
+          }
+        ],
+        "finalCounterMetrics": {
+          "inputTokens": 351637,
+          "cachedInputTokens": 313472,
+          "uncachedInputTokens": 38165,
+          "outputTokens": 15426,
+          "inputPlusOutputTokens": 367063,
+          "reasoningOutputTokens": 660
+        }
+      },
+      {
+        "directory": "evals/runs/codex-closing-1/student/with-2",
+        "person": "student",
+        "repetition": 2,
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "medium",
+        "cliVersion": "codex-cli 0.162.1",
+        "skill": {
+          "commit": "b85d014",
+          "uncommitted": false
+        },
+        "meta": {
+          "path": "evals/runs/codex-closing-1/student/with-2/meta.json",
+          "sha256": "14a85925eeccdabc9e5cdbb954e9659757c30b983ba1bb4bd50cb6b115464942",
+          "bytes": 74515
+        },
+        "turns": [
+          {
+            "path": "evals/runs/codex-closing-1/student/with-2/turn1.jsonl",
+            "sha256": "756a21ddbe66a5f0d59bc239ae1e25ae2e480dc73ac104dfb37e25fc0e895e35",
+            "bytes": 18126,
+            "sessionId": "01a1279d-c38c-7af2-a571-a00aedb5abf4",
+            "completedEventLine": 17,
+            "usage": {
+              "input_tokens": 53106,
+              "cached_input_tokens": 33664,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 2798,
+              "reasoning_output_tokens": 93
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/student/with-2/turn2.jsonl",
+            "sha256": "6869098800ad6969fd6b91c0a3b897b425dcde506f5a30f627c9252e670aea9d",
+            "bytes": 29311,
+            "sessionId": "01a1279d-c38c-7af2-a571-a00aedb5abf4",
+            "completedEventLine": 16,
+            "usage": {
+              "input_tokens": 140161,
+              "cached_input_tokens": 97664,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 10139,
+              "reasoning_output_tokens": 491
+            }
+          },
+          {
+            "path": "evals/runs/codex-closing-1/student/with-2/turn3.jsonl",
+            "sha256": "5adb432f8ed3da66ad2e30ea7bfac61e99c460a793ca80bd31da93e564b9f905",
+            "bytes": 29408,
+            "sessionId": "01a1279d-c38c-7af2-a571-a00aedb5abf4",
+            "completedEventLine": 9,
+            "usage": {
+              "input_tokens": 235136,
+              "cached_input_tokens": 186752,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 13515,
+              "reasoning_output_tokens": 529
+            }
+          }
+        ],
+        "finalCounterMetrics": {
+          "inputTokens": 235136,
+          "cachedInputTokens": 186752,
+          "uncachedInputTokens": 48384,
+          "outputTokens": 13515,
+          "inputPlusOutputTokens": 248651,
+          "reasoningOutputTokens": 529
+        }
+      }
+    ],
+    "summary": {
+      "sampleSize": 6,
+      "distinctCases": 3,
+      "recordedTurnsPerConversation": 3,
+      "finalCounterMetrics": {
+        "inputTokens": {
+          "min": 235136,
+          "median": 256532,
+          "max": 422349,
+          "sum": 1757963
+        },
+        "cachedInputTokens": {
+          "min": 186752,
+          "median": 204096,
+          "max": 388352,
+          "sum": 1497984
+        },
+        "uncachedInputTokens": {
+          "min": 33997,
+          "median": 36833.5,
+          "max": 69370,
+          "sum": 259979
+        },
+        "outputTokens": {
+          "min": 13515,
+          "median": 16085.5,
+          "max": 18046,
+          "sum": 94167
+        },
+        "inputPlusOutputTokens": {
+          "min": 248651,
+          "median": 273927.5,
+          "max": 439223,
+          "sum": 1852130
+        },
+        "reasoningOutputTokens": {
+          "min": 380,
+          "median": 606,
+          "max": 1097,
+          "sum": 4060
+        }
+      }
+    }
+  }
+}

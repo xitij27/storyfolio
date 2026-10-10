@@ -35,6 +35,7 @@ its review criteria and independent runtime observations are separate.
 | [codex-privacy-enforcement-1](#codex-privacy-enforcement-1-shell-access-probes-complete-prototype) | Deterministic probes, complete prototype |
 | [codex-steve-review-before-1](#codex-steve-review-before-1-real-repository-review-complete) | One natural source-only review, complete |
 | [codex-steve-review-observations-1](#codex-steve-review-observations-1-independent-product-review-complete) | Source and local browser observations, complete |
+| [codex-token-usage-audit-1](#codex-token-usage-audit-1-saved-usage-audit-complete) | Offline token accounting, complete with scope limits |
 
 ## Cases and comparison rules
 
@@ -422,6 +423,22 @@ Evidence: [combined review](runs/codex-steve-review-observations-1/review.md),
 [source preservation](runs/codex-steve-review-observations-1/source-preservation.json).
 The ignored runtime directory contains a disposable app copy and dependencies;
 observations and reproduction evidence are tracked outside it.
+
+### `codex-token-usage-audit-1`: saved usage audit, complete
+
+An offline answer to the author's 11 October question about review and
+new-build token consumption. Steve's single source-only review records
+319,691 input (277,376 cached) and 3,972 output tokens. Six current-skill
+planning conversations have final input-plus-output counters from 248,651
+to 439,223, median 273,927.5. Planning resume-counter scope is not fully
+established; the audit preserves final counters and does not sum readings
+from resumed turns. This is no full-build budget, invoice, representative
+cost estimate or accounting of surrounding coordinator/subagent work.
+
+No new portfolio conversations or judgements were started. Existing
+artifacts are unchanged. Evidence: [findings](runs/codex-token-usage-audit-1/findings.md)
+and [hashed source counters](runs/codex-token-usage-audit-1/audit.json).
+Offline verifier: `node evals/runs/codex-token-usage-audit-1/verify.mjs`.
 
 ## Preservation when checking evidence
 
