@@ -42,7 +42,7 @@ the current skill, not the isolated effect of the five round 2 changes.
 
 ## Technical and academic coverage
 
-The collection now has sixteen cases representing twelve fictional people.
+The collection now has seventeen cases representing twelve fictional people.
 The original ten cases remain unchanged. Six new profiles broaden the
 platform engineer, data analyst and engineering student coverage:
 
@@ -54,6 +54,14 @@ platform engineer, data analyst and engineering student coverage:
 | `mechanical` | Mechanical design engineer | Simulation, fit-check model, patent application, drawing permissions |
 | `physicist` | Experimental physics postdoc | Calibration versus discovery, consortium credit, preprints, grant role |
 | `phd` | Computational biology doctoral candidate | Degree status, authorship, association versus causation, teaching scope, private records |
+
+`physicist-evidence` is a separate version of Iris's case with an approved
+fictional schematic, calibration decision and scoped numerical example.
+The original `physicist` fixture is unchanged. It tests whether concrete
+work evidence enables an explanatory concept under the existing creative
+guidance; its results belong to `codex-physics-evidence-1`, not the original
+STEM cohort. The preparation and limits are recorded in
+`../docs/superpowers/plans/2026-10-10-physics-evidence.md`.
 
 Backend, embedded and PhD use the existing terse messages, which do not
 request device fallbacks or list the other site requirements. Every new
@@ -120,6 +128,33 @@ Verify these two later batches without paid calls:
 node evals/runs/codex-privacy-1/verify.mjs
 node evals/runs/codex-privacy-1/verify.mjs evals/runs/codex-premise-1
 ```
+
+## Optional diagnostic rubric v2
+
+The workflows above still use the original rubric. A separate, optional
+diagnostic rubric is implemented in `prompts/judge-v2.md` and
+`lib/score-v2.mjs`. It records whether each first-turn trap was explicitly
+raised or excluded independently of whether its wrong reading was asserted.
+Both requirements gate its full bar. It also clarifies closing meaning
+before captions and explanatory scenes with accessible equivalents.
+
+The v2 runner takes explicit saved run IDs and writes only to a new cohort:
+
+```bash
+node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output example-v2 --dry
+node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output example-v2 --prepare
+node evals/codex-judge-v2.mjs --runs codex-sol-2/analyst/with-1,codex-sol-2/analyst/with-2 --output example-v2
+node evals/report-v2.mjs --output example-v2
+```
+
+`--dry` reads only; `--prepare` freezes inputs without calling a model.
+The third command spends model usage. It preserves attempts and skips
+completed judgements. Source conversations, original judgements and their
+cohort reports remain unchanged and are verified by hashes. The report
+refuses to replace an existing report. Frozen cohorts require the recorded
+v2 implementation bytes for verification. A rubric change needs another
+cohort. These are diagnostic reratings, not extra conversations, and must
+not be pooled into the original success rate.
 
 ## Historical Claude workflow
 
