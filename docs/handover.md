@@ -1,5 +1,101 @@
 # Handover
 
+## Recommendations after reviewing the completed results
+
+On 10 October 2026 the author asked: "okay so now we have the test results.
+Is it possible to improve the skill in any way? give recommendations".
+This is a recommendation review, not an instruction to implement the
+candidates or start another paid batch. The skill, fixtures, rubric and saved
+judgements remain unchanged.
+
+The original Codex comparison passes the full bar in 12/20 skill runs
+against 0/20 baselines. The separate STEM comparison passes in 3/6 against
+0/6. Those results support the method, but concern earlier skill versions.
+The latest premise cohort is factually clean in all four final plans and
+passes the full bar in none. These differently selected cohorts must not be
+pooled or treated as a trend in general success rates. The recent factual
+refinements remain provisional.
+
+Recommended improvements:
+
+1. **Treat private-file access as an enforcement problem.** Both PhD agents
+   in `evals/runs/codex-privacy-1/` read the new rule and still opened the
+   participant export. Investigate an integration that controls which files
+   or tools the agent can access. No specific enforcement mechanism has
+   been validated. Keep the current rule for intent, but do not claim that
+   another wording change establishes protection. Preserve the original
+   failing benchmark; any new enforcement experiment must be labelled
+   separately and check actual reads and attempted reads, not only final
+   output. Removing the private fixture from the old test would not fix it.
+2. **Make the opening understandable outside the profession.** The nurse
+   in `codex-sol-1/nurse/with-2` leaves CNM1 and ISBAR unexplained; the
+   embedded engineer in `codex-stem-1/embedded/with-1` opens with firmware,
+   power-state and fixture terminology. The concept reference asks for an
+   HR-readable question, but the storyboard does not explicitly require a
+   plain account of the person's work across the first screen. A small
+   candidate should specify that meaning and explain necessary terms from
+   confirmed facts, while keeping polished captions deferred. Test nurse,
+   embedded and student cases, checking both clarity and factual restraint.
+3. **Specify the closing answer before final copy.** The requirement to
+   answer the opening question already exists. The output format should
+   distinguish the meaning of that answer and its supporting facts from
+   its eventual wording. `codex-sol-2/analyst/with-1` leaves an answer
+   placeholder; `with-2` supplies a supported synthesis. The later
+   `codex-privacy-1/analyst/with-2` again closes on a job objective while
+   deferring the narrative connection. A small storyboard clarification
+   can require an answer meaning plus its factual basis without restoring
+   finished captions. Test analyst and analyst-overstate, with student
+   coverage, for both resolved meaning and new unsupported claims.
+4. **Ground creative improvement in one shareable piece of work.** The
+   physics fixture lacks an actual procedure or schematic; the hurried
+   analyst declines details. The skill already asks for diverse concepts,
+   personal specificity and explanatory 3D. First review a concrete
+   permitted example: what decision was made, what evidence supports it,
+   and what relationship the visitor should understand. Compare that
+   relationship across the proposed concepts, beyond their object names.
+   The backend's repeated-request comparison is a useful saved contrast.
+   Use a separately versioned physics fixture if adding evidence, holding
+   that fixture fixed for any subsequent skill comparison. A plan with
+   insufficient evidence stays provisional; no personal facts are invented
+   to force a distinctive story. Do not ban paper objects or force variety
+   in object materials. Any later creative instruction needs an observed
+   failure after the evidence gap is addressed.
+5. **Clarify measurement before optimising for the total score.** Use the
+   saved closing-answer contrast and the backend/physics contrast to
+   calibrate interpretation. Equivalent accessible HTML does not make 3D
+   decorative. Asking a question and asserting the wrong premise can both
+   happen in one reply, which the current single trap enum cannot express.
+   Consider separate discovery and assertion fields in a versioned future
+   rubric. Preserve the effective safety bar when separating them: the
+   current no-first-assertion measure is report-only, so merely separating
+   the fields could let an asking-and-asserting reply pass. The student's
+   padding miss is deliberate under the current
+   discovery bar: omission is not explicitly raising the risk. It is not
+   evidence of invented testimonials. Report those outcomes separately;
+   do not relabel the old failures or add padding questions solely to raise
+   the score. Any rubric change needs consistent comparison judgements
+   with the original results preserved. Repeated judgements of identical
+   saved prompts changed criterion scores in two of four cases, without
+   changing full-bar outcomes; they are not new portfolio conversations.
+
+For the next skill edit, the opening and closing clarifications are the
+smallest concrete candidates. Investigate privacy enforcement separately,
+and obtain the creative example before another generic wording loop.
+Evaluate each candidate against its saved misses and student coverage.
+Reserve broader validation for a stable candidate; a small change does not
+justify repeating every paid run now. The author's concept review and the
+later built-site proof remain outstanding.
+
+Evidence was reviewed from the current skill and references, the original
+and STEM reports, the privacy and premise findings/comparisons, saved
+storyboards and judgements, `evals/prompts/judge.md`, and
+`evals/runs/codex-creative-review-1/findings.md`. Independent read-only
+reviews checked creative/clarity failures and measurement boundaries.
+No new model evaluation conversation or judgement was launched.
+Local verification passed: `node evals/check-skill.mjs` (687 main words,
+four references), `npm test` (all four test-file subtests) and
+`git diff --check`. This piece of work changes only this handover.
+
 ## Completed ordered follow-up: privacy still fails, premise improves
 
 On 10 October 2026 the author said: "okay then let us proceed with this
