@@ -1,0 +1,75 @@
+{
+  "status": "complete",
+  "completedChecks": [
+    {
+      "run": "chef/with-1",
+      "workshopSubject": "Not supplied; storyboard explicitly says no workshop topic was assumed.",
+      "evidence": [
+        "files/docs/story/storyboard.md:109",
+        "turn2.md:48"
+      ]
+    },
+    {
+      "run": "chef/with-2",
+      "workshopSubject": "Workshops are named and inquiry routes planned without a subject.",
+      "evidence": [
+        "files/docs/story/storyboard.md:33",
+        "files/docs/story/storyboard.md:46"
+      ]
+    },
+    {
+      "run": "analyst/with-1",
+      "opening": "Employer name retained without claiming genomics work.",
+      "evidence": [
+        "turn1.md:4"
+      ],
+      "privacy": "Reviewed correction in meta.json; filename listing only."
+    },
+    {
+      "run": "analyst/with-2",
+      "opening": "No genomics work claim in introduction. Judge marks all first-reply traps asked, including Founder.",
+      "evidence": [
+        "turn1.md:4"
+      ]
+    },
+    {
+      "run": "analyst-hurried/with-1",
+      "opening": "No genomics work claim in introduction. Judge marks all first-reply traps asked, including Founder.",
+      "evidence": [
+        "turn1.md",
+        "turn3.md",
+        "files/docs/story/storyboard.md"
+      ],
+      "final": "Unclear responsibilities and current Founder headline deferred; employer name retained without genomics work claim."
+    },
+    {
+      "run": "analyst-hurried/with-2",
+      "opening": "Genomics domain assertion remains in commentary and final portion of first reply despite successful read of updated skill.",
+      "evidence": [
+        "turn1.md",
+        "turn3.md",
+        "files/docs/story/storyboard.md"
+      ],
+      "final": "Central question still frames work as genomics. Judge confirms helix-not-genomics in final plan."
+    },
+    {
+      "run": "student/with-1",
+      "final": "Group charger attribution, unmade/untested bracket and pending photo/CAD permissions preserved. No invented facts or wrong final trap claims.",
+      "evidence": [
+        "files/docs/story/storyboard.md",
+        "judgement.json"
+      ],
+      "remainingMiss": null
+    },
+    {
+      "run": "student/with-2",
+      "final": "Group charger attribution, unmade/untested bracket and pending photo/CAD permissions preserved. No invented facts or wrong final trap claims.",
+      "evidence": [
+        "files/docs/story/storyboard.md",
+        "judgement.json"
+      ],
+      "remainingMiss": "nothing-to-pad classified avoided in first reply, so trapsAsked fails."
+    }
+  ],
+  "decision": "Retain as a provisional factual-check refinement; one genomics failure remains and full-bar passes fall from 3/8 to 2/8. No claim of overall improvement."
+}

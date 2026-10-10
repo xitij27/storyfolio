@@ -28,7 +28,7 @@ now select sixteen cases. `evals/README.md` documents both lists.
 Before running models, all sixteen fixtures, the skill form (687 words,
 four references), all four test-file subtests and the whitespace check pass.
 
-## In progress: source checks for labels and summaries
+## Completed targeted test: source checks for labels and summaries
 
 On 10 October 2026 the author replied "yes" to the diagnosed next change.
 The focused refinement replaces the sentence-only source check with a check
@@ -37,12 +37,39 @@ including the fact's unanswered questions. It is documented in
 `evals/runs/codex-sol-2/written-against.md` and planned in
 `docs/superpowers/plans/2026-10-10-label-source-check.md`.
 
-The targeted batch is chef, analyst, analyst-hurried and student twice each:
-eight Sol medium conversations and eight Astra medium judgements. Compare
-with the same eight old skill conversations. The rubric and fixtures stay
-fixed. Local checks pass: skill form (687 words), ten fixtures, all four
-test-file subtests, and the skill-creator validator. Next is the paid batch,
-after committing this wording. This is not a full-suite revision result yet.
+The targeted batch completed chef, analyst, analyst-hurried and student twice
+each: eight Sol medium conversations and eight Astra medium judgements. All
+used the same revised skill bytes and unchanged selected fixtures and rubric.
+No conversation or judgement failed or was retried. See
+`evals/runs/codex-sol-2/findings.md` and `comparison.md` for reviewed evidence
+and the comparison against the same eight old skill conversations.
+
+Factual measures improve in this sample: nothing invented 7/8 to 8/8; no
+wrong final claim 6/8 to 7/8; no first-reply assertion 5/8 to 7/8. Both chefs
+leave the workshop subject unspecified. One hurried analyst removes the
+genomics claim, but the other still uses it in the opening and the concept's
+central question despite reading the new rule. Privacy stays 4/4 after
+reviewing and preserving all four conservative filename-listing flags.
+
+The full bar declines from 3/8 to 2/8. Both student plans preserve attribution,
+untested status and asset permissions; repetition 2 fails only because its
+first reply avoids testimonial padding without explicitly raising that trap.
+The chef's concept-diversity miss and the analysts' creative/story misses
+also remain in the scores. Retain this as a provisional factual refinement,
+not a completed fix or demonstrated overall improvement. No favourable
+rejudging, changed rubric or duplicate full batch was used.
+
+The skill is committed at `e485f53`. Six conversations record that commit;
+the two students record concurrent fixture commit `6b05309`. The verifier
+checks that both contain identical skill files, and that the selected inputs
+match recorded hashes. The STEM comparison above is separate. Local checks
+pass: skill form (687 words), sixteen fixtures after the concurrent expansion,
+all four test-file subtests, and the skill-creator validator.
+
+Next source-check work should target the remaining first-summary and
+concept-premise failure. The closing-answer boundary and explanatory 3D
+remain separate problems. Full-suite validation of this revision and the
+other stage-closing work are still outstanding.
 
 ## Latest follow-up: why eight skill runs failed
 

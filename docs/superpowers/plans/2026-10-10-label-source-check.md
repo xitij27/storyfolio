@@ -60,3 +60,27 @@ do not silently mix model versions or replace completed evaluations.
 Run `node evals/check-skill.mjs`, `node evals/check-people.mjs`, `npm test`,
 and the skill-creator validator. Record outcomes in this repository, update
 the handover, and commit on main. No deployment or publication is needed.
+
+## Outcome
+
+Completed eight conversations and eight judgements, with no failed or
+retried evaluation. The source-check refinement is `e485f53`; the two student
+runs record concurrent fixture commit `6b05309`, whose skill files have the
+same hashes. Selected fixtures, user prompts, model roles, runner and rubric
+were verified unchanged. Judging ran in completed groups of three, three and
+two while later conversations finished; no output was judged twice.
+
+The matched factual scores improve: nothing invented 7/8 to 8/8; final claims
+clean 6/8 to 7/8; first-reply assertions absent 5/8 to 7/8. Both chef plans
+omit the unknown workshop subject. One hurried run still carries genomics
+into the introduction and central question. The full bar falls from 3/8 to
+2/8, including a student first-reply `avoided` rather than `asked` score and
+creative misses. Do not call this an overall success or completed fix.
+
+All artifacts, command/permission reviews, a manifest and the local matched
+comparison are in `evals/runs/codex-sol-2/`. Four private-read heuristic flags
+were reviewed and corrected with the original flags retained. Local checks
+pass, including sixteen fixtures after the separate expansion. The local
+comparison needed an approved retry after its Git subprocess was blocked by
+the sandbox. The wording is retained as provisional; this candidate's test
+is complete and further revisions need their own evidence and reruns.

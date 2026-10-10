@@ -21,3 +21,8 @@ See `docs/superpowers/plans/2026-10-10-label-source-check.md` for the questions
 set before testing. The original full-suite result and repeated judgements
 remain intact. Results from this selected subset must not be described as
 a new full-suite pass rate.
+
+The targeted batch is complete. [findings.md](findings.md) records the mixed
+result: factual gains, one persistent genomics assertion, and a lower full
+pass count. The candidate is retained as provisional, not declared a fix
+for every failure that motivated it.
