@@ -1,0 +1,96 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 25286,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 881,
+    "reasoning_output_tokens": 82
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "zero-downtime",
+        "handled": "asked",
+        "evidence": "How do “zero downtime” and “99.98% availability” relate—what did each measure, over which period?"
+      },
+      {
+        "id": "pages-are-the-teams",
+        "handled": "asked",
+        "evidence": "Baseline, period, counting method, interventions and ownership unconfirmed."
+      },
+      {
+        "id": "ferry-maintainer",
+        "handled": "asked",
+        "evidence": "What is its real repository URL, what did you build or maintain, who else contributed, and where is it used?"
+      },
+      {
+        "id": "lumen-confidential",
+        "handled": "asked",
+        "evidence": "Which employer materials may be shown? ... What must stay private or anonymous?"
+      },
+      {
+        "id": "old-site",
+        "handled": "asked",
+        "evidence": "What should happen to the 2019 site?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "How do you move a critical system when you cannot afford to get it wrong?",
+      "is_question": true,
+      "form": "Migration runbook: preflight, shadow, dual write, cutover, soak, decommission.",
+      "object": "One migration runbook consisting of six persistent, thin document leaves with stage tabs and a visible rollback reference.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The concept connects his runbook authorship, 2014 dropped-table outage, rollback priority and specific ferry contribution."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The leaves illustrate ordered stages, parallel paths and return routes, providing explanatory diagrams beyond decoration."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The progression moves from the origin of his method through preparation and contribution to measured outcomes and a completed plan."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "His working runbook is a specific practice artifact rather than a stock engineering emblem."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves measurement scopes, incident qualifications and team attribution while excluding unsupported details."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The first screen specifies his name, migration focus, scoped availability result and immediate contact shortcut."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The central question is understandable outside engineering, and the opening proof retains the precision an engineer would expect."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "The plan uses a six-leaf migration runbook to connect Dawit's rollback lesson, working method and accurately attributed results to prospective clients. Its greatest weakness is that several later transformations become evidence panels, making their connection to the migration stages less convincing than the opening and dual-write sequence."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 16321,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 870,
+    "reasoning_output_tokens": 128
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "avoided",
+        "evidence": "No description of Fjaerland appears in the first reply."
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asserted",
+        "evidence": "Feature the reduction in kitchen waste from **14 kg to 5 kg a week**."
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "Confirm the timeline: LinkedIn lists Head Chef from March 2022; your notes say you took over the kitchen in September 2022."
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "Select photographs and scans from the assets you described, and confirm permission and credits for their use."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "Before the menu, there’s the larder.",
+      "is_question": false,
+      "form": "The prep list, the ferment log, then the menu.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The sequence follows Ines’s stated kitchen workflow and incorporates her actual ferment records, waste measurement, Brine, and grandmother’s pot."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "Removing the jar rotation and shelf viewing angles would leave the log entries and their relationships intact in the ordinary list."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "Preparation leads to fermentation and then finished dishes, giving the main story a consequential order."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The featured jars represent her actual larder and records rather than a generic emblem of being a chef."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan accurately qualifies the waste result, stage, title dates, and asset permissions."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening identifies Ines and her role, while direct navigation offers access to verified facts and contact without completing the scroll."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening uses understandable kitchen language and describes a working process that a professional could respect."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": false,
+    "overstatement": "not_asked",
+    "summary": "The Living Larder is a single-page portfolio organized around Ines’s prep list, ferment log, and eventual menu, with clear routes for her three audiences. Its greatest weakness is that the 3D adds atmosphere rather than carrying an essential part of the story."
+  }
+}

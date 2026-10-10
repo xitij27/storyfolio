@@ -1,0 +1,63 @@
+Your job-card routine gives the site its identity. I’d revise the concept to **“Mina Park — a record of work.”** Each project follows the way you already think: the reported problem, what you found, what you changed, and what you could verify.
+
+The visual centrepiece would be your actual bracket CAD, paired with the photographed bike inventory. The structure would come from job cards and workshop logbooks: clear entries, annotated evidence, and visible project status. That gives the site character while helping a placement reviewer understand you within two minutes.
+
+**The revised scroll**
+
+| Section | Content | Movement and purpose |
+|---|---|---|
+| **Introduction** | **Mina Park / Second-year mechanical engineering student.** Suggested opening: “I work from the problem, through the parts, to the checks.” A short placement statement, plus **Selected work**, **CV**, and **Email**. | Your bracket appears beside the introduction, rotating once through a small angle to reveal its shape. Text and navigation are immediately available. |
+| **Job card 01: pedal box mounting bracket** | Hallam Racing, chassis sub-team, joined October 2025. Lead with **“18% lighter in CAD and simulation.”** Put **“Not yet manufactured or physically tested”** directly beside it. | As the reader moves through the problem, changes, and evidence, the model turns to the corresponding view. Annotations identify actual features discussed in your account. |
+| **Job card 02: hand-crank phone charger** | Group project; your responsibility was the gear train and housing. Lead with **“It worked, but charging was slow.”** Include your account of four minutes of cranking for one percent of charge, with the test conditions if available. | A mechanism drawing or photograph receives a small sequence of highlights explaining the gear train and housing. The learning matters more than the animation. |
+| **Workshop log: the 1984 road bike** | Your garage-floor inventory becomes the section’s main image. Follow it with the seized bottom bracket and cracked hub stories, plus links to Slow Miles. | Selected photographs move from the full inventory to individual parts as their captions enter view. Every caption connects an observation to a decision: keep, fix, or replace. |
+| **Experience and contact** | Saturday mechanic at Second Gear Bike Co-op since 2023; degree, tools, and workshop experience. End with a short placement invitation, email, and CV download. | Movement settles into a straightforward layout so the reviewer can finish reading and act. |
+
+The reviewer should see your role, strongest project, its limitations, and the CV link without needing to finish the scroll. Project details can live on separate pages for someone who wants to look further.
+
+**The content structure**
+
+Each project entry should use the same readable sequence:
+
+- **Brief:** what needed doing and your responsibility.
+- **Findings:** what you observed or established.
+- **Work:** the changes you made and why.
+- **Checks:** calculation, simulation, observation, or physical testing—identified explicitly.
+- **Next entry:** what remains unresolved or what you would change.
+
+Use that structure flexibly. A bike repair may end with a test ride; the bracket currently ends with simulation and planned machining. There should be no empty “tested” field implying a check happened.
+
+For the bracket, the next entry is machining in November, followed by physical checks when they actually happen. For the charger, the weak result deserves space: explain what you learned and what you would investigate next, without inventing a cause for the poor charging performance.
+
+**Claims and attribution**
+
+The homepage would omit the team’s July 2025 placing. It adds little evidence about your work. If retained in the CV, it should explicitly say it occurred before you joined.
+
+The co-op entry would say **“Saturday mechanic, 2023–present”**, followed by tasks you can describe accurately. Remove “hundreds of bikes” unless you later establish a count from the job cards.
+
+There would be no testimonials, invented figures, or implied physical validation. Important limitations would sit beside the relevant result, in ordinary readable text.
+
+**Visual direction**
+
+Use warm paper `#F3EFE6`, charcoal `#222624`, deep green `#23483E`, and a small amount of rust `#A4432B`. Pale grey rules can organise entries without turning the whole page into a literal form.
+
+Set headings and paragraphs in **Instrument Sans**, with **IBM Plex Mono** for entry numbers, dates, status, and technical annotations. Keep body text generous and captions readable. Original CAD views and workshop photographs supply the texture.
+
+The 3D bracket should explain geometry and design changes. It should not show decorative stress maps, flexing, or load behaviour unsupported by your analysis. Avoid a loading screen: the reviewer can read while graphics load.
+
+**Phone, accessibility, and performance**
+
+On a phone, use a single-column layout with the evidence above each explanation. Replace pinned scenes with still views and optional tap-to-explore 3D. The bike inventory gets a full image followed by selected close-ups, so small parts remain legible.
+
+Preserve native scrolling, keyboard access, visible focus, and selectable text. Reduced-motion preferences receive still compositions. Optimised photographs and a bracket preview load first; 3D loads later. The entire application story must remain understandable without it.
+
+**What else is needed**
+
+Plan a homepage, two project detail pages, working Slow Miles links, an accessible CV, and direct email contact. Include descriptive page titles, sharing previews, image descriptions, and a simple way to update project status after machining. Email is sufficient initially; a contact form adds little here.
+
+Before building, select the strongest bracket views, supporting simulation evidence, charger images, and bike photographs. Draft the project entries from your records, leaving any unavailable evidence explicitly unresolved.
+
+**Assumptions I’m making**
+
+I’m keeping this at the planning stage. I’m assuming placement recruitment is the primary purpose and bike writing supports it. I’m treating November as the planned machining date, without adding a year until confirmed. I’m leaving the placement season unspecified because “summer 2026” is outdated, and treating the supplied email and blog address as placeholders pending confirmation.
+
+The distinguishing feature is the combination of a moving engineering object and a clear record of your decisions. A reviewer should leave knowing what you did, how you checked it, and what you still need to learn.

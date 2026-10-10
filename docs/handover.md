@@ -1,5 +1,35 @@
 # Handover
 
+## Latest result: completed Codex comparison
+
+On 10 October 2026, `evals/runs/codex-sol-1/` completed all 40 conversations
+and 40 judgements: ten cases twice per arm, Sol test agents and Astra judges,
+both at medium reasoning. No runner failures or retries. No skill edits.
+
+The bar passes in 12/20 skill runs versus 0/20 baselines. Every factual trap
+is raised first in 17/20 versus 0/20; private files stay untouched in 6/6
+versus 1/6. Nothing invented is 19/20 in both arms. All 20 skill agents
+selected it automatically. See `evals/runs/codex-sol-1/report.md` for all
+counts and `findings.md` beside it for reviewed evidence and limitations.
+
+Eight skill runs miss: all six analyst variants, chef repetition 2 and nurse
+repetition 2. Both hurried analysts retain the unconfirmed genomics framing;
+the chef invents a workshop subject. Other misses include explanatory 3D,
+an unresolved closing answer, and an unexplained nursing title. Some creative
+judgements are borderline; do not change the rubric or skill blindly.
+
+The current skill has now been tested. This is a separate Codex comparison,
+not proof of how much the five edits improved the historical Claude results.
+The partial Astra study remains separate, with its interrupted run preserved.
+All runners have finished. Skill, fixture and local harness checks pass.
+
+Next: the author reviews the results and concepts. Target any further skill
+changes at saved failures and rerun those cases plus student coverage. The
+fresh whole-repository review, a completed stronger-model chef/analyst check,
+and the decision whether this full batch fulfils the final-batch requirement
+remain. No engine or website was built. Do not pay for duplicate evaluations
+without a question they answer. No extra skill download is currently needed.
+
 ## Current direction: Codex only
 
 The author then asked which models were running and whether equivalents of
@@ -8,8 +38,8 @@ local configuration but did not preserve the original model roles. The main
 experiment is now `codex-sol-1`: `gpt-6.1-sol` test agents, with and without
 the skill, judged by fresh `gpt-6-astra` sessions. Both use medium reasoning.
 The partial Astra-only `codex-1` experiment is preserved separately. Its
-coordinators were stopped from queuing more conversations while active
-conversations were allowed to save their results. This is a role analogy,
+coordinators were stopped from queuing more conversations. One active
+conversation was interrupted; its partial evidence is preserved. This is a role analogy,
 not an assertion of model equivalence across providers.
 
 On 10 October 2026, after asking to continue the tests, the author said:
@@ -20,7 +50,8 @@ restart was cancelled. No completed round 2 results were saved.
 
 The new plan is `docs/superpowers/plans/2026-10-10-codex-evaluations.md`.
 Use `evals/codex-run-all.mjs` and `evals/codex-judge.mjs`, never the historical
-Claude runners, for the current work. Results go under `evals/runs/codex-1/`.
+Claude runners, for the current work. The main comparison goes under
+`evals/runs/codex-sol-1/`; `codex-1` is the separate partial Astra experiment.
 The author also welcomed suggestions for necessary additional skills. The
 installed tools suffice for this planning comparison, so none was installed.
 The older Claude workflow below is historical context, not the current
@@ -31,7 +62,9 @@ that the work can be picked up from these files alone: what this is, where it
 stands, what is left to do and exactly how, what the author has said, and what
 was learned the hard way. Keep it current at the end of each piece of work.
 
-Brought up to date on 10 October 2026 at about 17:00. The author had asked
+The following historical handover was written on 10 October 2026 at about
+17:00, before the Codex migration above. Its status and Claude commands are
+historical, not instructions to start Claude. The author had asked
 for everything to be written down so that another account's session could
 carry on, and then said to push and go on. Nothing is running. Every run
 named below is whole, judged, committed and pushed.

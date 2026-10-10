@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 19931,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 867,
+    "reasoning_output_tokens": 125
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "avoided",
+        "evidence": "Include a compact career trail and the Norway fermentation placement, rather than reproducing LinkedIn."
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asserted",
+        "evidence": "weekly kitchen food waste reduced from 14 kg to 5 kg"
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "One factual detail needs resolving: LinkedIn lists your head-chef role from March 2022, while your notes say you took over the kitchen in September 2022."
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "Confirmed image and illustration usage, with appropriate credits."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "The menu comes last.",
+      "is_question": false,
+      "form": "The kitchen’s working sequence: prep list → ferment log → readiness → dish.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The story relies on Ines’s prep list, ferment records, jar wall, teaching, Brine, and particular order of kitchen work."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "Removing the 3D loses spectacle but leaves the photographs, records, story, and interactions conveying the same information."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "Preparation leads to recorded checks, readiness, and finished dishes in a meaningful causal sequence."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The jars represent her actual working larder rather than a generic emblem of being a chef."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves the corrected stage description, dates, collective waste measurement, and asset permissions."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening identifies Ines and her work, while direct audience links provide shortcuts to evidence and contact without completing the scroll."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening explains its memorable title through plain references to preparation, jars, checks, and readiness."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed portfolio plan organised around Ines’s preparation, fermentation records, cooking, and teaching, with clear audience routes and corrected factual context. Its greatest weakness is that the 3D remains dispensable illustration and ends before the full page journey is complete."
+  }
+}

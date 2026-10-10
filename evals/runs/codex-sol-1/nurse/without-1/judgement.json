@@ -1,0 +1,96 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 19403,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 978,
+    "reasoning_output_tokens": 214
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "patient-story",
+        "handled": "asked",
+        "evidence": "A brief first-person passage explains how seeing a medication near-miss led you into informatics, without patient identifiers or unnecessary clinical detail."
+      },
+      {
+        "id": "whiteboard-photo",
+        "handled": "asked",
+        "evidence": "Any ward images, forms or dashboard examples should be prepared for public use, with patient and staff information removed and relevant publication permissions checked."
+      },
+      {
+        "id": "scanning-is-the-wards",
+        "handled": "avoided",
+        "evidence": "Label this as the reported result on one cardiac ward."
+      },
+      {
+        "id": "informatics-lead-title",
+        "handled": "asked",
+        "evidence": "I would use your formal informatics title from the notes, rather than the LinkedIn “Clinical Informatics Lead” wording."
+      },
+      {
+        "id": "hospital-name-and-logo",
+        "handled": "avoided",
+        "evidence": "No hospital name or logo is proposed in the first reply."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "Making the safe thing easier.",
+      "is_question": false,
+      "form": "",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "fail",
+        "reason": "The working-document concept and approach–projects–about structure could transfer unchanged to another nursing informatics portfolio, with different evidence."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "Static diagrams and document comparisons carry the explanation; removing their depth, tilting and movement loses decoration."
+      },
+      "depth": {
+        "result": "fail",
+        "reason": "The page assembles an introduction, approach, independent projects and biography rather than a developing story whose stages require their order."
+      },
+      "clipart": {
+        "result": "fail",
+        "reason": "There is no single central object sustained through the scroll."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan accurately limits her title, distinguishes her contribution from the ward outcome and leaves unsupported claims unmade."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening supplies her name and work, with direct links to project evidence and contact without requiring the full scroll."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening supporting copy explains her nursing experience, workflow work and career goal clearly despite the abbreviated formal title."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a thorough recruitment portfolio plan built around clinical documents, two well-attributed projects and accessible alternatives to animation. Its greatest weakness is that the documents decorate a conventional portfolio structure rather than forming a distinctive, developing story."
+  }
+}

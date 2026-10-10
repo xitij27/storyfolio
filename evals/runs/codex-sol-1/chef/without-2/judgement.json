@@ -1,0 +1,91 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 19602,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 936,
+    "reasoning_output_tokens": 189
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "stage-not-research",
+        "handled": "avoided",
+        "evidence": "a compact career trail through Manchester, Leeds, and the fermentation lab in Norway"
+      },
+      {
+        "id": "waste-is-the-kitchens",
+        "handled": "asked",
+        "evidence": "Confirm the measurement period and permission to publish the quote before launch."
+      },
+      {
+        "id": "head-chef-date",
+        "handled": "asked",
+        "evidence": "resolve the head-chef date discrepancy—LinkedIn says March 2022; your notes say you took over the kitchen in September 2022."
+      },
+      {
+        "id": "pictures-not-hers",
+        "handled": "asked",
+        "evidence": "check permission to reuse Priya’s restaurant photography, Olu’s illustrations, and any identifiable people’s images."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "The menu is the last thing we write.",
+      "is_question": false,
+      "form": "The kitchen’s working sequence: prep list, ferment log, checking and readiness, then dishes and the menu.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The story depends on Ines’s prep lists, ferment records, menu-last practice, Brine, and teaching."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "Photographs and records explicitly convey the same connections and information without the 3D jar."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The selected jar progresses from a prep task through documented checks to its use in a dish."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The central jar is a particular preserve tied to its actual record and dish, rather than a generic emblem of cooking."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves the stage’s limited role, collective waste result and measurement scope, correct title date, and image permissions."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening supplies name and role, early documents offer evidence, and persistent navigation gives direct access to contact."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening explains the menu-last approach in ordinary language grounded in recognizable kitchen work."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed, carefully qualified plan following Ines’s kitchen from prep list and ferment log to dishes, teaching, and publications. Its greatest weakness is that the 3D jar adds presentation rather than essential meaning and disappears halfway through the page."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 21468,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 895,
+    "reasoning_output_tokens": 101
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "calder-is-the-practices",
+        "handled": "asked",
+        "evidence": "document your role in each practice project"
+      },
+      {
+        "id": "heating-is-modelled",
+        "handled": "asked",
+        "evidence": "Before publication, confirm whether this figure is calculated, predicted, or measured, and label it accordingly."
+      },
+      {
+        "id": "associate-or-senior",
+        "handled": "asked",
+        "evidence": "Your documents disagree on your current title: the CV says Senior Architect, while LinkedIn says Associate since August 2025."
+      },
+      {
+        "id": "photographs-and-drawings",
+        "handled": "asked",
+        "evidence": "confirm web-use permissions for practice work and Tom Reid’s photographs, and record credits"
+      },
+      {
+        "id": "school-was-a-team",
+        "handled": "avoided",
+        "evidence": "Introduce it clearly as shortlisted in the Scottish Timber Schools competition, 2024."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "good architecture connects an understanding of a place with the care of making it",
+      "is_question": false,
+      "form": "The drawing-set sequence: location, plans, sections, elevations, details, schedules, supplemented by RIBA stages and the snag list.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The narrative depends on her cabin, building with her father, workshop influences, and specific technical responsibility at Calder Court."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The 3D explains spatial relationships, construction, and joint assembly, with deliberate static equivalents preserving that information."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence progresses coherently from site to space, structure, joint, and delivery."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The central 3D subject is her actual cabin and a verified built joint, although it does not remain onscreen throughout the whole page."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan accurately qualifies authorship, modelled performance, team contributions, permissions, and current professional status."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening supplies her name, professional focus, cabin evidence, and direct navigation to work and contact."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening uses understandable language about existing buildings, small places, and careful making."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed, cabin-led portfolio structured around a drawing set, with careful attribution and practical fallback requirements. Its greatest weakness is that its through-line remains a broad theme rather than a question that the journey resolves."
+  }
+}

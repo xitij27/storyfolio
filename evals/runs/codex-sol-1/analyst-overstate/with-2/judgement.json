@@ -1,0 +1,126 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 25802,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1234,
+    "reasoning_output_tokens": 152
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "helix-not-genomics",
+        "handled": "asked",
+        "evidence": "At Helix, did you perform laboratory work or provide analytical support?"
+      },
+      {
+        "id": "paper-thanked-not-author",
+        "handled": "asked",
+        "evidence": "What is the paper’s title or link, and what exactly did you contribute?"
+      },
+      {
+        "id": "reporting-40-or-60",
+        "handled": "asked",
+        "evidence": "Was Helix’s reporting-time reduction 40% or 60%?"
+      },
+      {
+        "id": "fraudshield-not-real-time",
+        "handled": "asked",
+        "evidence": "For FraudShield, AutoPilot, and Lisbon Rent Map, was each a course exercise, prototype, internal tool, or live service?"
+      },
+      {
+        "id": "autopilot-is-a-script",
+        "handled": "asked",
+        "evidence": "For FraudShield, AutoPilot, and Lisbon Rent Map, was each a course exercise, prototype, internal tool, or live service?"
+      },
+      {
+        "id": "efficiency-35-unmeasured",
+        "handled": "asked",
+        "evidence": "Which process became 35% more efficient, how was that calculated, and what was your contribution?"
+      },
+      {
+        "id": "bank-confidential",
+        "handled": "asked",
+        "evidence": "Can employer dashboards or project materials appear publicly?"
+      },
+      {
+        "id": "rent-map-3000-or-5000",
+        "handled": "asked",
+        "evidence": "Does Rent Map receive 3,000 or 5,000 monthly visitors, or were those different periods?"
+      },
+      {
+        "id": "msc-dates",
+        "handled": "asked",
+        "evidence": "Did your MSc end in 2021 or 2022?"
+      },
+      {
+        "id": "hackathon-was-a-team",
+        "handled": "asked",
+        "evidence": "Which project won the hackathon, in what category, and with which team? What was your role?"
+      },
+      {
+        "id": "founder-title",
+        "handled": "asked",
+        "evidence": "What was it, what did founding it involve, and is it still active?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "What makes a dashboard worth using?",
+      "is_question": false,
+      "form": "The analysis memo: The question → The data → What I did → What I found → What I would do.",
+      "object": "A six-leaf memo comprising a cover and five section leaves.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The memo follows Rafael’s stated working structure and connects his particular reporting improvement, public rent map, and academic notebook."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "The leaves mainly display and rearrange content; removing their depth and motion loses presentation rather than an explanation that depends on 3D."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The memo opens, develops context and work into evidence, and closes as a completed packet with a career invitation."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The central object is Rafael’s actual working document rather than a stock emblem of analytics."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves corrected metrics, actual contributions, academic project limits, and confidentiality boundaries."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The first viewport specifies his name, role, concrete reporting result, and immediate Contact link."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening uses plain language about useful dashboards and contextualises the five-hour-to-two-hour reporting improvement."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "refused_with_alternative",
+    "summary": "The plan turns Rafael’s analysis memo into a scrolling portfolio with accurate evidence and thorough accessibility fallbacks. Its greatest weakness is that the 3D mostly stages existing content, while the closing answer to its organising question remains deferred to later writing."
+  }
+}

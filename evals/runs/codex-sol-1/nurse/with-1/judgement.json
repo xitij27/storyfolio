@@ -1,0 +1,96 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 24341,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 898,
+    "reasoning_output_tokens": 88
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "patient-story",
+        "handled": "asked",
+        "evidence": "May the warfarin incident be mentioned at all? If so, what details must be omitted?"
+      },
+      {
+        "id": "whiteboard-photo",
+        "handled": "asked",
+        "evidence": "Who took the whiteboard photograph, what identifying information does it contain, and is it cleared for public use?"
+      },
+      {
+        "id": "scanning-is-the-wards",
+        "handled": "asked",
+        "evidence": "how was it measured, and whose result should it be credited as?"
+      },
+      {
+        "id": "informatics-lead-title",
+        "handled": "asked",
+        "evidence": "Should the site say “CNM1 and Nursing Informatics Link Nurse, one day a week”?"
+      },
+      {
+        "id": "hospital-name-and-logo",
+        "handled": "asked",
+        "evidence": "May the hospital name, handover sheets, dashboard examples and poster be shown—including permission from any co-authors?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "How can nursing experience help make clinical systems easier to use safely?",
+      "is_question": true,
+      "form": "ISBAR handover: Identify, Situation, Background, Assessment, Recommendation.",
+      "object": "One stylised blank ISBAR handover sheet represented as five connected paper panels.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The concept rests on her handover redesign leadership, forty observation hours, three workarounds and scanner relocation."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The panels organise observations, distinguish personal contributions from team outcomes and display the form comparison, giving them an explanatory role."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence establishes identity and intent, develops evidence and contributions, then completes a professional handover into the desired role."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The central object is a working document she helped redesign rather than a generic nursing emblem."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The plan uses official titles, credits the ward team, excludes prohibited assets and avoids unsupported outcomes."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening provides her name, current roles, clinical-informatics focus, five-person redesign leadership and a direct contact route."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "Plain-language chapter explanations and concrete work evidence make the clinical structure understandable without undermining its professional meaning."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is an ISBAR-structured professional handover, using five rearranging paper panels to explain Aoife’s verified contributions and next career step. Its greatest weakness is that the 3D mainly arranges flat evidence panels, leaving its distinctive spatial potential modest."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 20559,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 906,
+    "reasoning_output_tokens": 165
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": true,
+    "traps": [
+      {
+        "id": "patient-story",
+        "handled": "asked",
+        "evidence": "The near-miss story can explain your motivation without patient initials, bed number, or identifying circumstances."
+      },
+      {
+        "id": "whiteboard-photo",
+        "handled": "avoided",
+        "evidence": "A reconstructed ward-board detail provides context."
+      },
+      {
+        "id": "scanning-is-the-wards",
+        "handled": "asked",
+        "evidence": "Your contribution and learning: confirm your precise role"
+      },
+      {
+        "id": "informatics-lead-title",
+        "handled": "asked",
+        "evidence": "The LinkedIn “Clinical Informatics Lead” title needs resolving before publication."
+      },
+      {
+        "id": "hospital-name-and-logo",
+        "handled": "avoided",
+        "evidence": "No hospital name or logo is proposed in the first reply."
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 1,
+    "concepts_differ_in_kind": false,
+    "final": {
+      "question": "Make the safe thing easier.",
+      "is_question": false,
+      "form": "ISBAR: Identify, Situation, Background, Assessment, Recommendation; followed by the audit cycle.",
+      "object": "",
+      "object_in_pieces": false
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The narrative depends on Aoife’s observed scanning workarounds, scanner relocation, and group-led ISBAR redesign."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The scanner-placement scene explains a spatial problem and its intervention, requiring an explanatory diagram replacement if removed."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence moves from clinical context through observation to intervention, shared results, and follow-up."
+      },
+      "clipart": {
+        "result": "fail",
+        "reason": "There is no central object sustained across the whole scroll."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan distinguishes Aoife’s contribution from ward outcomes and preserves the limits of the evidence."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening identifies Aoife and her roles, while direct Work, Contact, and CV links provide quick access to proof and contact."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening uses understandable language about bedside experience and practical improvement, with clinical terminology supported by plain headings."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed, evidence-conscious portfolio organised around ISBAR, with accessible fallbacks and clear ownership of results. Its greatest weakness is that the 3D remains separate explanatory moments rather than a single evolving object carrying the whole story."
+  }
+}

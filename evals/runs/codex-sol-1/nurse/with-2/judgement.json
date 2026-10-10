@@ -1,0 +1,96 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 23868,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 867,
+    "reasoning_output_tokens": 77
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "patient-story",
+        "handled": "asked",
+        "evidence": "May the medication near-miss story be told at all, and with what omitted?"
+      },
+      {
+        "id": "whiteboard-photo",
+        "handled": "asked",
+        "evidence": "Who took the whiteboard photo, and does it contain patient or staff information?"
+      },
+      {
+        "id": "scanning-is-the-wards",
+        "handled": "asked",
+        "evidence": "What was your contribution versus the team’s"
+      },
+      {
+        "id": "informatics-lead-title",
+        "handled": "asked",
+        "evidence": "Should your public title be “Nursing Informatics Link Nurse and CNM1”? Your notes distinguish that from “Clinical Informatics Lead.”"
+      },
+      {
+        "id": "hospital-name-and-logo",
+        "handled": "asked",
+        "evidence": "May the hospital be named? What else must stay off the site?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "How can nursing experience make clinical systems work better on a ward?",
+      "is_question": true,
+      "form": "ISBAR handover: Identify, Situation, Background, Assessment, Recommendation.",
+      "object": "Five paper panels forming a single handover document, rearranged throughout the scroll.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The handover structure connects to her five-person redesign group and her specific observation and scanner-relocation contributions."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The panels carry comparisons and observation-to-action relationships, which the fallback explicitly preserves as diagrams."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The assembled handover introduces her, opens into evidence of her work, and reunites into a supported recommendation for her next role."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The central object derives from a working document she helped redesign rather than a generic nursing emblem."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan uses her formal roles, limits claims to confirmed contributions, and credits the ward collaborators."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The first viewport specifies her name, roles, hiring goal, leadership evidence and immediate contact access."
+      },
+      "plain_reader": {
+        "result": "fail",
+        "reason": "The opening relies on unexplained CNM1 and ISBAR terminology without a plain-language account of her nursing management role."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is an ISBAR handover portfolio whose five moving document panels organize Aoife’s confirmed work into evidence for clinical informatics employers. Its greatest weakness is stretching limited evidence across roughly ten screens, including a findings sequence that may show only numbered labels."
+  }
+}

@@ -1,5 +1,19 @@
 # Codex evaluation migration
 
+## Outcome
+
+Completed `codex-sol-1`: 40 conversations and 40 Astra judgements, with
+Sol medium fixed across both arms and Astra medium as judge. The skill
+was unchanged. The report records 0/20 baselines and 12/20 skill runs meeting
+the bar; the findings preserve privacy-trace corrections, confirmed misses,
+judgement caveats and qualitative concept review. All 20 skill agents
+selected it automatically. No runner failures or retries occurred.
+
+The separate Astra partial study is preserved, not pooled. Local skill,
+fixture and harness checks pass. No new skill installation, skill revision,
+engine work or website build was needed. The next decisions and remaining
+validation are recorded at the top of `docs/handover.md`.
+
 ## Model-role correction
 
 After the first Astra runs, the author asked whether equivalents of Sonnet
@@ -9,12 +23,18 @@ better preserve the original experiment. The main comparison now uses
 reasoning, in `evals/runs/codex-sol-1/`. The Astra coordinators were stopped
 from scheduling more work; active conversations may finish. Preserve their
 results in `codex-1` as separate stronger-model evidence. Do not pool the two
-models or compare Sol with an Astra baseline.
+models or compare Sol with an Astra baseline. The final stop preserved
+20 complete Astra baselines, three complete skill conversations and 14
+judgements. One further skill conversation was interrupted in its third
+turn; its raw partial stream and recovered planning files are retained.
+The batch runner now drains active children when asked to stop.
 
 This is a mapping of model roles, not a claim of equivalent capabilities
 across vendors. It follows the current
 [official model guide](https://developers.openai.com/api/docs/models).
 The initial implementation notes below explain why Astra was originally used.
+Their Astra-only defaults and `codex-1` destination are superseded by the
+model-role correction above.
 
 The author asked to stop using Claude Code and approved a separate Codex
 comparison, with and without the skill. Preserve iteration 1 as historical

@@ -1,0 +1,96 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 25839,
+    "cached_input_tokens": 8960,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 913,
+    "reasoning_output_tokens": 74
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "calder-is-the-practices",
+        "handled": "asked",
+        "evidence": "what did you personally handle on Calder Court, Kirk Street and the school competition, and who worked alongside you?"
+      },
+      {
+        "id": "heating-is-modelled",
+        "handled": "asked",
+        "evidence": "does “68% less heating demand” describe a measured or modelled result, compared with what baseline and over what period?"
+      },
+      {
+        "id": "associate-or-senior",
+        "handled": "asked",
+        "evidence": "the CV says Senior Architect; LinkedIn says Associate since August 2025. Which should the site use?"
+      },
+      {
+        "id": "photographs-and-drawings",
+        "handled": "asked",
+        "evidence": "may you publicly reuse Tom Reid’s photographs, Field & Rowe’s drawings and diagram, and the competition boards?"
+      },
+      {
+        "id": "school-was-a-team",
+        "handled": "asked",
+        "evidence": "what did you personally handle on Calder Court, Kirk Street and the school competition, and who worked alongside you?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "How do you take a building from a drawing to something people can use?",
+      "is_question": true,
+      "form": "Architectural drawing set: Location, Plans, Sections, Elevations, Details, Schedules.",
+      "object": "One drawing set consisting of six persistent 3D sheets carrying drawings, photographs and contribution records.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The story depends on her owned cabin archive, workshop and timber-book influences, and the distinction between her cabin ownership and Calder Court responsibilities."
+      },
+      "backdrop": {
+        "result": "pass",
+        "reason": "The sheets carry evidence and arrange drawings beside corresponding construction photographs, providing comparisons rather than a decorative background."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence progresses from identity and drawings through construction and completed work to details and a concluding contribution schedule."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The drawing set functions as an evidence-bearing working document rather than a stock architectural emblem."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves practice and team attribution, uses the confirmed title, and excludes unsupported performance claims and unapproved imagery."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening provides her name, professional focus, owned cabin evidence and a persistent contact link without requiring the full scroll."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening question and work description use accessible language while retaining accurate professional attribution."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a detailed, carefully attributed portfolio plan built around six drawing sheets connecting Marta’s cabin drawings, construction evidence and professional responsibilities. Its greatest weakness is that the visual story depends on unseen assets, so the promised drawing-to-photograph comparisons remain unverified."
+  }
+}

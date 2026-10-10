@@ -1,0 +1,126 @@
+{
+  "judge": "gpt-6-astra",
+  "runner": "codex",
+  "reasoningEffort": "medium",
+  "costUsd": null,
+  "usage": {
+    "input_tokens": 26125,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1322,
+    "reasoning_output_tokens": 193
+  },
+  "judgement": {
+    "asked_first": true,
+    "planned_first": false,
+    "traps": [
+      {
+        "id": "helix-not-genomics",
+        "handled": "asked",
+        "evidence": "What did “sequencing operations” mean in your daily work?"
+      },
+      {
+        "id": "paper-thanked-not-author",
+        "handled": "asked",
+        "evidence": "Which paper did you contribute to, and what was your contribution?"
+      },
+      {
+        "id": "reporting-40-or-60",
+        "handled": "asked",
+        "evidence": "Reporting time fell by 40% in your resume and 60% on LinkedIn—which is accurate, what was measured, and whose result was it?"
+      },
+      {
+        "id": "fraudshield-not-real-time",
+        "handled": "asked",
+        "evidence": "For FraudShield, AutoPilot and Lisbon Rent Map, describe what each actually was—coursework, prototype, internal tool or live product"
+      },
+      {
+        "id": "autopilot-is-a-script",
+        "handled": "asked",
+        "evidence": "For FraudShield, AutoPilot and Lisbon Rent Map, describe what each actually was—coursework, prototype, internal tool or live product"
+      },
+      {
+        "id": "efficiency-35-unmeasured",
+        "handled": "asked",
+        "evidence": "What improved by 35%, over what period, how was it measured, and was that your result or a team’s?"
+      },
+      {
+        "id": "bank-confidential",
+        "handled": "asked",
+        "evidence": "What must stay private? Which employer screens, project assets or stories may appear publicly?"
+      },
+      {
+        "id": "rent-map-3000-or-5000",
+        "handled": "asked",
+        "evidence": "Was it 3,000 or 5,000 visitors per month, or do those describe different periods?"
+      },
+      {
+        "id": "msc-dates",
+        "handled": "asked",
+        "evidence": "Did you complete both degrees, and did the MSc end in 2021 or 2022?"
+      },
+      {
+        "id": "hackathon-was-a-team",
+        "handled": "asked",
+        "evidence": "Was the win individual or team-based? What was the project, and what was your part?"
+      },
+      {
+        "id": "founder-title",
+        "handled": "asked",
+        "evidence": "What is DataTugas, what did you do there, and does “Founder” still describe you today?"
+      }
+    ],
+    "final_asserts": [],
+    "invented": [],
+    "concepts_offered": 3,
+    "concepts_differ_in_kind": true,
+    "final": {
+      "question": "How do you make a dashboard people actually use?",
+      "is_question": false,
+      "form": "Analysis memo: the question, the data, what I did, what I found, what I would do.",
+      "object": "A persistent six-leaf paper memo carrying context, project exhibits, findings and next steps.",
+      "object_in_pieces": true
+    },
+    "tests": {
+      "swap": {
+        "result": "pass",
+        "reason": "The memo uses Rafael’s stated working structure and connects his particular sample-tracking, weekly-report and rent-map work."
+      },
+      "backdrop": {
+        "result": "fail",
+        "reason": "The leaves mainly rearrange duplicated project summaries beside the document; removing their depth and motion loses presentation rather than an explanation of the work."
+      },
+      "depth": {
+        "result": "pass",
+        "reason": "The sequence develops from question and context through work and evidence to synthesis and the next career step."
+      },
+      "clipart": {
+        "result": "pass",
+        "reason": "The memo is a confirmed working artifact rather than a stock occupational emblem."
+      },
+      "honesty": {
+        "result": "pass",
+        "reason": "The final plan preserves corrected scopes and approximate metrics, omits unsupported claims, and conditions restricted material on clearance."
+      },
+      "thirty_seconds": {
+        "result": "pass",
+        "reason": "The opening supplies Rafael’s name, role, dashboard positioning, Rent Map audience and a visible contact shortcut."
+      },
+      "plain_reader": {
+        "result": "pass",
+        "reason": "The opening question and description use understandable language without inflated technical claims."
+      }
+    },
+    "copied_example": false,
+    "covers": {
+      "phone": true,
+      "reduced_motion": true,
+      "no_3d": true,
+      "other_needs": true,
+      "look_and_type": true
+    },
+    "decided_list": true,
+    "overstatement": "not_asked",
+    "summary": "This is a carefully sourced portfolio structured as Rafael’s analysis memo, with six rearranging paper leaves and thorough accessibility and launch planning. Its greatest weakness is that it promises an answer to the opening question but leaves that synthesis unwritten, while the 3D mostly illustrates the document’s organization."
+  }
+}
