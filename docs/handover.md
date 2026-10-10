@@ -83,6 +83,15 @@ of Storyfolio, in addition to the existing publication checklist.
    final validation after the latest changes. Earlier cohorts concern
    earlier versions. Do not repeat a paid full batch without a question
    it needs to answer. Engine and built-site work need their own plans.
+5. On 11 October 2026 the author asked whether the skill is well written.
+   The review and seven drafted rewrites are in
+   [the wording review](superpowers/plans/2026-10-11-skill-wording-review.md);
+   none is applied and no run was made. One finding matters whatever is
+   decided about the rest: `asking.md` names the answer to the analyst
+   fixtures' scored `fraudshield-not-real-time` trap, so analyst results on
+   that trap since `e178be2` partly test whether the agent read it. The
+   recommended first step is drafts 1 and 2, with eight runs matching
+   codex-sol-2.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
