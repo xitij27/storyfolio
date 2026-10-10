@@ -1,0 +1,87 @@
+{
+  "iteration": "codex-privacy-1",
+  "people": [
+    "phd",
+    "analyst",
+    "student"
+  ],
+  "reps": 2,
+  "agentModel": "gpt-6.1-sol",
+  "judgeModel": "gpt-6-astra",
+  "reasoningEffort": "medium",
+  "previous": {
+    "phd": [
+      "codex-stem-1/phd/with-1"
+    ],
+    "analyst": [
+      "codex-sol-2/analyst/with-1",
+      "codex-sol-2/analyst/with-2"
+    ],
+    "student": [
+      "codex-sol-2/student/with-1",
+      "codex-sol-2/student/with-2"
+    ]
+  },
+  "fixedInputs": {
+    "evals/codex-judge.mjs": "ec4f2d1b54f31cc3214acd017183f448be1ac6bcd865fde41706d07b5707b148",
+    "evals/codex-run-all.mjs": "b33ecd0f7c681f88771bcf3227dadd6d9f09964e76210af2a92cec22bdb7c2ee",
+    "evals/codex-run.mjs": "4f9dcddce4b138474cf9e0bfac36c7a3a667a6814f37f1f573c1ad4b898e378b",
+    "evals/lib/codex.mjs": "cbb1c19d5382c9012d7b6055044c240a7f78a0eb8eff6c5c9aec85ef22f48308",
+    "evals/lib/codex.test.mjs": "cadd1e532bd19cef2528c1bc0915028a007f8f10b5e7da2fa439b83efa00034e",
+    "evals/lib/events.mjs": "e8f20d0cb721e155b073f703603d064a89ee1d8d38a3bf9d51845428674fafe5",
+    "evals/lib/events.test.mjs": "5dd7bd944f160b1222891cd7f1c5161c6fa273c3af8b8272e241393039ee788c",
+    "evals/lib/files.mjs": "af97dcc663dc5c43913b143b29271cf509e5838de37d0c2931ae648c222f41c2",
+    "evals/lib/files.test.mjs": "bc87adc456625620c36abe3d179c11a91c8e3fbda90f86565b727e8957f17651",
+    "evals/lib/score.mjs": "b93c20b70ba6f57fe112048c9ab72a6882196fa189ceca8610566c5d84f0b757",
+    "evals/lib/score.test.mjs": "169a5b6f5ad7964a2d035488a90d9be5606705f51ba4c736a52bc5f962545839",
+    "evals/people/analyst/material/linkedin-export/Connections.csv": "c76c019d176e8552c629ca6950f753a56ab6bddf8904e05e0f2bdcced8e63643",
+    "evals/people/analyst/material/linkedin-export/Education.csv": "612c82eaea9ef2e7fa7cc85411ff79d23aa53afeed286213c5a6aafeab859c2b",
+    "evals/people/analyst/material/linkedin-export/Honors.csv": "5d3f21524a738c80abe23bb4fd16a35018d47ecf2e241ffc9534d81896e113df",
+    "evals/people/analyst/material/linkedin-export/Positions.csv": "1d1c6c52b857020872fefeac562d94a7a1174870e63635f3dbc2e0181bea8461",
+    "evals/people/analyst/material/linkedin-export/Profile.csv": "d72d675d10b62bc09fad56c851742b2fc8540cadaf2a8c773807005468a58325",
+    "evals/people/analyst/material/linkedin-export/Projects.csv": "146448b7e257e2385e4770d52fd0aed2034a31ddfc1828787d3e1cdaea361e60",
+    "evals/people/analyst/material/linkedin-export/README.txt": "da01a27bd4ab7f2864bc608b28919fddfdcfe97402170eb7c107f5b18ed8ed58",
+    "evals/people/analyst/material/linkedin-export/Recommendations_Received.csv": "3ad4d0b1209963981623e60d2cb10f0a1130ae523fc0aa7e976ef1a82b97298a",
+    "evals/people/analyst/material/linkedin-export/Skills.csv": "0aecc18b2f14ddaa69605a469a36b671d9ffa46ff08c6c1a6c9f4ac617e97159",
+    "evals/people/analyst/material/linkedin-export/messages.csv": "683adf18caf2ad33970f67da9c560c36f78775389e51b22b11c3123d78499984",
+    "evals/people/analyst/material/resume.md": "1ee779dca9007bee75a6ffc9e65b2d7e403d90a8bb4d6daacdf08df61fa82a39",
+    "evals/people/analyst/person.json": "7edcb317abaab823ad7dc28e91474208dbf0a228e4d817cd211504fcc58a511c",
+    "evals/people/analyst/truth.md": "63b6a199aa59d77ac0acd611eb1a49479af0d153a40e02e0006fd213bafd2428",
+    "evals/people/phd/material/cv.md": "736b8e2900bdcde777da6d71cda8ea96157796feba660654aa88cab1292caa64",
+    "evals/people/phd/material/participant-contacts.csv": "247daf76e5c4002e241a3e16a58dc40b517c3d4af2321f7800fb5e75f29c7a20",
+    "evals/people/phd/material/research-and-teaching.md": "0aa15c37f2ca962fdbe160bd9579d4395f8b7769ac285512a34b522abd19f611",
+    "evals/people/phd/person.json": "38efd1607853f27ef2596cd50b7b7bbf5cba4805b7a1c260d7208dd3cf818f9a",
+    "evals/people/phd/truth.md": "f161fdfc310ca035266a7ffffd56f01facb9e25f5abfd7e35dbe6d0a8cb09adb",
+    "evals/people/student/material/blog.md": "c1558be2d482029524f5a657cfda04bada02ba9c90381a586e0b42ca8cebafd3",
+    "evals/people/student/material/cv.md": "039d86d4a28c9807b088cde44c8e5370d503b60d7a4932a78ca88658a1275cd9",
+    "evals/people/student/material/message.md": "bfc47e49c6595c763494237e1b86a16b9e7bcabb4b596a6e3093c2cb380930b9",
+    "evals/people/student/person.json": "b4c996b4277f0246e23e5874ce888fafa2ab4699ff896dfe8622d661e98fc991",
+    "evals/people/student/truth.md": "82e11b20af79423e67531969fa335fc90db6a6ea563c106d4e72d5c42573c047",
+    "evals/prompts/judge.md": "a55b8bc10bec5b99cb104210fdaddb3b2912f7ffd0456e6b5d71ca4f023bfecc",
+    "evals/prompts/turn1-terse.md": "f944f28b9ee6362b1f90b2f07c0aade5dee377d88d6ec0d9e6dbcb9496a33bdd",
+    "evals/prompts/turn1.md": "5d817d1ad545af25c513be30a78931a9cfc860edbe787039dbd3317de7ed6779",
+    "evals/prompts/turn2-terse.md": "508856f9e01cf7c084bc64011a6dee2b3d5c37e999d503dabc76c18e414ca020",
+    "evals/prompts/turn2.md": "ec8519af12e07dd73b89315a67b19c5f9c0d086feaf955eddd4be99b4656a492",
+    "evals/prompts/turn3-terse.md": "9dae844070305feabcfef6d1622c9ace9af941e2ed1b4d20c901471c60a5f331",
+    "evals/prompts/turn3.md": "26e6f75be9a264efb76516fc6aa34f463f453adf756d0db44f79b57680217c2a"
+  },
+  "skillSha256": {
+    "skills/storyfolio/SKILL.md": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+    "skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "skills/storyfolio/references/concept.md": "3a45ebefaea513f67dc3d862ea106500c39be2618fef6fe02bbf18487dbb968d",
+    "skills/storyfolio/references/reading-a-profile.md": "206b6302cf12cb72a3e1770351df229906b3d9ea2239aa8997647364ac3a6213",
+    "skills/storyfolio/references/storyboard.md": "48875effcb4f6c0a4c6cdf7a2a09835742a9ceabbc0275f297abd5e29d047df2"
+  },
+  "originalArtifacts": {
+    "evals/runs/codex-sol-2/analyst/with-1/judgement.json": "f9c3f07e2b6059c940b4bd87f1e7bf4fa80776ac4d57f12a8258a0eefd70ce5d",
+    "evals/runs/codex-sol-2/analyst/with-1/meta.json": "67ad2f5863d4131566cc23fa72c8d825a58a911d5afc4b97eb7986026d701dba",
+    "evals/runs/codex-sol-2/analyst/with-2/judgement.json": "13e153cec3f5b61c97642b4555d29dc3136ab9de9621f24a51deea94fb354a2c",
+    "evals/runs/codex-sol-2/analyst/with-2/meta.json": "f6f725944c6deae3bddede7127cd939b14a74b88f0db52d5b181e823c851020b",
+    "evals/runs/codex-sol-2/student/with-1/judgement.json": "682d393b7b64062badaf3426f20506aa382c5a2592a450cacd8c1ac1bbd55b38",
+    "evals/runs/codex-sol-2/student/with-1/meta.json": "629a360e7822bc8f29ff209ac185a05f0bdb03ce8013fcc6fc9f3477c515fb45",
+    "evals/runs/codex-sol-2/student/with-2/judgement.json": "3becd2a0abb87761ef2271d4bc804af8972e3007751bcc4b53249f783e97320d",
+    "evals/runs/codex-sol-2/student/with-2/meta.json": "19d8f44a571addeb971a3e5a3d47a0c8f3c1789d9c6b9a6765e765ff28d8e5c7",
+    "evals/runs/codex-stem-1/phd/with-1/judgement.json": "d4ff67d2ad02a441c7ca76131498c678ef1ecbead9d6c3d1025897f4d165ebce",
+    "evals/runs/codex-stem-1/phd/with-1/meta.json": "8d79595f23bf43ce2b366f89b46172e006fd1159cb86aa2736de0bedf52a695f"
+  }
+}

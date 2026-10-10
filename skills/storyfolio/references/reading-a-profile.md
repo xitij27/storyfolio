@@ -1,10 +1,12 @@
 # Reading a profile
 
-The first stop. You read everything, write down what you found, and ask. You do not plan yet.
+The first stop. You read the profile material, write down what you found, and ask. You do not plan yet.
 
 ## What to read
 
-Everything the person gave you: a resume, a LinkedIn profile, GitHub, writing, talks, notes to you, a site they already have. Read all of it before you write a word.
+**A folder is not permission to read every file in it.** List filenames first and read the accompanying source notes. Leave private correspondence, contact exports and participant records unopened, even when they are beside profile material. Do not sample their contents to decide whether they belong. Tell the person which files you left. If a file's purpose is unclear, ask what it contains before opening it.
+
+Read the profile material: a resume, a LinkedIn profile, GitHub, writing, talks, notes to you, a site they already have. Read all of that before you write a word.
 
 A site they already have is a source of facts and pictures. What becomes of it is theirs to say, so ask.
 

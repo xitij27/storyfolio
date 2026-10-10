@@ -1,5 +1,19 @@
 # Handover
 
+## In progress: ordered privacy, premise and creative follow-up
+
+On 10 October 2026 the author said: "okay then let us proceed with this
+order". The accepted order is the private-file boundary, the remaining
+unsupported genomics premise, then review of creative failures. The plan
+is `docs/superpowers/plans/2026-10-10-ordered-refinements.md`.
+
+The first candidate scopes reading to profile material and puts a general
+private-file boundary before any content reading in the profile reference.
+Its saved failure evidence is in `evals/runs/codex-privacy-1/written-against.md`.
+The focused batch is PhD, analyst and student twice each; a separate premise
+candidate may use four conversations afterward. The creative step reviews
+existing evidence first. No full-suite batch or rubric change is planned.
+
 ## Completed comparison: broader technical and academic coverage
 
 On 10 October 2026 the author asked: "For the tests and evals, I'd like to
