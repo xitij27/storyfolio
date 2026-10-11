@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/*"
+      ]
+    },
+    "types": [
+      "node",
+      "react",
+      "react-dom"
+    ],
+    "typeRoots": [
+      "/tmp/storyfolio-build-capability-20261011/node_modules/@types"
+    ]
+  },
+  "include": [
+    "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/next-env.d.ts",
+    "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/**/*.ts",
+    "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/**/*.tsx",
+    "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/.next/types/**/*.ts",
+    "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/**/*.mts"
+  ],
+  "exclude": [
+    "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/node_modules",
+    "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/.next/dev"
+  ]
+}

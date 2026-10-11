@@ -6,7 +6,7 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
+import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, MAX_JUDGE_PROMPT_BYTES, MAX_JUDGE_PROMPT_CHARACTERS, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
 import { captureBuildWorkspace, executeBuildTurn, hash, json, populateBuildWorkspace, prepareBuildInputs, readTurnHistory, writeNew } from "./build.mjs";
 import { invokeBuildJudge, JUDGE_IMPLEMENTATION_FILES, prepareBuildJudge, runBuildJudge } from "../codex-build-judge.mjs";
 
@@ -77,6 +77,41 @@ test("judge prompt assembly preserves all supplied text and rejects byte overflo
   assert.ok(prompt.includes('"{{rubric}}"'));
   assert.throws(() => renderBuildJudgePrompt(template, "Version one", packet, Buffer.byteLength(prompt) - 1), /nothing truncated/);
   assert.throws(() => renderBuildJudgePrompt("{{rubric}} {{rubric}} {{evidence}}", "a", packet), /exactly one/);
+});
+
+test("judge prompt accepts the exact character boundary and rejects one more ASCII character", () => {
+  const template = "{{rubric}}{{evidence}}", packet = {};
+  const rubric = "a".repeat(MAX_JUDGE_PROMPT_CHARACTERS - 2); // JSON for {} adds two.
+  const prompt = renderBuildJudgePrompt(template, rubric, packet);
+  assert.equal(prompt, rubric + "{}");
+  assert.equal(prompt.length, MAX_JUDGE_PROMPT_CHARACTERS);
+  assert.ok(Buffer.byteLength(prompt + "a") < MAX_JUDGE_PROMPT_BYTES);
+  assert.throws(() => renderBuildJudgePrompt(template, rubric + "a", packet), /character bound exceeded: 1048577 UTF-16 code units > 1048576; no model call made and nothing truncated/);
+});
+
+test("judge prompt byte boundary remains independent of its character boundary", () => {
+  const template = "{{rubric}}{{evidence}}", rubric = "漢".repeat((MAX_JUDGE_PROMPT_BYTES - 2) / 3);
+  const prompt = renderBuildJudgePrompt(template, rubric, {});
+  assert.equal(Buffer.byteLength(prompt), MAX_JUDGE_PROMPT_BYTES);
+  assert.ok(prompt.length + 1 < MAX_JUDGE_PROMPT_CHARACTERS);
+  assert.throws(() => renderBuildJudgePrompt(template, rubric + "a", {}), /byte bound exceeded: 2097153 > 2097152/);
+  assert.equal(renderBuildJudgePrompt(template, rubric + "a", {}, MAX_JUDGE_PROMPT_BYTES + 1), rubric + "a{}");
+});
+
+test("judge prompt character guard cannot be bypassed by a raised byte allowance", () => {
+  const rubric = "a".repeat(MAX_JUDGE_PROMPT_CHARACTERS - 1);
+  for (const byteLimit of [MAX_JUDGE_PROMPT_BYTES * 2, Number.MAX_SAFE_INTEGER]) {
+    assert.throws(() => renderBuildJudgePrompt("{{rubric}}{{evidence}}", rubric, {}, byteLimit), /character bound exceeded/);
+  }
+});
+
+test("judge prompt explicitly uses conservative UTF-16 units for astral characters", () => {
+  const rubric = "😀".repeat((MAX_JUDGE_PROMPT_CHARACTERS - 2) / 2);
+  const prompt = renderBuildJudgePrompt("{{rubric}}{{evidence}}", rubric, {});
+  assert.equal(prompt.length, MAX_JUDGE_PROMPT_CHARACTERS);
+  assert.equal([...prompt].length, (MAX_JUDGE_PROMPT_CHARACTERS - 2) / 2 + 2);
+  assert.ok(Buffer.byteLength(prompt + "a") <= MAX_JUDGE_PROMPT_BYTES);
+  assert.throws(() => renderBuildJudgePrompt("{{rubric}}{{evidence}}", rubric + "a", {}), /character bound exceeded.*UTF-16 code units/);
 });
 
 async function fixture(t, { failedActor = false, continuation = false, turns = 1 } = {}) {

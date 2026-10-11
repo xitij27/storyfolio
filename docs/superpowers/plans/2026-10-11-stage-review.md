@@ -291,3 +291,37 @@ authorizes its preparation and one fresh conversation for stops 5 and 6,
 with at most two actor turns and one independent judge. Its time limits,
 between-turn token thresholds, copy-choice gate and no-retry rule apply.
 This does not reopen the exhausted first cohort or authorize other studies.
+
+## Completion checkpoint and newly exposed gaps
+
+The [bounded continuation](../../../evals/runs/codex-build-completion-1/findings.md)
+has completed both authorized actor turns. It reached a real copy-choice
+gate and finished all six chapters and seven beats. Independent acceptance
+passes all six conditions, source remains unchanged by checking, and all
+49 original images were reviewed. The completed site's actual final
+desktop/phone review remains pending; the earlier engine approval is
+separate. Shipped skill and engine instructions remain unchanged.
+
+The author separately [approved three MiB](../../history/2026-10-11-build-judge-size-approval.md)
+for the one unused judge packet after its original two-MiB preparation
+failure. The CLI then rejected the input against a separate character
+limit before a model turn started. There is no judgement, usage counter or
+retry. A local character guard now prevents this avoidable invocation;
+future complete evidence delivery needs correction before another judge.
+The frozen cohort and original failed attempt remain unchanged.
+
+The full design's wording-choice contract remains required: **three total
+versions, each shown as the whole beat**, with room for the person's edits.
+The current frozen rubric required only meaningful alternatives, and the
+actor supplied two short versions for each placement. The
+[design-to-rubric audit](../../../evals/runs/codex-build-completion-1/audits/remaining-stages.md#concrete-design-to-rubric-gap-wording-choices)
+records this omission. Future measurement must cover the complete contract;
+do not retroactively rewrite this rubric or treat the shorter choices as
+an approved design revision. The static State copy also refers to rows
+that are absent in static modes, as the visual evidence records.
+
+These are saved gaps for future scoped work, not permission for an extra
+turn or an untested skill instruction. The supported build entry point,
+early preflight/sketch question, relevant optional-skill coverage, matched
+reruns, planning regression, non-sheet full-journey proof and real approval
+remain Stage 3 work. Stage 1 decisions and Stage 4 release gates stand.

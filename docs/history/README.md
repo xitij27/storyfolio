@@ -170,3 +170,14 @@ inferred from that experiment.
 cost-review question and the author's acceptance of up to two build turns
 and one judge. [The pre-completion handover](2026-10-11-before-build-completion-handover.md)
 preserves the preceding current state verbatim.
+
+## Build completion results and judge-size approval
+
+[The pre-results handover](2026-10-11-before-completion-results-handover.md)
+is a byte-identical copy of the handover at `ce7a481`, before shortening
+its completed preparation status. [The judge-size approval](2026-10-11-build-judge-size-approval.md)
+preserves the exact question and author reply raising only the one unused
+judge's byte allowance. The [completion findings](../../evals/runs/codex-build-completion-1/findings.md)
+record successful site checks, the later CLI character-limit rejection,
+the absence of a judgement, and all remaining gates. No push or publication
+was authorized or performed.

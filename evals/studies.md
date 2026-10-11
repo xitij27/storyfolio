@@ -459,3 +459,21 @@ threshold prevented later turns. Original scores, image-tool observability
 correction, coordinator checker diagnostics, retained source/screenshots
 and exact usage remain separate. This is neither a full-site pass nor a
 matched skill improvement.
+
+## Bounded Stage 3 completion, 11 October 2026
+
+[codex-build-completion-1](runs/codex-build-completion-1/findings.md) is a
+fresh two-turn conversation from the preceding saved spine. It completed
+chapters, offered and awaited copy choices, then finished the fictional
+seven-beat site. Independent full-site acceptance passes 6/6 and all 49
+original screenshots were reviewed. The actual whole-site approval and
+physical-phone check remain pending.
+
+The single judge invocation was rejected before its model turn by a
+1,048,576-character CLI limit, despite the author's separate approval of a
+three-MiB byte allowance. There is no model judgement or usage report and
+no retry. A new unpaid character guard prevents another oversized
+invocation. Source, actor diagnostics, input-size failures, actual usage
+and visual limitations remain preserved. Two design gaps are explicit:
+three complete wording versions were not supplied, and static State copy
+refers to hidden rows. No skill or shipped engine instruction changed.

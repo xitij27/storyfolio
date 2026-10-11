@@ -1,0 +1,11 @@
+file:///home/kshitij/projects/storyfolio/evals/lib/build-score.mjs:102
+  if (bytes > limit) throw new Error(`Judge prompt byte bound exceeded: ${bytes} > ${limit}; no model call made and nothing truncated`);
+                           ^
+
+Error: Judge prompt byte bound exceeded: 2560105 > 2097152; no model call made and nothing truncated
+    at renderBuildJudgePrompt (file:///home/kshitij/projects/storyfolio/evals/lib/build-score.mjs:102:28)
+    at prepareBuildJudge (file:///home/kshitij/projects/storyfolio/evals/codex-build-judge.mjs:175:18)
+    at async main (file:///home/kshitij/projects/storyfolio/evals/codex-build-judge.mjs:256:20)
+    at async file:///home/kshitij/projects/storyfolio/evals/codex-build-judge.mjs:267:85
+
+Node.js v22.22.1

@@ -1,0 +1,41 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "requestedStop": 5,
+      "complete": true,
+      "durationMs": 512798,
+      "input_tokens": 2435119,
+      "cached_input_tokens": 2310912,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 16099,
+      "reasoning_output_tokens": 3265,
+      "inputPlusOutput": 2451218,
+      "uncachedInputPlusOutput": 140306
+    },
+    {
+      "turn": 2,
+      "requestedStop": 6,
+      "complete": true,
+      "durationMs": 505892,
+      "input_tokens": 7025838,
+      "cached_input_tokens": 6818304,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 30958,
+      "reasoning_output_tokens": 8581,
+      "inputPlusOutput": 7056796,
+      "uncachedInputPlusOutput": 238492
+    }
+  ],
+  "sumOfReportedCounters": {
+    "durationMs": 1018690,
+    "input_tokens": 9460957,
+    "cached_input_tokens": 9129216,
+    "output_tokens": 47057,
+    "inputPlusOutput": 9508014,
+    "uncachedInputPlusOutput": 378798
+  },
+  "costUsd": null,
+  "limits": "Two authorized actor turns complete. Raw resumed counters may overlap. The final summed uncached-input-plus-output count exceeds 350,000; this is a between-turn threshold, not a hard in-flight cap. No further actor turn is authorized or sent. No dollar charge supplied by CLI.",
+  "excludes": "The one independent judge is accounted separately, as are coordinator/subagent work and earlier cohort."
+}

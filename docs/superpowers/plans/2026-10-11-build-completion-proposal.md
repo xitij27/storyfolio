@@ -2,6 +2,10 @@
 
 Status: authorized by the author on 11 October 2026, after the first probe's
 usage review. [Exact approval](../../history/2026-10-11-build-completion-approval.md).
+The allowance has now been used: both actor turns completed, independent
+acceptance passes 6/6 and 49 images were reviewed. The one judge invocation
+was rejected before a model turn by the CLI character limit. There is no
+judgement or retry. [Outcome and remaining gaps](../../../evals/runs/codex-build-completion-1/findings.md).
 The [first probe](../../../evals/runs/codex-build-1/findings.md) reached the
 spine but consumed its between-turn threshold before chapters and finish.
 It used 431,129 uncached-input-plus-output tokens across actor and judge,
@@ -80,3 +84,21 @@ sequence in this fresh conversation.
 Freeze these tested changes, the self-contained first prompt and source
 provenance together in a new cohort only after the cost decision. Record implementation and verification of these
 preparation gates before beginning the paid conversation.
+
+## Recorded outcome and exposure adjustment
+
+The original limits above remain the historical approved protocol. After
+preparation found a 2,560,105-byte complete judge packet, the author
+[approved a three-MiB allowance](../../history/2026-10-11-build-judge-size-approval.md)
+for the single unused judge, with the same ten-minute deadline. The frozen
+inputs, evidence and rubric were not changed or truncated. The CLI then
+rejected 2,556,184 characters against its separate 1,048,576-character
+limit. No model turn, score or usage report followed. A subsequent unpaid
+character guard and tests address future preflight, not this failed attempt.
+
+Both actors finished within the time allowance. Their conservative summed
+uncached-input-plus-output counters reached 378,798 during the last turn,
+crossing the between-turn threshold after that turn was validly authorized.
+No further actor or judge attempt is authorized by this protocol. Future
+evidence delivery and the uncovered full-beat wording contract need their
+own concrete decisions; the actual site review remains pending.

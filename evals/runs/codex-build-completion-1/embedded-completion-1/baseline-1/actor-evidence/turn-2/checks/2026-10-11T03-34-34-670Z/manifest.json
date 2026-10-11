@@ -1,0 +1,735 @@
+{
+  "started": "2026-10-11T03:34:34.675Z",
+  "node": "v22.22.1",
+  "scope": "full matrix",
+  "contract": {
+    "ids": [
+      "scope.opening",
+      "responsibilities.split",
+      "state.table",
+      "transition.diagram",
+      "observation.fixture",
+      "observation.evidence",
+      "review.close"
+    ],
+    "lookIds": [
+      "light",
+      "dark",
+      "review"
+    ]
+  },
+  "probes": {
+    "staticPhone": true,
+    "staticReduced": true
+  },
+  "matrix": [
+    {
+      "name": "light-wide",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "light-short",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1280x720",
+        "--expect-scene=on",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "light-phone",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=390x844",
+        "--touch",
+        "--expect-scene=off",
+        "--hidden=canvas"
+      ]
+    },
+    {
+      "name": "light-reduced",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=off",
+        "--positions=start,mid,end",
+        "--hidden=canvas"
+      ]
+    },
+    {
+      "name": "light-no-webgl",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "dark-wide",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "dark-short",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1280x720",
+        "--expect-scene=on",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "dark-phone",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=390x844",
+        "--touch",
+        "--expect-scene=off",
+        "--hidden=canvas"
+      ]
+    },
+    {
+      "name": "dark-reduced",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=off",
+        "--positions=start,mid,end",
+        "--hidden=canvas"
+      ]
+    },
+    {
+      "name": "dark-no-webgl",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "review-wide",
+      "look": "review",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=review",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "review-short",
+      "look": "review",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=review",
+        "--size=1280x720",
+        "--expect-scene=on",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "review-phone",
+      "look": "review",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=review",
+        "--size=390x844",
+        "--touch",
+        "--expect-scene=off",
+        "--hidden=canvas"
+      ]
+    },
+    {
+      "name": "review-reduced",
+      "look": "review",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=review",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=off",
+        "--positions=start,mid,end",
+        "--hidden=canvas"
+      ]
+    },
+    {
+      "name": "review-no-webgl",
+      "look": "review",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=review",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "no-js",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--no-js",
+        "--expect-selector=h1",
+        "--hidden=canvas,.story-look-switch,.story-control"
+      ]
+    },
+    {
+      "name": "context-loss",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--lose-context",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "look-switch",
+      "look": "light",
+      "flags": [
+        "--expect-beats=7",
+        "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--look-cycle=light,dark",
+        "--expect-look=light"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/node_modules/next/dist/bin/next",
+      "build"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "33301"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-wide",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-wide/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-short",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-short/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1280x720",
+      "--expect-scene=on",
+      "--late-shaders=40000",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-phone",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-phone/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=390x844",
+      "--touch",
+      "--expect-scene=off",
+      "--hidden=canvas",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-reduced",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-reduced/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--reduced-motion",
+      "--expect-scene=off",
+      "--positions=start,mid,end",
+      "--hidden=canvas",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-no-webgl",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/light-no-webgl/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--no-webgl",
+      "--expect-scene=off",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=dark",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-wide",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-wide/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=dark",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-short",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-short/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1280x720",
+      "--expect-scene=on",
+      "--late-shaders=40000",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=dark",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-phone",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-phone/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=390x844",
+      "--touch",
+      "--expect-scene=off",
+      "--hidden=canvas",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=dark",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-reduced",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-reduced/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1440x900",
+      "--reduced-motion",
+      "--expect-scene=off",
+      "--positions=start,mid,end",
+      "--hidden=canvas",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=dark",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-no-webgl",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/dark-no-webgl/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1440x900",
+      "--no-webgl",
+      "--expect-scene=off",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=review",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-wide",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-wide/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=review",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=review",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-short",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-short/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=review",
+      "--size=1280x720",
+      "--expect-scene=on",
+      "--late-shaders=40000",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=review",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-phone",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-phone/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=review",
+      "--size=390x844",
+      "--touch",
+      "--expect-scene=off",
+      "--hidden=canvas",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=review",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-reduced",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-reduced/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=review",
+      "--size=1440x900",
+      "--reduced-motion",
+      "--expect-scene=off",
+      "--positions=start,mid,end",
+      "--hidden=canvas",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=review",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-no-webgl",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/review-no-webgl/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=review",
+      "--size=1440x900",
+      "--no-webgl",
+      "--expect-scene=off",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/no-js",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/no-js/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--no-js",
+      "--expect-selector=h1",
+      "--hidden=canvas,.story-look-switch,.story-control",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/context-loss",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/context-loss/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--lose-context",
+      "--expect-scene=off",
+      "--wait=1000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:33301/?look=light",
+      "--out=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/look-switch",
+      "--report=/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68/checks/2026-10-11T03-34-34-670Z/look-switch/report.json",
+      "--expect-beats=7",
+      "--expect-ids=scope.opening,responsibilities.split,state.table,transition.diagram,observation.fixture,observation.evidence,review.close",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--look-cycle=light,dark",
+      "--expect-look=light",
+      "--wait=1000"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-wide",
+      "code": 0,
+      "signal": null,
+      "report": "light-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-short",
+      "code": 0,
+      "signal": null,
+      "report": "light-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-phone",
+      "code": 0,
+      "signal": null,
+      "report": "light-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "light-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "light-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-wide",
+      "code": 0,
+      "signal": null,
+      "report": "dark-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-short",
+      "code": 0,
+      "signal": null,
+      "report": "dark-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-phone",
+      "code": 0,
+      "signal": null,
+      "report": "dark-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "dark-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "dark-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-wide",
+      "code": 0,
+      "signal": null,
+      "report": "review-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-short",
+      "code": 0,
+      "signal": null,
+      "report": "review-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-phone",
+      "code": 0,
+      "signal": null,
+      "report": "review-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "review-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "review-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "no-js",
+      "code": 0,
+      "signal": null,
+      "report": "no-js/report.json",
+      "problems": []
+    },
+    {
+      "name": "context-loss",
+      "code": 0,
+      "signal": null,
+      "report": "context-loss/report.json",
+      "problems": []
+    },
+    {
+      "name": "look-switch",
+      "code": 0,
+      "signal": null,
+      "report": "look-switch/report.json",
+      "problems": []
+    }
+  ],
+  "complete": true,
+  "finished": "2026-10-11T03:37:27.312Z"
+}

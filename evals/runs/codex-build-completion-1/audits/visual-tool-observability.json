@@ -1,0 +1,1599 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-11T03:45:52.997386+00:00",
+  "purpose": "Sanitized supplemental proof of image delivery, not an independent behavioral judgment or visual-quality score.",
+  "session": {
+    "id": "01a128f7-ea73-7aa3-aa20-76942d0edf05",
+    "path": "/home/kshitij/.codex/sessions/2026/10/11/rollout-2026-10-11T05-18-20-01a128f7-ea73-7aa3-aa20-76942d0edf05.jsonl",
+    "bytes": 21965027,
+    "sha256": "13c509afef74677838f0253d103167189e92bd201be147a7a37484f133138317",
+    "scope": "Only matching exec calls containing view_image and their completed custom_tool_call_output input_image records. No reasoning, system instructions, unrelated output or full transcript copied."
+  },
+  "summary": {
+    "completedImageBearingCalls": 11,
+    "returnedImages": 53,
+    "byTurn": {
+      "1": {
+        "calls": 7,
+        "images": 29,
+        "mappings": {
+          "exact": 23,
+          "dimension-reduced": 6
+        }
+      },
+      "2": {
+        "calls": 4,
+        "images": 24,
+        "mappings": {
+          "dimension-reduced": 5,
+          "exact": 17,
+          "different-version": 2
+        }
+      }
+    },
+    "mappings": {
+      "exact": 40,
+      "dimension-reduced": 11,
+      "different-version": 2
+    }
+  },
+  "calls": [
+    {
+      "callId": "call_PJZPsCIX5D8QDLEHupCRE0hV",
+      "turn": 1,
+      "callLine": 104,
+      "callTimestamp": "2026-10-11T03:20:44.397Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-19-58-144Z/light-short/00-scope.opening.png",
+        "checks/2026-10-11T03-19-58-144Z/light-wide/01-responsibilities.split-mid.png",
+        "checks/2026-10-11T03-19-58-144Z/light-short/04-observation.fixture.png",
+        "checks/2026-10-11T03-19-58-144Z/light-phone/00-scope.opening.png",
+        "checks/2026-10-11T03-19-58-144Z/light-phone/05-observation.evidence.png"
+      ],
+      "outputLine": 111,
+      "outputTimestamp": "2026-10-11T03:20:44.502Z",
+      "returnedImages": [
+        {
+          "outputIndex": 1,
+          "requestedPath": "checks/2026-10-11T03-19-58-144Z/light-short/00-scope.opening.png",
+          "returnedBytes": 205853,
+          "returnedSha256": "003d3f36d6a378bc563f653f48f2cac32535d46f2e477b7bbd08ee88ff6a70ea",
+          "returnedDimensions": [
+            1280,
+            720
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-short/00-scope.opening.png",
+          "retainedSourceSha256": "003d3f36d6a378bc563f653f48f2cac32535d46f2e477b7bbd08ee88ff6a70ea",
+          "retainedSourceDimensions": [
+            1280,
+            720
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-short/00-scope.opening.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-short/00-scope.opening.png"
+          ]
+        },
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-19-58-144Z/light-wide/01-responsibilities.split-mid.png",
+          "returnedBytes": 137093,
+          "returnedSha256": "4415699abe1643b11c2ed303c4213b113565ddeb5148a181020c6162c8cad0bc",
+          "returnedDimensions": [
+            1440,
+            900
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-wide/01-responsibilities.split-mid.png",
+          "retainedSourceSha256": "4415699abe1643b11c2ed303c4213b113565ddeb5148a181020c6162c8cad0bc",
+          "retainedSourceDimensions": [
+            1440,
+            900
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/context-loss/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-wide/01-responsibilities.split-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-wide/01-responsibilities.split-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/look-switch/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/context-loss/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-wide/01-responsibilities.split-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-wide/01-responsibilities.split-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/look-switch/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/context-loss/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-wide/01-responsibilities.split-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-wide/01-responsibilities.split-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/look-switch/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/context-loss/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/light-wide/01-responsibilities.split-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/light-wide/01-responsibilities.split-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/look-switch/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/context-loss/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/light-wide/01-responsibilities.split-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/light-wide/01-responsibilities.split-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/look-switch/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/context-loss/01-responsibilities.split.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/light-wide/01-responsibilities.split-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/light-wide/01-responsibilities.split-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/look-switch/01-responsibilities.split.png"
+          ]
+        },
+        {
+          "outputIndex": 3,
+          "requestedPath": "checks/2026-10-11T03-19-58-144Z/light-short/04-observation.fixture.png",
+          "returnedBytes": 197937,
+          "returnedSha256": "05acddb1f26291a10b62cb262c9e96ce8d849f65963c3319b94d0d4a126fe562",
+          "returnedDimensions": [
+            1280,
+            720
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-short/04-observation.fixture.png",
+          "retainedSourceSha256": "05acddb1f26291a10b62cb262c9e96ce8d849f65963c3319b94d0d4a126fe562",
+          "retainedSourceDimensions": [
+            1280,
+            720
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-short/04-observation.fixture.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-short/04-observation.fixture.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/light-short/04-observation.fixture.png"
+          ]
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-19-58-144Z/light-phone/00-scope.opening.png",
+          "returnedBytes": 62772,
+          "returnedSha256": "65a6fe0aefb49b2f73da4172b80f5cf7b90ccdf34a14f29d9fe1900e42960567",
+          "returnedDimensions": [
+            390,
+            844
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-phone/00-scope.opening.png",
+          "retainedSourceSha256": "65a6fe0aefb49b2f73da4172b80f5cf7b90ccdf34a14f29d9fe1900e42960567",
+          "retainedSourceDimensions": [
+            390,
+            844
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-phone/00-scope.opening.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-phone/00-scope.opening.png"
+          ]
+        },
+        {
+          "outputIndex": 5,
+          "requestedPath": "checks/2026-10-11T03-19-58-144Z/light-phone/05-observation.evidence.png",
+          "returnedBytes": 59746,
+          "returnedSha256": "0322dbdaf0b926ed63d1aeb2315f090b09101a627d1f0f598ffa1a5030276330",
+          "returnedDimensions": [
+            390,
+            844
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-phone/05-observation.evidence.png",
+          "retainedSourceSha256": "0322dbdaf0b926ed63d1aeb2315f090b09101a627d1f0f598ffa1a5030276330",
+          "retainedSourceDimensions": [
+            390,
+            844
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-phone/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-phone/05-observation.evidence.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_6MWtjxtMyPfFa40swlVWIcsA",
+      "turn": 1,
+      "callLine": 192,
+      "callTimestamp": "2026-10-11T03:23:54.667Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-22-59-227Z/light-short/00-scope.opening.png"
+      ],
+      "outputLine": 195,
+      "outputTimestamp": "2026-10-11T03:24:00.873Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/light-short/00-scope.opening.png",
+          "returnedBytes": 204400,
+          "returnedSha256": "6255dcbc04ec177ad68647b0a4b972879ada892315b3cf591d543696b1521814",
+          "returnedDimensions": [
+            1280,
+            720
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-short/00-scope.opening.png",
+          "retainedSourceSha256": "6255dcbc04ec177ad68647b0a4b972879ada892315b3cf591d543696b1521814",
+          "retainedSourceDimensions": [
+            1280,
+            720
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-short/00-scope.opening.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/light-short/00-scope.opening.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/light-short/00-scope.opening.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/light-short/00-scope.opening.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_DO95BiooCKr321HFeC7xXHX1",
+      "turn": 1,
+      "callLine": 215,
+      "callTimestamp": "2026-10-11T03:24:27.402Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-wide.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-short.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-phone.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-reduced.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-no-webgl.png"
+      ],
+      "outputLine": 222,
+      "outputTimestamp": "2026-10-11T03:24:27.810Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-wide.png",
+          "returnedBytes": 846286,
+          "returnedSha256": "4342c4554db52c07a807773bee9e7775aebf01edb2958e9e802e775208519e2a",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-wide.png",
+          "retainedSourceSha256": "242f06b18850e26e4bf87183a3a7fa5b42f92c3b3de2ab9db95788a74d9b15a4",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-1-light-wide-4342c4554db5.png"
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-short.png",
+          "returnedBytes": 219785,
+          "returnedSha256": "a91f3e343acaf2387dfd7e17a04107e7991af077a798af575eaff9b5e585ba48",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-short.png",
+          "retainedSourceSha256": "a91f3e343acaf2387dfd7e17a04107e7991af077a798af575eaff9b5e585ba48",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-short.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-short.png"
+          ]
+        },
+        {
+          "outputIndex": 6,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-phone.png",
+          "returnedBytes": 126298,
+          "returnedSha256": "bd02d51c72ef810d52e1c7c76a1c08ba1619648e714bbb03fcf9f20afd9395a8",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-phone.png",
+          "retainedSourceSha256": "bd02d51c72ef810d52e1c7c76a1c08ba1619648e714bbb03fcf9f20afd9395a8",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-phone.png"
+          ]
+        },
+        {
+          "outputIndex": 8,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-reduced.png",
+          "returnedBytes": 733167,
+          "returnedSha256": "0b730990a1788b3c72891d96a9ae3c79a21652bef9ec755aa1a98d953f01e679",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-reduced.png",
+          "retainedSourceSha256": "37fe761cda26dc315a8e32fed18a287ad5a7fffaa29c123497a8d80115d36bb3",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-1-light-reduced-0b730990a178.png"
+        },
+        {
+          "outputIndex": 10,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/light-no-webgl.png",
+          "returnedBytes": 143148,
+          "returnedSha256": "909786bf3a93f10ebd96152edeee4876953a44b91e703ccdefe4f03a9b3e3750",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-no-webgl.png",
+          "retainedSourceSha256": "909786bf3a93f10ebd96152edeee4876953a44b91e703ccdefe4f03a9b3e3750",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-no-webgl.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_SH2n40fSn6H0dwJn62aOIgAX",
+      "turn": 1,
+      "callLine": 245,
+      "callTimestamp": "2026-10-11T03:25:19.366Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-wide.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-short.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-phone.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-reduced.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-no-webgl.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/supplemental.png"
+      ],
+      "outputLine": 253,
+      "outputTimestamp": "2026-10-11T03:25:19.793Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-wide.png",
+          "returnedBytes": 821062,
+          "returnedSha256": "9c608a2cd2fc6b4b50dbdaed2e4494e630871df4de0b126cbf3b5d262b53269f",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-wide.png",
+          "retainedSourceSha256": "87138050372b150cac5dc909450b00a9cd1f59679c5bd1bc6713b710f0643362",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-1-dark-wide-9c608a2cd2fc.png"
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-short.png",
+          "returnedBytes": 204213,
+          "returnedSha256": "f18b7b8b8445e58fe86f99efcd516613e448492796fea32704bbcdcbcc1dccbf",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-short.png",
+          "retainedSourceSha256": "f18b7b8b8445e58fe86f99efcd516613e448492796fea32704bbcdcbcc1dccbf",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-short.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-short.png"
+          ]
+        },
+        {
+          "outputIndex": 6,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-phone.png",
+          "returnedBytes": 126583,
+          "returnedSha256": "55a5aa3b9fba00dd89191de1f9605c0fd4f9c792234ac41ecb6d34ed15604ff2",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-phone.png",
+          "retainedSourceSha256": "55a5aa3b9fba00dd89191de1f9605c0fd4f9c792234ac41ecb6d34ed15604ff2",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-phone.png"
+          ]
+        },
+        {
+          "outputIndex": 8,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-reduced.png",
+          "returnedBytes": 737847,
+          "returnedSha256": "17eb459da48be1baa0f490170d85ce0b9ff970389a1b8dadaf2a680dc9487656",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-reduced.png",
+          "retainedSourceSha256": "cd63e1bc9517c91130de595cfb9b45e24c6ab29ea8abfee884ea7eab2efa9ab2",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-1-dark-reduced-17eb459da48b.png"
+        },
+        {
+          "outputIndex": 10,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-no-webgl.png",
+          "returnedBytes": 143122,
+          "returnedSha256": "5a10856cf9ce331b286efa5d5c05f64ce21444a647332ec0f228ad004b211521",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-no-webgl.png",
+          "retainedSourceSha256": "5a10856cf9ce331b286efa5d5c05f64ce21444a647332ec0f228ad004b211521",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png"
+          ]
+        },
+        {
+          "outputIndex": 12,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/supplemental.png",
+          "returnedBytes": 239902,
+          "returnedSha256": "f35a4b655d6d8e0ae6cda849f1cf88d9f92737d2381e774eaa22cfd46d34c410",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/supplemental.png",
+          "retainedSourceSha256": "f35a4b655d6d8e0ae6cda849f1cf88d9f92737d2381e774eaa22cfd46d34c410",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/supplemental.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/supplemental.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_KxjzRWd31n3W6pTN3JfwPyLx",
+      "turn": 1,
+      "callLine": 272,
+      "callTimestamp": "2026-10-11T03:25:55.763Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-wide.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-short.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-phone.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-reduced.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-no-webgl.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/no-js.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/context-loss.png",
+        "checks/2026-10-11T03-22-59-227Z/visual-sheets/look-switch.png"
+      ],
+      "outputLine": 283,
+      "outputTimestamp": "2026-10-11T03:25:56.326Z",
+      "returnedImages": [
+        {
+          "outputIndex": 3,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-wide.png",
+          "returnedBytes": 849966,
+          "returnedSha256": "63a93a84b1194ae653d982bf14938bb3034e6e70f3a3d49738d895161ed27ae8",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-wide.png",
+          "retainedSourceSha256": "596647f2ebd5db0a6d68df4e244e89654f07f94f5ef40b32e48f70d737fb3719",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-1-review-wide-63a93a84b119.png"
+        },
+        {
+          "outputIndex": 5,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-short.png",
+          "returnedBytes": 223257,
+          "returnedSha256": "34caa815e57fbfad7681b4db79514cf6b591446968b886795b44ca08cdcc8f9a",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-short.png",
+          "retainedSourceSha256": "34caa815e57fbfad7681b4db79514cf6b591446968b886795b44ca08cdcc8f9a",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-short.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-short.png"
+          ]
+        },
+        {
+          "outputIndex": 7,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-phone.png",
+          "returnedBytes": 126501,
+          "returnedSha256": "4aab3a333f52d182ce6c2f40522224e54b9247516a5d86dc08bfb74c43268873",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-phone.png",
+          "retainedSourceSha256": "4aab3a333f52d182ce6c2f40522224e54b9247516a5d86dc08bfb74c43268873",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-phone.png"
+          ]
+        },
+        {
+          "outputIndex": 9,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-reduced.png",
+          "returnedBytes": 734266,
+          "returnedSha256": "7e2ed051e89842d9bd1760fa23b5e48447fc6ce5778ec578716600aef2ba770f",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-reduced.png",
+          "retainedSourceSha256": "906c75d50ef0f6de58877689808148a51b5cf98189398615100b3ccc42b62458",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-1-review-reduced-7e2ed051e898.png"
+        },
+        {
+          "outputIndex": 11,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/review-no-webgl.png",
+          "returnedBytes": 143313,
+          "returnedSha256": "2a15690c622831620d51c9d3bb32619779361691a4a25dbe9e1e4f2e4adcdbe2",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-no-webgl.png",
+          "retainedSourceSha256": "2a15690c622831620d51c9d3bb32619779361691a4a25dbe9e1e4f2e4adcdbe2",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-no-webgl.png"
+          ]
+        },
+        {
+          "outputIndex": 13,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/no-js.png",
+          "returnedBytes": 142145,
+          "returnedSha256": "b5ff316b76a6cdd77735e2d28f00681ee3af0a2b555909b3584fd4814b1e4407",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/no-js.png",
+          "retainedSourceSha256": "b5ff316b76a6cdd77735e2d28f00681ee3af0a2b555909b3584fd4814b1e4407",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/no-js.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/no-js.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/no-js.png"
+          ]
+        },
+        {
+          "outputIndex": 15,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/context-loss.png",
+          "returnedBytes": 197618,
+          "returnedSha256": "ac44810ce5141a498c8db98ce1ffd1d4270e03ce16851749d1045d207d945a0f",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/context-loss.png",
+          "retainedSourceSha256": "ac44810ce5141a498c8db98ce1ffd1d4270e03ce16851749d1045d207d945a0f",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/context-loss.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/context-loss.png"
+          ]
+        },
+        {
+          "outputIndex": 17,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/visual-sheets/look-switch.png",
+          "returnedBytes": 247010,
+          "returnedSha256": "44295d002de03f0f31c129815c1af6df000ccd3319e34686865498656dd9c556",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/look-switch.png",
+          "retainedSourceSha256": "44295d002de03f0f31c129815c1af6df000ccd3319e34686865498656dd9c556",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/look-switch.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/look-switch.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_rDLBiJs30yUdu3SlusyIu9bj",
+      "turn": 1,
+      "callLine": 287,
+      "callTimestamp": "2026-10-11T03:26:05.160Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-22-59-227Z/light-wide/05-observation.evidence-mid.png",
+        "checks/2026-10-11T03-22-59-227Z/supplemental/phone-initial.png",
+        "checks/2026-10-11T03-22-59-227Z/light-phone/04-observation.fixture.png"
+      ],
+      "outputLine": 293,
+      "outputTimestamp": "2026-10-11T03:26:05.503Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/light-wide/05-observation.evidence-mid.png",
+          "returnedBytes": 180862,
+          "returnedSha256": "fd7d33196735b34e94f689c568c9fa2e47ae6f23d3e0347ea154a87fbbfdb64f",
+          "returnedDimensions": [
+            1440,
+            900
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-wide/05-observation.evidence-mid.png",
+          "retainedSourceSha256": "fd7d33196735b34e94f689c568c9fa2e47ae6f23d3e0347ea154a87fbbfdb64f",
+          "retainedSourceDimensions": [
+            1440,
+            900
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/context-loss/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-wide/05-observation.evidence-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-wide/05-observation.evidence-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/look-switch/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/context-loss/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-wide/05-observation.evidence-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-wide/05-observation.evidence-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/look-switch/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/context-loss/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-wide/05-observation.evidence-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-wide/05-observation.evidence-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/look-switch/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/context-loss/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/light-wide/05-observation.evidence-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/light-wide/05-observation.evidence-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/look-switch/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/context-loss/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/light-wide/05-observation.evidence-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/light-wide/05-observation.evidence-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/look-switch/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/context-loss/05-observation.evidence.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/light-wide/05-observation.evidence-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/light-wide/05-observation.evidence-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/look-switch/05-observation.evidence.png"
+          ]
+        },
+        {
+          "outputIndex": 3,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/supplemental/phone-initial.png",
+          "returnedBytes": 55975,
+          "returnedSha256": "01148c02c90be5fecf1b2ed907f198bc88ace0fd1fbc016d307b7b236a920ed3",
+          "returnedDimensions": [
+            390,
+            844
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/supplemental/phone-initial.png",
+          "retainedSourceSha256": "01148c02c90be5fecf1b2ed907f198bc88ace0fd1fbc016d307b7b236a920ed3",
+          "retainedSourceDimensions": [
+            390,
+            844
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/supplemental/phone-initial.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2-failed-supplemental/phone-initial.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/supplemental/phone-initial.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/supplemental/phone-initial.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/supplemental/phone-initial.png"
+          ]
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/light-phone/04-observation.fixture.png",
+          "returnedBytes": 57494,
+          "returnedSha256": "2a1687637f54070f40caee18513cf3aa1194efa1efa24a55c4fad722ba707ea5",
+          "returnedDimensions": [
+            390,
+            844
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-phone/04-observation.fixture.png",
+          "retainedSourceSha256": "2a1687637f54070f40caee18513cf3aa1194efa1efa24a55c4fad722ba707ea5",
+          "retainedSourceDimensions": [
+            390,
+            844
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-19-58-144Z/light-phone/04-observation.fixture.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/light-phone/04-observation.fixture.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-19-58-144Z/light-phone/04-observation.fixture.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/light-phone/04-observation.fixture.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/light-phone/04-observation.fixture.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/light-phone/04-observation.fixture.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_naxL16fipwCezmws1mPWcw2g",
+      "turn": 1,
+      "callLine": 297,
+      "callTimestamp": "2026-10-11T03:26:29.280Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-22-59-227Z/context-loss/context-lost.png"
+      ],
+      "outputLine": 301,
+      "outputTimestamp": "2026-10-11T03:26:29.551Z",
+      "returnedImages": [
+        {
+          "outputIndex": 1,
+          "requestedPath": "checks/2026-10-11T03-22-59-227Z/context-loss/context-lost.png",
+          "returnedBytes": 91998,
+          "returnedSha256": "33122d0371ad0b39a2b7e2e6aae176725e381a2b02a5c0322b2660f138b00a11",
+          "returnedDimensions": [
+            1440,
+            900
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/context-loss/context-lost.png",
+          "retainedSourceSha256": "33122d0371ad0b39a2b7e2e6aae176725e381a2b02a5c0322b2660f138b00a11",
+          "retainedSourceDimensions": [
+            1440,
+            900
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/context-loss/context-lost.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/context-loss/context-lost.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/context-loss/context-lost.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/context-loss/context-lost.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_vU5ttJg1qashYNrfOtpRkNRR",
+      "turn": 2,
+      "callLine": 471,
+      "callTimestamp": "2026-10-11T03:35:59.686Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-wide.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-short.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-phone.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-reduced.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-no-webgl.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/supplemental.png"
+      ],
+      "outputLine": 479,
+      "outputTimestamp": "2026-10-11T03:36:00.252Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-wide.png",
+          "returnedBytes": 846284,
+          "returnedSha256": "45ab848b9a73f98582af5ea8be39807bc24d76f77229f11432e257751c560fd6",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-wide.png",
+          "retainedSourceSha256": "c7dab181ed9a77f0cb7120c9a820d0eed52fdb4383d6c4cfef56fe49c717e2d4",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-2-light-wide-45ab848b9a73.png"
+        },
+        {
+          "outputIndex": 3,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-short.png",
+          "returnedBytes": 219782,
+          "returnedSha256": "64e7c9b20be5a885f3bbc6755003032719c0ba9185cb9111aa3b00f5774cc174",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-short.png",
+          "retainedSourceSha256": "64e7c9b20be5a885f3bbc6755003032719c0ba9185cb9111aa3b00f5774cc174",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-short.png"
+          ]
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-phone.png",
+          "returnedBytes": 126298,
+          "returnedSha256": "bd02d51c72ef810d52e1c7c76a1c08ba1619648e714bbb03fcf9f20afd9395a8",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-phone.png",
+          "retainedSourceSha256": "bd02d51c72ef810d52e1c7c76a1c08ba1619648e714bbb03fcf9f20afd9395a8",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-phone.png"
+          ]
+        },
+        {
+          "outputIndex": 5,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-reduced.png",
+          "returnedBytes": 733167,
+          "returnedSha256": "0b730990a1788b3c72891d96a9ae3c79a21652bef9ec755aa1a98d953f01e679",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-reduced.png",
+          "retainedSourceSha256": "37fe761cda26dc315a8e32fed18a287ad5a7fffaa29c123497a8d80115d36bb3",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-2-light-reduced-0b730990a178.png"
+        },
+        {
+          "outputIndex": 6,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/light-no-webgl.png",
+          "returnedBytes": 143148,
+          "returnedSha256": "909786bf3a93f10ebd96152edeee4876953a44b91e703ccdefe4f03a9b3e3750",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-no-webgl.png",
+          "retainedSourceSha256": "909786bf3a93f10ebd96152edeee4876953a44b91e703ccdefe4f03a9b3e3750",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/light-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/light-no-webgl.png"
+          ]
+        },
+        {
+          "outputIndex": 7,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/supplemental.png",
+          "returnedBytes": 263362,
+          "returnedSha256": "f00502e01445e05261dd8d91be49fde873431fc4423a03f75538464312b2b885",
+          "returnedDimensions": [
+            1600,
+            1108
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/supplemental.png",
+          "retainedSourceSha256": "f00502e01445e05261dd8d91be49fde873431fc4423a03f75538464312b2b885",
+          "retainedSourceDimensions": [
+            1600,
+            1108
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/supplemental.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_r1tglhzfKrb6lhGUOKJs4MT2",
+      "turn": 2,
+      "callLine": 490,
+      "callTimestamp": "2026-10-11T03:36:30.298Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-wide.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-short.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-phone.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-reduced.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png"
+      ],
+      "outputLine": 497,
+      "outputTimestamp": "2026-10-11T03:36:30.868Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-wide.png",
+          "returnedBytes": 821616,
+          "returnedSha256": "1513995b0f365317a3a34f93a46b51737688ad76e4012229040b30a722bd7141",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-wide.png",
+          "retainedSourceSha256": "ad12cd39e1f7301c9ec608f96d92bdf1cda812b3f03ce9c6f6f9efd4a561933c",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-2-dark-wide-1513995b0f36.png"
+        },
+        {
+          "outputIndex": 3,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-short.png",
+          "returnedBytes": 204214,
+          "returnedSha256": "b838eaf4834465c77ac197d12f17bb98f897168c91c36f36f7f82029a5ac3b6f",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-short.png",
+          "retainedSourceSha256": "b838eaf4834465c77ac197d12f17bb98f897168c91c36f36f7f82029a5ac3b6f",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-short.png"
+          ]
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-phone.png",
+          "returnedBytes": 126583,
+          "returnedSha256": "55a5aa3b9fba00dd89191de1f9605c0fd4f9c792234ac41ecb6d34ed15604ff2",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-phone.png",
+          "retainedSourceSha256": "55a5aa3b9fba00dd89191de1f9605c0fd4f9c792234ac41ecb6d34ed15604ff2",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-phone.png"
+          ]
+        },
+        {
+          "outputIndex": 5,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-reduced.png",
+          "returnedBytes": 737847,
+          "returnedSha256": "17eb459da48be1baa0f490170d85ce0b9ff970389a1b8dadaf2a680dc9487656",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-reduced.png",
+          "retainedSourceSha256": "cd63e1bc9517c91130de595cfb9b45e24c6ab29ea8abfee884ea7eab2efa9ab2",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-2-dark-reduced-17eb459da48b.png"
+        },
+        {
+          "outputIndex": 6,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png",
+          "returnedBytes": 64381,
+          "returnedSha256": "7346f5094f970208bcde9b66a87bae2592f5d87f6d902fcb5146cbe1256de494",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png",
+          "retainedSourceSha256": "5a10856cf9ce331b286efa5d5c05f64ce21444a647332ec0f228ad004b211521",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "different-version",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-2-dark-no-webgl-7346f5094f97.png"
+        }
+      ]
+    },
+    {
+      "callId": "call_TNtETrpj02BwonDVwYTQBBkF",
+      "turn": 2,
+      "callLine": 523,
+      "callTimestamp": "2026-10-11T03:37:21.851Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-wide.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-short.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-phone.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-reduced.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-no-webgl.png"
+      ],
+      "outputLine": 531,
+      "outputTimestamp": "2026-10-11T03:37:27.201Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png",
+          "returnedBytes": 143122,
+          "returnedSha256": "5a10856cf9ce331b286efa5d5c05f64ce21444a647332ec0f228ad004b211521",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png",
+          "retainedSourceSha256": "5a10856cf9ce331b286efa5d5c05f64ce21444a647332ec0f228ad004b211521",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/dark-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/dark-no-webgl.png"
+          ]
+        },
+        {
+          "outputIndex": 3,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-wide.png",
+          "returnedBytes": 849965,
+          "returnedSha256": "6f968ad35b5dc47620422ae4b0ff882929ca5a639e056f452f805ef6d4cd3375",
+          "returnedDimensions": [
+            1544,
+            1600
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-wide.png",
+          "retainedSourceSha256": "2e0904a0e54cf9e4b75155f48217ef0617bca5babc2d79e88c68f591891d7f09",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "dimension-reduced",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-2-review-wide-6f968ad35b5d.png"
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-short.png",
+          "returnedBytes": 223354,
+          "returnedSha256": "0a310204a68aad6338d852ad31494dd0b0692eec1b313c5ec34f92dae263e80c",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-short.png",
+          "retainedSourceSha256": "0a310204a68aad6338d852ad31494dd0b0692eec1b313c5ec34f92dae263e80c",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-short.png"
+          ]
+        },
+        {
+          "outputIndex": 5,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-phone.png",
+          "returnedBytes": 126501,
+          "returnedSha256": "4aab3a333f52d182ce6c2f40522224e54b9247516a5d86dc08bfb74c43268873",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-phone.png",
+          "retainedSourceSha256": "4aab3a333f52d182ce6c2f40522224e54b9247516a5d86dc08bfb74c43268873",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-phone.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-phone.png"
+          ]
+        },
+        {
+          "outputIndex": 6,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-reduced.png",
+          "returnedBytes": 342453,
+          "returnedSha256": "bf2d2df097b59bcce5fb5070b155e47ff7a263ddf32c79a2a43b32050736aac5",
+          "returnedDimensions": [
+            1600,
+            1383
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-reduced.png",
+          "retainedSourceSha256": "906c75d50ef0f6de58877689808148a51b5cf98189398615100b3ccc42b62458",
+          "retainedSourceDimensions": [
+            1600,
+            1658
+          ],
+          "mapping": "different-version",
+          "identicalRetainedPngPaths": [],
+          "preservedReturnedImagePath": "audits/visual-tool-returned-images/turn-2-review-reduced-bf2d2df097b5.png"
+        },
+        {
+          "outputIndex": 7,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/review-no-webgl.png",
+          "returnedBytes": 143313,
+          "returnedSha256": "2a15690c622831620d51c9d3bb32619779361691a4a25dbe9e1e4f2e4adcdbe2",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-no-webgl.png",
+          "retainedSourceSha256": "2a15690c622831620d51c9d3bb32619779361691a4a25dbe9e1e4f2e4adcdbe2",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/review-no-webgl.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/review-no-webgl.png"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "call_rvKK1AS1WMw0XktGf5VKEqOm",
+      "turn": 2,
+      "callLine": 543,
+      "callTimestamp": "2026-10-11T03:37:48.430Z",
+      "tool": "exec",
+      "innerTool": "tools.view_image",
+      "requestedPaths": [
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/no-js.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/context-loss.png",
+        "checks/2026-10-11T03-34-34-670Z/visual-sheets/look-switch.png",
+        "checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-end.png",
+        "checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-mid.png",
+        "checks/2026-10-11T03-34-34-670Z/supplemental/desktop-evidence.png",
+        "checks/2026-10-11T03-34-34-670Z/supplemental/phone-keyboard-focus.png"
+      ],
+      "outputLine": 552,
+      "outputTimestamp": "2026-10-11T03:37:48.884Z",
+      "returnedImages": [
+        {
+          "outputIndex": 2,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/no-js.png",
+          "returnedBytes": 142145,
+          "returnedSha256": "b5ff316b76a6cdd77735e2d28f00681ee3af0a2b555909b3584fd4814b1e4407",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/no-js.png",
+          "retainedSourceSha256": "b5ff316b76a6cdd77735e2d28f00681ee3af0a2b555909b3584fd4814b1e4407",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/visual-sheets/no-js.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/visual-sheets/no-js.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/no-js.png"
+          ]
+        },
+        {
+          "outputIndex": 3,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/context-loss.png",
+          "returnedBytes": 216651,
+          "returnedSha256": "8f737d9583ab0e9f8515f5d065742126e70ba43ae1fa4f1086020f878af3794f",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/context-loss.png",
+          "retainedSourceSha256": "8f737d9583ab0e9f8515f5d065742126e70ba43ae1fa4f1086020f878af3794f",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/context-loss.png"
+          ]
+        },
+        {
+          "outputIndex": 4,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/visual-sheets/look-switch.png",
+          "returnedBytes": 246969,
+          "returnedSha256": "342ac5bdecf4978dc22587feb7b62dc1e3816d31a3c1d3204bf2bbd94c66d387",
+          "returnedDimensions": [
+            1600,
+            1000
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/look-switch.png",
+          "retainedSourceSha256": "342ac5bdecf4978dc22587feb7b62dc1e3816d31a3c1d3204bf2bbd94c66d387",
+          "retainedSourceDimensions": [
+            1600,
+            1000
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/visual-sheets/look-switch.png"
+          ]
+        },
+        {
+          "outputIndex": 5,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-end.png",
+          "returnedBytes": 96131,
+          "returnedSha256": "2b2fa37919f0f9bce6153e4d668c53c7bed5de9ff86e3bb22ac5a23d614ce2f6",
+          "returnedDimensions": [
+            1440,
+            900
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-end.png",
+          "retainedSourceSha256": "2b2fa37919f0f9bce6153e4d668c53c7bed5de9ff86e3bb22ac5a23d614ce2f6",
+          "retainedSourceDimensions": [
+            1440,
+            900
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/review-reduced/06-review.close-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/review-reduced/06-review.close-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/review-reduced/06-review.close-end.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-end.png"
+          ]
+        },
+        {
+          "outputIndex": 6,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-mid.png",
+          "returnedBytes": 101801,
+          "returnedSha256": "e2f4067db57ac1dd9419b7a2e991e27fbe2f634c8877d1f7c6532113d54a0b68",
+          "returnedDimensions": [
+            1440,
+            900
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-mid.png",
+          "retainedSourceSha256": "e2f4067db57ac1dd9419b7a2e991e27fbe2f634c8877d1f7c6532113d54a0b68",
+          "retainedSourceDimensions": [
+            1440,
+            900
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z/review-reduced/06-review.close-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-22-59-227Z/review-reduced/06-review.close-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/review-reduced/06-review.close-mid.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/review-reduced/06-review.close-mid.png"
+          ]
+        },
+        {
+          "outputIndex": 7,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/supplemental/desktop-evidence.png",
+          "returnedBytes": 191678,
+          "returnedSha256": "888b4f8f2ddf38dc0ef0696cee2b52ac863ec2b81cd8842578330443a53c7ee6",
+          "returnedDimensions": [
+            1440,
+            900
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/supplemental/desktop-evidence.png",
+          "retainedSourceSha256": "888b4f8f2ddf38dc0ef0696cee2b52ac863ec2b81cd8842578330443a53c7ee6",
+          "retainedSourceDimensions": [
+            1440,
+            900
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/supplemental/desktop-evidence.png"
+          ]
+        },
+        {
+          "outputIndex": 8,
+          "requestedPath": "checks/2026-10-11T03-34-34-670Z/supplemental/phone-keyboard-focus.png",
+          "returnedBytes": 57795,
+          "returnedSha256": "7d414ece3ab7d01c24e7b217cadffeee7ac74e7eddc45866a4811af871c368c8",
+          "returnedDimensions": [
+            390,
+            844
+          ],
+          "detail": "high",
+          "retainedSourcePath": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/supplemental/phone-keyboard-focus.png",
+          "retainedSourceSha256": "7d414ece3ab7d01c24e7b217cadffeee7ac74e7eddc45866a4811af871c368c8",
+          "retainedSourceDimensions": [
+            390,
+            844
+          ],
+          "mapping": "exact",
+          "identicalRetainedPngPaths": [
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2-failed-supplemental/phone-keyboard-focus.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-31-39-431Z/supplemental/phone-keyboard-focus.png",
+            "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z/supplemental/phone-keyboard-focus.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "publicStreams": [
+    {
+      "turn": 1,
+      "path": "embedded-completion-1/baseline-1/turns/01/stream.jsonl",
+      "sha256": "479d2d7ab1a2b0a44811a6d9a4c3c2f72632e409af94910b86bbc746829812b8",
+      "viewImageLiteralOccurrences": 0,
+      "inputImageLiteralOccurrences": 0
+    },
+    {
+      "turn": 2,
+      "path": "embedded-completion-1/baseline-1/turns/02/stream.jsonl",
+      "sha256": "cde146f9590fef1ed23e30c6f406c2fe2a005c4dafcb6b3c5234f93b2b4c7041",
+      "viewImageLiteralOccurrences": 0,
+      "inputImageLiteralOccurrences": 0
+    }
+  ],
+  "retainedCoverage": [
+    {
+      "turn": 1,
+      "retainedMatrixDirectory": "embedded-completion-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T03-22-59-227Z",
+      "casePngCounts": {
+        "light-wide": 21,
+        "light-short": 7,
+        "light-phone": 7,
+        "light-reduced": 21,
+        "light-no-webgl": 7,
+        "dark-wide": 21,
+        "dark-short": 7,
+        "dark-phone": 7,
+        "dark-reduced": 21,
+        "dark-no-webgl": 7,
+        "review-wide": 21,
+        "review-short": 7,
+        "review-phone": 7,
+        "review-reduced": 21,
+        "review-no-webgl": 7,
+        "no-js": 7,
+        "context-loss": 8,
+        "look-switch": 9
+      },
+      "matrixPngCount": 213,
+      "supplementalPngCount": 11,
+      "sheetRequestedCases": [
+        "context-loss",
+        "dark-no-webgl",
+        "dark-phone",
+        "dark-reduced",
+        "dark-short",
+        "dark-wide",
+        "light-no-webgl",
+        "light-phone",
+        "light-reduced",
+        "light-short",
+        "light-wide",
+        "look-switch",
+        "no-js",
+        "review-no-webgl",
+        "review-phone",
+        "review-reduced",
+        "review-short",
+        "review-wide",
+        "supplemental"
+      ]
+    },
+    {
+      "turn": 2,
+      "retainedMatrixDirectory": "embedded-completion-1/baseline-1/actor-evidence/turn-2/checks/2026-10-11T03-34-34-670Z",
+      "casePngCounts": {
+        "light-wide": 21,
+        "light-short": 7,
+        "light-phone": 7,
+        "light-reduced": 21,
+        "light-no-webgl": 7,
+        "dark-wide": 21,
+        "dark-short": 7,
+        "dark-phone": 7,
+        "dark-reduced": 21,
+        "dark-no-webgl": 7,
+        "review-wide": 21,
+        "review-short": 7,
+        "review-phone": 7,
+        "review-reduced": 21,
+        "review-no-webgl": 7,
+        "no-js": 7,
+        "context-loss": 8,
+        "look-switch": 9
+      },
+      "matrixPngCount": 213,
+      "supplementalPngCount": 16,
+      "sheetRequestedCases": [
+        "context-loss",
+        "dark-no-webgl",
+        "dark-phone",
+        "dark-reduced",
+        "dark-short",
+        "dark-wide",
+        "light-no-webgl",
+        "light-phone",
+        "light-reduced",
+        "light-short",
+        "light-wide",
+        "look-switch",
+        "no-js",
+        "review-no-webgl",
+        "review-phone",
+        "review-reduced",
+        "review-short",
+        "review-wide",
+        "supplemental"
+      ]
+    }
+  ],
+  "generator": {
+    "path": "embedded-completion-1/baseline-1/actor-evidence/turn-2/storyfolio-contact-sheets.mjs",
+    "sha256": "b4e5d39aa6e56265803f3ac5eed182a1cbf5b31e3e8501ed1c2e016dd721fcf7",
+    "layout": "All available case PNGs sorted into four columns, image boxes 235px high, full-page screenshot at 1600px width. Reading while generation is incomplete can produce partial sheets."
+  },
+  "limitations": [
+    "Delivery of image blocks does not prove attentive review or establish visual quality.",
+    "Eleven tall-sheet outputs have reduced dimensions consistent with default view_image resizing; source and returned hashes intentionally differ, and no exact resampling equivalence is claimed.",
+    "Two turn-2 outputs were partial sheets: dark-no-webgl contained three screenshots and was later reread with the final seven-image sheet bytes; review-reduced contained nineteen screenshots, with its missing close-mid and close-end originals opened subsequently. The completed review-reduced sheet itself was not reopened.",
+    "Contact-sheet delivery does not establish opening every original at full resolution.",
+    "The public exec JSONL omits these view calls and image outputs; their absence there cannot establish that no images were delivered."
+  ],
+  "partialSheetInspection": {
+    "method": "Individually opened the two preserved returned image payloads during this coordinator audit and read their labels.",
+    "darkNoWebgl": {
+      "imagesVisible": 3,
+      "laterCompletedSheetExactMatch": true,
+      "completedImages": 7
+    },
+    "reviewReduced": {
+      "imagesVisible": 19,
+      "missingPaths": [
+        "review-reduced/06-review.close-mid.png",
+        "review-reduced/06-review.close-end.png"
+      ],
+      "closeStartVisible": true,
+      "bothMissingOriginalsSubsequentlyReturnedWithExactRetainedBytes": true,
+      "completedSheetReopened": false
+    }
+  }
+}

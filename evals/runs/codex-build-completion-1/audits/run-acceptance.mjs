@@ -1,0 +1,47 @@
+import { spawn } from "node:child_process";
+import { readFile, writeFile, cp, mkdir } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { inspectWorkspace, hash, json, verifyInputs } from "../../../lib/build.mjs";
+
+const folder = dirname(fileURLToPath(import.meta.url));
+const run = join(folder, "../embedded-completion-1/baseline-1");
+const turn = process.argv[2];
+if (!["1", "2"].includes(turn)) throw new Error("Supply the final saved actor turn, 1 or 2");
+const result = JSON.parse(await readFile(join(run, `turns/${turn.padStart(2, "0")}/result.json`), "utf8"));
+const meta = JSON.parse(await readFile(join(run, "meta.json"), "utf8"));
+const frozen = await verifyInputs(meta.inputs);
+const cap = JSON.parse(await readFile(join(meta.inputs, "capabilities.json"), "utf8"));
+const inspect = async () => {
+  const source = await inspectWorkspace(meta.work);
+  return { ...source, entries: undefined, files: Object.fromEntries(Object.entries(source.entries).map(([path, { bytes, ...entry }]) => [path, entry])) };
+};
+const differences = (a, b) => [...new Set([...Object.keys(a), ...Object.keys(b)])].filter(path => json(a[path]) !== json(b[path]));
+const before = await inspect();
+const drift = differences(result.snapshot.files, before.files);
+if (drift.length) throw new Error(`Workspace differs from saved final source: ${drift.join(", ")}`);
+const destination = join(run, "acceptance");
+await mkdir(destination);
+const save = (name, value) => writeFile(join(destination, name), json(value), { flag: "wx" });
+await save("source-before.json", before);
+const args = ["sandbox"];
+for (let index = 0; index < cap.argv.length; index++) if (cap.argv[index] === "-c") args.push("-c", cap.argv[++index]);
+const out = "/tmp/storyfolio-completion-acceptance-1";
+args.push("--", process.execPath, join(meta.inputs, "implementation/evals/check-build.mjs"), `--workspace=${meta.work}`, `--expectations=${join(meta.inputs, "expectations.json")}`, `--out=${out}`, "--dependencies=/tmp/storyfolio-build-capability-20261011");
+await save("command.json", { modelCalls: 0, started: new Date().toISOString(), finalTurn: Number(turn), finalTurnResultHash: hash(await readFile(join(run, `turns/${turn.padStart(2, "0")}/result.json`))), inputDigest: frozen.digest, executable: cap.cliExecutable, cwd: meta.work, args, limits: "Standalone sandbox uses the exact actor config but cannot ignore user config. Full-site expectations are unchanged; actor-authored checker aliases are not used." });
+const execution = await new Promise(resolve => {
+  const child = spawn(cap.cliExecutable, args, { cwd: meta.work, stdio: ["ignore", "pipe", "pipe"] });
+  let stdout = "", stderr = "";
+  child.stdout.on("data", data => { stdout += data; process.stdout.write(data); });
+  child.stderr.on("data", data => { stderr += data; process.stderr.write(data); });
+  child.on("error", error => resolve({ error: String(error), code: null, stdout, stderr }));
+  child.on("close", (code, signal) => resolve({ code, signal, stdout, stderr }));
+});
+await save("process.json", { ...execution, finished: new Date().toISOString() });
+await cp(out, join(destination, "result"), { recursive: true, errorOnExist: true, force: false });
+const after = await inspect();
+await save("source-after.json", after);
+const changed = differences(before.files, after.files);
+await save("source-comparison.json", { changed, sourceUnchanged: changed.length === 0 });
+console.log(json({ code: execution.code, sourceUnchanged: changed.length === 0, result: join(destination, "result/manifest.json") }));
+process.exitCode = execution.code === 0 && !changed.length ? 0 : 1;

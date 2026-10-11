@@ -22,9 +22,12 @@ before building it. The method is implemented and has multiple completed
 evaluations. Stage 1 still has closing review and validation decisions;
 the reusable engine is implemented, locally verified and approved after
 the author's desktop and physical-phone review. Stage 2 is complete and
-the first Stage 3 baseline reached a three-chapter spine and stopped at its
-between-turn token threshold. Stops 5 and 6 and the complete-site proof have not begun;
-the README and license are already present, while final packaging remains open.
+Stage 3 has completed the fictional seven-beat row-card site across a spine
+study and a bounded continuation. Independent full-site acceptance passes
+six browser conditions; all 49 final images were reviewed. The completion
+judge was rejected by the CLI input limit before its model turn, so no
+behavioral score exists for that study. The shipped skill still plans only;
+the non-sheet whole-site proof and final packaging remain open.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -152,55 +155,64 @@ not establish whether the earlier publication review was completed.
    because its addresses are placeholders, and 4 of 10 student runs fail
    only on the wording of the padding trap. What remains is creative
    consistency and PhD private-file access, as item 2 and item 3 say.
-6. **The engine is approved; Stage 3 has one completed cost probe.**
-   The [governing stage review](superpowers/plans/2026-10-11-stage-review.md)
-   retains the four-stage dependencies and Claude's restored machine-check
-   and ten-skill inventory. Calling the old proposal historical does not
-   retire unchanged design requirements. The author's exact desktop and
-   physical-phone approval is in the [approval record](history/2026-10-11-engine-approval.md).
-   The approved engine's 189-test, fifteen-case and 73-image evidence remains
-   in the [engine findings](../evals/engine/plain-story-1/findings.md).
-   Its existing preview at `http://localhost:3010/` remains separate from
-   the new fictional build study.
+6. **The engine is approved; the fictional site is complete and checked.**
+   Stage 2 closed after the author's desktop and physical-phone review.
+   The [approval](history/2026-10-11-engine-approval.md) and
+   [189-test, fifteen-case, 73-image engine proof](../evals/engine/plain-story-1/findings.md)
+   remain intact. Its preview is `http://localhost:3010/`.
 
-   The [first build baseline](../evals/runs/codex-build-1/findings.md) used
-   the unchanged skill and engine, a complete derivative embedded fixture,
-   fixed continuation prompts and one Sol turn. It produced the authorized, coordinator-reviewed
-   three-beat spine in three looks and stopped for a look choice. The turn
-   took 13 minutes 22 seconds and reported 4.63 million input-plus-output
-   tokens, mostly cached, exceeding the frozen between-turn threshold.
-   No second actor turn was sent. One independent Astra judgement followed;
-   total model-call time was 15 minutes 14 seconds. Raw usage and limits
-   are recorded, with no dollar charge available from the CLI.
+   The [first baseline](../evals/runs/codex-build-1/findings.md) reached
+   the three-beat spine and stopped at its token threshold. Its original
+   judgement, one confirmed handover defect, image-observability correction
+   and checker calibration remain separate from the later work.
 
-   Review confirms one inaccurate handover claim about preserving defaults
-   for other bundles. A second judge failure was overturned by exact
-   image-tool evidence omitted from the CLI JSON stream. Independent browser
-   diagnostics exposed coordinator measurement issues, not site failures:
-   mixed physical Next.js copies, overly strict link labels and a partial
-   expectation assigned to an unvisited chapter. All original results are
-   retained; a separate [unpaid checker calibration](../evals/builds/checker-calibration-1/findings.md)
-   passes all six browser conditions on the unchanged spine source, and
-   all 233 repository tests pass. The study also
-   identifies wide-face texture allocation as a reusable engine candidate.
-   No skill or shipped engine edit follows automatically from these findings.
+   The author [approved](history/2026-10-11-build-completion-approval.md)
+   a fresh bounded continuation. [Completion findings](../evals/runs/codex-build-completion-1/findings.md)
+   now record both finished actor turns, the actual copy-choice gate,
+   all six chapters/seven beats and eleven fixed sentences, a corrected
+   direct evidence anchor, and independent acceptance passing all six
+   conditions with unchanged source. All 49 originals were reviewed.
+   The actor separately reports 131 site tests and eighteen browser cases.
+   The completed local preview is `http://localhost:3011/`; its
+   [verification and restart command](../evals/runs/codex-build-completion-1/audits/preview-verified.json)
+   are saved. Actual final scrolling/phone approval of this site is pending.
 
-   No optional skill installation occurred. No relevant recommendation miss
-   was established, so `other-skills.md` remains unwritten. Source/install
-   verification, refusal handling, preflight before stop 1, concept sketches,
-   stops 5 and 6, planning regression, non-sheet generality and the real
-   whole-site approval remain open. The [bounded protocol](superpowers/plans/2026-10-11-build-baseline.md)
-   requires review of actual cost before further paid work. A
-   [concrete completion proposal](superpowers/plans/2026-10-11-build-completion-proposal.md)
-   limits the next question to stops 5 and 6, with at most two actor turns
-   and one judge. The author has now [approved that continuation](history/2026-10-11-build-completion-approval.md)
-   after reviewing usage. [Preparation](../evals/builds/completion-preparation-1/findings.md)
-   now passes 242 repository tests and preserves the existing spine; the
-   exact-workspace capability check precedes paid execution. Do not repeat or
-   resume this exhausted frozen cohort with changed bounds. Stage 4 remains
-   governed by the [packaging plan](superpowers/plans/2026-10-11-packaging.md).
-   All prior wording and implementation details are retained verbatim in
-   the [pre-baseline handover](history/2026-10-11-before-build-baseline-handover.md).
+   The actors took 16 minutes 59 seconds. Their reported counters sum to
+   9,508,014 input-plus-output tokens, including 9,129,216 cached input;
+   uncached input plus output sums to 378,798. Resumed counters may overlap.
+   The final turn crossed the 350,000 between-turn threshold while running;
+   no later turn was sent. No dollar charge is available.
+
+   Judge preparation exceeded the original two-MiB packet limit. The
+   author [approved three MiB for the single unused judge](history/2026-10-11-build-judge-size-approval.md),
+   but the CLI rejected its 2,556,184-character input against a separate
+   1,048,576-character ceiling before a model turn. There is no judgement
+   or usage report, and no retry. A tested local character guard now catches
+   that limit before invocation; complete evidence delivery needs a future
+   correction. The failed invocation and all frozen evidence remain intact.
+
+   Two concrete omissions remain: the design requires three wording
+   versions shown as full beats, while this rubric/run supplied two short
+   choices; static State copy refers to rows that are not displayed.
+   The [remaining-stage audit](../evals/runs/codex-build-completion-1/audits/remaining-stages.md)
+   records the first gap, and the visual reviews record the second.
+   Neither has been silently repaired in the saved actor output.
+
+   No optional skill was installed, and no relevant recommendation miss
+   has been established. The [governing review](superpowers/plans/2026-10-11-stage-review.md)
+   preserves all ten candidates and the early machine check.
+   `other-skills.md` remains unwritten. Source/install verification and an
+   actual recommendation-then-refusal branch remain unobserved.
+
+   Shipped skill instructions and the approved engine remain unchanged.
+   Stage 3 still needs its supported build entry point, before-stop-1 and
+   concept-sketch coverage, any failure-backed instruction with matched
+   reruns, planning regression, and the non-sheet whole-site proof with
+   real author approval. The paid continuation allowance is consumed;
+   any further question needs its own concrete protocol and cost decision.
+   Stage 4 follows the [packaging plan](superpowers/plans/2026-10-11-packaging.md).
+   The complete previous status is preserved in the
+   [pre-results handover](history/2026-10-11-before-completion-results-handover.md).
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
@@ -290,7 +302,9 @@ node evals/check-people.mjs
 npm test
 ```
 
-The expanded local suite passed all 189 tests in this engine checkpoint.
+The latest completion checkpoint passes all 246 repository tests, including
+the new judge character-limit regressions. The earlier engine checkpoint
+passed 189 tests; these are different checkpoints.
 The host Node 22 binary lacks TypeScript support; engine checks use a
 standard Node 22.22.1 installed in an isolated temporary verification folder. In this environment its Git
 subprocess tests need approved execution outside the outer workspace sandbox.

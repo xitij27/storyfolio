@@ -4,9 +4,11 @@ Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The skill currently plans a portfolio through an approved
 storyboard. The reusable engine is implemented, locally verified and
-approved on desktop and a physical phone. Stage 3 has one completed
-spine-only baseline, stopped at its token threshold; shipped site-building
-guidance remains future work.
+approved on desktop and a physical phone. Stage 3 has completed a fictional
+seven-beat site through a spine study and bounded continuation. Independent
+acceptance passes six browser conditions and all 49 images were reviewed;
+the completion judge could not start because its packet exceeded the CLI
+character limit. Shipped site-building guidance remains future work.
 
 For a new session, read:
 
@@ -57,3 +59,8 @@ from agent evaluation results.
 [First build baseline findings](../evals/runs/codex-build-1/findings.md)
 separate the completed spine, actual usage, original scores, reviewed
 corrections and the unvisited stages.
+
+[Completion findings](../evals/runs/codex-build-completion-1/findings.md)
+record the finished site, copy gate, independent acceptance, visual
+reviews, judge transport failure and remaining design gaps. This does not
+close the non-sheet full-journey proof or change the planning-only skill.

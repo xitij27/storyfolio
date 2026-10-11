@@ -262,6 +262,14 @@ retry. Its text evidence excludes image pixels, so save screenshot review
 separately. Keep automatic findings, judge verdicts and coordinator review
 distinct. A complete model turn does not mean a completed build stage.
 
+Preparation now enforces both the default two-MiB UTF-8 byte allowance and
+the observed CLI maximum of 1,048,576 characters. The character guard uses
+JavaScript UTF-16 code units, conservatively counting an astral character
+as two. Raising a byte allowance cannot bypass this independent guard.
+The [completion packet diagnosis](runs/codex-build-completion-1/embedded-completion-1/baseline-1/audits/judge-packet-size.md)
+records the real rejection and why minification is insufficient. Keep full
+evidence; do not silently truncate it or retry an exhausted attempt.
+
 Current checker and judge corrections are documented in the
 [non-model calibration](builds/checker-calibration-1/findings.md). Original
 cohort copies preserve their earlier implementation. To reproduce a frozen
@@ -291,6 +299,14 @@ snapshot, completed model turn or passing check alone does not establish
 the actual copy-choice gate. Preserve the coordinator's evidence-backed
 gate before sending the second prompt. Preparation and all results use a
 new cohort; the exhausted original baseline remains immutable.
+
+This allowance has now been used. The [completion findings](runs/codex-build-completion-1/findings.md)
+record two finished actor turns, six passing independent browser conditions,
+49 reviewed images and one judge invocation rejected before a model turn
+by the CLI character limit. The author had explicitly raised only that
+attempt's local byte allowance to three MiB. No judgement or usage report
+was produced and no retry was made. Further conversations need a new
+question and cost decision; the current skill remains planning-only.
 
 ## Single-turn existing-portfolio review pilot
 

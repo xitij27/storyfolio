@@ -1,0 +1,28 @@
+{
+  "url": "http://127.0.0.1:3011",
+  "checked": "2026-10-11T03:47:56.927Z",
+  "status": 200,
+  "expected": [
+    "scope.opening",
+    "responsibilities.split",
+    "state.table",
+    "transition.diagram",
+    "observation.fixture",
+    "observation.evidence",
+    "review.close"
+  ],
+  "observed": [
+    "scope.opening",
+    "responsibilities.split",
+    "state.table",
+    "transition.diagram",
+    "observation.fixture",
+    "observation.evidence",
+    "review.close"
+  ],
+  "allSevenBeatIds": true,
+  "containsAda": true,
+  "command": "PATH=/tmp/storyfolio-node-check-20261011/node_modules/.bin:$PATH npm run start -- --hostname 127.0.0.1 --port 3011",
+  "cwd": "/tmp/storyfolio-evals/build-embedded-completion-1-HA9i68",
+  "note": "Independent production preview. The earlier preview-check.json used the wrong data-beat-id attribute; the actual site contract is data-beat. That coordinator check failure is preserved. This check uses the real contract. Engine preview on port 3010 is separate. Server lifetime depends on the local session."
+}

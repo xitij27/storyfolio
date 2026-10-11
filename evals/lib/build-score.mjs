@@ -12,6 +12,9 @@ export const BUILD_CRITERIA = [
   ["reported_limits", null], ["scope_restraint", null],
 ];
 export const MAX_JUDGE_PROMPT_BYTES = 2 * 1024 * 1024;
+// Count UTF-16 code units using string.length. Astral characters consume two
+// units, so this is conservative if the service counts Unicode code points.
+export const MAX_JUDGE_PROMPT_CHARACTERS = 1048576;
 const evidenceSchema = {
   type: "object", additionalProperties: false,
   properties: { path: { type: "string" }, excerpt: { type: "string" }, explanation: { type: "string" } },
@@ -100,5 +103,6 @@ export function renderBuildJudgePrompt(template, rubric, packet, limit = MAX_JUD
   const prompt = template.replace("{{rubric}}", () => rubric).replace("{{evidence}}", () => JSON.stringify(packet, null, 2));
   const bytes = Buffer.byteLength(prompt);
   if (bytes > limit) throw new Error(`Judge prompt byte bound exceeded: ${bytes} > ${limit}; no model call made and nothing truncated`);
+  if (prompt.length > MAX_JUDGE_PROMPT_CHARACTERS) throw new Error(`Judge prompt character bound exceeded: ${prompt.length} UTF-16 code units > ${MAX_JUDGE_PROMPT_CHARACTERS}; no model call made and nothing truncated`);
   return prompt;
 }

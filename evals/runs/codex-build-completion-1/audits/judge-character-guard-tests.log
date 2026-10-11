@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+ok 1 - judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+  ---
+  duration_ms: 0.986315
+  type: 'test'
+  ...
+# Subtest: judge prompt accepts the exact character boundary and rejects one more ASCII character
+ok 2 - judge prompt accepts the exact character boundary and rejects one more ASCII character
+  ---
+  duration_ms: 4.411168
+  type: 'test'
+  ...
+# Subtest: judge prompt byte boundary remains independent of its character boundary
+ok 3 - judge prompt byte boundary remains independent of its character boundary
+  ---
+  duration_ms: 7.337111
+  type: 'test'
+  ...
+# Subtest: judge prompt character guard cannot be bypassed by a raised byte allowance
+ok 4 - judge prompt character guard cannot be bypassed by a raised byte allowance
+  ---
+  duration_ms: 2.656292
+  type: 'test'
+  ...
+# Subtest: judge prompt explicitly uses conservative UTF-16 units for astral characters
+ok 5 - judge prompt explicitly uses conservative UTF-16 units for astral characters
+  ---
+  duration_ms: 67.300654
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 90.723685

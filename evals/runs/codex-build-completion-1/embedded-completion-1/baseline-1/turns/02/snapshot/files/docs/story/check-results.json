@@ -1,0 +1,232 @@
+{
+  "stage": "Finishing pass complete; actual user final review pending",
+  "run": "checks/2026-10-11T03-34-34-670Z",
+  "complete": true,
+  "scope": "full matrix",
+  "node": "v22.22.1",
+  "commands": [
+    "npm test",
+    "npm run typecheck",
+    "npm run lint",
+    "PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu NEXT_TELEMETRY_DISABLED=1 npm run check -- --jobs=3 --wait=1000",
+    "node scripts/check-spine.mjs checks/2026-10-11T03-34-34-670Z/supplemental",
+    "node scripts/review-screenshots.mjs checks/2026-10-11T03-34-34-670Z"
+  ],
+  "results": [
+    {
+      "name": "light-wide",
+      "code": 0,
+      "signal": null,
+      "report": "light-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-short",
+      "code": 0,
+      "signal": null,
+      "report": "light-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-phone",
+      "code": 0,
+      "signal": null,
+      "report": "light-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "light-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "light-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-wide",
+      "code": 0,
+      "signal": null,
+      "report": "dark-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-short",
+      "code": 0,
+      "signal": null,
+      "report": "dark-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-phone",
+      "code": 0,
+      "signal": null,
+      "report": "dark-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "dark-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "dark-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-wide",
+      "code": 0,
+      "signal": null,
+      "report": "review-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-short",
+      "code": 0,
+      "signal": null,
+      "report": "review-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-phone",
+      "code": 0,
+      "signal": null,
+      "report": "review-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "review-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "review-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "review-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "no-js",
+      "code": 0,
+      "signal": null,
+      "report": "no-js/report.json",
+      "problems": []
+    },
+    {
+      "name": "context-loss",
+      "code": 0,
+      "signal": null,
+      "report": "context-loss/report.json",
+      "problems": []
+    },
+    {
+      "name": "look-switch",
+      "code": 0,
+      "signal": null,
+      "report": "look-switch/report.json",
+      "problems": []
+    }
+  ],
+  "screenshots": 213,
+  "screenshotCounts": {
+    "light-wide": 21,
+    "light-short": 7,
+    "light-phone": 7,
+    "light-reduced": 21,
+    "light-no-webgl": 7,
+    "dark-wide": 21,
+    "dark-short": 7,
+    "dark-phone": 7,
+    "dark-reduced": 21,
+    "dark-no-webgl": 7,
+    "review-wide": 21,
+    "review-short": 7,
+    "review-phone": 7,
+    "review-reduced": 21,
+    "review-no-webgl": 7,
+    "no-js": 7,
+    "context-loss": 8,
+    "look-switch": 9
+  },
+  "supplemental": {
+    "sceneChunks": [
+      "1gs4t3e9kfteg.js"
+    ],
+    "results": [
+      {
+        "mode": "phone",
+        "canvas": 0,
+        "requestedScene": [],
+        "passed": true
+      },
+      {
+        "mode": "reduced",
+        "canvas": 0,
+        "requestedScene": [],
+        "passed": true
+      },
+      {
+        "mode": "desktop",
+        "canvas": 1,
+        "requestedScene": [
+          "http://127.0.0.1:44447/_next/static/chunks/1gs4t3e9kfteg.js"
+        ],
+        "passed": true
+      },
+      {
+        "mode": "no-js",
+        "canvas": 0,
+        "requestedScene": [],
+        "passed": true
+      },
+      {
+        "mode": "no-webgl",
+        "canvas": 0,
+        "requestedScene": [],
+        "passed": true
+      }
+    ],
+    "limits": "Automated Chromium checks; no real phone, mail delivery, publication or social-platform validation."
+  },
+  "supplementalScreenshots": 16,
+  "unitTests": {
+    "passed": 131,
+    "failed": 0
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "visualReview": "All matrix and supplemental screenshots opened using labelled contact sheets; final Review reduced-motion images and original evidence-anchor/phone keyboard-focus images also opened.",
+  "copyApproval": "Current user selected O1 and C1 verbatim; recorded in copy-choices.md.",
+  "actualUserFinalReview": "Pending at the user's explicit request; no finished-site phone scrolling approval received.",
+  "physicalPhonePerformance": "Not tested; automated Chromium software rendering only.",
+  "finishingCorrection": "Each beat wrapper has an ordinary id equal to its stable beat ID; direct evidence arrival targets #observation.evidence and settles on Observation.",
+  "localSite": {
+    "command": "npm run start -- --hostname 127.0.0.1 --port 3000",
+    "url": "http://127.0.0.1:3000",
+    "serverScope": "Run in user local terminal. Tool preview reported Ready, but separate-command loopback connection was refused; cross-environment preview reachability is not claimed."
+  },
+  "limitations": [
+    "Fictional content and copy approval are not real-person site review.",
+    "Actual final scrolling/physical-phone review remains pending.",
+    "No publishing, mailbox delivery, legal or social-platform SVG-preview validation.",
+    "Offline cached dependencies are not a fresh advisory review."
+  ],
+  "diagnosticAttempt": {
+    "run": "checks/2026-10-11T03-31-39-431Z",
+    "matrix": "18/18 passed before anchor correction",
+    "supplemental": "Failed at heading deep-link scene chapter agreement; corrected and retested in final run."
+  }
+}
