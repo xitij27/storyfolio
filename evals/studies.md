@@ -41,6 +41,7 @@ its review criteria and independent runtime observations are separate.
 | [codex-visual-quality-review-1](#visual-quality-review-11-october-2026) | Source and image review after author rejection; Stage 3 visual proof remains open |
 | [visual-recovery-prototype-1](#visual-recovery-prototype-11-october-2026) | Historical three-beat implementation; author requested the deeper revision below |
 | [visual-recovery-depth-1](#visual-recovery-story-depth-11-october-2026) | Manual five-beat revision; story accepted and phone confirmed, closing the bounded prototype gate |
+| [build-workflow-preparation-1](runs/build-workflow-preparation-1/findings.md) | No-model diagnostic tooling, fixture and calibration; final freeze gated by shared-controls and judge transport |
 
 ## Cases and comparison rules
 

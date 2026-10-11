@@ -294,10 +294,28 @@ not be treated as distinct billed usage.
    dispositions. No README build promise, release or push follows from this
    planning checkpoint.
 
-## Current checkpoint
+## Planning checkpoint
 
 Plan drafted from repository evidence and two read-only specialist reviews.
 No fixture, runner, checker, engine or skill was changed; no paid actor or
 judge was invoked. Local preparation, protocol freeze and explicit approval
 of the paid envelope are still required. Verification for this documentation
 change is recorded in the linked planning history.
+
+## No-model implementation checkpoint, 11 October 2026
+
+The author subsequently [approved local preparation](../../history/2026-10-11-build-preparation-approval.md).
+The [new case](../../../evals/builds/bench-depth-1/README.md), versioned task
+mapping, independent measurement and retained calibration are implemented.
+[Preparation findings](../../../evals/runs/build-workflow-preparation-1/findings.md)
+record exact checks and limits. This is not a paid actor result.
+
+Step 3 reproduces the shared scene-controls scope defect without changing
+the shipped engine; wide-face tests reproduce the need for aspect compensation.
+Step 6 preserves complete fitting and oversized historical evidence packets.
+The latter remains above both judge-input limits, so no truncation or new
+delivery mechanism was improvised. Final step 7, including the reserved
+cohort freeze and exact actor-workspace capability proof, is deferred until
+the separate engineering and transport decisions. The paid envelope remains
+proposed and unapproved. Earlier frozen studies and accepted prototype
+source are unchanged.

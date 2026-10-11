@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "modelInvocations": 0,
+  "fixtureSha256": "bd06a604ef4a126d728b7a1616425359fed939c7dc390433861cabc84bf396a4",
+  "started": "2026-10-11T06:56:43.237Z",
+  "source": {
+    "capture-smoke.mjs": "ced0b5dd27df9091db0d785ef81e6d627c0312486464fca2d134e68cb9aeede4",
+    "capture-fixture.html": "bd06a604ef4a126d728b7a1616425359fed939c7dc390433861cabc84bf396a4",
+    "../../lib/build-capture.mjs": "de4e45bea11440c5cd8cb305c869495d82f17bbbe129f6b3274b3339caf2ed00",
+    "../../lib/build-check.mjs": "0fdbd6c6ed16899b238b08d7fe837648eabcfb9f374163d5d840284efc33bbd2"
+  },
+  "reports": [
+    {
+      "name": "desktop-good",
+      "problems": [],
+      "reportSha256": "5318c9378a8b088f65a4f0c69cb8b2107003887c283fea8c2c3274bb0e0cda3d"
+    },
+    {
+      "name": "mobile-good",
+      "problems": [],
+      "reportSha256": "2ca940390e5d0cd09bedc9cc86b675e95c8dec9e7e73ea84e23400d37d510f78"
+    },
+    {
+      "name": "short-good",
+      "problems": [],
+      "reportSha256": "e31145d978e38a36a4976a36ba97763fd99713b08e1b2d9d00355c409a0c549e"
+    },
+    {
+      "name": "reduced-motion-good",
+      "problems": [],
+      "reportSha256": "ea5ee497b452ed0032cec5aedc05ff358eec0a325c75442d2da5503621468036"
+    },
+    {
+      "name": "no-webgl-good",
+      "problems": [],
+      "reportSha256": "caae0cfb33693108a17a4a60dcf8dbde81482079e4edf5e545d7c77394402f46"
+    },
+    {
+      "name": "no-javascript-good",
+      "problems": [],
+      "reportSha256": "5f3a6ff913cd29165c6af5ef4209aa77a82b23b4d0aadf3ec8d8a50be669cece"
+    },
+    {
+      "name": "context-loss-good",
+      "problems": [],
+      "reportSha256": "ce05d3c3307054f2ae91f7cdac7b6e55c3a32e3c64ce277e6a39e747e4515ac5"
+    },
+    {
+      "name": "control-negative-wrong-target",
+      "problems": [
+        "control-14543d1118162868/pointer: declared control targets did not respond",
+        "control-14543d1118162868/pointer: no observable control response (requires review, not a functional pass)",
+        "control-14543d1118162868/keyboard: declared control targets did not respond",
+        "control-14543d1118162868/keyboard: no observable control response (requires review, not a functional pass)"
+      ],
+      "reportSha256": "e0ca8ec1216501be5afa5784e7c050265cc5d0881e0f3fbb254144c9ff639c4a"
+    },
+    {
+      "name": "control-negative-noop",
+      "problems": [
+        "control-e93170df5f1810d0/pointer: declared control targets did not respond",
+        "control-e93170df5f1810d0/pointer: no observable control response (requires review, not a functional pass)",
+        "control-e93170df5f1810d0/keyboard: declared control targets did not respond",
+        "control-e93170df5f1810d0/keyboard: no observable control response (requires review, not a functional pass)"
+      ],
+      "reportSha256": "21e9b25f7a0e1bb8f233894d95f0f01a697b550b4d813478ed8aca7e832dc6f5"
+    },
+    {
+      "name": "control-negative-missing",
+      "problems": [
+        "Measured beat IDs/order differ from frozen expectations"
+      ],
+      "reportSha256": "6ab6cbd0436a802833934fb10952277be64ca77f2005c45f4ff2301fc5a7cab3"
+    },
+    {
+      "name": "reduced-motion-moving",
+      "problems": [
+        "question: missing or changed reduced-motion stillness evidence",
+        "scheduling: missing or changed reduced-motion stillness evidence",
+        "bench: missing or changed reduced-motion stillness evidence",
+        "evidence: missing or changed reduced-motion stillness evidence",
+        "scope: missing or changed reduced-motion stillness evidence"
+      ],
+      "reportSha256": "d6005652a3501d9c69e6689dee595ca309a795c56f599b7b41e858eaa0ae4dce"
+    },
+    {
+      "name": "context-loss-loss-missing",
+      "problems": [
+        "Measured beat IDs/order differ from frozen expectations"
+      ],
+      "reportSha256": "0d950cfb482a31d8455a4b3d7298c676f965bce526fd62902493cf12c6524dba"
+    }
+  ],
+  "complete": true,
+  "scope": "actual browser helper smoke, not full Next acceptance or visual quality",
+  "finished": "2026-10-11T07:00:56.458Z"
+}

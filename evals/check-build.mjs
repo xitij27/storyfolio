@@ -10,6 +10,7 @@ import { createServer } from "node:net";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { artifactHashes, assessObservation, buildCases, fixedCommands, outsideWorkspace, requestFailureReason, scrollSamples, validateExpectations, verifyNextRuntime } from "./lib/build-check.mjs";
+import { captureSource, captureTravel, diagnosticPlan, exerciseControl, inventoryControls } from "./lib/build-capture.mjs";
 
 const options = {};
 for (const argument of process.argv.slice(2)) {
@@ -22,7 +23,8 @@ const workspace = await realpath(resolve(options.workspace));
 const expectationsPath = await realpath(resolve(options.expectations));
 const implementation = await realpath(fileURLToPath(import.meta.url));
 const helper = await realpath(fileURLToPath(new URL("./lib/build-check.mjs", import.meta.url)));
-if (![expectationsPath, implementation, helper].every(path => outsideWorkspace(workspace, path))) throw new Error("Expectations and coordinator checker must be outside the actor workspace");
+const captureHelper = await realpath(fileURLToPath(new URL("./lib/build-capture.mjs", import.meta.url)));
+if (![expectationsPath, implementation, helper, captureHelper].every(path => outsideWorkspace(workspace, path))) throw new Error("Expectations and coordinator checker must be outside the actor workspace");
 const output = resolve(options.out);
 if (!outsideWorkspace(workspace, output)) throw new Error("Acceptance output must be outside the actor workspace");
 await mkdir(dirname(output), { recursive: true });
@@ -54,7 +56,7 @@ const paths = {
 };
 const playwright = dependencyRequire.resolve("playwright-core");
 const frozen = {};
-for (const path of [implementation, helper, expectationsPath, nextRuntime.local.entrypoint, nextRuntime.local.packageJson, nextRuntime.trusted.entrypoint, nextRuntime.trusted.packageJson, paths.typescript, paths.eslint, playwright]) frozen[path] = sha(await readFile(path));
+for (const path of [implementation, helper, captureHelper, expectationsPath, nextRuntime.local.entrypoint, nextRuntime.local.packageJson, nextRuntime.trusted.entrypoint, nextRuntime.trusted.packageJson, paths.typescript, paths.eslint, playwright]) frozen[path] = sha(await readFile(path));
 const manifest = {
   schemaVersion: 1, fixture: expected.id, started: new Date().toISOString(), node: process.version,
   workspace, expectationsPath, dependencyRoot, nextRuntime, frozen, expected, commands: [], results: [], files: [], complete: false,
@@ -66,6 +68,12 @@ const manifest = {
     "Screenshots require human visual review. Text and scene markers alone cannot establish faithful formations or visually correct 3D.",
   ],
 };
+if (expected.schemaVersion === 2) {
+  manifest.taskKind = expected.taskKind;
+  manifest.sourceBefore = await captureSource(workspace);
+  manifest.visualReview = "unobserved: original pixels and semantic scene/control targets require separate review";
+  manifest.limits.push("Control state/image changes and motion positions measure observable response, not whether the intended 3D component responded correctly.");
+}
 const save = () => writeFile(join(output, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
 async function evidenceFiles(prefix = "") {
   const files = [];
@@ -150,7 +158,7 @@ function observePage({ beat, position }) {
     text.push(words.join(" "));
   }
   const block = [...document.querySelectorAll("[data-beat]")].find(node => node.getAttribute("data-beat") === beat);
-  const headings = [...(block ?? document).querySelectorAll("h1,h2,h3,h4,h5,h6")].map(node => ({ text: node.textContent, visible: showing(node) && inView(node) }));
+  const headings = [...(block ?? document).querySelectorAll("h1,h2,h3,h4,h5,h6")].map(node => ({ text: node.textContent, level: Number(node.tagName.slice(1)), visible: showing(node) && inView(node) }));
   return { beat, position, scroll: scrollY, scene: document.querySelector(".story")?.getAttribute("data-scene") ?? null, canvases: document.querySelectorAll("canvas").length, visibleCanvases: [...document.querySelectorAll("canvas")].filter(node => showing(node) && inView(node)).length, overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth, headings, visibleText: text.join(" "), links };
 }
 
@@ -158,10 +166,18 @@ async function browserCase(chromium, base, entry) {
   const directory = join(output, entry.id);
   await mkdir(directory, { recursive: true });
   const report = { entry, samples: [], keyboardLinks: [], requests: [], warnings: [], errors: [], stationary: [], screenshots: [] };
+  if (expected.schemaVersion === 2) Object.assign(report, { rests: [], motion: [], controls: [], controlInventoryComplete: false, sourceDigest: manifest.sourceBefore.digest });
+  const controls = new Map();
   const browser = await chromium.launch({ ...(options["browser-executable"] ? { executablePath: resolve(options["browser-executable"]) } : {}), args: entry.noWebGL ? ["--no-sandbox", "--disable-3d-apis"] : ["--no-sandbox", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"] });
   try {
-    const context = await browser.newContext({ viewport: entry.viewport, reducedMotion: entry.reducedMotion ? "reduce" : "no-preference", javaScriptEnabled: !entry.noJavaScript, ...(entry.touch ? { hasTouch: true, isMobile: true } : {}) });
+    const context = await browser.newContext({ viewport: entry.viewport, reducedMotion: entry.reducedMotion ? "reduce" : "no-preference", javaScriptEnabled: !entry.noJavaScript, serviceWorkers: "block", ...(entry.touch ? { hasTouch: true, isMobile: true } : {}) });
     const page = await context.newPage();
+    const capture = async (name, screenshotOptions = {}) => {
+      const file = `${name}.${screenshotOptions.type === "jpeg" ? "jpg" : "png"}`;
+      const bytes = await page.screenshot({ path: join(directory, file), timeout: 90_000, ...screenshotOptions });
+      report.screenshots.push(file);
+      return { file, sha256: sha(bytes), bytes: bytes.length };
+    };
     const url = new URL(expected.route, base).href;
     await page.route("**/*", route => {
       if ([new URL(base).origin, "null"].includes(new URL(route.request().url()).origin)) return route.continue();
@@ -204,7 +220,7 @@ async function browserCase(chromium, base, entry) {
     }
     for (const [index, beat] of expected.beats.entries()) {
       if (interrupted) throw new Error("Acceptance check interrupted");
-      const geometry = await page.evaluate(() => ({ viewport: innerHeight, boxes: [...document.querySelectorAll("[data-beat]")].map(node => {
+      const geometry = await page.evaluate(() => ({ viewport: innerHeight, maxScroll: document.documentElement.scrollHeight - innerHeight, boxes: [...document.querySelectorAll("[data-beat]")].map(node => {
         const rect = node.getBoundingClientRect(); return { id: node.getAttribute("data-beat"), top: rect.top + scrollY, height: rect.height };
       }) }));
       const positions = scrollSamples(geometry.boxes, geometry.viewport, entry.mode).find(sample => sample.id === beat.id);
@@ -222,11 +238,55 @@ async function browserCase(chromium, base, entry) {
           report.screenshots.push(filename);
         }
       }
-      if (entry.reducedMotion && entry.mode === "animated") {
+      if (expected.schemaVersion === 2) {
+        const plan = diagnosticPlan(expected.beats.map(beat => beat.id), geometry.boxes, geometry.viewport, geometry.maxScroll, entry.mode);
+        report.geometry = geometry;
+        const rest = plan.rests[index];
+        const requestedScroll = entry.mode === "animated" ? rest.end : rest.start;
+        await page.evaluate(top => scrollTo({ top, behavior: "instant" }), requestedScroll);
+        await page.waitForTimeout(entry.mode === "animated" ? 1800 : 150);
+        const observed = await page.evaluate(observePage, { beat: beat.id, position: "rest" });
+        report.samples.push(observed);
+        report.rests.push({ beat: beat.id, requestedScroll, actualScroll: observed.scroll, scene: observed.scene, afterContextLoss: !!entry.loseContext && !!report.contextLoss?.supported, ...await capture(`rest-${beat.id}`) });
+        for (const control of await inventoryControls(page)) if (!controls.has(control.key)) controls.set(control.key, { ...control, observedScroll: observed.scroll });
+        if (entry.reducedMotion) {
+          const started = Date.now();
+          const before = await capture(`still-${beat.id}-before`);
+          await page.waitForTimeout(400);
+          const after = await capture(`still-${beat.id}-after`);
+          report.stationary.push({ beat: beat.id, before: before.sha256, after: after.sha256, elapsedMs: Date.now() - started, files: [before.file, after.file] });
+        }
+      } else if (entry.reducedMotion && entry.mode === "animated") {
         const canvas = page.locator("canvas").first();
         const before = sha(await canvas.screenshot());
         await page.waitForTimeout(400);
         report.stationary.push({ beat: beat.id, before, after: sha(await canvas.screenshot()) });
+      }
+    }
+    if (expected.schemaVersion === 2) {
+      report.controlInventory = [...controls.values()];
+      report.controlInventoryComplete = true;
+      report.nonFragmentLinks = await page.locator('a[href]:not([href^="#"])').evaluateAll(nodes => nodes.map(node => ({ href: node.getAttribute("href"), text: node.getAttribute("aria-label") || node.textContent, availability: "unobserved: not followed by the loopback-only diagnostic" })));
+      const resetControls = async () => {
+        await page.goto(url, { waitUntil: "networkidle", timeout: 45_000 });
+        await page.waitForTimeout(1800);
+        if (entry.mode === "animated" || entry.loseContext) await page.waitForFunction(() => document.querySelector(".story")?.getAttribute("data-scene") === "on" && document.querySelector("canvas") !== null);
+        if (entry.loseContext) {
+          const supported = await page.evaluate(() => {
+            const canvas = document.querySelector("canvas");
+            const gl = canvas?.getContext("webgl2") || canvas?.getContext("webgl");
+            const extension = gl?.getExtension("WEBGL_lose_context");
+            extension?.loseContext(); return !!extension;
+          });
+          if (!supported) throw new Error("Control trial could not reapply context loss");
+          await page.waitForTimeout(1800);
+        }
+      };
+      for (const control of controls.values()) report.controls.push(await exerciseControl(page, control, capture, resetControls));
+      if (["desktop", "mobile", "short"].includes(entry.id)) {
+        const geometry = report.geometry;
+        const plan = diagnosticPlan(expected.beats.map(beat => beat.id), geometry.boxes, geometry.viewport, geometry.maxScroll, entry.mode);
+        for (const interval of plan.intervals) report.motion.push(await captureTravel(page, interval, capture));
       }
     }
     Object.assign(report, await page.evaluate(() => {
@@ -293,6 +353,13 @@ finally {
   if (server) { stop(server.child); const timer = setTimeout(() => stop(server.child, "SIGKILL"), 5000); await server.done; clearTimeout(timer); }
   for (const child of children) stop(child);
   manifest.finished = new Date().toISOString();
+  if (expected.schemaVersion === 2) {
+    try {
+      manifest.sourceAfter = await captureSource(workspace);
+      manifest.sourceUnchanged = manifest.sourceBefore.digest === manifest.sourceAfter.digest;
+      if (!manifest.sourceUnchanged) manifest.error = `${manifest.error ?? ""}\nSource changed during coordinator measurement`;
+    } catch (error) { manifest.error = `${manifest.error ?? ""}\nSource verification failed: ${error.stack}`; }
+  }
   manifest.passed = manifest.complete && !manifest.error && !manifest.files.some(file => !file.exists) && !manifest.commands.some(command => command.name !== "server" && command.code !== 0) && manifest.results.every(result => result.passed);
   try { manifest.artifacts = artifactHashes(await evidenceFiles()); }
   catch (error) { manifest.passed = false; manifest.artifactError = error.stack; }

@@ -1,0 +1,53 @@
+{
+  "entry": {
+    "id": "context-loss",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "static",
+    "loseContext": true
+  },
+  "variant": "loss-missing",
+  "rests": [],
+  "stationary": [],
+  "motion": [],
+  "controls": [],
+  "controlInventoryComplete": false,
+  "images": [],
+  "errors": [
+    "Error: Measured beat IDs/order differ from frozen expectations\n    at diagnosticPlan (file:///home/kshitij/projects/storyfolio/evals/lib/build-capture.mjs:32:59)\n    at run (file:///home/kshitij/projects/storyfolio/evals/runs/build-workflow-preparation-1/capture-smoke.mjs:67:18)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/build-workflow-preparation-1/capture-smoke.mjs:102:3"
+  ],
+  "contextLoss": {
+    "supported": true
+  },
+  "geometry": {
+    "viewport": 900,
+    "maxScroll": 6300,
+    "boxes": [
+      {
+        "id": "question",
+        "top": 0,
+        "height": 1800
+      },
+      {
+        "id": "scheduling",
+        "top": 1800,
+        "height": 1800
+      },
+      {
+        "id": "bench",
+        "top": 3600,
+        "height": 1800
+      },
+      {
+        "id": "evidence",
+        "top": 5400,
+        "height": 1800
+      }
+    ]
+  },
+  "problems": [
+    "Measured beat IDs/order differ from frozen expectations"
+  ]
+}

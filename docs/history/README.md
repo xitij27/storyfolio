@@ -9,6 +9,11 @@ The [11 October publication and README record](2026-10-11-readme-and-publication
 preserves the author's public-status update, the earlier private-status
 guidance and the illustrated README work.
 
+The [no-model preparation approval](2026-10-11-build-preparation-approval.md)
+records the author's "yes", implemented diagnostic tooling and the separate
+engine/transport gates. The [preceding handover](2026-10-11-before-build-preparation-handover.md)
+preserves `75d1f35` verbatim.
+
 ## Capture and scope
 
 Captured on 10 October 2026 from the working tree at commit

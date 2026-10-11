@@ -1,0 +1,574 @@
+{
+  "entry": {
+    "id": "reduced-motion",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "animated",
+    "reducedMotion": true
+  },
+  "variant": "moving",
+  "rests": [
+    {
+      "beat": "question",
+      "requestedScroll": 900,
+      "actualScroll": 900,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-question.png",
+      "sha256": "f0229a996e2e9724499450e051bb263280ae209fbd8585ed184517e700d91211",
+      "bytes": 24980
+    },
+    {
+      "beat": "scheduling",
+      "requestedScroll": 2700,
+      "actualScroll": 2700,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-scheduling.png",
+      "sha256": "2b4a5baa97489e6417ef480c2507ea8a501fb92e0a4960a3060a8847e8bbdb5b",
+      "bytes": 23970
+    },
+    {
+      "beat": "bench",
+      "requestedScroll": 4500,
+      "actualScroll": 4500,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-bench.png",
+      "sha256": "b00d2f190345a8a8180c2e626836e88db711546e2677deda425e5dce4863048f",
+      "bytes": 22515
+    },
+    {
+      "beat": "evidence",
+      "requestedScroll": 6300,
+      "actualScroll": 6300,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-evidence.png",
+      "sha256": "99724127cb94502371116ddc81197964eb48d6b177f64c84cc3bcd9987963567",
+      "bytes": 23968
+    },
+    {
+      "beat": "scope",
+      "requestedScroll": 8100,
+      "actualScroll": 8100,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-scope.png",
+      "sha256": "00a27b15f0b1eb99e50cc3835f9b204505302c43c544027dcda2b958a6194a66",
+      "bytes": 23188
+    }
+  ],
+  "stationary": [
+    {
+      "beat": "question",
+      "before": "f69de73f6da9a82648ad6f6cf6eb78b251e8e236af2b50d0ce17fa250ef3e588",
+      "after": "e6f3187e869fc727ccb0600d810f2b10bf494e2daea2f17b7e6b40908eb69027",
+      "elapsedMs": 493
+    },
+    {
+      "beat": "scheduling",
+      "before": "815bd042b145950ee0ad3609c4deaccb595f6b80d0aaaa656a2df575d086cbf0",
+      "after": "dfb002f9460750694d1e686765c8e7a4f40903426cb8e069eee7f1d6a58cf8b2",
+      "elapsedMs": 495
+    },
+    {
+      "beat": "bench",
+      "before": "6c3c793942b0b23ec68c8b5cbc6e605f0f2372ca025a211a7ab117d0ed434b21",
+      "after": "d13906f8afa49d2f034f01c7b959e40781b60d34d57333a53d3f75b52b72de80",
+      "elapsedMs": 487
+    },
+    {
+      "beat": "evidence",
+      "before": "d5464eaa771fccfad4697609ef62fe3df60c698d5527b202f13929b814a2f7fe",
+      "after": "ccf3e7d6d2b6b6e06585ff218e6511be7ebdd6bdefd83193428a2da0c9e3f59f",
+      "elapsedMs": 500
+    },
+    {
+      "beat": "scope",
+      "before": "1702443bf68de4785a103a9681dafe82d18dd797f44fe86af3351016755d3da9",
+      "after": "5d87f819ae3f5e60f01c9ec71839c830e4295a693ecf21e6745f5b59ccd85216",
+      "elapsedMs": 477
+    }
+  ],
+  "motion": [],
+  "controls": [
+    {
+      "index": 0,
+      "tag": "button",
+      "type": null,
+      "role": null,
+      "href": null,
+      "targetIds": "result",
+      "beat": null,
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+      "name": "Count a local action",
+      "visible": true,
+      "disabled": false,
+      "key": "control-e93170df5f1810d0",
+      "trials": [
+        {
+          "method": "pointer",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "result",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "18eef56e1aa6e742db955c86384923d34f495273c97bfe3c20dfbae364c2dad6",
+          "afterImage": "037ee1d7d441197a238290440d191d1c66765dc9ec5fb5e13c1c07afaaf69b2d",
+          "changed": true,
+          "responseStatus": "observed DOM/state response",
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "location": "http://127.0.0.1:43223/?case=moving",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">63 moving</output>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "location": "http://127.0.0.1:43223/?case=moving",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">81 moving</output>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "hitTarget": true
+          }
+        },
+        {
+          "method": "keyboard",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "result",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "6fe4010f5ae2429c5a0555672ece374a186ceaa4e06aecb7a88cfb4138730b8f",
+          "afterImage": "92ce6587970a2d9b24a14558c592b31af4a1892b53d8f0c312b12ac5b203c2ee",
+          "changed": true,
+          "responseStatus": "observed DOM/state response",
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "location": "http://127.0.0.1:43223/?case=moving",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">62 moving</output>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "location": "http://127.0.0.1:43223/?case=moving",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">79 moving</output>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "hitTarget": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#scope",
+      "targetIds": null,
+      "beat": null,
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "name": "Read scope",
+      "visible": true,
+      "disabled": false,
+      "key": "control-24af657a10691e8b",
+      "trials": [
+        {
+          "method": "pointer",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "scope",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "a9d5a309d5e48103d480ea1d10f85cf207dc02d7a5f2e6079b51b226541b0a5f",
+          "afterImage": "74912babe6d81f60a990d7ebe61879fbd60367e221187ad988e7dbbd6e7fbaf1",
+          "changed": true,
+          "responseStatus": "observed DOM/state response",
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<a href=\"#scope\">Read scope</a>",
+            "location": "http://127.0.0.1:43223/?case=moving",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "html": "<section id=\"scope\" data-beat=\"scope\"><h2>Original scope heading</h2></section>",
+                "containsCanvas": false,
+                "inView": false
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<a href=\"#scope\">Read scope</a>",
+            "location": "http://127.0.0.1:43223/?case=moving#scope",
+            "scroll": 7200,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "html": "<section id=\"scope\" data-beat=\"scope\"><h2>Original scope heading</h2></section>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "hitTarget": true
+          }
+        },
+        {
+          "method": "keyboard",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "scope",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "5f17d918f5b656ca4c06fbc63d9670c3be47a79581e9822deef7a6e88e8fcdf2",
+          "afterImage": "ce35b7f39a3fd5f4e5fb66d06376ba03967886bacc35b581d1a0dd2c5c0e1663",
+          "changed": true,
+          "responseStatus": "observed DOM/state response",
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<a href=\"#scope\">Read scope</a>",
+            "location": "http://127.0.0.1:43223/?case=moving",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "html": "<section id=\"scope\" data-beat=\"scope\"><h2>Original scope heading</h2></section>",
+                "containsCanvas": false,
+                "inView": false
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<a href=\"#scope\">Read scope</a>",
+            "location": "http://127.0.0.1:43223/?case=moving#scope",
+            "scroll": 7200,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "html": "<section id=\"scope\" data-beat=\"scope\"><h2>Original scope heading</h2></section>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "hitTarget": true
+          }
+        }
+      ]
+    }
+  ],
+  "controlInventoryComplete": true,
+  "images": [
+    {
+      "file": "rest-question.png",
+      "sha256": "f0229a996e2e9724499450e051bb263280ae209fbd8585ed184517e700d91211",
+      "bytes": 24980
+    },
+    {
+      "file": "still-question-before.png",
+      "sha256": "f69de73f6da9a82648ad6f6cf6eb78b251e8e236af2b50d0ce17fa250ef3e588",
+      "bytes": 24893
+    },
+    {
+      "file": "still-question-after.png",
+      "sha256": "e6f3187e869fc727ccb0600d810f2b10bf494e2daea2f17b7e6b40908eb69027",
+      "bytes": 25959
+    },
+    {
+      "file": "rest-scheduling.png",
+      "sha256": "2b4a5baa97489e6417ef480c2507ea8a501fb92e0a4960a3060a8847e8bbdb5b",
+      "bytes": 23970
+    },
+    {
+      "file": "still-scheduling-before.png",
+      "sha256": "815bd042b145950ee0ad3609c4deaccb595f6b80d0aaaa656a2df575d086cbf0",
+      "bytes": 23991
+    },
+    {
+      "file": "still-scheduling-after.png",
+      "sha256": "dfb002f9460750694d1e686765c8e7a4f40903426cb8e069eee7f1d6a58cf8b2",
+      "bytes": 23807
+    },
+    {
+      "file": "rest-bench.png",
+      "sha256": "b00d2f190345a8a8180c2e626836e88db711546e2677deda425e5dce4863048f",
+      "bytes": 22515
+    },
+    {
+      "file": "still-bench-before.png",
+      "sha256": "6c3c793942b0b23ec68c8b5cbc6e605f0f2372ca025a211a7ab117d0ed434b21",
+      "bytes": 22475
+    },
+    {
+      "file": "still-bench-after.png",
+      "sha256": "d13906f8afa49d2f034f01c7b959e40781b60d34d57333a53d3f75b52b72de80",
+      "bytes": 22469
+    },
+    {
+      "file": "rest-evidence.png",
+      "sha256": "99724127cb94502371116ddc81197964eb48d6b177f64c84cc3bcd9987963567",
+      "bytes": 23968
+    },
+    {
+      "file": "still-evidence-before.png",
+      "sha256": "d5464eaa771fccfad4697609ef62fe3df60c698d5527b202f13929b814a2f7fe",
+      "bytes": 23466
+    },
+    {
+      "file": "still-evidence-after.png",
+      "sha256": "ccf3e7d6d2b6b6e06585ff218e6511be7ebdd6bdefd83193428a2da0c9e3f59f",
+      "bytes": 24030
+    },
+    {
+      "file": "rest-scope.png",
+      "sha256": "00a27b15f0b1eb99e50cc3835f9b204505302c43c544027dcda2b958a6194a66",
+      "bytes": 23188
+    },
+    {
+      "file": "still-scope-before.png",
+      "sha256": "1702443bf68de4785a103a9681dafe82d18dd797f44fe86af3351016755d3da9",
+      "bytes": 23365
+    },
+    {
+      "file": "still-scope-after.png",
+      "sha256": "5d87f819ae3f5e60f01c9ec71839c830e4295a693ecf21e6745f5b59ccd85216",
+      "bytes": 22892
+    },
+    {
+      "file": "control-e93170df5f1810d0-pointer-before.png",
+      "sha256": "18eef56e1aa6e742db955c86384923d34f495273c97bfe3c20dfbae364c2dad6",
+      "bytes": 25476
+    },
+    {
+      "file": "control-e93170df5f1810d0-pointer-after.png",
+      "sha256": "037ee1d7d441197a238290440d191d1c66765dc9ec5fb5e13c1c07afaaf69b2d",
+      "bytes": 25605
+    },
+    {
+      "file": "control-e93170df5f1810d0-keyboard-before.png",
+      "sha256": "6fe4010f5ae2429c5a0555672ece374a186ceaa4e06aecb7a88cfb4138730b8f",
+      "bytes": 26089
+    },
+    {
+      "file": "control-e93170df5f1810d0-keyboard-after.png",
+      "sha256": "92ce6587970a2d9b24a14558c592b31af4a1892b53d8f0c312b12ac5b203c2ee",
+      "bytes": 25988
+    },
+    {
+      "file": "control-24af657a10691e8b-pointer-before.png",
+      "sha256": "a9d5a309d5e48103d480ea1d10f85cf207dc02d7a5f2e6079b51b226541b0a5f",
+      "bytes": 25983
+    },
+    {
+      "file": "control-24af657a10691e8b-pointer-after.png",
+      "sha256": "74912babe6d81f60a990d7ebe61879fbd60367e221187ad988e7dbbd6e7fbaf1",
+      "bytes": 23264
+    },
+    {
+      "file": "control-24af657a10691e8b-keyboard-before.png",
+      "sha256": "5f17d918f5b656ca4c06fbc63d9670c3be47a79581e9822deef7a6e88e8fcdf2",
+      "bytes": 26348
+    },
+    {
+      "file": "control-24af657a10691e8b-keyboard-after.png",
+      "sha256": "ce35b7f39a3fd5f4e5fb66d06376ba03967886bacc35b581d1a0dd2c5c0e1663",
+      "bytes": 23487
+    }
+  ],
+  "errors": [],
+  "geometry": {
+    "viewport": 900,
+    "maxScroll": 8100,
+    "boxes": [
+      {
+        "id": "question",
+        "top": 0,
+        "height": 1800
+      },
+      {
+        "id": "scheduling",
+        "top": 1800,
+        "height": 1800
+      },
+      {
+        "id": "bench",
+        "top": 3600,
+        "height": 1800
+      },
+      {
+        "id": "evidence",
+        "top": 5400,
+        "height": 1800
+      },
+      {
+        "id": "scope",
+        "top": 7200,
+        "height": 1800
+      }
+    ]
+  },
+  "controlInventory": [
+    {
+      "index": 0,
+      "tag": "button",
+      "type": null,
+      "role": null,
+      "href": null,
+      "targetIds": "result",
+      "beat": null,
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+      "name": "Count a local action",
+      "visible": true,
+      "disabled": false,
+      "key": "control-e93170df5f1810d0"
+    },
+    {
+      "index": 1,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#scope",
+      "targetIds": null,
+      "beat": null,
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "name": "Read scope",
+      "visible": true,
+      "disabled": false,
+      "key": "control-24af657a10691e8b"
+    }
+  ],
+  "problems": [
+    "question: missing or changed reduced-motion stillness evidence",
+    "scheduling: missing or changed reduced-motion stillness evidence",
+    "bench: missing or changed reduced-motion stillness evidence",
+    "evidence: missing or changed reduced-motion stillness evidence",
+    "scope: missing or changed reduced-motion stillness evidence"
+  ]
+}

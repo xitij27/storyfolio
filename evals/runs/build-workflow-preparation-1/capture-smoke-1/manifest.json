@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "modelInvocations": 0,
+  "fixtureSha256": "8aaf45b7d8015d0bf76a1b133c07816f16e04995dade30010b7f581758834ed1",
+  "started": "2026-10-11T06:52:34.017Z",
+  "source": {
+    "capture-smoke.mjs": "b953550befe08e9186752e7c65e89b5e9a35edb2f60a943af68b2d7a53adbbc1",
+    "../../lib/build-capture.mjs": "4343193f026dafa7d44242e20fad37167d4d91b0e859648786287cd9c137938f",
+    "../../lib/build-check.mjs": "2be732dabb40fc490636a7cb1e61e58073958429dd75afff871d9c8187578043"
+  },
+  "reports": [
+    {
+      "name": "desktop-good",
+      "problems": [],
+      "reportSha256": "7f0a5176dd26c218840ab2340b7ad026a1f445743b80ab94bc2ecb6999bf2336"
+    },
+    {
+      "name": "mobile-good",
+      "problems": [],
+      "reportSha256": "07dc9cf411695fd06c10d8fca6e9a2a1591c70dd0cbd980977c7b5f7bb92c08b"
+    },
+    {
+      "name": "short-good",
+      "problems": [],
+      "reportSha256": "ff0b3eb6f2e40be9fee1416acfacdf9fe3c50c4dc4e39977f7c8614f810dcfc2"
+    },
+    {
+      "name": "reduced-motion-good",
+      "problems": [],
+      "reportSha256": "b2b4518772eba9a1e39651a8d5d6074c872b8cb00504a05fd84051e6ce480232"
+    },
+    {
+      "name": "no-webgl-good",
+      "problems": [],
+      "reportSha256": "7711738d8063317669af4200ed6a8d4b0acb17c437b905d142766ca74e39c845"
+    },
+    {
+      "name": "no-javascript-good",
+      "problems": [],
+      "reportSha256": "fc0e0925d0da294181d7ae29dc5683c729c0fefbedd6159df69d9f7e9f777789"
+    },
+    {
+      "name": "context-loss-good",
+      "problems": [],
+      "reportSha256": "c2c677d7e033065ed369d64cc53db6a7bc69a815432167a3a758ba4385d37833"
+    },
+    {
+      "name": "control-negative-wrong-target",
+      "problems": [
+        "control-0/pointer: declared control targets did not respond",
+        "control-0/pointer: no observable control response (requires review, not a functional pass)",
+        "control-0/keyboard: declared control targets did not respond",
+        "control-0/keyboard: no observable control response (requires review, not a functional pass)"
+      ],
+      "reportSha256": "f865cc0668d37e6370f43557d401d38f9612cddccc42e29319dfe67778a2224e"
+    },
+    {
+      "name": "control-negative-noop",
+      "problems": [
+        "control-0/pointer: declared control targets did not respond",
+        "control-0/pointer: no observable control response (requires review, not a functional pass)",
+        "control-0/keyboard: declared control targets did not respond",
+        "control-0/keyboard: no observable control response (requires review, not a functional pass)"
+      ],
+      "reportSha256": "0c1b934d8c4b51bdace69274168f35db45331b01870e2b0d866e604bd87e816d"
+    },
+    {
+      "name": "control-negative-missing",
+      "problems": [
+        "Measured beat IDs/order differ from frozen expectations"
+      ],
+      "reportSha256": "26e9eb85a4a4b2685713345df9b3a7b090bd0768b812028a4aaac39ca5f40251"
+    },
+    {
+      "name": "reduced-motion-moving",
+      "problems": [
+        "question: missing or changed reduced-motion stillness evidence",
+        "scheduling: missing or changed reduced-motion stillness evidence",
+        "bench: missing or changed reduced-motion stillness evidence",
+        "evidence: missing or changed reduced-motion stillness evidence",
+        "scope: missing or changed reduced-motion stillness evidence"
+      ],
+      "reportSha256": "43fdf5d516cc9cac26fbc56efb27a960d8b23390d31b265708e404e258aca4a5"
+    },
+    {
+      "name": "context-loss-loss-missing",
+      "problems": [
+        "Measured beat IDs/order differ from frozen expectations"
+      ],
+      "reportSha256": "5bccc9d92a8f0112dfa40cc65990dfbc761cc3503829e7b44bbdaacc5f915c97"
+    }
+  ],
+  "complete": true,
+  "scope": "actual browser helper smoke, not full Next acceptance or visual quality",
+  "finished": "2026-10-11T06:56:04.405Z"
+}

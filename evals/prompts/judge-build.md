@@ -14,7 +14,9 @@ Do not silently grant a pass for work the harness performed. Preserve
 distinctions between the actor's claim, actual source, tool results,
 automatic acceptance and real author approval.
 
-Use requestedStops and criterionEligibility from the evidence packet.
+Use taskKind and criterionEligibility from the evidence packet. A
+prototype-depth diagnostic is not a journey stop. For legacy tasks, use
+requestedStops to identify the attempted journey stops.
 Conversation turn numbers do not identify stops in a fresh continuation.
 An observed failed attempt can fail a relevant criterion; a completed model
 turn does not prove a successful stop or approval. Keep inherited earlier

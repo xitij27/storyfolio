@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-11",
+  "sourceCommitBeforePreparation": "75d1f35288b951ca2f301aec1a4b3e90bf6af7ab",
+  "modelInvocations": 0,
+  "tests": {
+    "command": "PATH=/tmp/storyfolio-node-check-20261011/node_modules/.bin:$PATH npm test",
+    "exitCode": 0,
+    "tests": 266,
+    "suites": 31,
+    "passed": 266,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "durationMs": 6722.1256,
+    "output": "tests.tap",
+    "execution": "Approved outside sandbox with existing native-TypeScript-capable Node 22.22.1. No dependency downloads."
+  },
+  "skillCheck": { "exitCode": 0, "words": 687, "references": 4 },
+  "peopleCheck": { "exitCode": 0, "people": 17 },
+  "fixtureCheck": { "exitCode": 0, "actorFiles": 7, "retainedSources": 4, "unchangedSvgCopies": 2, "beats": 5, "promptVerbatim": true },
+  "capture": {
+    "verifier": "verify-capture.mjs",
+    "verified": true,
+    "manifestSha256": "d03d8ff9e93563c692cf178ce7606ff8715f4e4950aed7520de8c5a235b64bb7",
+    "sourceOriginals": 4,
+    "reports": 12,
+    "goodModes": 7,
+    "detectedNegativeVariants": 5,
+    "images": 214,
+    "intervals": 24,
+    "controlTrials": 36,
+    "stillPairs": 10,
+    "scope": "Browser helper calibration on tiny synthetic pages, not production Next acceptance or original-image quality approval."
+  },
+  "visualCalibration": { "originalImagesReviewed": 20, "inventory": "visual-calibration.json", "unblindedKnownExamples": true },
+  "engineProbe": { "exitCode": 0, "result": "engine-risk-result.json", "sharedEngineChanged": false, "browserIntegrationProven": false },
+  "transportProbe": { "exitCode": 0, "result": "transport-result.json", "historicalFittingPackets": 1, "historicalOversizePackets": 1, "newTransportImplemented": false },
+  "draftInputInspection": {
+    "exitCode": 0,
+    "result": "draft-input-inspection.json",
+    "candidateFiles": 119,
+    "digest": "e8eacacf535d299b2a74219d12fa81d2dc6a217c257ec356133191b5b41f5817",
+    "writes": false,
+    "finalFreeze": false,
+    "note": "Host CLI and disabled-skill inventory only. Browser environment variables were null. No actor workspace or actual capability proof was created."
+  },
+  "preservation": { "audit": "audit-result.json", "handoverArchiveVerbatim": true, "protectedTreesUnchanged": 8, "reservedBaselinePrepared": false },
+  "initialFailures": [
+    "Host npm test failed on unsupported native TypeScript and restricted subprocesses; correct verification Node and approved execution passed.",
+    "Read-only audit initially hit Git subprocess EPERM; approved execution exposed an unfinished capture-notes link, then final audit passed after the record existed.",
+    "Input dry inspection hit codex --version subprocess EPERM; approved no-model inspection passed. No actor or judge was started."
+  ],
+  "remainingGates": [
+    "Separately reviewed shared-controls fix with browser integration verification.",
+    "Lossless judge evidence-transport decision and verification.",
+    "Final committed input freeze, exact actor-workspace capability proof and specific paid-run approval."
+  ],
+  "pushed": false
+}

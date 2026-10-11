@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "deterministic-engine-risk-probe",
+  "node": "v22.22.1",
+  "dependencies": "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules",
+  "versions": {
+    "typescript": "5.9.3",
+    "react": "19.2.4",
+    "three": "180"
+  },
+  "sourceSha256": {
+    "skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "skills/storyfolio/engine/components/story/story.tsx": "7961909ead315faf46cffdf36cdd54bc38e86dd70e0d80d19afaed050af4878f",
+    "skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e"
+  },
+  "controls": {
+    "sceneConsumerError": "Story controls must be inside a Story",
+    "htmlConsumerPass": true,
+    "outerProviderControlPass": true,
+    "limitations": "Real Story and controls modules; dynamic scene is a context consumer stand-in. SSR propagation, not a WebGL/Canvas integration or failure-boundary browser proof."
+  },
+  "faceAspect": {
+    "dimensions": [
+      {
+        "coarse": false,
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "coarse": true,
+        "width": 384,
+        "height": 512
+      }
+    ],
+    "plane": {
+      "width": 3,
+      "height": 1
+    },
+    "uncompensatedPixelCircleWidthHeightRatio": 4,
+    "limitations": "Real createFaces callback dimensions with a fake canvas. Geometry mapping predicts stretch; no rendered pixels or generalized quality score. Custom drawing can compensate."
+  },
+  "result": "Both known risks reproduced; shipped engine unchanged."
+}

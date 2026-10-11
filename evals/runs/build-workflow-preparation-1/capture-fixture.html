@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deterministic diagnostic fixture, not a portfolio</title>
+<style>
+body { margin:0; font:20px system-ui; background:#f3f0e5; color:#142630; }
+section { height:200vh; padding:0 24px; box-sizing:border-box; border-top:2px solid; }
+h1,h2 { position:sticky; top:12px; max-width:60%; }
+canvas { position:fixed; top:90px; right:8px; width:100px; height:100px; display:none; }
+[data-scene=on] canvas { display:block; }
+.controls { position:fixed; bottom:8px; left:8px; padding:10px; background:white; }
+button { font:inherit; }
+button:hover { background:yellow; }
+[hidden] { display:none; }
+</style>
+<main class="story" data-scene="off">
+<section data-beat="question"><h1>Original question heading</h1></section>
+<section data-beat="scheduling"><h2>Original scheduling heading</h2></section>
+<section data-beat="bench"><h2>Original bench heading</h2></section>
+<section data-beat="evidence"><h2>Original evidence heading</h2></section>
+<section id="scope" data-beat="scope"><h2>Original scope heading</h2></section>
+<canvas width="100" height="100" aria-label="Synthetic color surface"></canvas>
+<div class="controls" hidden><button aria-controls="result">Count a local action</button> <output id="result">0 actions</output><output id="unrelated">Unrelated target</output> <a href="#scope">Read scope</a></div>
+</main>
+<script>
+const variant = new URL(location.href).searchParams.get("case");
+const story = document.querySelector(".story");
+const canvas = document.querySelector("canvas");
+const button = document.querySelector("button");
+const output = document.querySelector("#result");
+const gl = canvas.getContext("webgl");
+let count = 0;
+document.querySelector(".controls").hidden = false;
+button.addEventListener("click", () => { if (variant !== "noop") output.textContent = `${++count} actions`; });
+if (variant === "wrong-target") button.setAttribute("aria-controls", "unrelated");
+if (variant === "missing") document.querySelector('[data-beat="bench"]').remove();
+if (variant === "moving") setInterval(() => { output.textContent = `${++count} moving`; }, 30);
+if (gl) {
+  story.dataset.scene = "on";
+  const paint = () => { gl.clearColor((scrollY % 1000) / 1000, 0.3, 0.5, 1); gl.clear(gl.COLOR_BUFFER_BIT); };
+  paint(); addEventListener("scroll", paint);
+  canvas.addEventListener("webglcontextlost", event => {
+    event.preventDefault(); story.dataset.scene = "off";
+    if (variant === "loss-missing") document.querySelector('[data-beat="scope"]').remove();
+  });
+}
+</script>
+</html>

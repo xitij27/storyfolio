@@ -13,6 +13,9 @@ preserves the state before the author authorized visual recovery implementation.
 The [pre-depth-approval handover](history/2026-10-11-before-depth-approval-handover.md)
 preserves `fd03055` verbatim before recording acceptance of the revised story.
 
+The [pre-preparation handover](history/2026-10-11-before-build-preparation-handover.md)
+preserves `75d1f35` verbatim before implementing the local diagnostic tooling.
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -78,10 +81,17 @@ plan how the skill can reproduce this quality. The
 [reproduction plan](superpowers/plans/2026-10-11-build-workflow-reproduction.md)
 define the next preparation: a five-beat, one-appearance diagnostic with
 unchanged skill instructions and the accepted implementation held out.
-The current runner needs an explicit diagnostic task mapping and separate
-visual measurement. The proposed one-turn actor and optional single judge
-envelope is not yet authorized. No preparation implementation or paid run
-has been made by this planning checkpoint.
+The author then approved no-model preparation with "yes", recorded in
+[the preparation authorization](history/2026-10-11-build-preparation-approval.md).
+Versioned diagnostic runner/judge support, the new fictional derivative and
+independent measurement tooling are now implemented. The
+[preparation findings](../evals/runs/build-workflow-preparation-1/findings.md)
+record verification and known-example calibration. Final freeze is deferred:
+the shared scene-controls defect is reproduced, and complete historical
+evidence still exceeds the judge's transport limits. A separately reviewed
+engine correction and transport decision are needed before the actual
+actor-workspace proof. The proposed one-turn actor and optional single judge
+remain unapproved. No paid call, shipped skill/engine change or push was made.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -330,7 +340,10 @@ Their subsequent ["yeah it works fine on phone"](history/2026-10-11-fixture-phon
 confirms the phone check, without approving a full site or starting new work.
 After being offered planning for a reproducible build workflow, they said
 ["okay then let us proceed"](history/2026-10-11-build-workflow-planning.md).
-The plan is now written; paid execution and new skill instructions remain gated.
+The plan is written and local preparation is now authorized and implemented
+up to its engine/transport gates. Paid execution and new skill instructions
+remain gated. The [exact preparation reply](history/2026-10-11-build-preparation-approval.md)
+and test evidence are preserved separately.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -395,9 +408,13 @@ any paid run. These approvals do not request further implementation or
 permit a push. The non-sheet whole-site proof and packaging remain open.
 That planning step is now authorized and the
 [five-beat reproduction plan](superpowers/plans/2026-10-11-build-workflow-reproduction.md)
-is drafted. Next implement and verify its local preparation when approved,
-then freeze the protocol and obtain the specific paid-run decision. Do not
-reinterpret the phone approval or planning request as that cost approval.
+is drafted. Its approved local preparation now has
+[implemented tooling and retained diagnostics](../evals/runs/build-workflow-preparation-1/findings.md).
+Next obtain direction on the reproduced shared-controls correction and
+lossless judge-evidence transport, then complete the final freeze and actual
+actor-workspace capability proof. The paid-run decision remains separate.
+Do not reinterpret the phone, planning or no-model preparation approvals
+as that cost approval. The reserved baseline cohort has not been prepared.
 Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
 [first prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md)
 and [setup](../prototypes/fixture-study/README.md). The author found the first
@@ -440,6 +457,11 @@ npm test
 The latest completion checkpoint passes all 246 repository tests, including
 the new judge character-limit regressions. The earlier engine checkpoint
 passed 189 tests; these are different checkpoints.
+The newer [no-model preparation verification](../evals/runs/build-workflow-preparation-1/verification.json)
+passes 266 tests across 31 suites, plus the fixture and skill checks. Its
+synthetic browser calibration passes seven good conditions and catches five
+deliberately bad variants, with final source/image hashes verified. This is
+measurement testing, not an actor build, new author approval or final freeze.
 The visual-quality review repeated the required checks: all 246 tests,
 the skill check and the people check pass. Its
 [preservation record](../evals/runs/codex-visual-quality-review-1/verification.json)

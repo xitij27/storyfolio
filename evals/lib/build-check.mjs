@@ -1,5 +1,6 @@
 import { isAbsolute, relative, resolve, sep } from "node:path";
 import { createHash } from "node:crypto";
+import { assessDiagnosticCapture } from "./build-capture.mjs";
 
 // Text nodes split by inline emphasis can introduce a separator before punctuation.
 export const normalizeText = value => String(value ?? "").replace(/\s+/g, " ").replace(/\s+([.,;:!?])/g, "$1").trim();
@@ -65,20 +66,28 @@ export function artifactHashes(entries) {
 export function validateExpectations(value) {
   const problems = [];
   if (!object(value)) return ["expectations must be an object"];
-  const keys = ["schemaVersion", "id", "route", "beats", "requiredText", "links", "assets", "requiredFiles", "modes", "viewports", "chapters", "checklist", "contentConstraints", "provenance"];
+  const diagnostic = value.schemaVersion === 2;
+  const keys = ["schemaVersion", "id", "route", "beats", "requiredText", "links", "assets", "requiredFiles", "modes", "viewports", "chapters", "checklist", "contentConstraints", "provenance", ...(diagnostic ? ["taskKind"] : [])];
   for (const key of Object.keys(value)) if (!keys.includes(key)) problems.push(`unknown expectations key: ${key}`);
-  if (value.schemaVersion !== 1) problems.push("unsupported expectations schemaVersion");
+  if (value.schemaVersion !== 1 && !(diagnostic && value.taskKind === "prototype-depth")) problems.push("unsupported expectations schemaVersion or taskKind");
   if (!nonempty(value.id)) problems.push("id must be nonempty");
   if (!nonempty(value.route) || !value.route.startsWith("/") || value.route.startsWith("//") || /[\\\0]/.test(value.route)) problems.push("route must be an absolute local URL path");
-  if (!Array.isArray(value.beats) || !value.beats.length || !value.beats.every(beat => object(beat) && nonempty(beat.id) && nonempty(beat.heading))) problems.push("beats must contain fixed IDs and headings");
+  if (!Array.isArray(value.beats) || !value.beats.length || !value.beats.every(beat => object(beat) && nonempty(beat.id) && (diagnostic ? [1, 2].includes(beat.headingLevel) && beat.heading === undefined : nonempty(beat.heading)))) problems.push(diagnostic ? "beats must contain fixed IDs and structural headingLevel, not fixed headings" : "beats must contain fixed IDs and headings");
   else if (!unique(value.beats.map(beat => beat.id))) problems.push("beat IDs must be unique");
-  if (!Array.isArray(value.requiredText) || !value.requiredText.length || !value.requiredText.every(nonempty)) problems.push("requiredText must contain fixed nonempty strings");
-  if (!Array.isArray(value.links) || !value.links.length || !value.links.every(link => object(link) && nonempty(link.text) && nonempty(link.href) && /^(?:https?:|mailto:|\/|#)/.test(link.href) && !link.href.startsWith("//") && !/[\\\0]/.test(link.href) && (link.keyboardOnly === undefined || typeof link.keyboardOnly === "boolean"))) problems.push("links must contain text, an allowed href and optional keyboardOnly");
+  if (diagnostic && (!Array.isArray(value.beats) || JSON.stringify(value.beats.map(beat => [beat?.id, beat?.headingLevel])) !== JSON.stringify(["question", "scheduling", "bench", "evidence", "scope"].map((id, index) => [id, index ? 2 : 1])))) problems.push("prototype-depth requires five ordered structural beat headings");
+  if (!Array.isArray(value.requiredText) || (!diagnostic && !value.requiredText.length) || !value.requiredText.every(nonempty)) problems.push("requiredText must contain fixed nonempty strings (an empty array is permitted for diagnostic semantic review)");
+  if (!Array.isArray(value.links) || (!diagnostic && !value.links.length) || !value.links.every(link => object(link) && nonempty(link.text) && nonempty(link.href) && /^(?:https?:|mailto:|\/|#)/.test(link.href) && !link.href.startsWith("//") && !/[\\\0]/.test(link.href) && (link.keyboardOnly === undefined || typeof link.keyboardOnly === "boolean"))) problems.push("links must contain text, an allowed href and optional keyboardOnly");
   for (const key of ["assets", "requiredFiles"]) if ((key === "assets" || value[key] !== undefined) && (!Array.isArray(value[key]) || !value[key].every(localPath))) problems.push(`${key} must contain workspace-relative paths without traversal`);
-  const modeKeys = ["desktop", "mobile", "reducedMotion", "noWebGL", "noJavaScript"];
+  const modeKeys = ["desktop", "mobile", "reducedMotion", "noWebGL", "noJavaScript", ...(diagnostic ? ["short"] : [])];
   if (!object(value.modes) || Object.keys(value.modes).some(key => !modeKeys.includes(key)) || !modeKeys.every(key => ["animated", "static"].includes(value.modes[key]))) problems.push("modes must declare desktop, mobile, reducedMotion, noWebGL and noJavaScript");
   else if (value.modes.noWebGL !== "static" || value.modes.noJavaScript !== "static") problems.push("noWebGL and noJavaScript must require static content");
   if (!object(value.viewports) || !["desktop", "mobile"].every(key => object(value.viewports[key]) && ["width", "height"].every(axis => Number.isInteger(value.viewports[key][axis]) && value.viewports[key][axis] > 0))) problems.push("desktop and mobile viewports must have positive integer dimensions");
+  if (diagnostic) {
+    for (const [name, width, height] of [["desktop", 1440, 900], ["mobile", 390, 844], ["short", 1280, 720]]) {
+      if (value.viewports?.[name]?.width !== width || value.viewports?.[name]?.height !== height) problems.push(`prototype-depth ${name} viewport must be ${width} by ${height}`);
+      if (value.modes?.[name] !== "animated") problems.push(`prototype-depth ${name} must retain the animated object`);
+    }
+  }
   return problems;
 }
 
@@ -88,6 +97,7 @@ export function buildCases(expected) {
   return [
     { id: "desktop", viewport: expected.viewports.desktop, mode: expected.modes.desktop },
     { id: "mobile", viewport: expected.viewports.mobile, mode: expected.modes.mobile, touch: true },
+    ...(expected.schemaVersion === 2 ? [{ id: "short", viewport: expected.viewports.short, mode: expected.modes.short }] : []),
     { id: "reduced-motion", viewport: expected.viewports.desktop, mode: expected.modes.reducedMotion, reducedMotion: true },
     { id: "no-webgl", viewport: expected.viewports.desktop, mode: "static", noWebGL: true },
     { id: "no-javascript", viewport: expected.viewports.mobile, mode: "static", noJavaScript: true, touch: true },
@@ -131,7 +141,7 @@ export function assessObservation(expected, entry, report) {
   for (const beat of expected.beats) {
     const actual = samples.filter(sample => sample.beat === beat.id);
     if (!actual.length) problems.push(`no sample for ${beat.id}`);
-    if (!actual.some(sample => sample.headings?.some(heading => normalizeText(heading.text) === normalizeText(beat.heading) && heading.visible))) problems.push(`missing visible heading for ${beat.id}: ${beat.heading}`);
+    if (!actual.some(sample => sample.headings?.some(heading => (expected.schemaVersion === 2 ? heading.level === beat.headingLevel && normalizeText(heading.text).length > 0 : normalizeText(heading.text) === normalizeText(beat.heading)) && heading.visible))) problems.push(`missing visible heading for ${beat.id}: ${expected.schemaVersion === 2 ? `level ${beat.headingLevel}` : beat.heading}`);
   }
   for (const sample of samples) {
     const scene = entry.mode === "animated" ? "on" : "off";
@@ -148,6 +158,7 @@ export function assessObservation(expected, entry, report) {
   }
   if (entry.loseContext && !report.contextLoss?.supported) problems.push("WebGL context loss was not exercised");
   for (const pair of report.stationary ?? []) if (pair.before !== pair.after) problems.push(`${pair.beat}: reduced-motion canvas changed while stationary`);
+  if (expected.schemaVersion === 2) problems.push(...assessDiagnosticCapture(expected, entry, report));
   problems.push(...(report.errors ?? []));
   return [...new Set(problems)];
 }

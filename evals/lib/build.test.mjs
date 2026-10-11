@@ -91,6 +91,59 @@ test("case validation binds prompt count, ordered stop and refusal lists, and op
   for (const maxUncachedTokens of [null, 0, -1, 0.5, Infinity, Number.MAX_SAFE_INTEGER + 1]) assert.throws(() => validateCase({ ...source, bounds: { ...source.bounds, maxUncachedTokens } }), /maxUncachedTokens/);
 });
 
+test("prototype-depth is a versioned one-turn task, never an alias for a journey stop", async t => {
+  const { source: legacy } = await fixture(t);
+  const source = { ...legacy, schemaVersion: 2, taskKind: "prototype-depth", prompts: legacy.prompts.slice(0, 1), bounds: { ...legacy.bounds, maxTurns: 1 } };
+  const validated = validateCase(source);
+  assert.equal(validated.taskKind, "prototype-depth");
+  assert.equal(Object.hasOwn(validated, "requestedStops"), false);
+  assert.deepEqual(validated.refusalTurns, [1]);
+  const planned = planTurn({ source, turn: 1, history: [] });
+  assert.equal(planned.taskKind, "prototype-depth");
+  assert.equal(Object.hasOwn(planned, "requestedStop"), false);
+  assert.equal(planned.timeoutMs, 900000);
+  for (const update of [
+    { schemaVersion: 1 }, { schemaVersion: 3 }, { taskKind: "stop-4" }, { taskKind: undefined },
+    { requestedStops: [4] }, { requestedStops: [] }, { requestedStops: undefined },
+    { prompts: legacy.prompts }, { bounds: { ...source.bounds, maxTurns: 2 } },
+    { refusalTurns: [] }, { refusalTurns: [2] }, { refusalTurns: null },
+  ]) assert.throws(() => validateCase({ ...source, ...update }));
+  assert.throws(() => planTurn({ source, turn: 2, history: [{ complete: true }] }), /Turn limit/);
+  assert.throws(() => planTurn({ source, turn: 1, history: [{ complete: false }] }), /never overwritten/);
+});
+
+test("prototype task identity is frozen and failed single attempts cannot overwrite or advance", async t => {
+  const options = await fixture(t);
+  const source = { ...options.source, schemaVersion: 2, taskKind: "prototype-depth", prompts: options.source.prompts.slice(0, 1), bounds: { ...options.source.bounds, maxTurns: 1 } };
+  await writeFile(join(options.root, options.casePath), json(source));
+  const prepared = await prepareBuildInputs(options), work = join(options.root, "work"), out = join(options.root, "out");
+  await populateBuildWorkspace(prepared.inputs, work);
+  await captureBuildWorkspace(work, join(out, "setup/snapshot"), prepared.source.snapshot);
+  let calls = 0;
+  const invoke = async params => {
+    calls++;
+    const stdout = '{"type":"thread.started","thread_id":"partial"}\n';
+    await writeNew(params.streamPath, stdout); await writeNew(params.stderrPath, "timeout");
+    return { stdout, stderr: "timeout", code: -1, durationMs: 900000, args: [], timedOut: true };
+  };
+  const run = { out, work, inputs: prepared.inputs, source: prepared.source, capabilities: options.capabilities, invoke };
+  await assert.rejects(executeBuildTurn({ ...run, source: options.source, turn: 1 }), /case differs from frozen/);
+  assert.equal(calls, 0);
+  const result = await executeBuildTurn({ ...run, turn: 1 });
+  assert.equal(result.taskKind, "prototype-depth");
+  assert.equal(Object.hasOwn(result, "requestedStop"), false);
+  assert.equal(result.complete, false);
+  assert.equal(result.timedOut, true);
+  const started = JSON.parse(await readFile(join(out, "turns/01/started.json")));
+  assert.equal(started.taskKind, "prototype-depth");
+  assert.equal(Object.hasOwn(started, "requestedStop"), false);
+  await assert.rejects(executeBuildTurn({ ...run, turn: 1 }), /never overwritten/);
+  await assert.rejects(executeBuildTurn({ ...run, turn: 2 }), /Turn limit/);
+  assert.equal(calls, 1);
+  await writeFile(join(options.root, options.casePath), json(options.source));
+  await assert.rejects(prepareBuildInputs(options), /Current inputs differ/);
+});
+
 test("current source or frozen input drift cannot silently reuse a build cohort", async t => {
   const options = await fixture(t);
   const prepared = await prepareBuildInputs(options);
@@ -103,6 +156,17 @@ test("current source or frozen input drift cannot silently reuse a build cohort"
   await assert.rejects(prepareBuildInputs({ ...options, capabilities: { ...options.capabilities, model: "different" } }), /Current inputs differ/);
   await writeNew(join(prepared.inputs, "unexpected.txt"), "drift");
   await assert.rejects(verifyInputs(prepared.inputs), /file set changed/);
+});
+
+test("fresh legacy cohorts automatically freeze the checker and judge transitive capture helper", async t => {
+  const options = await fixture(t);
+  await writeNew(join(options.root, "evals/lib/build-capture.mjs"), "coordinator capture helper");
+  for (const entry of ["evals/check-build.mjs", "evals/lib/build-check.mjs", "evals/codex-build-judge.mjs"]) {
+    await writeNew(join(options.root, entry), "entry imports capture helper");
+    const inspected = await inspectBuildInputs({ ...options, implementationFiles: [entry] });
+    assert.equal(inspected.source.schemaVersion, 1);
+    assert.equal(inspected.hashes["implementation/evals/lib/build-capture.mjs"], hash("coordinator capture helper"));
+  }
 });
 
 test("fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved", async t => {

@@ -1,0 +1,358 @@
+{
+  "entry": {
+    "id": "reduced-motion",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "animated",
+    "reducedMotion": true
+  },
+  "variant": "moving",
+  "rests": [
+    {
+      "beat": "question",
+      "requestedScroll": 900,
+      "actualScroll": 900,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-question.png",
+      "sha256": "e9ae2e407e2343108b1e08bc0157b4e3f826372d649b53711ccc5cf51571b3a5",
+      "bytes": 22421
+    },
+    {
+      "beat": "scheduling",
+      "requestedScroll": 2700,
+      "actualScroll": 2700,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-scheduling.png",
+      "sha256": "b10d627ec618a1e6b595e8186fd8ed8d1ecd5864c5b80d72bb0ab43702a5a4ec",
+      "bytes": 21197
+    },
+    {
+      "beat": "bench",
+      "requestedScroll": 4500,
+      "actualScroll": 4500,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-bench.png",
+      "sha256": "8ae1cbe98cde98e41d4a0a3e69da1aff87e69b6d67dee592d76be31e0a0e990f",
+      "bytes": 19730
+    },
+    {
+      "beat": "evidence",
+      "requestedScroll": 6300,
+      "actualScroll": 6300,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-evidence.png",
+      "sha256": "8e2cb8bb4e4d28a805154bb3b9578daf03128618ae4774f309d10271408bd640",
+      "bytes": 21249
+    },
+    {
+      "beat": "scope",
+      "requestedScroll": 8100,
+      "actualScroll": 8100,
+      "scene": "on",
+      "afterContextLoss": false,
+      "file": "rest-scope.png",
+      "sha256": "d04d6e8f5fdb2c6649783f04d7f86dee8aa6a2d80618adcf2fe25e893c76c763",
+      "bytes": 20716
+    }
+  ],
+  "stationary": [
+    {
+      "beat": "question",
+      "before": "3f68ff108ae0623b21a2bc0d5849aed3749f721f181f45b7ac40f374056f66e9",
+      "after": "80e3a7591368cf05c7361c6289325122333ecc79569fccb99682aa1b4433a7f5",
+      "elapsedMs": 494
+    },
+    {
+      "beat": "scheduling",
+      "before": "711cf07670bba2f0e8781171a51ac1f88b479e9b130625d56e76f6c2237952b9",
+      "after": "73cf28c06ad8a6a54df79f5758173ef5879cd19af8b87444b1f98c3920cf2ec6",
+      "elapsedMs": 494
+    },
+    {
+      "beat": "bench",
+      "before": "ae86964df5894bb35b15e73b3e59fe8e14692db81040385d2ec712a3bcda1e96",
+      "after": "3ae9809a09de1c105436a6c72cd338b97202bc1159435d2a69907b3887e2e285",
+      "elapsedMs": 466
+    },
+    {
+      "beat": "evidence",
+      "before": "be94fd175e990a7cb628d6be78a6de8759e2a96d3779b34e00d5c768dce6c9b0",
+      "after": "c4225b3cd7f19144be980f59943e35ef4267803df21c0922925b8e471567af46",
+      "elapsedMs": 482
+    },
+    {
+      "beat": "scope",
+      "before": "5f8ebcd65d5cb5eb5db04f245587e934300848c485b7c1dbd2615ef5de20d955",
+      "after": "ca79643ccf61759b8f0b837a484665aed0cf8d6b1bb12375a5b84409f9662b0e",
+      "elapsedMs": 467
+    }
+  ],
+  "motion": [],
+  "controls": [
+    {
+      "key": "control-0",
+      "index": 0,
+      "tag": "button",
+      "type": null,
+      "role": null,
+      "name": "Count a local action",
+      "visible": true,
+      "disabled": false,
+      "trials": [
+        {
+          "method": "pointer",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "result",
+              "exists": true,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "815dc1c77d92fd0578a250f6d5ee9b1d6e459005cf826a6371cfe26eaa70b470",
+          "afterImage": "2b7bdb5ae2999094c125ebcce31d04c4b1ba067b8a6208b67f3ced0f1b361c16",
+          "changed": true,
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">63 moving</output>"
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">80 moving</output>"
+              }
+            ],
+            "hitTarget": true
+          }
+        },
+        {
+          "method": "keyboard",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "result",
+              "exists": true,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "e4135cbad6d97dc14f4050060bfab389a5ff378688413cd2298de776f5108725",
+          "afterImage": "47f92a8647606aa7fa716e91cd9487e6e6c545e1485c6968e588234243c8d31d",
+          "changed": true,
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">63 moving</output>"
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">79 moving</output>"
+              }
+            ],
+            "hitTarget": true
+          }
+        }
+      ]
+    }
+  ],
+  "controlInventoryComplete": true,
+  "images": [
+    {
+      "file": "rest-question.png",
+      "sha256": "e9ae2e407e2343108b1e08bc0157b4e3f826372d649b53711ccc5cf51571b3a5",
+      "bytes": 22421
+    },
+    {
+      "file": "still-question-before.png",
+      "sha256": "3f68ff108ae0623b21a2bc0d5849aed3749f721f181f45b7ac40f374056f66e9",
+      "bytes": 22330
+    },
+    {
+      "file": "still-question-after.png",
+      "sha256": "80e3a7591368cf05c7361c6289325122333ecc79569fccb99682aa1b4433a7f5",
+      "bytes": 23119
+    },
+    {
+      "file": "rest-scheduling.png",
+      "sha256": "b10d627ec618a1e6b595e8186fd8ed8d1ecd5864c5b80d72bb0ab43702a5a4ec",
+      "bytes": 21197
+    },
+    {
+      "file": "still-scheduling-before.png",
+      "sha256": "711cf07670bba2f0e8781171a51ac1f88b479e9b130625d56e76f6c2237952b9",
+      "bytes": 21217
+    },
+    {
+      "file": "still-scheduling-after.png",
+      "sha256": "73cf28c06ad8a6a54df79f5758173ef5879cd19af8b87444b1f98c3920cf2ec6",
+      "bytes": 20980
+    },
+    {
+      "file": "rest-bench.png",
+      "sha256": "8ae1cbe98cde98e41d4a0a3e69da1aff87e69b6d67dee592d76be31e0a0e990f",
+      "bytes": 19730
+    },
+    {
+      "file": "still-bench-before.png",
+      "sha256": "ae86964df5894bb35b15e73b3e59fe8e14692db81040385d2ec712a3bcda1e96",
+      "bytes": 19687
+    },
+    {
+      "file": "still-bench-after.png",
+      "sha256": "3ae9809a09de1c105436a6c72cd338b97202bc1159435d2a69907b3887e2e285",
+      "bytes": 19812
+    },
+    {
+      "file": "rest-evidence.png",
+      "sha256": "8e2cb8bb4e4d28a805154bb3b9578daf03128618ae4774f309d10271408bd640",
+      "bytes": 21249
+    },
+    {
+      "file": "still-evidence-before.png",
+      "sha256": "be94fd175e990a7cb628d6be78a6de8759e2a96d3779b34e00d5c768dce6c9b0",
+      "bytes": 20978
+    },
+    {
+      "file": "still-evidence-after.png",
+      "sha256": "c4225b3cd7f19144be980f59943e35ef4267803df21c0922925b8e471567af46",
+      "bytes": 21062
+    },
+    {
+      "file": "rest-scope.png",
+      "sha256": "d04d6e8f5fdb2c6649783f04d7f86dee8aa6a2d80618adcf2fe25e893c76c763",
+      "bytes": 20716
+    },
+    {
+      "file": "still-scope-before.png",
+      "sha256": "5f8ebcd65d5cb5eb5db04f245587e934300848c485b7c1dbd2615ef5de20d955",
+      "bytes": 20678
+    },
+    {
+      "file": "still-scope-after.png",
+      "sha256": "ca79643ccf61759b8f0b837a484665aed0cf8d6b1bb12375a5b84409f9662b0e",
+      "bytes": 20435
+    },
+    {
+      "file": "control-0-pointer-before.png",
+      "sha256": "815dc1c77d92fd0578a250f6d5ee9b1d6e459005cf826a6371cfe26eaa70b470",
+      "bytes": 22873
+    },
+    {
+      "file": "control-0-pointer-after.png",
+      "sha256": "2b7bdb5ae2999094c125ebcce31d04c4b1ba067b8a6208b67f3ced0f1b361c16",
+      "bytes": 22685
+    },
+    {
+      "file": "control-0-keyboard-before.png",
+      "sha256": "e4135cbad6d97dc14f4050060bfab389a5ff378688413cd2298de776f5108725",
+      "bytes": 23311
+    },
+    {
+      "file": "control-0-keyboard-after.png",
+      "sha256": "47f92a8647606aa7fa716e91cd9487e6e6c545e1485c6968e588234243c8d31d",
+      "bytes": 23385
+    }
+  ],
+  "errors": [],
+  "geometry": {
+    "viewport": 900,
+    "maxScroll": 8100,
+    "boxes": [
+      {
+        "id": "question",
+        "top": 0,
+        "height": 1800
+      },
+      {
+        "id": "scheduling",
+        "top": 1800,
+        "height": 1800
+      },
+      {
+        "id": "bench",
+        "top": 3600,
+        "height": 1800
+      },
+      {
+        "id": "evidence",
+        "top": 5400,
+        "height": 1800
+      },
+      {
+        "id": "scope",
+        "top": 7200,
+        "height": 1800
+      }
+    ]
+  },
+  "problems": [
+    "question: missing or changed reduced-motion stillness evidence",
+    "scheduling: missing or changed reduced-motion stillness evidence",
+    "bench: missing or changed reduced-motion stillness evidence",
+    "evidence: missing or changed reduced-motion stillness evidence",
+    "scope: missing or changed reduced-motion stillness evidence"
+  ]
+}

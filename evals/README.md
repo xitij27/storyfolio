@@ -277,7 +277,31 @@ historical judgement, use its recorded implementation revision; do not
 modify old inputs to accommodate current code. CLI JSON can omit image
 calls, so absent visual events are not proof of skipped image review.
 
-### Approved build continuation
+### Prototype-depth preparation
+
+The newer [prototype-depth preparation](builds/bench-depth-1/README.md) uses
+case/expectations schema 2 and `taskKind: "prototype-depth"`, not a requested
+journey stop. Its one fixed prompt permits a five-beat, one-appearance
+prototype. New headings are checked structurally; semantic and pixel review
+remain separate. Version 1 retains its exact heading and stop mapping.
+The new checker records all five rests, short viewport, forward/reverse
+travel, discovered controls, reduced-motion stillness and post-context-loss
+coverage with source/artifact hashes. These are measurements, not visual
+approval. [Calibration and known blockers](runs/build-workflow-preparation-1/findings.md)
+are retained outside the historical studies.
+
+Only a read-only input inspection is currently appropriate for this case:
+
+```sh
+node evals/codex-build-run.mjs --case evals/builds/bench-depth-1/case.json --cohort codex-bench-depth-baseline-1 --capabilities evals/builds/local-capabilities.json --dry
+```
+
+The paid envelope is not approved, and final `--prepare` is deferred pending
+shared-engine and evidence-transport decisions. The reserved cohort is not
+a ready workspace. No `--turn` or paid judge invocation follows from this
+preparation authorization.
+
+### Historical approved build continuation
 
 The [completion protocol](../docs/superpowers/plans/2026-10-11-build-completion-proposal.md)
 has the author's cost-review approval for one fresh conversation with at

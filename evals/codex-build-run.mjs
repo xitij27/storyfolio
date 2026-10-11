@@ -5,9 +5,9 @@ import { delimiter, join, resolve } from "node:path";
 import { parseArgs } from "node:util";
 import { EFFORT, MODEL, disabledSkills } from "./lib/codex.mjs";
 import { ROOT, RUNS, WORK } from "./lib/files.mjs";
-import { buildCodexArgs, captureBuildWorkspace, executeBuildTurn, hash, inspectBuildInputs, json, populateBuildWorkspace, prepareBuildInputs, regularBytes, safeId, safePath, verifyInputs, writeNew } from "./lib/build.mjs";
+import { buildCodexArgs, buildTaskIdentity, captureBuildWorkspace, executeBuildTurn, hash, inspectBuildInputs, json, populateBuildWorkspace, prepareBuildInputs, regularBytes, safeId, safePath, verifyInputs, writeNew } from "./lib/build.mjs";
 
-const usage = "Usage: node evals/codex-build-run.mjs --case <case.json> --cohort <id> --capabilities <json> --prepare\n       node evals/codex-build-run.mjs <same arguments> --turn <1..N> [--gate <json>]\n\nPreparation freezes inputs and copies the declared fixture. Default setupMode scaffolds; existing-site skips scaffolding. Install dependencies and save setup/probe.json before turn 1.\nOne invocation executes one actor turn for its case.requestedStops entry. Later turns require a coordinator gate; no automatic advancement or retry.";
+const usage = "Usage: node evals/codex-build-run.mjs --case <case.json> --cohort <id> --capabilities <json> --prepare\n       node evals/codex-build-run.mjs <same arguments> --turn <1..N> [--gate <json>]\n\nPreparation freezes inputs and copies the declared fixture. Default setupMode scaffolds; existing-site skips scaffolding. Install dependencies and save setup/probe.json before turn 1.\nOne invocation executes one actor turn for the frozen task: legacy requestedStops or the one-turn prototype-depth diagnostic. Later legacy turns require a coordinator gate; no automatic advancement or retry.";
 const { values: args } = parseArgs({ options: {
   case: { type: "string" }, cohort: { type: "string" }, capabilities: { type: "string" },
   rep: { type: "string", default: "1" }, prepare: { type: "boolean", default: false },
@@ -43,7 +43,7 @@ capabilities.argv = buildCodexArgs({ model: capabilities.model, disabled, config
 const options = { root: ROOT, runs: RUNS, casePath: args.case, cohort: args.cohort, capabilities };
 if (args.dry) {
   const inspected = await inspectBuildInputs(options);
-  console.log(json({ caseId: inspected.source.id, setupMode: inspected.source.setupMode, requestedStops: inspected.source.requestedStops, refusalTurns: inspected.source.refusalTurns, frozenFiles: Object.keys(inspected.hashes).length, digest: inspected.digest, bounds: inspected.source.bounds, capabilities, writes: false, modelCalls: false }));
+  console.log(json({ caseId: inspected.source.id, setupMode: inspected.source.setupMode, ...buildTaskIdentity(inspected.source), refusalTurns: inspected.source.refusalTurns, frozenFiles: Object.keys(inspected.hashes).length, digest: inspected.digest, bounds: inspected.source.bounds, capabilities, writes: false, modelCalls: false }));
   process.exit(0);
 }
 const git = (...flags) => execFileSync("git", ["-C", ROOT, ...flags], { encoding: "utf8" }).trim();
@@ -51,7 +51,7 @@ options.recorded = { commit: git("rev-parse", "HEAD"), sourceStatus: git("status
 const prepared = await prepareBuildInputs(options);
 const { inputs, manifest, source } = prepared;
 const out = join(RUNS, args.cohort, source.id, `baseline-${args.rep}`);
-const identity = { runner: "codex-build", caseId: source.id, cohort: args.cohort, rep: Number(args.rep), inputDigest: manifest.digest };
+const identity = { runner: "codex-build", caseId: source.id, cohort: args.cohort, rep: Number(args.rep), inputDigest: manifest.digest, ...(source.taskKind ? { taskKind: source.taskKind } : {}) };
 
 if (args.prepare) {
   await mkdir(join(RUNS, args.cohort, source.id), { recursive: true });
@@ -67,7 +67,7 @@ if (args.prepare) {
   }
   await mkdir(WORK, { recursive: true });
   const work = await mkdtemp(join(WORK, `build-${source.id}-`));
-  await writeNew(join(out, "meta.json"), json({ ...identity, preparedAt: new Date().toISOString(), inputs, work, model: capabilities.model, reasoningEffort: EFFORT, setupMode: source.setupMode, requestedStops: source.requestedStops, refusalTurns: source.refusalTurns, bounds: source.bounds }));
+  await writeNew(join(out, "meta.json"), json({ ...identity, preparedAt: new Date().toISOString(), inputs, work, model: capabilities.model, reasoningEffort: EFFORT, setupMode: source.setupMode, ...buildTaskIdentity(source), refusalTurns: source.refusalTurns, bounds: source.bounds }));
   await writeNew(join(out, "setup/started.json"), json({ started: new Date().toISOString(), work, inputDigest: manifest.digest, paid: false }));
   const setup = { complete: false, setupMode: source.setupMode, modelCalls: 0, networkCalls: 0 };
   try {
@@ -92,5 +92,5 @@ for (const path of probe.evidence) await regularBytes(join(out, "setup"), path);
 const gate = args.gate ? JSON.parse(await readFile(resolve(args.gate), "utf8")) : null;
 await verifyInputs(inputs);
 const result = await executeBuildTurn({ out, work: meta.work, inputs, source, capabilities, turn: Number(args.turn), gate });
-console.log(json({ complete: result.complete, turn: result.turn, requestedStop: result.requestedStop, sessionId: result.sessionId, durationMs: result.durationMs, usage: result.usage, result: join(result.location, "result.json"), error: result.error ?? result.captureError ?? null }));
+console.log(json({ complete: result.complete, turn: result.turn, ...buildTaskIdentity(source, result.turn), sessionId: result.sessionId, durationMs: result.durationMs, usage: result.usage, result: join(result.location, "result.json"), error: result.error ?? result.captureError ?? null }));
 process.exit(result.complete ? 0 : 1);

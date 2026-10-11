@@ -41,7 +41,9 @@ async function fileTree(root, prefix = "", excludeGenerated = true) {
 }
 
 export function validateCase(source) {
-  if (source.schemaVersion !== 1) throw new Error("Expected build case schemaVersion 1");
+  if (![1, 2].includes(source.schemaVersion)) throw new Error("Expected build case schemaVersion 1 or 2");
+  const diagnostic = source.schemaVersion === 2;
+  if (diagnostic ? source.taskKind !== "prototype-depth" : source.taskKind !== undefined) throw new Error("Only schemaVersion 2 accepts taskKind: prototype-depth");
   safeId(source.id);
   for (const key of ["workspaceRoot", "expectations", "rubric", "protocol"]) safePath(source[key]);
   if (!Array.isArray(source.files) || !source.files.length || new Set(source.files).size !== source.files.length) throw new Error("Case needs a nonempty unique fixture file allowlist");
@@ -50,10 +52,14 @@ export function validateCase(source) {
   source.prompts.forEach(safePath);
   const setupMode = source.setupMode === undefined ? "scaffold" : source.setupMode;
   if (!["scaffold", "existing-site"].includes(setupMode)) throw new Error("setupMode must be scaffold or existing-site");
-  const requestedStops = source.requestedStops === undefined ? [4, 5, 6].slice(0, source.prompts.length) : source.requestedStops;
-  if (!Array.isArray(requestedStops) || requestedStops.length !== source.prompts.length || requestedStops.some((stop, index) => ![4, 5, 6].includes(stop) || (index > 0 && stop <= requestedStops[index - 1]))) throw new Error("requestedStops must match the prompts as an ordered unique subset of 4, 5 and 6");
-  const refusalTurns = source.refusalTurns === undefined ? [2, 3].filter(turn => turn <= source.prompts.length) : source.refusalTurns;
+  const requestedStops = diagnostic ? undefined : source.requestedStops === undefined ? [4, 5, 6].slice(0, source.prompts.length) : source.requestedStops;
+  if (diagnostic) {
+    if (Object.hasOwn(source, "requestedStops")) throw new Error("prototype-depth does not request journey stops");
+    if (source.prompts.length !== 1 || source.bounds?.maxTurns !== 1) throw new Error("prototype-depth requires exactly one fixed prompt and one allowed turn");
+  } else if (!Array.isArray(requestedStops) || requestedStops.length !== source.prompts.length || requestedStops.some((stop, index) => ![4, 5, 6].includes(stop) || (index > 0 && stop <= requestedStops[index - 1]))) throw new Error("requestedStops must match the prompts as an ordered unique subset of 4, 5 and 6");
+  const refusalTurns = source.refusalTurns === undefined ? diagnostic ? [1] : [2, 3].filter(turn => turn <= source.prompts.length) : source.refusalTurns;
   if (!Array.isArray(refusalTurns) || refusalTurns.some((turn, index) => !Number.isSafeInteger(turn) || turn < 1 || turn > source.prompts.length || (index > 0 && turn <= refusalTurns[index - 1]))) throw new Error("refusalTurns must be ordered unique turn numbers within the prompt list");
+  if (diagnostic && (refusalTurns.length !== 1 || refusalTurns[0] !== 1)) throw new Error("prototype-depth requires the fixed opening refusalTurns: [1]");
   for (const key of ["maxTurns", "turnTimeoutMs", "maxWallMs", "maxTokens"]) positive(source.bounds?.[key], key);
   if (source.bounds.maxUncachedTokens !== undefined) positive(source.bounds.maxUncachedTokens, "maxUncachedTokens");
   if (source.bounds.maxTurns > source.prompts.length) throw new Error("Every allowed turn needs a fixed prompt");
@@ -64,7 +70,12 @@ export function validateCase(source) {
     snapshot[key].forEach(path => { safePath(path); if (path.split("/").some(part => EXCLUDED.has(part))) throw new Error(`Excluded snapshot path: ${path}`); });
   }
   for (const key of ["maxFiles", "maxBytes", "maxFileBytes"]) positive(snapshot[key], key);
-  return { ...source, setupMode, requestedStops, refusalTurns, snapshot };
+  return { ...source, setupMode, ...(diagnostic ? {} : { requestedStops }), refusalTurns, snapshot };
+}
+
+/** Diagnostic identity is not a journey-stop alias. Keep legacy records unchanged. */
+export function buildTaskIdentity(source, turn) {
+  return source.taskKind === "prototype-depth" ? { taskKind: source.taskKind } : turn === undefined ? { requestedStops: source.requestedStops } : { requestedStop: source.requestedStops[turn - 1] };
 }
 
 export async function inspectBuildInputs({ root, casePath, capabilities, implementationFiles = IMPLEMENTATION_FILES }) {
@@ -75,7 +86,12 @@ export async function inspectBuildInputs({ root, casePath, capabilities, impleme
   for (const [index, path] of source.prompts.entries()) files[`prompts/turn${index + 1}.md`] = await regularBytes(root, path);
   for (const path of source.files) files[`fixture/${path}`] = await regularBytes(root, `${source.workspaceRoot}/${path}`);
   for (const path of await fileTree(join(root, "skills/storyfolio"))) files[`skill/${path}`] = await regularBytes(root, `skills/storyfolio/${path}`);
-  for (const path of [...new Set([...implementationFiles, ...(source.implementationFiles ?? [])])]) files[`implementation/${safePath(path)}`] = await regularBytes(root, path);
+  const implementation = new Set([...implementationFiles, ...(source.implementationFiles ?? [])]);
+  // Current coordinator checker/judge entry points import this helper even
+  // for legacy expectations. Freeze transitive code for new cohorts without
+  // rewriting historical fixture declarations or retained cohort inputs.
+  if (["evals/check-build.mjs", "evals/lib/build-check.mjs", "evals/codex-build-judge.mjs"].some(path => implementation.has(path))) implementation.add("evals/lib/build-capture.mjs");
+  for (const path of implementation) files[`implementation/${safePath(path)}`] = await regularBytes(root, path);
   if (!files["skill/SKILL.md"] || !files["skill/engine/package-lock.json"]) throw new Error("Frozen skill and engine lockfile are required");
   const hashes = Object.fromEntries(Object.keys(files).sort().map(path => [path, hash(files[path])]));
   return { source, files, hashes, digest: hash(json(hashes)) };
@@ -243,7 +259,7 @@ export function planTurn({ turn, source, history, gate }) {
     if (!previous.sessionId) throw new Error("Previous turn lacks a resumable session");
     if (!gate || gate.afterTurn !== turn - 1 || gate.advance !== true || gate.previousTurnDigest !== previous.digest || typeof gate.observation !== "string" || !gate.observation.trim()) throw new Error("Coordinator gate must identify and approve the observed previous turn");
   }
-  return { sessionId: history.at(-1)?.sessionId ?? null, requestedStop: source.requestedStops[turn - 1], timeoutMs: Math.min(source.bounds.turnTimeoutMs, source.bounds.maxWallMs - elapsedMs), elapsedMs, tokens, inputTokens, outputTokens, cachedInputTokens, uncachedTokens };
+  return { sessionId: history.at(-1)?.sessionId ?? null, ...buildTaskIdentity(source, turn), timeoutMs: Math.min(source.bounds.turnTimeoutMs, source.bounds.maxWallMs - elapsedMs), elapsedMs, tokens, inputTokens, outputTokens, cachedInputTokens, uncachedTokens };
 }
 
 /** One process, one paid turn. Terminate the entire process group on timeout. */
@@ -303,6 +319,9 @@ export async function readTurnHistory(out) {
 
 export async function executeBuildTurn({ out, work, inputs, source, capabilities, turn, gate, invoke = invokeBuildCodex }) {
   await verifyInputs(inputs);
+  const frozenSource = validateCase(JSON.parse(await regularBytes(inputs, "case.json")));
+  if (json(validateCase(source)) !== json(frozenSource)) throw new Error("Actor case differs from frozen inputs");
+  source = frozenSource;
   const history = await readTurnHistory(out);
   const limits = planTurn({ turn, source, history, gate });
   const location = join(out, "turns", String(turn).padStart(2, "0"));
@@ -312,7 +331,7 @@ export async function executeBuildTurn({ out, work, inputs, source, capabilities
   await writeNew(join(location, "prompt.md"), prompt);
   if (gate) await writeNew(join(location, "gate.json"), json(gate));
   await writeNew(join(location, "started.json"), json({ turn, started: new Date().toISOString(), ...limits, inputDigest: (await verifyInputs(inputs)).digest }));
-  const result = { turn, requestedStop: limits.requestedStop, complete: false, durationMs: 0, sessionId: limits.sessionId, usage: null, artifacts: {},
+  const result = { turn, ...buildTaskIdentity(source, turn), complete: false, durationMs: 0, sessionId: limits.sessionId, usage: null, artifacts: {},
     completionMeaning: "The actor turn completed. This is not a passed build, reached stop or author approval.",
     usageAggregation: "Raw turn.completed usage is preserved. Between turns, reported input_tokens plus output_tokens are summed across actor turns. If configured, maxUncachedTokens separately bounds input_tokens minus cached_input_tokens plus output_tokens; cached input must be a nonnegative safe integer no greater than input. Resumed counters may overlap. No dollar estimate or hard in-flight token cap is inferred." };
   try {

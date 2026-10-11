@@ -1,0 +1,274 @@
+{
+  "entry": {
+    "id": "context-loss",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "mode": "static",
+    "loseContext": true
+  },
+  "variant": "good",
+  "rests": [
+    {
+      "beat": "question",
+      "requestedScroll": 0,
+      "actualScroll": 0,
+      "scene": "off",
+      "afterContextLoss": true,
+      "file": "rest-question.png",
+      "sha256": "c4b68c985938be011ee51232f61c5bf671b4ed5d26a8c415a473e9a331061903",
+      "bytes": 22334
+    },
+    {
+      "beat": "scheduling",
+      "requestedScroll": 1800,
+      "actualScroll": 1800,
+      "scene": "off",
+      "afterContextLoss": true,
+      "file": "rest-scheduling.png",
+      "sha256": "f477f603090424e6de88e17566cbbc09ef90d9694829bf37dc1c05a8b6212b3b",
+      "bytes": 20275
+    },
+    {
+      "beat": "bench",
+      "requestedScroll": 3600,
+      "actualScroll": 3600,
+      "scene": "off",
+      "afterContextLoss": true,
+      "file": "rest-bench.png",
+      "sha256": "5b4cd3d6c9fbc798ad64f24be3a1d03a41f71708b0062b0a0577fc5312db0d6d",
+      "bytes": 18885
+    },
+    {
+      "beat": "evidence",
+      "requestedScroll": 5400,
+      "actualScroll": 5400,
+      "scene": "off",
+      "afterContextLoss": true,
+      "file": "rest-evidence.png",
+      "sha256": "4c92b45fd643d10f1d7fd850ead42743539536aca4e3ff091db3a8dcdb59b19d",
+      "bytes": 20210
+    },
+    {
+      "beat": "scope",
+      "requestedScroll": 7200,
+      "actualScroll": 7200,
+      "scene": "off",
+      "afterContextLoss": true,
+      "file": "rest-scope.png",
+      "sha256": "0438b355299160e4f9363140b6309732ddcc366f00708d43a3829d5b965615ab",
+      "bytes": 19703
+    }
+  ],
+  "stationary": [],
+  "motion": [],
+  "controls": [
+    {
+      "key": "control-0",
+      "index": 0,
+      "tag": "button",
+      "type": null,
+      "role": null,
+      "name": "Count a local action",
+      "visible": true,
+      "disabled": false,
+      "trials": [
+        {
+          "method": "pointer",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "result",
+              "exists": true,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "a73ac3448be2a39315f945d109d6e988cf450c2fb143160b8da7e63ef12a85c9",
+          "afterImage": "6c4e2dfcfa0238836617f4c82c085871728891e13c5f8a48008176faabf93399",
+          "changed": true,
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">0 actions</output>"
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">1 actions</output>"
+              }
+            ],
+            "hitTarget": true
+          }
+        },
+        {
+          "method": "keyboard",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "result",
+              "exists": true,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "beforeImage": "9874104302b08e621f66e88fc54150e5b3f4f8a4337ae7f661fc83c7bc5a7ff2",
+          "afterImage": "021fb74eec440d347f59edf862f0a3f45a89a0140432b65c27c84cf3c4f1c33b",
+          "changed": true,
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "before": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">0 actions</output>"
+              }
+            ],
+            "hitTarget": true
+          },
+          "after": {
+            "html": "<button aria-controls=\"result\">Count a local action</button>",
+            "value": "",
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "result",
+                "exists": true,
+                "html": "<output id=\"result\">1 actions</output>"
+              }
+            ],
+            "hitTarget": true
+          }
+        }
+      ]
+    }
+  ],
+  "controlInventoryComplete": true,
+  "images": [
+    {
+      "file": "rest-question.png",
+      "sha256": "c4b68c985938be011ee51232f61c5bf671b4ed5d26a8c415a473e9a331061903",
+      "bytes": 22334
+    },
+    {
+      "file": "rest-scheduling.png",
+      "sha256": "f477f603090424e6de88e17566cbbc09ef90d9694829bf37dc1c05a8b6212b3b",
+      "bytes": 20275
+    },
+    {
+      "file": "rest-bench.png",
+      "sha256": "5b4cd3d6c9fbc798ad64f24be3a1d03a41f71708b0062b0a0577fc5312db0d6d",
+      "bytes": 18885
+    },
+    {
+      "file": "rest-evidence.png",
+      "sha256": "4c92b45fd643d10f1d7fd850ead42743539536aca4e3ff091db3a8dcdb59b19d",
+      "bytes": 20210
+    },
+    {
+      "file": "rest-scope.png",
+      "sha256": "0438b355299160e4f9363140b6309732ddcc366f00708d43a3829d5b965615ab",
+      "bytes": 19703
+    },
+    {
+      "file": "control-0-pointer-before.png",
+      "sha256": "a73ac3448be2a39315f945d109d6e988cf450c2fb143160b8da7e63ef12a85c9",
+      "bytes": 21935
+    },
+    {
+      "file": "control-0-pointer-after.png",
+      "sha256": "6c4e2dfcfa0238836617f4c82c085871728891e13c5f8a48008176faabf93399",
+      "bytes": 21660
+    },
+    {
+      "file": "control-0-keyboard-before.png",
+      "sha256": "9874104302b08e621f66e88fc54150e5b3f4f8a4337ae7f661fc83c7bc5a7ff2",
+      "bytes": 22382
+    },
+    {
+      "file": "control-0-keyboard-after.png",
+      "sha256": "021fb74eec440d347f59edf862f0a3f45a89a0140432b65c27c84cf3c4f1c33b",
+      "bytes": 22113
+    }
+  ],
+  "errors": [],
+  "contextLoss": {
+    "supported": true
+  },
+  "geometry": {
+    "viewport": 900,
+    "maxScroll": 8100,
+    "boxes": [
+      {
+        "id": "question",
+        "top": 0,
+        "height": 1800
+      },
+      {
+        "id": "scheduling",
+        "top": 1800,
+        "height": 1800
+      },
+      {
+        "id": "bench",
+        "top": 3600,
+        "height": 1800
+      },
+      {
+        "id": "evidence",
+        "top": 5400,
+        "height": 1800
+      },
+      {
+        "id": "scope",
+        "top": 7200,
+        "height": 1800
+      }
+    ]
+  },
+  "problems": []
+}

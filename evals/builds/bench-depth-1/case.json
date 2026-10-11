@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "taskKind": "prototype-depth",
+  "id": "bench-depth-1",
+  "setupMode": "scaffold",
+  "workspaceRoot": "evals/builds/bench-depth-1/workspace",
+  "files": [
+    "docs/story/assets.md",
+    "docs/story/confirmations.md",
+    "docs/story/facts.md",
+    "docs/story/handover.md",
+    "docs/story/storyboard.md",
+    "public/assets/bring-up-fixture.svg",
+    "public/assets/power-states.svg"
+  ],
+  "expectations": "evals/builds/bench-depth-1/expectations.json",
+  "rubric": "evals/builds/bench-depth-1/criteria.md",
+  "protocol": "evals/builds/bench-depth-1/protocol.md",
+  "prompts": ["evals/builds/bench-depth-1/turn1.md"],
+  "refusalTurns": [1],
+  "bounds": {
+    "maxTurns": 1,
+    "turnTimeoutMs": 900000,
+    "maxWallMs": 900000,
+    "maxTokens": 1500000
+  },
+  "implementationFiles": [
+    "evals/check-build.mjs",
+    "evals/lib/build-check.mjs",
+    "evals/lib/build-capture.mjs",
+    "evals/codex-build-judge.mjs",
+    "evals/lib/build-score.mjs",
+    "evals/prompts/judge-build.md",
+    "evals/probe-build-environment.mjs",
+    "evals/builds/local-capabilities.json",
+    "evals/builds/bench-depth-1/README.md",
+    "evals/builds/bench-depth-1/criteria.md",
+    "evals/builds/bench-depth-1/source-manifest.json",
+    "evals/builds/bench-depth-1/workspace-inventory.json",
+    "evals/builds/bench-depth-1/verify-fixture.mjs"
+  ]
+}

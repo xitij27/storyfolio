@@ -6,12 +6,13 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, MAX_JUDGE_PROMPT_BYTES, MAX_JUDGE_PROMPT_CHARACTERS, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
+import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, PROTOTYPE_DEPTH_CRITERIA, PROTOTYPE_DEPTH_JUDGEMENT_SCHEMA, MAX_JUDGE_PROMPT_BYTES, MAX_JUDGE_PROMPT_CHARACTERS, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
 import { captureBuildWorkspace, executeBuildTurn, hash, json, populateBuildWorkspace, prepareBuildInputs, readTurnHistory, writeNew } from "./build.mjs";
 import { invokeBuildJudge, JUDGE_IMPLEMENTATION_FILES, prepareBuildJudge, runBuildJudge } from "../codex-build-judge.mjs";
+import { captureSource } from "./build-capture.mjs";
 
 const sourceRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
-const unobserved = () => ({ schemaVersion: 1, criteria: Object.fromEntries(BUILD_CRITERIA.map(([id]) => [id, { status: "unobserved", reason: "The relevant observation is not available.", evidence: [] }])), summary: "One bounded partial run, with limitations.", unblinding: ["Baseline-only case."] });
+const unobserved = (taskKind) => ({ schemaVersion: taskKind === "prototype-depth" ? 2 : 1, criteria: Object.fromEntries((taskKind === "prototype-depth" ? PROTOTYPE_DEPTH_CRITERIA : BUILD_CRITERIA).map(([id]) => [id, { status: "unobserved", reason: "The relevant observation is not available.", evidence: [] }])), summary: "One bounded partial run, with limitations.", unblinding: ["Baseline-only case."] });
 const cite = (path = "run/turns/01/reply.md", excerpt = "No build is available.") => ({ path, excerpt, explanation: "The actor explicitly stopped without a build." });
 
 test("build judgement requires every criterion, valid status and real artifact excerpts", () => {
@@ -70,6 +71,30 @@ test("continuation eligibility follows attempted stops and actual refusal turns,
   ]) assert.ok(validateBuildJudgement(unobserved(), { ...context, ...mapping }).length);
 });
 
+test("prototype eligibility separates implementation and build-start checks from journey gates", () => {
+  const context = { taskKind: "prototype-depth", turnCount: 1, refusalTurns: [1], evidence: { "run/turns/01/reply.md": "No build is available." } };
+  assert.deepEqual(PROTOTYPE_DEPTH_JUDGEMENT_SCHEMA.properties.criteria.required, PROTOTYPE_DEPTH_CRITERIA.map(([id]) => id));
+  assert.equal(PROTOTYPE_DEPTH_JUDGEMENT_SCHEMA.properties.schemaVersion.const, 2);
+  for (const id of ["prototype_brief", "storyboard", "preflight_node", "preflight_git", "preflight_site", "preflight_skills", "preflight_browser", "no_skill_install_after_refusal"]) {
+    const value = unobserved("prototype-depth");
+    value.criteria[id] = { status: "fail", reason: "A requirement in the attempted diagnostic was missed.", evidence: [cite()] };
+    assert.deepEqual(validateBuildJudgement(value, context), [], id);
+    assert.deepEqual(buildScoreCounts(value), { pass: 0, fail: 1, unobserved: 24 });
+  }
+  for (const id of ["spine_scope", "look_choice", "chapters", "copy_approval", "finish_checks", "no_skill_install_before_refusal", "continue_without_skills", "recommendation_source", "install_command_verified"]) {
+    for (const status of ["pass", "fail"]) {
+      const value = unobserved("prototype-depth");
+      value.criteria[id] = { status, reason: "Claimed outside the diagnostic opportunity.", evidence: [cite()] };
+      assert.ok(validateBuildJudgement(value, context).length, `${id} ${status}`);
+    }
+  }
+  for (const update of [{ taskKind: "spine" }, { turnCount: 2 }, { requestedStops: [4] }, { requestedStops: [] }, { refusalTurns: [] }, { refusalTurns: null }]) {
+    assert.ok(validateBuildJudgement(unobserved("prototype-depth"), { ...context, ...update }).length);
+  }
+  assert.ok(validateBuildJudgement(unobserved(), context).length);
+  assert.ok(validateBuildJudgement(unobserved("prototype-depth"), { ...context, taskKind: undefined }).length);
+});
+
 test("judge prompt assembly preserves all supplied text and rejects byte overflow without truncation", () => {
   const template = "Rubric {{rubric}}\nData {{evidence}}", packet = { text: "évidence\ncomplete commands", nested: { quote: "{{rubric}}" } };
   const prompt = renderBuildJudgePrompt(template, "Version one", packet);
@@ -114,7 +139,7 @@ test("judge prompt explicitly uses conservative UTF-16 units for astral characte
   assert.throws(() => renderBuildJudgePrompt("{{rubric}}{{evidence}}", rubric + "a", {}), /character bound exceeded.*UTF-16 code units/);
 });
 
-async function fixture(t, { failedActor = false, continuation = false, turns = 1 } = {}) {
+async function fixture(t, { failedActor = false, continuation = false, prototype = false, turns = 1 } = {}) {
   const root = await mkdtemp(join(tmpdir(), "storyfolio-build-judge-test-"));
   t.after(() => rm(root, { recursive: true, force: true }));
   const run = "evals/runs/judge-test/fixture/baseline-1", out = join(root, run), work = join(root, "work");
@@ -126,6 +151,12 @@ async function fixture(t, { failedActor = false, continuation = false, turns = 1
     Object.assign(source, { setupMode: "existing-site", requestedStops: [5, 6], refusalTurns: [1, 2], prompts: ["fixtures/turn1.md", "fixtures/turn2.md"] });
     source.bounds.maxTurns = 2;
     source.files.push("package.json", "package-lock.json", "app/page.tsx", "content/seed.ts");
+  }
+  if (prototype) {
+    Object.assign(source, { schemaVersion: 2, taskKind: "prototype-depth", prompts: ["fixtures/turn1.md"], refusalTurns: [1], rubric: "fixtures/prototype-rubric.md" });
+    source.bounds.maxTurns = 1;
+    implementationFiles.push(source.rubric);
+    implementationFiles.splice(implementationFiles.indexOf("evals/prompts/build-criteria.md"), 1);
   }
   const values = {
     "fixtures/case.json": json(source), "fixtures/workspace/docs/story/facts.md": "Fictional fact input, provided in full.", "fixtures/expectations.json": '{"id":"fixture","schemaVersion":1}',
@@ -139,13 +170,14 @@ async function fixture(t, { failedActor = false, continuation = false, turns = 1
     "fixtures/turn1.md": "Continue the existing spine at stop 5 with Bench paper. I decline optional skill installation.",
     "fixtures/turn2.md": "Use the first recommended wording and finish at stop 6. I decline optional skill installation.",
   });
+  if (prototype) Object.assign(values, { "fixtures/prototype-rubric.md": "Prototype diagnostic criteria, version 1. Not any journey stop.", "fixtures/turn1.md": "Build one prototype appearance, no optional skills.", "fixtures/expectations.json": '{"id":"fixture","schemaVersion":2,"taskKind":"prototype-depth"}' });
   for (const [path, bytes] of Object.entries(values)) await writeNew(join(root, path), bytes);
   const capabilities = { model: "gpt-6.1-sol", disabledSkills: [], config: {} };
   const prepared = await prepareBuildInputs({ root, runs: join(root, "evals/runs"), casePath: "fixtures/case.json", cohort: "judge-test", capabilities, implementationFiles });
   await populateBuildWorkspace(prepared.inputs, work, { beforeScaffold: inventory => writeNew(join(out, "setup/pre-scaffold-inventory.json"), json(inventory)) });
   await captureBuildWorkspace(work, join(out, "setup/snapshot"), prepared.source.snapshot);
   await writeNew(join(out, "setup/result.json"), '{"complete":true}\n');
-  await writeNew(join(out, "meta.json"), json({ runner: "codex-build", caseId: "fixture", cohort: "judge-test", rep: 1, inputDigest: prepared.manifest.digest, inputs: prepared.inputs, work }));
+  await writeNew(join(out, "meta.json"), json({ runner: "codex-build", caseId: "fixture", cohort: "judge-test", rep: 1, inputDigest: prepared.manifest.digest, inputs: prepared.inputs, work, ...(prototype ? { taskKind: "prototype-depth" } : {}) }));
   let invocation = 0;
   const invoke = async params => {
     invocation++;
@@ -237,6 +269,68 @@ test("failed actor turns remain judgeable without claiming later stops were visi
   assert.ok(packet.prompt.includes("Interrupted actor"));
 });
 
+test("a failed prototype attempt has a complete judgeable packet without claiming any journey gate", async t => {
+  const testCase = await fixture(t, { prototype: true, failedActor: true }), prepared = await prepareBuildJudge(testCase);
+  assert.equal(prepared.packet.schemaVersion, 2);
+  assert.equal(prepared.packet.taskKind, "prototype-depth");
+  assert.equal(Object.hasOwn(prepared.packet, "requestedStops"), false);
+  assert.deepEqual(prepared.packet.refusalTurns, [1]);
+  assert.equal(prepared.packet.turns[0].complete, false);
+  assert.equal(prepared.packet.turns[0].taskKind, "prototype-depth");
+  assert.equal(Object.hasOwn(prepared.packet.turns[0], "requestedStop"), false);
+  assert.equal(prepared.packet.criterionEligibility.prototype_brief, true);
+  assert.equal(prepared.packet.criterionEligibility.preflight_site, true);
+  assert.equal(prepared.packet.criterionEligibility.look_choice, false);
+  assert.equal(prepared.packet.criterionEligibility.continue_without_skills, false);
+  assert.match(prepared.packet.observationScope, /not before-stop-1 timing/);
+  assert.ok(prepared.prompt.includes("Prototype diagnostic criteria, version 1"));
+  assert.ok(prepared.prompt.includes("Interrupted actor"));
+  assert.ok(prepared.prompt.includes("CHANGED_ACTOR_SOURCE"));
+  let calls = 0;
+  const invoke = async options => {
+    calls++;
+    assert.deepEqual(JSON.parse(await readFile(options.schema)), PROTOTYPE_DEPTH_JUDGEMENT_SCHEMA);
+    const value = unobserved("prototype-depth");
+    value.criteria.prototype_brief = { status: "fail", reason: "The attempted prototype remains incomplete.", evidence: [cite()] };
+    const stdout = [{ type: "thread.started", thread_id: "fresh-judge" }, { type: "item.completed", item: { type: "agent_message", text: JSON.stringify(value) } }, { type: "turn.completed", usage: { input_tokens: 20, output_tokens: 5 } }].map(JSON.stringify).join("\n") + "\n";
+    await writeNew(options.streamPath, stdout); await writeNew(options.stderrPath, "");
+    return { stdout, stderr: "", code: 0, durationMs: 5, args: [] };
+  };
+  const result = await runBuildJudge(prepared, { invoke });
+  assert.equal(result.complete, true);
+  assert.deepEqual(result.counts, { pass: 0, fail: 1, unobserved: 24 });
+  await assert.rejects(runBuildJudge(prepared, { invoke }), { code: "EEXIST" });
+  assert.equal(calls, 1);
+});
+
+test("prototype judging rejects frozen task identity drift in run, result and started records", async t => {
+  for (const kind of ["meta", "result", "started"]) {
+    const testCase = await fixture(t, { prototype: true });
+    const path = kind === "meta" ? "meta.json" : `turns/01/${kind}.json`;
+    const record = JSON.parse(await readFile(join(testCase.out, path)));
+    delete record.taskKind;
+    record[kind === "meta" ? "requestedStops" : "requestedStop"] = kind === "meta" ? [4] : 4;
+    await writeFile(join(testCase.out, path), json(record));
+    if (kind === "started") {
+      const resultPath = join(testCase.out, "turns/01/result.json"), result = JSON.parse(await readFile(resultPath));
+      result.artifacts["started.json"] = hash(json(record));
+      await writeFile(resultPath, json(result));
+    }
+    await assert.rejects(prepareBuildJudge(testCase), /task identity differs/);
+    await assert.rejects(readFile(join(testCase.out, "judge/started.json")), { code: "ENOENT" });
+  }
+});
+
+test("prototype judging blocks missing source evidence even when capture failure is disclosed", async t => {
+  const testCase = await fixture(t, { prototype: true, failedActor: true });
+  const path = join(testCase.out, "turns/01/result.json"), result = JSON.parse(await readFile(path));
+  delete result.snapshot;
+  result.captureError = "Synthetic source capture failure";
+  await writeFile(path, json(result));
+  await assert.rejects(prepareBuildJudge(testCase), /Missing after-turn source blocks prototype-depth judging/);
+  await assert.rejects(readFile(join(testCase.out, "judge/started.json")), { code: "ENOENT" });
+});
+
 test("current judge implementation drift prevents a call against frozen actor inputs", async t => {
   const testCase = await fixture(t);
   await writeFile(join(testCase.root, "evals/lib/build-score.mjs"), "changed judge");
@@ -248,7 +342,7 @@ test("acceptance reports stay separate and their frozen implementation and artif
   const report = '{"passed":false,"problems":["Missing beat"]}\n';
   await writeNew(join(testCase.out, "acceptance/desktop/report.json"), report);
   const manifest = { schemaVersion: 1, fixture: "fixture", workspace: testCase.work, expected, frozen: {
-    "checker": testCase.prepared.manifest.hashes["implementation/evals/check-build.mjs"], "helper": testCase.prepared.manifest.hashes["implementation/evals/lib/build-check.mjs"], "expected": testCase.prepared.manifest.hashes["expectations.json"],
+    "checker": testCase.prepared.manifest.hashes["implementation/evals/check-build.mjs"], "helper": testCase.prepared.manifest.hashes["implementation/evals/lib/build-check.mjs"], "capture": testCase.prepared.manifest.hashes["implementation/evals/lib/build-capture.mjs"], "expected": testCase.prepared.manifest.hashes["expectations.json"],
   }, complete: true, passed: false, artifacts: { "desktop/report.json": hash(report) }, results: [{ id: "desktop", passed: false, report: "desktop/report.json" }] };
   await writeNew(join(testCase.out, path), json(manifest));
   const packet = await prepareBuildJudge({ ...testCase, acceptance: path });
@@ -256,6 +350,64 @@ test("acceptance reports stay separate and their frozen implementation and artif
   assert.ok(packet.prompt.includes("Missing beat"));
   await writeFile(join(testCase.out, "acceptance/desktop/report.json"), "tampered");
   await assert.rejects(prepareBuildJudge({ ...testCase, acceptance: path }), /Acceptance artifact changed/);
+});
+
+test("prototype acceptance must bind the independent capture helper as well as the checker", async t => {
+  const testCase = await fixture(t, { prototype: true });
+  const expected = JSON.parse(await readFile(join(testCase.prepared.inputs, "expectations.json")));
+  const source = await captureSource(testCase.work);
+  const report = json({ passed: false, problems: ["Missing motion"], sourceDigest: source.digest });
+  await writeNew(join(testCase.out, "acceptance/desktop/report.json"), report);
+  const commandLog = "Synthetic failed build output: TYPE_ERROR complete diagnostic.\n";
+  await writeNew(join(testCase.out, "acceptance/build.log"), commandLog);
+  await writeNew(join(testCase.out, "acceptance/desktop/rendered.html"), "<h1>Complete saved HTML evidence</h1>");
+  const manifest = { schemaVersion: 1, taskKind: "prototype-depth", fixture: "fixture", workspace: testCase.work, expected, sourceBefore: source, sourceAfter: source, sourceUnchanged: true, frozen: {
+    checker: testCase.prepared.manifest.hashes["implementation/evals/check-build.mjs"],
+    library: testCase.prepared.manifest.hashes["implementation/evals/lib/build-check.mjs"],
+    capture: testCase.prepared.manifest.hashes["implementation/evals/lib/build-capture.mjs"],
+    expectations: testCase.prepared.manifest.hashes["expectations.json"],
+  }, artifacts: { "desktop/report.json": hash(report), "build.log": hash(commandLog), "desktop/rendered.html": hash("<h1>Complete saved HTML evidence</h1>") }, results: [{ report: "desktop/report.json", passed: false }], complete: true, passed: false };
+  const acceptance = "acceptance/manifest.json";
+  await writeNew(join(testCase.out, acceptance), json(manifest));
+  const prepared = await prepareBuildJudge({ ...testCase, acceptance });
+  assert.equal(prepared.packet.automaticAcceptance.passed, false);
+  assert.ok(prepared.prompt.includes("Missing motion"));
+  assert.equal(prepared.evidence["run/acceptance/build.log"], commandLog);
+  assert.equal(prepared.evidence["run/acceptance/desktop/rendered.html"], "<h1>Complete saved HTML evidence</h1>");
+  for (const mutate of [
+    copy => { delete copy.sourceBefore; },
+    copy => { delete copy.sourceAfter; },
+    copy => { copy.sourceUnchanged = false; },
+    copy => { copy.sourceBefore.digest = "0".repeat(64); },
+    copy => { copy.sourceAfter.exclusions.push("app"); },
+    copy => {
+      const file = copy.sourceBefore.files.find(file => file.path === "app/page.tsx");
+      file.sha256 = "1".repeat(64);
+      copy.sourceBefore.digest = hash(JSON.stringify(copy.sourceBefore.files));
+      copy.sourceAfter = structuredClone(copy.sourceBefore);
+    },
+    copy => {
+      copy.sourceBefore.files = copy.sourceBefore.files.filter(file => file.path !== "app/page.tsx");
+      copy.sourceBefore.digest = hash(JSON.stringify(copy.sourceBefore.files));
+      copy.sourceAfter = structuredClone(copy.sourceBefore);
+    },
+  ]) {
+    const changed = structuredClone(manifest); mutate(changed);
+    await writeFile(join(testCase.out, acceptance), json(changed));
+    await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance source/);
+  }
+  const omittedLog = structuredClone(manifest);
+  delete omittedLog.artifacts["build.log"];
+  await writeFile(join(testCase.out, acceptance), json(omittedLog));
+  await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance artifact file set changed or is incomplete/);
+  const wrongMode = json({ passed: false, problems: ["Missing motion"], sourceDigest: "0".repeat(64) });
+  await writeFile(join(testCase.out, "acceptance/desktop/report.json"), wrongMode);
+  await writeFile(join(testCase.out, acceptance), json({ ...manifest, artifacts: { ...manifest.artifacts, "desktop/report.json": hash(wrongMode) } }));
+  await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance source digest differs in mode report/);
+  await writeFile(join(testCase.out, "acceptance/desktop/report.json"), report);
+  delete manifest.frozen.capture;
+  await writeFile(join(testCase.out, acceptance), json(manifest));
+  await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance checker differs.*build-capture/);
 });
 
 test("one mocked judge call preserves every result and refuses all retries", async t => {
