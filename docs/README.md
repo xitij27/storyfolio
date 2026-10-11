@@ -17,6 +17,11 @@ Its [source and setup](../prototypes/fixture-study/README.md),
 [design](superpowers/specs/2026-10-11-fixture-prototype.md) and
 [findings](../evals/runs/visual-recovery-prototype-1/findings.md) are the next
 review checkpoint. Actual author visual approval remains pending.
+The author then requested more story depth. The
+[five-beat revision](superpowers/specs/2026-10-11-fixture-story-depth.md) and
+[new study](../evals/runs/visual-recovery-depth-1/findings.md) are the current
+review target, with [the exact clarification](history/2026-10-11-prototype-depth-feedback.md)
+preserved separately from full approval.
 
 For a new session, read:
 

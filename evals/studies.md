@@ -40,6 +40,7 @@ its review criteria and independent runtime observations are separate.
 | [codex-build-completion-1](#bounded-stage-3-completion-11-october-2026) | Two-turn implementation continuation, technically checked; visual result rejected |
 | [codex-visual-quality-review-1](#visual-quality-review-11-october-2026) | Source and image review after author rejection; Stage 3 visual proof remains open |
 | [visual-recovery-prototype-1](#visual-recovery-prototype-11-october-2026) | Manual three-beat implementation and local visual/browser study; author approval pending |
+| [visual-recovery-depth-1](#visual-recovery-story-depth-11-october-2026) | Manual five-beat narrative revision after author feedback; revised acceptance pending |
 
 ## Cases and comparison rules
 
@@ -526,3 +527,13 @@ source hashes and capture conditions are preserved. Actual author visual
 approval and physical-phone assessment remain pending. The result does not
 close the non-sheet whole-site proof, establish a skill success rate or
 authorize expansion past the prototype review gate.
+
+## Visual recovery story depth, 11 October 2026
+
+The author said the first prototype looks better, but clarified that
+"The story needs more depth". [visual-recovery-depth-1](runs/visual-recovery-depth-1/findings.md)
+records a bounded manual five-beat revision: scheduling and evidence
+provenance join the existing assembly, bench relationship and conclusion.
+The first source is preserved at `71ae3ea`, its evidence remains unchanged,
+and shipped skill/engine instructions are not changed. This is not a paid
+actor/judge cohort, a matched instruction experiment or final acceptance.

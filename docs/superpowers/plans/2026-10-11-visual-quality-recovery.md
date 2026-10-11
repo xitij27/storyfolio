@@ -111,3 +111,14 @@ fixture with an explicitly illustrative bench assembly. The
 technical checks, actual visual observations and limits. Actual author
 approval remains the gate before expanding this prototype. This manual work
 does not provide a matched skill evaluation or a full-site generality proof.
+
+## Narrative revision after feedback
+
+The author said it looks better, then clarified that
+[the story needs more depth](../../history/2026-10-11-prototype-depth-feedback.md).
+The [bounded five-beat revision](../specs/2026-10-11-fixture-story-depth.md)
+adds scheduling and evidence-provenance sections to the same apparatus.
+It deepens the case study without inventing a debugging success or changing
+the physical styling. The [new study](../../../evals/runs/visual-recovery-depth-1/findings.md)
+is the next review target. This revision is not approval of a complete site;
+the earlier visual, factual, phone and evaluated-workflow gates still apply.

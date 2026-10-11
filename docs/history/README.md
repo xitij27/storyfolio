@@ -209,3 +209,13 @@ preserves the complete earlier state. The resulting manual
 [fixture study](../../prototypes/fixture-study/README.md) has its own source,
 design decisions and [evidence](../../evals/runs/visual-recovery-prototype-1/findings.md).
 It does not constitute a new paid evaluation or author visual approval.
+
+## Story-depth feedback
+
+[The exact feedback](2026-10-11-prototype-depth-feedback.md) records that the
+author found the prototype visually better but wanted a deeper story. Their
+clarification excludes the assistant's initial interpretation as a request
+for larger or more decorated geometry. The
+[five-beat revision](../superpowers/specs/2026-10-11-fixture-story-depth.md)
+retains the first source at `71ae3ea` and all its evidence unchanged. This
+feedback is qualified, not final acceptance or a paid-run/push authorization.

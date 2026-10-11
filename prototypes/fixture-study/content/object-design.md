@@ -30,12 +30,20 @@ life. This separation keeps the bounded evidence distinct from the projection.
 Every surface calls the model illustrative; the HTML retains the full source
 context and factual qualifications.
 
+The author's later clarification requests story depth rather than more
+physical detail. The five-beat revision adds a command/board-led scheduling
+composition and an observation-led evidence composition. The four physical
+pieces and their paintings stay unchanged. Face IDs and the arrow beat
+index now derive from the story definition; there are twenty face IDs with
+the same four fixed painters. The HTML and fallback figures explain the
+teaching cycle, distinct evidence paths and sample scope.
+
 Motion review found ghosted lettering during the crossfade between different
 face layouts. Each physical unit now retains identical printing across all
-three beats. The observation instrument always shows the separate 72h and
+beats. The observation instrument always shows the separate 72h and
 2yr regions. The close establishes hierarchy by enlarging and promoting that
-same instrument, not by replacing its print. The twelve beat/piece face IDs
-remain stable, but their four painters no longer vary by beat.
+same instrument, not by replacing its print. The original twelve beat/piece
+face IDs remain present among the twenty; no painter varies by beat.
 
 An HTML inspection control selects a piece through the existing controls
 store. A small lens changes on that physical piece and four rust-colored

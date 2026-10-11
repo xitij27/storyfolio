@@ -43,6 +43,23 @@ new design choices. This is a reviewable development study, with actual
 author visual approval still pending. It is not an unchanged-agent rerun or
 a completed Stage 3 proof. Local evidence and final verification are in
 [the prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md).
+The author subsequently said it looks better, but clarified that
+"The story needs more depth". The [feedback record](history/2026-10-11-prototype-depth-feedback.md)
+and [five-beat revision](superpowers/specs/2026-10-11-fixture-story-depth.md)
+keep that distinction explicit. The revised prototype adds scheduling and
+evidence-provenance sections, develops inspection explanations, and promotes
+sample scope into the ending. The physical object is not enlarged or
+decorated in response to this clarification. Its new
+[depth study](../evals/runs/visual-recovery-depth-1/findings.md) remains manual
+development, pending the author's review of the revision. The first source
+is preserved at `71ae3ea`, and its evidence is unchanged.
+The depth study's build, lint, type checks and local tests pass. All 96
+original images were inspected across the seven-mode capture and a focused
+desktop/phone checker rerun. The original capture retains its stale Board
+sentence assertion failures; the corrected expectation passes on unchanged
+page source. The [audit](../evals/runs/visual-recovery-depth-1/verification.json)
+verifies source, image and harness hashes. This remains bounded software
+browser evidence, not physical-phone approval or a visual acceptance score.
 The completion judge was rejected by the CLI input limit before its model turn, so no
 behavioral score exists for that study. The shipped skill still plans only;
 the non-sheet whole-site proof and final packaging remain open.
@@ -282,6 +299,9 @@ Directions below were recorded on 10 October 2026 unless dated otherwise.
 On 11 October, the author approved proceeding with the three-beat visual
 prototype. Their exact words and the preceding recommendation are in
 [the authorization record](history/2026-10-11-visual-prototype-approval.md).
+They later reported visual improvement but requested a deeper story, not
+more physical detail. Their [exact feedback and clarification](history/2026-10-11-prototype-depth-feedback.md)
+govern the current five-beat revision; this is not full-site approval.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -338,8 +358,12 @@ repository change was made for this planning amendment.
 ## Start the next session
 
 The immediate review target is the manual fixture prototype on port 3012.
-Read its [findings](../evals/runs/visual-recovery-prototype-1/findings.md)
-and [setup](../prototypes/fixture-study/README.md). Its printing is fixed
+Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
+[first prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md)
+and [setup](../prototypes/fixture-study/README.md). The author found the first
+version better visually but wanted more story depth. The new five sections
+develop scheduling, bench work, evidence provenance and bounded sample scope.
+Review that revised story before any further expansion. Its printing is fixed
 across beats after reverse-scroll review caught overlapping text during
 crossfades. Connectors now wait for positive clearance between parts after
 a later frame exposed a reversed arrow inside the overlapping assembly.

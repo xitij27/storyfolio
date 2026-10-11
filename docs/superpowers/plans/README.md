@@ -41,3 +41,10 @@ remaining release work, with README and license already present. The
 original Stage 1 plan remains intact, including its embedded code and
 fixture drafts; use this index and the handover to distinguish that
 record from current operational instructions.
+
+The recovery prototype's current review target is now the
+[five-beat depth revision](../specs/2026-10-11-fixture-story-depth.md), following
+the author's clarification that the story needs more depth. Its
+[separate study](../../../evals/runs/visual-recovery-depth-1/findings.md)
+preserves the first prototype's evidence. This is a bounded revision, not
+unqualified visual acceptance or completion of the full-site gate.

@@ -4,9 +4,12 @@ import * as THREE from "three";
 import { useExtraFrame } from "@/components/story/extra-frame";
 import type { ExtraProps } from "@/components/story/types";
 import { atRest, blankFormation, mixFormation } from "@/lib/story/formation";
+import { beatIndex, beatsOf } from "@/lib/story/story";
 import { formations } from "../formations";
+import { story } from "../story";
 
-const beats = ["opening.assembly", "middle.relationship", "close.evidence"] as const;
+const beats = beatsOf(story).map(beat => beat.id);
+const middle = beatIndex(story, "middle.relationship");
 const headLength = .13;
 export default function Connections({ frameRef, controls }: ExtraProps) {
   const root = useRef<THREE.Group>(null);
@@ -16,7 +19,7 @@ export default function Connections({ frameRef, controls }: ExtraProps) {
   useExtraFrame(() => {
     const state = scratch.current;
     const f = frameRef.current;
-    const amount = f.from === 1 && f.to === 1 ? 1 : f.to === 1 ? f.t : f.from === 1 ? 1 - f.t : 0;
+    const amount = f.from === middle && f.to === middle ? 1 : f.to === middle ? f.t : f.from === middle ? 1 - f.t : 0;
     if (!root.current) return;
     root.current.visible = amount > .05;
     atRest(state.from, formations[beats[f.from]], f.dwell);

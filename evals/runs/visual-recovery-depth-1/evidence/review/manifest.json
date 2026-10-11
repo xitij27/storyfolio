@@ -1,0 +1,177 @@
+{
+  "startedAtUtc": "2026-10-11T05:36:10.259Z",
+  "url": "http://127.0.0.1:3012/?look=bench",
+  "node": "v22.22.1",
+  "command": [
+    "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "/home/kshitij/projects/storyfolio/evals/runs/visual-recovery-depth-1/capture.mjs",
+    "--url=http://127.0.0.1:3012/",
+    "--out=evidence/review"
+  ],
+  "sourceDigest": "7e2bad50bcdb2f19d6e6ad2f7f72d41463a850dad2fc780022a0e0d04bf0fa47",
+  "captureScriptSha256": "363154fe510443c431ba882cb65914f81dfe4eb6c0ef4b2c6757b44a4c5a8e7b",
+  "modelInvocations": 0,
+  "scope": "all seven conditions",
+  "conditions": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scene": "on",
+      "controls": true,
+      "movement": true
+    },
+    {
+      "name": "phone",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scene": "on",
+      "touch": true,
+      "controls": true
+    },
+    {
+      "name": "short",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "scene": "on"
+    },
+    {
+      "name": "reduced",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scene": "on",
+      "reduced": true
+    },
+    {
+      "name": "no-webgl",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scene": "off",
+      "noWebgl": true
+    },
+    {
+      "name": "no-js",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scene": "off",
+      "noJs": true
+    },
+    {
+      "name": "context-loss",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scene": "off",
+      "loseContext": true
+    }
+  ],
+  "beatIds": [
+    "opening.assembly",
+    "power.cycle",
+    "middle.relationship",
+    "proof.boundaries",
+    "close.evidence"
+  ],
+  "chapterIds": [
+    "opening",
+    "power",
+    "middle",
+    "proof",
+    "close"
+  ],
+  "controlBeat": "middle.relationship",
+  "launchArgs": [
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader",
+    "--ignore-gpu-blocklist"
+  ],
+  "deviceScaleFactor": 1,
+  "settleMs": 2600,
+  "limitations": [
+    "Software WebGL in desktop Chromium, including touch emulation; no physical phone or GPU measurement.",
+    "Functional assertions and scene pixel changes do not establish visual quality or author approval.",
+    "Movement evidence is a sampled continuous-scroll frame series, not a video or frame-rate measurement."
+  ],
+  "results": [
+    {
+      "name": "desktop",
+      "report": "desktop/report.json",
+      "completed": true,
+      "problems": [
+        "Incorrect accessible description for control 2"
+      ],
+      "captures": 36,
+      "blockedExternal": 0
+    },
+    {
+      "name": "phone",
+      "report": "phone/report.json",
+      "completed": true,
+      "problems": [
+        "Incorrect accessible description for control 2"
+      ],
+      "captures": 10,
+      "blockedExternal": 0
+    },
+    {
+      "name": "short",
+      "report": "short/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 6,
+      "blockedExternal": 0
+    },
+    {
+      "name": "reduced",
+      "report": "reduced/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 6,
+      "blockedExternal": 0
+    },
+    {
+      "name": "no-webgl",
+      "report": "no-webgl/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 6,
+      "blockedExternal": 0
+    },
+    {
+      "name": "no-js",
+      "report": "no-js/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 6,
+      "blockedExternal": 0
+    },
+    {
+      "name": "context-loss",
+      "report": "context-loss/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 6,
+      "blockedExternal": 0
+    }
+  ],
+  "problems": [],
+  "complete": true,
+  "browser": "156.0.8078.4",
+  "sourceUnchanged": true,
+  "finishedAtUtc": "2026-10-11T05:41:35.629Z",
+  "functionalPass": false,
+  "visualApproval": "Not determined by this script; human review and the author's assessment remain required"
+}

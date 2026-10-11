@@ -1,6 +1,8 @@
 import type { FaceDef } from "@/components/story/types";
+import { beatsOf } from "@/lib/story/story";
+import { story } from "./story";
 
-const beats = ["opening.assembly", "middle.relationship", "close.evidence"] as const;
+const beats = beatsOf(story).map(beat => beat.id);
 const panels = [[0.75, 0.565], [0.73, 0.635], [0.65, 0.69], [0.75, 0.67]] as const;
 const ink = "#23382f";
 const pale = "#e2e7cf";
