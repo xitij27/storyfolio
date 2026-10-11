@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "label": "after-1",
+  "baseline": false,
+  "modulePath": "evals/lib/build-capture.mjs",
+  "source": {
+    "evals/lib/build-capture.mjs": "ea3093d1f8d39af73c22072b6f0e6f2ffe87aa510d3d8e2ce78b60000127c005",
+    "evals/lib/build-check.mjs": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+    "evals/check-build.mjs": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0",
+    "evals/runs/control-modality-1/fixture.html": "9a957173a4fdf8e39653ea753d1f2ce0b188c64f8944351ef304d29dc5125707",
+    "evals/runs/control-modality-1/browser-check.mjs": "b65a77847edbae301940d74b930c73bfaaf1069d6420df2d06e804bb5aa179f9"
+  },
+  "node": "v22.22.1",
+  "started": "2026-10-11T22:08:45.111Z",
+  "complete": true,
+  "modelCalls": 0,
+  "reports": [
+    {
+      "name": "desktop-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "f3d5d01baa0ae596f74fa171ceb87baf72c7a436719cc3f9e4decbfff7245eff",
+      "images": 4
+    },
+    {
+      "name": "mobile-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "9bdfd3a65f8cbc96bdd80776bf05ed544a00f12f3674889f218ef801c0810285",
+      "images": 4
+    },
+    {
+      "name": "short-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "454cc4050f691c8688f43e2ad1b00d0664177efef6ecde45225855ef4e92c884",
+      "images": 4
+    },
+    {
+      "name": "reduced-motion-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "ed3806a269163e7b849bf212020c8f30e5e2a2626eff75d76f1f5e847fd17e2e",
+      "images": 4
+    },
+    {
+      "name": "no-webgl-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "62cca610917b883d8fb106dfc8ef9b9e1ef964302c9868e949980fc9e0aa4617",
+      "images": 4
+    },
+    {
+      "name": "no-javascript-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "1f53db3c23ae67224280257772265527d9c48fd78b456cd37be06dddf64defc2",
+      "images": 4
+    },
+    {
+      "name": "context-loss-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "6d3a202b4ed0c609edd24218556b448f87a56563929295a6b8634a5f76450aa7",
+      "images": 4
+    },
+    {
+      "name": "desktop-ordinary-visible",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "79de64a8a889ab903a50a04e9cb06b3325baebc10578eb4b4ff69cdf551f80a3",
+      "images": 5
+    },
+    {
+      "name": "desktop-undeclared",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)"
+      ],
+      "sha256": "dc2f7512637fc3ee86e1c02707c5121138839dfc9d7220458fee323030d9fc0d",
+      "images": 3
+    },
+    {
+      "name": "desktop-offscreen-button",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-7534fcbfa750a94b/pointer: control was not reached and activated",
+        "control-7534fcbfa750a94b/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"skip\" aria-pressed=\"false\" onclick=\"this.setAttribute('aria-pressed',this.getAttribute('aria-pressed')!=='true')\">Skip to answer</button>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-7534fcbfa750a94b/pointer: missing original control images",
+        "control-7534fcbfa750a94b/pointer: no observable control response (requires review, not a functional pass)"
+      ],
+      "sha256": "d0fba3ea4d550b764c6aace9c671c8c5a4c4945b5d466145d36989ede8ae82f9",
+      "images": 3
+    },
+    {
+      "name": "desktop-hidden",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: control cannot be reached by Tab",
+        "control-4b845ac9b1e72978/keyboard: missing original control images",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "sha256": "e66ac7ff81d8b09cb7c82e0b1424e2acdf926f441b1162c55727248e47cbcfe0",
+      "images": 2
+    },
+    {
+      "name": "desktop-occluded",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry"
+      ],
+      "sha256": "a5c9d4a0e5dcb0237d8b0d23024209c46624f4782bfdba022319d4b195d204eb",
+      "images": 4
+    },
+    {
+      "name": "desktop-negative-tab",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: control cannot be reached by Tab",
+        "control-4b845ac9b1e72978/keyboard: missing original control images",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "sha256": "bf396b5b59f07a15ce25860973df4ae35fa792b715a054e748b825c0394e7926",
+      "images": 2
+    },
+    {
+      "name": "desktop-disabled",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: invalid focus-only pointer applicability evidence",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry"
+      ],
+      "sha256": "e213dc13e2cf6df9bad1e27f54a612b7d3026091747523b732427948a79eff76",
+      "images": 4
+    },
+    {
+      "name": "desktop-blocked-tab",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: control cannot be reached by Tab",
+        "control-4b845ac9b1e72978/keyboard: missing original control images",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "sha256": "c75e6a260694b2e149abbd641da09bec6027a8c88d33c412448ddffab36dec5e",
+      "images": 2
+    },
+    {
+      "name": "desktop-missing-target",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: missing declared control target",
+        "control-4b845ac9b1e72978/keyboard: declared control targets did not respond",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "sha256": "1a4937b147962b6bc44b454f519c500ddb7f30f5479b3de5d4857000af3264da",
+      "images": 4
+    },
+    {
+      "name": "desktop-wrong-destination",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-92e3ba964a2aadb1/pointer: control was not reached and activated",
+        "control-92e3ba964a2aadb1/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#wrong\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-92e3ba964a2aadb1/pointer: missing original control images",
+        "control-92e3ba964a2aadb1/pointer: no observable control response (requires review, not a functional pass)",
+        "declaration does not match inventory"
+      ],
+      "sha256": "3f4062eab9770bbeca82ee69606bdb2841cad2da9dacd5ffc38f31a3caa8cd2f",
+      "images": 3
+    },
+    {
+      "name": "desktop-covered-ordinary",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated"
+      ],
+      "sha256": "2acc1f4dc6c3aa7e3fe77313b746dd5eb141f2ebbf1b1d11e08dd7839ff16478",
+      "images": 3
+    },
+    {
+      "name": "desktop-forged-metadata",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\" class=\"story-skip\" data-keyboard-only=\"true\" data-applicability=\"not-applicable\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)"
+      ],
+      "sha256": "593b5021c9ae7aa702bae684c767a4bcee22e1d42db8bcf752fca839baa449ad",
+      "images": 3
+    },
+    {
+      "name": "desktop-mismatched-declaration",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)",
+        "declaration does not match inventory"
+      ],
+      "sha256": "1cd46bc6e1376e09b07a1562652b46c86a0b1d9e6b30fe8c44269cd5f8d84a49",
+      "images": 3
+    }
+  ],
+  "environment": {
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+    "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu"
+  },
+  "limits": "Focused browser-helper calibration only, not full prototype acceptance, performance or visual quality",
+  "chromium": "156.0.8078.4",
+  "finished": "2026-10-11T22:10:22.955Z"
+}

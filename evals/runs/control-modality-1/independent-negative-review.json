@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-12",
+  "reviewer": "audit_actor",
+  "role": "Independent read-only review of modality implementation and saved negative originals; this reviewer also authored separate source-inventory changes.",
+  "modelCalls": 0,
+  "browserLaunches": 0,
+  "scope": "All 36 retained original PNGs in all 12 after-1 desktop negative variants, plus current modality source and tests. No prototype/actor visual acceptance.",
+  "coverage": "Opened each listed original PNG directly with view_image, no contact-sheet substitute. Verified report and image hashes against retained report records.",
+  "sourceReview": {
+    "path": "evals/lib/build-capture.mjs",
+    "sha256": "7472bf42a1bfc2a18c7b317e9c1b43274e431737a6ea82f9e66c927a4b39521e",
+    "disposition": "No remaining blocker found in the reviewed modality patch. Later full unit/integration verification and owner after-2 target-negative browser study remain separate.",
+    "checks": [
+      "Coordinator-owned schema-2 declaration required, exact selector/name/href and anchor tag match; actor CSS/data labels grant no authority.",
+      "Declared hidden or disabled links remain inventoried; missing and duplicate declaration/inventory matches fail.",
+      "Unfocused original geometry/hash and pointer not-applicable record are distinct from successful activation; ordinary controls retain pointer and keyboard requirements.",
+      "Focused original screenshots, geometry, real sequential Tab, and actual declared fragment response are required.",
+      "Owner's follow-up requires visible unique target with two-dimensional viewport intersection; reviewed source and tests, not claiming after-2 browser results here."
+    ]
+  },
+  "observations": [
+    {
+      "variants": [
+        "blocked-tab",
+        "hidden",
+        "negative-tab"
+      ],
+      "observation": "Entry and unfocused originals show no skip control; no focused/after originals were produced. Saved failure records correctly retain failed keyboard reachability, not a waived pass."
+    },
+    {
+      "variants": [
+        "covered-ordinary",
+        "occluded"
+      ],
+      "observation": "Opaque red block covers the skip region before keyboard activation. Destination later appears despite the covered control; successful navigation does not erase the control visibility/hit-target failure."
+    },
+    {
+      "variants": [
+        "disabled"
+      ],
+      "observation": "Keyboard before/after originals visibly reveal the skip and answer, but disabled semantics are only in the recorded DOM evidence. Checker correctly fails despite those apparently successful pictures."
+    },
+    {
+      "variants": [
+        "forged-metadata",
+        "mismatched-declaration",
+        "undeclared"
+      ],
+      "observation": "Focused skip and answer originals show keyboard navigation can work. That is insufficient authority for a pointer exception; saved records correctly retain ordinary pointer/declaration failures."
+    },
+    {
+      "variants": [
+        "missing-target"
+      ],
+      "observation": "Keyboard after remains on the entry view with the focused skip, consistent with no valid destination response."
+    },
+    {
+      "variants": [
+        "offscreen-button"
+      ],
+      "observation": "Keyboard before/after show a small focused button and unchanged entry page. It is not an authorized bypass anchor, so pointer failure remains."
+    },
+    {
+      "variants": [
+        "wrong-destination"
+      ],
+      "observation": "Keyboard after shows A different target instead of The answer target; declaration mismatch remains a failure."
+    }
+  ],
+  "reports": [
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-blocked-tab/report.json",
+      "sha256": "c75e6a260694b2e149abbd641da09bec6027a8c88d33c412448ddffab36dec5e",
+      "images": 2
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/report.json",
+      "sha256": "2acc1f4dc6c3aa7e3fe77313b746dd5eb141f2ebbf1b1d11e08dd7839ff16478",
+      "images": 3
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/report.json",
+      "sha256": "e213dc13e2cf6df9bad1e27f54a612b7d3026091747523b732427948a79eff76",
+      "images": 4
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/report.json",
+      "sha256": "593b5021c9ae7aa702bae684c767a4bcee22e1d42db8bcf752fca839baa449ad",
+      "images": 3
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-hidden/report.json",
+      "sha256": "e66ac7ff81d8b09cb7c82e0b1424e2acdf926f441b1162c55727248e47cbcfe0",
+      "images": 2
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/report.json",
+      "sha256": "1cd46bc6e1376e09b07a1562652b46c86a0b1d9e6b30fe8c44269cd5f8d84a49",
+      "images": 3
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/report.json",
+      "sha256": "1a4937b147962b6bc44b454f519c500ddb7f30f5479b3de5d4857000af3264da",
+      "images": 4
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-negative-tab/report.json",
+      "sha256": "bf396b5b59f07a15ce25860973df4ae35fa792b715a054e748b825c0394e7926",
+      "images": 2
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/report.json",
+      "sha256": "a5c9d4a0e5dcb0237d8b0d23024209c46624f4782bfdba022319d4b195d204eb",
+      "images": 4
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/report.json",
+      "sha256": "d0fba3ea4d550b764c6aace9c671c8c5a4c4945b5d466145d36989ede8ae82f9",
+      "images": 3
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/report.json",
+      "sha256": "dc2f7512637fc3ee86e1c02707c5121138839dfc9d7220458fee323030d9fc0d",
+      "images": 3
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/report.json",
+      "sha256": "3f4062eab9770bbeca82ee69606bdb2841cad2da9dacd5ffc38f31a3caa8cd2f",
+      "images": 3
+    }
+  ],
+  "images": [
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-blocked-tab/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-blocked-tab/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/entry.png",
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "bytes": 37794
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/control-4b845ac9b1e72978-keyboard-before.png",
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "bytes": 37794
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/control-4b845ac9b1e72978-keyboard-after.png",
+      "sha256": "6d9e2a3d2638c82400ac4c556900f65af2db84c008ae0711dcb8011bd3c53f3f",
+      "bytes": 33090
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/control-4b845ac9b1e72978-keyboard-before.png",
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "bytes": 36532
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/control-4b845ac9b1e72978-keyboard-after.png",
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "bytes": 28259
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/control-4b845ac9b1e72978-keyboard-before.png",
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "bytes": 36532
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/control-4b845ac9b1e72978-keyboard-after.png",
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "bytes": 28259
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-hidden/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-hidden/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/control-4b845ac9b1e72978-keyboard-before.png",
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "bytes": 36532
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/control-4b845ac9b1e72978-keyboard-after.png",
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "bytes": 28259
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/control-4b845ac9b1e72978-keyboard-before.png",
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "bytes": 36532
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/control-4b845ac9b1e72978-keyboard-after.png",
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "bytes": 36532
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-negative-tab/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-negative-tab/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/entry.png",
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "bytes": 37794
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "bytes": 37794
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/control-4b845ac9b1e72978-keyboard-before.png",
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "bytes": 37794
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/control-4b845ac9b1e72978-keyboard-after.png",
+      "sha256": "6d9e2a3d2638c82400ac4c556900f65af2db84c008ae0711dcb8011bd3c53f3f",
+      "bytes": 33090
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/control-7534fcbfa750a94b-keyboard-before.png",
+      "sha256": "f0fc7d0b8769d17dfa6c318b545fec9a22a0e78481a668b89546438ffa2e499b",
+      "bytes": 35111
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/control-7534fcbfa750a94b-keyboard-after.png",
+      "sha256": "f0fc7d0b8769d17dfa6c318b545fec9a22a0e78481a668b89546438ffa2e499b",
+      "bytes": 35111
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/control-4b845ac9b1e72978-keyboard-before.png",
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "bytes": 36532
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/control-4b845ac9b1e72978-keyboard-after.png",
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "bytes": 28259
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/entry.png",
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "bytes": 33326
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/control-92e3ba964a2aadb1-keyboard-before.png",
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "bytes": 36532
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/control-92e3ba964a2aadb1-keyboard-after.png",
+      "sha256": "804f9467bd8c3490beadea1e17f269a92058f81e11a29d6b9ea358c8b2b6260f",
+      "bytes": 19358
+    }
+  ]
+}

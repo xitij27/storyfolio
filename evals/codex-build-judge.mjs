@@ -13,7 +13,7 @@ import { createPagedEvidence, verifyPagedEvidence, verifyPageCoverage } from "./
 
 export const JUDGE_TIMEOUT_MS = 600000;
 export const JUDGE_IMPLEMENTATION_FILES = [
-  "evals/codex-build-judge.mjs", "evals/lib/codex.mjs", "evals/lib/build-score.mjs", "evals/lib/build-capture.mjs",
+  "evals/codex-build-judge.mjs", "evals/lib/codex.mjs", "evals/lib/build-score.mjs", "evals/lib/build-capture.mjs", "evals/lib/source-scope.mjs",
   "evals/lib/judge-transport.mjs", "evals/judge-evidence-server.mjs",
   "evals/prompts/build-criteria.md", "evals/prompts/judge-build.md",
 ];
@@ -196,7 +196,7 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
       if (!report.artifacts[safePath(result.report)]) throw new Error(`Acceptance result lacks preserved report: ${result.report}`);
       if (diagnostic && JSON.parse(evidence[`run/${base}/${result.report}`]).sourceDigest !== report.sourceBefore.digest) throw new Error(`Acceptance source digest differs in mode report: ${result.report}`);
     }
-    for (const path of ["evals/check-build.mjs", "evals/lib/build-check.mjs", "evals/lib/build-capture.mjs"]) {
+    for (const path of ["evals/check-build.mjs", "evals/lib/build-check.mjs", "evals/lib/build-capture.mjs", "evals/lib/source-scope.mjs"]) {
       const digest = frozen.hashes[`implementation/${path}`];
       if (!digest || !Object.values(report.frozen ?? {}).includes(digest)) throw new Error(`Acceptance checker differs from frozen implementation: ${path}`);
     }

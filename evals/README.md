@@ -345,6 +345,33 @@ access does not create a new paid allowance. The one-turn threshold was
 not a hard spending cap; actual cached, uncached and output usage is saved.
 Frozen prospective protocol wording remains unchanged as historical input.
 
+### Stage 3 comparison preparation, 12 October 2026
+
+The new [bench-depth-2 fixture](builds/bench-depth-2/README.md) retains the
+fictional story and supplies a neutral screenshot helper, enabled-skill
+facts and fixed focus-only skip navigation. Its [protocol](builds/bench-depth-2/protocol.md)
+proposes two fresh one-turn builds with at most one judge each; the separate
+paid question is unanswered at this preparation checkpoint. No model call
+or frozen workspace is created by its read-only verifier:
+
+```bash
+node evals/builds/bench-depth-2/verify-fixture.mjs
+```
+
+The prospective checker/source changes are recorded in
+[control-modality-1](runs/control-modality-1/) and
+[source-inventory-1](runs/source-inventory-1/). Their engineering passes do
+not replace old failed results or establish a better portfolio. Exact
+future evaluator identity includes `evals/lib/source-scope.mjs`. Do not
+invoke an old cohort with the changed evaluator or mutate its manifests.
+The [Stage 3 evidence audit](runs/stage-3-integration-1/evidence-audit.md)
+separates the two visual candidates from still-untested ordinary build entry
+and later whole-journey requirements.
+The [integration findings](runs/stage-3-integration-1/findings.md) record
+342 passing repository tests, completed browser regression review and the
+actual helper smoke. A read-only runner dry preparation validates 124 inputs;
+it is not final freeze or future actor-workspace capability proof.
+
 ### Historical approved build continuation
 
 The [completion protocol](../docs/superpowers/plans/2026-10-11-build-completion-proposal.md)

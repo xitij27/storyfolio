@@ -1,6 +1,6 @@
 import { isAbsolute, relative, resolve, sep } from "node:path";
 import { createHash } from "node:crypto";
-import { assessDiagnosticCapture } from "./build-capture.mjs";
+import { assessDiagnosticCapture, validateFocusOnlyControls } from "./build-capture.mjs";
 
 // Text nodes split by inline emphasis can introduce a separator before punctuation.
 export const normalizeText = value => String(value ?? "").replace(/\s+/g, " ").replace(/\s+([.,;:!?])/g, "$1").trim();
@@ -67,7 +67,7 @@ export function validateExpectations(value) {
   const problems = [];
   if (!object(value)) return ["expectations must be an object"];
   const diagnostic = value.schemaVersion === 2;
-  const keys = ["schemaVersion", "id", "route", "beats", "requiredText", "links", "assets", "requiredFiles", "modes", "viewports", "chapters", "checklist", "contentConstraints", "provenance", ...(diagnostic ? ["taskKind"] : [])];
+  const keys = ["schemaVersion", "id", "route", "beats", "requiredText", "links", "assets", "requiredFiles", "modes", "viewports", "chapters", "checklist", "contentConstraints", "provenance", ...(diagnostic ? ["taskKind", "focusOnlyControls"] : [])];
   for (const key of Object.keys(value)) if (!keys.includes(key)) problems.push(`unknown expectations key: ${key}`);
   if (value.schemaVersion !== 1 && !(diagnostic && value.taskKind === "prototype-depth")) problems.push("unsupported expectations schemaVersion or taskKind");
   if (!nonempty(value.id)) problems.push("id must be nonempty");
@@ -83,6 +83,7 @@ export function validateExpectations(value) {
   else if (value.modes.noWebGL !== "static" || value.modes.noJavaScript !== "static") problems.push("noWebGL and noJavaScript must require static content");
   if (!object(value.viewports) || !["desktop", "mobile"].every(key => object(value.viewports[key]) && ["width", "height"].every(axis => Number.isInteger(value.viewports[key][axis]) && value.viewports[key][axis] > 0))) problems.push("desktop and mobile viewports must have positive integer dimensions");
   if (diagnostic) {
+    problems.push(...validateFocusOnlyControls(value.focusOnlyControls));
     for (const [name, width, height] of [["desktop", 1440, 900], ["mobile", 390, 844], ["short", 1280, 720]]) {
       if (value.viewports?.[name]?.width !== width || value.viewports?.[name]?.height !== height) problems.push(`prototype-depth ${name} viewport must be ${width} by ${height}`);
       if (value.modes?.[name] !== "animated") problems.push(`prototype-depth ${name} must retain the animated object`);

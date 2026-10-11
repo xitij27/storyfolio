@@ -3,20 +3,19 @@
 import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { SOURCE_EXCLUSIONS, sourceEntryExcluded } from "./source-scope.mjs";
+export { SOURCE_EXCLUSIONS, sourcePathExcluded } from "./source-scope.mjs";
 
 export const digest = bytes => createHash("sha256").update(bytes).digest("hex");
 const hash = value => typeof value === "string" && /^[a-f0-9]{64}$/.test(value);
 const same = (left, right) => JSON.stringify(left) === JSON.stringify(right);
-const excludedDirectories = ["node_modules", ".next", ".git", "checks", ".cache"];
-export const SOURCE_EXCLUSIONS = Object.freeze([...excludedDirectories, "*.tsbuildinfo", "next-env.d.ts (Next-generated)"]);
-export const sourcePathExcluded = path => path.split("/").some(part => excludedDirectories.includes(part) || part.endsWith(".tsbuildinfo") || part === "next-env.d.ts");
 
 export async function captureSource(root) {
   const files = [];
   async function visit(prefix = "") {
     for (const entry of (await readdir(join(root, prefix), { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name))) {
       const path = prefix ? `${prefix}/${entry.name}` : entry.name;
-      if (sourcePathExcluded(path)) continue;
+      if (await sourceEntryExcluded(root, path, entry)) continue;
       if (entry.isDirectory()) await visit(path);
       else if (entry.isFile()) {
         const bytes = await readFile(join(root, path));
@@ -43,12 +42,45 @@ export function diagnosticPlan(expectedIds, boxes, viewport, maxScroll, mode) {
   return { rests, intervals: [...forward, ...forward.toReversed().map(interval => ({ from: interval.to, to: interval.from, start: interval.end, end: interval.start, direction: "reverse" }))] };
 }
 
-export function assessControl(control) {
+export function validateFocusOnlyControls(value) {
+  if (value === undefined) return [];
+  if (!Array.isArray(value)) return ["focusOnlyControls must be an array"];
   const problems = [];
+  const selectors = new Set();
+  for (const declaration of value) {
+    if (!declaration || typeof declaration !== "object" || Array.isArray(declaration) ||
+        Object.keys(declaration).some(key => !["selector", "name", "href", "reason"].includes(key)) ||
+        !["selector", "name", "href", "reason"].every(key => typeof declaration[key] === "string" && declaration[key].trim()) ||
+        !/^#[^#\s]+$/.test(declaration.href ?? "")) {
+      problems.push("focusOnlyControls require only selector, name, fragment href and reason");
+      continue;
+    }
+    try { decodeURIComponent(declaration.href.slice(1)); } catch { problems.push("focusOnlyControls href must be a valid encoded fragment"); }
+    if (selectors.has(declaration.selector)) problems.push("focusOnlyControls selectors must be unique");
+    selectors.add(declaration.selector);
+  }
+  return problems;
+}
+
+const focusDeclaration = (control, declarations) => declarations.find(declaration => control.tag === "a" && control.selector === declaration.selector && control.name?.trim() === declaration.name.trim() && control.href === declaration.href);
+const geometryRecorded = observation => observation && ["x", "y", "width", "height"].every(key => Number.isFinite(observation.geometry?.[key])) && ["width", "height"].every(key => Number.isFinite(observation.viewport?.[key]) && observation.viewport[key] > 0) && ["visible", "inView", "intersectsViewport", "hitTarget", "focused", "disabled"].every(key => typeof observation[key] === "boolean");
+const focusOnlyUnfocused = observation => geometryRecorded(observation) && !observation.focused && !observation.disabled && !observation.hitTarget && (!observation.visible || !observation.intersectsViewport);
+
+export function assessControl(control, declarations = []) {
+  const problems = [];
+  const invalid = validateFocusOnlyControls(declarations);
+  const declaration = invalid.length ? undefined : focusDeclaration(control, declarations);
+  problems.push(...invalid);
   if (!control.name?.trim()) problems.push("control has no accessible name");
-  if (!Array.isArray(control.trials) || !["pointer", "keyboard"].every(method => control.trials.some(trial => trial.method === method))) problems.push(`${control.key}: missing pointer or keyboard trial`);
+  if (!Array.isArray(control.trials) || control.trials.length !== 2 || !same(control.trials.map(trial => trial.method).sort(), ["keyboard", "pointer"])) problems.push(`${control.key}: missing pointer or keyboard trial, or duplicate/unknown method`);
   for (const trial of control.trials ?? []) {
     const label = `${control.key}/${trial.method}`;
+    if (trial.applicability === "not-applicable") {
+      if (!declaration || trial.method !== "pointer" || !same(trial.declaration, declaration) || !focusOnlyUnfocused(trial.unfocused) || !hash(trial.unfocusedImage) || trial.activated !== false || trial.reached !== false || trial.hitTarget !== false || trial.changed === true || trial.error) problems.push(`${label}: invalid focus-only pointer applicability evidence`);
+      continue;
+    }
+    if (declaration && trial.method === "pointer") problems.push(`${label}: declared focus-only skip requires evidenced not-applicable pointer record`);
+    if (trial.applicability !== undefined && trial.applicability !== "applicable") problems.push(`${label}: unknown control applicability`);
     if (!trial.activated || !trial.reached || !trial.hitTarget) problems.push(`${label}: control was not reached and activated`);
     if (trial.error) problems.push(`${label}: ${trial.error}`);
     if (!hash(trial.beforeImage) || !hash(trial.afterImage)) problems.push(`${label}: missing original control images`);
@@ -57,6 +89,12 @@ export function assessControl(control) {
     if (trial.targets?.length && !trial.targets.some(target => target.changed) && !visualTarget) problems.push(`${label}: declared control targets did not respond`);
     if (!trial.changed && !visualTarget) problems.push(`${label}: no observable control response (requires review, not a functional pass)`);
     if (visualTarget && trial.responseStatus !== "unobserved") problems.push(`${label}: canvas response must remain unobserved pending visual review`);
+    if (declaration && trial.method === "keyboard") {
+      const before = trial.before;
+      const targetId = decodeURIComponent(declaration.href.slice(1));
+      if (!geometryRecorded(before) || !before.visible || !before.inView || !before.focused || before.disabled || !before.hitTarget || !(trial.tabPresses > 0)) problems.push(`${label}: missing visible sequential keyboard focus geometry`);
+      if (trial.targets?.length !== 1 || !trial.targets.some(target => target.id === targetId && target.exists && target.changed && !target.requiresVisualReview) || !trial.after?.targets?.some(target => target.id === targetId && target.exists && target.inView && target.visible)) problems.push(`${label}: missing actual declared skip target response`);
+    }
   }
   return problems;
 }
@@ -93,7 +131,13 @@ export function assessDiagnosticCapture(expected, entry, report) {
   const inventoried = (report.controlInventory ?? []).map(control => control.key);
   const exercised = (report.controls ?? []).map(control => control.key);
   if (!Array.isArray(report.controlInventory) || new Set(inventoried).size !== inventoried.length || new Set(exercised).size !== exercised.length || !same([...inventoried].sort(), [...exercised].sort())) problems.push("control trials do not cover the complete unique inventory");
-  for (const control of report.controls ?? []) problems.push(...assessControl(control));
+  const declarations = expected.focusOnlyControls ?? [];
+  const invalidDeclarations = validateFocusOnlyControls(declarations);
+  problems.push(...invalidDeclarations);
+  if (!invalidDeclarations.length) {
+    for (const declaration of declarations) if ((report.controlInventory ?? []).filter(control => focusDeclaration(control, [declaration])).length !== 1) problems.push(`focus-only declaration does not match exactly one inventoried skip: ${declaration.selector}`);
+  }
+  for (const control of report.controls ?? []) problems.push(...assessControl(control, invalidDeclarations.length ? [] : declarations));
   return [...new Set(problems)];
 }
 
@@ -131,17 +175,24 @@ export const controlKey = control => `control-${digest(JSON.stringify([control.s
 
 // Inventory all visible controls, not named controls copied from a reference
 // design. Explicit target semantics are verified when the page declares them.
-export async function inventoryControls(page) {
+export async function inventoryControls(page, declarations = []) {
+  const invalid = validateFocusOnlyControls(declarations);
+  if (invalid.length) throw new Error(invalid.join("; "));
   const controls = await page.locator(controlSelector).evaluateAll(nodes => nodes.map((node, index) => ({
     index, tag: node.tagName.toLowerCase(), type: node.getAttribute("type"), role: node.getAttribute("role"), href: node.getAttribute("href"), targetIds: node.getAttribute("aria-controls"), beat: node.closest("[data-beat]")?.getAttribute("data-beat") ?? null,
     selector: (() => { const path = []; for (let current = node; current && current !== document.documentElement; current = current.parentElement) { if (current.id) { path.unshift(`#${CSS.escape(current.id)}`); break; } const peers = [...current.parentElement.children].filter(peer => peer.tagName === current.tagName); path.unshift(`${current.tagName.toLowerCase()}:nth-of-type(${peers.indexOf(current) + 1})`); } return path.join(" > "); })(),
     name: node.getAttribute("aria-label") || (node.getAttribute("aria-labelledby") ?? "").split(/\s+/).map(id => document.getElementById(id)?.textContent ?? "").join(" ").trim() || node.labels?.[0]?.textContent || node.textContent || node.getAttribute("placeholder") || "",
     visible: node.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true }), disabled: node.disabled || node.getAttribute("aria-disabled") === "true",
-  })).filter(node => node.visible && !node.disabled));
-  return controls.map(control => ({ ...control, key: controlKey(control) }));
+  })));
+  // A reviewed focus-only skip stays inventoried even when hidden/disabled,
+  // so an inaccessible declared link cannot disappear from the measurement.
+  return controls.filter(control => (control.visible && !control.disabled) || focusDeclaration(control, declarations)).map(control => ({ ...control, key: controlKey(control) }));
 }
 
-export async function exerciseControl(page, control, screenshot, reset) {
+export async function exerciseControl(page, control, screenshot, reset, declarations = []) {
+  const invalid = validateFocusOnlyControls(declarations);
+  if (invalid.length) throw new Error(invalid.join("; "));
+  const declaration = focusDeclaration(control, declarations);
   const result = { ...control, trials: [] };
   for (const method of ["pointer", "keyboard"]) {
     const trial = { method, activated: false, reached: false, hitTarget: false, targets: [] };
@@ -150,9 +201,9 @@ export async function exerciseControl(page, control, screenshot, reset) {
       if (Number.isFinite(control.observedScroll)) { await page.evaluate(top => scrollTo({ top, behavior: "instant" }), control.observedScroll); await page.waitForTimeout(1800); }
       const target = page.locator(control.selector);
       if (await target.count() !== 1) throw new Error("recorded control identity no longer resolves uniquely");
-      await target.scrollIntoViewIfNeeded();
+      if (!declaration) await target.scrollIntoViewIfNeeded();
       await page.waitForTimeout(1800);
-      if (!(await inventoryControls(page)).some(actual => actual.key === control.key)) throw new Error("recorded control identity changed after reset or scroll");
+      if (!(await inventoryControls(page, declarations)).some(actual => actual.key === control.key)) throw new Error("recorded control identity changed after reset or scroll");
       // A selected tab/radio is intentionally idempotent. Select a declared
       // peer first when possible, then measure the target's actual response.
       const peer = await target.evaluate(node => {
@@ -166,19 +217,40 @@ export async function exerciseControl(page, control, screenshot, reset) {
         html: node.outerHTML, value: node.value, checked: node.checked,
         location: location.href, scroll: scrollY,
         state: { pressed: node.getAttribute("aria-pressed"), selected: node.getAttribute("aria-selected"), expanded: node.getAttribute("aria-expanded"), checked: node.getAttribute("aria-checked"), open: node.closest("details")?.open },
-        targets: (node.tagName === "A" ? [decodeURIComponent((node.getAttribute("href") ?? "").slice(1))] : (node.getAttribute("aria-controls") ?? "").split(/\s+/).filter(Boolean)).map(id => { const target = id ? document.getElementById(id) : document.documentElement; const box = target?.getBoundingClientRect(); return { id, exists: !!target, html: target?.outerHTML ?? null, containsCanvas: !!target && (target.matches("canvas") || !!target.querySelector("canvas")), inView: !!box && box.top < innerHeight && box.bottom > 0 }; }),
+        targets: (node.tagName === "A" ? [decodeURIComponent((node.getAttribute("href") ?? "").slice(1))] : (node.getAttribute("aria-controls") ?? "").split(/\s+/).filter(Boolean)).map(id => {
+          const matches = id ? [...document.querySelectorAll("[id]")].filter(target => target.id === id) : [document.documentElement];
+          const target = matches[0], box = target?.getBoundingClientRect();
+          return { id, exists: matches.length === 1, html: target?.outerHTML ?? null, containsCanvas: !!target && (target.matches("canvas") || !!target.querySelector("canvas")), visible: !!target && target.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true }), inView: !!box && box.width > 0 && box.height > 0 && box.left < innerWidth && box.right > 0 && box.top < innerHeight && box.bottom > 0 };
+        }),
+        geometry: (() => { const box = node.getBoundingClientRect(); return { x: box.x, y: box.y, width: box.width, height: box.height }; })(),
+        viewport: { width: innerWidth, height: innerHeight },
+        visible: node.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true }),
+        inView: (() => { const box = node.getBoundingClientRect(); return box.width > 0 && box.height > 0 && box.left >= 0 && box.top >= 0 && box.right <= innerWidth && box.bottom <= innerHeight; })(),
+        intersectsViewport: (() => { const box = node.getBoundingClientRect(); return box.width > 0 && box.height > 0 && box.left < innerWidth && box.top < innerHeight && box.right > 0 && box.bottom > 0; })(),
+        focused: document.activeElement === node,
+        disabled: !!node.disabled || node.getAttribute("aria-disabled") === "true",
         hitTarget: (() => { const box = node.getBoundingClientRect(); const hit = document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2); return hit === node || node.contains(hit); })(),
       }));
+      if (declaration && method === "pointer") {
+        trial.unfocused = await inspect();
+        trial.unfocusedImage = (await screenshot(`${control.key}-pointer-unfocused`)).sha256;
+        trial.applicability = "not-applicable";
+        trial.declaration = { ...declaration };
+        result.trials.push(trial);
+        continue;
+      }
+      trial.applicability = "applicable";
       if (method === "keyboard") {
         // Reach by actual sequential keyboard navigation, not element.focus().
         await page.evaluate(() => { document.activeElement?.blur(); document.body.tabIndex = -1; document.body.focus(); });
         for (let count = 0; count < 200; count++) {
           await page.keyboard.press("Tab");
-          if (await target.evaluate(node => document.activeElement === node)) { trial.reached = true; break; }
+          if (await target.evaluate(node => document.activeElement === node)) { trial.reached = true; trial.tabPresses = count + 1; break; }
         }
         if (!trial.reached) throw new Error("control cannot be reached by Tab");
       } else { trial.reached = true; await target.hover(); }
       const before = await inspect();
+      trial.before = before;
       trial.hitTarget = before.hitTarget;
       trial.beforeImage = (await screenshot(`${control.key}-${method}-before`)).sha256;
       if (["button", "summary", "a"].includes(control.tag) || ["button", "tab"].includes(control.role) || (control.tag === "input" && ["button", "submit", "reset", "checkbox", "radio"].includes(control.type))) {
@@ -198,7 +270,7 @@ export async function exerciseControl(page, control, screenshot, reset) {
       await page.waitForTimeout(400);
       const after = await inspect();
       trial.afterImage = (await screenshot(`${control.key}-${method}-after`)).sha256;
-      trial.targets = before.targets.map((target, index) => ({ id: target.id, exists: target.exists && after.targets[index]?.exists, requiresVisualReview: control.tag !== "a" && target.containsCanvas, changed: control.tag === "a" ? after.targets[index]?.inView && (before.location !== after.location || before.scroll !== after.scroll) : target.html !== after.targets[index]?.html }));
+      trial.targets = before.targets.map((target, index) => ({ id: target.id, exists: target.exists && after.targets[index]?.exists, requiresVisualReview: control.tag !== "a" && target.containsCanvas, changed: control.tag === "a" ? after.targets[index]?.inView && after.targets[index]?.visible && (before.location !== after.location || before.scroll !== after.scroll) : target.html !== after.targets[index]?.html }));
       trial.changed = !same(before.state, after.state) || before.value !== after.value || before.checked !== after.checked || trial.targets.some(target => target.changed);
       trial.responseStatus = trial.targets.some(target => target.requiresVisualReview) ? "unobserved" : trial.changed ? "observed DOM/state response" : "no observed DOM/state response";
       trial.pixelsChanged = trial.beforeImage !== trial.afterImage;

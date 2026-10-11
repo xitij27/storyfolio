@@ -47,6 +47,9 @@ its review criteria and independent runtime observations are separate.
 | [build-workflow-freeze-1](runs/build-workflow-freeze-1/findings.md) | Authorized final local preparation: 121 fixed inputs, clean external actor workspace, offline dependencies, exact-sandbox build/browser and network-boundary proof. No paid actor or judge; cost approval remains separate |
 | [codex-bench-depth-baseline-1](runs/codex-bench-depth-baseline-1/findings.md) | One completed five-beat actor build. The premature incomplete report is corrected; raw actor evidence, separate coordinator checks and contamination audit retained. Single judge delivered all pages but failed aggregate JSON parsing; terminal response audited separately, no paid retry |
 | [judge-response-parsing-1](runs/judge-response-parsing-1/findings.md) | Local engineering repair for progress messages mixed with terminal judge JSON, with frozen failure evidence and regression tests. No new model call or historical-result overwrite |
+| [control-modality-1](runs/control-modality-1/findings.md) | Prospective focus-only skip-link repair. Seven valid conditions and one ordinary control pass; 15 faulty variants fail. 31 browser executions, 112 reviewed originals. Historical failure unchanged, no actor or judge |
+| [source-inventory-1](runs/source-inventory-1/findings.md) | Shared conservative source scope, 45 focused tests pass. Historical 202/390 mismatch preserved; prospective inventories match 201 unchanged files. No paid run or comparator relaxation |
+| [stage-3-integration-1](runs/stage-3-integration-1/findings.md) | Measurement identity integration, reviewed nine-file neutral comparison fixture, real helper smoke and 342 passing tests. Two visual instruction drafts only; separate paid question unanswered. No shipped skill change or Stage 3 completion |
 
 ## Cases and comparison rules
 

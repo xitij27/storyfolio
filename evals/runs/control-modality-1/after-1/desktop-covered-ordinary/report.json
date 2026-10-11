@@ -1,0 +1,181 @@
+{
+  "name": "desktop-covered-ordinary",
+  "entry": {
+    "id": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "variant": "covered-ordinary",
+  "declarations": [],
+  "images": [
+    {
+      "file": "entry.png",
+      "bytes": 37794,
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780"
+    },
+    {
+      "file": "control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 37794,
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780"
+    },
+    {
+      "file": "control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 33090,
+      "sha256": "6d9e2a3d2638c82400ac4c556900f65af2db84c008ae0711dcb8011bd3c53f3f"
+    }
+  ],
+  "controls": [
+    {
+      "index": 0,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#answer",
+      "targetIds": null,
+      "beat": null,
+      "selector": "#skip",
+      "name": "Skip to answer",
+      "visible": true,
+      "disabled": false,
+      "key": "control-4b845ac9b1e72978",
+      "trials": [
+        {
+          "method": "pointer",
+          "activated": false,
+          "reached": true,
+          "hitTarget": false,
+          "targets": [],
+          "reset": "fresh document with the same browser condition",
+          "applicability": "applicable",
+          "error": "locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+        },
+        {
+          "method": "keyboard",
+          "activated": true,
+          "reached": true,
+          "hitTarget": false,
+          "targets": [
+            {
+              "id": "answer",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "applicability": "applicable",
+          "tabPresses": 1,
+          "before": {
+            "html": "<a id=\"skip\" href=\"#answer\">Skip to answer</a>",
+            "location": "http://127.0.0.1:45705/?variant=covered-ordinary",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "answer",
+                "exists": true,
+                "html": "<main id=\"answer\" tabindex=\"-1\"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>",
+                "containsCanvas": false,
+                "inView": false
+              }
+            ],
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 179.5625,
+              "height": 50
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "intersectsViewport": true,
+            "focused": true,
+            "disabled": false,
+            "hitTarget": false
+          },
+          "beforeImage": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+          "afterImage": "6d9e2a3d2638c82400ac4c556900f65af2db84c008ae0711dcb8011bd3c53f3f",
+          "changed": true,
+          "responseStatus": "observed DOM/state response",
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "after": {
+            "html": "<a id=\"skip\" href=\"#answer\">Skip to answer</a>",
+            "location": "http://127.0.0.1:45705/?variant=covered-ordinary#answer",
+            "scroll": 900,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "answer",
+                "exists": true,
+                "html": "<main id=\"answer\" tabindex=\"-1\"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 179.5625,
+              "height": 50
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "intersectsViewport": true,
+            "focused": false,
+            "disabled": false,
+            "hitTarget": false
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "started": "2026-10-11T22:10:07.701Z",
+  "controlInventory": [
+    {
+      "index": 0,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#answer",
+      "targetIds": null,
+      "beat": null,
+      "selector": "#skip",
+      "name": "Skip to answer",
+      "visible": true,
+      "disabled": false,
+      "key": "control-4b845ac9b1e72978"
+    }
+  ],
+  "problems": [
+    "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+    "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+    "control-4b845ac9b1e72978/pointer: missing original control images",
+    "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)",
+    "control-4b845ac9b1e72978/keyboard: control was not reached and activated"
+  ],
+  "scene": "on",
+  "finished": "2026-10-11T22:10:12.781Z",
+  "expectFailure": true,
+  "regressionPassed": true
+}

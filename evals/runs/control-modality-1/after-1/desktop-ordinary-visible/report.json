@@ -1,0 +1,269 @@
+{
+  "name": "desktop-ordinary-visible",
+  "entry": {
+    "id": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "variant": "ordinary-visible",
+  "declarations": [],
+  "images": [
+    {
+      "file": "entry.png",
+      "bytes": 36482,
+      "sha256": "e0941e0bf1ad9abd26dfbaecc2f5d86ab83c0461db50ea3bc1382192c3e4068d"
+    },
+    {
+      "file": "control-4b845ac9b1e72978-pointer-before.png",
+      "bytes": 36482,
+      "sha256": "e0941e0bf1ad9abd26dfbaecc2f5d86ab83c0461db50ea3bc1382192c3e4068d"
+    },
+    {
+      "file": "control-4b845ac9b1e72978-pointer-after.png",
+      "bytes": 31735,
+      "sha256": "8e2d1b5ebc8fd344892413684a07b9a99f99b56c4ba13aa441fef48ebc2123a2"
+    },
+    {
+      "file": "control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9"
+    },
+    {
+      "file": "control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 31735,
+      "sha256": "8e2d1b5ebc8fd344892413684a07b9a99f99b56c4ba13aa441fef48ebc2123a2"
+    }
+  ],
+  "controls": [
+    {
+      "index": 0,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#answer",
+      "targetIds": null,
+      "beat": null,
+      "selector": "#skip",
+      "name": "Skip to answer",
+      "visible": true,
+      "disabled": false,
+      "key": "control-4b845ac9b1e72978",
+      "trials": [
+        {
+          "method": "pointer",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "answer",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "applicability": "applicable",
+          "before": {
+            "html": "<a id=\"skip\" href=\"#answer\">Skip to answer</a>",
+            "location": "http://127.0.0.1:45705/?variant=ordinary-visible",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "answer",
+                "exists": true,
+                "html": "<main id=\"answer\" tabindex=\"-1\"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>",
+                "containsCanvas": false,
+                "inView": false
+              }
+            ],
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 179.5625,
+              "height": 50
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "intersectsViewport": true,
+            "focused": false,
+            "disabled": false,
+            "hitTarget": true
+          },
+          "beforeImage": "e0941e0bf1ad9abd26dfbaecc2f5d86ab83c0461db50ea3bc1382192c3e4068d",
+          "afterImage": "8e2d1b5ebc8fd344892413684a07b9a99f99b56c4ba13aa441fef48ebc2123a2",
+          "changed": true,
+          "responseStatus": "observed DOM/state response",
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "after": {
+            "html": "<a id=\"skip\" href=\"#answer\">Skip to answer</a>",
+            "location": "http://127.0.0.1:45705/?variant=ordinary-visible#answer",
+            "scroll": 900,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "answer",
+                "exists": true,
+                "html": "<main id=\"answer\" tabindex=\"-1\"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 179.5625,
+              "height": 50
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "intersectsViewport": true,
+            "focused": false,
+            "disabled": false,
+            "hitTarget": true
+          }
+        },
+        {
+          "method": "keyboard",
+          "activated": true,
+          "reached": true,
+          "hitTarget": true,
+          "targets": [
+            {
+              "id": "answer",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "reset": "fresh document with the same browser condition",
+          "applicability": "applicable",
+          "tabPresses": 1,
+          "before": {
+            "html": "<a id=\"skip\" href=\"#answer\">Skip to answer</a>",
+            "location": "http://127.0.0.1:45705/?variant=ordinary-visible",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "answer",
+                "exists": true,
+                "html": "<main id=\"answer\" tabindex=\"-1\"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>",
+                "containsCanvas": false,
+                "inView": false
+              }
+            ],
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 179.5625,
+              "height": 50
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "intersectsViewport": true,
+            "focused": true,
+            "disabled": false,
+            "hitTarget": true
+          },
+          "beforeImage": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+          "afterImage": "8e2d1b5ebc8fd344892413684a07b9a99f99b56c4ba13aa441fef48ebc2123a2",
+          "changed": true,
+          "responseStatus": "observed DOM/state response",
+          "pixelsChanged": true,
+          "pixelMeaning": "unobserved: hover, focus and unrelated animation can change screenshots",
+          "after": {
+            "html": "<a id=\"skip\" href=\"#answer\">Skip to answer</a>",
+            "location": "http://127.0.0.1:45705/?variant=ordinary-visible#answer",
+            "scroll": 900,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "answer",
+                "exists": true,
+                "html": "<main id=\"answer\" tabindex=\"-1\"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>",
+                "containsCanvas": false,
+                "inView": true
+              }
+            ],
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 179.5625,
+              "height": 50
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "intersectsViewport": true,
+            "focused": false,
+            "disabled": false,
+            "hitTarget": true
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "started": "2026-10-11T22:09:17.048Z",
+  "controlInventory": [
+    {
+      "index": 0,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#answer",
+      "targetIds": null,
+      "beat": null,
+      "selector": "#skip",
+      "name": "Skip to answer",
+      "visible": true,
+      "disabled": false,
+      "key": "control-4b845ac9b1e72978"
+    }
+  ],
+  "problems": [],
+  "scene": "on",
+  "finished": "2026-10-11T22:09:22.283Z",
+  "expectFailure": false,
+  "regressionPassed": true
+}

@@ -24,7 +24,8 @@ const expectationsPath = await realpath(resolve(options.expectations));
 const implementation = await realpath(fileURLToPath(import.meta.url));
 const helper = await realpath(fileURLToPath(new URL("./lib/build-check.mjs", import.meta.url)));
 const captureHelper = await realpath(fileURLToPath(new URL("./lib/build-capture.mjs", import.meta.url)));
-if (![expectationsPath, implementation, helper, captureHelper].every(path => outsideWorkspace(workspace, path))) throw new Error("Expectations and coordinator checker must be outside the actor workspace");
+const sourceHelper = await realpath(fileURLToPath(new URL("./lib/source-scope.mjs", import.meta.url)));
+if (![expectationsPath, implementation, helper, captureHelper, sourceHelper].every(path => outsideWorkspace(workspace, path))) throw new Error("Expectations and coordinator checker must be outside the actor workspace");
 const output = resolve(options.out);
 if (!outsideWorkspace(workspace, output)) throw new Error("Acceptance output must be outside the actor workspace");
 await mkdir(dirname(output), { recursive: true });
@@ -56,7 +57,7 @@ const paths = {
 };
 const playwright = dependencyRequire.resolve("playwright-core");
 const frozen = {};
-for (const path of [implementation, helper, captureHelper, expectationsPath, nextRuntime.local.entrypoint, nextRuntime.local.packageJson, nextRuntime.trusted.entrypoint, nextRuntime.trusted.packageJson, paths.typescript, paths.eslint, playwright]) frozen[path] = sha(await readFile(path));
+for (const path of [implementation, helper, captureHelper, sourceHelper, expectationsPath, nextRuntime.local.entrypoint, nextRuntime.local.packageJson, nextRuntime.trusted.entrypoint, nextRuntime.trusted.packageJson, paths.typescript, paths.eslint, playwright]) frozen[path] = sha(await readFile(path));
 const manifest = {
   schemaVersion: 1, fixture: expected.id, started: new Date().toISOString(), node: process.version,
   workspace, expectationsPath, dependencyRoot, nextRuntime, frozen, expected, commands: [], results: [], files: [], complete: false,
@@ -248,7 +249,7 @@ async function browserCase(chromium, base, entry) {
         const observed = await page.evaluate(observePage, { beat: beat.id, position: "rest" });
         report.samples.push(observed);
         report.rests.push({ beat: beat.id, requestedScroll, actualScroll: observed.scroll, scene: observed.scene, afterContextLoss: !!entry.loseContext && !!report.contextLoss?.supported, ...await capture(`rest-${beat.id}`) });
-        for (const control of await inventoryControls(page)) if (!controls.has(control.key)) controls.set(control.key, { ...control, observedScroll: observed.scroll });
+        for (const control of await inventoryControls(page, expected.focusOnlyControls)) if (!controls.has(control.key)) controls.set(control.key, { ...control, observedScroll: observed.scroll });
         if (entry.reducedMotion) {
           const started = Date.now();
           const before = await capture(`still-${beat.id}-before`);
@@ -282,7 +283,7 @@ async function browserCase(chromium, base, entry) {
           await page.waitForTimeout(1800);
         }
       };
-      for (const control of controls.values()) report.controls.push(await exerciseControl(page, control, capture, resetControls));
+      for (const control of controls.values()) report.controls.push(await exerciseControl(page, control, capture, resetControls, expected.focusOnlyControls));
       if (["desktop", "mobile", "short"].includes(entry.id)) {
         const geometry = report.geometry;
         const plan = diagnosticPlan(expected.beats.map(beat => beat.id), geometry.boxes, geometry.viewport, geometry.maxScroll, entry.mode);

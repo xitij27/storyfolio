@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Focus-only control measurement fixture</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 20px/1.5 system-ui; color: #183631; background: #f3eee4; }
+  header, main, aside { min-height: 100vh; padding: 100px 8vw; }
+  h1, h2 { max-width: 750px; }
+  #skip { position: fixed; z-index: 5; top: 12px; left: 12px; padding: 10px 16px; color: #183631; background: white; transform: translateY(-200%); }
+  #skip:focus-visible { transform: translateY(0); outline: 3px solid #b4411f; }
+  #answer:focus { outline: 3px solid #b4411f; outline-offset: -4px; }
+  #cover { display: none; position: fixed; z-index: 9; top: 0; left: 0; width: 390px; height: 90px; background: #ae442c; color: white; padding: 10px; }
+  [data-variant="hidden"] #skip { visibility: hidden !important; }
+  [data-variant="occluded"] #cover, [data-variant="covered-ordinary"] #cover { display: block; }
+  [data-variant="covered-ordinary"] #skip, [data-variant="ordinary-visible"] #skip { transform: none; }
+  canvas { position: absolute; top: 60px; right: 20px; width: 24px; height: 24px; }
+  p { max-width: 760px; }
+</style>
+</head><body data-variant="good" data-scene="on">
+<a id="skip" href="#answer">Skip to answer</a>
+<div id="cover">Deliberate control occlusion</div>
+<canvas aria-hidden="true" width="24" height="24"></canvas>
+<header><h1>Control measurement fixture</h1><p>The skip link is intentionally outside the viewport until keyboard focus. This small local fixture tests the checker, not portfolio visual quality.</p></header>
+<main id="answer" tabindex="-1"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>
+<aside id="wrong"><h2>A different target</h2><p>Changing the URL alone cannot satisfy a declaration for the answer.</p></aside>
+<script>
+  const canvas = document.querySelector('canvas');
+  const gl = canvas.getContext('webgl');
+  if (gl) {
+    document.body.dataset.scene = 'on';
+    gl.clearColor(0.15, 0.4, 0.3, 1); gl.clear(gl.COLOR_BUFFER_BIT);
+    canvas.addEventListener('webglcontextlost', event => { event.preventDefault(); document.body.dataset.scene = 'off'; });
+  }
+  if (document.body.dataset.variant === 'blocked-tab') document.addEventListener('keydown', event => { if (event.key === 'Tab') event.preventDefault(); });
+</script>
+
+
+</body></html>

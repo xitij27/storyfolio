@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "label": "before-1",
+  "baseline": true,
+  "modulePath": "evals/runs/codex-bench-depth-baseline-1/inputs/implementation/evals/lib/build-capture.mjs",
+  "source": {
+    "evals/runs/codex-bench-depth-baseline-1/inputs/implementation/evals/lib/build-capture.mjs": "de4e45bea11440c5cd8cb305c869495d82f17bbbe129f6b3274b3339caf2ed00",
+    "evals/lib/build-check.mjs": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+    "evals/check-build.mjs": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0",
+    "evals/runs/control-modality-1/fixture.html": "9a957173a4fdf8e39653ea753d1f2ce0b188c64f8944351ef304d29dc5125707",
+    "evals/runs/control-modality-1/browser-check.mjs": "b65a77847edbae301940d74b930c73bfaaf1069d6420df2d06e804bb5aa179f9"
+  },
+  "node": "v22.22.1",
+  "started": "2026-10-11T22:08:22.632Z",
+  "complete": true,
+  "modelCalls": 0,
+  "reports": [
+    {
+      "name": "desktop-good",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)"
+      ],
+      "sha256": "23c22b2e0a14f560d2d26e73bee9d713d69800bffc16c56d5851453dce0cd77a",
+      "images": 3
+    }
+  ],
+  "environment": {
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+    "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu"
+  },
+  "limits": "Focused browser-helper calibration only, not full prototype acceptance, performance or visual quality",
+  "chromium": "156.0.8078.4",
+  "finished": "2026-10-11T22:08:28.212Z"
+}

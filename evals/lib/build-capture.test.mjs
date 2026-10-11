@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { assessControl, assessDiagnosticCapture, controlKey, diagnosticPlan } from "./build-capture.mjs";
+import { assessControl, assessDiagnosticCapture, controlKey, diagnosticPlan, validateFocusOnlyControls } from "./build-capture.mjs";
 import { assessObservation, buildCases, validateExpectations } from "./build-check.mjs";
 
 const ids = ["question", "scheduling", "bench", "evidence", "scope"];
@@ -122,4 +122,86 @@ test("reused selector indices cannot hide controls replaced between beats", () =
   const first = { index: 0, selector: "main > button", tag: "button", name: "Inspect command", targetIds: "command", beat: "question" };
   assert.notEqual(controlKey(first), controlKey({ ...first, name: "Inspect board", targetIds: "board", beat: "bench" }));
   assert.equal(controlKey(first), controlKey({ ...first, index: 9, observedScroll: 800 }));
+});
+
+const skipDeclaration = { selector: "#skip", name: "Skip to answer", href: "#answer", reason: "Reviewed bypass link revealed by keyboard focus" };
+const geometry = () => ({ geometry: { x: 8, y: 8, width: 140, height: 40 }, viewport: { width: 390, height: 844 }, visible: true, inView: true, intersectsViewport: true, hitTarget: true, focused: true, disabled: false });
+const skip = () => ({
+  key: "skip-key", tag: "a", selector: skipDeclaration.selector, name: skipDeclaration.name, href: skipDeclaration.href,
+  trials: [
+    { method: "pointer", applicability: "not-applicable", activated: false, reached: false, hitTarget: false, declaration: { ...skipDeclaration }, unfocused: { ...geometry(), geometry: { x: 8, y: -90, width: 140, height: 40 }, inView: false, intersectsViewport: false, hitTarget: false, focused: false }, unfocusedImage: sha },
+    { ...trial("keyboard"), tabPresses: 1, before: geometry(), after: { targets: [{ id: "answer", exists: true, inView: true, visible: true }] }, targets: [{ id: "answer", exists: true, changed: true }] },
+  ],
+});
+
+test("focus-only declaration is optional, strictly typed, unique and schema-2-only", () => {
+  assert.deepEqual(validateFocusOnlyControls(undefined), []);
+  assert.deepEqual(validateExpectations({ ...expected, focusOnlyControls: [skipDeclaration] }), []);
+  for (const value of [null, {}, [null], [{ ...skipDeclaration, keyboardOnly: true }], [{ ...skipDeclaration, reason: "" }], [{ ...skipDeclaration, href: "https://example.test/" }], [{ ...skipDeclaration, href: "#" }], [{ ...skipDeclaration, href: "#%xx" }], [skipDeclaration, skipDeclaration]]) assert.ok(validateFocusOnlyControls(value).length, JSON.stringify(value));
+  assert.match(validateExpectations({ ...expected, schemaVersion: 1, focusOnlyControls: [] }).join(), /unknown expectations key: focusOnlyControls/);
+});
+
+test("only independent authority and actual focus/target evidence allow a not-applicable pointer route", () => {
+  assert.deepEqual(assessControl(skip(), [skipDeclaration]), []);
+  assert.match(assessControl(skip()).join(), /invalid focus-only pointer applicability/);
+  for (const change of [{ selector: "#different" }, { name: "Different link" }, { href: "#wrong" }, { tag: "button" }]) {
+    assert.match(assessControl({ ...skip(), ...change }, [skipDeclaration]).join(), /invalid focus-only pointer applicability/);
+  }
+});
+
+test("pointer exemption needs original unfocused geometry and cannot waive a covered visible control", () => {
+  for (const mutate of [
+    control => { delete control.trials[0].unfocusedImage; },
+    control => { delete control.trials[0].unfocused.geometry; },
+    control => { control.trials[0].unfocused.geometry.x = NaN; },
+    control => { control.trials[0].unfocused.focused = true; },
+    control => { control.trials[0].unfocused.disabled = true; },
+    control => { control.trials[0].unfocused.intersectsViewport = true; },
+    control => { control.trials[0].activated = true; },
+    control => { control.trials[0].hitTarget = true; },
+    control => { control.trials[0].changed = true; },
+    control => { control.trials[0].declaration.reason = "Actor wrote this"; },
+  ]) {
+    const actual = skip(); mutate(actual);
+    assert.match(assessControl(actual, [skipDeclaration]).join(), /invalid focus-only pointer applicability/);
+  }
+});
+
+test("focus-only keyboard trial cannot omit visibility, Tab, screenshots or actual fragment response", () => {
+  for (const mutate of [
+    control => { delete control.trials[1].before; },
+    control => { control.trials[1].before.visible = false; },
+    control => { control.trials[1].before.inView = false; },
+    control => { control.trials[1].before.hitTarget = false; },
+    control => { control.trials[1].before.focused = false; },
+    control => { control.trials[1].before.disabled = true; },
+    control => { control.trials[1].tabPresses = 0; },
+    control => { delete control.trials[1].afterImage; },
+    control => { control.trials[1].targets[0].exists = false; },
+    control => { control.trials[1].targets[0].changed = false; },
+    control => { control.trials[1].targets[0].id = "wrong"; },
+    control => { control.trials[1].after.targets[0].inView = false; },
+    control => { control.trials[1].after.targets[0].visible = false; },
+    control => { delete control.trials[1].targets; },
+  ]) {
+    const actual = skip(); mutate(actual);
+    assert.ok(assessControl(actual, [skipDeclaration]).length);
+  }
+});
+
+test("missing, duplicate and unknown trial records fail for ordinary and focus-only controls", () => {
+  for (const create of [control, skip]) for (const mutate of [actual => actual.trials.pop(), actual => actual.trials.push(actual.trials[0]), actual => { actual.trials[0].method = "touch"; }]) {
+    const actual = create(); mutate(actual);
+    assert.match(assessControl(actual, [skipDeclaration]).join(), /missing pointer or keyboard trial/);
+  }
+});
+
+test("focus-only declarations cannot hide missing or duplicated inventory controls", () => {
+  const capture = good(); capture.controlInventory = [skip()]; capture.controls = [skip()];
+  const declared = { ...expected, focusOnlyControls: [skipDeclaration] };
+  assert.deepEqual(assessDiagnosticCapture(declared, entry, capture), []);
+  for (const mutate of [actual => { actual.controlInventory = []; actual.controls = []; }, actual => actual.controlInventory.push(skip()), actual => actual.controls.push(skip())]) {
+    const actual = structuredClone(capture); mutate(actual);
+    assert.ok(assessDiagnosticCapture(declared, entry, actual).length);
+  }
 });

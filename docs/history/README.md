@@ -9,6 +9,13 @@ The [12 October stage checkpoint](2026-10-12-stage-status-clarification.md)
 records the author's request for skill-level progress rather than testing-tool
 next steps: Stage 3 is active, while the shipped skill still plans only.
 
+The subsequent [Stage 3 development direction](2026-10-12-stage-3-development.md)
+authorizes implementation toward completion and records the separate
+bounded paid-comparison question, local changes and preserved constraints.
+The [pre-development handover](2026-10-12-before-stage-3-development-handover.md)
+preserves `784eb1e` byte for byte; the development checkpoint verifies this
+before updating the current handover.
+
 The [11 October publication and README record](2026-10-11-readme-and-publication.md)
 preserves the author's public-status update, the earlier private-status
 guidance and the illustrated README work.

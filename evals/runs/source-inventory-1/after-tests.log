@@ -1,0 +1,284 @@
+TAP version 13
+# Subtest: build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+ok 1 - build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+  ---
+  duration_ms: 121.730622
+  type: 'test'
+  ...
+# Subtest: declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+ok 2 - declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+  ---
+  duration_ms: 89.668778
+  type: 'test'
+  ...
+# Subtest: case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+ok 3 - case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+  ---
+  duration_ms: 17.644239
+  type: 'test'
+  ...
+# Subtest: prototype-depth is a versioned one-turn task, never an alias for a journey stop
+ok 4 - prototype-depth is a versioned one-turn task, never an alias for a journey stop
+  ---
+  duration_ms: 12.348757
+  type: 'test'
+  ...
+# Subtest: prototype task identity is frozen and failed single attempts cannot overwrite or advance
+ok 5 - prototype task identity is frozen and failed single attempts cannot overwrite or advance
+  ---
+  duration_ms: 260.568864
+  type: 'test'
+  ...
+# Subtest: current source or frozen input drift cannot silently reuse a build cohort
+ok 6 - current source or frozen input drift cannot silently reuse a build cohort
+  ---
+  duration_ms: 199.330976
+  type: 'test'
+  ...
+# Subtest: fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+ok 7 - fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+  ---
+  duration_ms: 51.366683
+  type: 'test'
+  ...
+# Subtest: fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+ok 8 - fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+  ---
+  duration_ms: 71.133561
+  type: 'test'
+  ...
+# Subtest: snapshots preserve binary source, deletion and symlink records while excluding generated trees
+ok 9 - snapshots preserve binary source, deletion and symlink records while excluding generated trees
+  ---
+  duration_ms: 27.794895
+  type: 'test'
+  ...
+# Subtest: snapshot bounds fail before oversized source is copied
+ok 10 - snapshot bounds fail before oversized source is copied
+  ---
+  duration_ms: 15.561735
+  type: 'test'
+  ...
+# Subtest: turn planning requires observed gates and enforces turn, wall and soft token bounds
+ok 11 - turn planning requires observed gates and enforces turn, wall and soft token bounds
+  ---
+  duration_ms: 12.474459
+  type: 'test'
+  ...
+# Subtest: uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+ok 12 - uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+  ---
+  duration_ms: 12.503665
+  type: 'test'
+  ...
+# Subtest: uncached and wall accounting aggregate every actor turn without double-counting output
+ok 13 - uncached and wall accounting aggregate every actor turn without double-counting output
+  ---
+  duration_ms: 11.909067
+  type: 'test'
+  ...
+# Subtest: uncached bound fails closed on missing or unreliable cached accounting
+ok 14 - uncached bound fails closed on missing or unreliable cached accounting
+  ---
+  duration_ms: 15.290701
+  type: 'test'
+  ...
+# Subtest: aggregate accounting rejects safe individual counters whose sum is unsafe
+ok 15 - aggregate accounting rejects safe individual counters whose sum is unsafe
+  ---
+  duration_ms: 12.417675
+  type: 'test'
+  ...
+# Subtest: build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+ok 16 - build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+  ---
+  duration_ms: 1.378014
+  type: 'test'
+  ...
+# Subtest: actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+ok 17 - actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+  ---
+  duration_ms: 47.132404
+  type: 'test'
+  ...
+# Subtest: CLI config serialization emits restricted TOML tables and rejects unsupported values
+ok 18 - CLI config serialization emits restricted TOML tables and rejects unsupported values
+  ---
+  duration_ms: 0.632678
+  type: 'test'
+  ...
+# Subtest: the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+ok 19 - the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+  ---
+  duration_ms: 1.599576
+  type: 'test'
+  ...
+# Subtest: one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+ok 20 - one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+  ---
+  duration_ms: 387.143752
+  type: 'test'
+  ...
+# Subtest: failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+ok 21 - failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+  ---
+  duration_ms: 193.051752
+  type: 'test'
+  ...
+# Subtest: actor timeout kills its process group including a descendant that ignores SIGTERM
+ok 22 - actor timeout kills its process group including a descendant that ignores SIGTERM
+  ---
+  duration_ms: 623.810034
+  type: 'test'
+  ...
+# Descendant cleanup observed after 1ms; final state: Z
+# Subtest: parent interruption terminates the actor and preserves partial output without retaining signal listeners
+ok 23 - parent interruption terminates the actor and preserves partial output without retaining signal listeners
+  ---
+  duration_ms: 142.740642
+  type: 'test'
+  ...
+# Subtest: actor and checker share generated exclusions including Next declarations
+ok 24 - actor and checker share generated exclusions including Next declarations
+  ---
+  duration_ms: 28.022157
+  type: 'test'
+  ...
+# Subtest: recognized top-level bare Git metadata is excluded consistently without a name-only rule
+ok 25 - recognized top-level bare Git metadata is excluded consistently without a name-only rule
+  ---
+  duration_ms: 41.93851
+  type: 'test'
+  ...
+# Subtest: ordinary similarly named folders and newly added runtime paths stay observable
+ok 26 - ordinary similarly named folders and newly added runtime paths stay observable
+  ---
+  duration_ms: 7.78245
+  type: 'test'
+  ...
+# Subtest: unknown files anywhere in candidate Git metadata defeat exclusion
+    # Subtest: runtime.js
+    ok 1 - runtime.js
+      ---
+      duration_ms: 25.253848
+      type: 'test'
+      ...
+    # Subtest: objects/app.ts
+    ok 2 - objects/app.ts
+      ---
+      duration_ms: 24.85203
+      type: 'test'
+      ...
+    # Subtest: objects/ab/runtime.js
+    ok 3 - objects/ab/runtime.js
+      ---
+      duration_ms: 24.316012
+      type: 'test'
+      ...
+    # Subtest: hooks/client.js
+    ok 4 - hooks/client.js
+      ---
+      duration_ms: 19.510391
+      type: 'test'
+      ...
+    # Subtest: info/route.ts
+    ok 5 - info/route.ts
+      ---
+      duration_ms: 21.104877
+      type: 'test'
+      ...
+    # Subtest: refs/heads/main.ts
+    ok 6 - refs/heads/main.ts
+      ---
+      duration_ms: 29.218835
+      type: 'test'
+      ...
+    # Subtest: logs/client.js
+    ok 7 - logs/client.js
+      ---
+      duration_ms: 20.491537
+      type: 'test'
+      ...
+    1..7
+ok 27 - unknown files anywhere in candidate Git metadata defeat exclusion
+  ---
+  duration_ms: 167.370361
+  type: 'test'
+  ...
+# Subtest: malformed or incomplete Git markers cannot earn exclusion
+    # Subtest: invalid HEAD
+    ok 1 - invalid HEAD
+      ---
+      duration_ms: 19.402961
+      type: 'test'
+      ...
+    # Subtest: non-bare config
+    ok 2 - non-bare config
+      ---
+      duration_ms: 17.260674
+      type: 'test'
+      ...
+    # Subtest: bare outside core
+    ok 3 - bare outside core
+      ---
+      duration_ms: 21.719542
+      type: 'test'
+      ...
+    # Subtest: missing objects
+    ok 4 - missing objects
+      ---
+      duration_ms: 15.464182
+      type: 'test'
+      ...
+    # Subtest: missing refs
+    ok 5 - missing refs
+      ---
+      duration_ms: 16.410775
+      type: 'test'
+      ...
+    1..5
+ok 28 - malformed or incomplete Git markers cannot earn exclusion
+  ---
+  duration_ms: 91.462885
+  type: 'test'
+  ...
+# Subtest: Git marker and descendant symlinks are never followed or exempted
+    # Subtest: HEAD
+    ok 1 - HEAD
+      ---
+      duration_ms: 13.152482
+      type: 'test'
+      ...
+    # Subtest: objects/ab/linked
+    ok 2 - objects/ab/linked
+      ---
+      duration_ms: 18.664226
+      type: 'test'
+      ...
+    # Subtest: refs/heads/linked
+    ok 3 - refs/heads/linked
+      ---
+      duration_ms: 21.625827
+      type: 'test'
+      ...
+    1..3
+ok 29 - Git marker and descendant symlinks are never followed or exempted
+  ---
+  duration_ms: 54.593396
+  type: 'test'
+  ...
+# Subtest: Git-shaped content inside public assets remains source rather than hidden metadata
+ok 30 - Git-shaped content inside public assets remains source rather than hidden metadata
+  ---
+  duration_ms: 29.229886
+  type: 'test'
+  ...
+1..30
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2475.445151

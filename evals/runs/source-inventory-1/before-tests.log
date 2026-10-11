@@ -1,0 +1,394 @@
+TAP version 13
+# Subtest: actor and checker share generated exclusions including Next declarations
+not ok 1 - actor and checker share generated exclusions including Next declarations
+  ---
+  duration_ms: 49.751749
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/lib/source-scope.test.mjs:29:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+    -   '.npm/cache': {
+    -     bytes: 10,
+    -     sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    -   },
+    -   '.turbo/cache': {
+    -     bytes: 10,
+    -     sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    -   },
+        'app/page.tsx': {
+          bytes: 53,
+          sha256: '4b20d29c04b27e2e141308b34dc50c04439ede7421f46e73caf66219c81c7788'
+        },
+    +   'next-env.d.ts': {
+    -   'browser-cache/package': {
+          bytes: 10,
+          sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+        },
+    -   'playwright-report/index.html': {
+    -     bytes: 10,
+    -     sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    -   },
+    -   'test-results/result.json': {
+    -     bytes: 10,
+    -     sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    -   }
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    .npm/cache:
+      bytes: 10
+      sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    .turbo/cache:
+      bytes: 10
+      sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    app/page.tsx:
+      bytes: 53
+      sha256: '4b20d29c04b27e2e141308b34dc50c04439ede7421f46e73caf66219c81c7788'
+    browser-cache/package:
+      bytes: 10
+      sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    playwright-report/index.html:
+      bytes: 10
+      sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+    test-results/result.json:
+      bytes: 10
+      sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+  actual:
+    app/page.tsx:
+      bytes: 53
+      sha256: '4b20d29c04b27e2e141308b34dc50c04439ede7421f46e73caf66219c81c7788'
+    next-env.d.ts:
+      bytes: 10
+      sha256: '9f5936ff15d3a2ba7d3d8f21858338a6c1e2adc9fe34c685c7de5b4a00caa29a'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/kshitij/projects/storyfolio/evals/lib/source-scope.test.mjs:34:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: recognized top-level bare Git metadata is excluded consistently without a name-only rule
+not ok 2 - recognized top-level bare Git metadata is excluded consistently without a name-only rule
+  ---
+  duration_ms: 35.17082
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/lib/source-scope.test.mjs:38:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      {
+    -   '.local-history/COMMIT_EDITMSG': {
+    -     bytes: 14,
+    -     sha256: 'd7d447b0b91e328a0d5ae09b6ad86dc267ad5d0eb46552d46b6e49b7c4789079'
+    -   },
+    -   '.local-history/HEAD': {
+    -     bytes: 21,
+    -     sha256: '28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80'
+    -   },
+    -   '.local-history/config': {
+    -     bytes: 66,
+    -     sha256: 'dd548269913b6adbdfa7049170ea86850050cb762ea3b9c510a0b2986d2113e3'
+    -   },
+    -   '.local-history/description': {
+    -     bytes: 19,
+    -     sha256: '699aea17cac71d0302d7979d92197faa9981524f6d2f10d6b7aedd6f55a18cce'
+    -   },
+    -   '.local-history/hooks/pre-commit.sample': {
+    -     bytes: 17,
+    -     sha256: '306c6ca7407560340797866e077e053627ad409277d1b9da58106fce4cf717cb'
+    -   },
+    -   '.local-history/index': {
+    -     bytes: 12,
+    -     sha256: '69545a0bb345698d30bc0e241a1eff5b92e57bb4f9697da082b9e5ce48b7e118'
+    -   },
+    -   '.local-history/info/exclude': {
+    -     bytes: 17,
+    -     sha256: '1de40f236d547695b30ebca7292d467d52ee4db00d6fc6eca9a8ef20eb78463f'
+    -   },
+    -   '.local-history/logs/HEAD': {
+    -     bytes: 15,
+    -     sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    -   },
+    -   '.local-history/logs/refs/heads/main': {
+    -     bytes: 15,
+    -     sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    -   },
+    -   '.local-history/objects/ab/cdef012345678901234567890123456789012345': {
+    -     bytes: 20,
+    -     sha256: 'd4b890bdfc98cf88f5f69724775804c4a4acaf5a839fcd095a3114b8cae668d6'
+    -   },
+    -   '.local-history/refs/heads/main': {
+    -     bytes: 43,
+    -     sha256: '993f86a47909b8e946df691777284912ff95d477046b5893e3fe5b24bd494533'
+    -   },
+    -   '.prototype-history/COMMIT_EDITMSG': {
+    -     bytes: 14,
+    -     sha256: 'd7d447b0b91e328a0d5ae09b6ad86dc267ad5d0eb46552d46b6e49b7c4789079'
+    -   },
+    -   '.prototype-history/HEAD': {
+    -     bytes: 21,
+    -     sha256: '28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80'
+    -   },
+    -   '.prototype-history/config': {
+    -     bytes: 66,
+    -     sha256: 'dd548269913b6adbdfa7049170ea86850050cb762ea3b9c510a0b2986d2113e3'
+    -   },
+    -   '.prototype-history/description': {
+    -     bytes: 19,
+    -     sha256: '699aea17cac71d0302d7979d92197faa9981524f6d2f10d6b7aedd6f55a18cce'
+    -   },
+    -   '.prototype-history/hooks/pre-commit.sample': {
+    -     bytes: 17,
+    -     sha256: '306c6ca7407560340797866e077e053627ad409277d1b9da58106fce4cf717cb'
+    -   },
+    -   '.prototype-history/index': {
+    -     bytes: 12,
+    -     sha256: '69545a0bb345698d30bc0e241a1eff5b92e57bb4f9697da082b9e5ce48b7e118'
+    -   },
+    -   '.prototype-history/info/exclude': {
+    -     bytes: 17,
+    -     sha256: '1de40f236d547695b30ebca7292d467d52ee4db00d6fc6eca9a8ef20eb78463f'
+    -   },
+    -   '.prototype-history/logs/HEAD': {
+    -     bytes: 15,
+    -     sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    -   },
+    -   '.prototype-history/logs/refs/heads/main': {
+    -     bytes: 15,
+    -     sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    -   },
+    -   '.prototype-history/objects/ab/cdef012345678901234567890123456789012345': {
+    -     bytes: 20,
+    -     sha256: 'd4b890bdfc98cf88f5f69724775804c4a4acaf5a839fcd095a3114b8cae668d6'
+    -   },
+    -   '.prototype-history/refs/heads/main': {
+    -     bytes: 43,
+    -     sha256: '993f86a47909b8e946df691777284912ff95d477046b5893e3fe5b24bd494533'
+    -   },
+        'app/page.tsx': {
+          bytes: 53,
+          sha256: '4b20d29c04b27e2e141308b34dc50c04439ede7421f46e73caf66219c81c7788'
+        }
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    .local-history/COMMIT_EDITMSG:
+      bytes: 14
+      sha256: 'd7d447b0b91e328a0d5ae09b6ad86dc267ad5d0eb46552d46b6e49b7c4789079'
+    .local-history/config:
+      bytes: 66
+      sha256: 'dd548269913b6adbdfa7049170ea86850050cb762ea3b9c510a0b2986d2113e3'
+    .local-history/description:
+      bytes: 19
+      sha256: '699aea17cac71d0302d7979d92197faa9981524f6d2f10d6b7aedd6f55a18cce'
+    .local-history/HEAD:
+      bytes: 21
+      sha256: '28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80'
+    .local-history/hooks/pre-commit.sample:
+      bytes: 17
+      sha256: '306c6ca7407560340797866e077e053627ad409277d1b9da58106fce4cf717cb'
+    .local-history/index:
+      bytes: 12
+      sha256: '69545a0bb345698d30bc0e241a1eff5b92e57bb4f9697da082b9e5ce48b7e118'
+    .local-history/info/exclude:
+      bytes: 17
+      sha256: '1de40f236d547695b30ebca7292d467d52ee4db00d6fc6eca9a8ef20eb78463f'
+    .local-history/logs/HEAD:
+      bytes: 15
+      sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    .local-history/logs/refs/heads/main:
+      bytes: 15
+      sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    .local-history/objects/ab/cdef012345678901234567890123456789012345:
+      bytes: 20
+      sha256: 'd4b890bdfc98cf88f5f69724775804c4a4acaf5a839fcd095a3114b8cae668d6'
+    .local-history/refs/heads/main:
+      bytes: 43
+      sha256: '993f86a47909b8e946df691777284912ff95d477046b5893e3fe5b24bd494533'
+    .prototype-history/COMMIT_EDITMSG:
+      bytes: 14
+      sha256: 'd7d447b0b91e328a0d5ae09b6ad86dc267ad5d0eb46552d46b6e49b7c4789079'
+    .prototype-history/config:
+      bytes: 66
+      sha256: 'dd548269913b6adbdfa7049170ea86850050cb762ea3b9c510a0b2986d2113e3'
+    .prototype-history/description:
+      bytes: 19
+      sha256: '699aea17cac71d0302d7979d92197faa9981524f6d2f10d6b7aedd6f55a18cce'
+    .prototype-history/HEAD:
+      bytes: 21
+      sha256: '28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80'
+    .prototype-history/hooks/pre-commit.sample:
+      bytes: 17
+      sha256: '306c6ca7407560340797866e077e053627ad409277d1b9da58106fce4cf717cb'
+    .prototype-history/index:
+      bytes: 12
+      sha256: '69545a0bb345698d30bc0e241a1eff5b92e57bb4f9697da082b9e5ce48b7e118'
+    .prototype-history/info/exclude:
+      bytes: 17
+      sha256: '1de40f236d547695b30ebca7292d467d52ee4db00d6fc6eca9a8ef20eb78463f'
+    .prototype-history/logs/HEAD:
+      bytes: 15
+      sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    .prototype-history/logs/refs/heads/main:
+      bytes: 15
+      sha256: 'da90e7243ed33b82ad8081f6b99ec646b95aa0a02984f4432a9bebfac4be175c'
+    .prototype-history/objects/ab/cdef012345678901234567890123456789012345:
+      bytes: 20
+      sha256: 'd4b890bdfc98cf88f5f69724775804c4a4acaf5a839fcd095a3114b8cae668d6'
+    .prototype-history/refs/heads/main:
+      bytes: 43
+      sha256: '993f86a47909b8e946df691777284912ff95d477046b5893e3fe5b24bd494533'
+    app/page.tsx:
+      bytes: 53
+      sha256: '4b20d29c04b27e2e141308b34dc50c04439ede7421f46e73caf66219c81c7788'
+  actual:
+    app/page.tsx:
+      bytes: 53
+      sha256: '4b20d29c04b27e2e141308b34dc50c04439ede7421f46e73caf66219c81c7788'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/kshitij/projects/storyfolio/evals/lib/source-scope.test.mjs:43:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: ordinary similarly named folders and newly added runtime paths stay observable
+ok 3 - ordinary similarly named folders and newly added runtime paths stay observable
+  ---
+  duration_ms: 7.679568
+  type: 'test'
+  ...
+# Subtest: unknown files anywhere in candidate Git metadata defeat exclusion
+    # Subtest: runtime.js
+    ok 1 - runtime.js
+      ---
+      duration_ms: 19.351587
+      type: 'test'
+      ...
+    # Subtest: objects/app.ts
+    ok 2 - objects/app.ts
+      ---
+      duration_ms: 20.082455
+      type: 'test'
+      ...
+    # Subtest: objects/ab/runtime.js
+    ok 3 - objects/ab/runtime.js
+      ---
+      duration_ms: 20.443508
+      type: 'test'
+      ...
+    # Subtest: hooks/client.js
+    ok 4 - hooks/client.js
+      ---
+      duration_ms: 17.68265
+      type: 'test'
+      ...
+    # Subtest: info/route.ts
+    ok 5 - info/route.ts
+      ---
+      duration_ms: 16.333872
+      type: 'test'
+      ...
+    # Subtest: refs/heads/main.ts
+    ok 6 - refs/heads/main.ts
+      ---
+      duration_ms: 16.770053
+      type: 'test'
+      ...
+    # Subtest: logs/client.js
+    ok 7 - logs/client.js
+      ---
+      duration_ms: 21.499292
+      type: 'test'
+      ...
+    1..7
+ok 4 - unknown files anywhere in candidate Git metadata defeat exclusion
+  ---
+  duration_ms: 135.340399
+  type: 'test'
+  ...
+# Subtest: malformed or incomplete Git markers cannot earn exclusion
+    # Subtest: invalid HEAD
+    ok 1 - invalid HEAD
+      ---
+      duration_ms: 18.271556
+      type: 'test'
+      ...
+    # Subtest: non-bare config
+    ok 2 - non-bare config
+      ---
+      duration_ms: 17.136345
+      type: 'test'
+      ...
+    # Subtest: bare outside core
+    ok 3 - bare outside core
+      ---
+      duration_ms: 16.515138
+      type: 'test'
+      ...
+    # Subtest: missing objects
+    ok 4 - missing objects
+      ---
+      duration_ms: 15.036488
+      type: 'test'
+      ...
+    # Subtest: missing refs
+    ok 5 - missing refs
+      ---
+      duration_ms: 20.531521
+      type: 'test'
+      ...
+    1..5
+ok 5 - malformed or incomplete Git markers cannot earn exclusion
+  ---
+  duration_ms: 89.124648
+  type: 'test'
+  ...
+# Subtest: Git marker and descendant symlinks are never followed or exempted
+    # Subtest: HEAD
+    ok 1 - HEAD
+      ---
+      duration_ms: 13.045162
+      type: 'test'
+      ...
+    # Subtest: objects/ab/linked
+    ok 2 - objects/ab/linked
+      ---
+      duration_ms: 14.563627
+      type: 'test'
+      ...
+    # Subtest: refs/heads/linked
+    ok 3 - refs/heads/linked
+      ---
+      duration_ms: 15.431242
+      type: 'test'
+      ...
+    1..3
+ok 6 - Git marker and descendant symlinks are never followed or exempted
+  ---
+  duration_ms: 44.089023
+  type: 'test'
+  ...
+# Subtest: Git-shaped content inside public assets remains source rather than hidden metadata
+ok 7 - Git-shaped content inside public assets remains source rather than hidden metadata
+  ---
+  duration_ms: 30.836696
+  type: 'test'
+  ...
+1..7
+# tests 22
+# suites 0
+# pass 20
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 549.112145

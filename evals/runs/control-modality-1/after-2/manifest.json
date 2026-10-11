@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "label": "after-2",
+  "baseline": false,
+  "modulePath": "evals/lib/build-capture.mjs",
+  "source": {
+    "evals/lib/build-capture.mjs": "7472bf42a1bfc2a18c7b317e9c1b43274e431737a6ea82f9e66c927a4b39521e",
+    "evals/lib/source-scope.mjs": "63bcdb119b0fd546aa5a27144204eb6deea89167d8b81121dffde8a22865c71b",
+    "evals/lib/build-check.mjs": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+    "evals/check-build.mjs": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0",
+    "evals/runs/control-modality-1/fixture.html": "6069cde562dc5cccb307f3d7bac7bed9c6efef9cfe52eaeb53a3cd37ae75d8d8",
+    "evals/runs/control-modality-1/browser-check.mjs": "33aa0a3e573b996eaa09e71f8db5cfdd65fa2c90160f32971bffe2dd1e20432a"
+  },
+  "node": "v22.22.1",
+  "started": "2026-10-11T22:13:19.832Z",
+  "complete": true,
+  "modelCalls": 0,
+  "reports": [
+    {
+      "name": "desktop-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "17f6552b24f0927afd6f746874ebef90a7b092c736e1b23810abe131042aa57a",
+      "images": 4
+    },
+    {
+      "name": "mobile-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "c329968736b87501fadae8f0ac0abd7098f616ff16877e9cc84b11c080961b10",
+      "images": 4
+    },
+    {
+      "name": "short-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "15c89e7bdd4ff64f05c29623f1992fbd2cfc9e81b77d38cfca09c5f9ba2dc97b",
+      "images": 4
+    },
+    {
+      "name": "reduced-motion-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "4b4091d468d0475a0352f49a3ad15c90a9d388f7aa38dde3174107e01304eafb",
+      "images": 4
+    },
+    {
+      "name": "no-webgl-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "5ad049c49f901e8f5ef86965d5687bd4cd996bbe2161041d234a82142f45e66e",
+      "images": 4
+    },
+    {
+      "name": "no-javascript-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "d7fac763dea1deb8c9304ea73a610ddcacdccfb665d509279a468e9d6ca017ee",
+      "images": 4
+    },
+    {
+      "name": "context-loss-good",
+      "expectedFailure": false,
+      "regressionPassed": true,
+      "problems": [],
+      "sha256": "1466a81a34439c54498bb289983f21220f1145e6cd4fc039be2026d5d04dcf78",
+      "images": 4
+    },
+    {
+      "name": "desktop-hidden-target",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: declared control targets did not respond",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "sha256": "6eb27b6669765f673a41f6e65143be6494eb5467aed523a197d3e8bd0cc193e8",
+      "images": 4
+    },
+    {
+      "name": "desktop-offscreen-target",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: declared control targets did not respond",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "sha256": "1204e579ab2ff46863a810198aa64f592dd3a125bac471a023986adcdd8d5369",
+      "images": 4
+    },
+    {
+      "name": "desktop-duplicate-target",
+      "expectedFailure": true,
+      "regressionPassed": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: missing declared control target",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "sha256": "d14829b7d5e9faf7afc6dd16bf9e47fa5162d9ce7cd6c631e66843478183dd13",
+      "images": 4
+    }
+  ],
+  "environment": {
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+    "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu"
+  },
+  "limits": "Focused browser-helper calibration only, not full prototype acceptance, performance or visual quality",
+  "chromium": "156.0.8078.4",
+  "finished": "2026-10-11T22:14:05.580Z"
+}

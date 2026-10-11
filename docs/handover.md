@@ -13,6 +13,19 @@ follows the complete-site proof. The author's request for this framing and
 the remaining product work are in the
 [12 October stage checkpoint](history/2026-10-12-stage-status-clarification.md).
 
+The author has now [directed implementation to finish Stage 3 first](history/2026-10-12-stage-3-development.md).
+The [completion work record](superpowers/plans/2026-10-12-stage-3-completion.md)
+tracks the supported build workflow and full-site proof as the product
+milestones. Local measurement repairs and the controlled comparison fixture
+are implemented and verified with 342 passing repository tests. The
+[development findings](../evals/runs/stage-3-integration-1/findings.md)
+record browser evidence, independent review and the two unapplied visual
+instruction drafts. The separately bounded paid comparison is unanswered.
+No behavioral skill instruction changed and Stage 3 remains incomplete.
+
+The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
+preserves `784eb1e` verbatim before this checkpoint's current-state updates.
+
 The [pre-engine handover](history/2026-10-11-before-engine-handover.md)
 preserves this day's earlier current-state wording verbatim.
 
@@ -194,8 +207,9 @@ The author then authorized continued development after the tests, with
 The demonstrated judge-response parsing defect is now repaired, with
 deterministic regression evidence in the
 [parsing study](../evals/runs/judge-response-parsing-1/findings.md).
-The next local measurement work concerns focus-only skip-link applicability,
-as the [post-baseline plan](superpowers/plans/2026-10-11-post-baseline-attribution.md) records.
+The subsequent [local measurement checkpoint](../evals/runs/stage-3-integration-1/findings.md)
+implements focus-only skip-link applicability and source-inventory alignment,
+as required by the [post-baseline plan](superpowers/plans/2026-10-11-post-baseline-attribution.md).
 The shipped skill and engine remain unchanged. New behavioral instructions
 still require a supported miss and a separately decided matched rerun;
 there is no new paid allowance or push authorization.
@@ -531,18 +545,24 @@ separate final-message audit, usage, cross-run tooling caveat and independent
 technical/visual assessment are retained. Do not resume, retry or overwrite
 the cohort, or ask for the already granted launch approval again.
 
-The [judge parser repair](../evals/runs/judge-response-parsing-1/findings.md)
-is implemented and passes 310 repository tests. The author's
-[full-access direction](history/2026-10-11-baseline-reconciliation-and-development.md)
-permits continued local development under the reproduction plan. Read the
-[control-modality review](../evals/runs/codex-bench-depth-baseline-1/checker-modality-review.md)
-before future measurement work: the frozen checker requires pointer access
-to an inherited keyboard-focus-only skip link. Preserve its actual failed
-verdict separately from that attribution. The proposed repair and negative
-regressions are not yet implemented.
-The [post-baseline plan](superpowers/plans/2026-10-11-post-baseline-attribution.md)
-orders that local repair, information-boundary preparation and the later
-behavioral decision, without inventing a new paid allowance.
+The [Stage 3 development checkpoint](../evals/runs/stage-3-integration-1/findings.md)
+implements the later control-modality and source-inventory repairs, with
+342 passing repository tests. Seven valid browser conditions pass and all
+15 faulty variants fail; 112 originals were individually reviewed. The
+historical 202/390 source mismatch is preserved while both prospective
+inventories match on 201 unchanged source files. The
+[new fixture](../evals/builds/bench-depth-2/README.md) makes the reviewed
+neutral helper, environment facts and skip-navigation contract explicit.
+Its verifier, real-browser helper smoke and read-only runner preparation
+pass. No new cohort or actor workspace is frozen or prepared yet.
+
+Follow the [completion plan](superpowers/plans/2026-10-12-stage-3-completion.md)
+for the product milestones. The [separate paid question](history/2026-10-12-stage-3-development.md#separate-paid-comparison-question)
+is unanswered: one fresh baseline and one matched candidate if needed,
+at most one judge each, 15 minutes per build and 10 per judge, no retries.
+These deadlines are not a hard token-cost cap. Do not ask again to authorize
+the spent old cohort or launch new paid work without resolving this question.
+The two visual instruction candidates are drafts, not shipped behavior.
 
 Follow the baseline findings' quality attribution before choosing the next
 behavioral experiment. Source-level passes do not establish a convincing
@@ -568,8 +588,11 @@ analysis or new measurement baseline must be explicitly labelled, not
 passed off as an unchanged skill-only comparison. Configuration isolation
 is not a filesystem read jail. Every new actor record needs its own access
 audit and every judge packet its own complete-delivery preflight.
-Supported build activation, three implemented looks, three whole-beat
-wording options, the non-sheet full journey and packaging remain open.
+Supported build activation, before-stop-1 capability and three-concept
+coverage, two or three implemented looks, three whole-beat wording options,
+relevant optional-skill recommendation/refusal, planning regression, the
+non-sheet full journey and packaging remain open. Earlier summaries saying
+three looks do not supersede the approved design's two-or-three requirement.
 
 On 11 October the author asked about token consumption for reviewing and
 building portfolios. The [saved usage audit](../evals/runs/codex-token-usage-audit-1/findings.md)
@@ -596,7 +619,7 @@ node evals/check-people.mjs
 npm test
 ```
 
-The latest completion checkpoint passes all 246 repository tests, including
+The historical completion checkpoint passes all 246 repository tests, including
 the new judge character-limit regressions. The earlier engine checkpoint
 passed 189 tests; these are different checkpoints.
 The newer [no-model preparation verification](../evals/runs/build-workflow-preparation-1/verification.json)
@@ -607,7 +630,7 @@ measurement testing, not an actor build, new author approval or final freeze.
 The later shared-controls checkpoint again passes all 266 repository tests
 and adds six dedicated React-context regressions. The study keeps baseline
 failures, browser verification and source review separate from those counts.
-The latest [judge-transport verification](../evals/runs/judge-transport-1/verification.json)
+The later [judge-transport verification](../evals/runs/judge-transport-1/verification.json)
 passes all 305 repository tests across 31 suites, the skill and people checks,
 and the diagnostic fixture verifier. Local real-process calibration serves
 the old spine and completion prompts in 26 and 79 pages respectively,
@@ -627,6 +650,13 @@ Node TypeScript-loading failure separately and uses the existing native
 Node binary for the successful full suite. Historical skill/engine,
 accepted prototype and frozen input bytes are unchanged. These engineering
 tests do not establish visual acceptance of the new five-beat output.
+The current [Stage 3 development verification](../evals/runs/stage-3-integration-1/verification-1/result.json)
+passes all 342 tests across 31 suites, the skill/people/fixture checks,
+source-scope reproduction and historical judge audit. Its source hashes
+bind the tested changes. The separate local browser and helper evidence
+is in the [integration findings](../evals/runs/stage-3-integration-1/findings.md).
+No new model evaluation, shipped skill instruction or full-site acceptance
+is established by this checkpoint.
 The visual-quality review repeated the required checks: all 246 tests,
 the skill check and the people check pass. Its
 [preservation record](../evals/runs/codex-visual-quality-review-1/verification.json)

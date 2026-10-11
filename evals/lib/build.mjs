@@ -5,10 +5,11 @@ import { join } from "node:path";
 import { scaffold } from "../../skills/storyfolio/scripts/scaffold.mjs";
 import { codexArgs, summariseCodex } from "./codex.mjs";
 import { hash, json, safeId, safePath, verifyInputs, writeNew } from "./review.mjs";
+import { SOURCE_EXCLUDED_DIRECTORIES, sourceEntryExcluded, sourcePathExcluded } from "./source-scope.mjs";
 
 export { hash, json, safeId, safePath, verifyInputs, writeNew };
-export const IMPLEMENTATION_FILES = ["evals/codex-build-run.mjs", "evals/lib/build.mjs", "evals/lib/codex.mjs", "evals/lib/events.mjs", "evals/lib/files.mjs", "evals/lib/review.mjs", "skills/storyfolio/scripts/scaffold.mjs"];
-export const EXCLUDED = new Set(["node_modules", ".next", ".git", ".cache", ".npm", ".turbo", "checks", "test-results", "playwright-report", "browser-cache"]);
+export const IMPLEMENTATION_FILES = ["evals/codex-build-run.mjs", "evals/lib/build.mjs", "evals/lib/source-scope.mjs", "evals/lib/codex.mjs", "evals/lib/events.mjs", "evals/lib/files.mjs", "evals/lib/review.mjs", "skills/storyfolio/scripts/scaffold.mjs"];
+export const EXCLUDED = new Set(SOURCE_EXCLUDED_DIRECTORIES);
 export const DEFAULT_SNAPSHOT = {
   roots: ["app", "components", "content", "docs", "lib", "public", "scripts", "styles", "types", "material", ".agents"],
   files: ["package.json", "package-lock.json", "next.config.ts", "next.config.mjs", "next-env.d.ts", "tsconfig.json", "eslint.config.mjs", "postcss.config.mjs", "README.md", "AGENTS.md", "CLAUDE.md", "LICENSE", ".gitignore"],
@@ -31,8 +32,8 @@ export async function regularBytes(root, path) {
 async function fileTree(root, prefix = "", excludeGenerated = true) {
   const result = [];
   for (const entry of (await readdir(join(root, prefix), { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name))) {
-    if (excludeGenerated && (EXCLUDED.has(entry.name) || entry.name.endsWith(".tsbuildinfo"))) continue;
     const path = prefix ? `${prefix}/${entry.name}` : entry.name;
+    if (excludeGenerated && await sourceEntryExcluded(root, path, entry)) continue;
     if (entry.isDirectory()) result.push(...await fileTree(root, path, excludeGenerated));
     else if (entry.isFile()) result.push(path);
     else throw new Error(`Unsupported source input: ${path}`);
@@ -48,7 +49,7 @@ export function validateCase(source) {
   safeId(source.id);
   for (const key of ["workspaceRoot", "expectations", "rubric", "protocol"]) safePath(source[key]);
   if (!Array.isArray(source.files) || !source.files.length || new Set(source.files).size !== source.files.length) throw new Error("Case needs a nonempty unique fixture file allowlist");
-  source.files.forEach(path => { safePath(path); if (path.split("/").some(part => EXCLUDED.has(part))) throw new Error(`Generated fixture path is not allowed: ${path}`); });
+  source.files.forEach(path => { safePath(path); if (sourcePathExcluded(path)) throw new Error(`Generated fixture path is not allowed: ${path}`); });
   if (!Array.isArray(source.prompts) || !source.prompts.length) throw new Error("Case needs fixed prompt paths");
   source.prompts.forEach(safePath);
   const setupMode = source.setupMode === undefined ? "scaffold" : source.setupMode;
@@ -149,7 +150,7 @@ export async function inspectWorkspace(work, policy = DEFAULT_SNAPSHOT) {
   async function visit(prefix = "") {
     for (const entry of (await readdir(join(work, prefix), { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name))) {
       const path = prefix ? `${prefix}/${entry.name}` : entry.name;
-      if (EXCLUDED.has(entry.name) || entry.name.endsWith(".tsbuildinfo")) { excluded.push(path); continue; }
+      if (await sourceEntryExcluded(work, path, entry)) { excluded.push(path); continue; }
       if (!allowed(path) && !ancestor(path)) { unexpected.push({ path, type: entry.isDirectory() ? "directory" : entry.isSymbolicLink() ? "symlink" : "file" }); continue; }
       if (entry.isDirectory()) { await visit(path); continue; }
       if (Object.keys(entries).length >= policy.maxFiles) throw new Error(`Snapshot file bound exceeded: ${policy.maxFiles}`);

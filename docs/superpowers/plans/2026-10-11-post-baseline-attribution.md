@@ -86,3 +86,19 @@ three sketches, three implemented looks, three whole-beat wording versions,
 optional recommendation/refusal, planning-only regression, whole-site proof
 and packaging retain their original gates. A source-level pass cannot
 substitute for them.
+
+## Execution checkpoint, 12 October 2026
+
+The [Stage 3 completion work](2026-10-12-stage-3-completion.md) now implements
+the prospective modality and source-inventory repairs, chooses the neutral
+helper option in a new equal-arm fixture, and drafts two failure-backed
+visual paragraphs without applying them. The
+[development findings](../../../evals/runs/stage-3-integration-1/findings.md)
+record all 342 repository tests passing, local browser and helper evidence,
+independent review and unchanged historical inputs/results. The separately
+bounded paid comparison is unanswered; no new actor or judge was invoked.
+
+Correction to the earlier summary above: the approved design requires
+**two or three looks**, not obligatorily three. Three concept sketches and
+three whole-beat wording versions remain distinct requirements. Ordinary
+build activation and the six-stop complete-site proof are still open.

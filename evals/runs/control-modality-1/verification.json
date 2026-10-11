@@ -1,0 +1,1081 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "modelCalls": 0,
+  "browserLaunches": 0,
+  "campaigns": [
+    {
+      "label": "before-1",
+      "cases": 1,
+      "images": 3,
+      "sha256": "0134c08036129225dc3fcc456d2fd3492d563fe7fce72928cc015b265f6497be",
+      "allExpectedOutcomes": true
+    },
+    {
+      "label": "after-1",
+      "cases": 20,
+      "images": 69,
+      "sha256": "c6a131ae927684f48b85f7795d3fd5f463529d91f652a6289fe8c122eaf87cbc",
+      "allExpectedOutcomes": true
+    },
+    {
+      "label": "after-2",
+      "cases": 10,
+      "images": 40,
+      "sha256": "3216b0396f4e0556fe2e47cfb7e0f630b5be94abdaa1f8db4a55cc91e235b4f0",
+      "allExpectedOutcomes": true
+    }
+  ],
+  "source": [
+    {
+      "campaign": "before-1",
+      "path": "evals/runs/codex-bench-depth-baseline-1/inputs/implementation/evals/lib/build-capture.mjs",
+      "retained": "evals/runs/codex-bench-depth-baseline-1/inputs/implementation/evals/lib/build-capture.mjs",
+      "sha256": "de4e45bea11440c5cd8cb305c869495d82f17bbbe129f6b3274b3339caf2ed00",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "before-1",
+      "path": "evals/lib/build-check.mjs",
+      "retained": "evals/runs/control-modality-1/after-1-source/build-check.mjs",
+      "sha256": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "before-1",
+      "path": "evals/check-build.mjs",
+      "retained": "evals/runs/control-modality-1/after-1-source/check-build.mjs",
+      "sha256": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "before-1",
+      "path": "evals/runs/control-modality-1/fixture.html",
+      "retained": "evals/runs/control-modality-1/after-1-source/fixture.html",
+      "sha256": "9a957173a4fdf8e39653ea753d1f2ce0b188c64f8944351ef304d29dc5125707",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "before-1",
+      "path": "evals/runs/control-modality-1/browser-check.mjs",
+      "retained": "evals/runs/control-modality-1/after-1-source/browser-check.mjs",
+      "sha256": "b65a77847edbae301940d74b930c73bfaaf1069d6420df2d06e804bb5aa179f9",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "after-1",
+      "path": "evals/lib/build-capture.mjs",
+      "retained": "evals/runs/control-modality-1/after-1-source/build-capture.mjs",
+      "sha256": "ea3093d1f8d39af73c22072b6f0e6f2ffe87aa510d3d8e2ce78b60000127c005",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "after-1",
+      "path": "evals/lib/build-check.mjs",
+      "retained": "evals/runs/control-modality-1/after-1-source/build-check.mjs",
+      "sha256": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "after-1",
+      "path": "evals/check-build.mjs",
+      "retained": "evals/runs/control-modality-1/after-1-source/check-build.mjs",
+      "sha256": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "after-1",
+      "path": "evals/runs/control-modality-1/fixture.html",
+      "retained": "evals/runs/control-modality-1/after-1-source/fixture.html",
+      "sha256": "9a957173a4fdf8e39653ea753d1f2ce0b188c64f8944351ef304d29dc5125707",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "after-1",
+      "path": "evals/runs/control-modality-1/browser-check.mjs",
+      "retained": "evals/runs/control-modality-1/after-1-source/browser-check.mjs",
+      "sha256": "b65a77847edbae301940d74b930c73bfaaf1069d6420df2d06e804bb5aa179f9",
+      "matchesRecorded": true,
+      "currentRequired": false
+    },
+    {
+      "campaign": "after-2",
+      "path": "evals/lib/build-capture.mjs",
+      "retained": "evals/runs/control-modality-1/after-2/source/build-capture.mjs",
+      "sha256": "7472bf42a1bfc2a18c7b317e9c1b43274e431737a6ea82f9e66c927a4b39521e",
+      "matchesRecorded": true,
+      "currentRequired": true
+    },
+    {
+      "campaign": "after-2",
+      "path": "evals/lib/source-scope.mjs",
+      "retained": "evals/runs/control-modality-1/after-2/source/source-scope.mjs",
+      "sha256": "63bcdb119b0fd546aa5a27144204eb6deea89167d8b81121dffde8a22865c71b",
+      "matchesRecorded": true,
+      "currentRequired": true
+    },
+    {
+      "campaign": "after-2",
+      "path": "evals/lib/build-check.mjs",
+      "retained": "evals/runs/control-modality-1/after-2/source/build-check.mjs",
+      "sha256": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+      "matchesRecorded": true,
+      "currentRequired": true
+    },
+    {
+      "campaign": "after-2",
+      "path": "evals/check-build.mjs",
+      "retained": "evals/runs/control-modality-1/after-2/source/check-build.mjs",
+      "sha256": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0",
+      "matchesRecorded": true,
+      "currentRequired": true
+    },
+    {
+      "campaign": "after-2",
+      "path": "evals/runs/control-modality-1/fixture.html",
+      "retained": "evals/runs/control-modality-1/after-2/source/fixture.html",
+      "sha256": "6069cde562dc5cccb307f3d7bac7bed9c6efef9cfe52eaeb53a3cd37ae75d8d8",
+      "matchesRecorded": true,
+      "currentRequired": true
+    },
+    {
+      "campaign": "after-2",
+      "path": "evals/runs/control-modality-1/browser-check.mjs",
+      "retained": "evals/runs/control-modality-1/after-2/source/browser-check.mjs",
+      "sha256": "33aa0a3e573b996eaa09e71f8db5cfdd65fa2c90160f32971bffe2dd1e20432a",
+      "matchesRecorded": true,
+      "currentRequired": true
+    }
+  ],
+  "images": [
+    {
+      "path": "evals/runs/control-modality-1/before-1/desktop-good/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/before-1/desktop-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/before-1/desktop-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-good/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/mobile-good/entry.png",
+      "bytes": 32529,
+      "sha256": "7f46d7f5bb41e0ecc2ee5d0bb6d947917635b922a00278128263a742567946bc",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/mobile-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32529,
+      "sha256": "7f46d7f5bb41e0ecc2ee5d0bb6d947917635b922a00278128263a742567946bc",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/mobile-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35814,
+      "sha256": "f5c0eaef0f4fd53146947bade7d19ae63e43f0408ce6552e8795f617f0053ff1",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/mobile-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 27248,
+      "sha256": "b527e3469c40d4a79216b8396fd9bcacb3b928aef7f7249d7764e5bbd43b86be",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/short-good/entry.png",
+      "bytes": 32416,
+      "sha256": "25789b1b6db36ac963eb0fc3425f889172be448d9ee5ef9f5b02fcee405d1bf2",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/short-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32416,
+      "sha256": "25789b1b6db36ac963eb0fc3425f889172be448d9ee5ef9f5b02fcee405d1bf2",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/short-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35799,
+      "sha256": "222763f5d6e604620cd558bb06aac467f8d73db57647e5e0ef5e41c9225703fd",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/short-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 26505,
+      "sha256": "91576da25b6f3892bb1adf7ad981f423fc82c56d22f54d8122baf57849133ed8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/reduced-motion-good/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/reduced-motion-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/reduced-motion-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/reduced-motion-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-webgl-good/entry.png",
+      "bytes": 32731,
+      "sha256": "e4027c86fd834af0def5ffdadf12b1e579b362d4f2da6216ee5a6ab5087fcd62",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-webgl-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32731,
+      "sha256": "e4027c86fd834af0def5ffdadf12b1e579b362d4f2da6216ee5a6ab5087fcd62",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-webgl-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35859,
+      "sha256": "e0d4726de64957a8daaca70ac97230ce5d244da847443e50770baf3fb2be0f74",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-webgl-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 27720,
+      "sha256": "5198604fbfa1d8ef33e08f0db8030c80270a8c7c6fbd16dd4ad924846daeb6e1",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-javascript-good/entry.png",
+      "bytes": 32512,
+      "sha256": "bf6cdb44d73c26ee9b91086c36d4fb668587ebe3ffcddc3e44da5a7d76519599",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-javascript-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32512,
+      "sha256": "bf6cdb44d73c26ee9b91086c36d4fb668587ebe3ffcddc3e44da5a7d76519599",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-javascript-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35793,
+      "sha256": "cb7939cd3f452d6fb9648ed4de8100f0d96df9f44c7bcfee8afbc872c460c3e1",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/no-javascript-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 27248,
+      "sha256": "b527e3469c40d4a79216b8396fd9bcacb3b928aef7f7249d7764e5bbd43b86be",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/context-loss-good/entry.png",
+      "bytes": 33639,
+      "sha256": "2e0b9702e8233d7c74f8696842b73ac369b619d2fa0fa70ba3b42637f2fa67b6",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/context-loss-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33639,
+      "sha256": "2e0b9702e8233d7c74f8696842b73ac369b619d2fa0fa70ba3b42637f2fa67b6",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/context-loss-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36823,
+      "sha256": "d43966d55f36f9264f7037057e1faa50754c62651e4aa906f222b461d52be3dd",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/context-loss-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-ordinary-visible/entry.png",
+      "bytes": 36482,
+      "sha256": "e0941e0bf1ad9abd26dfbaecc2f5d86ab83c0461db50ea3bc1382192c3e4068d",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-ordinary-visible/control-4b845ac9b1e72978-pointer-before.png",
+      "bytes": 36482,
+      "sha256": "e0941e0bf1ad9abd26dfbaecc2f5d86ab83c0461db50ea3bc1382192c3e4068d",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-ordinary-visible/control-4b845ac9b1e72978-pointer-after.png",
+      "bytes": 31735,
+      "sha256": "8e2d1b5ebc8fd344892413684a07b9a99f99b56c4ba13aa441fef48ebc2123a2",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-ordinary-visible/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-ordinary-visible/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 31735,
+      "sha256": "8e2d1b5ebc8fd344892413684a07b9a99f99b56c4ba13aa441fef48ebc2123a2",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/control-7534fcbfa750a94b-keyboard-before.png",
+      "bytes": 35111,
+      "sha256": "f0fc7d0b8769d17dfa6c318b545fec9a22a0e78481a668b89546438ffa2e499b",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/control-7534fcbfa750a94b-keyboard-after.png",
+      "bytes": 35111,
+      "sha256": "f0fc7d0b8769d17dfa6c318b545fec9a22a0e78481a668b89546438ffa2e499b",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-hidden/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-hidden/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/entry.png",
+      "bytes": 37794,
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 37794,
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 37794,
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 33090,
+      "sha256": "6d9e2a3d2638c82400ac4c556900f65af2db84c008ae0711dcb8011bd3c53f3f",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-negative-tab/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-negative-tab/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-blocked-tab/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-blocked-tab/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/control-92e3ba964a2aadb1-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/control-92e3ba964a2aadb1-keyboard-after.png",
+      "bytes": 19358,
+      "sha256": "804f9467bd8c3490beadea1e17f269a92058f81e11a29d6b9ea358c8b2b6260f",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/entry.png",
+      "bytes": 37794,
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 37794,
+      "sha256": "ec44a6ede5d8a30406288e6bfa81a5d44a7cbc7c4c0ff8f43777e64f31b49780",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 33090,
+      "sha256": "6d9e2a3d2638c82400ac4c556900f65af2db84c008ae0711dcb8011bd3c53f3f",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "audit_actor"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-good/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/mobile-good/entry.png",
+      "bytes": 32529,
+      "sha256": "7f46d7f5bb41e0ecc2ee5d0bb6d947917635b922a00278128263a742567946bc",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/mobile-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32529,
+      "sha256": "7f46d7f5bb41e0ecc2ee5d0bb6d947917635b922a00278128263a742567946bc",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/mobile-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35814,
+      "sha256": "f5c0eaef0f4fd53146947bade7d19ae63e43f0408ce6552e8795f617f0053ff1",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/mobile-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 27248,
+      "sha256": "b527e3469c40d4a79216b8396fd9bcacb3b928aef7f7249d7764e5bbd43b86be",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/short-good/entry.png",
+      "bytes": 32416,
+      "sha256": "25789b1b6db36ac963eb0fc3425f889172be448d9ee5ef9f5b02fcee405d1bf2",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/short-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32416,
+      "sha256": "25789b1b6db36ac963eb0fc3425f889172be448d9ee5ef9f5b02fcee405d1bf2",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/short-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35799,
+      "sha256": "222763f5d6e604620cd558bb06aac467f8d73db57647e5e0ef5e41c9225703fd",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/short-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 26505,
+      "sha256": "91576da25b6f3892bb1adf7ad981f423fc82c56d22f54d8122baf57849133ed8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/reduced-motion-good/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/reduced-motion-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/reduced-motion-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/reduced-motion-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-webgl-good/entry.png",
+      "bytes": 32731,
+      "sha256": "e4027c86fd834af0def5ffdadf12b1e579b362d4f2da6216ee5a6ab5087fcd62",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-webgl-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32731,
+      "sha256": "e4027c86fd834af0def5ffdadf12b1e579b362d4f2da6216ee5a6ab5087fcd62",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-webgl-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35859,
+      "sha256": "e0d4726de64957a8daaca70ac97230ce5d244da847443e50770baf3fb2be0f74",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-webgl-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 27720,
+      "sha256": "5198604fbfa1d8ef33e08f0db8030c80270a8c7c6fbd16dd4ad924846daeb6e1",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-javascript-good/entry.png",
+      "bytes": 32512,
+      "sha256": "bf6cdb44d73c26ee9b91086c36d4fb668587ebe3ffcddc3e44da5a7d76519599",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-javascript-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 32512,
+      "sha256": "bf6cdb44d73c26ee9b91086c36d4fb668587ebe3ffcddc3e44da5a7d76519599",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-javascript-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 35793,
+      "sha256": "cb7939cd3f452d6fb9648ed4de8100f0d96df9f44c7bcfee8afbc872c460c3e1",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-javascript-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 27248,
+      "sha256": "b527e3469c40d4a79216b8396fd9bcacb3b928aef7f7249d7764e5bbd43b86be",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/context-loss-good/entry.png",
+      "bytes": 33639,
+      "sha256": "2e0b9702e8233d7c74f8696842b73ac369b619d2fa0fa70ba3b42637f2fa67b6",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/context-loss-good/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33639,
+      "sha256": "2e0b9702e8233d7c74f8696842b73ac369b619d2fa0fa70ba3b42637f2fa67b6",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/context-loss-good/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36823,
+      "sha256": "d43966d55f36f9264f7037057e1faa50754c62651e4aa906f222b461d52be3dd",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/context-loss-good/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-hidden-target/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-hidden-target/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-hidden-target/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-hidden-target/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 5855,
+      "sha256": "a16644eb10c0011506d0988fda779f01f653a0e9f4f016ab7f27e1f486558ead",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-offscreen-target/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-offscreen-target/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-offscreen-target/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-offscreen-target/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-duplicate-target/entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-duplicate-target/control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-duplicate-target/control-4b845ac9b1e72978-keyboard-before.png",
+      "bytes": 36532,
+      "sha256": "35ebb762adaa5b3d8087c51bc1da2c5001c9770bb592c0e8c785ae267d6d0cd9",
+      "reviewer": "acceptance"
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-duplicate-target/control-4b845ac9b1e72978-keyboard-after.png",
+      "bytes": 28259,
+      "sha256": "33524ed7e72bda641fb77eae23d036445d4073fa6af1818b101eeb3836451797",
+      "reviewer": "acceptance"
+    }
+  ],
+  "replays": [
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-ordinary-visible/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-undeclared/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-offscreen-button/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-7534fcbfa750a94b/pointer: control was not reached and activated",
+        "control-7534fcbfa750a94b/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"skip\" aria-pressed=\"false\" onclick=\"this.setAttribute('aria-pressed',this.getAttribute('aria-pressed')!=='true')\">Skip to answer</button>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-7534fcbfa750a94b/pointer: missing original control images",
+        "control-7534fcbfa750a94b/pointer: no observable control response (requires review, not a functional pass)"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-hidden/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: control cannot be reached by Tab",
+        "control-4b845ac9b1e72978/keyboard: missing original control images",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-occluded/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-negative-tab/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: control cannot be reached by Tab",
+        "control-4b845ac9b1e72978/keyboard: missing original control images",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-disabled/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: invalid focus-only pointer applicability evidence",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-blocked-tab/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+        "control-4b845ac9b1e72978/keyboard: control cannot be reached by Tab",
+        "control-4b845ac9b1e72978/keyboard: missing original control images",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-missing-target/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: missing declared control target",
+        "control-4b845ac9b1e72978/keyboard: declared control targets did not respond",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-wrong-destination/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-92e3ba964a2aadb1/pointer: control was not reached and activated",
+        "control-92e3ba964a2aadb1/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#wrong\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-92e3ba964a2aadb1/pointer: missing original control images",
+        "control-92e3ba964a2aadb1/pointer: no observable control response (requires review, not a functional pass)",
+        "declaration does not match inventory"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-covered-ordinary/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div id=\"cover\">Deliberate control occlusion</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: control was not reached and activated"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-forged-metadata/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\" class=\"story-skip\" data-keyboard-only=\"true\" data-applicability=\"not-applicable\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-1/desktop-mismatched-declaration/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/pointer: control was not reached and activated",
+        "control-4b845ac9b1e72978/pointer: locator.hover: Timeout 500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#skip')\u001b[22m\n\u001b[2m    - locator resolved to <a id=\"skip\" href=\"#answer\">Skip to answer</a>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and stable\u001b[22m\n\u001b[2m    - element is visible and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying hover action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+        "control-4b845ac9b1e72978/pointer: missing original control images",
+        "control-4b845ac9b1e72978/pointer: no observable control response (requires review, not a functional pass)",
+        "declaration does not match inventory"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-good/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/mobile-good/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/short-good/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/reduced-motion-good/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-webgl-good/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/no-javascript-good/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/context-loss-good/report.json",
+      "expectedFailure": false,
+      "problems": [],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-hidden-target/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: declared control targets did not respond",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-offscreen-target/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: declared control targets did not respond",
+        "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    },
+    {
+      "path": "evals/runs/control-modality-1/after-2/desktop-duplicate-target/report.json",
+      "expectedFailure": true,
+      "problems": [
+        "control-4b845ac9b1e72978/keyboard: missing declared control target",
+        "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+      ],
+      "expectedOutcome": true
+    }
+  ],
+  "review": {
+    "originals": 112,
+    "main": 76,
+    "independent": 36,
+    "exactCoverage": true,
+    "duplicatePaths": false,
+    "inventorySha256": {
+      "main": "4cd9ce4e12c7983b83333a5438909e684e928cc92d7bfaaff7078b7d7d7f7d47",
+      "independent": "49172f0eb3d2a6945d8bdf7c537088b82935b0a344e44b2dd30da15518c8bbf6"
+    }
+  },
+  "targetVisibilityRegression": {
+    "beforeProblems": [],
+    "currentProblems": [
+      "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+    ],
+    "rejectedNow": true,
+    "beforeArtifactSha256": "2c36a9594814dc8122947ec8cc492b8f4e6471cff0be1e38ef82da9a514e0171"
+  },
+  "summary": {
+    "caseExecutions": 31,
+    "originalImages": 112,
+    "finalPositiveConditions": 7,
+    "ordinaryPositive": 1,
+    "negativeVariants": 15,
+    "expectedFailuresPreserved": true,
+    "finalSourceMatches": true,
+    "baselineReclassified": false,
+    "fullPrototypeAcceptance": false
+  }
+}

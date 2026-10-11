@@ -1,0 +1,141 @@
+{
+  "name": "desktop-negative-tab",
+  "entry": {
+    "id": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "variant": "negative-tab",
+  "declarations": [
+    {
+      "selector": "#skip",
+      "name": "Skip to answer",
+      "href": "#answer",
+      "reason": "Coordinator-reviewed bypass link intentionally revealed by keyboard focus"
+    }
+  ],
+  "images": [
+    {
+      "file": "entry.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8"
+    },
+    {
+      "file": "control-4b845ac9b1e72978-pointer-unfocused.png",
+      "bytes": 33326,
+      "sha256": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8"
+    }
+  ],
+  "controls": [
+    {
+      "index": 0,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#answer",
+      "targetIds": null,
+      "beat": null,
+      "selector": "#skip",
+      "name": "Skip to answer",
+      "visible": true,
+      "disabled": false,
+      "key": "control-4b845ac9b1e72978",
+      "trials": [
+        {
+          "method": "pointer",
+          "activated": false,
+          "reached": false,
+          "hitTarget": false,
+          "targets": [],
+          "reset": "fresh document with the same browser condition",
+          "unfocused": {
+            "html": "<a id=\"skip\" href=\"#answer\" tabindex=\"-1\">Skip to answer</a>",
+            "location": "http://127.0.0.1:45705/?variant=negative-tab",
+            "scroll": 0,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "answer",
+                "exists": true,
+                "html": "<main id=\"answer\" tabindex=\"-1\"><h2>The answer target</h2><p>Reaching this existing target must follow actual sequential Tab and Enter, with a visible focused link and original screenshots.</p></main>",
+                "containsCanvas": false,
+                "inView": false
+              }
+            ],
+            "geometry": {
+              "x": 12,
+              "y": -88,
+              "width": 179.5625,
+              "height": 50
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "intersectsViewport": false,
+            "focused": false,
+            "disabled": false,
+            "hitTarget": false
+          },
+          "unfocusedImage": "373ed9ef3a41312668ea76be2040119421a78f148f0e86b6066da0f61087cab8",
+          "applicability": "not-applicable",
+          "declaration": {
+            "selector": "#skip",
+            "name": "Skip to answer",
+            "href": "#answer",
+            "reason": "Coordinator-reviewed bypass link intentionally revealed by keyboard focus"
+          }
+        },
+        {
+          "method": "keyboard",
+          "activated": false,
+          "reached": false,
+          "hitTarget": false,
+          "targets": [],
+          "reset": "fresh document with the same browser condition",
+          "applicability": "applicable",
+          "error": "control cannot be reached by Tab"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "started": "2026-10-11T22:09:42.725Z",
+  "controlInventory": [
+    {
+      "index": 0,
+      "tag": "a",
+      "type": null,
+      "role": null,
+      "href": "#answer",
+      "targetIds": null,
+      "beat": null,
+      "selector": "#skip",
+      "name": "Skip to answer",
+      "visible": true,
+      "disabled": false,
+      "key": "control-4b845ac9b1e72978"
+    }
+  ],
+  "problems": [
+    "control-4b845ac9b1e72978/keyboard: control was not reached and activated",
+    "control-4b845ac9b1e72978/keyboard: control cannot be reached by Tab",
+    "control-4b845ac9b1e72978/keyboard: missing original control images",
+    "control-4b845ac9b1e72978/keyboard: no observable control response (requires review, not a functional pass)",
+    "control-4b845ac9b1e72978/keyboard: missing visible sequential keyboard focus geometry",
+    "control-4b845ac9b1e72978/keyboard: missing actual declared skip target response"
+  ],
+  "scene": "on",
+  "finished": "2026-10-11T22:09:48.194Z",
+  "expectFailure": true,
+  "regressionPassed": true
+}

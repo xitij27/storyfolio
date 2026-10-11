@@ -76,6 +76,17 @@ weak bench relationship and overlapping transition labels. The
 [post-baseline plan](superpowers/plans/2026-10-11-post-baseline-attribution.md)
 keeps measurement repair and visual improvement distinct.
 
+On 12 October the author [directed completion of Stage 3 first](history/2026-10-12-stage-3-development.md).
+The [completion work record](superpowers/plans/2026-10-12-stage-3-completion.md)
+keeps the product milestones in view: supported build entry, missing journey
+and choice coverage, planning regression and the approved full-site proof.
+Local measurement corrections and a neutral new comparison fixture are
+implemented. The [verified checkpoint](../evals/runs/stage-3-integration-1/findings.md)
+records 342 passing tests, seven valid browser conditions, 15 rejected
+faulty variants and a real-browser helper smoke. The shipped skill is still
+planning-only, with two evidence-backed visual paragraphs drafted but not
+applied. The separately bounded paid comparison awaits an answer.
+
 For a new session, read:
 
 1. [Repository rules](../AGENTS.md), then [current handover](handover.md).

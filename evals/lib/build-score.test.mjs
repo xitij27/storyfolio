@@ -345,7 +345,7 @@ test("acceptance reports stay separate and their frozen implementation and artif
   const report = '{"passed":false,"problems":["Missing beat"]}\n';
   await writeNew(join(testCase.out, "acceptance/desktop/report.json"), report);
   const manifest = { schemaVersion: 1, fixture: "fixture", workspace: testCase.work, expected, frozen: {
-    "checker": testCase.prepared.manifest.hashes["implementation/evals/check-build.mjs"], "helper": testCase.prepared.manifest.hashes["implementation/evals/lib/build-check.mjs"], "capture": testCase.prepared.manifest.hashes["implementation/evals/lib/build-capture.mjs"], "expected": testCase.prepared.manifest.hashes["expectations.json"],
+    "checker": testCase.prepared.manifest.hashes["implementation/evals/check-build.mjs"], "helper": testCase.prepared.manifest.hashes["implementation/evals/lib/build-check.mjs"], "capture": testCase.prepared.manifest.hashes["implementation/evals/lib/build-capture.mjs"], "sourceScope": testCase.prepared.manifest.hashes["implementation/evals/lib/source-scope.mjs"], "expected": testCase.prepared.manifest.hashes["expectations.json"],
   }, complete: true, passed: false, artifacts: { "desktop/report.json": hash(report) }, results: [{ id: "desktop", passed: false, report: "desktop/report.json" }] };
   await writeNew(join(testCase.out, path), json(manifest));
   const packet = await prepareBuildJudge({ ...testCase, acceptance: path });
@@ -368,6 +368,7 @@ test("prototype acceptance must bind the independent capture helper as well as t
     checker: testCase.prepared.manifest.hashes["implementation/evals/check-build.mjs"],
     library: testCase.prepared.manifest.hashes["implementation/evals/lib/build-check.mjs"],
     capture: testCase.prepared.manifest.hashes["implementation/evals/lib/build-capture.mjs"],
+    sourceScope: testCase.prepared.manifest.hashes["implementation/evals/lib/source-scope.mjs"],
     expectations: testCase.prepared.manifest.hashes["expectations.json"],
   }, artifacts: { "desktop/report.json": hash(report), "build.log": hash(commandLog), "desktop/rendered.html": hash("<h1>Complete saved HTML evidence</h1>") }, results: [{ report: "desktop/report.json", passed: false }], complete: true, passed: false };
   const acceptance = "acceptance/manifest.json";
@@ -408,6 +409,10 @@ test("prototype acceptance must bind the independent capture helper as well as t
   await writeFile(join(testCase.out, acceptance), json({ ...manifest, artifacts: { ...manifest.artifacts, "desktop/report.json": hash(wrongMode) } }));
   await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance source digest differs in mode report/);
   await writeFile(join(testCase.out, "acceptance/desktop/report.json"), report);
+  const missingSourceScope = structuredClone(manifest);
+  delete missingSourceScope.frozen.sourceScope;
+  await writeFile(join(testCase.out, acceptance), json(missingSourceScope));
+  await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance checker differs.*source-scope/);
   delete manifest.frozen.capture;
   await writeFile(join(testCase.out, acceptance), json(manifest));
   await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance checker differs.*build-capture/);
