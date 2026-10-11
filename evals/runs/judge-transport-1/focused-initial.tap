@@ -1,0 +1,413 @@
+TAP version 13
+# Subtest: build judgement requires every criterion, valid status and real artifact excerpts
+ok 1 - build judgement requires every criterion, valid status and real artifact excerpts
+  ---
+  duration_ms: 4.772298
+  type: 'test'
+  ...
+# Subtest: unvisited stops and unavailable source verification cannot silently pass or fail
+ok 2 - unvisited stops and unavailable source verification cannot silently pass or fail
+  ---
+  duration_ms: 2.284651
+  type: 'test'
+  ...
+# Subtest: continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+ok 3 - continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+  ---
+  duration_ms: 6.591795
+  type: 'test'
+  ...
+# Subtest: prototype eligibility separates implementation and build-start checks from journey gates
+ok 4 - prototype eligibility separates implementation and build-start checks from journey gates
+  ---
+  duration_ms: 2.71884
+  type: 'test'
+  ...
+# Subtest: judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+ok 5 - judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+  ---
+  duration_ms: 0.653185
+  type: 'test'
+  ...
+# Subtest: judge prompt accepts the exact character boundary and rejects one more ASCII character
+ok 6 - judge prompt accepts the exact character boundary and rejects one more ASCII character
+  ---
+  duration_ms: 3.911317
+  type: 'test'
+  ...
+# Subtest: judge prompt byte boundary remains independent of its character boundary
+ok 7 - judge prompt byte boundary remains independent of its character boundary
+  ---
+  duration_ms: 6.75586
+  type: 'test'
+  ...
+# Subtest: judge prompt character guard cannot be bypassed by a raised byte allowance
+ok 8 - judge prompt character guard cannot be bypassed by a raised byte allowance
+  ---
+  duration_ms: 2.411768
+  type: 'test'
+  ...
+# Subtest: judge prompt explicitly uses conservative UTF-16 units for astral characters
+ok 9 - judge prompt explicitly uses conservative UTF-16 units for astral characters
+  ---
+  duration_ms: 73.15239
+  type: 'test'
+  ...
+# Subtest: saved build judging binds hashes and includes full fixture, commands and changed text only
+ok 10 - saved build judging binds hashes and includes full fixture, commands and changed text only
+  ---
+  duration_ms: 475.924116
+  type: 'test'
+  ...
+# Subtest: fresh continuation packets preserve inherited source and map two attempted stops, including failure
+ok 11 - fresh continuation packets preserve inherited source and map two attempted stops, including failure
+  ---
+  duration_ms: 651.203811
+  type: 'test'
+  ...
+# Subtest: a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+ok 12 - a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+  ---
+  duration_ms: 370.164747
+  type: 'test'
+  ...
+# Subtest: failed actor turns remain judgeable without claiming later stops were visited
+ok 13 - failed actor turns remain judgeable without claiming later stops were visited
+  ---
+  duration_ms: 290.732572
+  type: 'test'
+  ...
+# Subtest: a failed prototype attempt has a complete judgeable packet without claiming any journey gate
+ok 14 - a failed prototype attempt has a complete judgeable packet without claiming any journey gate
+  ---
+  duration_ms: 404.296074
+  type: 'test'
+  ...
+# Subtest: prototype judging rejects frozen task identity drift in run, result and started records
+ok 15 - prototype judging rejects frozen task identity drift in run, result and started records
+  ---
+  duration_ms: 685.507981
+  type: 'test'
+  ...
+# Subtest: prototype judging blocks missing source evidence even when capture failure is disclosed
+ok 16 - prototype judging blocks missing source evidence even when capture failure is disclosed
+  ---
+  duration_ms: 241.361249
+  type: 'test'
+  ...
+# Subtest: current judge implementation drift prevents a call against frozen actor inputs
+ok 17 - current judge implementation drift prevents a call against frozen actor inputs
+  ---
+  duration_ms: 206.127651
+  type: 'test'
+  ...
+# Subtest: acceptance reports stay separate and their frozen implementation and artifacts are verified
+ok 18 - acceptance reports stay separate and their frozen implementation and artifacts are verified
+  ---
+  duration_ms: 367.075179
+  type: 'test'
+  ...
+# Subtest: prototype acceptance must bind the independent capture helper as well as the checker
+ok 19 - prototype acceptance must bind the independent capture helper as well as the checker
+  ---
+  duration_ms: 1188.617941
+  type: 'test'
+  ...
+# Subtest: one mocked judge call preserves every result and refuses all retries
+ok 20 - one mocked judge call preserves every result and refuses all retries
+  ---
+  duration_ms: 406.209363
+  type: 'test'
+  ...
+# Subtest: invalid judge JSON is preserved as a failed attempt without retry
+ok 21 - invalid judge JSON is preserved as a failed attempt without retry
+  ---
+  duration_ms: 341.306472
+  type: 'test'
+  ...
+# Subtest: evidence drift after dry preparation stops before a judge directory or model call
+ok 22 - evidence drift after dry preparation stops before a judge directory or model call
+  ---
+  duration_ms: 317.78073
+  type: 'test'
+  ...
+# Subtest: judge invocation uses the shared isolated helper with no model override, shell or resume
+ok 23 - judge invocation uses the shared isolated helper with no model override, shell or resume
+  ---
+  duration_ms: 5.193552
+  type: 'test'
+  ...
+# Subtest: judge deadline forcibly terminates a local process that ignores SIGTERM
+ok 24 - judge deadline forcibly terminates a local process that ignores SIGTERM
+  ---
+  duration_ms: 610.129558
+  type: 'test'
+  ...
+# Subtest: full prompt assembly preserves literal placeholder text without recursively replacing evidence
+ok 25 - full prompt assembly preserves literal placeholder text without recursively replacing evidence
+  ---
+  duration_ms: 0.143207
+  type: 'test'
+  ...
+# Subtest: a frozen paged case preserves a complete prompt too large for inline, including selected stream hashes
+ok 26 - a frozen paged case preserves a complete prompt too large for inline, including selected stream hashes
+  ---
+  duration_ms: 514.597096
+  type: 'test'
+  ...
+# Subtest: paged invocation accepts only full delivery, preserves evidence and never retries
+ok 27 - paged invocation accepts only full delivery, preserves evidence and never retries
+  ---
+  duration_ms: 392.315953
+  type: 'test'
+  ...
+# Subtest: a partial paged delivery cannot become a score even if final JSON is valid
+ok 28 - a partial paged delivery cannot become a score even if final JSON is valid
+  ---
+  duration_ms: 346.029008
+  type: 'test'
+  ...
+# Subtest: complete paged delivery does not weaken original citation validation
+ok 29 - complete paged delivery does not weaken original citation validation
+  ---
+  duration_ms: 359.415066
+  type: 'test'
+  ...
+# Subtest: paged bundle or transport drift is rejected before spending a judge attempt
+ok 30 - paged bundle or transport drift is rejected before spending a judge attempt
+  ---
+  duration_ms: 308.626015
+  type: 'test'
+  ...
+# Subtest: paged CLI configuration enables only the bounded accessor and preserves judge isolation
+ok 31 - paged CLI configuration enables only the bounded accessor and preserves judge isolation
+  ---
+  duration_ms: 3.006693
+  type: 'test'
+  ...
+# Subtest: build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+ok 32 - build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+  ---
+  duration_ms: 125.135962
+  type: 'test'
+  ...
+# Subtest: declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+ok 33 - declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+  ---
+  duration_ms: 87.413034
+  type: 'test'
+  ...
+# Subtest: case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+ok 34 - case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+  ---
+  duration_ms: 11.132975
+  type: 'test'
+  ...
+# Subtest: prototype-depth is a versioned one-turn task, never an alias for a journey stop
+ok 35 - prototype-depth is a versioned one-turn task, never an alias for a journey stop
+  ---
+  duration_ms: 13.903078
+  type: 'test'
+  ...
+# Subtest: prototype task identity is frozen and failed single attempts cannot overwrite or advance
+ok 36 - prototype task identity is frozen and failed single attempts cannot overwrite or advance
+  ---
+  duration_ms: 261.934599
+  type: 'test'
+  ...
+# Subtest: current source or frozen input drift cannot silently reuse a build cohort
+ok 37 - current source or frozen input drift cannot silently reuse a build cohort
+  ---
+  duration_ms: 198.925129
+  type: 'test'
+  ...
+# Subtest: fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+ok 38 - fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+  ---
+  duration_ms: 49.940351
+  type: 'test'
+  ...
+# Subtest: fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+ok 39 - fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+  ---
+  duration_ms: 63.519258
+  type: 'test'
+  ...
+# Subtest: snapshots preserve binary source, deletion and symlink records while excluding generated trees
+ok 40 - snapshots preserve binary source, deletion and symlink records while excluding generated trees
+  ---
+  duration_ms: 25.724233
+  type: 'test'
+  ...
+# Subtest: snapshot bounds fail before oversized source is copied
+ok 41 - snapshot bounds fail before oversized source is copied
+  ---
+  duration_ms: 15.471377
+  type: 'test'
+  ...
+# Subtest: turn planning requires observed gates and enforces turn, wall and soft token bounds
+ok 42 - turn planning requires observed gates and enforces turn, wall and soft token bounds
+  ---
+  duration_ms: 11.758438
+  type: 'test'
+  ...
+# Subtest: uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+ok 43 - uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+  ---
+  duration_ms: 11.782753
+  type: 'test'
+  ...
+# Subtest: uncached and wall accounting aggregate every actor turn without double-counting output
+ok 44 - uncached and wall accounting aggregate every actor turn without double-counting output
+  ---
+  duration_ms: 11.254352
+  type: 'test'
+  ...
+# Subtest: uncached bound fails closed on missing or unreliable cached accounting
+ok 45 - uncached bound fails closed on missing or unreliable cached accounting
+  ---
+  duration_ms: 14.94113
+  type: 'test'
+  ...
+# Subtest: aggregate accounting rejects safe individual counters whose sum is unsafe
+ok 46 - aggregate accounting rejects safe individual counters whose sum is unsafe
+  ---
+  duration_ms: 12.203917
+  type: 'test'
+  ...
+# Subtest: build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+ok 47 - build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+  ---
+  duration_ms: 0.919251
+  type: 'test'
+  ...
+# Subtest: actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+ok 48 - actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+  ---
+  duration_ms: 32.750096
+  type: 'test'
+  ...
+# Subtest: CLI config serialization emits restricted TOML tables and rejects unsupported values
+ok 49 - CLI config serialization emits restricted TOML tables and rejects unsupported values
+  ---
+  duration_ms: 0.761908
+  type: 'test'
+  ...
+# Subtest: the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+ok 50 - the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+  ---
+  duration_ms: 1.534806
+  type: 'test'
+  ...
+# Subtest: one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+ok 51 - one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+  ---
+  duration_ms: 386.431574
+  type: 'test'
+  ...
+# Subtest: failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+ok 52 - failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+  ---
+  duration_ms: 184.662773
+  type: 'test'
+  ...
+# Subtest: actor timeout kills its process group including a descendant that ignores SIGTERM
+ok 53 - actor timeout kills its process group including a descendant that ignores SIGTERM
+  ---
+  duration_ms: 630.023964
+  type: 'test'
+  ...
+# Descendant cleanup observed after 12ms; final state: gone
+# Subtest: parent interruption terminates the actor and preserves partial output without retaining signal listeners
+ok 54 - parent interruption terminates the actor and preserves partial output without retaining signal listeners
+  ---
+  duration_ms: 80.898383
+  type: 'test'
+  ...
+# Subtest: paged v1 restores every prompt byte without normalizing whitespace or duplicate bodies
+ok 55 - paged v1 restores every prompt byte without normalizing whitespace or duplicate bodies
+  ---
+  duration_ms: 2.928178
+  type: 'test'
+  ...
+# Subtest: empty prompt has one explicit empty page and complete coverage requires reading it
+ok 56 - empty prompt has one explicit empty page and complete coverage requires reading it
+  ---
+  duration_ms: 1.519347
+  type: 'test'
+  ...
+# Subtest: document inventory keeps original and selected text hashes distinct and retains duplicate bodies by path
+ok 57 - document inventory keeps original and selected text hashes distinct and retains duplicate bodies by path
+  ---
+  duration_ms: 1.231031
+  type: 'test'
+  ...
+# Subtest: UTF-8 page boundaries preserve astral, combining and multibyte text exactly
+ok 58 - UTF-8 page boundaries preserve astral, combining and multibyte text exactly
+  ---
+  duration_ms: 11.129698
+  type: 'test'
+  ...
+# Subtest: a long single line is split, never omitted or summarized
+ok 59 - a long single line is split, never omitted or summarized
+  ---
+  duration_ms: 5.044787
+  type: 'test'
+  ...
+# Subtest: full serialized MCP responses fit the byte cap even for maximally escaped text
+ok 60 - full serialized MCP responses fit the byte cap even for maximally escaped text
+  ---
+  duration_ms: 69.789593
+  type: 'test'
+  ...
+# Subtest: prompt byte and page-count bounds reject instead of truncating
+ok 61 - prompt byte and page-count bounds reject instead of truncating
+  ---
+  duration_ms: 916.577687
+  type: 'test'
+  ...
+# Subtest: lone UTF-16 surrogates are rejected instead of replaced with different UTF-8 bytes
+ok 62 - lone UTF-16 surrogates are rejected instead of replaced with different UTF-8 bytes
+  ---
+  duration_ms: 0.508236
+  type: 'test'
+  ...
+# Subtest: strict verification rejects missing, reordered, duplicate, malformed and tampered bundle data
+ok 63 - strict verification rejects missing, reordered, duplicate, malformed and tampered bundle data
+  ---
+  duration_ms: 5.580555
+  type: 'test'
+  ...
+# Subtest: even rehashed noncanonical page boundaries cannot masquerade as paged v1
+ok 64 - even rehashed noncanonical page boundaries cannot masquerade as paged v1
+  ---
+  duration_ms: 2.181409
+  type: 'test'
+  ...
+# Subtest: invalid original/selected document descriptors and selection metadata fail closed
+ok 65 - invalid original/selected document descriptors and selection metadata fail closed
+  ---
+  duration_ms: 0.537329
+  type: 'test'
+  ...
+# Subtest: coverage accepts repeated and out-of-order exact reads but counts each page once
+ok 66 - coverage accepts repeated and out-of-order exact reads but counts each page once
+  ---
+  duration_ms: 5.907121
+  type: 'test'
+  ...
+# Subtest: coverage rejects incomplete, malformed, forged and partially written receipts
+ok 67 - coverage rejects incomplete, malformed, forged and partially written receipts
+  ---
+  duration_ms: 16.346415
+  type: 'test'
+  ...
+1..67
+# tests 67
+# suites 0
+# pass 67
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8675.171718

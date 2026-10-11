@@ -1,7 +1,7 @@
 # Bench-depth prototype fixture
 
 This new fictional derivative tests realization of five approved story
-meanings with the unchanged Storyfolio skill and engine. It is a
+meanings with the unchanged Storyfolio skill and a fixed common engine. It is a
 `prototype-depth` diagnostic, not a request for stop 4, 5 or 6 and not
 proof of the full six-stop journey. The author authorized local preparation
 only. No paid actor/judge call, skill change or push is authorized by this
@@ -50,8 +50,13 @@ does not test concept discovery. An opening refusal of optional-skill
 installation does not test a later recommendation-then-refusal branch.
 No source packet verifies any optional skill's source or install command.
 
-The text judge sees complete text/source/tool evidence when transport
-permits, not screenshot pixels. Technical acceptance, behavioral judgment,
+The case explicitly selects `judgeTransport: "paged-v1"`, to be frozen
+before a future actor. It serves the exact full logical prompt through a
+bounded read-only page accessor, with complete delivery required before
+accepting a score. It does not truncate evidence or reopen old attempts.
+Local transport proof is not a live model/comprehension or context-capacity
+test. The text judge receives text/source/tool evidence, not screenshot
+pixels. Technical acceptance, behavioral judgment,
 original-image review and actual author approval remain separate. The
 author's acceptance of a previous manual prototype approves no new output.
 
@@ -65,6 +70,6 @@ run. It never refreshes a manifest or changes historical artifacts.
 
 The runner's no-model `--dry` and `--prepare` paths follow successful
 integration checks and a committed final input freeze. They do not
-authorize `--turn 1`. Final engine-risk and judge-transport disposition,
-exact environment proof and a specific paid-run decision are prerequisites
-to launch. Follow the saved preparation evidence for current blockers.
+authorize `--turn 1`. The engine and transport corrections have local proof;
+final common input freeze, exact environment proof and a specific paid-run
+decision remain prerequisites to launch. The reserved cohort is not prepared.

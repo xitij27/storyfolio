@@ -262,13 +262,32 @@ retry. Its text evidence excludes image pixels, so save screenshot review
 separately. Keep automatic findings, judge verdicts and coordinator review
 distinct. A complete model turn does not mean a completed build stage.
 
-Preparation now enforces both the default two-MiB UTF-8 byte allowance and
+Default inline preparation enforces both the two-MiB UTF-8 byte allowance and
 the observed CLI maximum of 1,048,576 characters. The character guard uses
 JavaScript UTF-16 code units, conservatively counting an astral character
 as two. Raising a byte allowance cannot bypass this independent guard.
 The [completion packet diagnosis](runs/codex-build-completion-1/embedded-completion-1/baseline-1/audits/judge-packet-size.md)
 records the real rejection and why minification is insufficient. Keep full
 evidence; do not silently truncate it or retry an exhausted attempt.
+
+New cases may explicitly freeze `judgeTransport: "paged-v1"` before the
+actor. The [transport study](runs/judge-transport-1/findings.md) documents
+lossless paging of the exact full logical prompt through one local read-only
+MCP tool. The initial entry prompt retains the inline guards. Full evidence
+is bounded at 8 MiB and 512 pages; page text targets 32 KiB with each complete
+wire response at most 64 KiB. All pages need matching served-response
+receipts before the original citation/schema checks can accept a score.
+`--dry` constructs and validates the complete bundle without starting its
+accessor or a model. There is no automatic inline-to-paged fallback or
+runtime transport override. Keep transport, helper code and bounds frozen
+across a matched comparison. Existing attempts remain immutable.
+
+The one fresh judge turn and ten-minute deadline remain. MCP tool iterations
+may add inference requests and token usage within that turn. Served pages
+are not proof of semantic reading, retained model history or context fit.
+Local protocol/configuration tests do not claim an actual model can score
+the largest packet; incomplete delivery or context failure yields no score
+and no retry. No new paid allowance follows from the transport repair.
 
 Current checker and judge corrections are documented in the
 [non-model calibration](builds/checker-calibration-1/findings.md). Original
@@ -296,8 +315,10 @@ Only a read-only input inspection is currently appropriate for this case:
 node evals/codex-build-run.mjs --case evals/builds/bench-depth-1/case.json --cohort codex-bench-depth-baseline-1 --capabilities evals/builds/local-capabilities.json --dry
 ```
 
-The paid envelope is not approved, and final `--prepare` is deferred pending
-shared-engine and evidence-transport decisions. The reserved cohort is not
+The paid envelope is not approved. Shared-controls and paged transport now
+have separate local engineering proof; the case opts into paged delivery.
+Final `--prepare`, common input freeze and the exact workspace capability
+proof remain a separate next step. The reserved cohort is not
 a ready workspace. No `--turn` or paid judge invocation follows from this
 preparation authorization.
 

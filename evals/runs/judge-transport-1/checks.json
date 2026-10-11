@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "startingRevision": "3e23cc9",
+  "scope": "Local-only transport correction; no paid actor/judge, old retry, reserved cohort freeze or push",
+  "requiredChecks": [
+    {
+      "command": "PATH=/tmp/storyfolio-node-check-20261011/node_modules/.bin:$PATH npm test",
+      "exitCode": 0,
+      "tests": 305,
+      "suites": 31,
+      "passed": 305,
+      "failed": 0,
+      "log": "repository-tests.tap",
+      "note": "Existing native-TypeScript Node 22.22.1; approved execution required for subprocess tests."
+    },
+    {
+      "command": "node evals/check-skill.mjs",
+      "exitCode": 0,
+      "output": "ok: SKILL.md is 687 words, with 4 references"
+    },
+    {
+      "command": "node evals/check-people.mjs",
+      "exitCode": 0,
+      "output": "ok: 17 people"
+    },
+    {
+      "command": "node evals/builds/bench-depth-1/verify-fixture.mjs",
+      "exitCode": 0,
+      "output": "Fixture verified: schema-2 prototype-depth; paged-v1 judge transport; 7 allowlisted starting files; 4 retained source hashes; 2 unchanged illustrative SVGs; 5 neutral beat IDs; verbatim actor prompt. Draft inputs only, no application, paid run or launch readiness verified."
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "preservation": {
+    "priorHandover": {
+      "archive": "docs/history/2026-10-11-before-judge-transport-handover.md",
+      "source": "3e23cc9:docs/handover.md",
+      "archiveGitBlob": "2e7a0d18dea53432130193d7ee14b19b4e9a1f0f",
+      "sourceGitBlob": "2e7a0d18dea53432130193d7ee14b19b4e9a1f0f",
+      "equal": true
+    },
+    "noTrackedDiffFromStartingRevision": [
+      "skills",
+      "prototypes",
+      "evals/engine",
+      "evals/runs",
+      "evals/builds/bench-depth-1/workspace",
+      "evals/builds/bench-depth-1/turn1.md",
+      "evals/builds/bench-depth-1/criteria.md",
+      "evals/builds/bench-depth-1/expectations.json",
+      "evals/builds/bench-depth-1/workspace-inventory.json",
+      "evals/builds/bench-depth-1/source-manifest.json"
+    ],
+    "note": "Checked before staging the new transport study; old tracked evaluation trees remain unchanged. Only the new study is added under evals/runs.",
+    "reservedCohort": {
+      "path": "evals/runs/codex-bench-depth-baseline-1",
+      "exists": false
+    }
+  },
+  "finalDocumentationReview": {
+    "reviewer": "Independent transport reviewer",
+    "currentMarkdownFiles": 13,
+    "relativeLocalFileLinks": 528,
+    "missingTargets": 0,
+    "newDocumentationBasisAnchorVerified": true,
+    "excluded": "Verbatim archived handover retains its historical relative links.",
+    "correction": "Protocol now states that input freeze precedes either arm; launch requires local capability proof and a paid-run decision. It no longer places freeze after paid approval.",
+    "method": "Pure filesystem reads over an explicit 13-file list. Initial subprocess enumeration hit sandbox EPERM; an escalated retry saw an empty unstaged diff after staging, so the explicit list supplied the final check.",
+    "remainingStatusOrAuthorizationIssues": 0,
+    "fixtureVerifierAfterCorrection": "Passed",
+    "stagedWhitespaceCheck": "Passed",
+    "newAuthoredEmDashScan": "No matches"
+  },
+  "modelCalls": 0,
+  "pushes": 0
+}

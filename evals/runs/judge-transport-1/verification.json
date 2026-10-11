@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-transport-evidence-verification",
+  "node": "v22.22.1",
+  "results": {
+    "historicalPromptsUnchanged": true,
+    "exactFullPromptReconstruction": true,
+    "sourceHashesMatch": true,
+    "deliveryLedgersMatch": true,
+    "repositoryTests": {
+      "tests": 305,
+      "suites": 31,
+      "passed": 305,
+      "failed": 0
+    },
+    "actualAccessorTerminated": true,
+    "cliBinaryAndConfigurationProofMatch": true
+  },
+  "sourceHashes": {
+    "evals/codex-build-judge.mjs": "e662700e71bc327940a027f7fe7c99934f25a350f0fb2804249c894f2ff60310",
+    "evals/lib/build-score.mjs": "672cef34b15fcc2f595299fa5f5bd9f37093dad4e0fbe9105b881741f3290c1d",
+    "evals/lib/judge-transport.mjs": "e11b44039356cde238a1ab6a63050b17cb3e7f2318c7af65809ea34d142c8acd",
+    "evals/judge-evidence-server.mjs": "740f5b2c9857368a4174a5244b314974419a199b34c31294a5b48e37e806d9da",
+    "evals/runs/judge-transport-1/calibrate.mjs": "a4397917f5ff390a55b27522d21df80de0c1c71f81d528d5ce59c120e515a674"
+  },
+  "evidence": {
+    ".gitignore": "983b1cb766ef271e9da59ded7ec0e097a2d65342f90865b1bcd2114fa34c5394",
+    "calibrate.mjs": "a4397917f5ff390a55b27522d21df80de0c1c71f81d528d5ce59c120e515a674",
+    "capture-1/completion-delivery.jsonl": "0e6a04a77a58b191cce98abd9fcc05ce188f556449c808399c4df00fd9b2e947",
+    "capture-1/completion-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "capture-1/result.json": "f60f1de1bab173e626a6c7925042e21be988f2e25dda3d2338810e9cba46f754",
+    "capture-1/spine-delivery.jsonl": "a6ec4d558186ed8a1f58e89357102ee48e0e415fcaedc596fcc21616c9367c9e",
+    "capture-1/spine-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks.json": "98a39a816e754515f012963172fb24ac0d0de9b33eb6517e99649c5db264a857",
+    "cli-result.json": "a661e7139a901e27a5f87f0be05fb79ae73817128a4779eb0aa2a6dd8f40871d",
+    "findings.md": "7ab178f3731be4fc7e8e2954e23093bc00f2244f9e3805733dc43d07426ec02a",
+    "focused-initial.tap": "b48319d64cd5975e32b591f77a93e1ffcad7db1a4c7440be506c66e0a35621bd",
+    "probe-cli.mjs": "d9107189e8a53eb157992858f58e832439aa8f720ecd62370dbd302037d7f28a",
+    "repository-tests.tap": "db2d0088f34f53534194bf95bc9a9800841f6e766d96b5e1ebbbe8f7ccbe1c48",
+    "review.md": "117c106dead7690cbff9bba886e814920c2e193933f7e3d8e39a2a3830cccc31",
+    "verify.mjs": "a64817ba5900bb99f843b0dc44e346df38201c441bf1bcc7fcb9c8c36ec43435"
+  },
+  "modelCalls": 0,
+  "limitations": "Real local MCP server and synthetic client, not a live Codex/model tool loop. Historical packet selection is preserved exactly, not upgraded to newer acceptance evidence. This proves lossless bounded serving, not model-history retention, comprehension, token cost, deadline feasibility or a future actual packet fitting the bound."
+}

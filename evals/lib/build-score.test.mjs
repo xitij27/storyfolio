@@ -6,10 +6,11 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, PROTOTYPE_DEPTH_CRITERIA, PROTOTYPE_DEPTH_JUDGEMENT_SCHEMA, MAX_JUDGE_PROMPT_BYTES, MAX_JUDGE_PROMPT_CHARACTERS, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
+import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, PROTOTYPE_DEPTH_CRITERIA, PROTOTYPE_DEPTH_JUDGEMENT_SCHEMA, MAX_JUDGE_PROMPT_BYTES, MAX_JUDGE_PROMPT_CHARACTERS, assembleBuildJudgePrompt, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
 import { captureBuildWorkspace, executeBuildTurn, hash, json, populateBuildWorkspace, prepareBuildInputs, readTurnHistory, writeNew } from "./build.mjs";
 import { invokeBuildJudge, JUDGE_IMPLEMENTATION_FILES, prepareBuildJudge, runBuildJudge } from "../codex-build-judge.mjs";
 import { captureSource } from "./build-capture.mjs";
+import { createPagedEvidence, pageResponse, verifyPagedEvidence } from "./judge-transport.mjs";
 
 const sourceRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const unobserved = (taskKind) => ({ schemaVersion: taskKind === "prototype-depth" ? 2 : 1, criteria: Object.fromEntries((taskKind === "prototype-depth" ? PROTOTYPE_DEPTH_CRITERIA : BUILD_CRITERIA).map(([id]) => [id, { status: "unobserved", reason: "The relevant observation is not available.", evidence: [] }])), summary: "One bounded partial run, with limitations.", unblinding: ["Baseline-only case."] });
@@ -139,7 +140,7 @@ test("judge prompt explicitly uses conservative UTF-16 units for astral characte
   assert.throws(() => renderBuildJudgePrompt("{{rubric}}{{evidence}}", rubric + "a", {}), /character bound exceeded.*UTF-16 code units/);
 });
 
-async function fixture(t, { failedActor = false, continuation = false, prototype = false, turns = 1 } = {}) {
+async function fixture(t, { failedActor = false, continuation = false, prototype = false, turns = 1, paged = false, large = false } = {}) {
   const root = await mkdtemp(join(tmpdir(), "storyfolio-build-judge-test-"));
   t.after(() => rm(root, { recursive: true, force: true }));
   const run = "evals/runs/judge-test/fixture/baseline-1", out = join(root, run), work = join(root, "work");
@@ -147,6 +148,7 @@ async function fixture(t, { failedActor = false, continuation = false, prototype
   for (const path of implementationFiles) await writeNew(join(root, path), await readFile(join(sourceRoot, path)));
   const source = { schemaVersion: 1, id: "fixture", workspaceRoot: "fixtures/workspace", files: ["docs/story/facts.md"], expectations: "fixtures/expectations.json", rubric: "evals/prompts/build-criteria.md", protocol: "fixtures/protocol.md", prompts: ["fixtures/turn1.md", "fixtures/turn2.md", "fixtures/turn3.md"], implementationFiles,
     bounds: { maxTurns: 3, turnTimeoutMs: 900000, maxWallMs: 2400000, maxTokens: 1500000 } };
+  if (paged) source.judgeTransport = "paged-v1";
   if (continuation) {
     Object.assign(source, { setupMode: "existing-site", requestedStops: [5, 6], refusalTurns: [1, 2], prompts: ["fixtures/turn1.md", "fixtures/turn2.md"] });
     source.bounds.maxTurns = 2;
@@ -171,6 +173,7 @@ async function fixture(t, { failedActor = false, continuation = false, prototype
     "fixtures/turn2.md": "Use the first recommended wording and finish at stop 6. I decline optional skill installation.",
   });
   if (prototype) Object.assign(values, { "fixtures/prototype-rubric.md": "Prototype diagnostic criteria, version 1. Not any journey stop.", "fixtures/turn1.md": "Build one prototype appearance, no optional skills.", "fixtures/expectations.json": '{"id":"fixture","schemaVersion":2,"taskKind":"prototype-depth"}' });
+  if (large) values["fixtures/workspace/docs/story/facts.md"] += "x".repeat(1100000);
   for (const [path, bytes] of Object.entries(values)) await writeNew(join(root, path), bytes);
   const capabilities = { model: "gpt-6.1-sol", disabledSkills: [], config: {} };
   const prepared = await prepareBuildInputs({ root, runs: join(root, "evals/runs"), casePath: "fixtures/case.json", cohort: "judge-test", capabilities, implementationFiles });
@@ -493,4 +496,139 @@ test("judge deadline forcibly terminates a local process that ignores SIGTERM", 
   assert.ok(result.durationMs < 2000);
   assert.throws(() => process.kill(child.pid, 0), { code: "ESRCH" });
   assert.equal(await readFile(join(root, "stream.jsonl"), "utf8"), result.stdout);
+});
+
+test("full prompt assembly preserves literal placeholder text without recursively replacing evidence", () => {
+  const rubric = "Literal {{evidence}} and {{rubric}}", packet = { text: "literal {{rubric}}" };
+  assert.equal(assembleBuildJudgePrompt("{{rubric}}\n{{evidence}}", rubric, packet), rubric + "\n" + JSON.stringify(packet, null, 2));
+});
+
+test("a frozen paged case preserves a complete prompt too large for inline, including selected stream hashes", async t => {
+  const testCase = await fixture(t, { prototype: true, paged: true, large: true });
+  const prepared = await prepareBuildJudge(testCase);
+  assert.equal(prepared.transport, "paged-v1");
+  assert.ok(prepared.fullPrompt.length > MAX_JUDGE_PROMPT_CHARACTERS);
+  assert.ok(prepared.prompt.length < 4096);
+  assert.equal(verifyPagedEvidence(prepared.bundle).prompt, prepared.fullPrompt);
+  for (const document of prepared.packet.documents) {
+    const entry = prepared.bundle.documents.find(item => item.path === document.path);
+    assert.equal(entry.sha256, document.sha256);
+    assert.equal(entry.selectedTextSha256, hash(document.text));
+    assert.equal(entry.selectedTextBytes, Buffer.byteLength(document.text));
+  }
+  const stream = prepared.bundle.documents.find(item => item.path.endsWith("stream.jsonl"));
+  assert.notEqual(stream.sha256, stream.selectedTextSha256);
+  await assert.rejects(prepareBuildJudge({ ...testCase, maxPromptBytes: 100 }), /frozen transport bounds/);
+  await assert.rejects(readFile(join(testCase.out, "judge/started.json")), { code: "ENOENT" });
+});
+
+function deliveredLedger(bundle, pages = bundle.pages) {
+  return pages.map(page => JSON.stringify({ bundleDigest: bundle.digest, pageId: page.id, pageSha256: page.sha256, responseSha256: hash(JSON.stringify(pageResponse(bundle, page.id))) })).join("\n") + "\n";
+}
+
+async function fakePagedJudge(options, { omitLast = false, badCitation = false } = {}) {
+  assert.ok(options.evidenceServer);
+  const bundle = JSON.parse(await readFile(options.evidenceServer.bundle, "utf8"));
+  await writeNew(options.evidenceServer.ledger, deliveredLedger(bundle, omitLast ? bundle.pages.slice(0, -1) : bundle.pages));
+  const value = unobserved("prototype-depth");
+  value.criteria.documentation = { status: "fail", reason: "The actor stopped.", evidence: [cite(undefined, badCitation ? "Unsupported invented excerpt" : undefined)] };
+  const stdout = [{ type: "thread.started", thread_id: "fresh-paged-judge" }, { type: "item.completed", item: { type: "agent_message", text: JSON.stringify(value) } }, { type: "turn.completed", usage: { input_tokens: 20, output_tokens: 5 } }].map(JSON.stringify).join("\n") + "\n";
+  await writeNew(options.streamPath, stdout); await writeNew(options.stderrPath, "");
+  return { stdout, stderr: "", code: 0, durationMs: 5, args: [] };
+}
+
+test("paged invocation accepts only full delivery, preserves evidence and never retries", async t => {
+  const testCase = await fixture(t, { prototype: true, paged: true }), prepared = await prepareBuildJudge(testCase);
+  let calls = 0;
+  const invoke = async options => { calls++; assert.equal(options.timeoutMs, 600000); return fakePagedJudge(options); };
+  const result = await runBuildJudge(prepared, { invoke });
+  assert.equal(result.complete, true);
+  assert.equal(result.delivery.count, prepared.bundle.pages.length);
+  assert.equal(result.counts.fail, 1);
+  for (const path of ["evidence-bundle.json", "page-delivery.jsonl", "delivery.json", "full-prompt.md", "judgement.json"]) assert.ok(result.artifacts[path], path);
+  assert.equal(await readFile(join(testCase.out, "judge/full-prompt.md"), "utf8"), prepared.fullPrompt);
+  await assert.rejects(runBuildJudge(prepared, { invoke }), { code: "EEXIST" });
+  assert.equal(calls, 1);
+});
+
+test("a partial paged delivery cannot become a score even if final JSON is valid", async t => {
+  const testCase = await fixture(t, { prototype: true, paged: true }), prepared = await prepareBuildJudge(testCase);
+  const result = await runBuildJudge(prepared, { invoke: options => fakePagedJudge(options, { omitLast: true }) });
+  assert.equal(result.complete, false);
+  assert.match(result.error, /receipt|coverage|delivery|page/i);
+  assert.equal(result.artifacts["judgement.json"], undefined);
+  assert.ok(result.artifacts["reply.md"]);
+});
+
+test("complete paged delivery does not weaken original citation validation", async t => {
+  const testCase = await fixture(t, { prototype: true, paged: true }), prepared = await prepareBuildJudge(testCase);
+  const result = await runBuildJudge(prepared, { invoke: options => fakePagedJudge(options, { badCitation: true }) });
+  assert.equal(result.complete, false);
+  assert.match(result.error, /excerpt not present/);
+});
+
+test("paged bundle or transport drift is rejected before spending a judge attempt", async t => {
+  const testCase = await fixture(t, { prototype: true, paged: true }), prepared = await prepareBuildJudge(testCase);
+  let calls = 0;
+  const invoke = async () => { calls++; };
+  await assert.rejects(runBuildJudge({ ...prepared, transport: "inline" }, { invoke }), /transport differs/);
+  const corrupted = structuredClone(prepared);
+  corrupted.bundle.pages[0].text += "corruption";
+  await assert.rejects(runBuildJudge(corrupted, { invoke }));
+  await assert.rejects(runBuildJudge({ ...prepared, fullPrompt: prepared.fullPrompt + "mutation" }, { invoke }), /paged evidence changed/);
+  assert.equal(calls, 0);
+  await assert.rejects(readFile(join(testCase.out, "judge/started.json")), { code: "ENOENT" });
+});
+
+test("paged CLI configuration enables only the bounded accessor and preserves judge isolation", async t => {
+  const root = await mkdtemp(join(tmpdir(), "storyfolio-paged-invoke-test-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  let captured;
+  const spawnProcess = (command, args, options) => {
+    captured = { command, args, options };
+    const child = new EventEmitter(); child.stdout = new EventEmitter(); child.stderr = new EventEmitter();
+    child.stdin = { on() {}, end() { queueMicrotask(() => child.emit("close", 0)); } };
+    return child;
+  };
+  await invokeBuildJudge({ cwd: root, prompt: "Bootstrap", streamPath: join(root, "stream.jsonl"), stderrPath: join(root, "stderr.log"),
+    evidenceServer: { script: join(root, "server.mjs"), bundle: join(root, "bundle.json"), ledger: join(root, "ledger.jsonl") }, spawnProcess });
+  const config = captured.args.find(value => value.startsWith("mcp_servers="));
+  assert.match(config, /^mcp_servers=\{storyfolio_evidence=/);
+  for (const value of ['enabled_tools=["read_page"]', "required=true", "output_token_limit=65536", process.execPath]) assert.ok(config.includes(value));
+  for (const setting of ["features.shell_tool=false", "features.unified_exec=false", "features.plugins=false", "features.apps=false", 'web_search="disabled"', 'sandbox_mode="read-only"', "--ignore-user-config", "--ignore-rules", "tool_output_token_limit=65536"]) assert.ok(captured.args.includes(setting), setting);
+  assert.ok(!captured.args.includes("resume"));
+  assert.equal(captured.args.at(-1), "-");
+});
+
+test("judge timeout terminates the actual evidence accessor descendant", { skip: process.platform !== "linux" }, async t => {
+  const root = await mkdtemp(join(tmpdir(), "storyfolio-judge-accessor-deadline-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  const bundle = join(root, "bundle.json"), ledger = join(root, "ledger.jsonl");
+  await writeNew(bundle, JSON.stringify(createPagedEvidence("Complete local packet")));
+  const childProgram = `
+    const { spawn } = require("node:child_process");
+    const accessor = spawn(process.execPath, ${JSON.stringify([join(sourceRoot, "evals/judge-evidence-server.mjs"), "--bundle", bundle, "--ledger", ledger])}, {stdio:["pipe","pipe","pipe"]});
+    accessor.stdin.write(JSON.stringify({jsonrpc:"2.0",id:1,method:"initialize",params:{protocolVersion:"2025-03-26",capabilities:{},clientInfo:{name:"deadline-test",version:"1"}}})+"\\n");
+    accessor.stdout.once("data", () => process.stdout.write(String(accessor.pid)+"\\n"));
+    accessor.on("exit", () => {});
+    process.on("SIGTERM",()=>{});
+    setInterval(()=>{},1000);
+  `;
+  const result = await invokeBuildJudge({ cwd: root, prompt: "Local process only", streamPath: join(root, "stream.jsonl"), stderrPath: join(root, "stderr.log"), timeoutMs: 2000, terminateGraceMs: 500,
+    spawnProcess: (_command, _args, options) => spawn(process.execPath, ["-e", childProgram], options) });
+  assert.equal(result.timedOut, true);
+  assert.equal(result.code, -1);
+  assert.ok(result.durationMs < 5000);
+  const descendant = Number(result.stdout.trim());
+  assert.ok(Number.isSafeInteger(descendant) && descendant > 1, "Accessor completed its real handshake before timeout");
+  await readFile(ledger); // Actual server startup, not just a fake process.
+  let state = null;
+  for (let attempt = 0; attempt < 100; attempt++) {
+    try { state = (await readFile(`/proc/${descendant}/stat`, "utf8")).match(/^\d+ \(.*\) (\w)/)?.[1]; }
+    catch (error) { if (error.code !== "ENOENT") throw error; state = "gone"; }
+    if (["gone", "Z"].includes(state)) break;
+    await new Promise(resolve => setTimeout(resolve, 10));
+  }
+  assert.ok(["gone", "Z"].includes(state), `Accessor must not remain running: ${state}`);
+  t.diagnostic(`Accessor final state: ${state}; a zombie is terminated and waiting for host reaping.`);
 });

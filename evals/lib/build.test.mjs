@@ -161,11 +161,13 @@ test("current source or frozen input drift cannot silently reuse a build cohort"
 test("fresh legacy cohorts automatically freeze the checker and judge transitive capture helper", async t => {
   const options = await fixture(t);
   await writeNew(join(options.root, "evals/lib/build-capture.mjs"), "coordinator capture helper");
+  for (const path of ["evals/lib/judge-transport.mjs", "evals/judge-evidence-server.mjs"]) await writeNew(join(options.root, path), "frozen paged transport helper");
   for (const entry of ["evals/check-build.mjs", "evals/lib/build-check.mjs", "evals/codex-build-judge.mjs"]) {
     await writeNew(join(options.root, entry), "entry imports capture helper");
     const inspected = await inspectBuildInputs({ ...options, implementationFiles: [entry] });
     assert.equal(inspected.source.schemaVersion, 1);
     assert.equal(inspected.hashes["implementation/evals/lib/build-capture.mjs"], hash("coordinator capture helper"));
+    if (entry === "evals/codex-build-judge.mjs") for (const path of ["evals/lib/judge-transport.mjs", "evals/judge-evidence-server.mjs"]) assert.equal(inspected.hashes[`implementation/${path}`], hash("frozen paged transport helper"));
   }
 });
 
@@ -175,6 +177,8 @@ test("fixture allowlists reject traversal, duplicates and symlinks; setup confli
   assert.throws(() => validateCase({ ...options.source, files: ["a", "a"] }), /unique/);
   assert.throws(() => validateCase({ ...options.source, bounds: { ...options.source.bounds, maxTurns: 4 } }), /fixed prompt/);
   assert.throws(() => validateCase({ ...options.source, bounds: { ...options.source.bounds, maxTokens: Infinity } }), /positive/);
+  for (const judgeTransport of [null, "auto", "path-only", 1]) assert.throws(() => validateCase({ ...options.source, judgeTransport }), /judgeTransport/);
+  for (const judgeTransport of ["inline", "paged-v1"]) assert.equal(validateCase({ ...options.source, judgeTransport }).judgeTransport, judgeTransport);
   await symlink(join(options.root, "rubric.md"), join(options.root, "fixture/workspace/link.md"));
   await writeFile(join(options.root, options.casePath), json({ ...options.source, files: ["link.md"] }));
   await assert.rejects(inspectBuildInputs(options), /Symlink/);

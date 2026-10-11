@@ -42,6 +42,7 @@ async function fileTree(root, prefix = "", excludeGenerated = true) {
 
 export function validateCase(source) {
   if (![1, 2].includes(source.schemaVersion)) throw new Error("Expected build case schemaVersion 1 or 2");
+  if (source.judgeTransport !== undefined && !["inline", "paged-v1"].includes(source.judgeTransport)) throw new Error("judgeTransport must be inline or paged-v1");
   const diagnostic = source.schemaVersion === 2;
   if (diagnostic ? source.taskKind !== "prototype-depth" : source.taskKind !== undefined) throw new Error("Only schemaVersion 2 accepts taskKind: prototype-depth");
   safeId(source.id);
@@ -91,6 +92,10 @@ export async function inspectBuildInputs({ root, casePath, capabilities, impleme
   // for legacy expectations. Freeze transitive code for new cohorts without
   // rewriting historical fixture declarations or retained cohort inputs.
   if (["evals/check-build.mjs", "evals/lib/build-check.mjs", "evals/codex-build-judge.mjs"].some(path => implementation.has(path))) implementation.add("evals/lib/build-capture.mjs");
+  if (implementation.has("evals/codex-build-judge.mjs")) {
+    implementation.add("evals/lib/judge-transport.mjs");
+    implementation.add("evals/judge-evidence-server.mjs");
+  }
   for (const path of implementation) files[`implementation/${safePath(path)}`] = await regularBytes(root, path);
   if (!files["skill/SKILL.md"] || !files["skill/engine/package-lock.json"]) throw new Error("Frozen skill and engine lockfile are required");
   const hashes = Object.fromEntries(Object.keys(files).sort().map(path => [path, hash(files[path])]));

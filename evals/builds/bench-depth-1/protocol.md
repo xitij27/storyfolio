@@ -1,4 +1,4 @@
-# Prototype-depth diagnostic protocol, version 1
+# Prototype-depth diagnostic protocol, version 2
 
 11 October 2026. Local preparation under the
 [reproduction plan](../../../docs/superpowers/plans/2026-10-11-build-workflow-reproduction.md).
@@ -16,16 +16,18 @@ activation or the eventual supported build entry point.
 
 Freeze schema-2 case `bench-depth-1`, the one actor prompt, fixture
 allowlist, expectations, this protocol, criteria, source manifests,
-unchanged skill/engine, lockfile, runner, checker/capture and judge code.
+unchanged skill, corrected common engine, lockfile, runner, checker/capture,
+judge code and the explicit `paged-v1` delivery code and bounds.
 The runner's input digest is the final identity, not this prospective date.
 Commit these before preparation. Use a fresh external workspace and the
 loopback-only capability profile, preserving initial inventory, actual CLI
 capabilities and enabled/disabled skill state. No paid call is needed to
 verify setup. Harness setup and probes do not establish actor preflight.
 
-Do not execute before the known engine issues and complete judge-transport
-question have an explicit disposition. If a shared engineering fix is
-required, review it and freeze a common engine before either arm. Never
+The shared-controls repair and lossless paged transport now have separate
+engineering records. Freeze their corrected common implementation before
+either arm. Launch only after final local capability proof and a paid-run
+decision. Never
 attribute a changed engine, fixture or measurement to a skill-only effect.
 
 ## Information boundary and audit
@@ -77,10 +79,19 @@ source/install verification is required without actual reviewed sources.
    separate evidence. Passing structure is not semantic or visual approval.
 2. Behavior: the text judge applies `criteria.md` only to complete supplied
    evidence. Pixel quality remains unobserved. Preserve full tool failures,
-   source and acceptance reports. Apply both 2 MiB UTF-8 and 1,048,576
-   UTF-16 code-unit guards before spending a judge attempt. No truncation,
-   inferred file contents or improvised reduced brief. An accessor would
-   require a separate transport decision; none is presumed available.
+   source and acceptance reports. This case explicitly freezes `paged-v1`:
+   exact full logical prompt, at most 8 MiB and 512 pages, 32 KiB target
+   text pages with at most 64 KiB complete MCP wire responses. The small
+   entry prompt still passes both the 2 MiB UTF-8 and 1,048,576 UTF-16
+   direct-input guards. One local read-only accessor exposes only exact
+   page IDs; every page needs a valid delivery receipt before a score can
+   be accepted. No truncation, inferred contents or reduced brief. Shell,
+   browser, network and inherited MCP capabilities remain disabled. The
+   [transport study](../../runs/judge-transport-1/findings.md) records local
+   proof and its limits. Delivery is not model comprehension or retention;
+   context exhaustion, failure or incomplete reads leave the score absent.
+   Tool iterations can add inference requests and usage within the same
+   single ten-minute turn; this is not a hard token or spending cap.
 3. Visual review: review original images, not only contact sheets, bound
    to source hashes, conditions and actual positions. Capture desktop
    1440 by 900, phone 390 by 844, short 1280 by 720, reduced motion, no

@@ -37,8 +37,12 @@ decisions. No paid run is authorized. The earlier
 [planning record](history/2026-10-11-build-workflow-planning.md) remains intact.
 The author subsequently [approved the shared-controls repair](history/2026-10-11-shared-controls-approval.md).
 Its [engineering study](../evals/engine/shared-controls-1/findings.md) records
-the narrow provider fix and local verification. Judge transport still needs
-a decision; final freeze and paid evaluation remain separate gates.
+the narrow provider fix and local verification. The subsequently
+[authorized local transport repair](history/2026-10-11-judge-transport-approval.md)
+is now implemented. Its [study](../evals/runs/judge-transport-1/findings.md)
+records byte-exact historical packet delivery, bounded read-only pages,
+305 passing tests and the untested live-model limits. Final input freeze,
+actor-workspace capability proof and paid-run approval remain separate gates.
 
 For a new session, read:
 

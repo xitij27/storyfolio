@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "no-model-lossless-real-process-transport-calibration",
+  "node": "v22.22.1",
+  "results": [
+    {
+      "name": "spine",
+      "path": "evals/runs/codex-build-1/embedded-1/baseline-1/judge/prompt.md",
+      "originalSha256": "2910f03fe046ce24a99d04c0f112c73f5dc16d8bc22a3c4679af24a563df08d5",
+      "originalBytes": 841035,
+      "originalCodeUnits": 840810,
+      "fitsOldInline": true,
+      "documentCount": 55,
+      "everyOriginalDocumentPreserved": true,
+      "bundleDigest": "4d1e4b5a575a723b5d5035a8351e06e3a19f1663e49d345f55e1140f660fab19",
+      "pages": 26,
+      "bootstrapBytes": 1419,
+      "maximumActualWireBytes": 39166,
+      "exactReconstruction": true,
+      "reconstructedSha256": "2910f03fe046ce24a99d04c0f112c73f5dc16d8bc22a3c4679af24a563df08d5",
+      "coverage": {
+        "complete": true,
+        "count": 26,
+        "receiptCount": 26,
+        "sha256": "a6ec4d558186ed8a1f58e89357102ee48e0e415fcaedc596fcc21616c9367c9e"
+      },
+      "localMilliseconds": 295,
+      "ledger": "capture-1/spine-delivery.jsonl"
+    },
+    {
+      "name": "completion",
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/judge/prompt.md",
+      "originalSha256": "fda25f8c89713adccd38fd8dcc885908f5369fc0485ff76b1bdbbb8000ec0ae8",
+      "originalBytes": 2560105,
+      "originalCodeUnits": 2556184,
+      "fitsOldInline": false,
+      "documentCount": 154,
+      "everyOriginalDocumentPreserved": true,
+      "bundleDigest": "9734bb2edd10c44185f66d38428a88f5021b78f8e2087a9e85bf018f32ab33ea",
+      "pages": 79,
+      "bootstrapBytes": 1420,
+      "maximumActualWireBytes": 39196,
+      "exactReconstruction": true,
+      "reconstructedSha256": "fda25f8c89713adccd38fd8dcc885908f5369fc0485ff76b1bdbbb8000ec0ae8",
+      "coverage": {
+        "complete": true,
+        "count": 79,
+        "receiptCount": 79,
+        "sha256": "0e6a04a77a58b191cce98abd9fcc05ce188f556449c808399c4df00fd9b2e947"
+      },
+      "localMilliseconds": 853,
+      "ledger": "capture-1/completion-delivery.jsonl"
+    }
+  ],
+  "sourceHashes": {
+    "evals/codex-build-judge.mjs": "e662700e71bc327940a027f7fe7c99934f25a350f0fb2804249c894f2ff60310",
+    "evals/lib/build-score.mjs": "672cef34b15fcc2f595299fa5f5bd9f37093dad4e0fbe9105b881741f3290c1d",
+    "evals/lib/judge-transport.mjs": "e11b44039356cde238a1ab6a63050b17cb3e7f2318c7af65809ea34d142c8acd",
+    "evals/judge-evidence-server.mjs": "740f5b2c9857368a4174a5244b314974419a199b34c31294a5b48e37e806d9da",
+    "evals/runs/judge-transport-1/calibrate.mjs": "a4397917f5ff390a55b27522d21df80de0c1c71f81d528d5ce59c120e515a674"
+  },
+  "modelCalls": 0,
+  "originalStudiesModified": false,
+  "limitations": "Real local MCP server and synthetic client, not a live Codex/model tool loop. Historical packet selection is preserved exactly, not upgraded to newer acceptance evidence. This proves lossless bounded serving, not model-history retention, comprehension, token cost, deadline feasibility or a future actual packet fitting the bound."
+}

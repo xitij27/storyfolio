@@ -335,3 +335,24 @@ baseline and hold it fixed for any matched candidate. Do not retrofit the
 earlier negative study or mix engine revisions in a causal skill comparison.
 No paid envelope, instruction change, transport implementation or push was
 authorized by this repair approval.
+
+## Lossless transport checkpoint, 11 October 2026
+
+The author subsequently [approved the transport repair with local testing only](../../history/2026-10-11-judge-transport-approval.md).
+The [separate plan](2026-10-11-judge-evidence-transport.md) and
+[local study](../../../evals/runs/judge-transport-1/findings.md) record its
+implementation. Inline delivery remains the default; the pending case
+explicitly selects frozen `paged-v1` delivery without changing the seven
+actor files, fixed request, rubric or expectations. The complete historical
+prompts reconstruct byte for byte through the real local server. All 305
+repository tests pass. The installed CLI parses the isolated configuration;
+an actual model/client loop, context fit, cost and judging quality remain
+unobserved. Neither old judge attempt was reopened.
+
+This supersedes the pending transport decision above, not the retained
+negative calibration or earlier authorization boundaries. Next obtain
+direction for final step 7: freeze the corrected common engine, current
+evaluator and case inputs, then prove the actual actor workspace. Keep the
+transport fixed in any matched comparison. The reserved cohort remains
+unprepared, and any future complete packet needs its own dry validation.
+The paid envelope still requires explicit approval after local preparation.

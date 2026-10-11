@@ -22,6 +22,14 @@ engine provider scope, without paid execution or a push. Its
 [preceding handover](2026-10-11-before-shared-controls-handover.md)
 preserves `39ceeb7` verbatim.
 
+The [judge-transport approval](2026-10-11-judge-transport-approval.md)
+records "yes lets get the next thing done" as a local-only delivery repair,
+without paid calls, final cohort preparation or a push. Its
+[preceding handover](2026-10-11-before-judge-transport-handover.md)
+preserves `3e23cc9:docs/handover.md` verbatim. The new
+[transport study](../../evals/runs/judge-transport-1/findings.md) keeps local
+server/configuration proof separate from unobserved live-model behavior.
+
 Captured on 10 October 2026 from the working tree at commit
 `4c1007b6607075e895c892931f72db00ef5d7b5c`. The handover included the other
 session's uncommitted existing-portfolio review direction and final verification.

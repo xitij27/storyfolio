@@ -119,10 +119,15 @@ export function buildScoreCounts(judgement) {
 }
 
 /** No silent truncation and no fallback to a cheaper, partial judging brief. */
+export function assembleBuildJudgePrompt(template, rubric, packet) {
+  for (const key of ["rubric", "evidence"]) if (template.split(`{{${key}}}`).length !== 2) throw new Error(`Judge template needs exactly one ${key} placeholder`);
+  return template.replace(/\{\{(rubric|evidence)\}\}/g, (_, key) => key === "rubric" ? rubric : JSON.stringify(packet, null, 2));
+}
+
+/** Inline bounds remain unchanged. Paged callers must bound the full bundle. */
 export function renderBuildJudgePrompt(template, rubric, packet, limit = MAX_JUDGE_PROMPT_BYTES) {
   if (!Number.isSafeInteger(limit) || limit < 1) throw new Error("Invalid prompt byte bound");
-  for (const key of ["rubric", "evidence"]) if (template.split(`{{${key}}}`).length !== 2) throw new Error(`Judge template needs exactly one ${key} placeholder`);
-  const prompt = template.replace("{{rubric}}", () => rubric).replace("{{evidence}}", () => JSON.stringify(packet, null, 2));
+  const prompt = assembleBuildJudgePrompt(template, rubric, packet);
   const bytes = Buffer.byteLength(prompt);
   if (bytes > limit) throw new Error(`Judge prompt byte bound exceeded: ${bytes} > ${limit}; no model call made and nothing truncated`);
   if (prompt.length > MAX_JUDGE_PROMPT_CHARACTERS) throw new Error(`Judge prompt character bound exceeded: ${prompt.length} UTF-16 code units > ${MAX_JUDGE_PROMPT_CHARACTERS}; no model call made and nothing truncated`);

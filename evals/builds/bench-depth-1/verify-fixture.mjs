@@ -34,6 +34,7 @@ async function files(root, prefix = "") {
 const config = validateCase(await json(join(fixture, "case.json")));
 assert.equal(config.schemaVersion, 2);
 assert.equal(config.taskKind, "prototype-depth");
+assert.equal(config.judgeTransport, "paged-v1");
 assert.equal(config.id, "bench-depth-1");
 assert(!Object.hasOwn(config, "requestedStops"), "Diagnostic must not pretend to request a journey stop");
 assert.equal(config.bounds.maxTurns, 1);
@@ -96,4 +97,4 @@ for (const path of await files(fixture)) {
     assert(!content.includes("data:"), `Unexpected embedded SVG resource: ${path}`);
   }
 }
-console.log("Fixture verified: schema-2 prototype-depth; 7 allowlisted starting files; 4 retained source hashes; 2 unchanged illustrative SVGs; 5 neutral beat IDs; verbatim actor prompt. Draft inputs only, no application, paid run or launch readiness verified.");
+console.log("Fixture verified: schema-2 prototype-depth; paged-v1 judge transport; 7 allowlisted starting files; 4 retained source hashes; 2 unchanged illustrative SVGs; 5 neutral beat IDs; verbatim actor prompt. Draft inputs only, no application, paid run or launch readiness verified.");

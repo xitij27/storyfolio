@@ -19,6 +19,9 @@ preserves `75d1f35` verbatim before implementing the local diagnostic tooling.
 The [pre-controls-fix handover](history/2026-10-11-before-shared-controls-handover.md)
 preserves `39ceeb7` verbatim before the authorized shared-controls correction.
 
+The [pre-transport handover](history/2026-10-11-before-judge-transport-handover.md)
+preserves `3e23cc9` verbatim before the authorized local judge-delivery repair.
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -105,6 +108,21 @@ preserves the failing baseline and passing regression evidence separately.
 The accepted prototype and earlier studies remain unchanged. Behavioral skill
 instructions, judge transport, final diagnostic freeze and paid execution
 are not changed by this repair. No push is authorized.
+
+The author next said, "yes lets get the next thing done", approving the
+[judge-evidence transport repair with local testing only](history/2026-10-11-judge-transport-approval.md).
+The explicit, frozen `paged-v1` option now preserves the complete logical
+judge prompt through bounded read-only pages. Inline delivery and its limits
+remain the default. The [new local study](../evals/runs/judge-transport-1/findings.md)
+reconstructs both historical packets byte for byte, including all 154
+document bodies in the oversized completion packet. All 305 repository
+tests pass, and the installed CLI accepts the isolated configuration.
+This is local server/configuration evidence, not a live model tool loop,
+proof of comprehension or a new score. The pending diagnostic selects this
+transport without changing actor inputs, rubric or expectations. Final
+input freeze and actual actor-workspace proof still need their own step;
+the reserved cohort is unprepared. No paid call, old retry, behavioral skill
+change or push was authorized or made.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -361,6 +379,9 @@ remain gated. The [exact preparation reply](history/2026-10-11-build-preparation
 and test evidence are preserved separately.
 The next "yes" [authorizes the shared-controls correction](history/2026-10-11-shared-controls-approval.md)
 and its local checks, not transport implementation or paid execution.
+The subsequent "yes lets get the next thing done"
+[authorizes the local transport correction](history/2026-10-11-judge-transport-approval.md),
+not a final cohort freeze, paid execution, historical retry or push.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -429,11 +450,16 @@ is drafted. Its approved local preparation now has
 [implemented tooling and retained diagnostics](../evals/runs/build-workflow-preparation-1/findings.md).
 The shared-controls correction is now authorized and implemented, with
 [separate engine evidence](../evals/engine/shared-controls-1/findings.md).
-Next obtain direction on lossless judge-evidence transport, then complete
-the final freeze and actual actor-workspace capability proof. Freeze the
+The lossless transport correction is also now authorized, implemented and
+[locally verified](../evals/runs/judge-transport-1/findings.md). Next obtain
+direction to complete the final freeze and actual actor-workspace capability
+proof. That step does not include a paid actor or judge. Freeze the
 corrected common engine revision for any future matched comparison; do not
 rewrite the old failing probe or compare changed-engine arms as a skill effect.
-The paid-run decision remains separate.
+Hold the new transport fixed across those arms too. The paid-run decision
+remains separate. A future complete packet needs its own transport preflight;
+the local historical calibration does not establish model context fit,
+history retention, judging quality, token cost or deadline feasibility.
 Do not reinterpret the phone, planning or no-model preparation approvals
 as that cost approval. The reserved baseline cohort has not been prepared.
 Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
@@ -486,6 +512,12 @@ measurement testing, not an actor build, new author approval or final freeze.
 The later shared-controls checkpoint again passes all 266 repository tests
 and adds six dedicated React-context regressions. The study keeps baseline
 failures, browser verification and source review separate from those counts.
+The latest [judge-transport verification](../evals/runs/judge-transport-1/verification.json)
+passes all 305 repository tests across 31 suites, the skill and people checks,
+and the diagnostic fixture verifier. Local real-process calibration serves
+the old spine and completion prompts in 26 and 79 pages respectively,
+preserving every byte and checking complete delivery receipts. The actual
+accessor descendant terminates on the judge deadline. No model was invoked.
 The visual-quality review repeated the required checks: all 246 tests,
 the skill check and the people check pass. Its
 [preservation record](../evals/runs/codex-visual-quality-review-1/verification.json)
