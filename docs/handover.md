@@ -20,8 +20,11 @@ milestones. Local measurement repairs and the controlled comparison fixture
 are implemented and verified with 342 passing repository tests. The
 [development findings](../evals/runs/stage-3-integration-1/findings.md)
 record browser evidence, independent review and the two unapplied visual
-instruction drafts. The separately bounded paid comparison is unanswered.
-No behavioral skill instruction changed and Stage 3 remains incomplete.
+instruction drafts. The author subsequently [approved the bounded comparison](history/2026-10-12-stage-3-comparison-approval.md)
+with "Approve this bounded comparison". Fresh baseline preparation is now
+underway; [actual outcomes](../evals/runs/stage-3-comparison-1/findings.md)
+will govern candidate selection. No behavioral skill instruction changed
+at approval and Stage 3 remains incomplete.
 
 The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` verbatim before this checkpoint's current-state updates.
@@ -558,10 +561,11 @@ pass. No new cohort or actor workspace is frozen or prepared yet.
 
 Follow the [completion plan](superpowers/plans/2026-10-12-stage-3-completion.md)
 for the product milestones. The [separate paid question](history/2026-10-12-stage-3-development.md#separate-paid-comparison-question)
-is unanswered: one fresh baseline and one matched candidate if needed,
+was approved with [the exact answer recorded here](history/2026-10-12-stage-3-comparison-approval.md):
+one fresh baseline and one matched candidate if needed,
 at most one judge each, 15 minutes per build and 10 per judge, no retries.
-These deadlines are not a hard token-cost cap. Do not ask again to authorize
-the spent old cohort or launch new paid work without resolving this question.
+These deadlines are not a hard token-cost cap. Do not ask for this same
+approval again, reopen the spent old cohort or exceed the new envelope.
 The two visual instruction candidates are drafts, not shipped behavior.
 
 Follow the baseline findings' quality attribution before choosing the next

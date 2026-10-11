@@ -4,6 +4,13 @@ Prepared 12 October 2026. The author's direction is to finish Stage 3 first.
 The separate bounded paid-comparison question is awaiting an answer when
 this protocol is written. Preparation does not permit launching models.
 
+On 12 October the author answered **"Approve this bounded comparison"**.
+The [authorization record](../../../docs/history/2026-10-12-stage-3-comparison-approval.md)
+preserves the exact question and answer. That approval permits only the
+envelope below, after local freeze and actual-workspace capability checks.
+The original awaiting-answer sentence describes the preparation checkpoint,
+not the current authorization state.
+
 ## Question and fixed conditions
 
 Does carrying the approved scene meaning and readable transitions through

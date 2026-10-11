@@ -12,6 +12,9 @@ next steps: Stage 3 is active, while the shipped skill still plans only.
 The subsequent [Stage 3 development direction](2026-10-12-stage-3-development.md)
 authorizes implementation toward completion and records the separate
 bounded paid-comparison question, local changes and preserved constraints.
+The author's subsequent [bounded-comparison approval](2026-10-12-stage-3-comparison-approval.md)
+records the exact answer and two-arm limits. It does not authorize further
+journey/regression cohorts or a push.
 The [pre-development handover](2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` byte for byte; the development checkpoint verifies this
 before updating the current handover.
