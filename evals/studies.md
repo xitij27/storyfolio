@@ -36,6 +36,9 @@ its review criteria and independent runtime observations are separate.
 | [codex-steve-review-before-1](#codex-steve-review-before-1-real-repository-review-complete) | One natural source-only review, complete |
 | [codex-steve-review-observations-1](#codex-steve-review-observations-1-independent-product-review-complete) | Source and local browser observations, complete |
 | [codex-token-usage-audit-1](#codex-token-usage-audit-1-saved-usage-audit-complete) | Offline token accounting, complete with scope limits |
+| [codex-build-1](#first-stage-3-build-baseline-11-october-2026) | Bounded spine conversation and judgement, complete within its cost gate |
+| [codex-build-completion-1](#bounded-stage-3-completion-11-october-2026) | Two-turn implementation continuation, technically checked; visual result rejected |
+| [codex-visual-quality-review-1](#visual-quality-review-11-october-2026) | Source and image review after author rejection; Stage 3 visual proof remains open |
 
 ## Cases and comparison rules
 
@@ -465,15 +468,44 @@ matched skill improvement.
 [codex-build-completion-1](runs/codex-build-completion-1/findings.md) is a
 fresh two-turn conversation from the preceding saved spine. It completed
 chapters, offered and awaited copy choices, then finished the fictional
-seven-beat site. Independent full-site acceptance passes 6/6 and all 49
-original screenshots were reviewed. The actual whole-site approval and
-physical-phone check remain pending.
+seven-beat implementation. Independent technical browser acceptance passes
+6/6 and all 49 original screenshots were reviewed. The author subsequently
+rejected its visual quality. These checks remain valid within their scope;
+they do not establish product acceptance or close Stage 3's visual proof.
 
 The single judge invocation was rejected before its model turn by a
 1,048,576-character CLI limit, despite the author's separate approval of a
 three-MiB byte allowance. There is no model judgement or usage report and
 no retry. A new unpaid character guard prevents another oversized
 invocation. Source, actor diagnostics, input-size failures, actual usage
-and visual limitations remain preserved. Two design gaps are explicit:
-three complete wording versions were not supplied, and static State copy
-refers to hidden rows. No skill or shipped engine instruction changed.
+and visual limitations remain preserved. Earlier findings also identify
+missing complete wording alternatives and static State copy referring to
+hidden rows. Those smaller gaps do not account for the substantial visual
+failure recorded in the subsequent review. No skill or shipped engine
+instruction changed.
+
+## Visual-quality review, 11 October 2026
+
+[codex-visual-quality-review-1](runs/codex-visual-quality-review-1/findings.md)
+asks why the completed demo missed the original portfolio's visual standard
+despite passing technical checks. The [author's rejection](../docs/history/2026-10-11-visual-quality-rejection.md)
+is the trigger. This is an unpaid review of saved source and evidence,
+with fresh demo browser captures. The original-site comparison uses its
+source and repository-supplied preview image, not a fresh running original.
+
+The review separates coordinator-selected constraints, actor implementation
+choices and engine capabilities. The six flat rows, repeated formations,
+label-only faces and disconnected diagrams do not establish the design's
+object-led story. The fixture explicitly required static phone behavior.
+The 246 repository tests and 49 reviewed screenshots checked correctness,
+readability and mode coverage, without establishing expressive quality.
+Completed implementation is therefore recorded separately from visual
+acceptance, which failed and remains open.
+
+Evidence: [findings](runs/codex-visual-quality-review-1/findings.md),
+[source comparison](runs/codex-visual-quality-review-1/source-comparison.md),
+[process review](runs/codex-visual-quality-review-1/process-review.md),
+[preceding handover](../docs/history/2026-10-11-before-visual-quality-review-handover.md)
+and [recovery plan](../docs/superpowers/plans/2026-10-11-visual-quality-recovery.md).
+No new paid conversation or judgement, skill edit or engine edit was made.
+Old frozen inputs, raw results and technical outcomes are preserved.

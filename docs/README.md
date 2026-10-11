@@ -4,11 +4,13 @@ Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The skill currently plans a portfolio through an approved
 storyboard. The reusable engine is implemented, locally verified and
-approved on desktop and a physical phone. Stage 3 has completed a fictional
-seven-beat site through a spine study and bounded continuation. Independent
-acceptance passes six browser conditions and all 49 images were reviewed;
-the completion judge could not start because its packet exceeded the CLI
-character limit. Shipped site-building guidance remains future work.
+approved on desktop and a physical phone. Stage 3's fictional seven-beat
+implementation passed six technical browser conditions, but the author
+rejected its visual quality. The 49 reviewed images established readability
+and layout checks, not a convincing object-led story. Stage 3's visual proof
+has failed and remains open. The completion judge could not start because
+its packet exceeded the CLI character limit. Shipped site-building guidance
+remains future work.
 
 For a new session, read:
 
@@ -29,6 +31,7 @@ For a new session, read:
 | Current instructions followed by the test agent | [Skill and references](../skills/storyfolio/SKILL.md) |
 | Design rationale and intended scope | [Original approved design](superpowers/specs/2026-10-10-portfolio-skill-design.md) and [existing-portfolio review design](superpowers/specs/2026-10-10-existing-portfolio-review.md) |
 | Stage coherence corrections and engine proof | [Stage review](superpowers/plans/2026-10-11-stage-review.md), its [machine-check and optional-skill protocol](superpowers/plans/2026-10-11-stage-review.md#machine-check-and-recommendations-for-other-skills), and [engine evidence](../evals/engine/plain-story-1/findings.md) |
+| Rejected demo, original-site comparison and visual recovery | [Author's rejection](history/2026-10-11-visual-quality-rejection.md), [review findings](../evals/runs/codex-visual-quality-review-1/findings.md) and [recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md) |
 | Work protocols, completion gates and outcomes | [Plans](superpowers/plans/README.md) |
 | How to make and interpret a current evaluation | [Evaluation runbook](../evals/README.md) |
 | Which experiments exist and what each asks | [Study catalogue](../evals/studies.md) |
@@ -38,7 +41,8 @@ For a new session, read:
 
 The original design includes stages that have not been built and historical
 tool choices. The existing-portfolio review direction is accepted, with an
-implementation plan prepared; no review mode is implemented yet. Use the
+implementation plan prepared; no dedicated skill review entry point is
+implemented yet. A source-review runner and pilot exist. Use the
 current handover for implementation status and the runbook for current
 Codex commands.
 
@@ -61,6 +65,12 @@ separate the completed spine, actual usage, original scores, reviewed
 corrections and the unvisited stages.
 
 [Completion findings](../evals/runs/codex-build-completion-1/findings.md)
-record the finished site, copy gate, independent acceptance, visual
-reviews, judge transport failure and remaining design gaps. This does not
-close the non-sheet full-journey proof or change the planning-only skill.
+record the completed implementation, copy gate, technical acceptance,
+image reviews and judge transport failure. The subsequent
+[visual-quality review](../evals/runs/codex-visual-quality-review-1/findings.md)
+records the author's rejection and the gap between those checks and the
+design's visual goal. It compares original-site source and its repository
+preview image with fresh demo captures; it is not a fresh runtime comparison
+of both sites. The [earlier handover](history/2026-10-11-before-visual-quality-review-handover.md)
+preserves the preceding status verbatim. The [recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md)
+does not itself authorize another paid run or change the skill or engine.

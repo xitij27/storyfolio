@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-10-11T04:11:27.418267+00:00",
+  "original": "/home/kshitij/projects/portfolio-website",
+  "originalHead": "163b8ceb302b7b4e5beeff8f1161f4cdc7663b15",
+  "initialGitStatusPorcelain": "",
+  "work": "/home/kshitij/projects/storyfolio/node_modules/visual-reference-20261011",
+  "phase": "Dependency-only isolated bootstrap before copying application source",
+  "files": {
+    "package.json": {
+      "bytes": 1792,
+      "sha256": "d0d4a5b2d80bf8143bb78d6d3aac0c6cfb62ad7c9712095f7157965aeeedad0a"
+    },
+    "package-lock.json": {
+      "bytes": 528305,
+      "sha256": "5ed7219ef32efb6ece5f742b1e510e3115c2901a257e22382836194065534578"
+    }
+  },
+  "constraints": [
+    "Original repository is read-only for this task.",
+    "No private docs, env files, resume modules/assets or PDF contents read or copied.",
+    "Only exact locked dependencies from existing npm cache, offline.",
+    "No paid model calls. Existing previews3010and3011 remain untouched."
+  ],
+  "instructionsRead": {
+    "path": "AGENTS.md",
+    "sha256": "16d61eb1ca6254ed69c47613147d621e7f22dd3372fac95a3028957486eafab1"
+  },
+  "initialFindings": [
+    "Original node_modules and .next absent, as supplied by coordinator.",
+    "Original Next lock is16.2.10; npm cache list only showed16.3.8.",
+    "Public application layout uses Google fonts and imports a resume-named chat component that remains unread under task exclusions.",
+    "Project filesystem has932GBavailable; /tmp has326MBavailable and is not used for the copy."
+  ],
+  "finishedAt": "2026-10-11T04:12:51.066863+00:00",
+  "status": "blocked-offline-cache",
+  "offlineInstall": {
+    "argv": [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/usr/share/nodejs/npm/bin/npm-cli.js",
+      "ci",
+      "--offline",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund",
+      "--cache=/home/kshitij/.npm",
+      "--logs-dir=/home/kshitij/projects/storyfolio/evals/runs/codex-visual-quality-review-1/reference-setup/npm-logs"
+    ],
+    "cwd": "/home/kshitij/projects/storyfolio/node_modules/visual-reference-20261011",
+    "startedAt": "2026-10-11T04:11:27.515218+00:00",
+    "finishedAt": "2026-10-11T04:11:32.445051+00:00",
+    "durationSeconds": 4.93,
+    "exitCode": 1,
+    "error": null,
+    "networkPolicy": "npm --offline; no external fetch authorized",
+    "lifecyclePolicy": "--ignore-scripts for dependency feasibility bootstrap"
+  },
+  "blockingError": {
+    "code": "ENOTCACHED",
+    "package": "zwitch@2.0.4",
+    "url": "https://registry.npmjs.org/zwitch/-/zwitch-2.0.4.tgz",
+    "meaning": "Required locked tarball is absent from the existing npm cache. No external request was authorized or used."
+  },
+  "otherInstallWarnings": [
+    "npm9.2.0 is below camera-controls3.1.2 declared npm>=10.5.1 requirement.",
+    "npm reported peer-resolution warnings for @swc/helpers while resolving @swc/core."
+  ],
+  "server": {
+    "started": false,
+    "reservedPort": 3012,
+    "reason": "No complete dependency installation; no application source copied after bootstrap failure."
+  },
+  "finalOriginal": {
+    "head": "163b8ceb302b7b4e5beeff8f1161f4cdc7663b15",
+    "gitStatusPorcelain": "",
+    "nodeModulesExists": false,
+    "nextOutputExists": false
+  },
+  "originalUnchanged": true,
+  "copyFilesStillMatch": true,
+  "ignoredPartialDependenciesPresent": false,
+  "fallback": "Use original public/assets/img/versions/v3.jpg plus the permitted public application source; neither a faithful live preview nor a screenshot from this setup was produced.",
+  "readSourcePaths": [
+    "AGENTS.md",
+    "package.json",
+    "package-lock.json",
+    "next.config.ts",
+    "app/[locale]/layout.tsx",
+    "app/[locale]/page.tsx",
+    "tsconfig.json"
+  ],
+  "privateContentReads": []
+}

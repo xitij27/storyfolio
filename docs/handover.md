@@ -22,10 +22,16 @@ before building it. The method is implemented and has multiple completed
 evaluations. Stage 1 still has closing review and validation decisions;
 the reusable engine is implemented, locally verified and approved after
 the author's desktop and physical-phone review. Stage 2 is complete and
-Stage 3 has completed the fictional seven-beat row-card site across a spine
-study and a bounded continuation. Independent full-site acceptance passes
-six browser conditions; all 49 final images were reviewed. The completion
-judge was rejected by the CLI input limit before its model turn, so no
+Stage 3 implemented the fictional seven-beat row-card site across a spine
+study and a bounded continuation, but **the author rejected its visual
+quality**. The [comparison with the originating portfolio](../evals/runs/codex-visual-quality-review-1/findings.md)
+finds a substantial loss of authored detail, spatial storytelling and useful
+exhibits. The constrained fixture and our acceptance criteria caused this
+to be presented too favorably. Six functional browser conditions pass and
+49 images were reviewed for narrower concerns; those are not a visual pass.
+The [recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md)
+puts a convincing three-beat prototype before another full build.
+The completion judge was rejected by the CLI input limit before its model turn, so no
 behavioral score exists for that study. The shipped skill still plans only;
 the non-sheet whole-site proof and final packaging remain open.
 
@@ -155,7 +161,7 @@ not establish whether the earlier publication review was completed.
    because its addresses are placeholders, and 4 of 10 student runs fail
    only on the wording of the padding trap. What remains is creative
    consistency and PhD private-file access, as item 2 and item 3 say.
-6. **The engine is approved; the fictional site is complete and checked.**
+6. **The engine is approved; the completed fictional site is visually rejected.**
    Stage 2 closed after the author's desktop and physical-phone review.
    The [approval](history/2026-10-11-engine-approval.md) and
    [189-test, fifteen-case, 73-image engine proof](../evals/engine/plain-story-1/findings.md)
@@ -175,7 +181,33 @@ not establish whether the earlier publication review was completed.
    The actor separately reports 131 site tests and eighteen browser cases.
    The completed local preview is `http://localhost:3011/`; its
    [verification and restart command](../evals/runs/codex-build-completion-1/audits/preview-verified.json)
-   are saved. Actual final scrolling/phone approval of this site is pending.
+   are saved. The author subsequently rejected this preview and requested
+   comparison with the originating portfolio. The
+   [exact feedback](history/2026-10-11-visual-quality-rejection.md),
+   [source and browser comparison](../evals/runs/codex-visual-quality-review-1/findings.md)
+   and [process audit](../evals/runs/codex-visual-quality-review-1/process-review.md)
+   now supersede any implication of product acceptance. The original was
+   inspected through source and its repository-supplied screenshot; fresh
+   original runtime setup was blocked by absent offline dependencies.
+
+   Five of seven beats use table variants, every face has the same simple
+   label treatment, chapter extras are empty, and the phone scene is
+   deliberately disabled. The coordinator prescribed the narrow row-card
+   fixture and scripted the look choice. The engine already offers richer
+   geometry, face and extra hooks, which this build did not use. Other
+   bespoke V3 effects were deliberately outside the stock extraction; their
+   absence does not justify calling a generic scaffold an equivalent visual
+   experience. The previous report overstated readiness by focusing on two
+   smaller omissions rather than the missing visual story.
+
+   The next development priority is the
+   [visual recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md):
+   three authored beats that demonstrate object identity, a useful spatial
+   explanation and a resolving ending, with actual movement and phone review
+   before full-site expansion. No new paid evaluation or implementation
+   change was made by this comparison. The original and frozen outputs
+   remain intact. The [preceding handover](history/2026-10-11-before-visual-quality-review-handover.md)
+   preserves the earlier acceptance wording verbatim.
 
    The actors took 16 minutes 59 seconds. Their reported counters sum to
    9,508,014 input-plus-output tokens, including 9,129,216 cached input;
@@ -191,7 +223,7 @@ not establish whether the earlier publication review was completed.
    that limit before invocation; complete evidence delivery needs a future
    correction. The failed invocation and all frozen evidence remain intact.
 
-   Two concrete omissions remain: the design requires three wording
+   Two additional concrete omissions remain: the design requires three wording
    versions shown as full beats, while this rubric/run supplied two short
    choices; static State copy refers to rows that are not displayed.
    The [remaining-stage audit](../evals/runs/codex-build-completion-1/audits/remaining-stages.md)
@@ -242,6 +274,7 @@ pauses and reversals.
 | 11 October: "or rather any AI agent" | README now leads with agent-neutral installation. It distinguishes portable skill-capable agents from interfaces that must receive the directory as instructions, and does not promise compatibility with agents unable to read files or attachments. |
 | 11 October: "okay I have made it public. Now make the readme feel more illustrative and inviting" | Author reports public GitHub visibility. README now has a concept illustration, examples, a three-step walkthrough, starter prompts and output-file preview. Agent portability and the planning scope remain explicit. [Full record](history/2026-10-11-readme-and-publication.md). |
 | 11 October: "Id want the end goal of my skill to be able to build stuff right? so we need to have these things in the skill as well." | Building is the end goal, as the approved design already says. Stages 2 and 3 are planned in [the stage 2 and 3 plan](superpowers/plans/2026-10-11-stage-2-engine-stage-3-build.md). |
+| 11 October: rejection of the demo's richness, detail and 3D presence; request to compare the originating portfolio | This site fails the author's visual bar. Compare source and actual visuals, correct acceptance claims, and prove a convincing three-beat experience before further expansion. [Exact feedback](history/2026-10-11-visual-quality-rejection.md) and [recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md). |
 | 11 October, answers to two questions: "Plan stage 2 now" and "Recommend; person installs" | Plan the engine now; stage 1's closing items stay open and may run alongside. Other UI, 3D and frontend skills are named at each stop with how to install them, the person installs, and none is required (design lines 498 to 506). |
 | 11 October: "You just come up with the implementation plan. Codex will implement it."; then "No commit this plan somewhere so that codex can implement it. NO IMPLEMENTATION FROM YOU" | Claude committed the plan only. Codex implements it. |
 | Repository input for deeper portfolio evaluation | Accept GitHub repository URLs and local checkouts alongside deployed URLs. Source, local runtime and deployed evidence have separate provenance. Exact examples and planning update are recorded below. |
@@ -261,8 +294,10 @@ github repo link or the cloned repo locally." They supplied these examples:
 
 Both Linux directories and their Git metadata entries exist. At that point,
 only existence checks were performed; no project contents, Git history,
-source quality or deployment relationship were examined. The later request
-authorised evaluation of the Steve checkout only, as recorded above.
+source quality or deployment relationship were examined. The later Steve
+request authorised evaluation of that checkout. On 11 October the author
+also explicitly requested comparison with the original `portfolio-website`,
+recorded in the [visual rejection](history/2026-10-11-visual-quality-rejection.md).
 
 The review design and plan now include source file/line evidence, source
 revision and working-tree provenance, and running an existing app locally
@@ -305,6 +340,10 @@ npm test
 The latest completion checkpoint passes all 246 repository tests, including
 the new judge character-limit regressions. The earlier engine checkpoint
 passed 189 tests; these are different checkpoints.
+The visual-quality review repeated the required checks: all 246 tests,
+the skill check and the people check pass. Its
+[preservation record](../evals/runs/codex-visual-quality-review-1/verification.json)
+confirms unchanged original, shipped skill and frozen/demo source.
 The host Node 22 binary lacks TypeScript support; engine checks use a
 standard Node 22.22.1 installed in an isolated temporary verification folder. In this environment its Git
 subprocess tests need approved execution outside the outer workspace sandbox.

@@ -18,6 +18,15 @@ historical does not retire those requirements. The author's later
 identified the omitted machine check and optional-skill coverage; both are
 made explicit below.
 
+The author subsequently rejected the completed row-card demo's visual
+quality. The [visual recovery plan](2026-10-11-visual-quality-recovery.md)
+now governs the next development priority: prove a convincing three-beat
+experience before another full-site expansion. The
+[comparison](../../../evals/runs/codex-visual-quality-review-1/findings.md)
+shows why functional passes did not establish the visual promise of the
+design. Earlier checkpoints below retain their chronology and are not
+product acceptance.
+
 ## Sequence and current gaps
 
 The four-stage sequence is sound: establish the planning method, extract a
@@ -298,8 +307,8 @@ The [bounded continuation](../../../evals/runs/codex-build-completion-1/findings
 has completed both authorized actor turns. It reached a real copy-choice
 gate and finished all six chapters and seven beats. Independent acceptance
 passes all six conditions, source remains unchanged by checking, and all
-49 original images were reviewed. The completed site's actual final
-desktop/phone review remains pending; the earlier engine approval is
+49 original images were reviewed. The author has since rejected the site's
+visual quality; see the correction below. The earlier engine approval is
 separate. Shipped skill and engine instructions remain unchanged.
 
 The author separately [approved three MiB](../../history/2026-10-11-build-judge-size-approval.md)
@@ -325,3 +334,26 @@ turn or an untested skill instruction. The supported build entry point,
 early preflight/sketch question, relevant optional-skill coverage, matched
 reruns, planning regression, non-sheet full-journey proof and real approval
 remain Stage 3 work. Stage 1 decisions and Stage 4 release gates stand.
+
+## Author rejection and visual acceptance correction
+
+The [author's feedback](../../history/2026-10-11-visual-quality-rejection.md)
+rejects the demo for lacking richness, detail and convincing 3D presence.
+The [source comparison](../../../evals/runs/codex-visual-quality-review-1/source-comparison.md)
+and [process review](../../../evals/runs/codex-visual-quality-review-1/process-review.md)
+confirm a substantial failure: a restricted row-card fixture, mostly
+repeated tables with simple labels, unused scene extensions, and a
+deliberately absent mobile scene. The visual reviews measured readability
+and correctness without enforcing the approved design's spatial-story tests.
+
+Stage 3 has no accepted visual proof. Before expanding a replacement site,
+show actual opening, explanatory middle and closing scenes with detailed
+surfaces, meaningful transformations and a considered phone treatment.
+Review movement and the design's Backdrop, Depth and Swap tests, then obtain
+the author's actual visual assessment. A simulated fixture look choice,
+canvas presence or screenshot count cannot close that gate. See the
+[recovery plan](2026-10-11-visual-quality-recovery.md) for the concrete scope.
+
+The original engine approval and technical results remain valid within
+their scope. The old fixture and outputs stay immutable. This correction
+starts no additional paid conversation and adds no shipped instruction.

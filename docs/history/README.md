@@ -181,3 +181,21 @@ judge's byte allowance. The [completion findings](../../evals/runs/codex-build-c
 record successful site checks, the later CLI character-limit rejection,
 the absence of a judgement, and all remaining gates. No push or publication
 was authorized or performed.
+
+## Visual-quality rejection and status correction
+
+[The rejection record](2026-10-11-visual-quality-rejection.md) preserves the
+author's assessment of the completed demo against the original portfolio.
+[The pre-review handover](2026-10-11-before-visual-quality-review-handover.md)
+preserves the preceding current state verbatim, including completion
+wording that did not establish product acceptance. Its relative links
+retain the original handover location as their base; use the current
+handover and documentation map for navigation.
+
+The [review findings](../../evals/runs/codex-visual-quality-review-1/findings.md)
+separate valid technical results from the failed visual proof. The comparison
+uses original-site source and its repository preview image, alongside fresh
+demo captures. It does not claim a fresh running comparison of both sites.
+The [recovery plan](../superpowers/plans/2026-10-11-visual-quality-recovery.md)
+keeps Stage 3 visual acceptance open. This review adds no paid run and changes
+neither the skill nor the engine; frozen study evidence remains intact.
