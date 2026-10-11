@@ -72,6 +72,17 @@ The completion judge was rejected by the CLI input limit before its model turn, 
 behavioral score exists for that study. The shipped skill still plans only;
 the non-sheet whole-site proof and final packaging remain open.
 
+The author then said, "okay then let us proceed", after the proposal to
+plan how the skill can reproduce this quality. The
+[planning authorization](history/2026-10-11-build-workflow-planning.md) and
+[reproduction plan](superpowers/plans/2026-10-11-build-workflow-reproduction.md)
+define the next preparation: a five-beat, one-appearance diagnostic with
+unchanged skill instructions and the accepted implementation held out.
+The current runner needs an explicit diagnostic task mapping and separate
+visual measurement. The proposed one-turn actor and optional single judge
+envelope is not yet authorized. No preparation implementation or paid run
+has been made by this planning checkpoint.
+
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
 
@@ -317,6 +328,9 @@ govern the five-beat revision. They then [accepted the revised story](history/20
 with "yes this is good"; this is not full-site or physical-phone approval.
 Their subsequent ["yeah it works fine on phone"](history/2026-10-11-fixture-phone-approval.md)
 confirms the phone check, without approving a full site or starting new work.
+After being offered planning for a reproducible build workflow, they said
+["okay then let us proceed"](history/2026-10-11-build-workflow-planning.md).
+The plan is now written; paid execution and new skill instructions remain gated.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -379,6 +393,11 @@ bounded Stage 3 build-workflow protocol using this as a quality reference,
 with explicit scope, question, stopping conditions and cost decision before
 any paid run. These approvals do not request further implementation or
 permit a push. The non-sheet whole-site proof and packaging remain open.
+That planning step is now authorized and the
+[five-beat reproduction plan](superpowers/plans/2026-10-11-build-workflow-reproduction.md)
+is drafted. Next implement and verify its local preparation when approved,
+then freeze the protocol and obtain the specific paid-run decision. Do not
+reinterpret the phone approval or planning request as that cost approval.
 Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
 [first prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md)
 and [setup](../prototypes/fixture-study/README.md). The author found the first

@@ -139,3 +139,12 @@ It is author-reported acceptance, not a device benchmark or full Stage 3
 proof. The next planning step is a bounded build-workflow protocol with a
 concrete question, scope, stopping conditions and cost decision before paid
 evaluation. This confirmation launches no build or run and permits no push.
+
+## Successor planning checkpoint
+
+The author subsequently [authorized planning](../../history/2026-10-11-build-workflow-planning.md)
+for reproducing this quality. The
+[build-workflow reproduction plan](2026-10-11-build-workflow-reproduction.md)
+is the next preparation target: a fresh unchanged-skill diagnostic, retaining
+the five-beat depth while withholding the accepted solution. This does not
+reopen the prototype approval gate or authorize the proposed paid envelope.

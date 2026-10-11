@@ -26,6 +26,12 @@ and direction](history/2026-10-11-story-depth-approval.md), then
 [confirmed it works on phone](history/2026-10-11-fixture-phone-approval.md).
 The bounded prototype review gate is closed; full Stage 3 acceptance remains
 open. The next planning step is a scoped build-workflow protocol.
+The author has now authorized that planning. The
+[reproduction plan](superpowers/plans/2026-10-11-build-workflow-reproduction.md)
+specifies an unchanged-skill five-beat diagnostic, local preparation and a
+proposed paid envelope. Preparation is not implemented and no run is yet
+authorized; the [decision record](history/2026-10-11-build-workflow-planning.md)
+preserves the exact request.
 
 For a new session, read:
 

@@ -237,3 +237,13 @@ with the story approval, it closes the five-beat prototype's author-review
 gate, not Stage 3 as a whole. Device/browser details and performance metrics
 were not supplied. Earlier records and captured evidence retain their
 original status; no new implementation, paid run or push is authorized.
+
+## Build-workflow planning
+
+[The exact request and decision](2026-10-11-build-workflow-planning.md)
+record "okay then let us proceed" after the proposal to plan reproduction
+of the accepted quality. The resulting
+[plan](../superpowers/plans/2026-10-11-build-workflow-reproduction.md)
+keeps skill instructions unchanged for a fresh diagnostic baseline, separates
+local preparation from paid execution, and records bounds for later approval.
+No new fixture, harness change or paid evaluation was made at this checkpoint.
