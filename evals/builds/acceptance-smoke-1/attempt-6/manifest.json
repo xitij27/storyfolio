@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "fixture": "plain-checker-smoke",
+  "started": "2026-10-11T01:21:08.974Z",
+  "node": "v22.22.1",
+  "workspace": "/tmp/storyfolio-acceptance-smoke-20261011",
+  "expectationsPath": "/home/kshitij/projects/storyfolio/evals/builds/acceptance-smoke-1/expectations.json",
+  "dependencyRoot": "/tmp/storyfolio-acceptance-smoke-20261011",
+  "frozen": {
+    "/home/kshitij/projects/storyfolio/evals/check-build.mjs": "22a1a159ea7dd8bd31aac6e780f8383902816a78b9cd0f1664f9742c24262b62",
+    "/home/kshitij/projects/storyfolio/evals/lib/build-check.mjs": "132191e2a62c2dc1700a652859c840314c66d637e9f0ab4241a911b7a997ea34",
+    "/home/kshitij/projects/storyfolio/evals/builds/acceptance-smoke-1/expectations.json": "1d2a827a69b2faf9bc789785162ab159ed37941e43ff0aa7c858a73a412f72fc",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/typescript/lib/tsc.js": "2cffde0b8c6760dfb0b5b0382bbb7e00ba6a8b2d981b9205b256a700a481d983",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/eslint/bin/eslint.js": "6280b95e2a6ab3b04be45cbd3b1627654be518e6a4da163ec0adcbba9cd5fcd8",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/playwright-core/index.js": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b"
+  },
+  "expected": {
+    "schemaVersion": 1,
+    "id": "plain-checker-smoke",
+    "route": "/",
+    "beats": [
+      {
+        "id": "opening.gather",
+        "heading": "One story, seven pieces."
+      },
+      {
+        "id": "middle.fan",
+        "heading": "Room to see each piece."
+      },
+      {
+        "id": "close.whole",
+        "heading": "The pieces belong together."
+      }
+    ],
+    "requiredText": [
+      "The cards close into one stack. The story, its text and its links stay readable when the scene cannot run."
+    ],
+    "links": [
+      {
+        "text": "Gather again",
+        "href": "#opening"
+      },
+      {
+        "text": "Skip to the ending",
+        "href": "#close",
+        "keyboardOnly": true
+      }
+    ],
+    "assets": [
+      "public/plain/fan.svg"
+    ],
+    "modes": {
+      "desktop": "animated",
+      "mobile": "animated",
+      "reducedMotion": "animated",
+      "noWebGL": "static",
+      "noJavaScript": "static"
+    },
+    "viewports": {
+      "desktop": {
+        "width": 1440,
+        "height": 900
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "typegen",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next",
+        "typegen"
+      ],
+      "started": "2026-10-11T01:21:08.981Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:21:09.221Z"
+    },
+    {
+      "name": "typecheck",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/typescript/lib/tsc.js",
+        "--project",
+        "/tmp/storyfolio-acceptance-smoke-output-6/tsconfig.acceptance.json",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "started": "2026-10-11T01:21:09.224Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:21:11.045Z"
+    },
+    {
+      "name": "lint",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/eslint/bin/eslint.js",
+        "--no-config-lookup",
+        "--config",
+        "/tmp/storyfolio-acceptance-smoke-output-6/eslint.acceptance.mjs",
+        "."
+      ],
+      "started": "2026-10-11T01:21:11.048Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:21:13.536Z"
+    },
+    {
+      "name": "build",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "started": "2026-10-11T01:21:13.539Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:21:16.152Z"
+    },
+    {
+      "name": "server",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next",
+        "start",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "45487"
+      ],
+      "started": "2026-10-11T01:21:16.160Z",
+      "code": 143,
+      "signal": null,
+      "finished": "2026-10-11T01:23:02.599Z"
+    }
+  ],
+  "results": [
+    {
+      "id": "desktop",
+      "passed": true,
+      "problems": [],
+      "report": "desktop/report.json"
+    },
+    {
+      "id": "mobile",
+      "passed": true,
+      "problems": [],
+      "report": "mobile/report.json"
+    },
+    {
+      "id": "reduced-motion",
+      "passed": true,
+      "problems": [],
+      "report": "reduced-motion/report.json"
+    },
+    {
+      "id": "no-webgl",
+      "passed": true,
+      "problems": [],
+      "report": "no-webgl/report.json"
+    },
+    {
+      "id": "no-javascript",
+      "passed": true,
+      "problems": [],
+      "report": "no-javascript/report.json"
+    },
+    {
+      "id": "context-loss",
+      "passed": true,
+      "problems": [],
+      "report": "context-loss/report.json"
+    }
+  ],
+  "files": [
+    {
+      "path": "public/plain/fan.svg",
+      "exists": true,
+      "bytes": 775,
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2"
+    },
+    {
+      "url": "/plain/fan.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 775
+    }
+  ],
+  "complete": true,
+  "limits": [
+    "Coordinator source and expectations must be frozen by the run harness before the actor starts. Outside-workspace paths alone are not a sandbox write barrier.",
+    "Dependency entrypoint hashes are recorded, not full dependency integrity. The harness must audit dependency and lockfile mutation separately.",
+    "Next build executes application configuration. Fixed typecheck and lint commands use coordinator-generated configuration independently of actor scripts.",
+    "Headless Chromium viewport checks do not prove physical-phone performance, custom-object quality, truth of claims or external-link availability.",
+    "Screenshots require human visual review. Text and scene markers alone cannot establish faithful formations or visually correct 3D."
+  ],
+  "finished": "2026-10-11T01:23:02.599Z",
+  "passed": true
+}

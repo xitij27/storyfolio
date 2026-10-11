@@ -1,0 +1,182 @@
+
+> test
+> node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test "evals/lib/*.test.mjs" "skills/storyfolio/engine/lib/story/*.test.ts" "skills/storyfolio/scripts/*.test.mjs" "skills/storyfolio/engine/scripts/*.test.mjs" "skills/storyfolio/engine/components/story/*.test.ts"
+
+TAP version 13
+# Subtest: evals/lib/build-check.test.mjs
+ok 1 - evals/lib/build-check.test.mjs
+  ---
+  duration_ms: 94.309747
+  type: 'test'
+  ...
+# Subtest: evals/lib/build-score.test.mjs
+ok 2 - evals/lib/build-score.test.mjs
+  ---
+  duration_ms: 3043.032505
+  type: 'test'
+  ...
+# Subtest: evals/lib/build.test.mjs
+not ok 3 - evals/lib/build.test.mjs
+  ---
+  duration_ms: 6736.773016
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/lib/build.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: evals/lib/codex.test.mjs
+ok 4 - evals/lib/codex.test.mjs
+  ---
+  duration_ms: 70.598489
+  type: 'test'
+  ...
+# Subtest: evals/lib/events.test.mjs
+ok 5 - evals/lib/events.test.mjs
+  ---
+  duration_ms: 76.264242
+  type: 'test'
+  ...
+# Subtest: evals/lib/files.test.mjs
+ok 6 - evals/lib/files.test.mjs
+  ---
+  duration_ms: 69.77782
+  type: 'test'
+  ...
+# Subtest: evals/lib/measurement-v2.test.mjs
+not ok 7 - evals/lib/measurement-v2.test.mjs
+  ---
+  duration_ms: 155.764721
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/lib/measurement-v2.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: evals/lib/review.test.mjs
+ok 8 - evals/lib/review.test.mjs
+  ---
+  duration_ms: 370.509315
+  type: 'test'
+  ...
+# Subtest: evals/lib/score-v2.test.mjs
+ok 9 - evals/lib/score-v2.test.mjs
+  ---
+  duration_ms: 215.429177
+  type: 'test'
+  ...
+# Subtest: evals/lib/score.test.mjs
+ok 10 - evals/lib/score.test.mjs
+  ---
+  duration_ms: 83.025801
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/components/story/guard-extra-callback.test.ts
+ok 11 - skills/storyfolio/engine/components/story/guard-extra-callback.test.ts
+  ---
+  duration_ms: 136.569447
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/components/story/validate.test.ts
+ok 12 - skills/storyfolio/engine/components/story/validate.test.ts
+  ---
+  duration_ms: 181.405651
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/camera.test.ts
+ok 13 - skills/storyfolio/engine/lib/story/camera.test.ts
+  ---
+  duration_ms: 189.438298
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/controls.test.ts
+ok 14 - skills/storyfolio/engine/lib/story/controls.test.ts
+  ---
+  duration_ms: 193.926318
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/formation.test.ts
+ok 15 - skills/storyfolio/engine/lib/story/formation.test.ts
+  ---
+  duration_ms: 190.756859
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/layouts.test.ts
+ok 16 - skills/storyfolio/engine/lib/story/layouts.test.ts
+  ---
+  duration_ms: 154.352354
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/looks.test.ts
+ok 17 - skills/storyfolio/engine/lib/story/looks.test.ts
+  ---
+  duration_ms: 143.167894
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/overlay.test.ts
+ok 18 - skills/storyfolio/engine/lib/story/overlay.test.ts
+  ---
+  duration_ms: 172.813284
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/quality.test.ts
+ok 19 - skills/storyfolio/engine/lib/story/quality.test.ts
+  ---
+  duration_ms: 145.733627
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/rand.test.ts
+ok 20 - skills/storyfolio/engine/lib/story/rand.test.ts
+  ---
+  duration_ms: 137.741227
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/story.test.ts
+ok 21 - skills/storyfolio/engine/lib/story/story.test.ts
+  ---
+  duration_ms: 136.50146
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/timeline.test.ts
+ok 22 - skills/storyfolio/engine/lib/story/timeline.test.ts
+  ---
+  duration_ms: 161.336991
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/lib/story/typeset.test.ts
+ok 23 - skills/storyfolio/engine/lib/story/typeset.test.ts
+  ---
+  duration_ms: 138.630772
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/engine/scripts/check-lib.test.mjs
+ok 24 - skills/storyfolio/engine/scripts/check-lib.test.mjs
+  ---
+  duration_ms: 112.395287
+  type: 'test'
+  ...
+# Subtest: skills/storyfolio/scripts/scaffold.test.mjs
+not ok 25 - skills/storyfolio/scripts/scaffold.test.mjs
+  ---
+  duration_ms: 164.826202
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/skills/storyfolio/scripts/scaffold.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 22
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6751.619762

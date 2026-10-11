@@ -1,0 +1,7 @@
+The first profile retry incorrectly inserted `linux` after `codex sandbox`. This CLI treated linux as the target executable and exited 101 before running the checker:
+
+thread 'main' (2) panicked at linux-sandbox/src/linux_run_main.rs:1602:5:
+Failed to execvp linux: No such file or directory (os error 2)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+The corrected invocation uses `codex sandbox -P storyfolio-build ... -- node ...`.

@@ -19,7 +19,9 @@ the author has actually scrolled and approved the result. Link the saved
 proof and the author's recorded words. A simulated evaluation reply is
 not this approval.
 
-The stage 2 engine also needs its real scrolling approval. Stage 1's
+The stage 2 engine has the author's
+[desktop and physical-phone approval](../../history/2026-10-11-engine-approval.md).
+Stage 1's
 remaining validation and author-review decisions must have recorded
 dispositions before a final capability claim: completed, explicitly
 deferred with the limitation disclosed, or still blocking that claim.

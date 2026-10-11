@@ -1,0 +1,80 @@
+{
+  "started": "2026-10-11T01:16:09.493Z",
+  "node": "v22.22.1",
+  "scope": "selected cases",
+  "contract": {
+    "ids": [
+      "opening.gather",
+      "middle.fan",
+      "close.whole"
+    ],
+    "lookIds": [
+      "light",
+      "dark"
+    ]
+  },
+  "probes": {
+    "overlay": {
+      "beat": "close.whole",
+      "selector": ".story-piece-link[data-story-link=\"0\"]"
+    },
+    "lazyExtra": true
+  },
+  "matrix": [
+    {
+      "name": "light-wide",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-build-capability-20261011/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "38581"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-build-capability-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:38581/?look=light",
+      "--out=/tmp/storyfolio-build-capability-20261011/probe-2/browser/light-wide",
+      "--report=/tmp/storyfolio-build-capability-20261011/probe-2/browser/light-wide/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-wide",
+      "code": 1,
+      "signal": null,
+      "report": null,
+      "problems": [
+        "No browser report; read this case's log"
+      ]
+    }
+  ],
+  "complete": true,
+  "finished": "2026-10-11T01:16:10.087Z"
+}

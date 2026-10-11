@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "plain-checker-smoke",
+  "route": "/",
+  "beats": [
+    {
+      "id": "opening.gather",
+      "heading": "One story, seven pieces."
+    },
+    {
+      "id": "middle.fan",
+      "heading": "Room to see each piece."
+    },
+    {
+      "id": "close.whole",
+      "heading": "The pieces belong together."
+    }
+  ],
+  "requiredText": [
+    "The cards close into one stack. The story, its text and its links stay readable when the scene cannot run."
+  ],
+  "links": [
+    {
+      "text": "Gather again",
+      "href": "#opening"
+    },
+    {
+      "text": "Skip to the ending",
+      "href": "#close",
+      "keyboardOnly": true
+    }
+  ],
+  "assets": [
+    "public/plain/fan.svg"
+  ],
+  "modes": {
+    "desktop": "animated",
+    "mobile": "animated",
+    "reducedMotion": "animated",
+    "noWebGL": "static",
+    "noJavaScript": "static"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  }
+}

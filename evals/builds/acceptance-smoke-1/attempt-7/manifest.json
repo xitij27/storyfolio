@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "fixture": "plain-checker-smoke",
+  "started": "2026-10-11T01:25:11.864Z",
+  "node": "v22.22.1",
+  "workspace": "/tmp/storyfolio-acceptance-smoke-20261011",
+  "expectationsPath": "/home/kshitij/projects/storyfolio/evals/builds/acceptance-smoke-1/expectations.json",
+  "dependencyRoot": "/tmp/storyfolio-acceptance-smoke-20261011",
+  "frozen": {
+    "/home/kshitij/projects/storyfolio/evals/check-build.mjs": "f504422d01c04a91bc36c8d5d091c67be2c87e11cd7acd4007d5446cc692b81f",
+    "/home/kshitij/projects/storyfolio/evals/lib/build-check.mjs": "632c46e976834f264737b651eb87efe3b41a67542656d00324c8345c2f840572",
+    "/home/kshitij/projects/storyfolio/evals/builds/acceptance-smoke-1/expectations.json": "1d2a827a69b2faf9bc789785162ab159ed37941e43ff0aa7c858a73a412f72fc",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/typescript/lib/tsc.js": "2cffde0b8c6760dfb0b5b0382bbb7e00ba6a8b2d981b9205b256a700a481d983",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/eslint/bin/eslint.js": "6280b95e2a6ab3b04be45cbd3b1627654be518e6a4da163ec0adcbba9cd5fcd8",
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/playwright-core/index.js": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b"
+  },
+  "expected": {
+    "schemaVersion": 1,
+    "id": "plain-checker-smoke",
+    "route": "/",
+    "beats": [
+      {
+        "id": "opening.gather",
+        "heading": "One story, seven pieces."
+      },
+      {
+        "id": "middle.fan",
+        "heading": "Room to see each piece."
+      },
+      {
+        "id": "close.whole",
+        "heading": "The pieces belong together."
+      }
+    ],
+    "requiredText": [
+      "The cards close into one stack. The story, its text and its links stay readable when the scene cannot run."
+    ],
+    "links": [
+      {
+        "text": "Gather again",
+        "href": "#opening"
+      },
+      {
+        "text": "Skip to the ending",
+        "href": "#close",
+        "keyboardOnly": true
+      }
+    ],
+    "assets": [
+      "public/plain/fan.svg"
+    ],
+    "modes": {
+      "desktop": "animated",
+      "mobile": "animated",
+      "reducedMotion": "animated",
+      "noWebGL": "static",
+      "noJavaScript": "static"
+    },
+    "viewports": {
+      "desktop": {
+        "width": 1440,
+        "height": 900
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "typegen",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next",
+        "typegen"
+      ],
+      "started": "2026-10-11T01:25:11.872Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:25:12.133Z"
+    },
+    {
+      "name": "typecheck",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/typescript/lib/tsc.js",
+        "--project",
+        "/tmp/storyfolio-acceptance-smoke-output-7/tsconfig.acceptance.json",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "started": "2026-10-11T01:25:12.136Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:25:14.181Z"
+    },
+    {
+      "name": "lint",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/eslint/bin/eslint.js",
+        "--no-config-lookup",
+        "--config",
+        "/tmp/storyfolio-acceptance-smoke-output-7/eslint.acceptance.mjs",
+        "."
+      ],
+      "started": "2026-10-11T01:25:14.185Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:25:16.991Z"
+    },
+    {
+      "name": "build",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "started": "2026-10-11T01:25:16.995Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T01:25:20.003Z"
+    },
+    {
+      "name": "server",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/next/dist/bin/next",
+        "start",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "39423"
+      ],
+      "started": "2026-10-11T01:25:20.011Z",
+      "code": 143,
+      "signal": null,
+      "finished": "2026-10-11T01:27:06.429Z"
+    }
+  ],
+  "results": [
+    {
+      "id": "desktop",
+      "passed": true,
+      "problems": [],
+      "report": "desktop/report.json"
+    },
+    {
+      "id": "mobile",
+      "passed": true,
+      "problems": [],
+      "report": "mobile/report.json"
+    },
+    {
+      "id": "reduced-motion",
+      "passed": true,
+      "problems": [],
+      "report": "reduced-motion/report.json"
+    },
+    {
+      "id": "no-webgl",
+      "passed": true,
+      "problems": [],
+      "report": "no-webgl/report.json"
+    },
+    {
+      "id": "no-javascript",
+      "passed": true,
+      "problems": [],
+      "report": "no-javascript/report.json"
+    },
+    {
+      "id": "context-loss",
+      "passed": true,
+      "problems": [],
+      "report": "context-loss/report.json"
+    }
+  ],
+  "files": [
+    {
+      "path": "public/plain/fan.svg",
+      "exists": true,
+      "bytes": 775,
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2"
+    },
+    {
+      "url": "/plain/fan.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 775
+    }
+  ],
+  "complete": true,
+  "limits": [
+    "Coordinator source and expectations must be frozen by the run harness before the actor starts. Outside-workspace paths alone are not a sandbox write barrier.",
+    "Dependency entrypoint hashes are recorded, not full dependency integrity. The harness must audit dependency and lockfile mutation separately.",
+    "Next build executes application configuration. Fixed typecheck and lint commands use coordinator-generated configuration independently of actor scripts.",
+    "Headless Chromium viewport checks do not prove physical-phone performance, custom-object quality, truth of claims or external-link availability.",
+    "Screenshots require human visual review. Text and scene markers alone cannot establish faithful formations or visually correct 3D."
+  ],
+  "finished": "2026-10-11T01:27:06.429Z",
+  "passed": true,
+  "artifacts": {
+    "build.log": "4e18f75f0562acaabc974c216a40cbd7963e07860d395bd527ac7c953a6cb36f",
+    "context-loss/00-opening.gather-mid.png": "6aedac46f96ef6c89ddf55e8217d146b73c87cf8fcb957e2c44309287050a6e6",
+    "context-loss/01-middle.fan-mid.png": "4f6e28c3b6440ed38f3d793e42c9d7fbe438c89bb2d1288afbfeea0f8792817f",
+    "context-loss/02-close.whole-mid.png": "178cb0310388d2cf14f255287a2247b0e45520f9f1288ebe32666ee40927a84f",
+    "context-loss/rendered.html": "7b7213c97f4bab5b260365649d661910a1eecd0a30950d8453c33ac0fa870bd4",
+    "context-loss/report.json": "3a39babb829992215387405cca8ccb4bf14ecec83d07b77bc43e861b4d586b91",
+    "context-loss/response.html": "37dd602951c27d7f1382008086819ae6ddf3f1cd98f5686777d5abfa77134b98",
+    "desktop/00-opening.gather-end.png": "5aad75f154eae1af211d0705714139fdb305acf3c1bdf54c67597c137271956b",
+    "desktop/00-opening.gather-mid.png": "d66e3f66be943994ba7fe9518226fc90ba3d36056fdfc3a1dab8a48c05ef5221",
+    "desktop/01-middle.fan-end.png": "34990a8b72bf34b70119f11a3025812e987e9aad05e2517c81534f9638cb7408",
+    "desktop/01-middle.fan-mid.png": "34990a8b72bf34b70119f11a3025812e987e9aad05e2517c81534f9638cb7408",
+    "desktop/02-close.whole-end.png": "e7c9c98d5f2ae4a0f1ddf0665b8624651977c3693b84136e2a7c84198fdbabd1",
+    "desktop/02-close.whole-mid.png": "e7c9c98d5f2ae4a0f1ddf0665b8624651977c3693b84136e2a7c84198fdbabd1",
+    "desktop/rendered.html": "c0d709df0fe99e9f6c479a57facd91e3cc45037d1ce27c7b45aad401f0d9c48f",
+    "desktop/report.json": "ccc9f366a686d13027fc7682fa797129f90c185bcb252040d1473ddf2928aca1",
+    "desktop/response.html": "37dd602951c27d7f1382008086819ae6ddf3f1cd98f5686777d5abfa77134b98",
+    "eslint.acceptance.mjs": "f528eae55bdf15d0df094dc968d47242db8379ce50914854e9ee74e7660c376f",
+    "expectations.json": "1d2a827a69b2faf9bc789785162ab159ed37941e43ff0aa7c858a73a412f72fc",
+    "lint.log": "617e9e033f107d68cb38c39b29ad169a1e700a392eacc731f9d452d0f78300c9",
+    "mobile/00-opening.gather-end.png": "0610161656bdfd0fdae5be642d3176dae186cac1d33fa4f4d4cd6bef1f0efb19",
+    "mobile/00-opening.gather-mid.png": "de30cb072bd492e76367e2790292da56fbadd8d3c7d0676216299727c597b45b",
+    "mobile/01-middle.fan-end.png": "49306b4ea4cc6450a10b250fc48e58fb4976f80c1afd931eee378f66d78f29c5",
+    "mobile/01-middle.fan-mid.png": "49306b4ea4cc6450a10b250fc48e58fb4976f80c1afd931eee378f66d78f29c5",
+    "mobile/02-close.whole-end.png": "e1f487ab4f947995ec018a0ed8d3cdf9334470701e9fcb81173d47a6fea35d0c",
+    "mobile/02-close.whole-mid.png": "e1f487ab4f947995ec018a0ed8d3cdf9334470701e9fcb81173d47a6fea35d0c",
+    "mobile/rendered.html": "a332fe48171ddd15c64de0ab4d1e3d1da8b592bbefe93f99e323061170c92634",
+    "mobile/report.json": "1cbea9684281127307b6d9a682274969b7195d26be746de3d20eed13b48f1873",
+    "mobile/response.html": "37dd602951c27d7f1382008086819ae6ddf3f1cd98f5686777d5abfa77134b98",
+    "no-javascript/00-opening.gather-mid.png": "44dca1cb558aae3f0a00f53262e3e88ad7e98e2eeb63a8623c7186d97246017f",
+    "no-javascript/01-middle.fan-mid.png": "490033b2081e206feeddd1a29541c63fb880d557c0b9143e149bc29ebf8b3c0c",
+    "no-javascript/02-close.whole-mid.png": "392d37db822fbb35d43b6795ef5184a7d1b7124675353a35c5f315bd267c2bc9",
+    "no-javascript/rendered.html": "4c8498f5c02f0901236cf96514fd01335d02e82007d8ef81fea56dbd741eb318",
+    "no-javascript/report.json": "4ff79d7a100f7cbf2305153259557d108a8adae5a64800cf79e6e1d96fda6d4c",
+    "no-javascript/response.html": "37dd602951c27d7f1382008086819ae6ddf3f1cd98f5686777d5abfa77134b98",
+    "no-webgl/00-opening.gather-mid.png": "77da8d21b4007dff84ca32452ebdd7556d26bbdc0fb6b4d437b4f7c0ad36a03f",
+    "no-webgl/01-middle.fan-mid.png": "af41746b4832de877c299856f891f00fc850e3e34c07a50c7a5f42cd11d663ba",
+    "no-webgl/02-close.whole-mid.png": "0017b3d0c6c42aa8c17f31d9b1d57ee97a5d5f440b362a9fe1b9fed8e9ed58b6",
+    "no-webgl/rendered.html": "57ad0583bf12b6ac286c2ecf8475e9ecc3b1c00ff7842e5dc5c836d6fd7c7cbc",
+    "no-webgl/report.json": "5a2263ea18b4e5f0dc6fc9323615f34683b09506b96a90ff494e5df55d99b43b",
+    "no-webgl/response.html": "37dd602951c27d7f1382008086819ae6ddf3f1cd98f5686777d5abfa77134b98",
+    "reduced-motion/00-opening.gather-end.png": "790fa2249e7dd33d585e6e020a127217388ce9dd44be3532adf55ad90df58936",
+    "reduced-motion/00-opening.gather-mid.png": "38a5fbc07ee0695e88fb174709315947dc5a6623e04860c45952969a5aeb6b05",
+    "reduced-motion/01-middle.fan-end.png": "a9427ebfd2d2662b115c0d264a1692749107ade43b4c52abca5537f2a31dcea3",
+    "reduced-motion/01-middle.fan-mid.png": "f57888b0fd9760e8a6892765a5c40d983a887c57387ff3882bb4a8a738157c2c",
+    "reduced-motion/02-close.whole-end.png": "29cc2721f2af4ae94ef03825f8a12ab280813031c9c69dee39ff8047fe703943",
+    "reduced-motion/02-close.whole-mid.png": "66f0323821f12f247c21198202a01b885f0fef100a3dd037558fe5916c8c70b7",
+    "reduced-motion/rendered.html": "c0d709df0fe99e9f6c479a57facd91e3cc45037d1ce27c7b45aad401f0d9c48f",
+    "reduced-motion/report.json": "cda76e05a8bdbdb5be5c23f05cc38435608d8c412d6b0b2f6ae21fdaf0199783",
+    "reduced-motion/response.html": "37dd602951c27d7f1382008086819ae6ddf3f1cd98f5686777d5abfa77134b98",
+    "server.log": "6e8af9996a9fad08176c7df9f39727ccc4a8954e3a05d73c03d94b6549f2c996",
+    "tsconfig.acceptance.json": "9b3f03b0d82fd5f2b530caf44a14dcf3931da4b45d922422e59de042109ae009",
+    "typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "typegen.log": "1447bd67f80ec6b34cf4b9d18bb89002c97515eaea50d5db5f45695ad7ca30d0"
+  }
+}

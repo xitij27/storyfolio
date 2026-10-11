@@ -147,3 +147,10 @@ the author's forwarded Claude note verbatim, the omitted design requirements,
 the distinction between historical skill candidates and verified
 recommendations, and the amended protocol's measurement limits. This work
 changes planning documentation only; it adds no skill instruction or paid run.
+
+## 11 October engine approval
+
+[The approval record](2026-10-11-engine-approval.md) preserves the author's
+local-preview feedback and explicit confirmation that desktop and physical
+phone scrolling were checked. This closes Stage 2 and permits Stage 3 to
+proceed under its existing bounded-run and cost-review gates.

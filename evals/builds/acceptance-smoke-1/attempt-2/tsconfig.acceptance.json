@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "/tmp/storyfolio-acceptance-smoke-20261011/*"
+      ]
+    },
+    "types": [
+      "node",
+      "react",
+      "react-dom"
+    ],
+    "typeRoots": [
+      "/tmp/storyfolio-acceptance-smoke-20261011/node_modules/@types"
+    ]
+  },
+  "include": [
+    "/tmp/storyfolio-acceptance-smoke-20261011/next-env.d.ts",
+    "/tmp/storyfolio-acceptance-smoke-20261011/**/*.ts",
+    "/tmp/storyfolio-acceptance-smoke-20261011/**/*.tsx",
+    "/tmp/storyfolio-acceptance-smoke-20261011/.next/types/**/*.ts",
+    "/tmp/storyfolio-acceptance-smoke-20261011/**/*.mts"
+  ],
+  "exclude": [
+    "/tmp/storyfolio-acceptance-smoke-20261011/node_modules",
+    "/tmp/storyfolio-acceptance-smoke-20261011/.next/dev"
+  ]
+}

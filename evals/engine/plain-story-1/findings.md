@@ -232,11 +232,12 @@ are recorded observations, not failures hidden by the automatic checks.
 
 ## Author scrolling review
 
-**Ready for review, not Stage 2 complete.** The existing
+At the implementation checkpoint this was **ready for review, not Stage 2
+complete**. The existing
 [Task 9 gate](../../../docs/superpowers/plans/2026-10-11-stage-2-engine-stage-3-build.md#task-9-prove-it-and-stop-for-the-author)
 requires the author's actual desktop and phone scrolling approval before
 Stage 3. No simulated reply or headless viewport supplies that approval.
-The author has not yet reviewed this engine checkpoint.
+The author's subsequent review is recorded below.
 
 The verified production build is running at **http://localhost:3010/**,
 or **http://localhost:3010/?fps** for the frame meter, bound to `0.0.0.0`.
@@ -254,3 +255,17 @@ temporary folder is gone, scaffold again, install, build and start using
 the engine README. Record the author's words and any ensuing fix/rerun in
 this repository. No release, deployment, push or paid evaluation
 conversation has been made in this piece of work.
+
+### Author approval, 11 October 2026
+
+The author said, "also yes the local preview works fine". Asked, "Does
+“works fine” mean you’ve reviewed the scrolling on both desktop and a
+physical phone and approve the engine for Stage 3?", they answered:
+
+> Yes, both checked; proceed
+
+**Stage 2 is complete.** The author reported no defect or requested change.
+This is desktop and physical-phone scrolling acceptance; no numerical
+phone FPS result was supplied. Existing engine checks remain unchanged.
+The [approval record](../../../docs/history/2026-10-11-engine-approval.md)
+preserves the exact exchange and the scope of the next stage.

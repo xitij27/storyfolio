@@ -20,8 +20,9 @@ fact confirmation, three concepts and an approved storyboard for one long
 scroll carried by one 3D object from their work. It plans a site and stops
 before building it. The method is implemented and has multiple completed
 evaluations. Stage 1 still has closing review and validation decisions;
-the reusable engine is implemented, locally verified and ready for
-the author's scrolling review. The complete-site proof has not begun;
+the reusable engine is implemented, locally verified and approved after
+the author's desktop and physical-phone review. Stage 2 is complete and
+Stage 3 preparation has begun. The complete-site proof has not begun;
 the README and license are already present, while final packaging remains open.
 
 The latest direct skill changes are two paragraphs in
@@ -166,8 +167,11 @@ not establish whether the earlier publication review was completed.
    failures, fixes, dependencies, visual review and results. A local preview
    is running at `http://localhost:3010/`, with `?fps` for the frame meter;
    restart instructions and the temporary scaffold path are in the findings.
-   Stage 2 still
-   needs the author's real scrolling approval. No evaluation conversation
+   The author has now approved desktop and physical-phone scrolling:
+   "also yes the local preview works fine", followed by "Yes, both checked;
+   proceed" when explicitly asked about both devices and Stage 3 approval.
+   [The full approval record](history/2026-10-11-engine-approval.md) closes
+   Stage 2. No evaluation conversation
    or skill text edit is part of this checkpoint. Stage 3 needs complete
    fictional assets, a clearly non-sheet proof, fixed prompts and an
    independent build checker before baseline runs. The new
@@ -188,6 +192,19 @@ not establish whether the earlier publication review was completed.
    run accompanies the correction. The
    [full forwarded note and correction record](history/2026-10-11-stage-3-protocol-correction.md)
    preserve the author's message, reviewed evidence and local verification.
+   Stage 3 preparation now follows that approval: complete the derivative
+   fixture, independent acceptance checker, versioned prompts and bounded
+   runner before the first baseline conversation. Review its cost before
+   further paid runs, as the existing plan requires.
+   The [first baseline protocol](superpowers/plans/2026-10-11-build-baseline.md)
+   now freezes one embedded case, three gated actor turns and one independent
+   judge. Fixture, runner, judge and coordinator checker are implemented;
+   the earlier "unimplemented" statement above describes the correction
+   checkpoint. The local capability probe passes build/browser checks and
+   external-network denial. The final checker smoke passes all six browser
+   conditions. [Preparation evidence](../evals/builds/preparation-checks/findings.md)
+   records verification before the first paid call. No new build instruction
+   has entered the skill.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
@@ -203,7 +220,7 @@ pauses and reversals.
 | Direction | Current interpretation and full record |
 |---|---|
 | Keep every project detail in this repository | Record and commit decisions, plans and evidence here; use linked verbatim history when shortening current documentation. [Original decisions](history/2026-10-10-handover.md#what-the-author-has-said) and [repository rules](../AGENTS.md). |
-| Method plus starter engine, separate repository, code-built 3D | These design choices stand; the engine remains a future stage. Naming, MIT licence and origin-credit defaults are recorded, with packaging still pending. [Original decisions](history/2026-10-10-handover.md#what-the-author-has-said). |
+| Method plus starter engine, separate repository, code-built 3D | These design choices stand; the engine is now implemented and approved. Naming, MIT licence and origin-credit defaults are recorded, with packaging still pending. [Original decisions](history/2026-10-10-handover.md#what-the-author-has-said) and [engine approval](history/2026-10-11-engine-approval.md). |
 | "please dont use claude code" | Use Codex for new evaluations, with Sol agents and Astra judges at medium reasoning. [Model-role decision](history/2026-10-10-handover.md#current-direction-codex-only). |
 | More technical, engineering, STEM and academic coverage | The collection has seventeen cases for twelve fictional people. [Coverage record](history/2026-10-10-handover.md#completed-comparison-broader-technical-and-academic-coverage). |
 | "yes, I like your recommendations. Let us implement them" | Five workstreams completed within scope; only two storyboard paragraphs were the latest direct skill changes. [Completion record](history/2026-10-10-handover.md#accepted-improvements-implemented-and-evaluated). |

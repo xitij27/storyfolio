@@ -3,8 +3,9 @@
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The skill currently plans a portfolio through an approved
-storyboard. The reusable engine is implemented, locally verified and ready
-for the author's scrolling review; site-building guidance remains future work.
+storyboard. The reusable engine is implemented, locally verified and
+approved on desktop and a physical phone; Stage 3 preparation has begun
+and site-building guidance remains future work.
 
 For a new session, read:
 
@@ -44,3 +45,10 @@ evaluation trees are evidence: their paths, file membership and bytes can
 be pinned by verifiers, so navigation belongs outside those trees. Complete
 historical snapshots remain available even when current guidance is
 shortened. All project context stays committed in this repository.
+
+Stage 3's first paid build probe uses the
+[bounded baseline protocol](superpowers/plans/2026-10-11-build-baseline.md),
+[complete fictional fixture](../evals/builds/embedded-1/README.md) and
+[build runbook](../evals/README.md#bounded-build-baseline). Its preparation
+checks are [recorded separately](../evals/builds/preparation-checks/findings.md)
+from agent evaluation results.

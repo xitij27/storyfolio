@@ -677,5 +677,7 @@ scaffold pins `playwright-core`, `npm run browsers` installs its Chromium,
 and the checker resolves that local package. Optional environment overrides
 are documented, not required source paths. Linux system-library setup is
 recorded in the proof; other host platforms and physical phone performance
-remain separate checks. This settles the tooling choice, not the author's
-Stage 2 approval, which is still pending.
+remain separate checks. The tooling choice was settled at the checkpoint;
+the author subsequently approved desktop and physical-phone scrolling,
+closing Stage 2. The [approval record](../../history/2026-10-11-engine-approval.md)
+preserves their words; no numerical phone frame-rate result was supplied.

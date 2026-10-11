@@ -262,8 +262,11 @@ distinct from a report that the GitHub visibility changed.
 
 ## Work authorized now
 
-Correct the plan interpretation, build and locally verify the stage 2
-engine, preserve evidence, and prepare a concrete scrolling review for the
-author. No skill wording changes, model evaluation conversations, release
-or push are part of this checkpoint. The unresolved stage 1 and review
-workstreams remain visible rather than being marked done by engine work.
+The engine checkpoint and plan correction are committed. The author has
+now [approved desktop and physical-phone scrolling](../../history/2026-10-11-engine-approval.md)
+and said to proceed. Stage 2 is complete. Prepare the complete fixture,
+frozen protocol, independent checker and bounded runner, then conduct the
+first baseline conversation as the cost probe. Further paid conversations
+still require the planned cost review and approval. Skill wording changes
+still require saved failures and matched reruns. Release and push are not
+authorized. The unresolved Stage 1 and review workstreams remain visible.

@@ -199,6 +199,62 @@ Keep commands, source versions and retained results in a new repository
 evidence folder. A focused `--only` run or `--skip-build` run is diagnostic;
 it does not substitute for a fresh complete acceptance run.
 
+## Bounded build baseline
+
+Stage 2 has the author's desktop and physical-phone approval. Stage 3's
+[first baseline protocol](../docs/superpowers/plans/2026-10-11-build-baseline.md)
+freezes one complete fictional [embedded case](builds/embedded-1/README.md),
+three continuation prompts, the unchanged skill and approved engine. This
+is a build experiment from an approved storyboard, not a full-journey test.
+No other skill is enabled. Recommendations and installation restraint are
+observed; successful use of other skills and before-stop-1 timing are not.
+
+Preparation and one-turn execution are separate:
+
+```sh
+node evals/codex-build-run.mjs --case evals/builds/embedded-1/case.json --cohort codex-build-1 --capabilities evals/builds/local-capabilities.json --dry
+node evals/codex-build-run.mjs --case evals/builds/embedded-1/case.json --cohort codex-build-1 --capabilities evals/builds/local-capabilities.json --prepare
+```
+
+These make no model calls. Prepare freezes implementation and inputs,
+scaffolds outside Git and records the initial folder inventory. Install
+locked dependencies explicitly, retain commands and logs in the run's
+`setup/`, and prove the actual capability profile in that workspace before
+writing its digest-bound `setup/probe.json`. Give the actor the factual
+setup result in `docs/story/environment-setup.json`. A coordinator probe
+does not count as the actor checking its own machine.
+
+`--turn 1` in place of `--prepare` starts the first paid turn. Later turns
+require `--turn 2 --gate <saved-json>` and then `--turn 3 --gate <saved-json>`.
+Each gate binds the previous result digest and describes the actual working
+artifact and offered choice. Stop if that stopping point was not reached;
+do not improvise prompts or advance automatically. The protocol allows at
+most three turns in one conversation and one fresh Astra judge, with
+explicit wall-time limits and a between-turn token threshold. Review actual
+usage with the author before any further paid conversation or retry.
+
+[The independent checker](check-build.mjs) takes `--workspace`, frozen
+`--expectations`, a new `--out` directory outside the actor workspace, and
+`--dependencies` pointing to a separate coordinator project root. It calls
+known tool entry points and checks six browser conditions. Preserve source
+hashes before and after, all reports, screenshots and visual observations.
+[Its scope](builds/acceptance.md) describes what still needs manual review.
+[The final smoke](builds/acceptance-smoke-1/findings.md) and
+[capability probe](builds/environment-probe-1/findings.md) are engineering
+evidence, not paid baseline results.
+
+```sh
+node evals/codex-build-judge.mjs --run evals/runs/codex-build-1/embedded-1/baseline-1 --acceptance acceptance/manifest.json --dry
+```
+
+Omit `--acceptance` for an incomplete build without a full acceptance run.
+The dry invocation validates preserved evidence and constructs the prompt
+without a model call. Removing `--dry` spends the single judge allowance.
+The judge refuses altered inputs, overwrite, silent truncation and automatic
+retry. Its text evidence excludes image pixels, so save screenshot review
+separately. Keep automatic findings, judge verdicts and coordinator review
+distinct. A complete model turn does not mean a completed build stage.
+
 ## Single-turn existing-portfolio review pilot
 
 `review-run.mjs` evaluates one review request against an allowlisted local
