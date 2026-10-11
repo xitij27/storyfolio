@@ -3,7 +3,8 @@
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The skill currently plans a portfolio through an approved
-storyboard; the engine and site-building stages remain future work.
+storyboard. The reusable engine is implemented, locally verified and ready
+for the author's scrolling review; site-building guidance remains future work.
 
 For a new session, read:
 
@@ -23,6 +24,7 @@ For a new session, read:
 | Repository-wide working rules | [AGENTS.md](../AGENTS.md) |
 | Current instructions followed by the test agent | [Skill and references](../skills/storyfolio/SKILL.md) |
 | Design rationale and intended scope | [Original approved design](superpowers/specs/2026-10-10-portfolio-skill-design.md) and [existing-portfolio review design](superpowers/specs/2026-10-10-existing-portfolio-review.md) |
+| Stage coherence corrections and engine proof | [Stage review](superpowers/plans/2026-10-11-stage-review.md) and [engine evidence](../evals/engine/plain-story-1/findings.md) |
 | Work protocols, completion gates and outcomes | [Plans](superpowers/plans/README.md) |
 | How to make and interpret a current evaluation | [Evaluation runbook](../evals/README.md) |
 | Which experiments exist and what each asks | [Study catalogue](../evals/studies.md) |

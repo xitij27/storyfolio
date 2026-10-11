@@ -7,6 +7,7 @@
     node evals/check-skill.mjs
 */
 import { join } from "node:path";
+import { lstat } from "node:fs/promises";
 
 import { SKILL, SKILL_DIR, read, walk } from "./lib/files.mjs";
 
@@ -18,6 +19,18 @@ const FRONTMATTER_CHARS = 1024;
 
 const problems = [];
 const words = (text) => text.split(/\s+/).filter(Boolean).length;
+
+// Check before walking: an accidental install must not traverse dependencies.
+for (const directory of ["node_modules", ".next", "checks"]) {
+  const target = join(SKILL_DIR, "engine", directory);
+  if (await lstat(target).catch((error) => {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  })) {
+    console.error(`engine/${directory} exists: install and check in a scaffolded copy, never in the skill`);
+    process.exit(1);
+  }
+}
 
 const files = await walk(SKILL_DIR);
 if (!files.includes("SKILL.md")) {
@@ -55,7 +68,7 @@ for (const path of files.filter((file) => file.endsWith(".md"))) {
   const text = await read(join(SKILL_DIR, path));
   if (text.includes("\u2014")) problems.push(`${path}: has an em dash`);
   // An @ before a path makes an agent load the file at once, whether or not it is needed.
-  if (/(^|\s)@[\w./-]+\.md\b/.test(text)) problems.push(`${path}: names a file with @ in front`);
+  if (path !== "engine/CLAUDE.md" && /(^|\s)@[\w./-]+\.md\b/.test(text)) problems.push(`${path}: names a file with @ in front`);
 }
 
 if (problems.length > 0) {

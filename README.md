@@ -13,7 +13,12 @@ a continuous story, carried by an object in 3D, with your work on its faces.
 
 Storyfolio is a portable skill for any AI agent that can load local skills
 or read instruction files. The current version takes you through an approved
-storyboard. Site building, 3D implementation, and deployment are future work.
+storyboard.
+
+Development now includes an experimental [stage 2 engine and scaffold](skills/storyfolio/engine/README.md)
+with a plain scrolling test story. The shipped skill remains planning-only;
+the six-stop build workflow and complete-portfolio proof are stage 3 work.
+See [the handover](docs/handover.md) for verification and author-review status.
 
 ## A portfolio with a thread
 
@@ -53,7 +58,7 @@ for phones, reduced motion, and visitors who cannot use the 3D scene.
 
 You need an AI agent that can read the skill and its references. To keep the
 planning record automatically, it also needs to write files in your portfolio
-project. The skill itself needs no npm packages or build step.
+project. Planning needs no npm packages or build step.
 
 Clone the public repository with Git, or download it using GitHub's
 **Code → Download ZIP** menu:
@@ -168,7 +173,8 @@ Questions, ideas, and examples from your own use are welcome in
 For code or instruction changes, read [AGENTS.md](AGENTS.md) and
 [the current handover](docs/handover.md). New skill instructions need evidence
 from an evaluation that shows why they are necessary, followed by a rerun.
-For local contributor checks, use Node.js 20.9 or later:
+For local contributor checks, use Node.js 22.18 or later with native
+TypeScript support:
 
 ```bash
 node evals/check-skill.mjs

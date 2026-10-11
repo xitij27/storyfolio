@@ -170,6 +170,35 @@ matched skill-before/skill-after comparison. Use a focused study's manifest
 and comparison for that purpose. Do not pool different providers, models,
 fixtures, rubric versions, reratings or selected subsets into a success rate.
 
+## Engine verification evidence
+
+The [plain-story engine record](engine/plain-story-1/) holds stage 2's
+local engineering checks. These runs make no model evaluation calls and
+do not establish the stage 3 agent build workflow. The shipped skill still
+ends at an approved storyboard.
+
+| Evidence | What it establishes |
+|---|---|
+| [Findings](engine/plain-story-1/findings.md) | Commands, outcomes, corrections, limitations and the current author-review gate |
+| [Source provenance](engine/plain-story-1/source-provenance.json) | The V3 revision and selected source hashes used for extraction |
+| [Dependency review](engine/plain-story-1/dependency-review.md) and [baseline](engine/plain-story-1/dependency-baseline.json) | Version decisions and their recorded evidence |
+| `diagnostic-*` and `matrix-*` folders in the [engine record](engine/plain-story-1/) | Each attempt's manifest, logs, reports and screenshots; source hashes where recorded |
+| [Light](engine/plain-story-1/visual-light.md), [dark](engine/plain-story-1/visual-dark.md) and [reduced-motion](engine/plain-story-1/visual-reduced.md) visual reviews | Human-readable screenshot observations, tied to their stated capture set |
+| [Tooling record](engine/plain-story-1/tooling.md) | Scaffold and checker development checks |
+
+Read the findings to identify the final accepted capture set; a failed
+diagnostic or earlier matrix remains evidence and is not overwritten.
+Reports and screenshots from different source versions must not be merged
+into an apparent single passing run. Automated and visual checks precede
+the author's real desktop/phone review, which is recorded separately.
+
+To reproduce local engine checks, use Node 22.18 or later with native
+TypeScript support and follow the [engine README](../skills/storyfolio/engine/README.md).
+Install dependencies in a scaffolded copy, never inside the skill directory.
+Keep commands, source versions and retained results in a new repository
+evidence folder. A focused `--only` run or `--skip-build` run is diagnostic;
+it does not substitute for a fresh complete acceptance run.
+
 ## Single-turn existing-portfolio review pilot
 
 `review-run.mjs` evaluates one review request against an allowlisted local

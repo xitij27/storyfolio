@@ -4,6 +4,9 @@ Current state as of 11 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+The [pre-engine handover](history/2026-10-11-before-engine-handover.md)
+preserves this day's earlier current-state wording verbatim.
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -17,7 +20,9 @@ fact confirmation, three concepts and an approved storyboard for one long
 scroll carried by one 3D object from their work. It plans a site and stops
 before building it. The method is implemented and has multiple completed
 evaluations. Stage 1 still has closing review and validation decisions;
-the engine, complete-site proof and packaging stages have not begun.
+the reusable engine is implemented, locally verified and ready for
+the author's scrolling review. The complete-site proof has not begun;
+the README and license are already present, while final packaging remains open.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -106,7 +111,8 @@ not establish whether the earlier publication review was completed.
    completed stronger-model check and an explicit decision about broader
    final validation after the latest changes. Earlier cohorts concern
    earlier versions. Do not repeat a paid full batch without a question
-   it needs to answer. Engine and built-site work need their own plans.
+   it needs to answer. Engine and built-site work now have a plan, corrected by the
+   [stage coherence review](superpowers/plans/2026-10-11-stage-review.md).
 5. On 11 October 2026 the author asked whether the skill is well written.
    The review and seven drafted rewrites are in
    [the wording review](superpowers/plans/2026-10-11-skill-wording-review.md);
@@ -144,16 +150,31 @@ not establish whether the earlier publication review was completed.
    because its addresses are placeholders, and 4 of 10 student runs fail
    only on the wording of the padding trap. What remains is creative
    consistency and PhD private-file access, as item 2 and item 3 say.
-6. **Building is the end goal, and stages 2 and 3 now have a plan for Codex
-   to implement:**
-   [stage 2 engine and stage 3 build](superpowers/plans/2026-10-11-stage-2-engine-stage-3-build.md).
-   Claude wrote it on 11 October after reading V3's sources read-only; the
-   author said "NO IMPLEMENTATION FROM YOU", so nothing in it is built. It
-   copies the engine out of V3 into `skills/storyfolio/engine/`, proves it
-   on a plain story at six check settings, and stops for the author to
-   scroll it. Stage 3 then writes stops 4 to 6 and six references against
-   baseline build runs, with other skills recommended and never required.
-   Its first unfinished items are in its Task 0.
+6. **Building is the end goal. Codex reviewed the plan and implemented
+   the reusable engine.** Claude's original
+   [stage 2 and 3 proposal](superpowers/plans/2026-10-11-stage-2-engine-stage-3-build.md)
+   was a plan-only handoff, as the author requested. The author then asked
+   Codex to review the stages and continue development.
+   The [stage coherence review](superpowers/plans/2026-10-11-stage-review.md)
+   records the exact request, corrections and remaining work across all
+   stages. It takes precedence where the original proposal conflicts.
+   The extracted engine, scaffold, units and browser tooling now exist at
+   `skills/storyfolio/engine/` and `skills/storyfolio/scripts/`. The original
+   V3 checkout remains unchanged. All 189 repository tests and the 15-case
+   production browser matrix pass; all 73 final screenshots were reviewed.
+   [engine evidence](../evals/engine/plain-story-1/findings.md) preserves
+   failures, fixes, dependencies, visual review and results. A local preview
+   is running at `http://localhost:3010/`, with `?fps` for the frame meter;
+   restart instructions and the temporary scaffold path are in the findings.
+   Stage 2 still
+   needs the author's real scrolling approval. No evaluation conversation
+   or skill text edit is part of this checkpoint. Stage 3 needs complete
+   fictional assets, a clearly non-sheet proof, fixed prompts and an
+   independent build checker before baseline runs. The new
+   [packaging plan](superpowers/plans/2026-10-11-packaging.md) gives Stage 4
+   concrete release checks; a public repository, README and MIT license
+   already exist. Live privacy enforcement, review-mode generalisation
+   and the Stage 1 decisions above remain open.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
@@ -230,7 +251,7 @@ Inspect `git status` before editing: another session may have work in the
 same checkout. Use [the current evaluation runbook](../evals/README.md) for
 commands and [the study catalogue](../evals/studies.md) to locate evidence.
 
-Local prerequisites are Node 20.9 or later and, for paid evaluation work,
+Local prerequisites are Node 22.18 or later with native TypeScript support and, for paid evaluation work,
 the Codex CLI signed in to the intended account. Run local checks from the
 repository root:
 
@@ -240,7 +261,9 @@ node evals/check-people.mjs
 npm test
 ```
 
-The local suite last passed all 54 tests. In this environment its Git
+The expanded local suite passed all 189 tests in this engine checkpoint.
+The host Node 22 binary lacks TypeScript support; engine checks use a
+standard Node 22.22.1 installed in an isolated temporary verification folder. In this environment its Git
 subprocess tests need approved execution outside the outer workspace sandbox.
 Local checks do not start model conversations. New paid runs need a specific
 question, explicit case lists and a new cohort name. Commit the skill before

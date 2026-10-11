@@ -129,3 +129,13 @@ The full outcome and local validation are in
 Archives retain the contextual material described by the earlier publication
 guidance. See the [current publication record](2026-10-11-readme-and-publication.md)
 for the author's public-status update.
+
+## 11 October engine checkpoint
+
+[The pre-engine handover](2026-10-11-before-engine-handover.md) is a verbatim
+copy from `965b3d0`, retained before updating stage status and prerequisites.
+Its relative links still use the original `docs/handover.md` location as
+their base, deliberately preserving the bytes. Use the current handover
+and documentation map for clickable navigation.
+The original stage 2 and 3 proposal stays at its existing path with a
+precedence notice pointing to the new review.

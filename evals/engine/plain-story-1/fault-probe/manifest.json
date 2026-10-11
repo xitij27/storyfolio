@@ -1,0 +1,120 @@
+{
+  "started": "2026-10-11T00:15:08.859Z",
+  "node": "v22.22.1",
+  "scope": "selected cases",
+  "contract": {
+    "ids": [
+      "opening.gather",
+      "opening.repeat",
+      "middle.fan",
+      "close.whole"
+    ],
+    "lookIds": [
+      "light",
+      "dark"
+    ]
+  },
+  "probes": {
+    "overlay": {
+      "beat": "close.whole",
+      "selector": ".story-piece-link[data-story-link=\"0\"]"
+    },
+    "lazyExtra": true
+  },
+  "matrix": [
+    {
+      "name": "light-wide",
+      "look": "light",
+      "flags": [
+        "--expect-beats=4",
+        "--expect-ids=opening.gather,opening.repeat,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "no-js",
+      "look": "light",
+      "flags": [
+        "--expect-beats=4",
+        "--expect-ids=opening.gather,opening.repeat,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--no-js",
+        "--expect-selector=h1",
+        "--hidden=canvas,.story-look-switch,.story-control"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/node_modules/next/dist/bin/next",
+      "build"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "44969"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:44969/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/light-wide",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/light-wide/report.json",
+      "--expect-beats=4",
+      "--expect-ids=opening.gather,opening.repeat,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:44969/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/no-js",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/no-js/report.json",
+      "--expect-beats=4",
+      "--expect-ids=opening.gather,opening.repeat,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--no-js",
+      "--expect-selector=h1",
+      "--hidden=canvas,.story-look-switch,.story-control"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-wide",
+      "code": 0,
+      "signal": null,
+      "report": "light-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "no-js",
+      "code": 0,
+      "signal": null,
+      "report": "no-js/report.json",
+      "problems": []
+    }
+  ],
+  "complete": true,
+  "finished": "2026-10-11T00:16:13.930Z"
+}

@@ -1,0 +1,549 @@
+{
+  "started": "2026-10-11T00:16:45.664Z",
+  "node": "v22.22.1",
+  "scope": "full matrix",
+  "contract": {
+    "ids": [
+      "opening.gather",
+      "middle.fan",
+      "close.whole"
+    ],
+    "lookIds": [
+      "light",
+      "dark"
+    ]
+  },
+  "probes": {
+    "overlay": {
+      "beat": "close.whole",
+      "selector": ".story-piece-link[data-story-link=\"0\"]"
+    },
+    "lazyExtra": true
+  },
+  "matrix": [
+    {
+      "name": "light-wide",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "light-short",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1280x720",
+        "--expect-scene=on",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "light-phone",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=390x844",
+        "--touch",
+        "--expect-scene=on"
+      ]
+    },
+    {
+      "name": "light-reduced",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--assert-still=300"
+      ]
+    },
+    {
+      "name": "light-no-webgl",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "dark-wide",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "dark-short",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1280x720",
+        "--expect-scene=on",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "dark-phone",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=390x844",
+        "--touch",
+        "--expect-scene=on"
+      ]
+    },
+    {
+      "name": "dark-reduced",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--assert-still=300"
+      ]
+    },
+    {
+      "name": "dark-no-webgl",
+      "look": "dark",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=dark",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "no-js",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--no-js",
+        "--expect-selector=h1",
+        "--hidden=canvas,.story-look-switch,.story-control"
+      ]
+    },
+    {
+      "name": "context-loss",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--lose-context",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "look-switch",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--look-cycle=light,dark",
+        "--expect-look=light"
+      ]
+    },
+    {
+      "name": "keyboard-overlay",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--keyboard=.story-piece-link[data-story-link=\"0\"]",
+        "--keyboard-at=close.whole"
+      ]
+    },
+    {
+      "name": "failed-extra",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--block-late-chunks"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/node_modules/next/dist/bin/next",
+      "build"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "41533"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-wide",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-wide/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-short",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-short/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1280x720",
+      "--expect-scene=on",
+      "--late-shaders=40000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-phone",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-phone/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=390x844",
+      "--touch",
+      "--expect-scene=on"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-reduced",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-reduced/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--reduced-motion",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--assert-still=300"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-no-webgl",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/light-no-webgl/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--no-webgl",
+      "--expect-scene=off"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=dark",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-wide",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-wide/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=dark",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-short",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-short/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1280x720",
+      "--expect-scene=on",
+      "--late-shaders=40000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=dark",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-phone",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-phone/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=390x844",
+      "--touch",
+      "--expect-scene=on"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=dark",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-reduced",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-reduced/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1440x900",
+      "--reduced-motion",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--assert-still=300"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=dark",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-no-webgl",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/dark-no-webgl/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=dark",
+      "--size=1440x900",
+      "--no-webgl",
+      "--expect-scene=off"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/no-js",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/no-js/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--no-js",
+      "--expect-selector=h1",
+      "--hidden=canvas,.story-look-switch,.story-control"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/context-loss",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/context-loss/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--lose-context",
+      "--expect-scene=off"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/tmp/storyfolio-engine-acceptance-20261011/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:41533/?look=light",
+      "--out=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/look-switch",
+      "--report=/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-2/look-switch/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--look-cycle=light,dark",
+      "--expect-look=light"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-wide",
+      "code": 0,
+      "signal": null,
+      "report": "light-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-short",
+      "code": 0,
+      "signal": null,
+      "report": "light-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-phone",
+      "code": 0,
+      "signal": null,
+      "report": "light-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "light-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "light-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-wide",
+      "code": 0,
+      "signal": null,
+      "report": "dark-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-short",
+      "code": 0,
+      "signal": null,
+      "report": "dark-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-phone",
+      "code": 0,
+      "signal": null,
+      "report": "dark-phone/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "dark-reduced/report.json",
+      "problems": []
+    },
+    {
+      "name": "dark-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "dark-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "no-js",
+      "code": 0,
+      "signal": null,
+      "report": "no-js/report.json",
+      "problems": []
+    },
+    {
+      "name": "context-loss",
+      "code": 0,
+      "signal": null,
+      "report": "context-loss/report.json",
+      "problems": []
+    },
+    {
+      "name": "look-switch",
+      "code": 0,
+      "signal": null,
+      "report": "look-switch/report.json",
+      "problems": []
+    }
+  ],
+  "complete": false
+}

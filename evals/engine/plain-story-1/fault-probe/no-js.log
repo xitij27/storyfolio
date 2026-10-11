@@ -1,0 +1,67 @@
+(node:3158831) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/storyfolio-engine-acceptance-20261011/lib/story/timeline.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /tmp/storyfolio-engine-acceptance-20261011/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "h1": 1,
+  "beats": 4,
+  "beatIds": [
+    "opening.gather",
+    "opening.repeat",
+    "middle.fan",
+    "close.whole"
+  ],
+  "scene": "off",
+  "look": "light",
+  "canvases": 0,
+  "overflowX": false,
+  "duplicateIds": [],
+  "pageHeight": 1843,
+  "lang": "en",
+  "selectorFound": true,
+  "displayed": 0,
+  "shots": [
+    "/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/no-js/00-opening.gather.png",
+    "/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/no-js/01-opening.repeat.png",
+    "/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/no-js/02-middle.fan.png",
+    "/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/fault-probe/no-js/03-close.whole.png"
+  ],
+  "samples": [
+    {
+      "beat": "opening.gather",
+      "position": "end",
+      "requestedScroll": 0,
+      "actualScroll": 0
+    },
+    {
+      "beat": "opening.repeat",
+      "position": "end",
+      "requestedScroll": 360,
+      "actualScroll": 360
+    },
+    {
+      "beat": "middle.fan",
+      "position": "end",
+      "requestedScroll": 720,
+      "actualScroll": 720
+    },
+    {
+      "beat": "close.whole",
+      "position": "end",
+      "requestedScroll": 1080,
+      "actualScroll": 943
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:44969/_next/static/chunks/09lgyggnhjlha.js",
+      "resourceType": "script",
+      "failure": "csp",
+      "reason": "JavaScript-disabled CSP rejection of a same-origin Next.js script preload",
+      "expected": true
+    }
+  ],
+  "warnings": [],
+  "problems": []
+}
+

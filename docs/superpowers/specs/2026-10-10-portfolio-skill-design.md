@@ -660,3 +660,22 @@ its own.
 - The command that installs each recommended skill. Stage 3.
 - The fields of the plugin's manifest. And a last look for a product named
   `storyfolio`, before the name is public. Stage 4.
+
+## 11 October engine implementation decisions
+
+The [stage review](../plans/2026-10-11-stage-review.md) controls corrections
+to the stage 2 and 3 implementation proposal. Node 22.18 or later with
+native TypeScript support replaces the earlier Node 20.9 prerequisite.
+The engine uses system fonts and local browser tooling; version pins and
+reproducibility evidence are recorded with the [plain-story proof](../../../evals/engine/plain-story-1/findings.md).
+The public planning skill remains unchanged until saved runs justify build
+instructions. The README and MIT license already exist; packaging must
+verify and update them after the complete-site proof.
+
+The browser-discovery item is now settled for the verified engine: the
+scaffold pins `playwright-core`, `npm run browsers` installs its Chromium,
+and the checker resolves that local package. Optional environment overrides
+are documented, not required source paths. Linux system-library setup is
+recorded in the proof; other host platforms and physical phone performance
+remain separate checks. This settles the tooling choice, not the author's
+Stage 2 approval, which is still pending.

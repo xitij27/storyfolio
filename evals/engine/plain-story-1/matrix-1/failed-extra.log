@@ -1,0 +1,65 @@
+(node:3149138) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/storyfolio-engine-final-20261011/lib/story/timeline.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /tmp/storyfolio-engine-final-20261011/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "h1": 1,
+  "beats": 3,
+  "beatIds": [
+    "opening.gather",
+    "middle.fan",
+    "close.whole"
+  ],
+  "scene": "on",
+  "look": "light",
+  "canvases": 1,
+  "overflowX": false,
+  "duplicateIds": [],
+  "pageHeight": 3600,
+  "lang": "en",
+  "selectorFound": null,
+  "displayed": 0,
+  "shots": [
+    "/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-1/failed-extra/00-opening.gather.png",
+    "/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-1/failed-extra/01-middle.fan.png",
+    "/home/kshitij/projects/storyfolio/evals/engine/plain-story-1/matrix-1/failed-extra/02-close.whole.png"
+  ],
+  "samples": [
+    {
+      "beat": "opening.gather",
+      "position": "end",
+      "requestedScroll": 900,
+      "actualScroll": 900
+    },
+    {
+      "beat": "middle.fan",
+      "position": "end",
+      "requestedScroll": 1800,
+      "actualScroll": 1800
+    },
+    {
+      "beat": "close.whole",
+      "position": "end",
+      "requestedScroll": 2700,
+      "actualScroll": 2700
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:43967/_next/static/chunks/3j3btliuh9tmb.js",
+      "failure": "net::ERR_FAILED",
+      "expected": true
+    },
+    {
+      "url": "http://127.0.0.1:43967/_next/static/chunks/3j3btliuh9tmb.js",
+      "failure": "net::ERR_FAILED",
+      "expected": true
+    }
+  ],
+  "expectedErrors": [
+    "ChunkLoadError: Failed to load chunk /_next/static/chunks/3j3btliuh9tmb.js from module 15827"
+  ],
+  "warnings": [],
+  "problems": []
+}
+
