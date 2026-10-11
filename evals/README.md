@@ -350,9 +350,10 @@ Frozen prospective protocol wording remains unchanged as historical input.
 The new [bench-depth-2 fixture](builds/bench-depth-2/README.md) retains the
 fictional story and supplies a neutral screenshot helper, enabled-skill
 facts and fixed focus-only skip navigation. Its [protocol](builds/bench-depth-2/protocol.md)
-proposes two fresh one-turn builds with at most one judge each; the separate
-paid question is unanswered at this preparation checkpoint. No model call
-or frozen workspace is created by its read-only verifier:
+proposes two fresh one-turn builds with at most one judge each. The author
+has since [approved that envelope](../docs/history/2026-10-12-stage-3-comparison-approval.md).
+The [comparison record](runs/stage-3-comparison-1/findings.md) tracks execution.
+No model call or frozen workspace is created by its read-only verifier:
 
 ```bash
 node evals/builds/bench-depth-2/verify-fixture.mjs

@@ -11,7 +11,7 @@ It does not replace their requirements with evaluation-tool work.
 
 | Milestone | Required result | Current work |
 |---|---|---|
-| Reproduce explanatory visual quality | An independently built scene that explains approved work relationships and remains readable during movement | Local measurement corrections and controlled fixture implemented and verified, 342 repository tests pass. Two narrow paragraphs remain drafts. No fresh actor or candidate shipped yet. |
+| Reproduce explanatory visual quality | An independently built scene that explains approved work relationships and remains readable during movement | Fresh baseline completes and passes all seven technical modes. All 253 originals reviewed, both targeted visual misses remain. Two conditional paragraphs selected for the approved matched candidate, not yet behaviorally established. 342 local tests pass. |
 | Supported build entry | The shipped skill continues from an approved storyboard through spine, chapters and finish at the intended approval points | Still planning-only. Obtain ordinary continuation evidence before changing the endpoint; existing external overrides do not establish activation. |
 | Earlier journey and real choices | Before-stop-1 capability check, three runnable concepts, two or three looks, three complete wording versions, relevant optional-skill recommendation/refusal | Preserve successful existing behavior. Test unvisited requirements and add only instructions needed by saved failures. Do not write six reference files merely because the old plan listed them. |
 | Regression and complete-site proof | Planning remains correct; a fresh agent completes all six stops using a non-sheet object; technical and visual review pass; the author approves desktop and phone | Open. The manual prototype and five-beat diagnostic are not this proof. |
@@ -57,7 +57,10 @@ The [protocol](../../../evals/builds/bench-depth-2/protocol.md) retains
 the process deadlines, no-retry rule, source-bound original-image review,
 input/access audit and honest cost limits. Do not run the candidate if the
 refreshed baseline already answers the visual question successfully.
-No model starts while the separate paid question is unanswered.
+The author subsequently [approved this envelope](../../history/2026-10-12-stage-3-comparison-approval.md).
+The [comparison findings](../../../evals/runs/stage-3-comparison-1/findings.md)
+record preparation, actual process outcomes and the candidate decision.
+This approval does not include another natural-entry or full-journey cohort.
 
 After that result, make the smallest justified behavioral change and rerun
 its actual question. Continue to build-entry and missing journey coverage

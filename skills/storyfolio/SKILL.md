@@ -23,6 +23,14 @@ Between stops you work by yourself. At each stop the person decides one thing. Y
 
 When the storyboard has its yes, say that building is not in this version, and bring `docs/story/handover.md` up to date.
 
+## For a separately authorized build
+
+This does not grant permission to build.
+
+Compare the running scene with the storyboard at its settled beats. Can the visitor inspect the work relationship or evidence the pieces were meant to show, rather than only read its names? Revise the composition when the explanation lives only in the surrounding prose. Keep that accessible prose; it does not replace what the scene was meant to show.
+
+Inspect the changes between beats in both scroll directions, including intermediate positions. When words on the pieces change, correct any overlap that makes the old and new words unreadable together. A readable settled beat does not establish a readable transition.
+
 ## Ask or decide
 
 Ask the person when a thing is:

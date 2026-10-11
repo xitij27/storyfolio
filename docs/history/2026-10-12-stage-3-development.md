@@ -73,3 +73,7 @@ unchanged. The two visual candidates remain drafts. The paid question is
 still unanswered at this checkpoint, and no model evaluation or push was
 made. The [previous handover](2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` verbatim. Stage 3 remains active and incomplete.
+
+Subsequently, the author answered **"Approve this bounded comparison"**.
+The [separate approval record](2026-10-12-stage-3-comparison-approval.md)
+supersedes the unanswered state above without enlarging the two-arm limits.

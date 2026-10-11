@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+.bench-masthead { position: absolute; top: 0; left: 0; width: 100%; z-index: 3; display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem 4vw; font: .7rem ui-monospace, monospace; letter-spacing: .12em; border-bottom: 1px solid #192d3025; pointer-events: none; }
+.story-caption { padding: 2.5rem 4vw; }
+.story-caption-text { max-width: 31rem; }
+.story-title { font-size: clamp(2.1rem, 3.6vw, 3.8rem); }
+.story-body { font-size: 1rem; line-height: 1.55; }
+.story-note { line-height: 1.5; margin-bottom: 0; }
+.apparatus-key { border-top: 1px solid #192d3030; padding-top: .75rem; font: .7rem/1.5 ui-monospace, monospace; color: #475b5b; margin: 1rem 0 0; }
+.story[data-scene="on"] .story-caption-text::before { inset: -1.25rem; filter: blur(1rem); opacity: .97; }
+.story-rail { right: 1vw; top: 20%; }
+.story-rail a { min-height: 44px; }
+@media (max-width: 767px) {
+ .bench-masthead { padding: 1rem 1.25rem; font-size: .6rem; }
+ .bench-masthead span:nth-child(2) { display: none; }
+ .story-caption { padding: 1.25rem; }
+ .story-title { font-size: 2rem; }
+ .story-body { font-size: .9rem; line-height: 1.45; margin-top: .8rem; }
+ .story-note { font-size: .78rem; line-height: 1.4; margin-top: .65rem; }
+ .apparatus-key { font-size: .63rem; line-height: 1.4; margin-top: .65rem; padding-top: .5rem; }
+ .story-kicker { font-size: .68rem; }
+}
+@media (min-width: 768px) and (max-height: 600px) {
+ .story-caption { position: sticky; padding-block: 1.25rem; }
+ .story-caption-text { max-width: 43vw; }
+ .story-title { font-size: 2.25rem; }
+ .story-body { font-size: .85rem; line-height: 1.4; margin-top: .7rem; }
+ .story-note { font-size: .75rem; line-height: 1.4; margin-top: .65rem; }
+ .apparatus-key { font-size: .62rem; margin-top: .65rem; }
+}
+@media (min-width: 1024px) and (max-height: 600px) {
+ .story-rail { top: .75rem; transform: none; }
+ .story-rail ol { display: flex; }
+ .story-rail a { padding: .7rem; }
+ .story-rail a span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}

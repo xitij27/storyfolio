@@ -1,0 +1,40 @@
+(node:33) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.ts took 20ms
+
+  Creating an optimized production build ...
+(node:33) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> Build error occurred
+Error: Turbopack build failed with 1 error:
+./content/faces.ts:18:6
+Error: Expected a semicolon
+  [90m16 |[0m    ctx.fillText(sub,w*[35m.5[0m,h*[35m.62[0m);
+  [90m17 |[0m  }
+[31m[1m>[0m [90m18 |[0m })))));
+  [90m   |[0m      [31m[1m^[0m
+  [90m19 |[0m
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./content/faces.ts [Client Component Browser]
+    ./content/index.ts [Client Component Browser]
+    ./content/experience.tsx [Client Component Browser]
+    ./content/experience.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./content/faces.ts [Client Component SSR]
+    ./content/index.ts [Client Component SSR]
+    ./content/experience.tsx [Client Component SSR]
+    ./content/experience.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+    at <unknown> (./content/faces.ts:18:6)

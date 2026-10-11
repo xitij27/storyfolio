@@ -1,0 +1,1116 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-12",
+  "modelCalls": 0,
+  "browserCalls": 0,
+  "inputDigest": "40fea471970e15abbded1a2f4a51ca40917711e109aab189cc7fcf078257cf6a",
+  "frozenInputCount": 124,
+  "streamSha256": "80e8bba144092ac653bb10b4dc2ade0f6573880132f3ec0e76c023d7ab2e013c",
+  "resultSha256": "4a17ae79418f4d40a1055635921bd201dfa4defafb220a79a394a4d7da129107",
+  "terminalLine": 107,
+  "eventLines": 107,
+  "completedCommands": 48,
+  "agentMessages": 8,
+  "resultComplete": true,
+  "processExitCode": 0,
+  "durationMs": 645672,
+  "usage": {
+    "input_tokens": 2964531,
+    "cached_input_tokens": 2824064,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 19515,
+    "reasoning_output_tokens": 4895
+  },
+  "savedArtifactCount": 443,
+  "savedArtifactHashesAndSetValid": true,
+  "beforeFileCount": 175,
+  "afterFileCount": 260,
+  "actualBeforeChanges": [
+    {
+      "path": ".gitignore",
+      "change": "modified"
+    },
+    {
+      "path": "README.md",
+      "change": "modified"
+    },
+    {
+      "path": "app/globals.css",
+      "change": "modified"
+    },
+    {
+      "path": "app/page.tsx",
+      "change": "modified"
+    },
+    {
+      "path": "content/apparatus.tsx",
+      "change": "added"
+    },
+    {
+      "path": "content/checks.json",
+      "change": "modified"
+    },
+    {
+      "path": "content/copy.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/extras.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/faces.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/formations.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/index.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/links.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/looks.ts",
+      "change": "modified"
+    },
+    {
+      "path": "content/story.ts",
+      "change": "modified"
+    },
+    {
+      "path": "docs/story/assets.md",
+      "change": "modified"
+    },
+    {
+      "path": "docs/story/concepts.md",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/decided-for-you.md",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/handover.md",
+      "change": "modified"
+    },
+    {
+      "path": "docs/story/review/extra/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/extra/short480-bench.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/extra/short480-evidence.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/extra/short480-question.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/extra/short480-scheduling.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/extra/short480-scope.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/extra/skip-focused.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/00-question.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/01-scheduling.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/02-bench.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/03-evidence.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/04-scope.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-phone.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/00-question.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/01-scheduling.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/02-bench.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/03-evidence.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/04-scope.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/00-question-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/00-question-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/00-question-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/01-scheduling-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/01-scheduling-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/01-scheduling-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/02-bench-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/02-bench-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/02-bench-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/03-evidence-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/03-evidence-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/03-evidence-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/04-scope-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/04-scope-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/04-scope-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-short.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-short/00-question.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-short/01-scheduling.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-short/02-bench.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-short/03-evidence.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-short/04-scope.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-short/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/00-question-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/00-question-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/00-question-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/01-scheduling-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/01-scheduling-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/01-scheduling-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/02-bench-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/02-bench-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/02-bench-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/03-evidence-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/03-evidence-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/03-evidence-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/04-scope-end.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/04-scope-mid.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/04-scope-start.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/build.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss/00-question.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss/01-scheduling.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss/02-bench.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss/03-evidence.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss/04-scope.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss/context-lost.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/context-loss/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/manifest.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/no-js.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/no-js/00-question.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/no-js/01-scheduling.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/no-js/02-bench.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/no-js/03-evidence.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/no-js/04-scope.png",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/no-js/report.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/production/server.log",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/review/provenance.json",
+      "change": "added"
+    },
+    {
+      "path": "docs/story/storyboard.md",
+      "change": "modified"
+    },
+    {
+      "path": "scripts/prototype-review.mjs",
+      "change": "added"
+    }
+  ],
+  "changeCounts": {
+    "added": 85,
+    "modified": 16,
+    "deleted": 0
+  },
+  "snapshotManifestChangeBasis": "Runner snapshot.changes compares the 174-file setup snapshot. This audit compares the actual 175-file before-turn snapshot; environment-setup.json is inherited and unchanged.",
+  "protectedPathsUnchanged": [
+    ".agents/skills/storyfolio/engine/.gitignore",
+    ".agents/skills/storyfolio/engine/AGENTS.md",
+    ".agents/skills/storyfolio/engine/app/globals.css",
+    ".agents/skills/storyfolio/engine/app/layout.tsx",
+    ".agents/skills/storyfolio/engine/app/page.tsx",
+    ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx",
+    ".agents/skills/storyfolio/engine/CLAUDE.md",
+    ".agents/skills/storyfolio/engine/components/story/chapter.tsx",
+    ".agents/skills/storyfolio/engine/components/story/conductor.tsx",
+    ".agents/skills/storyfolio/engine/components/story/controls.tsx",
+    ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx",
+    ".agents/skills/storyfolio/engine/components/story/face-material.ts",
+    ".agents/skills/storyfolio/engine/components/story/faces.ts",
+    ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts",
+    ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts",
+    ".agents/skills/storyfolio/engine/components/story/look-switch.tsx",
+    ".agents/skills/storyfolio/engine/components/story/meter.tsx",
+    ".agents/skills/storyfolio/engine/components/story/overlay.tsx",
+    ".agents/skills/storyfolio/engine/components/story/pieces.tsx",
+    ".agents/skills/storyfolio/engine/components/story/rail.tsx",
+    ".agents/skills/storyfolio/engine/components/story/scene.tsx",
+    ".agents/skills/storyfolio/engine/components/story/stage.tsx",
+    ".agents/skills/storyfolio/engine/components/story/story.css",
+    ".agents/skills/storyfolio/engine/components/story/story.tsx",
+    ".agents/skills/storyfolio/engine/components/story/types.ts",
+    ".agents/skills/storyfolio/engine/components/story/use-look.ts",
+    ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts",
+    ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts",
+    ".agents/skills/storyfolio/engine/components/story/validate.test.ts",
+    ".agents/skills/storyfolio/engine/components/story/validate.ts",
+    ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx",
+    ".agents/skills/storyfolio/engine/content/checks.json",
+    ".agents/skills/storyfolio/engine/content/copy.ts",
+    ".agents/skills/storyfolio/engine/content/experience.tsx",
+    ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx",
+    ".agents/skills/storyfolio/engine/content/extras.ts",
+    ".agents/skills/storyfolio/engine/content/faces.ts",
+    ".agents/skills/storyfolio/engine/content/formations.ts",
+    ".agents/skills/storyfolio/engine/content/index.ts",
+    ".agents/skills/storyfolio/engine/content/links.ts",
+    ".agents/skills/storyfolio/engine/content/looks.ts",
+    ".agents/skills/storyfolio/engine/content/sketches/index.ts",
+    ".agents/skills/storyfolio/engine/content/story.ts",
+    ".agents/skills/storyfolio/engine/eslint.config.mjs",
+    ".agents/skills/storyfolio/engine/lib/story/camera.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/camera.ts",
+    ".agents/skills/storyfolio/engine/lib/story/controls.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/controls.ts",
+    ".agents/skills/storyfolio/engine/lib/story/formation.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/formation.ts",
+    ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/layouts.ts",
+    ".agents/skills/storyfolio/engine/lib/story/looks.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/looks.ts",
+    ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/overlay.ts",
+    ".agents/skills/storyfolio/engine/lib/story/quality.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/quality.ts",
+    ".agents/skills/storyfolio/engine/lib/story/rand.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/rand.ts",
+    ".agents/skills/storyfolio/engine/lib/story/story.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/story.ts",
+    ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/timeline.ts",
+    ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts",
+    ".agents/skills/storyfolio/engine/lib/story/typeset.ts",
+    ".agents/skills/storyfolio/engine/LICENSE",
+    ".agents/skills/storyfolio/engine/next.config.ts",
+    ".agents/skills/storyfolio/engine/package-lock.json",
+    ".agents/skills/storyfolio/engine/package.json",
+    ".agents/skills/storyfolio/engine/postcss.config.mjs",
+    ".agents/skills/storyfolio/engine/public/plain/face.svg",
+    ".agents/skills/storyfolio/engine/public/plain/fan.svg",
+    ".agents/skills/storyfolio/engine/README.md",
+    ".agents/skills/storyfolio/engine/scripts/check-lib.mjs",
+    ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs",
+    ".agents/skills/storyfolio/engine/scripts/check.mjs",
+    ".agents/skills/storyfolio/engine/scripts/shoot.mjs",
+    ".agents/skills/storyfolio/engine/tsconfig.json",
+    ".agents/skills/storyfolio/references/asking.md",
+    ".agents/skills/storyfolio/references/concept.md",
+    ".agents/skills/storyfolio/references/reading-a-profile.md",
+    ".agents/skills/storyfolio/references/storyboard.md",
+    ".agents/skills/storyfolio/scripts/scaffold.mjs",
+    ".agents/skills/storyfolio/scripts/scaffold.test.mjs",
+    ".agents/skills/storyfolio/SKILL.md",
+    "components/story/chapter.tsx",
+    "components/story/conductor.tsx",
+    "components/story/controls.tsx",
+    "components/story/extra-frame.tsx",
+    "components/story/face-material.ts",
+    "components/story/faces.ts",
+    "components/story/guard-extra-callback.test.ts",
+    "components/story/guard-extra-callback.ts",
+    "components/story/look-switch.tsx",
+    "components/story/meter.tsx",
+    "components/story/overlay.tsx",
+    "components/story/pieces.tsx",
+    "components/story/rail.tsx",
+    "components/story/scene.tsx",
+    "components/story/stage.tsx",
+    "components/story/story.css",
+    "components/story/story.tsx",
+    "components/story/types.ts",
+    "components/story/use-look.ts",
+    "components/story/use-reduced-motion.ts",
+    "components/story/use-webgl-supported.ts",
+    "components/story/validate.test.ts",
+    "components/story/validate.ts",
+    "components/story/webgl-boundary.tsx",
+    "docs/story/confirmations.md",
+    "docs/story/environment-setup.json",
+    "docs/story/evaluation-environment.md",
+    "docs/story/facts.md",
+    "lib/story/camera.test.ts",
+    "lib/story/camera.ts",
+    "lib/story/controls.test.ts",
+    "lib/story/controls.ts",
+    "lib/story/formation.test.ts",
+    "lib/story/formation.ts",
+    "lib/story/layouts.test.ts",
+    "lib/story/layouts.ts",
+    "lib/story/looks.test.ts",
+    "lib/story/looks.ts",
+    "lib/story/overlay.test.ts",
+    "lib/story/overlay.ts",
+    "lib/story/quality.test.ts",
+    "lib/story/quality.ts",
+    "lib/story/rand.test.ts",
+    "lib/story/rand.ts",
+    "lib/story/story.test.ts",
+    "lib/story/story.ts",
+    "lib/story/timeline.test.ts",
+    "lib/story/timeline.ts",
+    "lib/story/typeset.test.ts",
+    "lib/story/typeset.ts",
+    "package-lock.json",
+    "package.json",
+    "public/assets/bring-up-fixture.svg",
+    "public/assets/power-states.svg",
+    "scripts/review-sheets.mjs"
+  ],
+  "currentWorkspaceEqualsFinalSnapshot": true,
+  "frozenCaptureSourceEqualsFinalSnapshot": true,
+  "sourceDigest": "0fb5e82558d01bda9cf828bb073087138333219b0019d64566747cc08d6ff025",
+  "exclusions": [
+    "node_modules",
+    ".next",
+    ".git",
+    ".cache",
+    ".npm",
+    ".turbo",
+    "checks",
+    "test-results",
+    "playwright-report",
+    "browser-cache",
+    "*.tsbuildinfo",
+    "next-env.d.ts (Next-generated)",
+    "verified top-level hidden bare Git metadata trees (bounded layout and marker validation)"
+  ],
+  "actorExcluded": [
+    ".git",
+    ".next",
+    ".prototype-git",
+    "checks",
+    "next-env.d.ts",
+    "node_modules",
+    "tsconfig.tsbuildinfo"
+  ],
+  "actorUnexpected": [
+    {
+      "path": ".aws",
+      "type": "directory"
+    },
+    {
+      "path": ".codex",
+      "type": "directory"
+    }
+  ],
+  "emptyUnexpectedDirectories": [
+    {
+      "path": ".aws",
+      "type": "directory",
+      "symlink": false,
+      "entryCount": 0,
+      "contentsOpened": false
+    },
+    {
+      "path": ".codex",
+      "type": "directory",
+      "symlink": false,
+      "entryCount": 0,
+      "contentsOpened": false
+    }
+  ],
+  "bareMetadata": {
+    "path": ".prototype-git",
+    "acceptedByFrozenWholeTreePredicate": true
+  },
+  "verifiedFullReads": [
+    {
+      "event": "item_2",
+      "line": 7,
+      "paths": [
+        ".agents/skills/storyfolio/SKILL.md"
+      ],
+      "bytes": 4087,
+      "sha256": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98"
+    },
+    {
+      "event": "item_3",
+      "line": 9,
+      "paths": [
+        "docs/story/handover.md"
+      ],
+      "bytes": 1889,
+      "sha256": "dd61846ba3b0c246c887b0ca05cfaca8d4cbee31a7e5383157eb82e907792a32"
+    },
+    {
+      "event": "item_4",
+      "line": 11,
+      "paths": [
+        "README.md",
+        "docs/story/facts.md",
+        "docs/story/confirmations.md",
+        "docs/story/storyboard.md",
+        "docs/story/assets.md",
+        "docs/story/evaluation-environment.md"
+      ],
+      "bytes": 20913,
+      "sha256": "b77e57c13c6e98328c676e8be4ae6f57be5a420e09788f6c7de03829d6cb2189"
+    }
+  ],
+  "suppliedReviewHelperSha256": "083a43dcefef6c6dec5aa20c9b3748671346898bf6122b9a9503ddfd130dcb51",
+  "archive": {
+    "fileCount": 168,
+    "bytes": 17446188,
+    "sourceCopiesVerified": 80,
+    "archivedHashesAndSetValid": true
+  },
+  "telemetryLimit": "48 saved shell commands and outputs reviewed; this format contains no image-open telemetry. Absence is not proof that image access was impossible or that claimed visual inspection occurred.",
+  "commands": [
+    {
+      "id": "item_1",
+      "line": 5,
+      "command": "/bin/bash -lc \"pwd && rg --files -g '\"'!*lock*'\"' -g '\"'!node_modules'\"' -g '\"'!'\"\\\\.git' | head -80\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 1970,
+      "outputSha256": "927cbf985bc17ca69beab9d9f42fa14a66ff296a191479df2d78e2d565931b68"
+    },
+    {
+      "id": "item_2",
+      "line": 7,
+      "command": "/bin/bash -lc 'cat /var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-tpXd60/.agents/skills/storyfolio/SKILL.md'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 4087,
+      "outputSha256": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98"
+    },
+    {
+      "id": "item_3",
+      "line": 9,
+      "command": "/bin/bash -lc 'if [ -f docs/story/handover.md ]; then cat docs/story/handover.md; fi'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 1889,
+      "outputSha256": "dd61846ba3b0c246c887b0ca05cfaca8d4cbee31a7e5383157eb82e907792a32"
+    },
+    {
+      "id": "item_4",
+      "line": 11,
+      "command": "/bin/bash -lc 'cat README.md docs/story/{facts,confirmations,storyboard,assets,evaluation-environment}.md'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 20913,
+      "outputSha256": "b77e57c13c6e98328c676e8be4ae6f57be5a420e09788f6c7de03829d6cb2189"
+    },
+    {
+      "id": "item_5",
+      "line": 13,
+      "command": "/bin/bash -lc 'cat package.json content/{story,formations,copy,looks,faces,links,experience,index}.ts* components/story/{stage,scene,chapter}.tsx'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 13645,
+      "outputSha256": "d8395fb74b35c8889558d581797e70ace3e9299ecb5b9cb2e7de718cc2c2fc73"
+    },
+    {
+      "id": "item_6",
+      "line": 15,
+      "command": "/bin/bash -lc 'cat app/page.tsx components/story/{story.tsx,story.css,pieces.tsx,types.ts} lib/story/{camera,formation}.ts content/{checks.json,extras.ts} scripts/check.mjs'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 39152,
+      "outputSha256": "af9b77a99e8c7f970d089029ef94ff1ac41898a6788b61c25a1a66c7397ddad2"
+    },
+    {
+      "id": "item_7",
+      "line": 17,
+      "command": "/bin/bash -lc 'npm ci'",
+      "exitCode": -1,
+      "status": "failed",
+      "outputBytes": 287,
+      "outputSha256": "cbfedab6c5f832e31c5242b4f42fc6b85f5d871588432f6f0965a09ec48150ad"
+    },
+    {
+      "id": "item_9",
+      "line": 20,
+      "command": "/bin/bash -lc \"cat app/globals.css app/layout.tsx lib/story/story.ts components/story/conductor.tsx scripts/check-lib.mjs | head -180; rg -n 'keyboard|heading|skip|look|screenshot|rest' scripts/shoot.mjs | head -65; git status --short; rg --files node_modules/next/dist/docs | head\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 13516,
+      "outputSha256": "06071d35ef462f2da290f46b0124fa4d87451274b09fc44d31477d1b4a8c1fea"
+    },
+    {
+      "id": "item_10",
+      "line": 22,
+      "command": "/bin/bash -lc 'cat docs/story/environment-setup.json; ls -la | head -25; ls /tmp | head; ls /var/tmp/storyfolio-comparison-runtime-20261012'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 2920,
+      "outputSha256": "9bc1f25774f9ecee013196c541a9132fa33d9bf1c010722dd7341d757b3792e7"
+    },
+    {
+      "id": "item_11",
+      "line": 24,
+      "command": "/bin/bash -lc 'npm ci --offline --cache=/tmp/storyfolio-npm-cache'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 456,
+      "outputSha256": "267401f88bba1785273bd3e5105aa55a982c995144e10685f5ca0f23165f74c2"
+    },
+    {
+      "id": "item_12",
+      "line": 26,
+      "command": "/bin/bash -lc \"cat > content/story.ts <<'EOF'\nimport type { StoryDef, BeatIdOf } from \\\"../lib/story/story.ts\\\";\nexport const story = {\n  pieces: 7,\n  chapters: [\n    { id: \\\"chapter-question\\\", number: 1, name: \\\"Code → physical check\\\", role: \\\"opening\\\", beats: [{ id: \\\"question\\\", height: 1.6 }] },\n    { id: \\\"chapter-scheduling\\\", number: 2, name: \\\"Organize a cycle\\\", role: \\\"how\\\", beats: [{ id: \\\"scheduling\\\", height: 1.6 }] },\n    { id: \\\"chapter-bench\\\", number: 3, name: \\\"Open the bench\\\", role: \\\"how\\\", beats: [{ id: \\\"bench\\\", height: 1.6 }] },\n    { id: \\\"chapter-evidence\\\", number: 4, name: \\\"Read the evidence\\\", role: \\\"outcomes\\\", beats: [{ id: \\\"evidence\\\", height: 1.8 }] },\n    { id: \\\"chapter-scope\\\", number: 5, name: \\\"Bound the answer\\\", role: \\\"close\\\", beats: [{ id: \\\"scope\\\", height: 1.6 }] },\n  ],\n} as const satisfies StoryDef;\nexport type BeatId = BeatIdOf<typeof story>;\nEOF\ncat > content/copy.ts <<'EOF'\nexport const copy = {\n  lang: \\\"en\\\",\n  metadata: { title: \\\"Ada Mensah · Code to bench\\\", description: \\\"An illustrative five-beat prototype about embedded firmware, bench checks and the limits of evidence.\\\" },\n  railLabel: \\\"Five beats\\\", lookLabel: \\\"Appearance\\\", fpsLabel: \\\"Frames per second\\\",\n  skipLabel: \\\"Skip to the answer\\\",\n  beats: {\n    question: {\n      title: \\\"How does code become a physical check?\\\",\n      body: \\\"Ada Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled its power states and built the bring-up fixture.\\\",\n      note: \\\"Bring-up means checking a new board’s basic operation. Follow the apparatus to see how a code decision connects to something observable on the bench.\\\",\n      detail: \\\"Illustrative apparatus · fictional subject and sensor. This is an explanatory model, not an actual Mosslink device.\\\",\n    },\n    scheduling: {\n      title: \\\"Give each activity its place.\\\",\n      body: \\\"Sleep → Measure → Transmit → repeat. This teaching loop shows how scheduling organizes different activities into a cycle. It gives a reader an order of behavior to inspect when code meets a board.\\\",\n      note: \\\"Ada scheduled power states. This simplified sequence is illustrative, not recovered Mosslink firmware or measured timing. No durations or current values are supplied.\\\",\n      detail: \\\"The three colored towers mark the teaching sequence; their spacing and heights carry no timing or current data.\\\",\n    },\n    bench: {\n      title: \\\"Make the board accessible.\\\",\n      body: \\\"A firmware command asks the physical board to act. The bring-up fixture provides access so that its response can be observed on the bench. The fixture helps check behavior; the board’s circuitry still performs the device’s work.\\\",\n      note: \\\"Ada: firmware, power-state scheduling and bring-up fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry interfacing with sensor signals.\\\",\n      detail: \\\"The opened model explains command → board response → fixture access → bench observation. It is not a wiring plan or a public debugging incident.\\\",\n    },\n    evidence: {\n      title: \\\"Two claims. Two kinds of support.\\\",\n      body: \\\"Measured sleep and transmit current, together with an assumed reporting interval, support a two-year endurance projection. Separately, the longest continuous bench run was 72 hours: an observed duration.\\\",\n      note: \\\"The 72-hour run does not validate two years of endurance. Neither path establishes field conditions or customer deployment. No original measurements, current trace, spreadsheet or run notebook is supplied.\\\",\n      detail: \\\"Left: measured inputs + assumed interval → projection. Right: continuous bench run → observation. The display labels are explanatory, not recovered instrument readings.\\\",\n    },\n    scope: {\n      title: \\\"A connection you can check. A claim with limits.\\\",\n      body: \\\"Ada’s firmware and scheduling decisions connect to an observable bench check through the fixture she built. That is the contribution this story can support—not ownership of the whole sensor.\\\",\n      note: \\\"Forty engineering samples were assembled; six were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished.\\\",\n      detail: \\\"State tables, timing diagrams, current traces and bench checklists are working documents. None is supplied here as original evidence. This fictional local prototype is ready for review, not publication.\\\",\n    },\n  },\n};\nEOF\ncat > content/looks.ts <<'EOF'\nimport type { Look } from \\\"../lib/story/looks.ts\\\";\nexport const looks = [{\n  id: \\\"bench\\\", name: \\\"Bench\\\", ground: \\\"#e8e7df\\\", ink: \\\"#192d30\\\", faint: \\\"#475b5b\\\", accent: \\\"#96502b\\\",\n  surface: { color: \\\"#d8ded8\\\", roughness: 0.76, glows: false },\n  lights: { ambient: 1.6, key: 3, fill: 1.1, rim: 1.8 }, floor: \\\"none\\\", shadows: true,\n}] as const satisfies readonly Look[];\nEOF\ncat > content/formations.ts <<'EOF'\nimport { blankFormation, type BeatFormation, type Formation, type Pose } from \\\"../lib/story/formation.ts\\\";\nimport { story, type BeatId } from \\\"./story.ts\\\";\nconst p = (x: number, y: number, z: number, w: number, h: number, rx = 0): Pose => ({ position: [x,y,z], rotation: [rx,0,0], size: [w,h] });\nfunction f(pieces: Pose[], span = 7, rise = 4.8, turn: [number,number] = [0.17,-0.28]): Formation {\n  return { ...blankFormation(story.pieces), pieces, span, rise, turn, anchor: [0.48,0.17], near: 8, floor: -3, sway: [0.06,0.12,0] };\n}\nconst assembled = [p(0,-1.45,0,5.6,.35), p(-.7,-.65,.4,2.8,1.6,-.65), p(1.7,.1,-.4,1.65,1.9), p(-1.7,.75,-.45,.65,1), p(-.7,.75,-.45,.65,1), p(.3,.75,-.45,.65,1), p(-.7,-.2,.7,2.8,.6)];\nexport const formations = {\n question: { rest: f(assembled) },\n scheduling: { rest: f([assembled[0],p(-.5,-.75,.3,2.4,1.2,-.65),p(2,-.25,-.3,1.3,1.5),p(-1.8,1,.1,.8,1.4),p(-.5,1,.1,.8,1.4),p(.8,1,.1,.8,1.4),p(-.5,-.3,.6,2.4,.6)]) },\n bench: { rest: f([p(0,-1.75,0,5.6,.35),p(-1.5,.25,.5,2.6,1.6,-.25),p(1.8,.6,-.2,1.65,1.9),p(-1.7,1.8,-.5,.6,.8),p(-.7,1.8,-.5,.6,.8),p(.3,1.8,-.5,.6,.8),p(-1.5,-.95,.7,2.6,.6)],7.5,5.5,[.1,-.2]) },\n evidence: { rest: f([p(0,-1.85,0,6.2,.35),p(1.7,-.8,.4,2.1,1.3,-.4),p(1.7,.85,-.1,2,1.7),p(-2,1.3,0,.85,1),p(-.8,1.3,0,.85,1),p(-1.4,-.05,.1,1.4,1.1),p(1.7,-1.25,.8,2.1,.5)],8,5.2,[.12,-.15]) },\n scope: { rest: f(assembled,7,4.8,[.18,.18]) },\n} satisfies Record<BeatId, BeatFormation>;\nEOF\ncat > content/faces.ts <<'EOF'\nimport type { FaceDef } from \\\"@/components/story/types\\\";\nimport { story } from \\\"./story\\\";\nconst labels = [\\\"FIXTURE\\\", \\\"BOARD\\\", \\\"BENCH\\\", \\\"SLEEP\\\", \\\"MEASURE\\\", \\\"TRANSMIT\\\", \\\"ACCESS\\\"];\nconst colors = [\\\"#bfc9c4\\\", \\\"#245e55\\\", \\\"#203e42\\\", \\\"#547e81\\\", \\\"#b57937\\\", \\\"#b9573f\\\", \\\"#c4ccc6\\\"];\nexport const faces: FaceDef[] = story.chapters.flatMap(chapter => chapter.beats.flatMap(beat => labels.map((label,piece) => ({\n id: \"'`${beat.id}-${piece}`, beat: beat.id, piece,\n draw(ctx, w, h) {\n   ctx.fillStyle = colors[piece]; ctx.fillRect(0,0,w,h);\n   ctx.strokeStyle = \"#ffffff35\"; ctx.lineWidth = 3; ctx.strokeRect(w*.06,h*.06,w*.88,h*.88);\n   ctx.fillStyle = \"#faf8ea\"; ctx.textAlign = \"center\";\n   ctx.font = `600 ${w*.1}px system-ui`;\n   const evidence = [\"FIXTURE\", \"BENCH RUN\", \"72 h\", \"CURRENT\", \"INTERVAL\", \"2 YEARS\", \"ACCESS\"];\n   ctx.fillText(beat.id === \"evidence\" ? evidence[piece] : label,w*.5,h*.43);\n   ctx.font = `${w*.055}px ui-monospace, monospace`;\n   const sub = beat.id === \"evidence\" ? [\"ILLUSTRATIVE\", \"OBSERVED\", \"OBSERVED\", \"MEASURED\", \"ASSUMED\", \"PROJECTED\", \"ILLUSTRATIVE\"][piece] : piece === 2 ? \"OBSERVATION\" : \"ILLUSTRATIVE\";\n   ctx.fillText(sub,w*.5,h*.62);\n }\n})))));\nEOF\ncat > content/apparatus.tsx <<'\"'EOF'\n\\\"use client\\\";\nimport type { PieceProps } from \\\"@/components/story/types\\\";\nfunction Box({ size, position = [0,0,0], color }: { size: [number,number,number]; position?: [number,number,number]; color: string }) {\n return <mesh position={position} castShadow receiveShadow><boxGeometry args={size}/><meshStandardMaterial color={color} roughness={.65} metalness={.15}/></mesh>;\n}\nexport function Apparatus({ index, material }: PieceProps) {\n if (index === 0) return <>\n   <Box size={[1,1,1.65]} color=\\\"#abb8b3\\\"/>\n   {[-.42,.42].map(x => <Box key={x} size={[.055,.35,1.65]} position={[x,.65,0]} color=\\\"#536d6b\\\"/>)}\n   {[-.38,.38].flatMap(x => [-.6,.6].map(z => <Box key={\"'`${x}${z}`} size={[.12,.45,.2]} position={[x,-.65,z]} color=\"#263e40\"/>))}\n </>;\n if (index === 1) return <>\n   <Box size={[1,1,.12]} color=\"#245e55\"/>\n   <mesh position={[0,0,.065]} material={material}><planeGeometry args={[1,1]}/></mesh>\n   <Box size={[.23,.23,.15]} position={[-.23,-.18,.17]} color=\"#172f31\"/>\n   <Box size={[.12,.25,.13]} position={[.28,-.15,.15]} color=\"#bfc9ba\"/>\n   {Array.from({length:8},(_,i) => <Box key={i} size={[.045,.09,.12]} position={[-.4+i*.11,-.48,.13]} color=\"#d8b167\"/>)}\n </>;\n if (index === 6) return <>\n   <Box size={[1,.25,.25]} color=\"#c5ccbd\"/>\n   {[-.42,-.25,0,.25,.42].map(x => <Box key={x} size={[.025,.8,.025]} position={[x,-.36,0]} color=\"#b39153\"/>)}\n   {[-.46,.46].map(x => <Box key={x} size={[.09,1,.18]} position={[x,-.32,-.08]} color=\"#536b69\"/>)}\n </>;\n if (index === 2) return <>\n   <Box size={[1,1,.7]} color=\"#bfc8bd\"/>\n   <mesh position={[0,.13,.36]} material={material}><planeGeometry args={[.88,.68]}/></mesh>\n   {[-.3,0,.3].map(x => <mesh key={x} position={[x,-.36,.39]} rotation={[Math.PI/2,0,0]}><cylinderGeometry args={[.065,.065,.1,16]}/><meshStandardMaterial color=\"#233f40\"/></mesh>)}\n   <Box size={[1.12,.09,.8]} position={[0,-.56,0]} color=\"#536b69\"/>\n </>;\n const color = [\"#547e81\",\"#b57937\",\"#b9573f\"][index-3];\n return <>\n   <mesh castShadow><cylinderGeometry args={[.38,.44,1,24]}/><meshStandardMaterial color={color} roughness={.45}/></mesh>\n   <mesh position={[0,.5,0]}><sphereGeometry args={[.32,24,16]}/><meshStandardMaterial color={color} roughness={.28}/></mesh>\n   <mesh position={[0,-.05,.44]} material={material}><planeGeometry args={[.95,.5]}/></mesh>\n   <Box size={[1,.1,1]} position={[0,-.55,0]} color=\"#536b69\"/>\n </>;\n}\nEOF\ncat > content/index.ts <<'\"'EOF'\nimport type { StoryBundle } from \\\"@/components/story/types\\\";\nimport { story } from \\\"./story\\\";\nimport { formations } from \\\"./formations\\\";\nimport { faces } from \\\"./faces\\\";\nimport { looks } from \\\"./looks\\\";\nimport { copy } from \\\"./copy\\\";\nimport { Apparatus } from \\\"./apparatus\\\";\nexport const bundle = { story, formations, faces, looks, copy, Piece: Apparatus, defaultLook: \\\"bench\\\" } satisfies StoryBundle;\nEOF\ncat > content/links.ts <<'EOF'\nexport const links = [];\nEOF\ncat > content/extras.ts <<'EOF'\nexport const extras = [];\nEOF\nprintf '{}\\\\n' > content/checks.json\ncat > app/page.tsx <<'EOF'\nimport { Chapter, Beat, Kicker, Title, Body, Note } from \\\"@/components/story/chapter\\\";\nimport { Experience } from \\\"@/content/experience\\\";\nimport { story } from \\\"@/content/story\\\";\nimport { copy } from \\\"@/content/copy\\\";\nexport default function Home() {\n return <main><a id=\\\"story-skip\\\" className=\\\"story-skip\\\" href=\\\"#chapter-scope\\\">{copy.skipLabel}</a><Experience>\n   <header className=\\\"bench-masthead\\\"><span>ADA MENSAH</span><span>CODE / BENCH</span><span>LOCAL PROTOTYPE · 01</span></header>\n   {story.chapters.map((chapter,index) => <Chapter key={chapter.id} id={chapter.id}>{chapter.beats.map(beat => {\n     const words = copy.beats[beat.id];\n     const image = beat.id === \\\"scheduling\\\" ? \\\"power-states\\\" : beat.id === \\\"bench\\\" ? \\\"bring-up-fixture\\\" : null;\n     return <Beat key={beat.id} id={beat.id} story={story} fallback={image ?\n       // Supplied local teaching diagrams; their labels are preserved.\n       // eslint-disable-next-line @next/next/no-img-element\n       <img src={\"'`/assets/${image}.svg`} width=\"720\" height=\"620\" alt={beat.id === \"scheduling\" ? \"Illustrative Sleep, Measure, Transmit teaching loop, not actual firmware or measured timing.\" : \"Illustrative relationship between firmware command, board, fixture access and bench observation, not a wiring plan.\"}/> : undefined}>\n       <Kicker number={chapter.number}>{chapter.name}</Kicker>\n       <Title id={`${chapter.id}-title`} as={index === 0 ? \"h1\" : \"h2\"}>{words.title}</Title>\n       <Body>{words.body}</Body><Note>{words.note}</Note>\n       <p className=\"apparatus-key\">{words.detail}</p>\n     </Beat>;\n   })}</Chapter>)}\n </Experience></main>;\n}\nEOF\ncat >> app/globals.css <<'\"'EOF'\n.bench-masthead { position: absolute; top: 0; left: 0; width: 100%; z-index: 3; display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem 4vw; font: .7rem ui-monospace, monospace; letter-spacing: .12em; border-bottom: 1px solid #192d3025; pointer-events: none; }\n.story-caption { padding: 2.5rem 4vw; }\n.story-caption-text { max-width: 31rem; }\n.story-title { font-size: clamp(2.1rem, 3.6vw, 3.8rem); }\n.story-body { font-size: 1rem; line-height: 1.55; }\n.story-note { line-height: 1.5; margin-bottom: 0; }\n.apparatus-key { border-top: 1px solid #192d3030; padding-top: .75rem; font: .7rem/1.5 ui-monospace, monospace; color: #475b5b; margin: 1rem 0 0; }\n.story[data-scene=\\\"on\\\"] .story-caption-text::before { inset: -1.25rem; filter: blur(1rem); opacity: .97; }\n.story-rail { right: 1vw; top: 20%; }\n.story-rail a { min-height: 44px; }\n@media (max-width: 767px) {\n .bench-masthead { padding: 1rem 1.25rem; font-size: .6rem; }\n .bench-masthead span:nth-child(2) { display: none; }\n .story-caption { padding: 1.25rem; }\n .story-title { font-size: 2rem; }\n .story-body { font-size: .9rem; line-height: 1.45; margin-top: .8rem; }\n .story-note { font-size: .78rem; line-height: 1.4; margin-top: .65rem; }\n .apparatus-key { font-size: .63rem; line-height: 1.4; margin-top: .65rem; padding-top: .5rem; }\n .story-kicker { font-size: .68rem; }\n}\n@media (min-width: 768px) and (max-height: 600px) {\n .story-caption { position: sticky; padding-block: 1.25rem; }\n .story-caption-text { max-width: 43vw; }\n .story-title { font-size: 2.25rem; }\n .story-body { font-size: .85rem; line-height: 1.4; margin-top: .7rem; }\n .story-note { font-size: .75rem; line-height: 1.4; margin-top: .65rem; }\n .apparatus-key { font-size: .62rem; margin-top: .65rem; }\n}\nEOF\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 0,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "item_13",
+      "line": 31,
+      "command": "/bin/bash -lc 'npm test'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 31944,
+      "outputSha256": "fbc6191b5e9ad45b04702bcdda28b250d8d514c5571d935db886a23b20b889a0"
+    },
+    {
+      "id": "item_15",
+      "line": 32,
+      "command": "/bin/bash -lc 'npm run browsers'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 419,
+      "outputSha256": "d1478494eeb4887e65735b76ea44bb223c5f6cbda4be1bb641dfce5c20d2c190"
+    },
+    {
+      "id": "item_14",
+      "line": 33,
+      "command": "/bin/bash -lc 'npm run typecheck'",
+      "exitCode": 2,
+      "status": "failed",
+      "outputBytes": 527,
+      "outputSha256": "23ad7326d8554678b27d945e40b7f406a835317f70ca2caa74102a54b164d60c"
+    },
+    {
+      "id": "item_16",
+      "line": 34,
+      "command": "/bin/bash -lc 'npm run lint'",
+      "exitCode": 1,
+      "status": "failed",
+      "outputBytes": 580,
+      "outputSha256": "e30d9cf207a1d819fbd8ad76b4bb2a3c5ddb360f8b57fee4c9be5b3e12ae40f2"
+    },
+    {
+      "id": "item_17",
+      "line": 36,
+      "command": "/bin/bash -lc 'npm run check'",
+      "exitCode": 1,
+      "status": "failed",
+      "outputBytes": 967,
+      "outputSha256": "85124a162c5e6ffb5fb386d8fa06a023ccdf3be6b459a6fb2d65b3a24087705f"
+    },
+    {
+      "id": "item_18",
+      "line": 39,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='content/faces.ts'\ns=open(p).read().replace('})))));','}))));')\nopen(p,'w').write(s)\nPY\nnpm run typecheck\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 475,
+      "outputSha256": "eb1c89c16f83a773760e162b0aba149e39cff8c0597a5a1d124e83b507d0943e"
+    },
+    {
+      "id": "item_19",
+      "line": 40,
+      "command": "/bin/bash -lc 'npm run lint'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 389,
+      "outputSha256": "ca556340a827459dee594bd04475459c8a7058d530cbfa1c565e6af670926ba3"
+    },
+    {
+      "id": "item_22",
+      "line": 44,
+      "command": "/bin/bash -lc \"cat .git/config .git/HEAD; cat .gitignore; sed -n '60,120p' scripts/check-lib.mjs; head -45 scripts/review-sheets.mjs\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 3443,
+      "outputSha256": "84754c839fd45c8ee61cf09894a844154c631a8d2582ddde13eb8651942244b4"
+    },
+    {
+      "id": "item_23",
+      "line": 46,
+      "command": "/bin/bash -lc \"ls checks; sed -n '38,65p' scripts/check-lib.mjs; tail -25 scripts/review-sheets.mjs\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 4062,
+      "outputSha256": "a0adbff1b4f67441a0f64cb97e4f66b8bc8f7a54261a11ebd3f098eca995b836"
+    },
+    {
+      "id": "item_24",
+      "line": 48,
+      "command": "/bin/bash -lc 'rg --files checks/2026-10-11T22-51-19-710Z | head -25'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 436,
+      "outputSha256": "183ed08d55950a8eb5384b67546627bea70fb8dcf196143e29063b2fbfc04e68"
+    },
+    {
+      "id": "item_25",
+      "line": 50,
+      "command": "/bin/bash -lc \"cat > docs/story/decided-for-you.md <<'EOF'\n# Prototype decisions · 12 October 2026\n\nThe user explicitly authorized building past Storyfolio’s planning endpoint for\none local five-beat diagnostic. The supplied fictional approval and storyboard\nsupply meanings, not an earlier appearance. No new factual approval is claimed.\n\n- **Object:** a generic bench tray with a board, observation instrument,\n  three teaching-state towers and a contact bridge, seven engine pieces.\n  Solid boxes, cylinders, pins and knobs make a physical apparatus recognizable;\n  no cards or sheets serve as the primary metaphor. Geometry is invented teaching\n  material, not Mosslink’s circuit, actual fixture, topology or wiring.\n  Change \"'`content/apparatus.tsx` and update the seven poses per beat together.\n- **Composition:** assembly introduces the relationship; towers rise for the\n  illustrative cycle; board and bridge separate for fixture access; the evidence\n  beat separates current/interval/projection on the left from observed bench\n  duration on the right; assembly returns at the end. Positions and dimensions\n  never encode currents, durations, sample counts or actual hardware dimensions.\n  Change `content/formations.ts` to revise arrangements and camera framing.\n- **Appearance:** one warm grey ground, teal board and instrument, with teal,\n  ochre and rust teaching towers. System serif headings and system sans prose\n  pair an editorial explanation with an apparatus. No external fonts or assets.\n  Change `content/looks.ts` and `app/globals.css` for the single appearance.\n- **Interaction:** scroll and the inherited chapter rail; no simulated instrument\n  controls or additional destinations. The instrument knobs are illustrative\n  geometry in a pointer-inert, aria-hidden canvas. The fixed focus-only skip\n  link follows the supplied identity and points to `chapter-scope`.\n- **Accessibility:** all claims and qualifications are server-rendered HTML;\n  supplied explanatory SVGs appear in scene-failure modes at their relevant\n  beats. Reduced motion uses the engine’s discrete still formations. Narrow\n  viewports use the measured caption band; short wide views retain the scene\n  beside compact text. Canvas words supplement the HTML; no measurement relies\n  on reading a texture. No optional extras or overlay links are needed, so the\n  plain engine’s optional fixture probes were removed from `content/checks.json`.\n- **Scope:** one reviewable appearance, no contact/CV/publication and no next\n  stop in a six-stop journey. Storyfolio’s planning-only endpoint is overridden\n  by the user for this evaluation only; its factual and provenance rules remain.\nEOF\ncat > docs/story/concepts.md <<'\"'EOF'\n# Authorized concept\n\nThe supplied fictional confirmation and the user’s current instruction select\none illustrative physical bench apparatus. This diagnostic does not require\nthree concept proposals or a visual-choice stop. The implementation chooses\nits own seven-piece assembly, palette and formations; no earlier design was\nconsulted. See \"'`decided-for-you.md` for rationale and revision locations.\nEOF\ncat >> docs/story/assets.md <<'\"'EOF'\n\n## Prototype-generated explanatory model\n\n\"'`content/apparatus.tsx` generates local Three.js geometry for a generic tray,\nboard, observation instrument, teaching-state towers and contact bridge.\n`content/faces.ts` draws local canvas labels. These are newly authored for this\nprototype under the repository’s MIT license, using no external inputs. They\nare an illustrative apparatus, not a device photo, actual circuitry, actual\ninstrument reading or recovered evidence. In the evidence pose the instrument\nsays “72 h / observed” and the towers say “current / measured”, “interval /\nassumed” and “2 years / projected”; HTML explicitly identifies these as\nexplanatory labels and supplies the complete claim limits. Other visible faces\nsay “illustrative”. The supplied SVG files are unchanged, used only as static\nfallback teaching diagrams in the scheduling and bench beats. No derivative\nSVG, external asset or downloaded font was created.\nEOF\ncat >> docs/story/storyboard.md <<'\"'EOF'\n\n## Implemented interpretation\n\nThe five IDs and meanings above remain the contract. Exact prototype headings\nand complete explanations are in \"'`content/copy.ts`; HTML rendering is in\n`app/page.tsx`. One seven-piece physical apparatus moves from assembly to\nteaching cycle, opened fixture access, separated evidence paths, and returned\nassembly. This source implementation is new; supplied fictional storyboard\napproval does not mean acceptance of its copy or appearance. See the handover\nfor actual validation and unresolved review work.\nEOF'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 0,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "item_26",
+      "line": 52,
+      "command": "/bin/bash -lc 'rg --files checks/2026-10-11T22-51-19-710Z/bench-phone; cat checks/2026-10-11T22-51-19-710Z/bench-wide/report.json | tail -25'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 512,
+      "outputSha256": "5a27b346e2a7fe4e455919b0dd4078c9b0d62362bb3971fe902830d17cd9d0ac"
+    },
+    {
+      "id": "item_29",
+      "line": 56,
+      "command": "/bin/bash -lc \"cat > scripts/prototype-review.mjs <<'EOF'\n// Additional local diagnostics for this five-beat prototype, not real-person approval.\nimport { chromium } from 'playwright-core';\nimport { mkdir, writeFile } from 'node:fs/promises';\nimport { beatRestSamples } from './check-lib.mjs';\nconst out = 'checks/prototype-review';\nawait mkdir(out, { recursive: true });\nconst browser = await chromium.launch({ args: ['--no-sandbox'] });\nconst report = { problems: [], captures: [], keyboard: {}, content: [] };\nconst expected = ['question','scheduling','bench','evidence','scope'];\ntry {\n const page = await browser.newPage({viewport:{width:1280,height:480}});\n await page.goto('http://127.0.0.1:3100');\n await page.waitForSelector('canvas');\n await page.waitForTimeout(1500);\n await page.keyboard.press('Tab');\n report.keyboard.skip = await page.locator('#story-skip').evaluate(el => ({ focused: el === document.activeElement, text: el.textContent, href: el.getAttribute('href'), top: el.getBoundingClientRect().top }));\n if (\"'!report.keyboard.skip.focused || report.keyboard.skip.top < 0) report.problems.push('\"'Skip link not visibly keyboard-focused');\n await page.screenshot({path:\"'`${out}/skip-focused.png`});\n await page.keyboard.press('\"'Enter');\n if (new URL(page.url()).hash \"'!== '\"'#chapter-scope') report.problems.push('Skip link did not navigate to answer');\n await page.locator('.story-rail a[href=\\\"#chapter-question\\\"]').click();\n report.keyboard.railPointer = new URL(page.url()).hash === '#chapter-question';\n await page.locator('.story-rail a[href=\\\"#chapter-bench\\\"]').focus();\n await page.keyboard.press('Enter');\n report.keyboard.railKeyboard = new URL(page.url()).hash === '#chapter-bench';\n if (\"'!report.keyboard.railPointer || !report.keyboard.railKeyboard) report.problems.push('\"'Rail navigation failed');\n const boxes = await page.locator('[data-beat]').evaluateAll(els => els.map(el => ({top:el.getBoundingClientRect().top+scrollY,height:el.getBoundingClientRect().height})));\n const samples = beatRestSamples(boxes,480);\n for(let i=0;i<samples.length;i++) {\n  await page.evaluate(y => scrollTo(0,y),samples[i].samples[0].top);\n  await page.waitForTimeout(1200);\n  const file = \"'`${out}/short480-${expected[i]}.png`;\n  await page.screenshot({path:file}); report.captures.push(file);\n }\n await page.close();\n for(const mode of ['\"'no-js','no-webgl']) {\n  const context = await browser.newContext({javaScriptEnabled:mode \"'!== '\"'no-js'});\n  if(mode === 'no-webgl') await context.addInitScript(() => { const original=HTMLCanvasElement.prototype.getContext; HTMLCanvasElement.prototype.getContext=function(type,...args) {return /webgl/.test(type) ? null : original.call(this,type,...args);}; });\n  const p=await context.newPage(); await p.goto('http://127.0.0.1:3100');\n  const observed=await p.locator('[data-beat]').evaluateAll(els => els.map(el=>({id:el.dataset.beat,text:el.textContent,headings:el.querySelectorAll('h1,h2').length})));\n  if(observed.map(b=>b.id).join() \"'!== expected.join() || observed.some(b=>b.headings !== 1)) report.problems.push(`${mode}: missing beat or heading`);\n  const all = observed.map(b=>b.text).join('\"' ');\n  for(const phrase of ['A colleague','assumed reporting interval','72 hours','does not validate','none went to customers','qualification is unfinished','illustrative']) if(\"'!all.includes(phrase)) report.problems.push(`${mode}: missing ${phrase}`);\n  report.content.push({mode,beats:observed.map(({id,headings})=>({id,headings})),h1:await p.locator('\"'h1').count(),h2:await p.locator('h2').count()});\n  await context.close();\n }\n} finally { await browser.close(); }\nawait writeFile(\"'`${out}/report.json`,JSON.stringify(report,null,2)+'\"'\\\\n');\nconsole.log(JSON.stringify(report,null,2));\nif(report.problems.length) process.exitCode=1;\nEOF\nnode scripts/prototype-review.mjs\"",
+      "exitCode": 1,
+      "status": "failed",
+      "outputBytes": 1141,
+      "outputSha256": "1aea4e1b6294f2996b05babe20715b2f1592e587c7a4de6386a35aad72c6572a"
+    },
+    {
+      "id": "item_30",
+      "line": 58,
+      "command": "/bin/bash -lc \"ps -ef | rg 'next|shoot|check.mjs'\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 2268,
+      "outputSha256": "63cc53c922081c213a962efb3f5336084129dffb8ee28c220033936985ce9246"
+    },
+    {
+      "id": "item_28",
+      "line": 60,
+      "command": "/bin/bash -lc 'npm run start -- --hostname 127.0.0.1 --port 3100'",
+      "exitCode": 130,
+      "status": "failed",
+      "outputBytes": 580,
+      "outputSha256": "2a6317ee476297a9ccd55cb23a49a03c4da40721377b5c300723247e43ac32f0"
+    },
+    {
+      "id": "item_31",
+      "line": 61,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='scripts/prototype-review.mjs'\ns=open(p).read().replace(\\\"import { chromium }\\\", \\\"import { spawn } from 'node:child_process';\\\\nimport { chromium }\\\")\ns=s.replace(\\\"const browser = await chromium.launch\\\", \\\"const server = spawn(process.execPath, ['node_modules/next/dist/bin/next','start','--hostname','127.0.0.1','--port','3100'], {stdio:'ignore'});\\\\nfor (let i=0;i<80;i++) {\\\\n try { if ((await fetch('http://127.0.0.1:3100')).ok) break; } catch {}\\\\n await new Promise(resolve => setTimeout(resolve,250));\\\\n}\\\\nconst browser = await chromium.launch\\\")\ns=s.replace('finally { await browser.close(); }','finally { await browser.close(); server.kill(); }')\nopen(p,'w').write(s)\nPY\nnode scripts/prototype-review.mjs\"",
+      "exitCode": 1,
+      "status": "failed",
+      "outputBytes": 1335,
+      "outputSha256": "302e235afab421f454176a1b40756735c4d02e6b5c93ac79dd47b3edae21f726"
+    },
+    {
+      "id": "item_32",
+      "line": 63,
+      "command": "/bin/bash -lc 'node scripts/review-sheets.mjs checks/2026-10-11T22-51-19-710Z checks/review-main'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 225,
+      "outputSha256": "e5634c355d3b16fc33db0f338739942a72922be79a6bcac9d0b3874170b46331"
+    },
+    {
+      "id": "item_33",
+      "line": 65,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='scripts/prototype-review.mjs'\ns=open(p).read().replace('samples[i].samples[0].top','samples[i][0].top')\nopen(p,'w').write(s)\nPY\nnode scripts/prototype-review.mjs\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 2087,
+      "outputSha256": "8d2e99ebf04f64a6fa7aace78ec9a824521f58f5a2016a8862e5bd30abfee057"
+    },
+    {
+      "id": "item_21",
+      "line": 66,
+      "command": "/bin/bash -lc 'npm run check'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 1222,
+      "outputSha256": "23f000bad9e14dbbe303746d98f499acd21ed6cc60b9e43cf831818fb17e7548"
+    },
+    {
+      "id": "item_35",
+      "line": 70,
+      "command": "/bin/bash -lc 'node scripts/review-sheets.mjs checks/2026-10-11T22-51-19-710Z checks/review-complete'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 225,
+      "outputSha256": "3d847bea2b92c7db7980be2422861c2a8a30378312f5f25a48cb757cbd7d5abd"
+    },
+    {
+      "id": "item_36",
+      "line": 71,
+      "command": "/bin/bash -lc 'node scripts/review-sheets.mjs checks/prototype-review checks/review-extra'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 225,
+      "outputSha256": "27f5ed716ae75228e7e2ddcfc1afa591a446d219469c553b59775607a06791bb"
+    },
+    {
+      "id": "item_37",
+      "line": 73,
+      "command": "/bin/bash -lc 'npm run lint'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 389,
+      "outputSha256": "ca556340a827459dee594bd04475459c8a7058d530cbfa1c565e6af670926ba3"
+    },
+    {
+      "id": "item_38",
+      "line": 75,
+      "command": "/bin/bash -lc 'cat components/story/rail.tsx'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 452,
+      "outputSha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+    },
+    {
+      "id": "item_40",
+      "line": 78,
+      "command": "/bin/bash -lc 'git init --bare .prototype-git'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 730,
+      "outputSha256": "eb8993a4840b9a36f03a88004f5f181240c81a542de9bd70ed55a1096f619f65"
+    },
+    {
+      "id": "item_42",
+      "line": 81,
+      "command": "/bin/bash -lc \"cat >> .gitignore <<'EOF'\n.prototype-git/\nEOF\ncat >> docs/story/decided-for-you.md <<'EOF'\n- **Short-height review adjustment:** at 480 pixels high, an active rail label\n  crossed the instrument. The rail becomes a top row of numbers on short wide\n  screens; full labels remain in the accessibility tree. This preserves\n  keyboard/pointer navigation without covering the apparatus.\n- **Local version history:** the evaluation mounts \"'`.git` as an empty read-only\n  placeholder, so normal `git status` reports no repository. To satisfy the\n  instruction to commit lasting context, local Git metadata lives in\n  `.prototype-git/` instead. Inspect with\n  `git --git-dir=.prototype-git --work-tree=. log` or `status`. It is local only;\n  no remote is configured and no publication is performed.\nEOF'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 0,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "item_44",
+      "line": 84,
+      "command": "/bin/bash -lc 'ls checks; git --git-dir=.prototype-git --work-tree=. status --short --untracked-files=no'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 150,
+      "outputSha256": "e73fe642525bb7e9d456aba3768f546a0e387b76b97ee14c75cd22e1e05d0c8c"
+    },
+    {
+      "id": "item_43",
+      "line": 85,
+      "command": "/bin/bash -lc 'node scripts/prototype-review.mjs'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 2087,
+      "outputSha256": "8d2e99ebf04f64a6fa7aace78ec9a824521f58f5a2016a8862e5bd30abfee057"
+    },
+    {
+      "id": "item_45",
+      "line": 87,
+      "command": "/bin/bash -lc 'rg --files checks/2026-10-11T22-55-05-707Z | sort'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 1463,
+      "outputSha256": "b93ad298ffd9e7d40a5ca27ab0933f0d97d3a71ceb39ea9b58580566873d29c8"
+    },
+    {
+      "id": "item_46",
+      "line": 89,
+      "command": "/bin/bash -lc 'rg --files checks/prototype-review | sort'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 303,
+      "outputSha256": "92cbc2e410a8b482abe1e3602f17828a7f7d0bb60291d4a6520561a75b022843"
+    },
+    {
+      "id": "item_47",
+      "line": 91,
+      "command": "/bin/bash -lc \"cat > docs/story/handover.md <<'EOF'\n# Local five-beat prototype handover\n\n## Authorization and factual boundary\n\nThe user asked to “Use Storyfolio and the supplied approved facts and storyboard\nto build a local, five-beat prototype” and explicitly allowed continuing beyond\nthe skill’s planning-only endpoint for this evaluation. They authorized one\nappearance using the supplied engine and an illustrative physical apparatus.\nThey said this is a prototype diagnostic, not completion of the six-stop\njourney or permission to publish, and to stop with the reviewable prototype.\n\nAda Mensah and Mosslink remain fictional evaluation subjects. The unchanged\ncorrected \"'`facts.md` and fictional `confirmations.md` are the factual boundary.\nThere is no real-person testimony or visual/wording acceptance. The current\nimplementation is new. No earlier visual design or external assets were used.\n\n## Implementation\n\nAll five stable beat IDs are implemented in order: `question`, `scheduling`,\n`bench`, `evidence`, `scope`. One `h1` and four `h2`s sit in corresponding `Beat`\ncomponents. The fixed focus-only `#story-skip` says “Skip to the answer” and\nlinks to the actual `#chapter-scope` section. All claims and limits are HTML.\n\n- `content/story.ts`: five chapters and seven engine pieces.\n- `content/copy.ts`, `app/page.tsx`: new headings, complete explanations,\n  contribution attribution, projection/observation distinction and scope.\n- `content/apparatus.tsx`: solid tray, board, observation instrument, three\n  teaching-state towers and contact bridge, modeled with local primitives.\n- `content/formations.ts`: assembled → teaching cycle → opened fixture access\n  → separated evidence paths → returned assembly. Spatial proportions have\n  no measured meaning. Scroll uses the supplied engine; it is not a circuit\n  or wiring simulation.\n- `content/faces.ts`: locally generated explanatory labels. “72 h” is labeled\n  observed; “2 years” projected; current measured; interval assumed. These\n  labels are not actual instrument readings. HTML visibly states this.\n- `content/looks.ts`, `app/globals.css`: one grey/teal/ochre/rust appearance,\n  system fonts, phone framing and compact short-height text/navigation.\n- Supplied SVGs remain unchanged and appear as teaching fallbacks for\n  scheduling and bench. No original measurement, trace, firmware, spreadsheet,\n  run notebook or actual apparatus image is supplied or fabricated.\n- The supplied engine is retained; customizations live in content and page/CSS.\n  No optional extras, simulated controls or overlay links are used.\n\nDesign rationale and revision paths are in `decided-for-you.md`; concept\nselection is in `concepts.md`; asset provenance is in `assets.md`. The approved\nmeaning-level storyboard is retained with an implementation note.\n\n## Validation\n\nActor checks, distinct from coordinator setup:\n\n- `npm ci`: initial registry request was blocked by the evaluation network.\n  `npm ci --offline --cache=/tmp/storyfolio-npm-cache` then passed: 392 packages,\n  zero audit vulnerabilities. The supplied lockfile was used unchanged.\n- `npm run browsers`: passed using existing Chromium resources.\n- `npm test`: 129 tests passed, zero failures.\n- `npm run typecheck`: passed after correcting a face-generator parenthesis.\n- `npm run lint`: passed, including the new diagnostic script.\n- First `npm run check` failed on that syntax error. The corrected implementation\n  passed all seven production-browser matrix cases in\n  `checks/2026-10-11T22-51-19-710Z/`.\n- Visual inspection found an active rail label crossing the instrument at\n  1280×480. Short wide navigation now uses a compact top row with full labels\n  retained in the accessibility tree. A fresh final matrix follows below.\n- `node scripts/prototype-review.mjs`: passed after correcting its rest-sample\n  array access and launching its server in the same isolated tool process.\n  Final `checks/prototype-review/report.json` has no problems. It verifies\n  visible skip focus and Enter navigation, rail pointer/keyboard navigation,\n  five short480 captures, and all beats/headings plus key factual limits in\n  no-JavaScript and no-WebGL modes.\n\nThe matrix covers 1440×900, 1280×720, 390×844 touch emulation, reduced motion,\nno WebGL, no JavaScript and context loss. Reduced-motion canvas comparisons\nverify stationary stillness. It checks shader errors after a delay and captures\nstart/middle/end of the wide and reduced-motion beats. Real phones were not\nused; software-rendered viewport emulation does not establish phone performance.\n\n## Review and remaining limits\n\nAll five beats are reviewable in the 3D story and in complete HTML fallbacks.\nThe apparatus is the same recognizable assembly across the scroll. Small canvas\nlabels are supplementary, especially on phone; the HTML carries every meaning.\nAt the start of a later beat, copy below the viewport becomes readable as the\nvisitor continues into that beat’s rest. Fallbacks are an ordinary flowing\npage, so a viewport capture can contain adjoining beats.\n\nKnown prototype polish limits: the short480 initial masthead’s right label\nshares space with the top navigation row; the 720-high evidence rail label can\ncross the instrument’s upper edge, without obscuring the “72 h / observed”\nlabel. These are recorded for review; there is no claim of final-site polish,\nreal-device testing, hiring-manager comprehension testing or author acceptance.\nThe geometry deliberately explains relationships instead of depicting actual\nMosslink circuitry. No public debugging incident or whole-product ownership\nis asserted. No publication, contact action or additional journey stop occurred.\n\n## Local continuation and version history\n\nRun `npm run dev` for local review, or `npm run start` after the successful build.\nThe diagnostic script starts and stops its own local production server on port\n3100; the normal check command chooses a free port and stops its server.\n\nThe environment’s `.git` is an empty read-only placeholder, and normal Git\ncommands cannot discover a repository. The local source/context snapshot is\ncommitted using `.prototype-git/` metadata instead. Inspect with:\n\n```\ngit --git-dir=.prototype-git --work-tree=. log --oneline\ngit --git-dir=.prototype-git --work-tree=. status\n```\n\nNo remote exists. Selected review records and screenshots are committed under\n`docs/story/review/`; full generated logs/screenshots remain in ignored `checks/`.\nThe user’s requested stopping point is this local prototype review. Further\ncopy/appearance changes or real-device review remain future work, not an\nunattended continuation.\nEOF'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 0,
+      "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "item_48",
+      "line": 93,
+      "command": "/bin/bash -lc 'rg --files checks/2026-10-11T22-55-05-707Z | sort'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 3251,
+      "outputSha256": "8630046210416d4883aa51c5538014e051a961c7f143832ce205953c1fe66236"
+    },
+    {
+      "id": "item_49",
+      "line": 95,
+      "command": "/bin/bash -lc 'rg --files checks/2026-10-11T22-55-05-707Z | sort'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 3645,
+      "outputSha256": "26282b48eeb83fe2be3a2b3bb874ca08a2ffc99e634c2b82860744dea42a8fba"
+    },
+    {
+      "id": "item_50",
+      "line": 97,
+      "command": "/bin/bash -lc 'rg --files checks/2026-10-11T22-55-05-707Z | sort'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 4082,
+      "outputSha256": "4f4d714ad516d64f95e8ed45815a15113eaf727cfe09379e5f891658bd5ce693"
+    },
+    {
+      "id": "item_39",
+      "line": 98,
+      "command": "/bin/bash -lc \"cat >> app/globals.css <<'EOF'\n@media (min-width: 1024px) and (max-height: 600px) {\n .story-rail { top: .75rem; transform: none; }\n .story-rail ol { display: flex; }\n .story-rail a { padding: .7rem; }\n .story-rail a span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }\n}\nEOF\nnpm run check\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 1222,
+      "outputSha256": "6d2c18e62bc20e69dc61f9dae3540aeaaf60ca46cd5dd2cab7fad9935f1b8896"
+    },
+    {
+      "id": "item_52",
+      "line": 101,
+      "command": "/bin/bash -lc 'rg --files checks/2026-10-11T22-55-05-707Z | sort'",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 4320,
+      "outputSha256": "2e5c7593c6e614afed83e89cf730f658c8dfad68e749245da14133b8880926a3"
+    },
+    {
+      "id": "item_53",
+      "line": 103,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\nimport shutil,json,hashlib\nsource=Path('checks/2026-10-11T22-55-05-707Z')\nreview=Path('docs/story/review')\nreview.mkdir(exist_ok=True)\nrecords=[]\nfor src,dest in [(source,review/'production'),(Path('checks/prototype-review'),review/'extra')]:\n shutil.copytree(src,dest)\n for p in sorted(src.rglob('*')):\n  if p.is_file():\n   q=dest/p.relative_to(src)\n   records.append({'source':str(p),'copy':str(q),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})\n(review/'provenance.json').write_text(json.dumps({'purpose':'Unmodified copies of the final local actor production and diagnostic evidence. Not real-person approval or physical-phone testing.','files':records},indent=2)+'\\\\n')\np=Path('docs/story/handover.md')\ns=p.read_text().replace('A fresh final matrix follows below.','The fresh final \"'`npm run check` passed all seven cases in'\"\\\\n  \"'`checks/2026-10-11T22-55-05-707Z/`: successful production build and no'\"\\\\n  browser report problems.')\ns=s.replace('Known prototype polish limits:','All 56 original captures from the final matrix were opened, along with all\\\\nsix final supplementary captures. Earlier contact sheets were navigation aids;\\\\nthe final originals were also inspected individually. Scene poses and complete\\\\nbeat text are reviewable without model/text clipping at their resting positions.\\\\n\\\\nKnown prototype polish limits:')\ns=s.replace('These are recorded for review;', 'The fallback’s initial masthead sits close to the opening kicker and its\\\\nseparator intersects the title’s upper whitespace. These are recorded for review;')\ns=s.replace('Selected review records and screenshots are committed under','The final matrix and supplementary review records, logs and all screenshots\\\\nare committed under')\ns=s.replace('full generated logs/screenshots remain in ignored \"'`checks/`.'\"','the original generated outputs also remain in ignored \"'`checks/`.'\"\\\\n\"'`docs/story/review/provenance.json` records source/copy paths and SHA-256 hashes.'\"\\\\nThe final source and context snapshot commit includes the supplied starter\\\\nengine, because no existing Git history is available in the mounted placeholder.')\np.write_text(s)\np=Path('README.md')\ns=p.read_text().replace('A starting project for one scroll, one story and one family of 3D pieces.', 'A starting project for one scroll, one story and one family of 3D pieces.\\\\n\\\\nThis workspace now contains a local five-beat Ada Mensah / Mosslink diagnostic\\\\nprototype with one illustrative bench-apparatus appearance. Run \"'`npm run dev`'\"\\\\nfor review. Start with [the current handover](docs/story/handover.md) for the\\\\nfactual boundary, implementation, actual check results, remaining review\\\\nlimits and the separate local Git metadata used in this evaluation. Final\\\\nproduction-browser evidence is preserved in \"'`docs/story/review/`.'\"')\np.write_text(s)\nPY\ngit --git-dir=.prototype-git --work-tree=. add .gitignore AGENTS.md CLAUDE.md LICENSE README.md app components content docs lib public scripts eslint.config.mjs next.config.ts package.json package-lock.json postcss.config.mjs tsconfig.json\ngit --git-dir=.prototype-git --work-tree=. -c user.name='Storyfolio Prototype' -c user.email='prototype@local.invalid' commit -m 'Build local five-beat bench apparatus prototype and preserve review evidence'\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 10297,
+      "outputSha256": "263301ef870422c8b434582467febadfd9bea47885382ae6ab773b8647861607"
+    },
+    {
+      "id": "item_54",
+      "line": 105,
+      "command": "/bin/bash -lc \"git --git-dir=.prototype-git --work-tree=. status --short --untracked-files=no; git --git-dir=.prototype-git --work-tree=. log -1 --format='%h %s'; python3 - <<'PY'\nimport json\np='docs/story/review/production/manifest.json'\nm=json.load(open(p))\nprint({'complete':m['complete'],'cases':len(m['results']),'failed':[r['name'] for r in m['results'] if r['code'] or r['problems']]})\nPY\"",
+      "exitCode": 0,
+      "status": "completed",
+      "outputBytes": 130,
+      "outputSha256": "ffb4f5e51b857480a157ac57927e7f3f8672b315e44d3414c56e7da23b1956a7"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "modelCalls": 0,
+  "checks": [
+    {
+      "path": "run-capability-probe.mjs",
+      "syntax": {
+        "chunk_id": "ed9dbd",
+        "wall_time_seconds": 0.000017573,
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": ""
+      },
+      "oldCohortRefusal": {
+        "chunk_id": "72de95",
+        "wall_time_seconds": 0.000017042,
+        "exit_code": 1,
+        "original_token_count": 105,
+        "output": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Only the two prospectively authorized cohorts are supported\n    at file:///home/kshitij/projects/storyfolio/evals/runs/stage-3-comparison-1/run-capability-probe.mjs:12:8 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v22.22.1\n"
+      }
+    },
+    {
+      "path": "check-ready.mjs",
+      "syntax": {
+        "chunk_id": "5fd337",
+        "wall_time_seconds": 0.000011421,
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": ""
+      },
+      "oldCohortRefusal": {
+        "chunk_id": "b703e8",
+        "wall_time_seconds": 0.000050334,
+        "exit_code": 1,
+        "original_token_count": 103,
+        "output": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Only the two prospectively authorized cohorts are supported\n    at file:///home/kshitij/projects/storyfolio/evals/runs/stage-3-comparison-1/check-ready.mjs:11:8 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v22.22.1\n"
+      }
+    }
+  ]
+}

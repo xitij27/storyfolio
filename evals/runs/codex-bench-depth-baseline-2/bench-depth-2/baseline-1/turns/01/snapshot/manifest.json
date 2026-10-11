@@ -1,0 +1,2411 @@
+{
+  "schemaVersion": 1,
+  "files": {
+    ".agents/skills/storyfolio/engine/.gitignore": {
+      "type": "file",
+      "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "size": 69
+    },
+    ".agents/skills/storyfolio/engine/AGENTS.md": {
+      "type": "file",
+      "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "size": 1055
+    },
+    ".agents/skills/storyfolio/engine/app/globals.css": {
+      "type": "file",
+      "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "size": 263
+    },
+    ".agents/skills/storyfolio/engine/app/layout.tsx": {
+      "type": "file",
+      "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "size": 299
+    },
+    ".agents/skills/storyfolio/engine/app/page.tsx": {
+      "type": "file",
+      "hash": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+      "size": 1271
+    },
+    ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+      "type": "file",
+      "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "size": 446
+    },
+    ".agents/skills/storyfolio/engine/CLAUDE.md": {
+      "type": "file",
+      "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "size": 11
+    },
+    ".agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+      "type": "file",
+      "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "size": 1504
+    },
+    ".agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+      "type": "file",
+      "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "size": 1479
+    },
+    ".agents/skills/storyfolio/engine/components/story/controls.tsx": {
+      "type": "file",
+      "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "size": 882
+    },
+    ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+      "type": "file",
+      "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "size": 1420
+    },
+    ".agents/skills/storyfolio/engine/components/story/face-material.ts": {
+      "type": "file",
+      "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "size": 1714
+    },
+    ".agents/skills/storyfolio/engine/components/story/faces.ts": {
+      "type": "file",
+      "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "size": 3025
+    },
+    ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+      "type": "file",
+      "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "size": 1624
+    },
+    ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+      "type": "file",
+      "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "size": 504
+    },
+    ".agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+      "type": "file",
+      "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "size": 515
+    },
+    ".agents/skills/storyfolio/engine/components/story/meter.tsx": {
+      "type": "file",
+      "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "size": 731
+    },
+    ".agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+      "type": "file",
+      "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "size": 711
+    },
+    ".agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+      "type": "file",
+      "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "size": 7753
+    },
+    ".agents/skills/storyfolio/engine/components/story/rail.tsx": {
+      "type": "file",
+      "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "size": 452
+    },
+    ".agents/skills/storyfolio/engine/components/story/scene.tsx": {
+      "type": "file",
+      "hash": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "size": 4623
+    },
+    ".agents/skills/storyfolio/engine/components/story/stage.tsx": {
+      "type": "file",
+      "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "size": 1230
+    },
+    ".agents/skills/storyfolio/engine/components/story/story.css": {
+      "type": "file",
+      "hash": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "size": 5859
+    },
+    ".agents/skills/storyfolio/engine/components/story/story.tsx": {
+      "type": "file",
+      "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "size": 5735
+    },
+    ".agents/skills/storyfolio/engine/components/story/types.ts": {
+      "type": "file",
+      "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "size": 1324
+    },
+    ".agents/skills/storyfolio/engine/components/story/use-look.ts": {
+      "type": "file",
+      "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "size": 897
+    },
+    ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+      "type": "file",
+      "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "size": 432
+    },
+    ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+      "type": "file",
+      "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "size": 591
+    },
+    ".agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+      "type": "file",
+      "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "size": 2192
+    },
+    ".agents/skills/storyfolio/engine/components/story/validate.ts": {
+      "type": "file",
+      "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "size": 1972
+    },
+    ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+      "type": "file",
+      "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "size": 476
+    },
+    ".agents/skills/storyfolio/engine/content/checks.json": {
+      "type": "file",
+      "hash": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+      "size": 130
+    },
+    ".agents/skills/storyfolio/engine/content/copy.ts": {
+      "type": "file",
+      "hash": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+      "size": 1468
+    },
+    ".agents/skills/storyfolio/engine/content/experience.tsx": {
+      "type": "file",
+      "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "size": 260
+    },
+    ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+      "type": "file",
+      "hash": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "size": 613
+    },
+    ".agents/skills/storyfolio/engine/content/extras.ts": {
+      "type": "file",
+      "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "size": 91
+    },
+    ".agents/skills/storyfolio/engine/content/faces.ts": {
+      "type": "file",
+      "hash": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+      "size": 883
+    },
+    ".agents/skills/storyfolio/engine/content/formations.ts": {
+      "type": "file",
+      "hash": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+      "size": 942
+    },
+    ".agents/skills/storyfolio/engine/content/index.ts": {
+      "type": "file",
+      "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "size": 427
+    },
+    ".agents/skills/storyfolio/engine/content/links.ts": {
+      "type": "file",
+      "hash": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+      "size": 130
+    },
+    ".agents/skills/storyfolio/engine/content/looks.ts": {
+      "type": "file",
+      "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "size": 645
+    },
+    ".agents/skills/storyfolio/engine/content/sketches/index.ts": {
+      "type": "file",
+      "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "size": 238
+    },
+    ".agents/skills/storyfolio/engine/content/story.ts": {
+      "type": "file",
+      "hash": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+      "size": 518
+    },
+    ".agents/skills/storyfolio/engine/eslint.config.mjs": {
+      "type": "file",
+      "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "size": 309
+    },
+    ".agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+      "type": "file",
+      "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "size": 6594
+    },
+    ".agents/skills/storyfolio/engine/lib/story/camera.ts": {
+      "type": "file",
+      "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "size": 5201
+    },
+    ".agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+      "type": "file",
+      "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "size": 1608
+    },
+    ".agents/skills/storyfolio/engine/lib/story/controls.ts": {
+      "type": "file",
+      "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "size": 1054
+    },
+    ".agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+      "type": "file",
+      "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "size": 5294
+    },
+    ".agents/skills/storyfolio/engine/lib/story/formation.ts": {
+      "type": "file",
+      "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "size": 5414
+    },
+    ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+      "type": "file",
+      "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "size": 2728
+    },
+    ".agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+      "type": "file",
+      "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "size": 4733
+    },
+    ".agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+      "type": "file",
+      "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "size": 1238
+    },
+    ".agents/skills/storyfolio/engine/lib/story/looks.ts": {
+      "type": "file",
+      "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "size": 1262
+    },
+    ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+      "type": "file",
+      "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "size": 1844
+    },
+    ".agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+      "type": "file",
+      "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "size": 3252
+    },
+    ".agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+      "type": "file",
+      "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "size": 1838
+    },
+    ".agents/skills/storyfolio/engine/lib/story/quality.ts": {
+      "type": "file",
+      "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "size": 1762
+    },
+    ".agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+      "type": "file",
+      "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "size": 567
+    },
+    ".agents/skills/storyfolio/engine/lib/story/rand.ts": {
+      "type": "file",
+      "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "size": 384
+    },
+    ".agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+      "type": "file",
+      "hash": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "size": 4065
+    },
+    ".agents/skills/storyfolio/engine/lib/story/story.ts": {
+      "type": "file",
+      "hash": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "size": 4796
+    },
+    ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+      "type": "file",
+      "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "size": 7998
+    },
+    ".agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+      "type": "file",
+      "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "size": 5697
+    },
+    ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+      "type": "file",
+      "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "size": 4495
+    },
+    ".agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+      "type": "file",
+      "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "size": 3329
+    },
+    ".agents/skills/storyfolio/engine/LICENSE": {
+      "type": "file",
+      "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "size": 1080
+    },
+    ".agents/skills/storyfolio/engine/next.config.ts": {
+      "type": "file",
+      "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "size": 94
+    },
+    ".agents/skills/storyfolio/engine/package-lock.json": {
+      "type": "file",
+      "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "size": 233717
+    },
+    ".agents/skills/storyfolio/engine/package.json": {
+      "type": "file",
+      "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "size": 1015
+    },
+    ".agents/skills/storyfolio/engine/postcss.config.mjs": {
+      "type": "file",
+      "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "size": 94
+    },
+    ".agents/skills/storyfolio/engine/public/plain/face.svg": {
+      "type": "file",
+      "hash": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "size": 309
+    },
+    ".agents/skills/storyfolio/engine/public/plain/fan.svg": {
+      "type": "file",
+      "hash": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "size": 775
+    },
+    ".agents/skills/storyfolio/engine/README.md": {
+      "type": "file",
+      "hash": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+      "size": 6746
+    },
+    ".agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+      "type": "file",
+      "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "size": 4516
+    },
+    ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+      "type": "file",
+      "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "size": 4110
+    },
+    ".agents/skills/storyfolio/engine/scripts/check.mjs": {
+      "type": "file",
+      "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "size": 6374
+    },
+    ".agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+      "type": "file",
+      "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "size": 25709
+    },
+    ".agents/skills/storyfolio/engine/tsconfig.json": {
+      "type": "file",
+      "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "size": 706
+    },
+    ".agents/skills/storyfolio/references/asking.md": {
+      "type": "file",
+      "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+      "size": 1486
+    },
+    ".agents/skills/storyfolio/references/concept.md": {
+      "type": "file",
+      "hash": "ba0780577d3157824d81c36b40374141d52df5e88ef67deee175792f4793dab1",
+      "size": 7863
+    },
+    ".agents/skills/storyfolio/references/reading-a-profile.md": {
+      "type": "file",
+      "hash": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca",
+      "size": 5537
+    },
+    ".agents/skills/storyfolio/references/storyboard.md": {
+      "type": "file",
+      "hash": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6",
+      "size": 4016
+    },
+    ".agents/skills/storyfolio/scripts/scaffold.mjs": {
+      "type": "file",
+      "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+      "size": 3566
+    },
+    ".agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+      "type": "file",
+      "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+      "size": 4044
+    },
+    ".agents/skills/storyfolio/SKILL.md": {
+      "type": "file",
+      "hash": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+      "size": 4087
+    },
+    ".gitignore": {
+      "type": "file",
+      "hash": "6fe5838267b57f625248717008c5db8212f1050dcd6630a712b34825d3034a9c",
+      "size": 85
+    },
+    "AGENTS.md": {
+      "type": "file",
+      "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "size": 1055
+    },
+    "app/globals.css": {
+      "type": "file",
+      "hash": "d74a589b46a433f7f5211f80610dd554fc0301856fc3ab44368458a29fdae8ea",
+      "size": 2333
+    },
+    "app/layout.tsx": {
+      "type": "file",
+      "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "size": 299
+    },
+    "app/page.tsx": {
+      "type": "file",
+      "hash": "9ab5ee2a5707a5557094c81180ee936084d603d24b875168860ce0b22076c6a0",
+      "size": 1625
+    },
+    "app/sketch/[id]/page.tsx": {
+      "type": "file",
+      "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "size": 446
+    },
+    "CLAUDE.md": {
+      "type": "file",
+      "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "size": 11
+    },
+    "components/story/chapter.tsx": {
+      "type": "file",
+      "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "size": 1504
+    },
+    "components/story/conductor.tsx": {
+      "type": "file",
+      "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "size": 1479
+    },
+    "components/story/controls.tsx": {
+      "type": "file",
+      "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "size": 882
+    },
+    "components/story/extra-frame.tsx": {
+      "type": "file",
+      "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "size": 1420
+    },
+    "components/story/face-material.ts": {
+      "type": "file",
+      "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "size": 1714
+    },
+    "components/story/faces.ts": {
+      "type": "file",
+      "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "size": 3025
+    },
+    "components/story/guard-extra-callback.test.ts": {
+      "type": "file",
+      "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "size": 1624
+    },
+    "components/story/guard-extra-callback.ts": {
+      "type": "file",
+      "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "size": 504
+    },
+    "components/story/look-switch.tsx": {
+      "type": "file",
+      "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "size": 515
+    },
+    "components/story/meter.tsx": {
+      "type": "file",
+      "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "size": 731
+    },
+    "components/story/overlay.tsx": {
+      "type": "file",
+      "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "size": 711
+    },
+    "components/story/pieces.tsx": {
+      "type": "file",
+      "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "size": 7753
+    },
+    "components/story/rail.tsx": {
+      "type": "file",
+      "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "size": 452
+    },
+    "components/story/scene.tsx": {
+      "type": "file",
+      "hash": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "size": 4623
+    },
+    "components/story/stage.tsx": {
+      "type": "file",
+      "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "size": 1230
+    },
+    "components/story/story.css": {
+      "type": "file",
+      "hash": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "size": 5859
+    },
+    "components/story/story.tsx": {
+      "type": "file",
+      "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "size": 5735
+    },
+    "components/story/types.ts": {
+      "type": "file",
+      "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "size": 1324
+    },
+    "components/story/use-look.ts": {
+      "type": "file",
+      "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "size": 897
+    },
+    "components/story/use-reduced-motion.ts": {
+      "type": "file",
+      "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "size": 432
+    },
+    "components/story/use-webgl-supported.ts": {
+      "type": "file",
+      "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "size": 591
+    },
+    "components/story/validate.test.ts": {
+      "type": "file",
+      "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "size": 2192
+    },
+    "components/story/validate.ts": {
+      "type": "file",
+      "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "size": 1972
+    },
+    "components/story/webgl-boundary.tsx": {
+      "type": "file",
+      "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "size": 476
+    },
+    "content/apparatus.tsx": {
+      "type": "file",
+      "hash": "ce975bcd522ae4a441c259611001ce14e0288752d02135edd16a5ac42bc264a8",
+      "size": 2373
+    },
+    "content/checks.json": {
+      "type": "file",
+      "hash": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size": 3
+    },
+    "content/copy.ts": {
+      "type": "file",
+      "hash": "da66974c870eb97e0c6641dbac846f144eb5e0a92618393e3bdf6920f106ebc0",
+      "size": 3606
+    },
+    "content/experience.tsx": {
+      "type": "file",
+      "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "size": 260
+    },
+    "content/extras/middle-line.tsx": {
+      "type": "file",
+      "hash": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "size": 613
+    },
+    "content/extras.ts": {
+      "type": "file",
+      "hash": "6c738050d7a8fc2e6bb214a401994e6a69ade3c052a263f45749699ffc5fc454",
+      "size": 26
+    },
+    "content/faces.ts": {
+      "type": "file",
+      "hash": "cd0cb8ceedb50b1592ccd020acbf4f936b710270ecab9e88f9b47e3d00665cb1",
+      "size": 1176
+    },
+    "content/formations.ts": {
+      "type": "file",
+      "hash": "c2994101272833f003d9d3b88c85fc003215d2f9c65a3aec4700748ff0cd3914",
+      "size": 1438
+    },
+    "content/index.ts": {
+      "type": "file",
+      "hash": "cab23545bf8afd941bf46bb03852d423009ca2492e9aff27f61d824abfc87020",
+      "size": 402
+    },
+    "content/links.ts": {
+      "type": "file",
+      "hash": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb",
+      "size": 25
+    },
+    "content/looks.ts": {
+      "type": "file",
+      "hash": "fc8817193d2e40bc0a53da194fa88b19e1ba834c6ce731911ead2d3fd95ad543",
+      "size": 367
+    },
+    "content/sketches/index.ts": {
+      "type": "file",
+      "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "size": 238
+    },
+    "content/story.ts": {
+      "type": "file",
+      "hash": "f0700ed18762f42292e1856bd95d4e7ea2c9af34ec15d479ef0277c7897b0664",
+      "size": 825
+    },
+    "docs/story/assets.md": {
+      "type": "file",
+      "hash": "10b02700c57c73dbb4a3a582d07c8951c917617968c308a795ccce9c9d9a02ea",
+      "size": 2853
+    },
+    "docs/story/concepts.md": {
+      "type": "file",
+      "hash": "802d16feea38672c02d476f4123626a0b91bac9a408a3a5dabb974181812b5f0",
+      "size": 404
+    },
+    "docs/story/confirmations.md": {
+      "type": "file",
+      "hash": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d",
+      "size": 2860
+    },
+    "docs/story/decided-for-you.md": {
+      "type": "file",
+      "hash": "d323218254b7f279c0f7080215c9aa1a5520b4c9ded8aabf1cf1af4073ba2ede",
+      "size": 3324
+    },
+    "docs/story/environment-setup.json": {
+      "type": "file",
+      "hash": "600c1c9dba4f99c96de2f9ba91d9fb17085b07e3e4e049fe3c955a64efa75c22",
+      "size": 1148
+    },
+    "docs/story/evaluation-environment.md": {
+      "type": "file",
+      "hash": "69f8f5e245f564ae3b0de1d800fe4ca288037cfb8b2e502c9805009d0b5c7dc5",
+      "size": 2090
+    },
+    "docs/story/facts.md": {
+      "type": "file",
+      "hash": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e",
+      "size": 3558
+    },
+    "docs/story/handover.md": {
+      "type": "file",
+      "hash": "3e1a02f942d25d47925dcdef1e28b5bac3704c5e7dd7156cbf7415089ec15325",
+      "size": 7453
+    },
+    "docs/story/review/extra/report.json": {
+      "type": "file",
+      "hash": "6fcb12c9130285b852bea3c5c2d8622dd394a454889c4e4cd734a27ecc82d428",
+      "size": 1425
+    },
+    "docs/story/review/extra/short480-bench.png": {
+      "type": "file",
+      "hash": "867193cd25c7c53e3e55c1ca524da272a1ab77e523f28f3578778aa8640a57ec",
+      "size": 101517
+    },
+    "docs/story/review/extra/short480-evidence.png": {
+      "type": "file",
+      "hash": "c40f8717fefe78e45047f988ae85165d6bf6eac5689a6add07894932daaa5c90",
+      "size": 113270
+    },
+    "docs/story/review/extra/short480-question.png": {
+      "type": "file",
+      "hash": "3e2548b964adb6efd5a9c12d265485daabaa2cb731afadef821db3f636a18165",
+      "size": 113413
+    },
+    "docs/story/review/extra/short480-scheduling.png": {
+      "type": "file",
+      "hash": "3e3bf765890e314fd92ef8e09d7ef856c75f7bf5fb46c1cb0ac9148cddd798a8",
+      "size": 114621
+    },
+    "docs/story/review/extra/short480-scope.png": {
+      "type": "file",
+      "hash": "7a3b56095ac3cac81fc9068881b3c5791176c7f0c7123366ab7c28fd7b6a90cf",
+      "size": 125972
+    },
+    "docs/story/review/extra/skip-focused.png": {
+      "type": "file",
+      "hash": "199b0eccfaabac04aff85e9df3579f0e60f2efcb4c373ab450473755c1fb498d",
+      "size": 108490
+    },
+    "docs/story/review/production/bench-no-webgl/00-question.png": {
+      "type": "file",
+      "hash": "7c9bb6c8c3ebbed7c3d0ee84c1a649c3137cf52f6733da86424b432e8be5894a",
+      "size": 109998
+    },
+    "docs/story/review/production/bench-no-webgl/01-scheduling.png": {
+      "type": "file",
+      "hash": "b569c422b1ef858d870b4d09a3ec97f88891ca6fe09c616f75c9201c9b4495bf",
+      "size": 85384
+    },
+    "docs/story/review/production/bench-no-webgl/02-bench.png": {
+      "type": "file",
+      "hash": "cdb0469348fb629c74ba8b5b637b2b66bbdf202f55dfcfc4cbfe226dec844c2a",
+      "size": 101692
+    },
+    "docs/story/review/production/bench-no-webgl/03-evidence.png": {
+      "type": "file",
+      "hash": "338ebc27f96c01364eef585ab43c7c76448be75d578ae1ea55a98936e0dd45e0",
+      "size": 94874
+    },
+    "docs/story/review/production/bench-no-webgl/04-scope.png": {
+      "type": "file",
+      "hash": "0d29b898c7e76681a5b3857c3363d95446df9c046428910645fcd3e3f9b4d602",
+      "size": 130593
+    },
+    "docs/story/review/production/bench-no-webgl/report.json": {
+      "type": "file",
+      "hash": "7e176da1c7eb473d876fa7e99ad1570964f4897af76fe8059dba0884d2707fff",
+      "size": 1819
+    },
+    "docs/story/review/production/bench-no-webgl.log": {
+      "type": "file",
+      "hash": "66d278558be00f82ac4054423d5c15fb3882623dd650abd75ebd1f2c1321802f",
+      "size": 2486
+    },
+    "docs/story/review/production/bench-phone/00-question.png": {
+      "type": "file",
+      "hash": "c3f439743c311db4ad9c656ffd498f6e92e753c4cb428c3deffbaa081cf2a7ce",
+      "size": 75452
+    },
+    "docs/story/review/production/bench-phone/01-scheduling.png": {
+      "type": "file",
+      "hash": "90f1f6d8754c519322ebf17a25eb64b1b2f02ff0667c3b5bac27f239bb2c9ed3",
+      "size": 70236
+    },
+    "docs/story/review/production/bench-phone/02-bench.png": {
+      "type": "file",
+      "hash": "47614a15260dfce3009cf4ce250ac8359ec552348f4caa84a7316d3574de2f54",
+      "size": 70262
+    },
+    "docs/story/review/production/bench-phone/03-evidence.png": {
+      "type": "file",
+      "hash": "fef3130ef290f8cdb61dfff8f58dfd715cd6b78fd3038baa159998d7b12f9797",
+      "size": 70293
+    },
+    "docs/story/review/production/bench-phone/04-scope.png": {
+      "type": "file",
+      "hash": "ebf706a85ecd8e53c8e3b5bc464dd06ec958d009a8965fe7bfbc1d72abe2ab12",
+      "size": 78206
+    },
+    "docs/story/review/production/bench-phone/report.json": {
+      "type": "file",
+      "hash": "e7894411b25167ef4bc91c73d20367a3576eb2b1e83a92ed4474856cb3ad442d",
+      "size": 1816
+    },
+    "docs/story/review/production/bench-phone.log": {
+      "type": "file",
+      "hash": "97bc3e5ca4a741a216931d59699d9c3512e813d48062baef968012b6b2d4a358",
+      "size": 2483
+    },
+    "docs/story/review/production/bench-reduced/00-question-end.png": {
+      "type": "file",
+      "hash": "cc1864bada1b72d04a2bb1fbbe70f780eaeb562fd16e49739488efa987a0399c",
+      "size": 143315
+    },
+    "docs/story/review/production/bench-reduced/00-question-mid.png": {
+      "type": "file",
+      "hash": "da535b51bba2b5e4ef8e5039a30135e9e211f6f2e61f1ad815d63cbd3584793f",
+      "size": 143003
+    },
+    "docs/story/review/production/bench-reduced/00-question-start.png": {
+      "type": "file",
+      "hash": "3b73a341cd11f5d3b544a96d33501dd9f589415706d6fa922d1664ab9ed33988",
+      "size": 146015
+    },
+    "docs/story/review/production/bench-reduced/01-scheduling-end.png": {
+      "type": "file",
+      "hash": "ee630adf801506e8ccb6c18ee80cf01aa53649b68be6b6b5ed30b7e3626d5fbc",
+      "size": 131437
+    },
+    "docs/story/review/production/bench-reduced/01-scheduling-mid.png": {
+      "type": "file",
+      "hash": "835575f0348f8520e4c41fde44bd3442278ea88cb29eede21c4e6a3f58599ec9",
+      "size": 132160
+    },
+    "docs/story/review/production/bench-reduced/01-scheduling-start.png": {
+      "type": "file",
+      "hash": "5bd9c2fc9a1a40b76eb00d210783cb9116e2f6398d9d3489467ce642f46c172e",
+      "size": 196208
+    },
+    "docs/story/review/production/bench-reduced/02-bench-end.png": {
+      "type": "file",
+      "hash": "5e1580c6dd35c628e6cbbac7876aa0fe00cacdb64273ca594a2994c34d932de7",
+      "size": 126347
+    },
+    "docs/story/review/production/bench-reduced/02-bench-mid.png": {
+      "type": "file",
+      "hash": "135930616c961a8d551b486120be4b14c5ecf28196dc9b6638b16a7932bbbf51",
+      "size": 127169
+    },
+    "docs/story/review/production/bench-reduced/02-bench-start.png": {
+      "type": "file",
+      "hash": "40b2cb0c3f703f0949600e7717631849285de527cd6451ac63657ab0f9bcaef2",
+      "size": 179971
+    },
+    "docs/story/review/production/bench-reduced/03-evidence-end.png": {
+      "type": "file",
+      "hash": "a01323856ab47f3ff81cee4da62bb84282d7ea9f9350f177a587b6437a4ba006",
+      "size": 131536
+    },
+    "docs/story/review/production/bench-reduced/03-evidence-mid.png": {
+      "type": "file",
+      "hash": "642ffe531204f08545f20bb419ad297ed2cca4aaebe4ccb60a741c812e941308",
+      "size": 131119
+    },
+    "docs/story/review/production/bench-reduced/03-evidence-start.png": {
+      "type": "file",
+      "hash": "a6fa1a58b484409b72b5abfb2f11710e87fc23ccdc0dc5355b93479acc95858c",
+      "size": 188599
+    },
+    "docs/story/review/production/bench-reduced/04-scope-end.png": {
+      "type": "file",
+      "hash": "7362b836aa9e23a5ffb4171d6c1c553f50b8fbed4581d17d7c5c8cae41db4f93",
+      "size": 146026
+    },
+    "docs/story/review/production/bench-reduced/04-scope-mid.png": {
+      "type": "file",
+      "hash": "fefa5f640f7ba9732d3e910c9abcd101dd1ab8ac8ffac715f2303712a793f5b0",
+      "size": 146990
+    },
+    "docs/story/review/production/bench-reduced/04-scope-start.png": {
+      "type": "file",
+      "hash": "70ed82a86290ccf5aaa41244264e87c85e0f2bf1a4f3751f3f1e25dc16d9dc04",
+      "size": 196555
+    },
+    "docs/story/review/production/bench-reduced/report.json": {
+      "type": "file",
+      "hash": "a5226791a3ff5108b657d3af7d64881d3ad162036bcd61d738f809d546b38468",
+      "size": 8146
+    },
+    "docs/story/review/production/bench-reduced.log": {
+      "type": "file",
+      "hash": "67c62053ed787779a8281c2fe3ad6ff1b534a49a939153b58d72b9427e078610",
+      "size": 8813
+    },
+    "docs/story/review/production/bench-short/00-question.png": {
+      "type": "file",
+      "hash": "df911f10e2b92fa2715bd53d0e9ddd6dc2c0f20ddda854369723f0e5bb2de1db",
+      "size": 132275
+    },
+    "docs/story/review/production/bench-short/01-scheduling.png": {
+      "type": "file",
+      "hash": "6984034b154cbd02beceefe98eb6e7e1d2d61f63dd4db6476d079368b0c1bcdf",
+      "size": 124324
+    },
+    "docs/story/review/production/bench-short/02-bench.png": {
+      "type": "file",
+      "hash": "957e7912557c52e2a356b8ecf918b91608ec7b9d00284bb528e3a121aa07bbd8",
+      "size": 118177
+    },
+    "docs/story/review/production/bench-short/03-evidence.png": {
+      "type": "file",
+      "hash": "7c3ad6799f82f2c34f23499eca6050bc7f19390b4443bd8112972bed64f64d22",
+      "size": 123147
+    },
+    "docs/story/review/production/bench-short/04-scope.png": {
+      "type": "file",
+      "hash": "855598eb0d8cf96b2709b0ccad8fad7fd92ac372b8596eadbc80af2fe22999ef",
+      "size": 137214
+    },
+    "docs/story/review/production/bench-short/report.json": {
+      "type": "file",
+      "hash": "0c5feee67f059689dc31ab0628032ce5376efffe9b5d30c3c6d3f3dd872d753d",
+      "size": 1866
+    },
+    "docs/story/review/production/bench-short.log": {
+      "type": "file",
+      "hash": "2cb858d44f14a9a354462d3cb03a3a119a6fe9e39ab696e831a2d63b2fb061ff",
+      "size": 2533
+    },
+    "docs/story/review/production/bench-wide/00-question-end.png": {
+      "type": "file",
+      "hash": "104e2f83cecfcbfcfd1016e7d7289e862cc1a0e8c7d0df87a2be13b82e4e8ba5",
+      "size": 143621
+    },
+    "docs/story/review/production/bench-wide/00-question-mid.png": {
+      "type": "file",
+      "hash": "3e4dccc4e3df0db78248604aa26231d799773efa846d90f595a354e447b6071b",
+      "size": 143099
+    },
+    "docs/story/review/production/bench-wide/00-question-start.png": {
+      "type": "file",
+      "hash": "1679966624518db6c102ffb0ed5777f2c8eb753cf8db662f41169a6b3fe8d3f5",
+      "size": 144710
+    },
+    "docs/story/review/production/bench-wide/01-scheduling-end.png": {
+      "type": "file",
+      "hash": "e7ac90dd360ee02653e2bc0eeca97da3bda62c482c0e8777dbaf3bba540a7f49",
+      "size": 132038
+    },
+    "docs/story/review/production/bench-wide/01-scheduling-mid.png": {
+      "type": "file",
+      "hash": "7f12171052c5bab709785e3111fd15864b36c3773be150083023d57af137e6f7",
+      "size": 130961
+    },
+    "docs/story/review/production/bench-wide/01-scheduling-start.png": {
+      "type": "file",
+      "hash": "ec5a6df6496887fff909fcc13a6a5e687b946aaee8f0b04eda8e4923b102dfb9",
+      "size": 110771
+    },
+    "docs/story/review/production/bench-wide/02-bench-end.png": {
+      "type": "file",
+      "hash": "6b78b014857405a5ffbfabb5220187ae1b489e482bc1e3df1fc9e3430c4dd053",
+      "size": 126456
+    },
+    "docs/story/review/production/bench-wide/02-bench-mid.png": {
+      "type": "file",
+      "hash": "f98f7d6367861bf158c5ae71e030032326874244c3acec47179562e085d2ae01",
+      "size": 125920
+    },
+    "docs/story/review/production/bench-wide/02-bench-start.png": {
+      "type": "file",
+      "hash": "210dcad4f34ffc9dd9989b93c0bfbbb711d8b24d10c369a7c9bf17d4b9cf1e58",
+      "size": 103467
+    },
+    "docs/story/review/production/bench-wide/03-evidence-end.png": {
+      "type": "file",
+      "hash": "ef36824e890f5d26df83a9ef690716a3039d04d2dcb149f42be773b7d60aee4f",
+      "size": 130998
+    },
+    "docs/story/review/production/bench-wide/03-evidence-mid.png": {
+      "type": "file",
+      "hash": "b66b25501bf63aa133abec0a9f23ebe3ec47b96516364eb6328a74a8b42724bc",
+      "size": 131201
+    },
+    "docs/story/review/production/bench-wide/03-evidence-start.png": {
+      "type": "file",
+      "hash": "27d5104ab87660b5c56748bcd2bfb8ae04cda6dfdd3e2e9de5a22b5497acbfdb",
+      "size": 104068
+    },
+    "docs/story/review/production/bench-wide/04-scope-end.png": {
+      "type": "file",
+      "hash": "0ada9cf1c99e4dd719a1611aab8ac6223d11dbf0d4cf0db8f72149950cf2e837",
+      "size": 148808
+    },
+    "docs/story/review/production/bench-wide/04-scope-mid.png": {
+      "type": "file",
+      "hash": "97a77c101127573fd2f2bcc0e8dde4d4729411daa6fca281a5eda77931798078",
+      "size": 146237
+    },
+    "docs/story/review/production/bench-wide/04-scope-start.png": {
+      "type": "file",
+      "hash": "9836a30f71c9057e9d5a21b9c25fd094764015c74680226c106050e079939dc0",
+      "size": 108283
+    },
+    "docs/story/review/production/bench-wide/report.json": {
+      "type": "file",
+      "hash": "fe8062256c26c435a7ff9c23b464e6cc15230546570ed2a7214c5d50c84c7cae",
+      "size": 4715
+    },
+    "docs/story/review/production/bench-wide.log": {
+      "type": "file",
+      "hash": "4b3230d7f663d43619a7b68be99a71639fde1c10bc50e50e84acd6f2b82e9377",
+      "size": 5382
+    },
+    "docs/story/review/production/build.log": {
+      "type": "file",
+      "hash": "5eb165c206bf548724d5eb1963daa74afa088da499021a1a984c18f083460ad5",
+      "size": 1986
+    },
+    "docs/story/review/production/context-loss/00-question.png": {
+      "type": "file",
+      "hash": "104e2f83cecfcbfcfd1016e7d7289e862cc1a0e8c7d0df87a2be13b82e4e8ba5",
+      "size": 143621
+    },
+    "docs/story/review/production/context-loss/01-scheduling.png": {
+      "type": "file",
+      "hash": "e7ac90dd360ee02653e2bc0eeca97da3bda62c482c0e8777dbaf3bba540a7f49",
+      "size": 132038
+    },
+    "docs/story/review/production/context-loss/02-bench.png": {
+      "type": "file",
+      "hash": "6b78b014857405a5ffbfabb5220187ae1b489e482bc1e3df1fc9e3430c4dd053",
+      "size": 126456
+    },
+    "docs/story/review/production/context-loss/03-evidence.png": {
+      "type": "file",
+      "hash": "ef36824e890f5d26df83a9ef690716a3039d04d2dcb149f42be773b7d60aee4f",
+      "size": 130998
+    },
+    "docs/story/review/production/context-loss/04-scope.png": {
+      "type": "file",
+      "hash": "0ada9cf1c99e4dd719a1611aab8ac6223d11dbf0d4cf0db8f72149950cf2e837",
+      "size": 148808
+    },
+    "docs/story/review/production/context-loss/context-lost.png": {
+      "type": "file",
+      "hash": "36bb36104f7c80766cbd1870ed0a95f711c17d294c2983c934a76dd50d6713cb",
+      "size": 119722
+    },
+    "docs/story/review/production/context-loss/report.json": {
+      "type": "file",
+      "hash": "f5ccad779ff187204b82f673a76382ecba5aae7ae4bf1672d0144d7758856e20",
+      "size": 2093
+    },
+    "docs/story/review/production/context-loss.log": {
+      "type": "file",
+      "hash": "8209586fa51eaefe1bc12d836113b5956dacd26da668811e54cf98e0a4bc6a4a",
+      "size": 2760
+    },
+    "docs/story/review/production/manifest.json": {
+      "type": "file",
+      "hash": "f53715246f5d02d474f0bf6ae91aa7eacd1c62ea81593526f2472762c730ffea",
+      "size": 10277
+    },
+    "docs/story/review/production/no-js/00-question.png": {
+      "type": "file",
+      "hash": "5db9d3c5bb3b11f436e2919f38e1da8ff3c608adc5ccdb24cef980e8e585d7bc",
+      "size": 111255
+    },
+    "docs/story/review/production/no-js/01-scheduling.png": {
+      "type": "file",
+      "hash": "4e794b3be4fa0bfcd7f3b2e86640bd2ee278d806d65d7fa2a69f31aa67ad7fdf",
+      "size": 87178
+    },
+    "docs/story/review/production/no-js/02-bench.png": {
+      "type": "file",
+      "hash": "bd418220b4a55a725be15f9e05832f63da3a4966d8f6e6d10bfa25e123890e61",
+      "size": 103796
+    },
+    "docs/story/review/production/no-js/03-evidence.png": {
+      "type": "file",
+      "hash": "3dda9f95255cea18ba5dbd147df6c14ac25698fdfacc5a02cdd989605266cdc1",
+      "size": 96464
+    },
+    "docs/story/review/production/no-js/04-scope.png": {
+      "type": "file",
+      "hash": "40e38313aad72a72e3f9e77857d2302149a3046c899f4cbef39055f419b1792c",
+      "size": 132794
+    },
+    "docs/story/review/production/no-js/report.json": {
+      "type": "file",
+      "hash": "77aafde6fcb5ccc6e94a44a1ffc9c9c17a0a79d001a2f272cecc8fb1a2cdc754",
+      "size": 2037
+    },
+    "docs/story/review/production/no-js.log": {
+      "type": "file",
+      "hash": "56c1960fbe20eebdfdc9e7ac739217a61d6b041d1fcf8bf0522b8b6f650614b3",
+      "size": 2704
+    },
+    "docs/story/review/production/server.log": {
+      "type": "file",
+      "hash": "5f49f220ad445b0ff318c8fe08b13db498a636c4925f2191b96c41c41437709c",
+      "size": 330
+    },
+    "docs/story/review/provenance.json": {
+      "type": "file",
+      "hash": "0d09b6cc2a89dcd512a93c80e085e7c880f2d0f37940fe12ea512fbb86bc6e29",
+      "size": 19754
+    },
+    "docs/story/storyboard.md": {
+      "type": "file",
+      "hash": "2dc62cee97e9a0a2158a530ff8a210890b99ea53d4e17516a28dc31441c55d18",
+      "size": 4304
+    },
+    "eslint.config.mjs": {
+      "type": "file",
+      "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "size": 309
+    },
+    "lib/story/camera.test.ts": {
+      "type": "file",
+      "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "size": 6594
+    },
+    "lib/story/camera.ts": {
+      "type": "file",
+      "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "size": 5201
+    },
+    "lib/story/controls.test.ts": {
+      "type": "file",
+      "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "size": 1608
+    },
+    "lib/story/controls.ts": {
+      "type": "file",
+      "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "size": 1054
+    },
+    "lib/story/formation.test.ts": {
+      "type": "file",
+      "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "size": 5294
+    },
+    "lib/story/formation.ts": {
+      "type": "file",
+      "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "size": 5414
+    },
+    "lib/story/layouts.test.ts": {
+      "type": "file",
+      "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "size": 2728
+    },
+    "lib/story/layouts.ts": {
+      "type": "file",
+      "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "size": 4733
+    },
+    "lib/story/looks.test.ts": {
+      "type": "file",
+      "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "size": 1238
+    },
+    "lib/story/looks.ts": {
+      "type": "file",
+      "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "size": 1262
+    },
+    "lib/story/overlay.test.ts": {
+      "type": "file",
+      "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "size": 1844
+    },
+    "lib/story/overlay.ts": {
+      "type": "file",
+      "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "size": 3252
+    },
+    "lib/story/quality.test.ts": {
+      "type": "file",
+      "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "size": 1838
+    },
+    "lib/story/quality.ts": {
+      "type": "file",
+      "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "size": 1762
+    },
+    "lib/story/rand.test.ts": {
+      "type": "file",
+      "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "size": 567
+    },
+    "lib/story/rand.ts": {
+      "type": "file",
+      "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "size": 384
+    },
+    "lib/story/story.test.ts": {
+      "type": "file",
+      "hash": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "size": 4065
+    },
+    "lib/story/story.ts": {
+      "type": "file",
+      "hash": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "size": 4796
+    },
+    "lib/story/timeline.test.ts": {
+      "type": "file",
+      "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "size": 7998
+    },
+    "lib/story/timeline.ts": {
+      "type": "file",
+      "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "size": 5697
+    },
+    "lib/story/typeset.test.ts": {
+      "type": "file",
+      "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "size": 4495
+    },
+    "lib/story/typeset.ts": {
+      "type": "file",
+      "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "size": 3329
+    },
+    "LICENSE": {
+      "type": "file",
+      "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "size": 1080
+    },
+    "next.config.ts": {
+      "type": "file",
+      "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "size": 94
+    },
+    "package-lock.json": {
+      "type": "file",
+      "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "size": 233717
+    },
+    "package.json": {
+      "type": "file",
+      "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "size": 1015
+    },
+    "postcss.config.mjs": {
+      "type": "file",
+      "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "size": 94
+    },
+    "public/assets/bring-up-fixture.svg": {
+      "type": "file",
+      "hash": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+      "size": 1822
+    },
+    "public/assets/power-states.svg": {
+      "type": "file",
+      "hash": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+      "size": 1657
+    },
+    "public/plain/face.svg": {
+      "type": "file",
+      "hash": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "size": 309
+    },
+    "public/plain/fan.svg": {
+      "type": "file",
+      "hash": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "size": 775
+    },
+    "README.md": {
+      "type": "file",
+      "hash": "cfc407ad08550c972622922148a02824379075416b2aa62546622ad3adac04b6",
+      "size": 7195
+    },
+    "scripts/check-lib.mjs": {
+      "type": "file",
+      "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "size": 4516
+    },
+    "scripts/check-lib.test.mjs": {
+      "type": "file",
+      "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "size": 4110
+    },
+    "scripts/check.mjs": {
+      "type": "file",
+      "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "size": 6374
+    },
+    "scripts/prototype-review.mjs": {
+      "type": "file",
+      "hash": "797ad2a2afc5e44aa613563a7b43af43470630167e467175c08e3fa3c939c11a",
+      "size": 4064
+    },
+    "scripts/review-sheets.mjs": {
+      "type": "file",
+      "hash": "083a43dcefef6c6dec5aa20c9b3748671346898bf6122b9a9503ddfd130dcb51",
+      "size": 4154
+    },
+    "scripts/shoot.mjs": {
+      "type": "file",
+      "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "size": 25709
+    },
+    "tsconfig.json": {
+      "type": "file",
+      "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "size": 706
+    }
+  },
+  "excluded": [
+    ".git",
+    ".next",
+    ".prototype-git",
+    "checks",
+    "next-env.d.ts",
+    "node_modules",
+    "tsconfig.tsbuildinfo"
+  ],
+  "unexpected": [
+    {
+      "path": ".aws",
+      "type": "directory"
+    },
+    {
+      "path": ".codex",
+      "type": "directory"
+    }
+  ],
+  "totalBytes": 8727461,
+  "changes": [
+    {
+      "path": ".gitignore",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      "after": {
+        "type": "file",
+        "hash": "6fe5838267b57f625248717008c5db8212f1050dcd6630a712b34825d3034a9c",
+        "size": 85
+      }
+    },
+    {
+      "path": "README.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+        "size": 6746
+      },
+      "after": {
+        "type": "file",
+        "hash": "cfc407ad08550c972622922148a02824379075416b2aa62546622ad3adac04b6",
+        "size": 7195
+      }
+    },
+    {
+      "path": "app/globals.css",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      "after": {
+        "type": "file",
+        "hash": "d74a589b46a433f7f5211f80610dd554fc0301856fc3ab44368458a29fdae8ea",
+        "size": 2333
+      }
+    },
+    {
+      "path": "app/page.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+        "size": 1271
+      },
+      "after": {
+        "type": "file",
+        "hash": "9ab5ee2a5707a5557094c81180ee936084d603d24b875168860ce0b22076c6a0",
+        "size": 1625
+      }
+    },
+    {
+      "path": "content/apparatus.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "ce975bcd522ae4a441c259611001ce14e0288752d02135edd16a5ac42bc264a8",
+        "size": 2373
+      }
+    },
+    {
+      "path": "content/checks.json",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+        "size": 130
+      },
+      "after": {
+        "type": "file",
+        "hash": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+        "size": 3
+      }
+    },
+    {
+      "path": "content/copy.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+        "size": 1468
+      },
+      "after": {
+        "type": "file",
+        "hash": "da66974c870eb97e0c6641dbac846f144eb5e0a92618393e3bdf6920f106ebc0",
+        "size": 3606
+      }
+    },
+    {
+      "path": "content/extras.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      "after": {
+        "type": "file",
+        "hash": "6c738050d7a8fc2e6bb214a401994e6a69ade3c052a263f45749699ffc5fc454",
+        "size": 26
+      }
+    },
+    {
+      "path": "content/faces.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+        "size": 883
+      },
+      "after": {
+        "type": "file",
+        "hash": "cd0cb8ceedb50b1592ccd020acbf4f936b710270ecab9e88f9b47e3d00665cb1",
+        "size": 1176
+      }
+    },
+    {
+      "path": "content/formations.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+        "size": 942
+      },
+      "after": {
+        "type": "file",
+        "hash": "c2994101272833f003d9d3b88c85fc003215d2f9c65a3aec4700748ff0cd3914",
+        "size": 1438
+      }
+    },
+    {
+      "path": "content/index.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      "after": {
+        "type": "file",
+        "hash": "cab23545bf8afd941bf46bb03852d423009ca2492e9aff27f61d824abfc87020",
+        "size": 402
+      }
+    },
+    {
+      "path": "content/links.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+        "size": 130
+      },
+      "after": {
+        "type": "file",
+        "hash": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb",
+        "size": 25
+      }
+    },
+    {
+      "path": "content/looks.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      "after": {
+        "type": "file",
+        "hash": "fc8817193d2e40bc0a53da194fa88b19e1ba834c6ce731911ead2d3fd95ad543",
+        "size": 367
+      }
+    },
+    {
+      "path": "content/story.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+        "size": 518
+      },
+      "after": {
+        "type": "file",
+        "hash": "f0700ed18762f42292e1856bd95d4e7ea2c9af34ec15d479ef0277c7897b0664",
+        "size": 825
+      }
+    },
+    {
+      "path": "docs/story/assets.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "0f0ae7207472660c54b1505d11b095bd19d525e472293774d680876ab459f67e",
+        "size": 1893
+      },
+      "after": {
+        "type": "file",
+        "hash": "10b02700c57c73dbb4a3a582d07c8951c917617968c308a795ccce9c9d9a02ea",
+        "size": 2853
+      }
+    },
+    {
+      "path": "docs/story/concepts.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "802d16feea38672c02d476f4123626a0b91bac9a408a3a5dabb974181812b5f0",
+        "size": 404
+      }
+    },
+    {
+      "path": "docs/story/decided-for-you.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "d323218254b7f279c0f7080215c9aa1a5520b4c9ded8aabf1cf1af4073ba2ede",
+        "size": 3324
+      }
+    },
+    {
+      "path": "docs/story/environment-setup.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "600c1c9dba4f99c96de2f9ba91d9fb17085b07e3e4e049fe3c955a64efa75c22",
+        "size": 1148
+      }
+    },
+    {
+      "path": "docs/story/handover.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "dd61846ba3b0c246c887b0ca05cfaca8d4cbee31a7e5383157eb82e907792a32",
+        "size": 1889
+      },
+      "after": {
+        "type": "file",
+        "hash": "3e1a02f942d25d47925dcdef1e28b5bac3704c5e7dd7156cbf7415089ec15325",
+        "size": 7453
+      }
+    },
+    {
+      "path": "docs/story/review/extra/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "6fcb12c9130285b852bea3c5c2d8622dd394a454889c4e4cd734a27ecc82d428",
+        "size": 1425
+      }
+    },
+    {
+      "path": "docs/story/review/extra/short480-bench.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "867193cd25c7c53e3e55c1ca524da272a1ab77e523f28f3578778aa8640a57ec",
+        "size": 101517
+      }
+    },
+    {
+      "path": "docs/story/review/extra/short480-evidence.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "c40f8717fefe78e45047f988ae85165d6bf6eac5689a6add07894932daaa5c90",
+        "size": 113270
+      }
+    },
+    {
+      "path": "docs/story/review/extra/short480-question.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "3e2548b964adb6efd5a9c12d265485daabaa2cb731afadef821db3f636a18165",
+        "size": 113413
+      }
+    },
+    {
+      "path": "docs/story/review/extra/short480-scheduling.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "3e3bf765890e314fd92ef8e09d7ef856c75f7bf5fb46c1cb0ac9148cddd798a8",
+        "size": 114621
+      }
+    },
+    {
+      "path": "docs/story/review/extra/short480-scope.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "7a3b56095ac3cac81fc9068881b3c5791176c7f0c7123366ab7c28fd7b6a90cf",
+        "size": 125972
+      }
+    },
+    {
+      "path": "docs/story/review/extra/skip-focused.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "199b0eccfaabac04aff85e9df3579f0e60f2efcb4c373ab450473755c1fb498d",
+        "size": 108490
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "66d278558be00f82ac4054423d5c15fb3882623dd650abd75ebd1f2c1321802f",
+        "size": 2486
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/00-question.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "7c9bb6c8c3ebbed7c3d0ee84c1a649c3137cf52f6733da86424b432e8be5894a",
+        "size": 109998
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/01-scheduling.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "b569c422b1ef858d870b4d09a3ec97f88891ca6fe09c616f75c9201c9b4495bf",
+        "size": 85384
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/02-bench.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "cdb0469348fb629c74ba8b5b637b2b66bbdf202f55dfcfc4cbfe226dec844c2a",
+        "size": 101692
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/03-evidence.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "338ebc27f96c01364eef585ab43c7c76448be75d578ae1ea55a98936e0dd45e0",
+        "size": 94874
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/04-scope.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "0d29b898c7e76681a5b3857c3363d95446df9c046428910645fcd3e3f9b4d602",
+        "size": 130593
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-no-webgl/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "7e176da1c7eb473d876fa7e99ad1570964f4897af76fe8059dba0884d2707fff",
+        "size": 1819
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-phone.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "97bc3e5ca4a741a216931d59699d9c3512e813d48062baef968012b6b2d4a358",
+        "size": 2483
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/00-question.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "c3f439743c311db4ad9c656ffd498f6e92e753c4cb428c3deffbaa081cf2a7ce",
+        "size": 75452
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/01-scheduling.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "90f1f6d8754c519322ebf17a25eb64b1b2f02ff0667c3b5bac27f239bb2c9ed3",
+        "size": 70236
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/02-bench.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "47614a15260dfce3009cf4ce250ac8359ec552348f4caa84a7316d3574de2f54",
+        "size": 70262
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/03-evidence.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "fef3130ef290f8cdb61dfff8f58dfd715cd6b78fd3038baa159998d7b12f9797",
+        "size": 70293
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/04-scope.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "ebf706a85ecd8e53c8e3b5bc464dd06ec958d009a8965fe7bfbc1d72abe2ab12",
+        "size": 78206
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-phone/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "e7894411b25167ef4bc91c73d20367a3576eb2b1e83a92ed4474856cb3ad442d",
+        "size": 1816
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "67c62053ed787779a8281c2fe3ad6ff1b534a49a939153b58d72b9427e078610",
+        "size": 8813
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/00-question-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "cc1864bada1b72d04a2bb1fbbe70f780eaeb562fd16e49739488efa987a0399c",
+        "size": 143315
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/00-question-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "da535b51bba2b5e4ef8e5039a30135e9e211f6f2e61f1ad815d63cbd3584793f",
+        "size": 143003
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/00-question-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "3b73a341cd11f5d3b544a96d33501dd9f589415706d6fa922d1664ab9ed33988",
+        "size": 146015
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/01-scheduling-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "ee630adf801506e8ccb6c18ee80cf01aa53649b68be6b6b5ed30b7e3626d5fbc",
+        "size": 131437
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/01-scheduling-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "835575f0348f8520e4c41fde44bd3442278ea88cb29eede21c4e6a3f58599ec9",
+        "size": 132160
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/01-scheduling-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "5bd9c2fc9a1a40b76eb00d210783cb9116e2f6398d9d3489467ce642f46c172e",
+        "size": 196208
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/02-bench-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "5e1580c6dd35c628e6cbbac7876aa0fe00cacdb64273ca594a2994c34d932de7",
+        "size": 126347
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/02-bench-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "135930616c961a8d551b486120be4b14c5ecf28196dc9b6638b16a7932bbbf51",
+        "size": 127169
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/02-bench-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "40b2cb0c3f703f0949600e7717631849285de527cd6451ac63657ab0f9bcaef2",
+        "size": 179971
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/03-evidence-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "a01323856ab47f3ff81cee4da62bb84282d7ea9f9350f177a587b6437a4ba006",
+        "size": 131536
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/03-evidence-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "642ffe531204f08545f20bb419ad297ed2cca4aaebe4ccb60a741c812e941308",
+        "size": 131119
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/03-evidence-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "a6fa1a58b484409b72b5abfb2f11710e87fc23ccdc0dc5355b93479acc95858c",
+        "size": 188599
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/04-scope-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "7362b836aa9e23a5ffb4171d6c1c553f50b8fbed4581d17d7c5c8cae41db4f93",
+        "size": 146026
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/04-scope-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "fefa5f640f7ba9732d3e910c9abcd101dd1ab8ac8ffac715f2303712a793f5b0",
+        "size": 146990
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/04-scope-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "70ed82a86290ccf5aaa41244264e87c85e0f2bf1a4f3751f3f1e25dc16d9dc04",
+        "size": 196555
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-reduced/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "a5226791a3ff5108b657d3af7d64881d3ad162036bcd61d738f809d546b38468",
+        "size": 8146
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-short.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "2cb858d44f14a9a354462d3cb03a3a119a6fe9e39ab696e831a2d63b2fb061ff",
+        "size": 2533
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-short/00-question.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "df911f10e2b92fa2715bd53d0e9ddd6dc2c0f20ddda854369723f0e5bb2de1db",
+        "size": 132275
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-short/01-scheduling.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "6984034b154cbd02beceefe98eb6e7e1d2d61f63dd4db6476d079368b0c1bcdf",
+        "size": 124324
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-short/02-bench.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "957e7912557c52e2a356b8ecf918b91608ec7b9d00284bb528e3a121aa07bbd8",
+        "size": 118177
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-short/03-evidence.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "7c3ad6799f82f2c34f23499eca6050bc7f19390b4443bd8112972bed64f64d22",
+        "size": 123147
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-short/04-scope.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "855598eb0d8cf96b2709b0ccad8fad7fd92ac372b8596eadbc80af2fe22999ef",
+        "size": 137214
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-short/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "0c5feee67f059689dc31ab0628032ce5376efffe9b5d30c3c6d3f3dd872d753d",
+        "size": 1866
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "4b3230d7f663d43619a7b68be99a71639fde1c10bc50e50e84acd6f2b82e9377",
+        "size": 5382
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/00-question-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "104e2f83cecfcbfcfd1016e7d7289e862cc1a0e8c7d0df87a2be13b82e4e8ba5",
+        "size": 143621
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/00-question-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "3e4dccc4e3df0db78248604aa26231d799773efa846d90f595a354e447b6071b",
+        "size": 143099
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/00-question-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "1679966624518db6c102ffb0ed5777f2c8eb753cf8db662f41169a6b3fe8d3f5",
+        "size": 144710
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/01-scheduling-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "e7ac90dd360ee02653e2bc0eeca97da3bda62c482c0e8777dbaf3bba540a7f49",
+        "size": 132038
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/01-scheduling-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "7f12171052c5bab709785e3111fd15864b36c3773be150083023d57af137e6f7",
+        "size": 130961
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/01-scheduling-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "ec5a6df6496887fff909fcc13a6a5e687b946aaee8f0b04eda8e4923b102dfb9",
+        "size": 110771
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/02-bench-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "6b78b014857405a5ffbfabb5220187ae1b489e482bc1e3df1fc9e3430c4dd053",
+        "size": 126456
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/02-bench-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "f98f7d6367861bf158c5ae71e030032326874244c3acec47179562e085d2ae01",
+        "size": 125920
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/02-bench-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "210dcad4f34ffc9dd9989b93c0bfbbb711d8b24d10c369a7c9bf17d4b9cf1e58",
+        "size": 103467
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/03-evidence-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "ef36824e890f5d26df83a9ef690716a3039d04d2dcb149f42be773b7d60aee4f",
+        "size": 130998
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/03-evidence-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "b66b25501bf63aa133abec0a9f23ebe3ec47b96516364eb6328a74a8b42724bc",
+        "size": 131201
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/03-evidence-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "27d5104ab87660b5c56748bcd2bfb8ae04cda6dfdd3e2e9de5a22b5497acbfdb",
+        "size": 104068
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/04-scope-end.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "0ada9cf1c99e4dd719a1611aab8ac6223d11dbf0d4cf0db8f72149950cf2e837",
+        "size": 148808
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/04-scope-mid.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "97a77c101127573fd2f2bcc0e8dde4d4729411daa6fca281a5eda77931798078",
+        "size": 146237
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/04-scope-start.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "9836a30f71c9057e9d5a21b9c25fd094764015c74680226c106050e079939dc0",
+        "size": 108283
+      }
+    },
+    {
+      "path": "docs/story/review/production/bench-wide/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "fe8062256c26c435a7ff9c23b464e6cc15230546570ed2a7214c5d50c84c7cae",
+        "size": 4715
+      }
+    },
+    {
+      "path": "docs/story/review/production/build.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "5eb165c206bf548724d5eb1963daa74afa088da499021a1a984c18f083460ad5",
+        "size": 1986
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "8209586fa51eaefe1bc12d836113b5956dacd26da668811e54cf98e0a4bc6a4a",
+        "size": 2760
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss/00-question.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "104e2f83cecfcbfcfd1016e7d7289e862cc1a0e8c7d0df87a2be13b82e4e8ba5",
+        "size": 143621
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss/01-scheduling.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "e7ac90dd360ee02653e2bc0eeca97da3bda62c482c0e8777dbaf3bba540a7f49",
+        "size": 132038
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss/02-bench.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "6b78b014857405a5ffbfabb5220187ae1b489e482bc1e3df1fc9e3430c4dd053",
+        "size": 126456
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss/03-evidence.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "ef36824e890f5d26df83a9ef690716a3039d04d2dcb149f42be773b7d60aee4f",
+        "size": 130998
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss/04-scope.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "0ada9cf1c99e4dd719a1611aab8ac6223d11dbf0d4cf0db8f72149950cf2e837",
+        "size": 148808
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss/context-lost.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "36bb36104f7c80766cbd1870ed0a95f711c17d294c2983c934a76dd50d6713cb",
+        "size": 119722
+      }
+    },
+    {
+      "path": "docs/story/review/production/context-loss/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "f5ccad779ff187204b82f673a76382ecba5aae7ae4bf1672d0144d7758856e20",
+        "size": 2093
+      }
+    },
+    {
+      "path": "docs/story/review/production/manifest.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "f53715246f5d02d474f0bf6ae91aa7eacd1c62ea81593526f2472762c730ffea",
+        "size": 10277
+      }
+    },
+    {
+      "path": "docs/story/review/production/no-js.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "56c1960fbe20eebdfdc9e7ac739217a61d6b041d1fcf8bf0522b8b6f650614b3",
+        "size": 2704
+      }
+    },
+    {
+      "path": "docs/story/review/production/no-js/00-question.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "5db9d3c5bb3b11f436e2919f38e1da8ff3c608adc5ccdb24cef980e8e585d7bc",
+        "size": 111255
+      }
+    },
+    {
+      "path": "docs/story/review/production/no-js/01-scheduling.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "4e794b3be4fa0bfcd7f3b2e86640bd2ee278d806d65d7fa2a69f31aa67ad7fdf",
+        "size": 87178
+      }
+    },
+    {
+      "path": "docs/story/review/production/no-js/02-bench.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "bd418220b4a55a725be15f9e05832f63da3a4966d8f6e6d10bfa25e123890e61",
+        "size": 103796
+      }
+    },
+    {
+      "path": "docs/story/review/production/no-js/03-evidence.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "3dda9f95255cea18ba5dbd147df6c14ac25698fdfacc5a02cdd989605266cdc1",
+        "size": 96464
+      }
+    },
+    {
+      "path": "docs/story/review/production/no-js/04-scope.png",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "40e38313aad72a72e3f9e77857d2302149a3046c899f4cbef39055f419b1792c",
+        "size": 132794
+      }
+    },
+    {
+      "path": "docs/story/review/production/no-js/report.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "77aafde6fcb5ccc6e94a44a1ffc9c9c17a0a79d001a2f272cecc8fb1a2cdc754",
+        "size": 2037
+      }
+    },
+    {
+      "path": "docs/story/review/production/server.log",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "5f49f220ad445b0ff318c8fe08b13db498a636c4925f2191b96c41c41437709c",
+        "size": 330
+      }
+    },
+    {
+      "path": "docs/story/review/provenance.json",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "0d09b6cc2a89dcd512a93c80e085e7c880f2d0f37940fe12ea512fbb86bc6e29",
+        "size": 19754
+      }
+    },
+    {
+      "path": "docs/story/storyboard.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6",
+        "size": 3766
+      },
+      "after": {
+        "type": "file",
+        "hash": "2dc62cee97e9a0a2158a530ff8a210890b99ea53d4e17516a28dc31441c55d18",
+        "size": 4304
+      }
+    },
+    {
+      "path": "scripts/prototype-review.mjs",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "797ad2a2afc5e44aa613563a7b43af43470630167e467175c08e3fa3c939c11a",
+        "size": 4064
+      }
+    }
+  ]
+}

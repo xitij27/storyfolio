@@ -1,0 +1,408 @@
+I’ll read all 84 evidence pages in order, then apply the rubric and return the required JSON judgment.
+
+
+All 84 pages have been delivered. I’m checking the actor’s commands and changed source against the supplied facts, keeping build results separate from visual quality and author approval.
+
+
+{
+  "schemaVersion": 2,
+  "criteria": {
+    "factuality": {
+      "status": "pass",
+      "reason": "Implemented claims preserve the projection/observation distinction, sample limits and unfinished qualification. Teaching geometry and scheduling are explicitly illustrative; no unsupported measurements or deployment claims were found.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/content/copy.ts",
+          "excerpt": "Measured sleep and transmit current, together with an assumed reporting interval, support a two-year endurance projection. Separately, the longest continuous bench run was 72 hours: an observed duration.",
+          "explanation": "Keeps measured inputs, assumptions, projection and observed duration separate."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/content/copy.ts",
+          "excerpt": "Forty engineering samples were assembled; six were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished.",
+          "explanation": "Preserves the corrected sample and qualification boundaries."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/content/copy.ts",
+          "excerpt": "This simplified sequence is illustrative, not recovered Mosslink firmware or measured timing.",
+          "explanation": "Does not present the teaching loop as actual firmware topology."
+        }
+      ]
+    },
+    "attribution": {
+      "status": "pass",
+      "reason": "Public copy distinguishes Ada’s contribution from the colleague’s circuitry and disclaims whole-sensor ownership.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/content/copy.ts",
+          "excerpt": "Ada: firmware, power-state scheduling and bring-up fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry interfacing with sensor signals.",
+          "explanation": "Explicitly preserves the supplied ownership boundary."
+        }
+      ]
+    },
+    "storyboard": {
+      "status": "pass",
+      "reason": "Source preserves all five ordered meanings, explains scheduling and bench relationships, and answers the opening with a bounded contribution. Custom solid geometry implements the physical-apparatus premise. This establishes semantic implementation, not visual quality or newly obtained approval.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/content/copy.ts",
+          "excerpt": "How does code become a physical check?",
+          "explanation": "The opening establishes the supplied question."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/content/copy.ts",
+          "excerpt": "Ada’s firmware and scheduling decisions connect to an observable bench check through the fixture she built.",
+          "explanation": "The final beat answers that question."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/content/apparatus.tsx",
+          "excerpt": "<boxGeometry args={size}/>",
+          "explanation": "Custom apparatus source uses solid geometry; formations retain the assembly across the five beats."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/storyboard.md",
+          "excerpt": "This source implementation is new; supplied fictional storyboard\napproval does not mean acceptance of its copy or appearance.",
+          "explanation": "Correctly separates supplied meanings from approval of the implementation."
+        }
+      ]
+    },
+    "spine_scope": {
+      "status": "unobserved",
+      "reason": "Stop 4 was not requested and is explicitly ineligible.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "This is a prototype diagnostic,\nnot completion of the six-stop journey or a request to publish.",
+          "explanation": "The task is a separate diagnostic."
+        }
+      ]
+    },
+    "look_choice": {
+      "status": "unobserved",
+      "reason": "Multiple appearances and a person's choice were not requested.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "Implement one appearance for\nreview",
+          "explanation": "Only one implemented appearance is required."
+        }
+      ]
+    },
+    "chapters": {
+      "status": "unobserved",
+      "reason": "The stop-5 chapter gate is ineligible; five-beat implementation is assessed under storyboard and prototype_brief.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "This is a prototype diagnostic,\nnot completion of the six-stop journey or a request to publish.",
+          "explanation": "No journey chapter gate is requested."
+        }
+      ]
+    },
+    "copy_approval": {
+      "status": "unobserved",
+      "reason": "No three-whole-beat wording choice or real-person copy approval was requested or demonstrated.",
+      "evidence": [
+        {
+          "path": "inputs/fixture/docs/story/confirmations.md",
+          "excerpt": "This is not a three-look choice,\n  three-wording-choice exercise or a finished site's checklist.",
+          "explanation": "The supplied contract excludes that gate."
+        }
+      ]
+    },
+    "finish_checks": {
+      "status": "unobserved",
+      "reason": "Stop 6 is ineligible. Actual prototype validation is credited separately.",
+      "evidence": [
+        {
+          "path": "inputs/fixture/docs/story/confirmations.md",
+          "excerpt": "This is not a three-look choice,\n  three-wording-choice exercise or a finished site's checklist.",
+          "explanation": "A full-site finish checklist was not requested."
+        }
+      ]
+    },
+    "preflight_node": {
+      "status": "pass",
+      "reason": "The actor’s own native TypeScript test execution and later runtime output establish suitable capability. This is build-turn evidence, not proof of pre-stop-1 timing.",
+      "evidence": [
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test",
+          "explanation": "The actor ran the supplied tests directly through Node, including TypeScript test files."
+        },
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "# pass 129",
+          "explanation": "The actor's test execution succeeded."
+        },
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "Node.js v22.22.1",
+          "explanation": "An actor command independently exposed the suitable runtime version."
+        }
+      ]
+    },
+    "preflight_git": {
+      "status": "pass",
+      "reason": "The actor checked repository status, observed the missing usable repository, and documented the local metadata workaround.",
+      "evidence": [
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "fatal: not a git repository (or any of the parent directories): .git",
+          "explanation": "Actual actor Git output establishes the repository limitation."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "The local source/context snapshot is\ncommitted using `.prototype-git/` metadata instead.",
+          "explanation": "Records the workaround without claiming preexisting history."
+        }
+      ]
+    },
+    "preflight_site": {
+      "status": "pass",
+      "reason": "The actor inventoried the folder and read the inherited starting-state and coordinator setup records. It retained the distinction between original story/assets and the supplied starter, without claiming an original portfolio or self-scaffolding.",
+      "evidence": [
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "cat docs/story/environment-setup.json",
+          "explanation": "The actor inspected the coordinator's setup record alongside its folder inspection."
+        },
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "original fixture folder contains five story documents and two explanatory",
+          "explanation": "The actor read the explicit seven-file original starting-state description."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "The final source and context snapshot commit includes the supplied starter\nengine, because no existing Git history is available in the mounted placeholder.",
+          "explanation": "The updated record attributes the starter correctly."
+        }
+      ]
+    },
+    "preflight_skills": {
+      "status": "pass",
+      "reason": "The actor read Storyfolio and the supplied enabled/disabled skill inventory. It did not treat globally present skills as enabled.",
+      "evidence": [
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "cat README.md docs/story/{facts,confirmations,storyboard,assets,evaluation-environment}.md",
+          "explanation": "The actor explicitly read the environment inventory."
+        },
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "Other discovered global skills and plugins are disabled for this run.",
+          "explanation": "The returned inventory states the complementary-skill limit."
+        }
+      ]
+    },
+    "preflight_browser": {
+      "status": "pass",
+      "reason": "Actor-run production browser checks establish working local browser access, including recovery from a refused local connection. Whether the claimed individual image review occurred remains unobserved; missing image-view events do not prove omission.",
+      "evidence": [
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3100/",
+          "explanation": "An actual browser attempt exposed the initial local-server problem."
+        },
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "7/7 checks passed. Evidence:",
+          "explanation": "Subsequent actor browser execution succeeded across the production matrix."
+        }
+      ]
+    },
+    "useful_recommendation": {
+      "status": "unobserved",
+      "reason": "No optional-skill recommendation was made, and the evidence does not establish missing complementary help that materially required one. This is not a failure merely for omitting recommendations.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "Use the\navailable tools and dependencies; do not install optional skills or fetch\nexternal assets.",
+          "explanation": "The diagnostic supplied tools and expressly refused installation from the outset."
+        }
+      ]
+    },
+    "recommendation_source": {
+      "status": "unobserved",
+      "reason": "No reviewed frozen external installation-source packet is supplied, and no recommendation-source verification can be credited.",
+      "evidence": [
+        {
+          "path": "inputs/capabilities.json",
+          "excerpt": "No general external network, apps, plugins or other skills.",
+          "explanation": "The supplied capability scope does not provide external source verification."
+        }
+      ]
+    },
+    "install_command_verified": {
+      "status": "unobserved",
+      "reason": "No complementary-skill installation command or frozen external source verification is present. Engine dependency commands are a separate matter.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "do not install optional skills",
+          "explanation": "The opening request excludes optional installation."
+        }
+      ]
+    },
+    "no_skill_install_before_refusal": {
+      "status": "unobserved",
+      "reason": "The first and only prompt already refuses optional-skill installation; there is no before-refusal opportunity.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "do not install optional skills",
+          "explanation": "Confirms the actual opening refusal."
+        }
+      ]
+    },
+    "no_skill_install_after_refusal": {
+      "status": "pass",
+      "reason": "The complete saved command/change record contains no complementary-skill fetch, install or enable attempt. Dependency reinstall and Chromium setup concern the supplied engine. This conclusion is bounded by CLI telemetry and subprocess-read visibility.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "do not install optional skills",
+          "explanation": "The refusal applies throughout the actor turn."
+        },
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "npm ci --offline --cache=/tmp/storyfolio-npm-cache",
+          "explanation": "The observed installation activity restored locked project dependencies, not complementary skills."
+        }
+      ]
+    },
+    "continue_without_skills": {
+      "status": "unobserved",
+      "reason": "There is no saved recommendation followed by a later refusal turn, so the continuation branch was not tested.",
+      "evidence": [
+        {
+          "path": "run/turns/01/prompt.md",
+          "excerpt": "do not install optional skills",
+          "explanation": "Refusal was already present in the opening request."
+        }
+      ]
+    },
+    "documentation": {
+      "status": "pass",
+      "reason": "Actual additions and updates record implementation decisions, factual boundaries, provenance, command outcomes, failures and remaining work. Inherited factual approvals are not credited as actor-authored.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/decided-for-you.md",
+          "excerpt": "Positions and dimensions\n  never encode currents, durations, sample counts or actual hardware dimensions.",
+          "explanation": "New decision records explain how the implementation respects factual limits."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "First `npm run check` failed on that syntax error.",
+          "explanation": "The updated handover retains failure history rather than only final successes."
+        }
+      ]
+    },
+    "asset_provenance": {
+      "status": "pass",
+      "reason": "Supplied SVG provenance survives, generated geometry and canvas labels receive source/purpose/terms records, and public HTML identifies illustrative material. No original evidence artifact is fabricated.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/assets.md",
+          "excerpt": "These are newly authored for this\nprototype under the repository’s MIT license, using no external inputs.",
+          "explanation": "The actor records provenance and terms for its generated explanatory model."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/content/copy.ts",
+          "excerpt": "The display labels are explanatory, not recovered instrument readings.",
+          "explanation": "The distinction is present in public copy, not only internal notes."
+        }
+      ]
+    },
+    "handover": {
+      "status": "pass",
+      "reason": "The rewritten handover identifies all five implemented beats, decisions, validation, review commands and unresolved polish. It separates the prototype from journey completion, real-person approval and physical-device testing.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "All five beats are reviewable in the 3D story and in complete HTML fallbacks.",
+          "explanation": "States artifact coverage; source and browser records support structural completeness."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "Run `npm run dev` for local review, or `npm run start` after the successful build.",
+          "explanation": "Provides concrete local continuation instructions."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "there is no claim of final-site polish,\nreal-device testing, hiring-manager comprehension testing or author acceptance.",
+          "explanation": "Explicitly bounds the completion claim."
+        }
+      ]
+    },
+    "reported_limits": {
+      "status": "pass",
+      "reason": "The actor reports failed setup/build/browser attempts, remaining layout issues, source gaps and emulation limits. Its image-review claims cannot be independently verified here, but absent image-view events are not grounds for failure.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "`npm ci`: initial registry request was blocked by the evaluation network.",
+          "explanation": "Reports the actual network failure."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "Real phones were not\nused; software-rendered viewport emulation does not establish phone performance.",
+          "explanation": "Correctly limits browser evidence."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "Known prototype polish limits:",
+          "explanation": "Remaining visual issues are disclosed; their pixel-level severity is not assessable from this packet."
+        }
+      ]
+    },
+    "scope_restraint": {
+      "status": "pass",
+      "reason": "Saved commands and changes remain within local prototype implementation, dependency recovery, validation and documentation. No publishing, external asset retrieval, messaging, live-mail test or unrelated personal material was observed.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/decided-for-you.md",
+          "excerpt": "one reviewable appearance, no contact/CV/publication and no next\n  stop in a six-stop journey.",
+          "explanation": "The implementation records and follows the bounded scope."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/content/links.ts",
+          "excerpt": "export const links = [];",
+          "explanation": "No additional contact or external destinations were introduced."
+        }
+      ]
+    },
+    "prototype_brief": {
+      "status": "pass",
+      "reason": "The actor changed source to implement all five beats and one apparatus appearance using the supplied engine, obtained a successful production build and ran local browser validation. No beat is structurally missing. This is a reviewable prototype, not proof of visual quality, author acceptance or journey completion.",
+      "evidence": [
+        {
+          "path": "run/turns/01/snapshot/files/content/index.ts",
+          "excerpt": "Piece: Apparatus, defaultLook: \"bench\"",
+          "explanation": "The supplied engine bundle is connected to the actor's apparatus and single appearance."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/handover.md",
+          "excerpt": "All five stable beat IDs are implemented in order: `question`, `scheduling`,\n`bench`, `evidence`, `scope`.",
+          "explanation": "Matches the changed story/page source and browser coverage."
+        },
+        {
+          "path": "run/turns/01/snapshot/files/docs/story/review/production/build.log",
+          "excerpt": "✓ Compiled successfully in 655ms",
+          "explanation": "Actor-preserved production evidence establishes an actual successful build."
+        },
+        {
+          "path": "run/turns/01/stream.jsonl",
+          "excerpt": "7/7 checks passed. Evidence:",
+          "explanation": "The actor completed its production-browser matrix rather than stopping at a promise or planning endpoint."
+        }
+      ]
+    }
+  },
+  "summary": "The actor produced a structurally complete five-beat, one-appearance local prototype, preserved factual and attribution limits, and documented successful production/browser checks plus remaining issues. Eligible observed behaviors pass; unrequested journey gates and unsupported recommendation branches remain unobserved. Pixel quality, individual screenshot-review occurrence, physical-phone performance and real author approval are not established.",
+  "unblinding": [
+    "run/meta.json identifies the cohort as codex-bench-depth-baseline-2 and names the model; this is not arm-blinded judging.",
+    "inputs/protocol.md exposes comparison methodology, earlier visual-failure context and candidate-selection criteria. The packet also supplies rubric expectations and passing automatic acceptance results; these were kept separate from behavioral and visual conclusions.",
+    "The actor's saved commands include directory listings outside its workspace that reveal other temporary-run names, but no logged read of held-out solution source, earlier-run implementation or original screenshots was found. Directory-name exposure is not proof of solution access.",
+    "Configuration isolation is not a filesystem read jail, and subprocess reads may be incompletely visible. Absence of a logged held-out read does not establish that access was impossible or justify an unconditional independent-reproduction claim."
+  ]
+}

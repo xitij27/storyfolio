@@ -1,0 +1,4 @@
+2026-10-11T22:48:31.575156Z  WARN codex_network_proxy::proxy: allowUnixSockets and dangerouslyAllowAllUnixSockets are macOS-only; requests will be rejected on this platform
+2026-10-11T22:48:50.138627Z  WARN codex_sandboxing::violation: recorded sandbox violation: resource=network backend=managed_network_proxy protocol=http-connect host=registry.npmjs.org port=Some(443) reason=not_allowed method=Some("CONNECT") mode=None client=Some("127.0.0.1:56732") decision=Some("deny") source=Some("baseline_policy")
+2026-10-11T22:48:50.138702Z  WARN codex_network_proxy::http_proxy: CONNECT blocked (client=127.0.0.1:56732, host=registry.npmjs.org, reason=not_allowed)
+2026-10-11T22:49:08.389273Z ERROR codex_core::tools::router: error=write_stdin failed: Unified exec process failed: Network access to "registry.npmjs.org" was blocked: domain is not on the allowlist for the current sandbox mode.

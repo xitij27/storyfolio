@@ -21,10 +21,14 @@ are implemented and verified with 342 passing repository tests. The
 [development findings](../evals/runs/stage-3-integration-1/findings.md)
 record browser evidence, independent review and the two unapplied visual
 instruction drafts. The author subsequently [approved the bounded comparison](history/2026-10-12-stage-3-comparison-approval.md)
-with "Approve this bounded comparison". Fresh baseline preparation is now
-underway; [actual outcomes](../evals/runs/stage-3-comparison-1/findings.md)
-will govern candidate selection. No behavioral skill instruction changed
-at approval and Stage 3 remains incomplete.
+with "Approve this bounded comparison". The fresh baseline completed its
+single turn in 645.672 seconds. All seven technical modes pass and all
+253 original images are reviewed, but both targeted visual gaps remain.
+Two supported conditional build-review paragraphs are now selected for
+the matched candidate. The [actual outcomes](../evals/runs/stage-3-comparison-1/findings.md)
+keep technical, text and visual results separate, including the judge's
+outer-status discrepancy. The candidate has not yet run. Stage 3 remains
+incomplete and normal skill use still ends at the approved storyboard.
 
 The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` verbatim before this checkpoint's current-state updates.
@@ -217,7 +221,16 @@ The shipped skill and engine remain unchanged. New behavioral instructions
 still require a supported miss and a separately decided matched rerun;
 there is no new paid allowance or push authorization.
 
-The latest direct skill changes are two paragraphs in
+The current candidate adds only two conditional build-review paragraphs:
+compare settled scene meaning with the storyboard, and inspect changing
+face words during forward/reverse travel. Its saved fresh baseline misses,
+exact selection, placement and matched conditions are in the
+[candidate decision](../evals/runs/stage-3-comparison-1/candidate-decision.md).
+The main skill is 799 words with four references and preserves its
+planning-only endpoints. Structural checks and 342 local tests pass;
+behavioral improvement and planning regression are not yet established.
+
+Earlier direct planning changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
 
 - Explain the person's work and unfamiliar terms in ordinary language at

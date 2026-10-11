@@ -85,7 +85,9 @@ implemented. The [verified checkpoint](../evals/runs/stage-3-integration-1/findi
 records 342 passing tests, seven valid browser conditions, 15 rejected
 faulty variants and a real-browser helper smoke. The shipped skill is still
 planning-only, with two evidence-backed visual paragraphs drafted but not
-applied. The separately bounded paid comparison awaits an answer.
+applied at that checkpoint. The author then [approved the bounded comparison](history/2026-10-12-stage-3-comparison-approval.md).
+The [new comparison record](../evals/runs/stage-3-comparison-1/findings.md)
+tracks the actual baseline, any justified candidate and remaining limits.
 
 For a new session, read:
 
