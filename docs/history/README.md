@@ -5,6 +5,10 @@ The files indexed here preserve historical wording, including instructions
 and status statements that were later superseded. Their commands are not
 the current execution instructions.
 
+The [12 October stage checkpoint](2026-10-12-stage-status-clarification.md)
+records the author's request for skill-level progress rather than testing-tool
+next steps: Stage 3 is active, while the shipped skill still plans only.
+
 The [11 October publication and README record](2026-10-11-readme-and-publication.md)
 preserves the author's public-status update, the earlier private-status
 guidance and the illustrated README work.

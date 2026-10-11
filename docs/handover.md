@@ -1,8 +1,17 @@
 # Handover
 
-Current state as of 11 October 2026. Start with this page and
+Current state as of 12 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
+
+Stage-level position: **Stage 3, the build, is active and incomplete.**
+Stage 1's planning method is implemented with closing review decisions open;
+Stage 2's engine is complete and approved. The shipped skill still ends at
+an approved storyboard. The approved manual prototype demonstrates the
+quality target, not a proven reusable build workflow. Stage 4 packaging
+follows the complete-site proof. The author's request for this framing and
+the remaining product work are in the
+[12 October stage checkpoint](history/2026-10-12-stage-status-clarification.md).
 
 The [pre-engine handover](history/2026-10-11-before-engine-handover.md)
 preserves this day's earlier current-state wording verbatim.
