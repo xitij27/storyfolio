@@ -12,6 +12,12 @@ has failed and remains open. The completion judge could not start because
 its packet exceeded the CLI character limit. Shipped site-building guidance
 remains future work.
 
+The author subsequently authorized a manual three-beat recovery prototype.
+Its [source and setup](../prototypes/fixture-study/README.md),
+[design](superpowers/specs/2026-10-11-fixture-prototype.md) and
+[findings](../evals/runs/visual-recovery-prototype-1/findings.md) are the next
+review checkpoint. Actual author visual approval remains pending.
+
 For a new session, read:
 
 1. [Repository rules](../AGENTS.md), then [current handover](handover.md).

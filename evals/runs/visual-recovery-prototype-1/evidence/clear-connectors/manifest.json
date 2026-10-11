@@ -1,0 +1,108 @@
+{
+  "startedAtUtc": "2026-10-11T05:06:48.140Z",
+  "url": "http://127.0.0.1:3012/?look=bench",
+  "node": "v22.22.1",
+  "command": [
+    "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "/home/kshitij/projects/storyfolio/evals/runs/visual-recovery-prototype-1/capture.mjs",
+    "--url=http://127.0.0.1:3012/",
+    "--only=desktop,phone,short,reduced",
+    "--out=evidence/clear-connectors"
+  ],
+  "sourceDigest": "ca70921b32b59597b4ae339c895d9317caaeb3e9f4ff893f49a0eae0f04a6883",
+  "captureScriptSha256": "29b9425fc3b6b5116448fa35247404ada4f3af00df2fcdfa2a41a0e8900ac9a1",
+  "modelInvocations": 0,
+  "scope": "selected conditions",
+  "conditions": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scene": "on",
+      "controls": true,
+      "movement": true
+    },
+    {
+      "name": "phone",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scene": "on",
+      "touch": true,
+      "controls": true
+    },
+    {
+      "name": "short",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "scene": "on"
+    },
+    {
+      "name": "reduced",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scene": "on",
+      "reduced": true
+    }
+  ],
+  "launchArgs": [
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader",
+    "--ignore-gpu-blocklist"
+  ],
+  "deviceScaleFactor": 1,
+  "settleMs": 2600,
+  "limitations": [
+    "Software WebGL in desktop Chromium, including touch emulation; no physical phone or GPU measurement.",
+    "Functional assertions and scene pixel changes do not establish visual quality or author approval.",
+    "Movement evidence is a sampled continuous-scroll frame series, not a video or frame-rate measurement."
+  ],
+  "results": [
+    {
+      "name": "desktop",
+      "report": "desktop/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 22,
+      "blockedExternal": 0
+    },
+    {
+      "name": "phone",
+      "report": "phone/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 8,
+      "blockedExternal": 0
+    },
+    {
+      "name": "short",
+      "report": "short/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 4,
+      "blockedExternal": 0
+    },
+    {
+      "name": "reduced",
+      "report": "reduced/report.json",
+      "completed": true,
+      "problems": [],
+      "captures": 4,
+      "blockedExternal": 0
+    }
+  ],
+  "problems": [],
+  "complete": true,
+  "browser": "156.0.8078.4",
+  "sourceUnchanged": true,
+  "finishedAtUtc": "2026-10-11T05:09:18.524Z",
+  "functionalPass": true,
+  "visualApproval": "Not determined by this script; human review and the author's assessment remain required"
+}

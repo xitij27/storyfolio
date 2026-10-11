@@ -1,0 +1,212 @@
+{
+  "recordedAtUtc": "2026-10-11T05:16:11.849Z",
+  "baseRevision": "1af99a4",
+  "currentHead": "1af99a458197216c56333b7a4c35999f892e14c0",
+  "branch": "main",
+  "historicalHandover": {
+    "revision": "1af99a4",
+    "originalSha256": "9629756bba740002ee6f2d36c52def2047952755cdafa6562fe5a6a3f75a5d90",
+    "archiveSha256": "9629756bba740002ee6f2d36c52def2047952755cdafa6562fe5a6a3f75a5d90",
+    "identical": true
+  },
+  "preservedTrackedSource": {
+    "paths": [
+      "skills/storyfolio",
+      "evals/runs/codex-build-1",
+      "evals/runs/codex-build-completion-1",
+      "evals/builds/embedded-1",
+      "evals/builds/embedded-completion-1"
+    ],
+    "gitStatus": "",
+    "unchanged": true
+  },
+  "documentationLinks": {
+    "files": 14,
+    "checked": 482,
+    "broken": [],
+    "limitation": "Checks local path existence, not heading anchors; archived handover links retain their original location as base."
+  },
+  "checks": {
+    "root": {
+      "testsPassed": 246,
+      "testsFailed": 0,
+      "skillCheck": "pass",
+      "people": 17,
+      "source": "Observed terminal execution; Git subprocess tests require approved execution outside the workspace sandbox."
+    },
+    "prototype": {
+      "eslint": "pass",
+      "typecheck": "pass",
+      "localTestFileProcessesPassed": 14,
+      "build": "pass"
+    },
+    "firstFullProductionMatrix": [
+      {
+        "name": "bench-wide",
+        "code": 1,
+        "signal": null,
+        "report": "bench-wide/report.json",
+        "problems": [
+          "1 large shader programs were built after the page had settled"
+        ]
+      },
+      {
+        "name": "bench-short",
+        "code": 1,
+        "signal": null,
+        "report": "bench-short/report.json",
+        "problems": [
+          "1 large shader programs were built after the page had settled"
+        ]
+      },
+      {
+        "name": "bench-phone",
+        "code": 0,
+        "signal": null,
+        "report": "bench-phone/report.json",
+        "problems": []
+      },
+      {
+        "name": "bench-reduced",
+        "code": 0,
+        "signal": null,
+        "report": "bench-reduced/report.json",
+        "problems": []
+      },
+      {
+        "name": "bench-no-webgl",
+        "code": 0,
+        "signal": null,
+        "report": "bench-no-webgl/report.json",
+        "problems": []
+      },
+      {
+        "name": "no-js",
+        "code": 0,
+        "signal": null,
+        "report": "no-js/report.json",
+        "problems": []
+      },
+      {
+        "name": "context-loss",
+        "code": 0,
+        "signal": null,
+        "report": "context-loss/report.json",
+        "problems": []
+      }
+    ],
+    "focusedArrowRerun": [
+      {
+        "name": "bench-wide",
+        "code": 0,
+        "signal": null,
+        "report": "bench-wide/report.json",
+        "problems": []
+      },
+      {
+        "name": "bench-short",
+        "code": 0,
+        "signal": null,
+        "report": "bench-short/report.json",
+        "problems": []
+      }
+    ]
+  },
+  "previousCapture": {
+    "path": "evidence/final",
+    "complete": true,
+    "functionalPass": true,
+    "sourceUnchanged": true,
+    "note": "Seven modes passed; subsequent visual review found transient face-text ghosting."
+  },
+  "stablePrintCapture": {
+    "path": "evidence/stable-print",
+    "complete": true,
+    "functionalPass": true,
+    "sourceUnchanged": true,
+    "note": "Four scene modes passed; text ghosting resolved, but a newly sampled frame exposed a connector drawn inside overlapping modules."
+  },
+  "finalCapture": {
+    "path": "evidence/clear-connectors",
+    "complete": true,
+    "functionalPass": true,
+    "sourceUnchanged": true,
+    "sourceDigest": "ca70921b32b59597b4ae339c895d9317caaeb3e9f4ff893f49a0eae0f04a6883",
+    "cases": [
+      {
+        "name": "desktop",
+        "report": "desktop/report.json",
+        "completed": true,
+        "problems": [],
+        "captures": 22,
+        "blockedExternal": 0
+      },
+      {
+        "name": "phone",
+        "report": "phone/report.json",
+        "completed": true,
+        "problems": [],
+        "captures": 8,
+        "blockedExternal": 0
+      },
+      {
+        "name": "short",
+        "report": "short/report.json",
+        "completed": true,
+        "problems": [],
+        "captures": 4,
+        "blockedExternal": 0
+      },
+      {
+        "name": "reduced",
+        "report": "reduced/report.json",
+        "completed": true,
+        "problems": [],
+        "captures": 4,
+        "blockedExternal": 0
+      }
+    ],
+    "scope": "The four scene-rendering modes repeated after the connector correction. The other three HTML fallback modes are covered by the preceding unchanged fallback implementation."
+  },
+  "sourceChangeScope": {
+    "artworkChanges": [
+      "content/faces.ts",
+      "content/object-design.md"
+    ],
+    "expectedArtworkChanges": [
+      "content/faces.ts",
+      "content/object-design.md"
+    ],
+    "onlyArtworkAndItsRecordChanged": true,
+    "connectorChanges": [
+      "content/extras/connections.tsx"
+    ],
+    "expectedConnectorChanges": [
+      "content/extras/connections.tsx"
+    ],
+    "onlyConnectorsChanged": true,
+    "precedingSourceReconstruction": {
+      "files": 86,
+      "mismatches": []
+    },
+    "stablePrintReconstruction": {
+      "files": 86,
+      "mismatches": []
+    },
+    "finalSourceOnDisk": {
+      "files": 86,
+      "mismatches": []
+    }
+  },
+  "preview": {
+    "url": "http://localhost:3012/",
+    "command": "npm run start -- --hostname 127.0.0.1 --port 3012",
+    "cwd": "prototypes/fixture-study",
+    "node": "22.22.1",
+    "buildId": "cDaOHLELd3lDkmctSgNvx"
+  },
+  "modelEvaluationInvocations": 0,
+  "authorVisualApproval": "pending",
+  "physicalPhoneReview": "pending",
+  "passed": true
+}

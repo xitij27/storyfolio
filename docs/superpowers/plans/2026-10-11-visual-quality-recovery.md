@@ -99,3 +99,15 @@ three full-beat wording choices, non-sheet full-journey proof and real author
 approval. Stage 1 review/privacy questions and Stage 4 packaging checks stay
 visible in the handover. Visual recovery is the next priority, not evidence
 that these other requirements have been completed.
+
+## Implementation checkpoint
+
+The author subsequently [authorized proceeding](../../history/2026-10-11-visual-prototype-approval.md).
+The new [fixture study](../../../prototypes/fixture-study/README.md) implements
+the three beats in a separate source directory. Its
+[design](../specs/2026-10-11-fixture-prototype.md) replaces the fixed six-row
+fixture with an explicitly illustrative bench assembly. The
+[findings](../../../evals/runs/visual-recovery-prototype-1/findings.md) record
+technical checks, actual visual observations and limits. Actual author
+approval remains the gate before expanding this prototype. This manual work
+does not provide a matched skill evaluation or a full-site generality proof.

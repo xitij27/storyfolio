@@ -1,0 +1,128 @@
+{
+  "started": "2026-10-11T04:47:12.413Z",
+  "node": "v22.22.1",
+  "scope": "full matrix",
+  "contract": {
+    "ids": [
+      "opening.assembly",
+      "middle.relationship",
+      "close.evidence"
+    ],
+    "lookIds": [
+      "bench"
+    ]
+  },
+  "probes": {},
+  "matrix": [
+    {
+      "name": "bench-wide",
+      "look": "bench",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.assembly,middle.relationship,close.evidence",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=bench",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "bench-short",
+      "look": "bench",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.assembly,middle.relationship,close.evidence",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=bench",
+        "--size=1280x720",
+        "--expect-scene=on",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "bench-phone",
+      "look": "bench",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.assembly,middle.relationship,close.evidence",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=bench",
+        "--size=390x844",
+        "--touch",
+        "--expect-scene=on"
+      ]
+    },
+    {
+      "name": "bench-reduced",
+      "look": "bench",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.assembly,middle.relationship,close.evidence",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=bench",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--assert-still=300"
+      ]
+    },
+    {
+      "name": "bench-no-webgl",
+      "look": "bench",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.assembly,middle.relationship,close.evidence",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=bench",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "no-js",
+      "look": "bench",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.assembly,middle.relationship,close.evidence",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--no-js",
+        "--expect-selector=h1",
+        "--hidden=canvas,.story-look-switch,.story-control"
+      ]
+    },
+    {
+      "name": "context-loss",
+      "look": "bench",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.assembly,middle.relationship,close.evidence",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--lose-context",
+        "--expect-scene=off"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/next/dist/bin/next",
+      "build"
+    ]
+  ],
+  "results": [],
+  "complete": false,
+  "error": "Error: Production build failed (1); read build.log\n    at file:///home/kshitij/projects/storyfolio/prototypes/fixture-study/scripts/check.mjs:104:34\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"
+}

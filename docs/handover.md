@@ -7,6 +7,9 @@ links the design, plans, operating instructions and evidence.
 The [pre-engine handover](history/2026-10-11-before-engine-handover.md)
 preserves this day's earlier current-state wording verbatim.
 
+The [pre-prototype handover](history/2026-10-11-before-fixture-prototype-handover.md)
+preserves the state before the author authorized visual recovery implementation.
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -31,6 +34,15 @@ to be presented too favorably. Six functional browser conditions pass and
 49 images were reviewed for narrower concerns; those are not a visual pass.
 The [recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md)
 puts a convincing three-beat prototype before another full build.
+The author then said, "yes lets proceed with it". The new manual
+[fixture prototype](../prototypes/fixture-study/README.md) implements those
+three beats using an illustrative bench assembly, connected observation
+relationship and distinct observed/projected evidence. Its
+[specification](superpowers/specs/2026-10-11-fixture-prototype.md) records the
+new design choices. This is a reviewable development study, with actual
+author visual approval still pending. It is not an unchanged-agent rerun or
+a completed Stage 3 proof. Local evidence and final verification are in
+[the prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md).
 The completion judge was rejected by the CLI input limit before its model turn, so no
 behavioral score exists for that study. The shipped skill still plans only;
 the non-sheet whole-site proof and final packaging remain open.
@@ -200,12 +212,22 @@ not establish whether the earlier publication review was completed.
    experience. The previous report overstated readiness by focusing on two
    smaller omissions rather than the missing visual story.
 
-   The next development priority is the
+   The controlling development priority is the
    [visual recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md):
    three authored beats that demonstrate object identity, a useful spatial
    explanation and a resolving ending, with actual movement and phone review
    before full-site expansion. No new paid evaluation or implementation
-   change was made by this comparison. The original and frozen outputs
+   change was made by that comparison. The author subsequently
+   [authorized the prototype](history/2026-10-11-visual-prototype-approval.md).
+   The manual implementation is now in `prototypes/fixture-study/`, using
+   the custom Piece, face, formation and extra hooks. Its local engine
+   adaptation shares the HTML controls provider with the scene, allowing
+   inspection buttons to highlight the corresponding 3D part. Its authored
+   vector fallback preserves the explanation without WebGL or JavaScript.
+   Review the preview on port 3012 and the
+   [saved findings](../evals/runs/visual-recovery-prototype-1/findings.md).
+   Author approval and physical-phone assessment remain pending; expansion
+   follows that gate. No new actor/judge cohort was invoked. The original and frozen outputs
    remain intact. The [preceding handover](history/2026-10-11-before-visual-quality-review-handover.md)
    preserves the earlier acceptance wording verbatim.
 
@@ -257,6 +279,9 @@ preserves the state before this continuation approval verbatim.
 ## Author directions and decision record
 
 Directions below were recorded on 10 October 2026 unless dated otherwise.
+On 11 October, the author approved proceeding with the three-beat visual
+prototype. Their exact words and the preceding recommendation are in
+[the authorization record](history/2026-10-11-visual-prototype-approval.md).
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -311,6 +336,17 @@ No skill change, evaluation run, clone, dependency installation or example
 repository change was made for this planning amendment.
 
 ## Start the next session
+
+The immediate review target is the manual fixture prototype on port 3012.
+Read its [findings](../evals/runs/visual-recovery-prototype-1/findings.md)
+and [setup](../prototypes/fixture-study/README.md). Its printing is fixed
+across beats after reverse-scroll review caught overlapping text during
+crossfades. Connectors now wait for positive clearance between parts after
+a later frame exposed a reversed arrow inside the overlapping assembly.
+Desktop/phone controls and movement, short view and still modes
+have source-bound capture evidence; the author still needs to assess the
+visual direction and a physical phone before full-site expansion. This
+does not restart the paid build cohort or change the planning-only skill.
 
 On 11 October the author asked about token consumption for reviewing and
 building portfolios. The [saved usage audit](../evals/runs/codex-token-usage-audit-1/findings.md)

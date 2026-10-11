@@ -199,3 +199,13 @@ demo captures. It does not claim a fresh running comparison of both sites.
 The [recovery plan](../superpowers/plans/2026-10-11-visual-quality-recovery.md)
 keeps Stage 3 visual acceptance open. This review adds no paid run and changes
 neither the skill nor the engine; frozen study evidence remains intact.
+
+## Visual prototype authorization and implementation
+
+[The authorization record](2026-10-11-visual-prototype-approval.md) preserves
+the author's "yes lets proceed with it" after the recommendation to build a
+three-beat recovery prototype. The [preceding handover](2026-10-11-before-fixture-prototype-handover.md)
+preserves the complete earlier state. The resulting manual
+[fixture study](../../prototypes/fixture-study/README.md) has its own source,
+design decisions and [evidence](../../evals/runs/visual-recovery-prototype-1/findings.md).
+It does not constitute a new paid evaluation or author visual approval.

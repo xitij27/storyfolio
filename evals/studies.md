@@ -39,6 +39,7 @@ its review criteria and independent runtime observations are separate.
 | [codex-build-1](#first-stage-3-build-baseline-11-october-2026) | Bounded spine conversation and judgement, complete within its cost gate |
 | [codex-build-completion-1](#bounded-stage-3-completion-11-october-2026) | Two-turn implementation continuation, technically checked; visual result rejected |
 | [codex-visual-quality-review-1](#visual-quality-review-11-october-2026) | Source and image review after author rejection; Stage 3 visual proof remains open |
+| [visual-recovery-prototype-1](#visual-recovery-prototype-11-october-2026) | Manual three-beat implementation and local visual/browser study; author approval pending |
 
 ## Cases and comparison rules
 
@@ -509,3 +510,19 @@ Evidence: [findings](runs/codex-visual-quality-review-1/findings.md),
 and [recovery plan](../docs/superpowers/plans/2026-10-11-visual-quality-recovery.md).
 No new paid conversation or judgement, skill edit or engine edit was made.
 Old frozen inputs, raw results and technical outcomes are preserved.
+
+## Visual recovery prototype, 11 October 2026
+
+[visual-recovery-prototype-1](runs/visual-recovery-prototype-1/findings.md)
+records the authorized manual implementation of a three-beat fixture study.
+Its separate [source](../prototypes/fixture-study/README.md) uses the same
+fictional evidence with a new illustrative apparatus: assemble, separate
+to explain command → board → fixture → observation, then reassemble with
+the longest run and battery projection shown distinctly.
+
+This is collaborative design and implementation, not an unchanged-agent
+rerun or paid actor/judge cohort. Browser assertions, visual observations,
+source hashes and capture conditions are preserved. Actual author visual
+approval and physical-phone assessment remain pending. The result does not
+close the non-sheet whole-site proof, establish a skill success rate or
+authorize expansion past the prototype review gate.
