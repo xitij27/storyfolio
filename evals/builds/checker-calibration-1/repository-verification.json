@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-11",
+  "node": "22.22.1",
+  "checks": [
+    {
+      "command": "node evals/check-skill.mjs",
+      "result": "pass, 687 words and 4 references"
+    },
+    {
+      "command": "node evals/check-people.mjs",
+      "result": "pass, 17 fixtures"
+    },
+    {
+      "command": "npm test",
+      "result": "pass, 233 tests, zero failures",
+      "log": "repository-tests.log"
+    },
+    {
+      "command": "git diff --check",
+      "scope": "tracked current implementation and documentation before evidence staging",
+      "result": "pass"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "exit 2, 71 EOF-blank-line notices only, all in retained raw logs or frozen source copies",
+      "log": "staged-whitespace.log",
+      "disposition": "Preserve original bytes and hashes; do not rewrite evidence."
+    },
+    {
+      "command": "git diff --cached --check -- . :(exclude)evals/runs/codex-build-1 :(exclude)evals/builds/checker-calibration-1/runtime",
+      "result": "pass"
+    }
+  ],
+  "paidCallsDuringCalibration": 0,
+  "shippedSkillAndEngineChanged": false,
+  "limits": "Raw historical actor logs and snapshots are preserved verbatim; their original formatting is not rewritten to satisfy prose conventions."
+}

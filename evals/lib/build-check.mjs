@@ -14,6 +14,43 @@ const nonempty = value => typeof value === "string" && value.trim().length > 0;
 const localPath = value => nonempty(value) && !isAbsolute(value) && !value.split(/[\\/]/).includes("..") && !value.includes("\0");
 const unique = values => new Set(values).size === values.length;
 
+export function verifyNextRuntime(workspace, local, trusted) {
+  const problems = [];
+  for (const [label, record] of [["workspace", local], ["trusted", trusted]]) {
+    if (!object(record) || record.name !== "next" || !nonempty(record.version) ||
+      !nonempty(record.entrypoint) || !isAbsolute(record.entrypoint) ||
+      !nonempty(record.packageJson) || !isAbsolute(record.packageJson) ||
+      typeof record.sha256 !== "string" || !/^[a-f0-9]{64}$/.test(record.sha256)) problems.push(`${label} Next identity is invalid`);
+  }
+  if (!problems.length) {
+    if (!outsideWorkspace(workspace, trusted.entrypoint) || !outsideWorkspace(workspace, trusted.packageJson)) problems.push("trusted Next must resolve outside the actor workspace");
+    if (local.version !== trusted.version) problems.push("workspace Next version differs from the trusted copy");
+    if (local.sha256 !== trusted.sha256) problems.push("workspace Next entrypoint differs from the trusted copy");
+  }
+  return { passed: problems.length === 0, entrypoint: problems.length ? null : local.entrypoint, local, trusted, problems, scope: "Package name/version and CLI entrypoint bytes only; transitive dependency integrity is not established." };
+}
+
+export function linkTextMatches(actualText, expectedLink) {
+  const label = normalizeText(expectedLink.text);
+  const actual = normalizeText(actualText);
+  if (!label || !actual.startsWith(label)) return false;
+  const suffix = actual.slice(label.length);
+  if (/^[\s↗↘↙↖←→↑↓›»]*$/u.test(suffix)) return true;
+  // A format label must be visibly separated and agree with the URL's file
+  // extension. Arbitrary appended prose, negation and substring matches fail.
+  if (!/^\s/.test(suffix)) return false;
+  const formats = { html: "HTML", htm: "HTML", pdf: "PDF", svg: "SVG" };
+  let url;
+  try { url = new URL(expectedLink.href, "https://fixture.invalid/"); }
+  catch { return false; }
+  if (!["http:", "https:"].includes(url.protocol)) return false;
+  const extension = /\.([a-z0-9]+)$/i.exec(url.pathname)?.[1].toLowerCase();
+  const format = formats[extension];
+  if (!format) return false;
+  const tail = suffix.replace(/[\s↗↘↙↖←→↑↓›»]+$/u, "").trim();
+  return [format, `(${format})`, `[${format}]`].includes(tail.toUpperCase());
+}
+
 export function artifactHashes(entries) {
   const artifacts = {};
   for (const { path, bytes } of [...entries].sort((a, b) => a.path.localeCompare(b.path))) {
@@ -107,7 +144,7 @@ export function assessObservation(expected, entry, report) {
   for (const text of expected.requiredText) if (!samples.some(sample => normalizeText(sample.visibleText).includes(normalizeText(text)))) problems.push(`required wording never visibly observed: ${text}`);
   for (const link of expected.links) {
     const observations = link.keyboardOnly ? report.keyboardLinks ?? [] : samples.flatMap(sample => sample.links ?? []);
-    if (!observations.some(actual => normalizeText(actual.text) === normalizeText(link.text) && actual.href === link.href && actual.visible && actual.inView && actual.tabIndex >= 0 && actual.hitTarget && (!link.keyboardOnly || actual.focused))) problems.push(`link never usable${link.keyboardOnly ? " by keyboard" : ""}: ${link.text} (${link.href})`);
+    if (!observations.some(actual => linkTextMatches(actual.text, link) && actual.href === link.href && actual.visible && actual.inView && actual.tabIndex >= 0 && actual.hitTarget && (!link.keyboardOnly || actual.focused))) problems.push(`link never usable${link.keyboardOnly ? " by keyboard" : ""}: ${link.text} (${link.href})`);
   }
   if (entry.loseContext && !report.contextLoss?.supported) problems.push("WebGL context loss was not exercised");
   for (const pair of report.stationary ?? []) if (pair.before !== pair.after) problems.push(`${pair.beat}: reduced-motion canvas changed while stationary`);

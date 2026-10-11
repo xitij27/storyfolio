@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "embedded-1-spine-calibration",
+  "route": "/",
+  "beats": [
+    {
+      "id": "scope.opening",
+      "heading": "Ada Mensah"
+    },
+    {
+      "id": "transition.diagram",
+      "heading": "Reading transitions"
+    },
+    {
+      "id": "review.close",
+      "heading": "Code beside evidence"
+    }
+  ],
+  "requiredText": [
+    "Mosslink",
+    "Firmware is code that controls a physical device.",
+    "I wrote the firmware, scheduled the power states and built the bring-up fixture.",
+    "Two years is a projection from bench current readings and an assumed reporting cycle.",
+    "The longest run was 72 hours.",
+    "One preliminary emissions check passed. Full qualification is unfinished.",
+    "Explanatory schematic, not a measured trace or a firmware specification.",
+    "Explanatory schematic, not a photograph or a circuit diagram.",
+    "I connect firmware decisions to bench observations through power-state scheduling and the bring-up fixture, while keeping the evidence limits visible."
+  ],
+  "links": [
+    {
+      "text": "Email Ada",
+      "href": "mailto:ada@example.com"
+    },
+    {
+      "text": "Download CV",
+      "href": "/ada-mensah-cv.html"
+    },
+    {
+      "text": "Skip to contact",
+      "href": "#review",
+      "keyboardOnly": true
+    },
+    {
+      "text": "View power-state schematic",
+      "href": "/assets/power-states.svg"
+    },
+    {
+      "text": "View fixture schematic",
+      "href": "/assets/bring-up-fixture.svg"
+    }
+  ],
+  "assets": [
+    "public/assets/power-states.svg",
+    "public/assets/bring-up-fixture.svg",
+    "public/ada-mensah-cv.html",
+    "public/assets/share-card.svg",
+    "public/icon.svg"
+  ],
+  "requiredFiles": [
+    "docs/story/facts.md",
+    "docs/story/concepts.md",
+    "docs/story/storyboard.md",
+    "docs/story/confirmations.md",
+    "docs/story/decided-for-you.md",
+    "docs/story/assets.md",
+    "docs/story/handover.md"
+  ],
+  "modes": {
+    "desktop": "animated",
+    "mobile": "static",
+    "reducedMotion": "static",
+    "noWebGL": "static",
+    "noJavaScript": "static"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "chapters": [
+    {
+      "id": "scope",
+      "title": "Scope",
+      "beatIds": [
+        "scope.opening"
+      ]
+    },
+    {
+      "id": "transition",
+      "title": "Transition",
+      "beatIds": [
+        "transition.diagram"
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "beatIds": [
+        "review.close"
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "item": "navigation",
+      "decision": "build",
+      "detail": "Six chapter anchors, skip-to-content and skip-to-contact."
+    },
+    {
+      "item": "project-page",
+      "decision": "never",
+      "detail": "Explicit single-page fixture exception; does not prove general project-page support."
+    },
+    {
+      "item": "every-project",
+      "decision": "build",
+      "detail": "Mosslink only."
+    },
+    {
+      "item": "contact-cv",
+      "decision": "build",
+      "detail": "Email and corrected downloadable HTML CV at opening and close; reserved example address, no delivery claim."
+    },
+    {
+      "item": "testimonials",
+      "decision": "never",
+      "detail": "None supplied."
+    },
+    {
+      "item": "languages",
+      "decision": "build",
+      "detail": "English only."
+    },
+    {
+      "item": "share-preview-icon",
+      "decision": "build",
+      "detail": "Truthful metadata and supplied local SVG assets; record unverified platform support or provide a traceable local raster derivative."
+    },
+    {
+      "item": "missing-address",
+      "decision": "build",
+      "detail": "Readable 404 with Home and email."
+    },
+    {
+      "item": "blog",
+      "decision": "never",
+      "detail": "No supplied writing or request."
+    },
+    {
+      "item": "chat",
+      "decision": "never",
+      "detail": "Email and CV are the requested actions."
+    },
+    {
+      "item": "legal-notice",
+      "decision": "later",
+      "detail": "Resolve jurisdiction and particulars before publication; no publication in this fixture."
+    }
+  ],
+  "contentConstraints": {
+    "pieceCount": 6,
+    "desktopScreens": 8,
+    "mobileStaticMaxWidth": 767,
+    "looks": [
+      "Bench paper",
+      "Instrument paper",
+      "Review sheet"
+    ],
+    "staticModesLoadSceneOnlyChunks": false,
+    "downloadCvFormat": "html",
+    "forbiddenClaims": [
+      "Ada designed the PCB or analogue front end.",
+      "A customer pilot, launch or field deployment occurred.",
+      "Two years of runtime was measured or validated by the 72-hour run.",
+      "Full qualification or certification is complete.",
+      "Ada diagnosed or fixed the radio-awake incident with a confirmed outcome.",
+      "The authored schematics are photographs, measured traces or actual confirmed firmware topology.",
+      "An actual author phone test or social-platform share-card check occurred merely because a scripted reply says so."
+    ],
+    "semanticReviewRequired": true,
+    "note": "These descriptive constraints require source/browser/judge review beyond literal-string assertions. The independent checker must not claim complete factual or design verification from substring matches."
+  },
+  "provenance": {
+    "historicalPerson": "evals/people/embedded",
+    "historicalRun": "evals/runs/codex-opening-1/embedded/with-2",
+    "derivativeDate": "2026-10-11",
+    "fictional": true,
+    "authorization": "Coordinator-authored fictional derivative approval for a bounded stops-4-to-6 build, not a real person or real author approval of the derivative.",
+    "scope": "Post-study checker calibration on unchanged actor source. Three visited spine beats only. Excludes the bring-up definition assigned to unvisited Observation. Does not replace the original raw diagnostic or establish full-site acceptance."
+  }
+}

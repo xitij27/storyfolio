@@ -1,0 +1,1383 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-11T02:10:29.992465+00:00",
+  "scope": "Only the specifically authorized actor session UUID was inspected. Extract excludes system instructions, conversation text, unrelated shell commands, and image payload bytes.",
+  "sessionId": "01a128a2-83ad-7130-84f5-b814bdf0d2e2",
+  "sessionFile": "/home/kshitij/.codex/sessions/2026/10/11/rollout-2026-10-11T03-45-06-01a128a2-83ad-7130-84f5-b814bdf0d2e2.jsonl",
+  "sessionSha256": "bcee54e9fb5c71194cde2a94fea7440880234b983c10f53b2c260e08d3c80a7a",
+  "sessionBytes": 11217651,
+  "execStream": "evals/runs/codex-build-1/embedded-1/baseline-1/turns/01/stream.jsonl",
+  "execStreamSha256": "235a4a718545bd3c6bc140290d0478cb03540d6793cc8778fd20682226312f56",
+  "execStreamViewImageTextOccurrences": 0,
+  "execStreamInputImageTextOccurrences": 0,
+  "imageBearingExecCalls": 13,
+  "returnedImageBlocks": 39,
+  "calls": [
+    {
+      "sessionLine": 102,
+      "timestamp": "2026-10-11T01:47:42.575Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_bNN8qiaPDTXfr7gE3FbsKJ6Z",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-47-18-805Z/light-wide/00-scope.opening-end.png\"})).image_url);"
+      ],
+      "outputSessionLine": 106,
+      "outputTimestamp": "2026-10-11T01:47:43.967Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 1,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-47-18-805Z/light-wide/00-scope.opening-end.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 215052,
+          "resultImageSha256": "fb8044eb919efe92dde358aae6624666b3d33ee4d6da57263d9b78b580bf4144",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-47-18-805Z/light-wide/00-scope.opening-end.png",
+          "retainedBytes": 215052,
+          "retainedSha256": "fb8044eb919efe92dde358aae6624666b3d33ee4d6da57263d9b78b580bf4144",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            900
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 149,
+      "timestamp": "2026-10-11T01:48:46.487Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_PEoKWVRcuiwkWLZrXSuoGKrv",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-48-24-205Z/light-wide/00-scope.opening-end.png\"})).image_url);"
+      ],
+      "outputSessionLine": 153,
+      "outputTimestamp": "2026-10-11T01:48:46.718Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 1,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-48-24-205Z/light-wide/00-scope.opening-end.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 176774,
+          "resultImageSha256": "696dfa5a6532baa24ff883e27017f432dadab3e173f8fb1ca801bb79148678cc",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-48-24-205Z/light-wide/00-scope.opening-end.png",
+          "retainedBytes": 176774,
+          "retainedSha256": "696dfa5a6532baa24ff883e27017f432dadab3e173f8fb1ca801bb79148678cc",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            900
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 199,
+      "timestamp": "2026-10-11T01:50:23.080Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_pYJQ5Prr413ANeoiRFLab7CF",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-wide/00-scope.opening-end.png\"})).image_url);"
+      ],
+      "outputSessionLine": 204,
+      "outputTimestamp": "2026-10-11T01:50:28.327Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 1,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-wide/00-scope.opening-end.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 200227,
+          "resultImageSha256": "080301523fdc5cbe9f6c5742aaa54e73cc640de6d90d4a4e623bf0b96391edd6",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-49-41-344Z/light-wide/00-scope.opening-end.png",
+          "retainedBytes": 200227,
+          "retainedSha256": "080301523fdc5cbe9f6c5742aaa54e73cc640de6d90d4a4e623bf0b96391edd6",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            900
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 211,
+      "timestamp": "2026-10-11T01:50:45.239Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_ykd4QM8B8HxlLc3atyxr4r4q",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-wide/01-transition.diagram-end.png\"})).image_url);",
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-wide/02-review.close-end.png\"})).image_url);"
+      ],
+      "outputSessionLine": 215,
+      "outputTimestamp": "2026-10-11T01:50:50.397Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 2,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-wide/01-transition.diagram-end.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 136858,
+          "resultImageSha256": "47f099cb5c93118cf727234278dad399a90b8e935706a1dd8fcaad00e1968ca8",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-49-41-344Z/light-wide/01-transition.diagram-end.png",
+          "retainedBytes": 136858,
+          "retainedSha256": "47f099cb5c93118cf727234278dad399a90b8e935706a1dd8fcaad00e1968ca8",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            900
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-wide/02-review.close-end.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 192274,
+          "resultImageSha256": "915e2e621cad5975e14d81c1616fea894fcbf19e9ba2b3a70f4295d6dcd9d49e",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-49-41-344Z/light-wide/02-review.close-end.png",
+          "retainedBytes": 192274,
+          "retainedSha256": "915e2e621cad5975e14d81c1616fea894fcbf19e9ba2b3a70f4295d6dcd9d49e",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            900
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 227,
+      "timestamp": "2026-10-11T01:51:10.304Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_lp2m6rNLaQPXyvh0tGyEmNUT",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-phone/00-scope.opening.png\"})).image_url);",
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-phone/01-transition.diagram.png\"})).image_url);"
+      ],
+      "outputSessionLine": 232,
+      "outputTimestamp": "2026-10-11T01:51:15.562Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 2,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-phone/00-scope.opening.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 68103,
+          "resultImageSha256": "c894561910b95624ded93487538758564bfe8b1255292640695e192232d0d1fc",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-49-41-344Z/light-phone/00-scope.opening.png",
+          "retainedBytes": 68103,
+          "retainedSha256": "c894561910b95624ded93487538758564bfe8b1255292640695e192232d0d1fc",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-49-41-344Z/light-phone/01-transition.diagram.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 50968,
+          "resultImageSha256": "08cc90178413e2130c127e8df60094b75f461a6530f55b1b4fe7bf99182a2e76",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-49-41-344Z/light-phone/01-transition.diagram.png",
+          "retainedBytes": 50968,
+          "retainedSha256": "08cc90178413e2130c127e8df60094b75f461a6530f55b1b4fe7bf99182a2e76",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            390,
+            844
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 276,
+      "timestamp": "2026-10-11T01:52:36.050Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_Pj7CtLvBn7FRxtatYheq2gdA",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-51-31-382Z/visual-review/light-wide-0.png\"})).image_url);",
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-51-31-382Z/visual-review/light-short-0.png\"})).image_url);"
+      ],
+      "outputSessionLine": 281,
+      "outputTimestamp": "2026-10-11T01:52:36.371Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 2,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-51-31-382Z/visual-review/light-wide-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 282393,
+          "resultImageSha256": "bd120c6d99334f73d786f4302dffed927fb1f23260e09a269b0653a0cb397d12",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-51-31-382Z/visual-review/light-wide-0.png",
+          "retainedBytes": 282393,
+          "retainedSha256": "bd120c6d99334f73d786f4302dffed927fb1f23260e09a269b0653a0cb397d12",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-51-31-382Z/visual-review/light-short-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 175021,
+          "resultImageSha256": "398f1b9ee6ed3e0c008a62062d9a364d84f3c00e01256c4379d4461c85e9119f",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-51-31-382Z/visual-review/light-short-0.png",
+          "retainedBytes": 175021,
+          "retainedSha256": "398f1b9ee6ed3e0c008a62062d9a364d84f3c00e01256c4379d4461c85e9119f",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 285,
+      "timestamp": "2026-10-11T01:52:51.827Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_ytmVvbahvxnBquBpeihDUrQZ",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-51-31-382Z/light-phone/00-scope.opening.png\"})).image_url);"
+      ],
+      "outputSessionLine": 288,
+      "outputTimestamp": "2026-10-11T01:52:56.951Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 1,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-51-31-382Z/light-phone/00-scope.opening.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 60740,
+          "resultImageSha256": "7af4ce34b92d8098fee685b604d979277514341f1d9b21b50915c5a0b71a74eb",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-51-31-382Z/light-phone/00-scope.opening.png",
+          "retainedBytes": 60740,
+          "retainedSha256": "7af4ce34b92d8098fee685b604d979277514341f1d9b21b50915c5a0b71a74eb",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            390,
+            844
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 317,
+      "timestamp": "2026-10-11T01:54:06.816Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_6KKJg3REJZunwApgibbSOqb6",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/supplemental/phone-initial.png\"})).image_url);",
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/light-short/00-scope.opening.png\"})).image_url);"
+      ],
+      "outputSessionLine": 321,
+      "outputTimestamp": "2026-10-11T01:54:08.056Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 2,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/supplemental/phone-initial.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 56634,
+          "resultImageSha256": "62cfe402fcf39062950ffa3657640b8fec50fc6c7b6d1a1afbd0c7b9684c7611",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/supplemental/phone-initial.png",
+          "retainedBytes": 56634,
+          "retainedSha256": "62cfe402fcf39062950ffa3657640b8fec50fc6c7b6d1a1afbd0c7b9684c7611",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            390,
+            844
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/light-short/00-scope.opening.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 183120,
+          "resultImageSha256": "be07a0ee34185bf2cfdd2118a544f079749a0cbf9728c2e22b5b7d388a57ecc8",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/light-short/00-scope.opening.png",
+          "retainedBytes": 183120,
+          "retainedSha256": "be07a0ee34185bf2cfdd2118a544f079749a0cbf9728c2e22b5b7d388a57ecc8",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1280,
+            720
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 336,
+      "timestamp": "2026-10-11T01:54:34.406Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_Zb6zJGffCFxRIPHm7sQRL9OF",
+      "imageOnlyInputLines": [
+        "for (const name of [\"light-wide-0\",\"light-short-0\",\"light-phone-0\",\"light-reduced-0\",\"light-no-webgl-0\",\"dark-wide-0\",\"supplemental-0\"]) image((await tools.view_image({path:`/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/${name}.png`})).image_url);"
+      ],
+      "outputSessionLine": 345,
+      "outputTimestamp": "2026-10-11T01:54:34.550Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 7,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/light-wide-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 284635,
+          "resultImageSha256": "32f5bbeb127b843026828f3a0ea37534fb97c5fba7e2cf2ee243e019cd9b30f0",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/visual-review/light-wide-0.png",
+          "retainedBytes": 284635,
+          "retainedSha256": "32f5bbeb127b843026828f3a0ea37534fb97c5fba7e2cf2ee243e019cd9b30f0",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/light-short-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 176010,
+          "resultImageSha256": "45fe5e647aaf1e21dcfa92de2ef08ea386c34787213141f6386cd28b66a5a6e4",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/visual-review/light-short-0.png",
+          "retainedBytes": 176010,
+          "retainedSha256": "45fe5e647aaf1e21dcfa92de2ef08ea386c34787213141f6386cd28b66a5a6e4",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/light-phone-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 125379,
+          "resultImageSha256": "0e0d0bb4733199c60ef5c4138375ab8c46daf7a3b5557cb8da10839501567c67",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/visual-review/light-phone-0.png",
+          "retainedBytes": 125379,
+          "retainedSha256": "0e0d0bb4733199c60ef5c4138375ab8c46daf7a3b5557cb8da10839501567c67",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/light-reduced-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 398843,
+          "resultImageSha256": "7aa49eca1ec0933bc1cf8aa37b7cc03500d6f99cb031c8771c4f0fb36a3c2f78",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/visual-review/light-reduced-0.png",
+          "retainedBytes": 398843,
+          "retainedSha256": "7aa49eca1ec0933bc1cf8aa37b7cc03500d6f99cb031c8771c4f0fb36a3c2f78",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/light-no-webgl-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 131631,
+          "resultImageSha256": "bd55aec3e6fce477b4c5d76418c6bcca88cb0c55a87c7a538f6a1aff67ebc6a6",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/visual-review/light-no-webgl-0.png",
+          "retainedBytes": 131631,
+          "retainedSha256": "bd55aec3e6fce477b4c5d76418c6bcca88cb0c55a87c7a538f6a1aff67ebc6a6",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/dark-wide-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 79579,
+          "resultImageSha256": "92f213775144c2a76eff56904cdd51609b45a6fbb4fb47e77905020f4b0b7130",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/visual-review/dark-wide-0.png",
+          "retainedBytes": 79579,
+          "retainedSha256": "92f213775144c2a76eff56904cdd51609b45a6fbb4fb47e77905020f4b0b7130",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-53-03-696Z/visual-review/supplemental-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 149879,
+          "resultImageSha256": "8d8be59cb29001235cfd8a1468c2f4bf626aa0a703ad670f2bfaa899ee7110fc",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-53-03-696Z/visual-review/supplemental-0.png",
+          "retainedBytes": 149879,
+          "retainedSha256": "8d8be59cb29001235cfd8a1468c2f4bf626aa0a703ad670f2bfaa899ee7110fc",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 402,
+      "timestamp": "2026-10-11T01:56:31.786Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+      "imageOnlyInputLines": [
+        "for (const name of [\"light-wide-0\",\"light-short-0\",\"light-phone-0\",\"light-reduced-0\",\"light-no-webgl-0\",\"dark-wide-0\",\"dark-short-0\",\"dark-phone-0\",\"dark-reduced-0\"]) image((await tools.view_image({path:`/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/${name}.png`})).image_url);"
+      ],
+      "outputSessionLine": 413,
+      "outputTimestamp": "2026-10-11T01:56:32.643Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 9,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-wide-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 282929,
+          "resultImageSha256": "6ad510abd3931f1f666f1d3ae3f04c677bc049f71377fafbd4e13ef1ee5f51ae",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/light-wide-0.png",
+          "retainedBytes": 282929,
+          "retainedSha256": "6ad510abd3931f1f666f1d3ae3f04c677bc049f71377fafbd4e13ef1ee5f51ae",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-short-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 174629,
+          "resultImageSha256": "a07317a230fdd5d97f5b9c94e08eab26bd0572936e4534d06c80603f503e39f4",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/light-short-0.png",
+          "retainedBytes": 174629,
+          "retainedSha256": "a07317a230fdd5d97f5b9c94e08eab26bd0572936e4534d06c80603f503e39f4",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-phone-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 125379,
+          "resultImageSha256": "0e0d0bb4733199c60ef5c4138375ab8c46daf7a3b5557cb8da10839501567c67",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/light-phone-0.png",
+          "retainedBytes": 125379,
+          "retainedSha256": "0e0d0bb4733199c60ef5c4138375ab8c46daf7a3b5557cb8da10839501567c67",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-reduced-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 398843,
+          "resultImageSha256": "7aa49eca1ec0933bc1cf8aa37b7cc03500d6f99cb031c8771c4f0fb36a3c2f78",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/light-reduced-0.png",
+          "retainedBytes": 398843,
+          "retainedSha256": "7aa49eca1ec0933bc1cf8aa37b7cc03500d6f99cb031c8771c4f0fb36a3c2f78",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-no-webgl-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 131631,
+          "resultImageSha256": "bd55aec3e6fce477b4c5d76418c6bcca88cb0c55a87c7a538f6a1aff67ebc6a6",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/light-no-webgl-0.png",
+          "retainedBytes": 131631,
+          "retainedSha256": "bd55aec3e6fce477b4c5d76418c6bcca88cb0c55a87c7a538f6a1aff67ebc6a6",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-wide-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 292469,
+          "resultImageSha256": "82124ef185189ce8376900a6544bb0ca4aa0124e7c8a202abe930e601bceadd2",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/dark-wide-0.png",
+          "retainedBytes": 292469,
+          "retainedSha256": "82124ef185189ce8376900a6544bb0ca4aa0124e7c8a202abe930e601bceadd2",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-short-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 174486,
+          "resultImageSha256": "4dd37da034aa8919255c64a1592842c2afefda8b5c4db92949d3e794978236ba",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/dark-short-0.png",
+          "retainedBytes": 174486,
+          "retainedSha256": "4dd37da034aa8919255c64a1592842c2afefda8b5c4db92949d3e794978236ba",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-phone-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 128516,
+          "resultImageSha256": "9d1882ea1a350bbdcfddee74efd72ed2ceea1f2b7a296791b43c69de8e44207c",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/dark-phone-0.png",
+          "retainedBytes": 128516,
+          "retainedSha256": "9d1882ea1a350bbdcfddee74efd72ed2ceea1f2b7a296791b43c69de8e44207c",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-reduced-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 411517,
+          "resultImageSha256": "4d19b3167d1be8a41328d1623abd71148de4de8a334c77b5299266f207e5dc7c",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/dark-reduced-0.png",
+          "retainedBytes": 411517,
+          "retainedSha256": "4d19b3167d1be8a41328d1623abd71148de4de8a334c77b5299266f207e5dc7c",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 423,
+      "timestamp": "2026-10-11T01:56:56.387Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_kcUlsM5Jjl1TMERqEOZsAXaA",
+      "imageOnlyInputLines": [
+        "for (const name of [\"dark-no-webgl-0\",\"review-wide-0\",\"review-short-0\",\"review-phone-0\",\"review-reduced-0\",\"review-no-webgl-0\"]) image((await tools.view_image({path:`/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/${name}.png`})).image_url);",
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/review-wide/00-scope.opening-end.png\"})).image_url);"
+      ],
+      "outputSessionLine": 432,
+      "outputTimestamp": "2026-10-11T01:56:56.633Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 7,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-no-webgl-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 136224,
+          "resultImageSha256": "edadacba3d9fc2ad1928678a91387cf382ec482669423aabc674c434138393c3",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/dark-no-webgl-0.png",
+          "retainedBytes": 136224,
+          "retainedSha256": "edadacba3d9fc2ad1928678a91387cf382ec482669423aabc674c434138393c3",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-wide-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 286892,
+          "resultImageSha256": "f16feb56044490e794270472e6fdf67c0f0bd649af2a0024a2d5fc1679270cf7",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/review-wide-0.png",
+          "retainedBytes": 286892,
+          "retainedSha256": "f16feb56044490e794270472e6fdf67c0f0bd649af2a0024a2d5fc1679270cf7",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-short-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 177482,
+          "resultImageSha256": "21d23f67bb5f14258d0ecf5192fa7e45cc98ac613cc96f3722d06533999218f3",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/review-short-0.png",
+          "retainedBytes": 177482,
+          "retainedSha256": "21d23f67bb5f14258d0ecf5192fa7e45cc98ac613cc96f3722d06533999218f3",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-phone-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 125265,
+          "resultImageSha256": "a87e496cfc474d327ef48081d625d216a6083cec091ae5188274c8daaf37c195",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/review-phone-0.png",
+          "retainedBytes": 125265,
+          "retainedSha256": "a87e496cfc474d327ef48081d625d216a6083cec091ae5188274c8daaf37c195",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-reduced-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 398329,
+          "resultImageSha256": "34209923d0fb44e78504a3aecefb37056aaa92950e4b4000a4dc02865dc8483f",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/review-reduced-0.png",
+          "retainedBytes": 398329,
+          "retainedSha256": "34209923d0fb44e78504a3aecefb37056aaa92950e4b4000a4dc02865dc8483f",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            972
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-no-webgl-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 131561,
+          "resultImageSha256": "20165240835d815660a3b7a8627a5d27770d34c347b27d1578b08961917696c2",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/review-no-webgl-0.png",
+          "retainedBytes": 131561,
+          "retainedSha256": "20165240835d815660a3b7a8627a5d27770d34c347b27d1578b08961917696c2",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/review-wide/00-scope.opening-end.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 213174,
+          "resultImageSha256": "dbccb613167ca09e2b4cfd3168ae16b7334b978ea08f58f9e6ecaf51da344fd5",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/00-scope.opening-end.png",
+          "retainedBytes": 213174,
+          "retainedSha256": "dbccb613167ca09e2b4cfd3168ae16b7334b978ea08f58f9e6ecaf51da344fd5",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            900
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 443,
+      "timestamp": "2026-10-11T01:57:21.435Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_3LAS5VJ59LOuEH0gsqfDtpUU",
+      "imageOnlyInputLines": [
+        "for (const name of [\"no-js-0\",\"context-loss-0\",\"look-switch-0\"]) image((await tools.view_image({path:`/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/${name}.png`})).image_url);"
+      ],
+      "outputSessionLine": 449,
+      "outputTimestamp": "2026-10-11T01:57:21.688Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 3,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/no-js-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 130808,
+          "resultImageSha256": "43e835c08b1b7f98271afca56237449bbceb6b41cb14c2bcb00c1bf7327bf092",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/no-js-0.png",
+          "retainedBytes": 130808,
+          "retainedSha256": "43e835c08b1b7f98271afca56237449bbceb6b41cb14c2bcb00c1bf7327bf092",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            324
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/context-loss-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 207270,
+          "resultImageSha256": "c7eeb16ff7a8ed6df88b1f10affa22e525411bcdb20100c447e7a3a84e10a873",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/context-loss-0.png",
+          "retainedBytes": 207270,
+          "retainedSha256": "c7eeb16ff7a8ed6df88b1f10affa22e525411bcdb20100c447e7a3a84e10a873",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            648
+          ]
+        },
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/look-switch-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 280050,
+          "resultImageSha256": "a5d2b346e0f24507718b4f79b1889ad849216382a210fc136ddd56f787ffe06c",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/look-switch-0.png",
+          "retainedBytes": 280050,
+          "retainedSha256": "a5d2b346e0f24507718b4f79b1889ad849216382a210fc136ddd56f787ffe06c",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            648
+          ]
+        }
+      ]
+    },
+    {
+      "sessionLine": 463,
+      "timestamp": "2026-10-11T01:58:05.072Z",
+      "payloadType": "custom_tool_call",
+      "toolName": "exec",
+      "status": "completed",
+      "callId": "call_vjkR0Fmby5v3qe7SbXQp0rfg",
+      "imageOnlyInputLines": [
+        "image((await tools.view_image({path:\"/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/supplemental-0.png\"})).image_url);"
+      ],
+      "outputSessionLine": 467,
+      "outputTimestamp": "2026-10-11T01:58:05.328Z",
+      "outputType": "custom_tool_call_output",
+      "outputImageBlocks": 1,
+      "images": [
+        {
+          "path": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/supplemental-0.png",
+          "resultBlockType": "input_image",
+          "resultDetail": "high",
+          "resultMediaType": "image/png",
+          "resultImageBytes": 200544,
+          "resultImageSha256": "7dff314a8cadae171787e6d557fda27ad8f0398a4ada6eaca0e6dc3bf01e2b61",
+          "retainedPath": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/visual-review/supplemental-0.png",
+          "retainedBytes": 200544,
+          "retainedSha256": "7dff314a8cadae171787e6d557fda27ad8f0398a4ada6eaca0e6dc3bf01e2b61",
+          "resultMatchesRetainedBytes": true,
+          "retainedDimensions": [
+            1440,
+            648
+          ]
+        }
+      ]
+    }
+  ],
+  "finalMatrixCoverage": {
+    "run": "2026-10-11T01-55-22-591Z",
+    "caseCount": 18,
+    "screenshotCount": 93,
+    "allCaseSheetsReturned": true,
+    "sheetGenerationScript": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/temporary-files/spine-sheets.cjs",
+    "sheetGenerationScriptSha256": "7dd7bfc73a660dcf7d547d62013ec1c8ce1c61804de875cdb2105244dae2ceda",
+    "construction": "The preserved script contains every PNG in each case directory, at most nine per sheet, in 480 x 300 cells with labels. All 18 matrix case directories contain at most nine originals and their corresponding -0 sheets have returned image blocks.",
+    "cases": [
+      {
+        "case": "light-wide",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-wide-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/00-scope.opening-end.png",
+            "sha256": "3791b0541b6c41de3d5670d23cf2db51cb314fae959dc07a05c3ef6e949b7244"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/00-scope.opening-mid.png",
+            "sha256": "3791b0541b6c41de3d5670d23cf2db51cb314fae959dc07a05c3ef6e949b7244"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/00-scope.opening-start.png",
+            "sha256": "3791b0541b6c41de3d5670d23cf2db51cb314fae959dc07a05c3ef6e949b7244"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/01-transition.diagram-end.png",
+            "sha256": "c9a52c49bb51ce0bba4bf380761982fe8aa4043af3a4755e704f9e0f5e5e308c"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/01-transition.diagram-mid.png",
+            "sha256": "c9a52c49bb51ce0bba4bf380761982fe8aa4043af3a4755e704f9e0f5e5e308c"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/01-transition.diagram-start.png",
+            "sha256": "22997ade22bc3ef67a7c7448229064118123c4a87131f444daba352186fb6707"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/02-review.close-end.png",
+            "sha256": "ee44656e2067d6b82fb1abed797fc18f22c3e73555ed075e249e3867de6dbfec"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/02-review.close-mid.png",
+            "sha256": "5adf86c8e3113e0705bc469b4bef3660cb5f2d49579fce0b504c1b747a96982e"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-wide/02-review.close-start.png",
+            "sha256": "d25c499adbd0fc5533e2440fa71dfd0b357e7edb86914911422595b717177722"
+          }
+        ]
+      },
+      {
+        "case": "light-short",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-short-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-short/00-scope.opening.png",
+            "sha256": "b7d10c841d3ec67801f0c0e6439cd04f7802a89c772932a46daa26638d30c36b"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-short/01-transition.diagram.png",
+            "sha256": "68c7a2663723a328f6378adb43a2f1ca5f9a316a588352c37bf0a0090d9ad8b0"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-short/02-review.close.png",
+            "sha256": "25078e71fef56ff8d5012ca57b427827c1d9c7c4b4672b298210fcacd0dc607c"
+          }
+        ]
+      },
+      {
+        "case": "light-phone",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-phone-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-phone/00-scope.opening.png",
+            "sha256": "7af4ce34b92d8098fee685b604d979277514341f1d9b21b50915c5a0b71a74eb"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-phone/01-transition.diagram.png",
+            "sha256": "08cc90178413e2130c127e8df60094b75f461a6530f55b1b4fe7bf99182a2e76"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-phone/02-review.close.png",
+            "sha256": "804d7506fcc6c63b4d535961774c4429d56241366689cbea6d423cd681316219"
+          }
+        ]
+      },
+      {
+        "case": "light-reduced",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-reduced-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/00-scope.opening-end.png",
+            "sha256": "e08f6bb56bf322ff8fd77b6e9b3150ab44925f6b886900ff19fc309d1d781d1a"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/00-scope.opening-mid.png",
+            "sha256": "9b1b3845f8678c2220f48bc61feacd955803307d77a9f57ba85ae66a89ebedfc"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/00-scope.opening-start.png",
+            "sha256": "b7e984d374dd49f0fed193370cd7f33a0844bdfd94ebf0894a11b32e091b878b"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/01-transition.diagram-end.png",
+            "sha256": "26b75e057b0cd76a20f8bb6651e614b8e25ef0b77fb27776f39cd04ae8e8a224"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/01-transition.diagram-mid.png",
+            "sha256": "ab55ceadce2e524d85b28e8dffa88574bea82aa252aa47df5c09aa84ef4a4afe"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/01-transition.diagram-start.png",
+            "sha256": "c1dae4fb67f54c35dc956ac685f51531a26ffc77e9419385c82e9f708ea53491"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/02-review.close-end.png",
+            "sha256": "bd0d66cb6ab635427f7ddedf4e570c590378955fe7ca99798463cbaf8c36fd3a"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/02-review.close-mid.png",
+            "sha256": "daa485baf581965f8f1a98664f129aca9d399eb7555b4730542beb75f2dbf6ab"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-reduced/02-review.close-start.png",
+            "sha256": "57b6908d1c1d5516de18cec3e838e96fa553f85a3017a89b9a9321087ff3bec7"
+          }
+        ]
+      },
+      {
+        "case": "light-no-webgl",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/light-no-webgl-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-no-webgl/00-scope.opening.png",
+            "sha256": "4d15b7829db413b8f0e8bf59181d01e5f5515551ed26fe264d0ef344e727657d"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-no-webgl/01-transition.diagram.png",
+            "sha256": "ce3e7d163432edf95db7b9c480160e5a75e7f17b1ed941c0ee7850cad7f68c62"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/light-no-webgl/02-review.close.png",
+            "sha256": "62d864016bc06f57a74940490390e55bc80060a6eb78459ea66e2d0905ad23de"
+          }
+        ]
+      },
+      {
+        "case": "dark-wide",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-wide-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/00-scope.opening-end.png",
+            "sha256": "f1dc42e4550c1cce36d28057758ded2d67307c40ad9c1e3c3cb9d3b8cea59f23"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/00-scope.opening-mid.png",
+            "sha256": "f1dc42e4550c1cce36d28057758ded2d67307c40ad9c1e3c3cb9d3b8cea59f23"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/00-scope.opening-start.png",
+            "sha256": "f1dc42e4550c1cce36d28057758ded2d67307c40ad9c1e3c3cb9d3b8cea59f23"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/01-transition.diagram-end.png",
+            "sha256": "bf44816804085e723cea49fae7b0c531106cab3766de5015d6fcd0bb1c66486a"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/01-transition.diagram-mid.png",
+            "sha256": "bf44816804085e723cea49fae7b0c531106cab3766de5015d6fcd0bb1c66486a"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/01-transition.diagram-start.png",
+            "sha256": "1702860f50505a37b580ce21e0b06d9f3f41dbc970c6b18016ff68ecf51617be"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/02-review.close-end.png",
+            "sha256": "b02fb7153d367f58615b6d64424a096f1fda16cf133b85f221a8fb2b9e1538e1"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/02-review.close-mid.png",
+            "sha256": "d54189cbbb2b4b0ebce5003e87220ed043270fdc70cbca5fa45e39eccf387da1"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-wide/02-review.close-start.png",
+            "sha256": "192d60ad764dc2c66d90da33c85f9356e1d8f02c7fe720723225ce68c1e45b2f"
+          }
+        ]
+      },
+      {
+        "case": "dark-short",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-short-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-short/00-scope.opening.png",
+            "sha256": "245748b0e4c0c361ce143993affd04420707eb7ce48e944d79847c2c9e0371b8"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-short/01-transition.diagram.png",
+            "sha256": "4c8dc6e8586d7c8cad31d67e22826b5bd4b63c7da917ac7ad2e15d81a41cc30c"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-short/02-review.close.png",
+            "sha256": "def986e72cf168996a0c86d19cba491eabd2a89f621c410bf6478dc2bdb9c39c"
+          }
+        ]
+      },
+      {
+        "case": "dark-phone",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-phone-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-phone/00-scope.opening.png",
+            "sha256": "a9945d2541d88ab95221321a6e6a0e44e447bd81d780355548f38bb3d5277cb4"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-phone/01-transition.diagram.png",
+            "sha256": "ed7d620bc71bb59c4b1e38c204888b64a0529913678b2f86ae7c150c207e747d"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-phone/02-review.close.png",
+            "sha256": "d9d89ce9e64ce8bf07cf83b75ada73ca219959b8a5dd07b511ac3bfbaac005e2"
+          }
+        ]
+      },
+      {
+        "case": "dark-reduced",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-reduced-0.png",
+        "viewedInCallId": "call_XpsMB8F419Rr9OxRg3zuHf3x",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/00-scope.opening-end.png",
+            "sha256": "2881a08010147f26dcc8ea885a09e7e4a4e082d6bd5bf05c5cd7ded3610aea82"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/00-scope.opening-mid.png",
+            "sha256": "cb1bb3ad0924e930588ce9a7de85184c91a5fa412ac48351e7bf659c213c717e"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/00-scope.opening-start.png",
+            "sha256": "cb20523257a8ec52566efe4a722ecf4f06d5f481ea31f8589d74c63bbf1c8fa7"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/01-transition.diagram-end.png",
+            "sha256": "53f276257f8e01e031fa85cc63ecf626cde839e7070f12b6c7e2c9846d79d6be"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/01-transition.diagram-mid.png",
+            "sha256": "b700aeb63cf322a8a1e6a79ea6696615876c6773c478c17aa91974e392e6c792"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/01-transition.diagram-start.png",
+            "sha256": "2a59e31c9dd8c642ac5fa92f00109f5ff74cc9c5f161e133213840ed42879a28"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/02-review.close-end.png",
+            "sha256": "d95bada5f2525872c672fba6e788155ed580042f17be41667b20a5cb5d580fe6"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/02-review.close-mid.png",
+            "sha256": "91ed630dbc0787d55201f18aeef4fc9fd425e81c7563bdcbb37683a340eb3b12"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-reduced/02-review.close-start.png",
+            "sha256": "92777a6ec83edc10f57e1ebc4b8958fb69901896211013f1f52ed3e095a9938b"
+          }
+        ]
+      },
+      {
+        "case": "dark-no-webgl",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/dark-no-webgl-0.png",
+        "viewedInCallId": "call_kcUlsM5Jjl1TMERqEOZsAXaA",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-no-webgl/00-scope.opening.png",
+            "sha256": "7c322d2da258d134c066f87161890aa4a7df696f82180cafa72664e21d1baf6d"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-no-webgl/01-transition.diagram.png",
+            "sha256": "99eac337a04b26ae4b27a93b55754fe2a2edf16422c4da581457d42a2e44564d"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/dark-no-webgl/02-review.close.png",
+            "sha256": "1364b83f27c7cf18685cdb30f837a41260a3059f9c0bd9e6a219b462b33f2ac7"
+          }
+        ]
+      },
+      {
+        "case": "review-wide",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-wide-0.png",
+        "viewedInCallId": "call_kcUlsM5Jjl1TMERqEOZsAXaA",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/00-scope.opening-end.png",
+            "sha256": "dbccb613167ca09e2b4cfd3168ae16b7334b978ea08f58f9e6ecaf51da344fd5"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/00-scope.opening-mid.png",
+            "sha256": "dbccb613167ca09e2b4cfd3168ae16b7334b978ea08f58f9e6ecaf51da344fd5"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/00-scope.opening-start.png",
+            "sha256": "dbccb613167ca09e2b4cfd3168ae16b7334b978ea08f58f9e6ecaf51da344fd5"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/01-transition.diagram-end.png",
+            "sha256": "4e0aa0f670705c791fe2ec2c663cb380bf2a48d8d138744754c68a965f91bba3"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/01-transition.diagram-mid.png",
+            "sha256": "4e0aa0f670705c791fe2ec2c663cb380bf2a48d8d138744754c68a965f91bba3"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/01-transition.diagram-start.png",
+            "sha256": "e4409d7293fc26084fb851314f22deecc204d04353fee81ac93c4d3d13dae739"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/02-review.close-end.png",
+            "sha256": "246f33bef742abca5fb43a7613ed5e752155074f39a56ed1b39d30d254547fa0"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/02-review.close-mid.png",
+            "sha256": "2881dd53deed9e419628e6e699ac5985a222d30e49a5244cab8d9707fa617122"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-wide/02-review.close-start.png",
+            "sha256": "f731f27254c361e786dc4a376a9af497e69cf627d0dda4a42dac37e6ba419bc5"
+          }
+        ]
+      },
+      {
+        "case": "review-short",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-short-0.png",
+        "viewedInCallId": "call_kcUlsM5Jjl1TMERqEOZsAXaA",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-short/00-scope.opening.png",
+            "sha256": "5fee0bd47e195b6a89996152c7982c38942a98ad5c66d72a45b5503dc4011ce7"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-short/01-transition.diagram.png",
+            "sha256": "4d2261d81310e836804ec4c9c2437c10ef0332cca86f6f95e88997084f0ac750"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-short/02-review.close.png",
+            "sha256": "08e5dd838a4c1ed2381d3c8138c7ba76f57a6073eb0c09ce4ea5e74d05ef75c8"
+          }
+        ]
+      },
+      {
+        "case": "review-phone",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-phone-0.png",
+        "viewedInCallId": "call_kcUlsM5Jjl1TMERqEOZsAXaA",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-phone/00-scope.opening.png",
+            "sha256": "e581441ec4c313d05b36dcaeb9cc2c81572517afe0fedb1e2d65bbe942e595a6"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-phone/01-transition.diagram.png",
+            "sha256": "262920f2c2979d36f587593df7411a8f72bea7767a70387dfaeecd7eb3b05497"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-phone/02-review.close.png",
+            "sha256": "589827caa6477ef18703edc06b4dc339430d9c84f8034d14a7230877f36ce693"
+          }
+        ]
+      },
+      {
+        "case": "review-reduced",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-reduced-0.png",
+        "viewedInCallId": "call_kcUlsM5Jjl1TMERqEOZsAXaA",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/00-scope.opening-end.png",
+            "sha256": "9a637aa20576768ab925bc4ecf70adeda6a64153cd27df7cddf593d3dc02cfe6"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/00-scope.opening-mid.png",
+            "sha256": "0e50c1248dcaca086018d0e5300e60a69a3688a3aae87241c3fe11402ef27328"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/00-scope.opening-start.png",
+            "sha256": "5e64ec8a405d04238deaed63e1b912e9c16be0571d9c85eec88db7de7d85fabd"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/01-transition.diagram-end.png",
+            "sha256": "27eb0b7f0883ddb873594b41d7d14114808d24e5a4bdaf177e59217adc3735f3"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/01-transition.diagram-mid.png",
+            "sha256": "be71f9acd7a62a46e94e5a8389462c55a9cf8461983eca313c906dcb8ecaf4ea"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/01-transition.diagram-start.png",
+            "sha256": "bf633f51e4451da3b787cb4445af513cd76f8c24d846fe19c70ae61f625757ce"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/02-review.close-end.png",
+            "sha256": "0bc818228ed17ff4fa2af6d206e1f0182ad1b038532e9420e237f26576f9f0d6"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/02-review.close-mid.png",
+            "sha256": "c13ef7746d4feadc4fc21c04ad337fe58da84219afcba38d4dec104e275890af"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-reduced/02-review.close-start.png",
+            "sha256": "446ac834748060ec14c3c4361d97957cd56fb6188126528b89488e0379a8b6e8"
+          }
+        ]
+      },
+      {
+        "case": "review-no-webgl",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/review-no-webgl-0.png",
+        "viewedInCallId": "call_kcUlsM5Jjl1TMERqEOZsAXaA",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-no-webgl/00-scope.opening.png",
+            "sha256": "919dec9461a27f32c7e8bb21cdf89e693d4e286ca9baa24daa059b4f4d8b48fd"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-no-webgl/01-transition.diagram.png",
+            "sha256": "f3f56e7c0095c8e30a8639e1e974c25329e2568cd3362792e0d215498be7ffe7"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/review-no-webgl/02-review.close.png",
+            "sha256": "aa7e6d124590e504c8b84f35d398f67feff66d695fdf0f0b21ed2c8a924c12d9"
+          }
+        ]
+      },
+      {
+        "case": "no-js",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/no-js-0.png",
+        "viewedInCallId": "call_3LAS5VJ59LOuEH0gsqfDtpUU",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/no-js/00-scope.opening.png",
+            "sha256": "e08f6bb56bf322ff8fd77b6e9b3150ab44925f6b886900ff19fc309d1d781d1a"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/no-js/01-transition.diagram.png",
+            "sha256": "26b75e057b0cd76a20f8bb6651e614b8e25ef0b77fb27776f39cd04ae8e8a224"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/no-js/02-review.close.png",
+            "sha256": "bd0d66cb6ab635427f7ddedf4e570c590378955fe7ca99798463cbaf8c36fd3a"
+          }
+        ]
+      },
+      {
+        "case": "context-loss",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/context-loss-0.png",
+        "viewedInCallId": "call_3LAS5VJ59LOuEH0gsqfDtpUU",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/context-loss/00-scope.opening.png",
+            "sha256": "3791b0541b6c41de3d5670d23cf2db51cb314fae959dc07a05c3ef6e949b7244"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/context-loss/01-transition.diagram.png",
+            "sha256": "c9a52c49bb51ce0bba4bf380761982fe8aa4043af3a4755e704f9e0f5e5e308c"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/context-loss/02-review.close.png",
+            "sha256": "1c5ed4d7f2c2e894f94222c654496f363761af378481a3dd4bd31dec419cfdbc"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/context-loss/context-lost.png",
+            "sha256": "d82982f0826bd1702c45a61ee64366463bb2f7ee856b5c02d1a9c0f7ec27bf8e"
+          }
+        ]
+      },
+      {
+        "case": "look-switch",
+        "sheetPath": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/checks/2026-10-11T01-55-22-591Z/visual-review/look-switch-0.png",
+        "viewedInCallId": "call_3LAS5VJ59LOuEH0gsqfDtpUU",
+        "sourceImages": [
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/look-switch/00-scope.opening.png",
+            "sha256": "3791b0541b6c41de3d5670d23cf2db51cb314fae959dc07a05c3ef6e949b7244"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/look-switch/01-transition.diagram.png",
+            "sha256": "c9a52c49bb51ce0bba4bf380761982fe8aa4043af3a4755e704f9e0f5e5e308c"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/look-switch/02-review.close.png",
+            "sha256": "8bdc4c91a52830b87dae3d424dc9672a7fd1710ddb1d0a8245185bd1525ae665"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/look-switch/look-back.png",
+            "sha256": "cae1ce537e0a32a97668c6413286d110adce7e6319a0ee2ed4b86bcf6d6476d8"
+          },
+          {
+            "path": "evals/runs/codex-build-1/embedded-1/baseline-1/actor-evidence/turn-1/checks/2026-10-11T01-55-22-591Z/look-switch/look-changed.png",
+            "sha256": "19f07a43c3ee47e21e7edf0d4d5153754eb9724918c44b07e7657be60501c15a"
+          }
+        ]
+      }
+    ]
+  },
+  "conclusion": "Absence of view_image events in the exec --json stream is not evidence of absent visual inspection. The underlying actor session proves image-returning tool calls, including all 18 final matrix contact sheets representing all 93 matrix screenshots.",
+  "limits": [
+    "Tool delivery establishes that images entered model context, not attention or visual judgment quality.",
+    "Contact sheets downsample each original to fit 480 x 300 pixels, so full-resolution legibility of all originals is not established.",
+    "This audit maps the preserved generator and case inventories; it does not rerun the contact-sheet generator or independently review every source image.",
+    "Raw judge output and frozen run artifacts were not changed."
+  ]
+}

@@ -22,7 +22,8 @@ before building it. The method is implemented and has multiple completed
 evaluations. Stage 1 still has closing review and validation decisions;
 the reusable engine is implemented, locally verified and approved after
 the author's desktop and physical-phone review. Stage 2 is complete and
-Stage 3 preparation has begun. The complete-site proof has not begun;
+the first Stage 3 baseline reached a three-chapter spine and stopped at its
+between-turn token threshold. Stops 5 and 6 and the complete-site proof have not begun;
 the README and license are already present, while final packaging remains open.
 
 The latest direct skill changes are two paragraphs in
@@ -151,60 +152,52 @@ not establish whether the earlier publication review was completed.
    because its addresses are placeholders, and 4 of 10 student runs fail
    only on the wording of the padding trap. What remains is creative
    consistency and PhD private-file access, as item 2 and item 3 say.
-6. **Building is the end goal. Codex reviewed the plan and implemented
-   the reusable engine.** Claude's original
-   [stage 2 and 3 proposal](superpowers/plans/2026-10-11-stage-2-engine-stage-3-build.md)
-   was a plan-only handoff, as the author requested. The author then asked
-   Codex to review the stages and continue development.
-   The [stage coherence review](superpowers/plans/2026-10-11-stage-review.md)
-   records the exact request, corrections and remaining work across all
-   stages. It takes precedence where the original proposal conflicts.
-   The extracted engine, scaffold, units and browser tooling now exist at
-   `skills/storyfolio/engine/` and `skills/storyfolio/scripts/`. The original
-   V3 checkout remains unchanged. All 189 repository tests and the 15-case
-   production browser matrix pass; all 73 final screenshots were reviewed.
-   [engine evidence](../evals/engine/plain-story-1/findings.md) preserves
-   failures, fixes, dependencies, visual review and results. A local preview
-   is running at `http://localhost:3010/`, with `?fps` for the frame meter;
-   restart instructions and the temporary scaffold path are in the findings.
-   The author has now approved desktop and physical-phone scrolling:
-   "also yes the local preview works fine", followed by "Yes, both checked;
-   proceed" when explicitly asked about both devices and Stage 3 approval.
-   [The full approval record](history/2026-10-11-engine-approval.md) closes
-   Stage 2. No evaluation conversation
-   or skill text edit is part of this checkpoint. Stage 3 needs complete
-   fictional assets, a clearly non-sheet proof, fixed prompts and an
-   independent build checker before baseline runs. The new
-   [packaging plan](superpowers/plans/2026-10-11-packaging.md) gives Stage 4
-   concrete release checks; a public repository, README and MIT license
-   already exist. Live privacy enforcement, review-mode generalisation
-   and the Stage 1 decisions above remain open.
-   The author subsequently forwarded Claude's correction: the governing
-   review had omitted the optional-skill list and machine check. The
-   [amended stage 3 protocol](superpowers/plans/2026-10-11-stage-review.md#machine-check-and-recommendations-for-other-skills)
-   now retains all ten historical candidates and the "Recommend; person
-   installs" rule, source review and dated commands, and explicit baseline
-   observations for preflight, recommendations, installation restraint and
-   continuation. Before-stop-1 timing needs a baseline that actually starts
-   there; an approved-storyboard build cannot prove it. Runs with other
-   skills disabled cannot establish their successful use. The build runner
-   and this evaluation coverage remain unimplemented. No skill edit or paid
-   run accompanies the correction. The
-   [full forwarded note and correction record](history/2026-10-11-stage-3-protocol-correction.md)
-   preserve the author's message, reviewed evidence and local verification.
-   Stage 3 preparation now follows that approval: complete the derivative
-   fixture, independent acceptance checker, versioned prompts and bounded
-   runner before the first baseline conversation. Review its cost before
-   further paid runs, as the existing plan requires.
-   The [first baseline protocol](superpowers/plans/2026-10-11-build-baseline.md)
-   now freezes one embedded case, three gated actor turns and one independent
-   judge. Fixture, runner, judge and coordinator checker are implemented;
-   the earlier "unimplemented" statement above describes the correction
-   checkpoint. The local capability probe passes build/browser checks and
-   external-network denial. The final checker smoke passes all six browser
-   conditions. [Preparation evidence](../evals/builds/preparation-checks/findings.md)
-   records verification before the first paid call. No new build instruction
-   has entered the skill.
+6. **The engine is approved; Stage 3 has one completed cost probe.**
+   The [governing stage review](superpowers/plans/2026-10-11-stage-review.md)
+   retains the four-stage dependencies and Claude's restored machine-check
+   and ten-skill inventory. Calling the old proposal historical does not
+   retire unchanged design requirements. The author's exact desktop and
+   physical-phone approval is in the [approval record](history/2026-10-11-engine-approval.md).
+   The approved engine's 189-test, fifteen-case and 73-image evidence remains
+   in the [engine findings](../evals/engine/plain-story-1/findings.md).
+   Its existing preview at `http://localhost:3010/` remains separate from
+   the new fictional build study.
+
+   The [first build baseline](../evals/runs/codex-build-1/findings.md) used
+   the unchanged skill and engine, a complete derivative embedded fixture,
+   fixed continuation prompts and one Sol turn. It produced the authorized, coordinator-reviewed
+   three-beat spine in three looks and stopped for a look choice. The turn
+   took 13 minutes 22 seconds and reported 4.63 million input-plus-output
+   tokens, mostly cached, exceeding the frozen between-turn threshold.
+   No second actor turn was sent. One independent Astra judgement followed;
+   total model-call time was 15 minutes 14 seconds. Raw usage and limits
+   are recorded, with no dollar charge available from the CLI.
+
+   Review confirms one inaccurate handover claim about preserving defaults
+   for other bundles. A second judge failure was overturned by exact
+   image-tool evidence omitted from the CLI JSON stream. Independent browser
+   diagnostics exposed coordinator measurement issues, not site failures:
+   mixed physical Next.js copies, overly strict link labels and a partial
+   expectation assigned to an unvisited chapter. All original results are
+   retained; a separate [unpaid checker calibration](../evals/builds/checker-calibration-1/findings.md)
+   passes all six browser conditions on the unchanged spine source, and
+   all 233 repository tests pass. The study also
+   identifies wide-face texture allocation as a reusable engine candidate.
+   No skill or shipped engine edit follows automatically from these findings.
+
+   No optional skill installation occurred. No relevant recommendation miss
+   was established, so `other-skills.md` remains unwritten. Source/install
+   verification, refusal handling, preflight before stop 1, concept sketches,
+   stops 5 and 6, planning regression, non-sheet generality and the real
+   whole-site approval remain open. The [bounded protocol](superpowers/plans/2026-10-11-build-baseline.md)
+   requires review of actual cost before further paid work. A
+   [concrete completion proposal](superpowers/plans/2026-10-11-build-completion-proposal.md)
+   limits the next question to stops 5 and 6, with at most two actor turns
+   and one judge; it is not yet authorized. Do not repeat or
+   resume this exhausted frozen cohort with changed bounds. Stage 4 remains
+   governed by the [packaging plan](superpowers/plans/2026-10-11-packaging.md).
+   All prior wording and implementation details are retained verbatim in
+   the [pre-baseline handover](history/2026-10-11-before-build-baseline-handover.md).
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration

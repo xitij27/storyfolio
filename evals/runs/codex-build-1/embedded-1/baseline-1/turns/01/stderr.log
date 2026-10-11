@@ -1,0 +1,10 @@
+2026-10-11T01:45:06.592356Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-11T01:45:06.618383Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-11T01:45:06.710007Z  WARN codex_network_proxy::proxy: allowUnixSockets and dangerouslyAllowAllUnixSockets are macOS-only; requests will be rejected on this platform
+2026-10-11T01:45:16.193649Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-11T01:45:28.055174Z  WARN codex_sandboxing::violation: recorded sandbox violation: resource=network backend=managed_network_proxy protocol=http-connect host=registry.npmjs.org port=Some(443) reason=not_allowed method=Some("CONNECT") mode=None client=Some("127.0.0.1:52246") decision=Some("deny") source=Some("baseline_policy")
+2026-10-11T01:45:28.055238Z  WARN codex_network_proxy::http_proxy: CONNECT blocked (client=127.0.0.1:52246, host=registry.npmjs.org, reason=not_allowed)
+2026-10-11T01:45:28.055765Z ERROR codex_core::tools::router: error=exec_command failed: ProcessFailed { message: "Network access to \"registry.npmjs.org\" was blocked: domain is not on the allowlist for the current sandbox mode." }
+2026-10-11T01:47:38.203359Z  WARN codex_sandboxing::violation: recorded sandbox violation: resource=network backend=managed_network_proxy protocol=http-connect host=telemetry.nextjs.org port=Some(443) reason=not_allowed method=Some("CONNECT") mode=None client=Some("127.0.0.1:40762") decision=Some("deny") source=Some("baseline_policy")
+2026-10-11T01:47:38.203420Z  WARN codex_network_proxy::http_proxy: CONNECT blocked (client=127.0.0.1:40762, host=telemetry.nextjs.org, reason=not_allowed)
+2026-10-11T01:47:38.204143Z ERROR codex_core::tools::router: error=exec_command failed: ProcessFailed { message: "Network access to \"telemetry.nextjs.org\" was blocked: domain is not on the allowlist for the current sandbox mode." }

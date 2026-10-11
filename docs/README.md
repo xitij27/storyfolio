@@ -4,8 +4,9 @@ Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The skill currently plans a portfolio through an approved
 storyboard. The reusable engine is implemented, locally verified and
-approved on desktop and a physical phone; Stage 3 preparation has begun
-and site-building guidance remains future work.
+approved on desktop and a physical phone. Stage 3 has one completed
+spine-only baseline, stopped at its token threshold; shipped site-building
+guidance remains future work.
 
 For a new session, read:
 
@@ -52,3 +53,7 @@ Stage 3's first paid build probe uses the
 [build runbook](../evals/README.md#bounded-build-baseline). Its preparation
 checks are [recorded separately](../evals/builds/preparation-checks/findings.md)
 from agent evaluation results.
+
+[First build baseline findings](../evals/runs/codex-build-1/findings.md)
+separate the completed spine, actual usage, original scores, reviewed
+corrections and the unvisited stages.

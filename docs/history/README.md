@@ -154,3 +154,12 @@ changes planning documentation only; it adds no skill instruction or paid run.
 local-preview feedback and explicit confirmation that desktop and physical
 phone scrolling were checked. This closes Stage 2 and permits Stage 3 to
 proceed under its existing bounded-run and cost-review gates.
+
+## First build baseline checkpoint
+
+[The pre-baseline handover](2026-10-11-before-build-baseline-handover.md)
+preserves its entire preceding state verbatim before shortening item 6.
+The [build findings](../../evals/runs/codex-build-1/findings.md) record the
+first bounded conversation, usage stop, independent judgement, reviewed
+measurement corrections and remaining work. No new author approval is
+inferred from that experiment.

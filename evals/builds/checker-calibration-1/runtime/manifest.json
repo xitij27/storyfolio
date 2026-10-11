@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "fixture": "embedded-1-spine-calibration",
+  "started": "2026-10-11T02:21:51.629Z",
+  "node": "v22.22.1",
+  "workspace": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r",
+  "expectationsPath": "/home/kshitij/projects/storyfolio/evals/builds/checker-calibration-1/expectations.json",
+  "dependencyRoot": "/tmp/storyfolio-build-capability-20261011",
+  "nextRuntime": {
+    "passed": true,
+    "entrypoint": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/dist/bin/next",
+    "local": {
+      "name": "next",
+      "version": "16.3.8",
+      "entrypoint": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/dist/bin/next",
+      "packageJson": "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/package.json",
+      "sha256": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de"
+    },
+    "trusted": {
+      "name": "next",
+      "version": "16.3.8",
+      "entrypoint": "/tmp/storyfolio-build-capability-20261011/node_modules/next/dist/bin/next",
+      "packageJson": "/tmp/storyfolio-build-capability-20261011/node_modules/next/package.json",
+      "sha256": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de"
+    },
+    "problems": [],
+    "scope": "Package name/version and CLI entrypoint bytes only; transitive dependency integrity is not established."
+  },
+  "frozen": {
+    "/home/kshitij/projects/storyfolio/evals/check-build.mjs": "35664105969557f4e913e032ebb5978a1ca5961bf0b1159f22d3aa5c7b7ad6d5",
+    "/home/kshitij/projects/storyfolio/evals/lib/build-check.mjs": "1dd40b28fb66e834f91d878c8f75c6115fd83c1b50da171fefdf5560c5020002",
+    "/home/kshitij/projects/storyfolio/evals/builds/checker-calibration-1/expectations.json": "1d808690cc6fffce1469827dca31d43de7f0f07a313f15772d08cf85b4e8c187",
+    "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/dist/bin/next": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de",
+    "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/package.json": "6da8fc4823b66b8f2906d150002618e3f3e0d2446ebf3823b2a2f7efe73a46a4",
+    "/tmp/storyfolio-build-capability-20261011/node_modules/next/dist/bin/next": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de",
+    "/tmp/storyfolio-build-capability-20261011/node_modules/next/package.json": "6da8fc4823b66b8f2906d150002618e3f3e0d2446ebf3823b2a2f7efe73a46a4",
+    "/tmp/storyfolio-build-capability-20261011/node_modules/typescript/lib/tsc.js": "2cffde0b8c6760dfb0b5b0382bbb7e00ba6a8b2d981b9205b256a700a481d983",
+    "/tmp/storyfolio-build-capability-20261011/node_modules/eslint/bin/eslint.js": "6280b95e2a6ab3b04be45cbd3b1627654be518e6a4da163ec0adcbba9cd5fcd8",
+    "/tmp/storyfolio-build-capability-20261011/node_modules/playwright-core/index.js": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b"
+  },
+  "expected": {
+    "schemaVersion": 1,
+    "id": "embedded-1-spine-calibration",
+    "route": "/",
+    "beats": [
+      {
+        "id": "scope.opening",
+        "heading": "Ada Mensah"
+      },
+      {
+        "id": "transition.diagram",
+        "heading": "Reading transitions"
+      },
+      {
+        "id": "review.close",
+        "heading": "Code beside evidence"
+      }
+    ],
+    "requiredText": [
+      "Mosslink",
+      "Firmware is code that controls a physical device.",
+      "I wrote the firmware, scheduled the power states and built the bring-up fixture.",
+      "Two years is a projection from bench current readings and an assumed reporting cycle.",
+      "The longest run was 72 hours.",
+      "One preliminary emissions check passed. Full qualification is unfinished.",
+      "Explanatory schematic, not a measured trace or a firmware specification.",
+      "Explanatory schematic, not a photograph or a circuit diagram.",
+      "I connect firmware decisions to bench observations through power-state scheduling and the bring-up fixture, while keeping the evidence limits visible."
+    ],
+    "links": [
+      {
+        "text": "Email Ada",
+        "href": "mailto:ada@example.com"
+      },
+      {
+        "text": "Download CV",
+        "href": "/ada-mensah-cv.html"
+      },
+      {
+        "text": "Skip to contact",
+        "href": "#review",
+        "keyboardOnly": true
+      },
+      {
+        "text": "View power-state schematic",
+        "href": "/assets/power-states.svg"
+      },
+      {
+        "text": "View fixture schematic",
+        "href": "/assets/bring-up-fixture.svg"
+      }
+    ],
+    "assets": [
+      "public/assets/power-states.svg",
+      "public/assets/bring-up-fixture.svg",
+      "public/ada-mensah-cv.html",
+      "public/assets/share-card.svg",
+      "public/icon.svg"
+    ],
+    "requiredFiles": [
+      "docs/story/facts.md",
+      "docs/story/concepts.md",
+      "docs/story/storyboard.md",
+      "docs/story/confirmations.md",
+      "docs/story/decided-for-you.md",
+      "docs/story/assets.md",
+      "docs/story/handover.md"
+    ],
+    "modes": {
+      "desktop": "animated",
+      "mobile": "static",
+      "reducedMotion": "static",
+      "noWebGL": "static",
+      "noJavaScript": "static"
+    },
+    "viewports": {
+      "desktop": {
+        "width": 1440,
+        "height": 900
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    "chapters": [
+      {
+        "id": "scope",
+        "title": "Scope",
+        "beatIds": [
+          "scope.opening"
+        ]
+      },
+      {
+        "id": "transition",
+        "title": "Transition",
+        "beatIds": [
+          "transition.diagram"
+        ]
+      },
+      {
+        "id": "review",
+        "title": "Review",
+        "beatIds": [
+          "review.close"
+        ]
+      }
+    ],
+    "checklist": [
+      {
+        "item": "navigation",
+        "decision": "build",
+        "detail": "Six chapter anchors, skip-to-content and skip-to-contact."
+      },
+      {
+        "item": "project-page",
+        "decision": "never",
+        "detail": "Explicit single-page fixture exception; does not prove general project-page support."
+      },
+      {
+        "item": "every-project",
+        "decision": "build",
+        "detail": "Mosslink only."
+      },
+      {
+        "item": "contact-cv",
+        "decision": "build",
+        "detail": "Email and corrected downloadable HTML CV at opening and close; reserved example address, no delivery claim."
+      },
+      {
+        "item": "testimonials",
+        "decision": "never",
+        "detail": "None supplied."
+      },
+      {
+        "item": "languages",
+        "decision": "build",
+        "detail": "English only."
+      },
+      {
+        "item": "share-preview-icon",
+        "decision": "build",
+        "detail": "Truthful metadata and supplied local SVG assets; record unverified platform support or provide a traceable local raster derivative."
+      },
+      {
+        "item": "missing-address",
+        "decision": "build",
+        "detail": "Readable 404 with Home and email."
+      },
+      {
+        "item": "blog",
+        "decision": "never",
+        "detail": "No supplied writing or request."
+      },
+      {
+        "item": "chat",
+        "decision": "never",
+        "detail": "Email and CV are the requested actions."
+      },
+      {
+        "item": "legal-notice",
+        "decision": "later",
+        "detail": "Resolve jurisdiction and particulars before publication; no publication in this fixture."
+      }
+    ],
+    "contentConstraints": {
+      "pieceCount": 6,
+      "desktopScreens": 8,
+      "mobileStaticMaxWidth": 767,
+      "looks": [
+        "Bench paper",
+        "Instrument paper",
+        "Review sheet"
+      ],
+      "staticModesLoadSceneOnlyChunks": false,
+      "downloadCvFormat": "html",
+      "forbiddenClaims": [
+        "Ada designed the PCB or analogue front end.",
+        "A customer pilot, launch or field deployment occurred.",
+        "Two years of runtime was measured or validated by the 72-hour run.",
+        "Full qualification or certification is complete.",
+        "Ada diagnosed or fixed the radio-awake incident with a confirmed outcome.",
+        "The authored schematics are photographs, measured traces or actual confirmed firmware topology.",
+        "An actual author phone test or social-platform share-card check occurred merely because a scripted reply says so."
+      ],
+      "semanticReviewRequired": true,
+      "note": "These descriptive constraints require source/browser/judge review beyond literal-string assertions. The independent checker must not claim complete factual or design verification from substring matches."
+    },
+    "provenance": {
+      "historicalPerson": "evals/people/embedded",
+      "historicalRun": "evals/runs/codex-opening-1/embedded/with-2",
+      "derivativeDate": "2026-10-11",
+      "fictional": true,
+      "authorization": "Coordinator-authored fictional derivative approval for a bounded stops-4-to-6 build, not a real person or real author approval of the derivative.",
+      "scope": "Post-study checker calibration on unchanged actor source. Three visited spine beats only. Excludes the bring-up definition assigned to unvisited Observation. Does not replace the original raw diagnostic or establish full-site acceptance."
+    }
+  },
+  "commands": [
+    {
+      "name": "typegen",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/dist/bin/next",
+        "typegen"
+      ],
+      "started": "2026-10-11T02:21:51.643Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T02:21:51.921Z"
+    },
+    {
+      "name": "typecheck",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-build-capability-20261011/node_modules/typescript/lib/tsc.js",
+        "--project",
+        "/tmp/storyfolio-checker-calibration-1/tsconfig.acceptance.json",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "started": "2026-10-11T02:21:51.923Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T02:21:53.958Z"
+    },
+    {
+      "name": "lint",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-build-capability-20261011/node_modules/eslint/bin/eslint.js",
+        "--no-config-lookup",
+        "--config",
+        "/tmp/storyfolio-checker-calibration-1/eslint.acceptance.mjs",
+        "."
+      ],
+      "started": "2026-10-11T02:21:53.961Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T02:21:57.977Z"
+    },
+    {
+      "name": "build",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "started": "2026-10-11T02:21:57.980Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-11T02:22:00.841Z"
+    },
+    {
+      "name": "server",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/tmp/storyfolio-evals/build-embedded-1-GoHJ5r/node_modules/next/dist/bin/next",
+        "start",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "43813"
+      ],
+      "started": "2026-10-11T02:22:00.849Z",
+      "code": 143,
+      "signal": null,
+      "finished": "2026-10-11T02:22:52.512Z"
+    }
+  ],
+  "results": [
+    {
+      "id": "desktop",
+      "passed": true,
+      "problems": [],
+      "report": "desktop/report.json"
+    },
+    {
+      "id": "mobile",
+      "passed": true,
+      "problems": [],
+      "report": "mobile/report.json"
+    },
+    {
+      "id": "reduced-motion",
+      "passed": true,
+      "problems": [],
+      "report": "reduced-motion/report.json"
+    },
+    {
+      "id": "no-webgl",
+      "passed": true,
+      "problems": [],
+      "report": "no-webgl/report.json"
+    },
+    {
+      "id": "no-javascript",
+      "passed": true,
+      "problems": [],
+      "report": "no-javascript/report.json"
+    },
+    {
+      "id": "context-loss",
+      "passed": true,
+      "problems": [],
+      "report": "context-loss/report.json"
+    }
+  ],
+  "files": [
+    {
+      "path": "public/assets/power-states.svg",
+      "exists": true,
+      "bytes": 1657,
+      "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8"
+    },
+    {
+      "path": "public/assets/bring-up-fixture.svg",
+      "exists": true,
+      "bytes": 1822,
+      "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae"
+    },
+    {
+      "path": "public/ada-mensah-cv.html",
+      "exists": true,
+      "bytes": 2280,
+      "sha256": "a5ef0f37b5c5bd4520e4f91f82989c77a68987e82202a261eccc8d2118a4dede"
+    },
+    {
+      "path": "public/assets/share-card.svg",
+      "exists": true,
+      "bytes": 1181,
+      "sha256": "d0cf78ff76d11cc0dc2910025345067ece0f65373fead69907dbe9b38dab0f19"
+    },
+    {
+      "path": "public/icon.svg",
+      "exists": true,
+      "bytes": 409,
+      "sha256": "d9883de2536afe1d9f599ca7f09c1680e93a214239e505d8e77537c6270a03f9"
+    },
+    {
+      "path": "docs/story/facts.md",
+      "exists": true,
+      "bytes": 3727,
+      "sha256": "64955499056e5608e126f7ded0ef3e04e21face5aeb9356d2ff83a0f2a03a715"
+    },
+    {
+      "path": "docs/story/concepts.md",
+      "exists": true,
+      "bytes": 8296,
+      "sha256": "eaf57ef20423e4bbfc467aebeb989a4f4b8b95b07ec8ca4700d6d78a762a10f4"
+    },
+    {
+      "path": "docs/story/storyboard.md",
+      "exists": true,
+      "bytes": 7774,
+      "sha256": "5a0e50abb00e48c5844f61ed6843fa0ab54a85a61f4d5c2e7c967b32aef551fd"
+    },
+    {
+      "path": "docs/story/confirmations.md",
+      "exists": true,
+      "bytes": 4655,
+      "sha256": "77641b1bc3cb36f8cf6d2e3689cd05a890b30bafe4e4cf716e38833e1f0cf67f"
+    },
+    {
+      "path": "docs/story/decided-for-you.md",
+      "exists": true,
+      "bytes": 5213,
+      "sha256": "342ed96f07031482bccfb8a816f6c255f6cbed15354ba86c8e40be217d5ddadb"
+    },
+    {
+      "path": "docs/story/assets.md",
+      "exists": true,
+      "bytes": 3788,
+      "sha256": "ed3f28323ceaea7b1cbf794b82d424e458f3dba61cffa6ccb7a5d373a08edc8b"
+    },
+    {
+      "path": "docs/story/handover.md",
+      "exists": true,
+      "bytes": 5688,
+      "sha256": "5727c0fedc15f1070e85a87643587509716659052caf812ddcf208c7c502aa65"
+    },
+    {
+      "url": "/assets/power-states.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 1657
+    },
+    {
+      "url": "/assets/bring-up-fixture.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 1822
+    },
+    {
+      "url": "/ada-mensah-cv.html",
+      "status": 200,
+      "exists": true,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 2280
+    },
+    {
+      "url": "/assets/share-card.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 1181
+    },
+    {
+      "url": "/icon.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 409
+    }
+  ],
+  "complete": true,
+  "limits": [
+    "Coordinator source and expectations must be frozen by the run harness before the actor starts. Outside-workspace paths alone are not a sandbox write barrier.",
+    "Dependency entrypoint hashes are recorded, not full dependency integrity. The harness must audit dependency and lockfile mutation separately.",
+    "Next build executes application configuration. Fixed typecheck and lint commands use coordinator-generated configuration independently of actor scripts.",
+    "Headless Chromium viewport checks do not prove physical-phone performance, custom-object quality, truth of claims or external-link availability.",
+    "Screenshots require human visual review. Text and scene markers alone cannot establish faithful formations or visually correct 3D."
+  ],
+  "finished": "2026-10-11T02:22:52.512Z",
+  "passed": true,
+  "artifacts": {
+    "build.log": "9bd23e521863b6411e6cfa6a3b71bcf082610fa459402298734c1e7d31a305f5",
+    "context-loss/00-scope.opening-mid.png": "1862c9a08f556bb44b3eb4f34a6c890ffd1c28f45d075f6bdfca2e08ade7c1d1",
+    "context-loss/01-transition.diagram-mid.png": "3b96ef99e4e72b948b9f22435931081a508828ef2103fc6fc675cba1eb95e2ad",
+    "context-loss/02-review.close-mid.png": "4c603600c9381a19387c2f4d8c92cdb97e978ccfd35490eaa4f335b608fc416e",
+    "context-loss/rendered.html": "70fa6c997428bb5d4ea20681e14ad6e78a73c4ac8126172219cf49cdcd2c5f9c",
+    "context-loss/report.json": "95b833ce8cd0bb57d65d425f1984514e75cd48ac1bf2cf37ec3446e186b89761",
+    "context-loss/response.html": "829ebb83081aae5fed12a82e0a20d52760c809760e85d2d1c287f45fe93a7c2d",
+    "desktop/00-scope.opening-end.png": "8e56b8ad98a481a7679c3dd2a67bfb83ae0f8acb2c58f3d5db9e97293ac51504",
+    "desktop/00-scope.opening-mid.png": "8e56b8ad98a481a7679c3dd2a67bfb83ae0f8acb2c58f3d5db9e97293ac51504",
+    "desktop/01-transition.diagram-end.png": "3d220c8c85f8d95b1aa39ca4dbf47c8470fd59d83e1e1ff5b8045dae0f656c60",
+    "desktop/01-transition.diagram-mid.png": "3d220c8c85f8d95b1aa39ca4dbf47c8470fd59d83e1e1ff5b8045dae0f656c60",
+    "desktop/02-review.close-end.png": "1e6d9e79656d35a3d2bb9080c82668fceb94444918571ba466efc2b1e4c3b381",
+    "desktop/02-review.close-mid.png": "0fb9ebb0d42287e3ffb60435687001cf0a980ce64928b4e80aedd9e13886b706",
+    "desktop/rendered.html": "0878b00f026722bdbc574925872355a914b2edba2e24b7acd248078932b2db14",
+    "desktop/report.json": "b53065cde2de1f3c7d647a628bcb3cc08b355c79bbec335ca060eb131b2f511c",
+    "desktop/response.html": "829ebb83081aae5fed12a82e0a20d52760c809760e85d2d1c287f45fe93a7c2d",
+    "eslint.acceptance.mjs": "e2212ad6965ab5092090a8c358f082d14ce7eb0efbd97f0c948ba94444478195",
+    "expectations.json": "1d808690cc6fffce1469827dca31d43de7f0f07a313f15772d08cf85b4e8c187",
+    "lint.log": "617e9e033f107d68cb38c39b29ad169a1e700a392eacc731f9d452d0f78300c9",
+    "mobile/00-scope.opening-mid.png": "7b8f612cea3415d1ee2405a3ea4ffa6c6700726bba09ce1416a31f93f8b3e9d2",
+    "mobile/01-transition.diagram-mid.png": "5602d3013f113c5511cd91a1a5b5bff09eb09431084aaabedd21de819d6d9ad9",
+    "mobile/02-review.close-mid.png": "3698f90af0016ddf9c172a50df040208a0c9470845243e7c5b3230f242d7cb58",
+    "mobile/rendered.html": "07edfb0b8df2e7a6dc60b84b112331fe2c52057c3f6210e40f6a3a3badde932c",
+    "mobile/report.json": "caa1b4e42e6edf5145536d85b7353825afc712e07916ceaa1e73073093eab3d0",
+    "mobile/response.html": "829ebb83081aae5fed12a82e0a20d52760c809760e85d2d1c287f45fe93a7c2d",
+    "no-javascript/00-scope.opening-mid.png": "7b8f612cea3415d1ee2405a3ea4ffa6c6700726bba09ce1416a31f93f8b3e9d2",
+    "no-javascript/01-transition.diagram-mid.png": "5602d3013f113c5511cd91a1a5b5bff09eb09431084aaabedd21de819d6d9ad9",
+    "no-javascript/02-review.close-mid.png": "d6d53c0487b22c2334de8f205be80b0725317cee0433830cf3fc7225088d2b79",
+    "no-javascript/rendered.html": "78a5cbfb6b9ae0d79e71339ef0f189d0f6ad9dec5d30b2016b6c684215d85ce8",
+    "no-javascript/report.json": "e5b9aa9b227636f90100c570c3bb02e3a10eae9f606afab4d15d86ccffa8580c",
+    "no-javascript/response.html": "829ebb83081aae5fed12a82e0a20d52760c809760e85d2d1c287f45fe93a7c2d",
+    "no-webgl/00-scope.opening-mid.png": "af1e08675220f5c369e9621f5ce375fea29a22d0da37a91ef3db34ab20382944",
+    "no-webgl/01-transition.diagram-mid.png": "eb5cb5a79f9b115293e4a54bf75139984692eeee0c04711bb0d2ded85d24d8e0",
+    "no-webgl/02-review.close-mid.png": "4bf722ad63aa09d7a3d08babd1c0ec406cbae43934a21226d10dd730351afadf",
+    "no-webgl/rendered.html": "07edfb0b8df2e7a6dc60b84b112331fe2c52057c3f6210e40f6a3a3badde932c",
+    "no-webgl/report.json": "d5d50b123df20b77d82122220422898640f980f795905ce801e5fc1e396e5ed6",
+    "no-webgl/response.html": "829ebb83081aae5fed12a82e0a20d52760c809760e85d2d1c287f45fe93a7c2d",
+    "reduced-motion/00-scope.opening-mid.png": "1862c9a08f556bb44b3eb4f34a6c890ffd1c28f45d075f6bdfca2e08ade7c1d1",
+    "reduced-motion/01-transition.diagram-mid.png": "3b96ef99e4e72b948b9f22435931081a508828ef2103fc6fc675cba1eb95e2ad",
+    "reduced-motion/02-review.close-mid.png": "4c603600c9381a19387c2f4d8c92cdb97e978ccfd35490eaa4f335b608fc416e",
+    "reduced-motion/rendered.html": "07edfb0b8df2e7a6dc60b84b112331fe2c52057c3f6210e40f6a3a3badde932c",
+    "reduced-motion/report.json": "bdc68ec54cb4051d726b862a9e6d8a840475a272adf2545a8bdeaf78a5ad7c36",
+    "reduced-motion/response.html": "829ebb83081aae5fed12a82e0a20d52760c809760e85d2d1c287f45fe93a7c2d",
+    "server.log": "0f0766ea2235184afa74d4d2fc0995adb116d68750573a90a9bcc5421fb470b9",
+    "tsconfig.acceptance.json": "3246871ac104d098cb08a0d5450649bc411f4db1771ec5a3d5fb42663a2e55ac",
+    "typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "typegen.log": "1447bd67f80ec6b34cf4b9d18bb89002c97515eaea50d5db5f45695ad7ca30d0"
+  }
+}

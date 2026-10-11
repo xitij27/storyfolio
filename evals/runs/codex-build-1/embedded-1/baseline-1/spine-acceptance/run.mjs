@@ -1,0 +1,17 @@
+import {spawn} from "node:child_process";
+import {readFile,writeFile,cp} from "node:fs/promises";
+import {fileURLToPath} from "node:url";
+import {dirname,join,resolve} from "node:path";
+const folder=dirname(fileURLToPath(import.meta.url));
+const meta=JSON.parse(await readFile(join(folder,"../meta.json"),"utf8"));
+const cap=JSON.parse(await readFile(join(meta.inputs,"capabilities.json"),"utf8"));
+const args=["sandbox"];
+for(let i=0;i<cap.argv.length;i++)if(cap.argv[i]==="-c")args.push("-c",cap.argv[++i]);
+const out="/tmp/storyfolio-spine-acceptance-codex-build-1";
+args.push("--",process.execPath,resolve("evals/check-build.mjs"),`--workspace=${meta.work}`,`--expectations=${join(folder,"expectations.json")}`,`--out=${out}`,"--dependencies=/tmp/storyfolio-build-capability-20261011");
+await writeFile(join(folder,"command.json"),JSON.stringify({started:new Date().toISOString(),cwd:meta.work,executable:cap.cliExecutable,args,modelCalls:0},null,2)+"\n",{flag:"wx"});
+const result=await new Promise(resolve=>{const child=spawn(cap.cliExecutable,args,{cwd:meta.work,stdio:["ignore","pipe","pipe"]});let stdout="",stderr="";child.stdout.on("data",x=>stdout+=x);child.stderr.on("data",x=>stderr+=x);child.on("error",error=>resolve({error:String(error),code:null,stdout,stderr}));child.on("close",(code,signal)=>resolve({code,signal,stdout,stderr}));});
+await writeFile(join(folder,"process.json"),JSON.stringify({...result,finished:new Date().toISOString()},null,2)+"\n",{flag:"wx"});
+await cp(out,join(folder,"result"),{recursive:true,errorOnExist:true,force:false});
+console.log(JSON.stringify({code:result.code,error:result.error??null,output:join(folder,"result")},null,2));
+process.exitCode=result.code===0?0:1;

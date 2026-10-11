@@ -163,7 +163,7 @@ do not promise installation or file-reading capabilities they lack. Keep
 This correction supplies no installation commands and verifies no external
 source.
 
-The planned actor has no network access. Freeze dated, coordinator-reviewed
+The planned actor has no external network access. Freeze dated, coordinator-reviewed
 source and installation evidence as data available equally in both arms,
 and record that this supplied material can cue recommendations. If that
 evidence is unavailable, mark command verification unobserved; do not reward
@@ -270,3 +270,14 @@ first baseline conversation as the cost probe. Further paid conversations
 still require the planned cost review and approval. Skill wording changes
 still require saved failures and matched reruns. Release and push are not
 authorized. The unresolved Stage 1 and review workstreams remain visible.
+
+## First baseline checkpoint
+
+The [bounded first baseline](../../../evals/runs/codex-build-1/findings.md)
+has now reached stop 4 and stopped at the declared between-turn token
+threshold. The fixture, runner, checker and judge described as future work
+above are implemented. Their first real use identified measurement fixes,
+which are recorded separately from actor behavior. No further paid work is
+authorized by this status update; review the observed usage with the author
+before freezing any continuation or new cohort. Shipped skill instructions
+and the approved engine remain unchanged.

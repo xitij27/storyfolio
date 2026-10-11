@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { artifactHashes, assessObservation, buildCases, fixedCommands, outsideWorkspace, requestFailureReason, scrollSamples, validateExpectations } from "./build-check.mjs";
+import { artifactHashes, assessObservation, buildCases, fixedCommands, linkTextMatches, outsideWorkspace, requestFailureReason, scrollSamples, validateExpectations, verifyNextRuntime } from "./build-check.mjs";
 
 const expected = {
   schemaVersion: 1, id: "test-story", route: "/",
@@ -57,6 +57,49 @@ test("fixed commands ignore a tampered actor package checker and script aliases"
   assert.equal(JSON.stringify(commands).includes("/work/scripts/check.mjs"), false);
 });
 
+const nextIdentity = root => ({ name: "next", version: "16.3.8", entrypoint: `${root}/node_modules/next/dist/bin/next`, packageJson: `${root}/node_modules/next/package.json`, sha256: "a".repeat(64) });
+
+test("identical Next copies select the workspace runtime for typegen and build", () => {
+  const local = nextIdentity("/actor");
+  const trusted = nextIdentity("/coordinator");
+  const verified = verifyNextRuntime("/actor", local, trusted);
+  assert.equal(verified.passed, true);
+  assert.equal(verified.entrypoint, local.entrypoint);
+  assert.notEqual(verified.entrypoint, trusted.entrypoint);
+  const commands = fixedCommands({ next: verified.entrypoint, typescript: "/coordinator/tsc", eslint: "/coordinator/eslint", typescriptConfig: "/evidence/tsconfig.json", eslintConfig: "/evidence/eslint.mjs" });
+  assert.deepEqual(commands.filter(command => ["typegen", "build"].includes(command.id)).map(command => command.args[0]), [local.entrypoint, local.entrypoint]);
+  assert.equal(commands[1].args[0], "/coordinator/tsc");
+  assert.equal(commands[2].args[0], "/coordinator/eslint");
+  assert.match(verified.scope, /transitive dependency integrity is not established/);
+});
+
+test("changed Next version or CLI bytes cannot produce an executable entrypoint", () => {
+  const local = nextIdentity("/actor");
+  const trusted = nextIdentity("/coordinator");
+  for (const [change, message] of [[{ version: "16.3.9" }, /version differs/], [{ sha256: "b".repeat(64) }, /entrypoint differs/]]) {
+    const result = verifyNextRuntime("/actor", { ...local, ...change }, trusted);
+    assert.equal(result.passed, false);
+    assert.equal(result.entrypoint, null);
+    assert.match(result.problems.join(), message);
+  }
+});
+
+test("Next verification rejects actor-owned trust and malformed identities", () => {
+  const local = nextIdentity("/actor");
+  const trusted = nextIdentity("/coordinator");
+  for (const untrusted of [local, { ...trusted, packageJson: local.packageJson }]) {
+    const result = verifyNextRuntime("/actor", local, untrusted);
+    assert.equal(result.entrypoint, null);
+    assert.match(result.problems.join(), /outside the actor workspace/);
+  }
+  for (const invalid of [null, { ...local, name: "pretend-next" }, { ...local, entrypoint: 5 }, { ...local, packageJson: "relative.json" }, { ...local, sha256: ["a".repeat(64)] }]) {
+    const result = verifyNextRuntime("/actor", invalid, trusted);
+    assert.equal(result.passed, false);
+    assert.equal(result.entrypoint, null);
+    assert.match(result.problems.join(), /identity is invalid/);
+  }
+});
+
 test("one-screen animated beats sample their actual rest rather than three copies of arrival", () => {
   const boxes = [{ id: "opening", top: 80, height: 1800 }, { id: "middle", top: 1880, height: 900 }];
   assert.deepEqual(scrollSamples(boxes, 900, "animated"), [
@@ -83,12 +126,44 @@ test("hidden, offscreen, occluded and unfocusable links all fail", () => {
   }
 });
 
+test("observed arrow and accurate file-format suffixes preserve the approved link label", () => {
+  const cases = [
+    ["Email Ada ↗", { text: "Email Ada", href: "mailto:ada@example.com" }],
+    ["Download CV HTML ↓", { text: "Download CV", href: "/ada-mensah-cv.html" }],
+    ["View power-state schematic ↗", { text: "View power-state schematic", href: "/assets/power-states.svg" }],
+    ["View fixture schematic ↗", { text: "View fixture schematic", href: "/assets/bring-up-fixture.svg" }],
+    ["Download CV (PDF) ↓", { text: "Download CV", href: "/cv.pdf?download=true" }],
+  ];
+  for (const [text, link] of cases) assert.equal(linkTextMatches(text, link), true, text);
+  const labelled = { ...expected, links: cases.map(([, link]) => link) };
+  const actual = report();
+  for (const item of actual.samples) item.links = cases.map(([text, link]) => ({ text, href: link.href, visible: true, inView: true, tabIndex: 0, hitTarget: true }));
+  assert.deepEqual(assessObservation(labelled, entry, actual), []);
+});
+
+test("link suffix matching rejects misleading text and retains destination and usability checks", () => {
+  const link = { text: "Download CV", href: "/ada-mensah-cv.html" };
+  for (const text of ["Do not Download CV", "Download CV is unavailable", "Download CV for someone else", "Download CVHTML", "Download CV PDF ↓", "Download CV HTML elsewhere", "Download CVs"]) {
+    assert.equal(linkTextMatches(text, link), false, text);
+  }
+  assert.equal(linkTextMatches("Email HTML", expected.links[0]), false);
+  for (const [key, value] of [["href", "/someone-else.html"], ["visible", false], ["inView", false], ["hitTarget", false], ["tabIndex", -1]]) {
+    const actual = report();
+    for (const item of actual.samples) item.links = [{ text: "Download CV HTML ↓", href: link.href, visible: true, inView: true, tabIndex: 0, hitTarget: true, [key]: value }];
+    assert.match(assessObservation({ ...expected, links: [link] }, entry, actual).join(), /link never usable/, key);
+  }
+});
+
 test("keyboard-only links require actual focused, visible observations", () => {
   const keyboard = { ...expected, links: [{ ...expected.links[0], keyboardOnly: true }] };
   const actual = report();
   assert.match(assessObservation(keyboard, entry, actual).join(), /by keyboard/);
   actual.keyboardLinks = [{ ...actual.samples[0].links[0], focused: true }];
   assert.deepEqual(assessObservation(keyboard, entry, actual), []);
+  actual.keyboardLinks[0].text += " ↗";
+  assert.deepEqual(assessObservation(keyboard, entry, actual), []);
+  actual.keyboardLinks[0].focused = false;
+  assert.match(assessObservation(keyboard, entry, actual).join(), /by keyboard/);
 });
 
 test("static mobile expectations fail a still-running visible canvas", () => {

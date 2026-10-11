@@ -449,3 +449,13 @@ not regenerate old reports. Keep raw evidence at its original paths and
 preserve symlink targets. No navigation file belongs inside a frozen source
 run. See the [archive provenance](../docs/history/README.md) for the
 migration's inventories and byte-preservation checks.
+
+## First Stage 3 build baseline, 11 October 2026
+
+[codex-build-1](runs/codex-build-1/findings.md) is one bounded Sol turn from
+an approved derivative embedded storyboard, followed by one fresh Astra
+judge. It reached the three-beat spine and look gate; the reported token
+threshold prevented later turns. Original scores, image-tool observability
+correction, coordinator checker diagnostics, retained source/screenshots
+and exact usage remain separate. This is neither a full-site pass nor a
+matched skill improvement.

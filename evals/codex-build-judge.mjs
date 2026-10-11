@@ -107,7 +107,7 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
       try { const event = JSON.parse(line); return !["agent_message", "reasoning"].includes(event.item?.type); }
       catch { nonJsonLines++; return true; }
     });
-    add(`run/${prefix}/stream.jsonl`, stream, { text: toolLines.join("\n"), description: "All tool/lifecycle/error events and non-JSON lines, including started attempts; agent-message text is supplied in reply.md and reasoning items are omitted." });
+    add(`run/${prefix}/stream.jsonl`, stream, { text: toolLines.join("\n"), description: "Tool/lifecycle/error events emitted in the saved exec JSONL and non-JSON lines, including started attempts; agent-message text is supplied in reply.md and reasoning items are omitted. The CLI stream can omit image-view calls and returned image blocks." });
     await keep(out, `${prefix}/stderr.log`, "run");
     await record(out, `${prefix}/result.json`, "run");
     const started = JSON.parse(await keep(out, `${prefix}/started.json`, "run"));
@@ -161,7 +161,7 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
   }
   const packet = { schemaVersion: 1, question: "Bounded baseline build at stops 4 to 6 from approved fictional input; no scene redesign task", inputDigest: frozen.digest,
     turnCount: history.length, sourcePacketAvailable: false, fullJourney: false,
-    limitations: ["No third-party installation-source packet is supplied; source/command verification is unobserved.", "No screenshot pixels or real phone evidence is supplied.", "Only changed source bodies are included, with unchanged source hashes and the full fixture text retained.", "All tool events are included, but subprocess file reads may not be individually logged; configuration isolation is not a read jail.", "Baseline-only input is not arm-blinded. Report further unblinding cues."],
+    limitations: ["No third-party installation-source packet is supplied; source/command verification is unobserved.", "No screenshot pixels or real phone evidence is supplied.", "Only changed source bodies are included, with unchanged source hashes and the full fixture text retained.", "Tool events emitted by exec JSONL are included, but the CLI can omit image-view calls and returned image blocks. Their absence does not establish that screenshot review was skipped or a review claim was unsupported. Without supplemental proof, the visual-review observation is unobserved; do not infer pixel quality.", "Subprocess file reads may not be individually logged; configuration isolation is not a read jail.", "Baseline-only input is not arm-blinded. Report further unblinding cues."],
     turns, automaticAcceptance, omitted, documents };
   const template = (await regularBytes(inputs, "implementation/evals/prompts/judge-build.md")).toString("utf8");
   const rubric = (await regularBytes(inputs, "rubric.md")).toString("utf8");

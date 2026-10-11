@@ -204,7 +204,10 @@ it does not substitute for a fresh complete acceptance run.
 Stage 2 has the author's desktop and physical-phone approval. Stage 3's
 [first baseline protocol](../docs/superpowers/plans/2026-10-11-build-baseline.md)
 freezes one complete fictional [embedded case](builds/embedded-1/README.md),
-three continuation prompts, the unchanged skill and approved engine. This
+three continuation prompts, the unchanged skill and approved engine. The
+[completed first probe](runs/codex-build-1/findings.md) stopped after its
+first turn at the token threshold. Example cohort names below are fresh
+placeholders, not authorization for another paid run. This
 is a build experiment from an approved storyboard, not a full-journey test.
 No other skill is enabled. Recommendations and installation restraint are
 observed; successful use of other skills and before-stop-1 timing are not.
@@ -212,8 +215,8 @@ observed; successful use of other skills and before-stop-1 timing are not.
 Preparation and one-turn execution are separate:
 
 ```sh
-node evals/codex-build-run.mjs --case evals/builds/embedded-1/case.json --cohort codex-build-1 --capabilities evals/builds/local-capabilities.json --dry
-node evals/codex-build-run.mjs --case evals/builds/embedded-1/case.json --cohort codex-build-1 --capabilities evals/builds/local-capabilities.json --prepare
+node evals/codex-build-run.mjs --case evals/builds/embedded-1/case.json --cohort codex-new-build-1 --capabilities evals/builds/local-capabilities.json --dry
+node evals/codex-build-run.mjs --case evals/builds/embedded-1/case.json --cohort codex-new-build-1 --capabilities evals/builds/local-capabilities.json --prepare
 ```
 
 These make no model calls. Prepare freezes implementation and inputs,
@@ -235,7 +238,11 @@ usage with the author before any further paid conversation or retry.
 
 [The independent checker](check-build.mjs) takes `--workspace`, frozen
 `--expectations`, a new `--out` directory outside the actor workspace, and
-`--dependencies` pointing to a separate coordinator project root. It calls
+`--dependencies` pointing to a separate coordinator project root. This argument is required.
+Next runs from the app's resolved installation after its package identity
+and CLI hash match the trusted copy, avoiding mixed runtime modules.
+TypeScript, lint and Playwright use the coordinator installation. Full
+transitive dependency integrity is not established. The checker calls
 known tool entry points and checks six browser conditions. Preserve source
 hashes before and after, all reports, screenshots and visual observations.
 [Its scope](builds/acceptance.md) describes what still needs manual review.
@@ -244,7 +251,7 @@ hashes before and after, all reports, screenshots and visual observations.
 evidence, not paid baseline results.
 
 ```sh
-node evals/codex-build-judge.mjs --run evals/runs/codex-build-1/embedded-1/baseline-1 --acceptance acceptance/manifest.json --dry
+node evals/codex-build-judge.mjs --run evals/runs/codex-new-build-1/embedded-1/baseline-1 --acceptance acceptance/manifest.json --dry
 ```
 
 Omit `--acceptance` for an incomplete build without a full acceptance run.
@@ -254,6 +261,13 @@ The judge refuses altered inputs, overwrite, silent truncation and automatic
 retry. Its text evidence excludes image pixels, so save screenshot review
 separately. Keep automatic findings, judge verdicts and coordinator review
 distinct. A complete model turn does not mean a completed build stage.
+
+Current checker and judge corrections are documented in the
+[non-model calibration](builds/checker-calibration-1/findings.md). Original
+cohort copies preserve their earlier implementation. To reproduce a frozen
+historical judgement, use its recorded implementation revision; do not
+modify old inputs to accommodate current code. CLI JSON can omit image
+calls, so absent visual events are not proof of skipped image review.
 
 ## Single-turn existing-portfolio review pilot
 

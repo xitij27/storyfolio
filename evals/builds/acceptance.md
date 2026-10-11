@@ -9,6 +9,7 @@ measurement tool, not an instruction added to Storyfolio.
 ```sh
 node evals/check-build.mjs \
   --workspace=/absolute/actor/workspace \
+  --dependencies=/absolute/coordinator/dependency-project \
   --expectations=/absolute/coordinator/expectations.json \
   --out=/absolute/coordinator/check-output
 ```
@@ -16,9 +17,13 @@ node evals/check-build.mjs \
 The workspace already needs the engine's pinned dependencies and Chromium.
 This command installs nothing. `PLAYWRIGHT_BROWSERS_PATH` selects an existing
 browser cache. `--browser-executable=/absolute/chromium` selects an existing
-browser executable. Optional `--dependencies=/absolute/dependency-project`
-resolves the known tools from another project; otherwise the workspace's
-installed dependencies supply them. The output directory must be new;
+browser executable. Required `--dependencies=/absolute/dependency-project`
+selects a trusted project outside the actor workspace. TypeScript, ESLint
+and Playwright resolve there. Next resolves from the actor workspace so it
+shares runtime module identity with generated application code. Before any
+command executes, its package name/version and CLI SHA-256 must match the
+trusted Next copy. A mismatch fails acceptance and is saved in the manifest.
+The output directory must be new;
 earlier passed and failed measurements are never overwritten. Node must satisfy the engine's native
 TypeScript requirement. The run harness records the environment and browser
 version alongside preparation evidence.
@@ -43,6 +48,9 @@ usable links. Every required link must be visible, within the viewport,
 focusable and reachable by a pointer at a sampled location, or actually
 focused during the keyboard pass for a keyboard-only link. Merely placing
 an invisible anchor or hidden approved text in the DOM does not pass.
+Link labels may end in decorative arrows or a separated format label
+matching their URL extension (HTML, PDF or SVG). Arbitrary appended words,
+misleading prefixes and different destinations still fail.
 
 The six cases are desktop, mobile, reduced motion, no WebGL, no JavaScript
 and loss of a running desktop WebGL context. The last case is applicable
@@ -76,7 +84,9 @@ judgment. Replacing `npm run check` or a package script with `exit 0` cannot
 make these commands pass. The checker starts and stops its own production
 server and does not accept a pre-existing actor-selected server.
 
-Next executes application configuration while building. Tool entrypoint
+Next executes application configuration while building. Both resolved Next
+identities and hashes are recorded. The workspace's verified Next CLI runs
+type generation, production build and server startup. Other tool entrypoint
 hashes are recorded, but those files import other installed files. The
 harness must preserve the original lockfile and detect dependency mutations
 across turns; entrypoint hashes alone cannot prove dependency integrity.
@@ -98,5 +108,7 @@ performance measurement. The run's manifest retains these limits.
 missing/reordered beats, hidden/occluded/unfocusable links, keyboard-only
 links, wrong static-mobile behavior, invisible wording, failed context-loss
 probes, request failures, precise CSP exceptions and tampered actor scripts.
+It also covers Next runtime selection, version/entrypoint mismatches and
+decorated link labels without weakening destination or usability checks.
 A local plain-story smoke run separately checks the executable integration;
 it is a checker test and is not an embedded baseline or paid conversation.

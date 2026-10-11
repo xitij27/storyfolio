@@ -9,7 +9,7 @@ import { createRequire } from "node:module";
 import { createServer } from "node:net";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { artifactHashes, assessObservation, buildCases, fixedCommands, outsideWorkspace, requestFailureReason, scrollSamples, validateExpectations } from "./lib/build-check.mjs";
+import { artifactHashes, assessObservation, buildCases, fixedCommands, outsideWorkspace, requestFailureReason, scrollSamples, validateExpectations, verifyNextRuntime } from "./lib/build-check.mjs";
 
 const options = {};
 for (const argument of process.argv.slice(2)) {
@@ -17,7 +17,7 @@ for (const argument of process.argv.slice(2)) {
   if (!match || options[match[1]]) throw new Error(`Unknown, duplicate or empty option: ${argument}`);
   options[match[1]] = match[2];
 }
-if (!options.workspace || !options.expectations || !options.out) throw new Error("Required: --workspace=DIR --expectations=FILE --out=DIR");
+if (!options.workspace || !options.expectations || !options.out || !options.dependencies) throw new Error("Required: --workspace=DIR --expectations=FILE --out=DIR --dependencies=TRUSTED_DIR");
 const workspace = await realpath(resolve(options.workspace));
 const expectationsPath = await realpath(resolve(options.expectations));
 const implementation = await realpath(fileURLToPath(import.meta.url));
@@ -33,10 +33,20 @@ const expected = JSON.parse(await readFile(expectationsPath, "utf8"));
 const invalid = validateExpectations(expected);
 if (invalid.length) throw new Error(`Invalid frozen expectations: ${invalid.join("; ")}`);
 const sha = bytes => createHash("sha256").update(bytes).digest("hex");
-const dependencyRoot = await realpath(resolve(options.dependencies ?? workspace));
+const dependencyRoot = await realpath(resolve(options.dependencies));
+if (!outsideWorkspace(workspace, dependencyRoot)) throw new Error("Trusted dependency root must be outside the actor workspace");
 const dependencyRequire = createRequire(join(dependencyRoot, "package.json"));
+const workspaceRequire = createRequire(join(workspace, "package.json"));
+async function nextIdentity(requireFrom) {
+  const entrypoint = await realpath(requireFrom.resolve("next/dist/bin/next"));
+  const packageJson = await realpath(requireFrom.resolve("next/package.json"));
+  const { name, version } = JSON.parse(await readFile(packageJson, "utf8"));
+  return { name, version, entrypoint, packageJson, sha256: sha(await readFile(entrypoint)) };
+}
+const nextRuntime = verifyNextRuntime(workspace, await nextIdentity(workspaceRequire), await nextIdentity(dependencyRequire));
 const paths = {
-  next: dependencyRequire.resolve("next/dist/bin/next"),
+  // Next must share module identity with the app's generated server code.
+  next: nextRuntime.entrypoint,
   typescript: dependencyRequire.resolve("typescript/lib/tsc.js"),
   eslint: join(dirname(dependencyRequire.resolve("eslint/package.json")), "bin/eslint.js"),
   typescriptConfig: join(output, "tsconfig.acceptance.json"),
@@ -44,10 +54,10 @@ const paths = {
 };
 const playwright = dependencyRequire.resolve("playwright-core");
 const frozen = {};
-for (const path of [implementation, helper, expectationsPath, paths.next, paths.typescript, paths.eslint, playwright]) frozen[path] = sha(await readFile(path));
+for (const path of [implementation, helper, expectationsPath, nextRuntime.local.entrypoint, nextRuntime.local.packageJson, nextRuntime.trusted.entrypoint, nextRuntime.trusted.packageJson, paths.typescript, paths.eslint, playwright]) frozen[path] = sha(await readFile(path));
 const manifest = {
   schemaVersion: 1, fixture: expected.id, started: new Date().toISOString(), node: process.version,
-  workspace, expectationsPath, dependencyRoot, frozen, expected, commands: [], results: [], files: [], complete: false,
+  workspace, expectationsPath, dependencyRoot, nextRuntime, frozen, expected, commands: [], results: [], files: [], complete: false,
   limits: [
     "Coordinator source and expectations must be frozen by the run harness before the actor starts. Outside-workspace paths alone are not a sandbox write barrier.",
     "Dependency entrypoint hashes are recorded, not full dependency integrity. The harness must audit dependency and lockfile mutation separately.",
@@ -234,6 +244,7 @@ async function browserCase(chromium, base, entry) {
 
 let server;
 try {
+  if (!nextRuntime.passed) throw new Error(`Next runtime verification failed: ${nextRuntime.problems.join("; ")}`);
   for (const path of [...expected.assets, ...(expected.requiredFiles ?? [])]) {
     const absolute = resolve(workspace, path);
     const record = { path };
