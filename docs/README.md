@@ -52,9 +52,15 @@ and starter-browser checks under the exact frozen sandbox configuration.
 It supersedes the pending-freeze status above, not the paid-run gate.
 The author has since [approved the bounded launch](history/2026-10-11-build-baseline-launch-approval.md):
 one actor turn, followed by at most one judge only after complete-packet
-validation. No actor or judge has started at this record's update. Process
+validation. At the freeze checkpoint no actor or judge had started. Process
 deadlines are not hard token or spending caps. The study is the home for exact
 recheck commands and the separately retained `TMPDIR` requirement.
+
+The authorized actor subsequently made one incomplete attempt: it requested
+the blocked package registry during `npm ci` before implementation. There is
+no candidate, visual result or judge. The [actor result](../evals/runs/codex-bench-depth-baseline-1/findings.md)
+retains the evidence and makes clear that another attempt needs a separate
+decision.
 
 For a new session, read:
 

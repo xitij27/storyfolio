@@ -155,6 +155,11 @@ The author subsequently approved the proposed paid envelope, recorded in the
 It permits exactly one fresh actor turn and at most one validated text judge,
 with no retry or continuation. Results, including a failure to launch or
 complete, must be retained in the frozen cohort before any new decision.
+That actor turn has now been spent and is incomplete: it attempted a blocked
+registry request during `npm ci` before implementing anything. No judge was
+eligible or launched. The retained [actor result](../evals/runs/codex-bench-depth-baseline-1/findings.md)
+records the raw evidence and the fact that this is not a test of build quality.
+Any follow-up requires a new protocol and approval.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
