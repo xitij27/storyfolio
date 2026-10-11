@@ -24,7 +24,7 @@ For a new session, read:
 | Repository-wide working rules | [AGENTS.md](../AGENTS.md) |
 | Current instructions followed by the test agent | [Skill and references](../skills/storyfolio/SKILL.md) |
 | Design rationale and intended scope | [Original approved design](superpowers/specs/2026-10-10-portfolio-skill-design.md) and [existing-portfolio review design](superpowers/specs/2026-10-10-existing-portfolio-review.md) |
-| Stage coherence corrections and engine proof | [Stage review](superpowers/plans/2026-10-11-stage-review.md) and [engine evidence](../evals/engine/plain-story-1/findings.md) |
+| Stage coherence corrections and engine proof | [Stage review](superpowers/plans/2026-10-11-stage-review.md), its [machine-check and optional-skill protocol](superpowers/plans/2026-10-11-stage-review.md#machine-check-and-recommendations-for-other-skills), and [engine evidence](../evals/engine/plain-story-1/findings.md) |
 | Work protocols, completion gates and outcomes | [Plans](superpowers/plans/README.md) |
 | How to make and interpret a current evaluation | [Evaluation runbook](../evals/README.md) |
 | Which experiments exist and what each asks | [Study catalogue](../evals/studies.md) |

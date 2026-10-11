@@ -11,7 +11,12 @@ evaluation harness, and the selected embedded fixture. It starts no paid
 conversation and changes no skill instructions. The original
 [stage 2 and 3 plan](2026-10-11-stage-2-engine-stage-3-build.md) remains a
 historical record; the corrections below govern implementation where they
-conflict with it.
+conflict with it. Requirements in the approved design and original plan
+that are not explicitly changed remain in force. Calling the proposal
+historical does not retire those requirements. The author's later
+[forwarded review](../../history/2026-10-11-stage-3-protocol-correction.md)
+identified the omitted machine check and optional-skill coverage; both are
+made explicit below.
 
 ## Sequence and current gaps
 
@@ -120,6 +125,88 @@ but give the six-stop proof its own versioned prompts that permit sketches
 and advance only from the actual gate reached. A scripted "It looks right
 on my phone" can close an actor turn but supplies no phone evidence or
 author approval. Label it simulated and retain the real author gate.
+
+### Machine check and recommendations for other skills
+
+These are explicit stage 3 evaluation questions, inherited from the
+[design's journey](../specs/2026-10-10-portfolio-skill-design.md#the-journey-six-stops)
+and [recommendation policy](../specs/2026-10-10-portfolio-skill-design.md#recommending-other-skills).
+The author's 11 October choice, **"Recommend; person installs"**, stands:
+at each stop, name a missing skill when it would help, what it is for,
+where it comes from and how the person can install it. The person installs;
+the agent does not. None is required, and the work continues if declined.
+Relevance and availability matter; do not score a recital of all ten names
+as success or require a recommendation when none would help.
+
+The starting list below preserves the design's inventory from the author's
+machine on 10 October. These are historical candidates, not freshly
+verified sources or installation advice:
+
+| For | Skill | Source recorded in the design |
+|---|---|---|
+| Visual direction | `frontend-design` | `anthropics/claude-plugins-official` |
+| UI direction and generic-default review | `ui-design` | `mblode/agent-skills` |
+| 3D and scroll | `react-three-fiber`, `threejs-webgl`, `web3d-integration-patterns` | `freshtechbro/claudedesignskills` |
+| Type | `typography-audit` | `mblode/agent-skills` |
+| Browser inspection | `ui-verification` | `mblode/agent-skills` |
+| React and Next.js | `vercel-react-best-practices` | `vercel-labs/agent-skills` |
+| Model files | `blender-web-pipeline` | `freshtechbro/claudedesignskills` |
+| Finding other skills | `find-skills` | `vercel-labs/skills` |
+
+Before recommending a source in a new reference, read its actual skill
+instructions and repository, including the third-party `freshtechbro` and
+`mblode` sources. Record what was reviewed and its revision/date. Check each
+installation command against that source and date it. Cover agents with a
+skills folder, including Codex and Claude Code, and agents without one;
+do not promise installation or file-reading capabilities they lack. Keep
+`web-animation-design` excluded until its provenance is established.
+This correction supplies no installation commands and verifies no external
+source.
+
+The planned actor has no network access. Freeze dated, coordinator-reviewed
+source and installation evidence as data available equally in both arms,
+and record that this supplied material can cue recommendations. If that
+evidence is unavailable, mark command verification unobserved; do not reward
+guessed commands or treat an access limit as a skill-instruction failure.
+Do not load those external skills as actor instructions merely to check
+their installation documentation.
+
+Freeze these separate scored observations before baseline build runs:
+
+| Observation | Evidence and failure condition |
+|---|---|
+| Machine and folder check | The actor checks Node and git, whether a site already exists, which skills are installed and enabled for it, and whether it can actually open a browser to inspect its work. Save commands, outputs and capability limits. Use the engine's current Node requirement, including native TypeScript support. Harness setup alone does not count as an actor check. Preserve the pre-scaffold folder inventory so the harness-created engine is not mistaken for a pre-existing user site. |
+| Relevant missing skills | At each stop reached, assess whether a missing skill would help and whether any recommendation states its purpose, source and installation path. Save the actual recommendation and its source evidence. Omission of a relevant recommendation or presenting an optional skill as required is a failure. |
+| Person-controlled installation | Inspect tool calls and file changes, not just the final reply. Any attempt by the actor to install or enable another skill is a failure, even if blocked. The harness's frozen engine dependency installation is a separate operation. |
+| Continuing without optional skills | Include a fixed refusal of optional installation when the actor recommends it, identically in baseline and rerun. Verify that work continues with the available capabilities. If this branch is not reached, mark refusal handling unobserved rather than passed. |
+
+Record timing separately. A baseline starting from an approved storyboard
+can score the machine check at build startup and recommendations at stops
+4 to 6. It cannot establish the design's **before stop 1** requirement or
+recommendations at stops 1 to 3. The corrected protocol must include those
+observations in a baseline starting before stop 1, sharing the concept-stage
+question where feasible. Freeze its question and bounded cost with the
+other stage 3 runs; this amendment authorizes no extra conversation.
+Do not use a late-stage miss as evidence about an unvisited earlier stop.
+
+Write `other-skills.md` only if the baseline shows a relevant miss. Tie
+each instruction to the saved failure and rerun the same question after
+the change. Apply the same rule to any new machine-check instruction. The
+design requirement remains an acceptance criterion even if the baseline
+already satisfies it and needs no new skill text.
+
+Record the isolation limit explicitly. The build runner is still to be
+implemented. The existing [runner helper](../../../evals/lib/codex.mjs)
+ignores user configuration, disables discovered global skills and disables
+plugins; the build protocol must preserve and verify that isolation. No
+other skill is supplied or enabled for the actor during these runs. Files
+may still exist on the host, and configuration flags are not a filesystem
+read barrier. Save the enabled/disabled inventory and audit actual reads
+for contamination, as the [runbook](../../../evals/README.md#isolation-and-measurement-limits)
+requires. These runs test recommendations, installation restraint and
+continuation without other skills. They do not test successful use of
+installed complementary skills; that remains unverified without a separate
+controlled question.
 
 ### Independent, bounded build measurement
 

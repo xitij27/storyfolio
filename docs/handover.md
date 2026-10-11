@@ -175,6 +175,19 @@ not establish whether the earlier publication review was completed.
    concrete release checks; a public repository, README and MIT license
    already exist. Live privacy enforcement, review-mode generalisation
    and the Stage 1 decisions above remain open.
+   The author subsequently forwarded Claude's correction: the governing
+   review had omitted the optional-skill list and machine check. The
+   [amended stage 3 protocol](superpowers/plans/2026-10-11-stage-review.md#machine-check-and-recommendations-for-other-skills)
+   now retains all ten historical candidates and the "Recommend; person
+   installs" rule, source review and dated commands, and explicit baseline
+   observations for preflight, recommendations, installation restraint and
+   continuation. Before-stop-1 timing needs a baseline that actually starts
+   there; an approved-storyboard build cannot prove it. Runs with other
+   skills disabled cannot establish their successful use. The build runner
+   and this evaluation coverage remain unimplemented. No skill edit or paid
+   run accompanies the correction. The
+   [full forwarded note and correction record](history/2026-10-11-stage-3-protocol-correction.md)
+   preserve the author's message, reviewed evidence and local verification.
 
 The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration

@@ -3,6 +3,8 @@
 Current implementation follows the [11 October stage review](2026-10-11-stage-review.md).
 The proposal below is preserved as written; its status statements and any
 conflicting instructions are historical. Stage 2 is ready for author review.
+Requirements not explicitly changed by the review still apply, including
+the author's optional-skill policy and Task 12's source-verification rules.
 
 For Codex to carry out in `/home/kshitij/projects/storyfolio`. Read the
 repository's `AGENTS.md` first; it overrides anything here that conflicts.

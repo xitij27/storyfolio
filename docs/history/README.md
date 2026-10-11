@@ -139,3 +139,11 @@ their base, deliberately preserving the bytes. Use the current handover
 and documentation map for clickable navigation.
 The original stage 2 and 3 proposal stays at its existing path with a
 precedence notice pointing to the new review.
+
+## 11 October stage 3 protocol correction
+
+[The correction record](2026-10-11-stage-3-protocol-correction.md) preserves
+the author's forwarded Claude note verbatim, the omitted design requirements,
+the distinction between historical skill candidates and verified
+recommendations, and the amended protocol's measurement limits. This work
+changes planning documentation only; it adds no skill instruction or paid run.
