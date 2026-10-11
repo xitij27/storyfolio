@@ -66,6 +66,26 @@ export function summariseCodex(stdout, code = 0) {
   };
 }
 
+/** Exact terminal message from one successful turn, never the commentary aggregate. */
+export function finalCodexMessage(stdout, code = 0) {
+  if (code !== 0) throw new Error("No final Codex message from an unsuccessful process");
+  const events = stdout.split("\n").filter(line => line.trim()).map((line, index) => {
+    let event;
+    try { event = JSON.parse(line); }
+    catch { throw new Error(`Invalid Codex stream JSON at nonblank line ${index + 1}`); }
+    if (!event || Array.isArray(event) || typeof event.type !== "string") throw new Error(`Invalid Codex stream event at nonblank line ${index + 1}`);
+    return event;
+  });
+  const threads = events.filter(event => event.type === "thread.started");
+  if (threads.length !== 1 || events[0] !== threads[0] || typeof threads[0].thread_id !== "string" || !threads[0].thread_id.trim()) throw new Error("Final Codex message requires one identified session");
+  const completed = events.filter(event => event.type === "turn.completed");
+  if (completed.length !== 1 || events.at(-1) !== completed[0] || events.filter(event => event.type === "turn.started").length > 1 || events.some(event => event.type === "turn.failed" || event.type === "error")) throw new Error("Final Codex message requires one successful completed turn");
+  // A message followed by further tool work is commentary, even when it is valid JSON.
+  const terminal = events.at(-2);
+  if (terminal?.type !== "item.completed" || terminal.item?.type !== "agent_message" || typeof terminal.item.text !== "string" || !terminal.item.text.trim()) throw new Error("Completed Codex turn has no terminal agent message");
+  return terminal.item.text;
+}
+
 export function invokeCodex({ cwd, prompt, streamPath, timeoutMs = 25 * 60 * 1000, ...options }) {
   return new Promise(resolve => {
     const started = Date.now();

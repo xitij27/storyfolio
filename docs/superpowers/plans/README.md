@@ -33,8 +33,9 @@ Claude commands and old cohort destinations in original plans are historical.
 | [Bounded build completion](2026-10-11-build-completion-proposal.md) (11 October 2026) | Authorized allowance used. Two actor turns completed the implementation; technical browser acceptance passes 6/6, with 49 images reviewed. Those checks remain valid, but the author subsequently rejected visual quality. The judge invocation failed before its model turn at the CLI character limit. No score or retry. | [Completion findings](../../../evals/runs/codex-build-completion-1/findings.md); [judge-size approval](../../history/2026-10-11-build-judge-size-approval.md); [visual-quality findings](../../../evals/runs/codex-visual-quality-review-1/findings.md). |
 | [Visual-quality recovery](2026-10-11-visual-quality-recovery.md) (11 October 2026) | The manual three-beat prototype led to a five-beat story revision. The author accepted its depth and confirmed it works on phone, closing this bounded prototype's review gate. The reusable build workflow and full-site proof remain open. No new paid cohort or shipped skill/engine edit. | [Authorization](../../history/2026-10-11-visual-prototype-approval.md); [prototype design](../specs/2026-10-11-fixture-prototype.md); [source and setup](../../../prototypes/fixture-study/README.md); [depth findings](../../../evals/runs/visual-recovery-depth-1/findings.md); [phone confirmation](../../history/2026-10-11-fixture-phone-approval.md); [earlier review](../../../evals/runs/codex-visual-quality-review-1/findings.md). |
 | [Stage 4: packaging](2026-10-11-packaging.md) (11 October 2026) | Planned. README, MIT license and public repository already exist. Release packaging follows the approved stage 3 proof and recorded dispositions for remaining capability claims. | [Packaging tasks and release gates](2026-10-11-packaging.md#exit-and-release-gates): distribution inventory, license/origin review, client installation checks and a clean extracted scaffold. |
-| [Build-workflow reproduction](2026-10-11-build-workflow-reproduction.md) (11 October 2026) | No-model preparation now includes 121 frozen inputs and actual actor-workspace capability proof after the separate engine and transport repairs. No actor or judge has started. The bounded paid envelope remains unapproved. | [Final freeze study](../../../evals/runs/build-workflow-freeze-1/findings.md); [local authorization](../../history/2026-10-11-build-freeze-approval.md); [earlier preparation](../../../evals/runs/build-workflow-preparation-1/findings.md); [shared-controls repair](../../../evals/engine/shared-controls-1/findings.md); [transport study](../../../evals/runs/judge-transport-1/findings.md). |
+| [Build-workflow reproduction](2026-10-11-build-workflow-reproduction.md) (11 October 2026) | Authorized one-turn five-beat actor completed. The single judge delivered every page but its runner failed commentary/JSON parsing. Corrected record separates raw evidence, a frozen-rule terminal-message audit, coordinator assessment and remaining gates. | [Baseline findings](../../../evals/runs/codex-bench-depth-baseline-1/findings.md); [reconciliation and continued development](../../history/2026-10-11-baseline-reconciliation-and-development.md); [local parser repair](../../../evals/runs/judge-response-parsing-1/findings.md); [final freeze study](../../../evals/runs/build-workflow-freeze-1/findings.md). |
 | [Lossless judge-evidence transport](2026-10-11-judge-evidence-transport.md) (11 October 2026) | Local repair complete: explicit frozen paged delivery, byte-exact historical reconstruction and 305 passing tests. No live model/client loop or historical retry. | [Authorization](../../history/2026-10-11-judge-transport-approval.md); [findings and limitations](../../../evals/runs/judge-transport-1/findings.md); [independent review](../../../evals/runs/judge-transport-1/review.md). |
+| [Post-baseline attribution and next work](2026-10-11-post-baseline-attribution.md) (11 October 2026) | Judge parser repaired with 310 passing repository tests. Next local measurement work distinguishes intentional focus-only skip links, before any new actor experiment or behavioral instruction. | [Baseline findings](../../../evals/runs/codex-bench-depth-baseline-1/findings.md); [modality review](../../../evals/runs/codex-bench-depth-baseline-1/checker-modality-review.md); [parser repair](../../../evals/runs/judge-response-parsing-1/findings.md). |
 
 The [original design](../specs/2026-10-10-portfolio-skill-design.md) also sets
 out the engine, building and packaging stages. The engine and building
@@ -56,11 +57,15 @@ at `fd03055`. This supersedes the pending author-depth status above; physical-ph
 assessment, the evaluated build workflow and full-site acceptance remain open.
 
 The later [phone confirmation](../../history/2026-10-11-fixture-phone-approval.md)
-also closes that prototype check. The next planning step is the bounded
-Stage 3 workflow protocol, not another prototype-approval request. Workflow
-evaluation and full-site acceptance remain open; no new paid run is authorized.
+also closed that prototype check. The next planning step at that checkpoint
+was the bounded Stage 3 workflow protocol, not another prototype-approval
+request. It did not itself authorize a paid run.
 
 The author then authorized planning. The
-[reproduction plan](2026-10-11-build-workflow-reproduction.md) now specifies
+[reproduction plan](2026-10-11-build-workflow-reproduction.md) specified
 the diagnostic, attribution rules, local prerequisites and proposed bounded
-pilot. It does not yet authorize paid execution or a skill instruction change.
+pilot. Paid execution was later explicitly approved and that actor/judge
+allowance is now consumed. The
+[post-baseline plan](2026-10-11-post-baseline-attribution.md) and linked
+findings govern current work. Full-site acceptance and shipped build
+guidance remain open; no new paid allowance or skill edit is implied.

@@ -45,7 +45,8 @@ its review criteria and independent runtime observations are separate.
 | [shared-controls-1](engine/shared-controls-1/findings.md) | Authorized shipped-engine provider repair; frozen failing baseline, React regressions and real Canvas verification. No actor/judge evaluation or skill instruction change |
 | [judge-transport-1](runs/judge-transport-1/findings.md) | Authorized local-only lossless evidence delivery repair; exact historical reconstruction, bounded read-only pages, CLI configuration proof and 305 passing tests. No live judge, old retry or final cohort freeze |
 | [build-workflow-freeze-1](runs/build-workflow-freeze-1/findings.md) | Authorized final local preparation: 121 fixed inputs, clean external actor workspace, offline dependencies, exact-sandbox build/browser and network-boundary proof. No paid actor or judge; cost approval remains separate |
-| [codex-bench-depth-baseline-1](runs/codex-bench-depth-baseline-1/inputs/manifest.json) | Prepared, not executed: seven fixture files and unchanged skill/engine, source-bound scaffold and retained setup evidence. No actor conversation, implementation result or judge score; see the freeze study for commands and limits |
+| [codex-bench-depth-baseline-1](runs/codex-bench-depth-baseline-1/findings.md) | One completed five-beat actor build. The premature incomplete report is corrected; raw actor evidence, separate coordinator checks and contamination audit retained. Single judge delivered all pages but failed aggregate JSON parsing; terminal response audited separately, no paid retry |
+| [judge-response-parsing-1](runs/judge-response-parsing-1/findings.md) | Local engineering repair for progress messages mixed with terminal judge JSON, with frozen failure evidence and regression tests. No new model call or historical-result overwrite |
 
 ## Cases and comparison rules
 

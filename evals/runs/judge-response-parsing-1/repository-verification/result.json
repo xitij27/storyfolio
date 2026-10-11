@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-11T20:31:48.808Z",
+  "passed": true,
+  "modelCalls": 0,
+  "node": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "version": "v22.22.1"
+  },
+  "source": {
+    "evals/codex-build-judge.mjs": "8501455aeed8915816ac53e58907c70acb7551df5af79293527795f68c588b76",
+    "evals/lib/codex.mjs": "783f863195f191129de87aaebbd5fbda7a37d9bea7d256904d5391da4c034176",
+    "evals/lib/codex.test.mjs": "f144a7c45f61304ad506c2850340053fc8275cb3955853113c933fa55c8b731b",
+    "evals/lib/build-score.test.mjs": "2473a8ea60b642887e6d07702357adbd87d40a046354d3e687aad961ba8f5b8e"
+  },
+  "commands": [
+    {
+      "name": "skill",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "evals/check-skill.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 58,
+      "stdoutSha256": "c9df9dcb948138b53720503833411ec8f7b7a1de2530768be52018ffec2903ab",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "people",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "evals/check-people.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 131,
+      "stdoutSha256": "c373d084346684da12c88e5eb1524ae4f6f47a6b445e5e67781e1d903059c00e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "fixture",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "evals/builds/bench-depth-1/verify-fixture.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 101,
+      "stdoutSha256": "d8c62ab4ed5586e5eb4594cef45e9f5541cf6c8a0d8a28c2ce94dbec5e2501d9",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "tests",
+      "executable": "npm",
+      "args": [
+        "test"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 12387,
+      "stdoutSha256": "1b14bfe5039c67c2df44d59953488b070d7981337726cd882457d5435ba49ad7",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "counts": {
+        "tests": 310,
+        "suites": 31,
+        "pass": 310,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    {
+      "name": "diff",
+      "executable": "git",
+      "args": [
+        "diff",
+        "--check"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 30,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "judge-audit",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "evals/runs/codex-bench-depth-baseline-1/judge-audit/verify.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 453,
+      "stdoutSha256": "b0d33b74a3dbd9d0421bc14ff2a808a71befbb1294ddc453222c3213fca2d966",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "parser-reproduction",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "evals/runs/judge-response-parsing-1/reproduce.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "error": null,
+      "durationMs": 81,
+      "stdoutSha256": "b5cd7968d08da095e3ba7d78a8e0e43b25332c3e2929570d6733bd98ec8e7ef5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "inputDigest": "57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e",
+  "frozenInputs": 121,
+  "artifacts": {
+    "turns/01": {
+      "count": 384,
+      "resultSha256": "9601dc01f4c3b9b2e152c31a5c3aeddf8a47a60c865285fe98238b2961be28cd"
+    },
+    "judge": {
+      "count": 13,
+      "resultSha256": "f8acb96276b37ba646c904007c00739b0925f730bc21b750f8cc3845b986ab1a"
+    }
+  },
+  "archives": [
+    {
+      "path": "docs/history/2026-10-11-before-baseline-reconciliation-handover.md",
+      "sha256": "0be7bf83db8b972ad6578176a9c52fddb4ca8322e0a0346f4e10f1b2d8baa9e9",
+      "verbatim": true
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-baseline-1/premature-findings.md",
+      "sha256": "1f803311cff38c2301c0e679181234a57b334a5c2cf79e1ceab40ac5cc3044d1",
+      "verbatim": true
+    }
+  ],
+  "earlyStreamIsPrefix": true,
+  "skillEnginePrototypeFrozenInputsUnchanged": true,
+  "limits": "Repository engineering verification only. Does not establish completed browser acceptance, visual quality, author approval or a new official judge score."
+}

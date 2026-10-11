@@ -1,0 +1,146 @@
+{
+  "started": "2026-10-11T19:53:11.531Z",
+  "node": "v22.22.1",
+  "scope": "selected cases",
+  "contract": {
+    "ids": [
+      "question",
+      "scheduling",
+      "bench",
+      "evidence",
+      "scope"
+    ],
+    "lookIds": [
+      "light"
+    ]
+  },
+  "probes": {},
+  "matrix": [
+    {
+      "name": "light-no-webgl",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "no-js",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--no-js",
+        "--expect-selector=h1",
+        "--hidden=canvas,.story-look-switch,.story-control"
+      ]
+    },
+    {
+      "name": "context-loss",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--lose-context",
+        "--expect-scene=off"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/node_modules/next/dist/bin/next",
+      "build"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "36529"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:36529/?look=light",
+      "--out=/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/checks/2026-10-11T19-53-11-524Z/light-no-webgl",
+      "--report=/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/checks/2026-10-11T19-53-11-524Z/light-no-webgl/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--no-webgl",
+      "--expect-scene=off"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:36529/?look=light",
+      "--out=/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/checks/2026-10-11T19-53-11-524Z/no-js",
+      "--report=/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/checks/2026-10-11T19-53-11-524Z/no-js/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--no-js",
+      "--expect-selector=h1",
+      "--hidden=canvas,.story-look-switch,.story-control"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:36529/?look=light",
+      "--out=/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/checks/2026-10-11T19-53-11-524Z/context-loss",
+      "--report=/var/tmp/storyfolio-freeze-runtime-20261011/storyfolio-evals/build-bench-depth-1-55RyeV/checks/2026-10-11T19-53-11-524Z/context-loss/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--size=1440x900",
+      "--lose-context",
+      "--expect-scene=off"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-no-webgl",
+      "code": 0,
+      "signal": null,
+      "report": "light-no-webgl/report.json",
+      "problems": []
+    },
+    {
+      "name": "no-js",
+      "code": 0,
+      "signal": null,
+      "report": "no-js/report.json",
+      "problems": []
+    },
+    {
+      "name": "context-loss",
+      "code": 0,
+      "signal": null,
+      "report": "context-loss/report.json",
+      "problems": []
+    }
+  ],
+  "complete": true,
+  "finished": "2026-10-11T19:54:04.198Z"
+}

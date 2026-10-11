@@ -413,7 +413,7 @@ test("prototype acceptance must bind the independent capture helper as well as t
   await assert.rejects(prepareBuildJudge({ ...testCase, acceptance }), /Acceptance checker differs.*build-capture/);
 });
 
-test("one mocked judge call preserves every result and refuses all retries", async t => {
+test("one mocked judge call preserves commentary, parses only the final message and refuses all retries", async t => {
   const testCase = await fixture(t), prepared = await prepareBuildJudge(testCase);
   let calls = 0;
   const invoke = async options => {
@@ -422,7 +422,7 @@ test("one mocked judge call preserves every result and refuses all retries", asy
     assert.equal(options.sessionId, undefined);
     const value = unobserved();
     value.criteria.spine_scope = { status: "fail", reason: "No spine was built.", evidence: [cite()] };
-    const events = [{ type: "thread.started", thread_id: "fresh-judge" }, { type: "item.completed", item: { type: "agent_message", text: JSON.stringify(value) } }, { type: "turn.completed", usage: { input_tokens: 200, output_tokens: 70 } }];
+    const events = [{ type: "thread.started", thread_id: "fresh-judge" }, { type: "item.completed", item: { type: "agent_message", text: "I will inspect the complete packet." } }, { type: "item.completed", item: { type: "agent_message", text: JSON.stringify(value) } }, { type: "turn.completed", usage: { input_tokens: 200, output_tokens: 70 } }];
     const stdout = events.map(event => JSON.stringify(event)).join("\n") + "\n";
     await writeNew(options.streamPath, stdout); await writeNew(options.stderrPath, "");
     return { stdout, stderr: "", code: 0, durationMs: 123, args: ["fixed"] };
@@ -435,6 +435,10 @@ test("one mocked judge call preserves every result and refuses all retries", asy
   assert.ok(result.artifacts["stream.jsonl"]);
   assert.ok(result.artifacts["prompt.md"]);
   assert.ok(result.artifacts["judgement.json"]);
+  assert.ok(result.artifacts["final-message.txt"]);
+  const final = await readFile(join(testCase.out, "judge/final-message.txt"), "utf8");
+  assert.equal(await readFile(join(testCase.out, "judge/reply.md"), "utf8"), "I will inspect the complete packet.\n\n" + final + "\n");
+  assert.equal(JSON.parse(final).criteria.spine_scope.status, "fail");
   assert.equal(result.artifacts["result.json"], undefined);
   await assert.rejects(runBuildJudge(prepared, { invoke }), { code: "EEXIST" });
   assert.equal(calls, 1);
@@ -453,6 +457,37 @@ test("invalid judge JSON is preserved as a failed attempt without retry", async 
   assert.equal(result.usage.output_tokens, 5);
   assert.ok(result.artifacts["error.json"]);
   assert.equal(result.artifacts["judgement.json"], undefined);
+});
+
+test("a malformed terminal judge message cannot fall back to earlier valid JSON", async t => {
+  const testCase = await fixture(t), prepared = await prepareBuildJudge(testCase);
+  const invoke = async options => {
+    const stdout = [{ type: "thread.started", thread_id: "malformed-terminal" }, { type: "item.completed", item: { type: "agent_message", text: JSON.stringify(unobserved()) } }, { type: "item.completed", item: { type: "agent_message", text: '{"broken":' } }, { type: "turn.completed" }].map(JSON.stringify).join("\n") + "\n";
+    await writeNew(options.streamPath, stdout); await writeNew(options.stderrPath, "");
+    return { stdout, stderr: "", code: 0, durationMs: 5, args: [] };
+  };
+  const result = await runBuildJudge(prepared, { invoke });
+  assert.equal(result.complete, false);
+  assert.match(result.error, /SyntaxError/);
+  assert.equal(await readFile(join(testCase.out, "judge/final-message.txt"), "utf8"), '{"broken":');
+  assert.equal(result.artifacts["judgement.json"], undefined);
+  await assert.rejects(runBuildJudge(prepared, { invoke }), { code: "EEXIST" });
+});
+
+test("process interruption prevents scoring even with completed stream and valid terminal JSON", async t => {
+  for (const flags of [{ timedOut: true }, { interruptedBy: "SIGINT" }, { spawnError: "interrupted spawn" }]) {
+    const testCase = await fixture(t), prepared = await prepareBuildJudge(testCase);
+    const result = await runBuildJudge(prepared, { invoke: async options => {
+      const stdout = [{ type: "thread.started", thread_id: "interrupted" }, { type: "item.completed", item: { type: "agent_message", text: JSON.stringify(unobserved()) } }, { type: "turn.completed" }].map(JSON.stringify).join("\n") + "\n";
+      await writeNew(options.streamPath, stdout); await writeNew(options.stderrPath, "");
+      return { stdout, stderr: "", code: 0, durationMs: 5, args: [], ...flags };
+    } });
+    assert.equal(result.complete, false);
+    assert.match(result.error, /did not complete/);
+    assert.equal(result.artifacts["judgement.json"], undefined);
+    assert.equal(result.artifacts["final-message.txt"], undefined);
+    assert.ok(result.artifacts["reply.md"]);
+  }
 });
 
 test("evidence drift after dry preparation stops before a judge directory or model call", async t => {

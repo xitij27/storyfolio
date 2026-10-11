@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { codexArgs, summariseCodex } from "./codex.mjs";
+import * as codex from "./codex.mjs";
 
 const stream = (...events) => events.map(e => JSON.stringify(e)).join("\n");
 test("Codex preserves replies, commands, thread and usage", () => {
@@ -34,4 +35,40 @@ test("test agents default to Sol and judges to Astra; explicit choices are prese
   assert.equal(model({}), "gpt-6.1-sol");
   assert.equal(model({ judge: true }), "gpt-6-astra");
   assert.equal(model({ model: "gpt-6-astra" }), "gpt-6-astra");
+});
+
+const message = text => ({ type: "item.completed", item: { type: "agent_message", text } });
+const completed = (...items) => stream({ type: "thread.started", thread_id: "one-turn" }, { type: "turn.started" }, ...items, { type: "turn.completed", usage: { input_tokens: 20, output_tokens: 5 } });
+
+test("final Codex message excludes commentary while the historical aggregate stays intact", () => {
+  const final = ' {"answer":"complete"}\n';
+  const stdout = completed(message("I will read the evidence."), { type: "item.completed", item: { type: "mcp_tool_call" } }, message("I am continuing the review."), message(final));
+  assert.equal(codex.finalCodexMessage(stdout), final);
+  assert.equal(summariseCodex(stdout).reply, "I will read the evidence.\n\nI am continuing the review.\n\n" + final);
+});
+
+test("final Codex message never searches earlier messages or strips non-JSON wrappers", () => {
+  for (const final of ['{"broken":', '```json\n{"answer":true}\n```', 'The result is {"answer":true}.']) {
+    const stdout = completed(message('{"earlier":"valid JSON"}'), message(final));
+    assert.equal(codex.finalCodexMessage(stdout), final);
+    assert.throws(() => JSON.parse(codex.finalCodexMessage(stdout)), SyntaxError);
+  }
+});
+
+test("final Codex message rejects absent, failed, interrupted, ambiguous and corrupt turns", () => {
+  const valid = completed(message('{"answer":true}'));
+  for (const [stdout, code] of [
+    ["", 0], [valid, 1], [valid, null],
+    [stream({ type: "thread.started", thread_id: "partial" }, message('{"answer":true}')), 0],
+    [completed(), 0], [completed(message("")), 0], [completed(message("  \n")), 0], [completed(message(null)), 0],
+    [completed(message("Commentary only"), { type: "item.completed", item: { type: "mcp_tool_call" } }), 0],
+    [completed(message('{"answer":true}'), { type: "item.started", item: { type: "agent_message" } }), 0],
+    [completed(message('{"answer":true}'), { type: "turn.failed", error: { message: "failed" } }), 0],
+    [completed(message('{"answer":true}'), { type: "error", message: "interrupted" }), 0],
+    [valid + "\n" + stream(message('{"later":true}')), 0],
+    [valid + "\n" + stream({ type: "turn.started" }), 0],
+    [valid + "\n" + valid, 0],
+    [valid + "\n{truncated", 0], ["not an event\n" + valid, 0], ["null\n" + valid, 0],
+    [valid.replace('{"type":"thread.started","thread_id":"one-turn"}\n', ""), 0],
+  ]) assert.throws(() => codex.finalCodexMessage(stdout, code), Error, stdout);
 });

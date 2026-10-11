@@ -1,0 +1,257 @@
+TAP version 13
+# Subtest: build judgement requires every criterion, valid status and real artifact excerpts
+ok 1 - build judgement requires every criterion, valid status and real artifact excerpts
+  ---
+  duration_ms: 6.254097
+  type: 'test'
+  ...
+# Subtest: unvisited stops and unavailable source verification cannot silently pass or fail
+ok 2 - unvisited stops and unavailable source verification cannot silently pass or fail
+  ---
+  duration_ms: 2.366583
+  type: 'test'
+  ...
+# Subtest: continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+ok 3 - continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+  ---
+  duration_ms: 1.874307
+  type: 'test'
+  ...
+# Subtest: prototype eligibility separates implementation and build-start checks from journey gates
+ok 4 - prototype eligibility separates implementation and build-start checks from journey gates
+  ---
+  duration_ms: 2.422998
+  type: 'test'
+  ...
+# Subtest: judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+ok 5 - judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+  ---
+  duration_ms: 0.639289
+  type: 'test'
+  ...
+# Subtest: judge prompt accepts the exact character boundary and rejects one more ASCII character
+ok 6 - judge prompt accepts the exact character boundary and rejects one more ASCII character
+  ---
+  duration_ms: 2.618351
+  type: 'test'
+  ...
+# Subtest: judge prompt byte boundary remains independent of its character boundary
+ok 7 - judge prompt byte boundary remains independent of its character boundary
+  ---
+  duration_ms: 6.662427
+  type: 'test'
+  ...
+# Subtest: judge prompt character guard cannot be bypassed by a raised byte allowance
+ok 8 - judge prompt character guard cannot be bypassed by a raised byte allowance
+  ---
+  duration_ms: 2.864049
+  type: 'test'
+  ...
+# Subtest: judge prompt explicitly uses conservative UTF-16 units for astral characters
+ok 9 - judge prompt explicitly uses conservative UTF-16 units for astral characters
+  ---
+  duration_ms: 57.049986
+  type: 'test'
+  ...
+# Subtest: saved build judging binds hashes and includes full fixture, commands and changed text only
+ok 10 - saved build judging binds hashes and includes full fixture, commands and changed text only
+  ---
+  duration_ms: 506.927567
+  type: 'test'
+  ...
+# Subtest: fresh continuation packets preserve inherited source and map two attempted stops, including failure
+ok 11 - fresh continuation packets preserve inherited source and map two attempted stops, including failure
+  ---
+  duration_ms: 626.448283
+  type: 'test'
+  ...
+# Subtest: a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+ok 12 - a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+  ---
+  duration_ms: 373.236804
+  type: 'test'
+  ...
+# Subtest: failed actor turns remain judgeable without claiming later stops were visited
+ok 13 - failed actor turns remain judgeable without claiming later stops were visited
+  ---
+  duration_ms: 294.591148
+  type: 'test'
+  ...
+# Subtest: a failed prototype attempt has a complete judgeable packet without claiming any journey gate
+ok 14 - a failed prototype attempt has a complete judgeable packet without claiming any journey gate
+  ---
+  duration_ms: 424.857238
+  type: 'test'
+  ...
+# Subtest: prototype judging rejects frozen task identity drift in run, result and started records
+ok 15 - prototype judging rejects frozen task identity drift in run, result and started records
+  ---
+  duration_ms: 722.941315
+  type: 'test'
+  ...
+# Subtest: prototype judging blocks missing source evidence even when capture failure is disclosed
+ok 16 - prototype judging blocks missing source evidence even when capture failure is disclosed
+  ---
+  duration_ms: 234.273063
+  type: 'test'
+  ...
+# Subtest: current judge implementation drift prevents a call against frozen actor inputs
+ok 17 - current judge implementation drift prevents a call against frozen actor inputs
+  ---
+  duration_ms: 227.505259
+  type: 'test'
+  ...
+# Subtest: acceptance reports stay separate and their frozen implementation and artifacts are verified
+ok 18 - acceptance reports stay separate and their frozen implementation and artifacts are verified
+  ---
+  duration_ms: 376.106225
+  type: 'test'
+  ...
+# Subtest: prototype acceptance must bind the independent capture helper as well as the checker
+ok 19 - prototype acceptance must bind the independent capture helper as well as the checker
+  ---
+  duration_ms: 1098.877823
+  type: 'test'
+  ...
+# Subtest: one mocked judge call preserves commentary, parses only the final message and refuses all retries
+ok 20 - one mocked judge call preserves commentary, parses only the final message and refuses all retries
+  ---
+  duration_ms: 413.465332
+  type: 'test'
+  ...
+# Subtest: invalid judge JSON is preserved as a failed attempt without retry
+ok 21 - invalid judge JSON is preserved as a failed attempt without retry
+  ---
+  duration_ms: 311.985712
+  type: 'test'
+  ...
+# Subtest: a malformed terminal judge message cannot fall back to earlier valid JSON
+ok 22 - a malformed terminal judge message cannot fall back to earlier valid JSON
+  ---
+  duration_ms: 418.700082
+  type: 'test'
+  ...
+# Subtest: process interruption prevents scoring even with completed stream and valid terminal JSON
+ok 23 - process interruption prevents scoring even with completed stream and valid terminal JSON
+  ---
+  duration_ms: 1067.453065
+  type: 'test'
+  ...
+# Subtest: evidence drift after dry preparation stops before a judge directory or model call
+ok 24 - evidence drift after dry preparation stops before a judge directory or model call
+  ---
+  duration_ms: 327.45341
+  type: 'test'
+  ...
+# Subtest: judge invocation uses the shared isolated helper with no model override, shell or resume
+ok 25 - judge invocation uses the shared isolated helper with no model override, shell or resume
+  ---
+  duration_ms: 6.473995
+  type: 'test'
+  ...
+# Subtest: judge deadline forcibly terminates a local process that ignores SIGTERM
+ok 26 - judge deadline forcibly terminates a local process that ignores SIGTERM
+  ---
+  duration_ms: 614.030864
+  type: 'test'
+  ...
+# Subtest: full prompt assembly preserves literal placeholder text without recursively replacing evidence
+ok 27 - full prompt assembly preserves literal placeholder text without recursively replacing evidence
+  ---
+  duration_ms: 0.21494
+  type: 'test'
+  ...
+# Subtest: a frozen paged case preserves a complete prompt too large for inline, including selected stream hashes
+ok 28 - a frozen paged case preserves a complete prompt too large for inline, including selected stream hashes
+  ---
+  duration_ms: 512.863341
+  type: 'test'
+  ...
+# Subtest: paged invocation accepts only full delivery, preserves evidence and never retries
+ok 29 - paged invocation accepts only full delivery, preserves evidence and never retries
+  ---
+  duration_ms: 421.464814
+  type: 'test'
+  ...
+# Subtest: a partial paged delivery cannot become a score even if final JSON is valid
+ok 30 - a partial paged delivery cannot become a score even if final JSON is valid
+  ---
+  duration_ms: 381.134244
+  type: 'test'
+  ...
+# Subtest: complete paged delivery does not weaken original citation validation
+ok 31 - complete paged delivery does not weaken original citation validation
+  ---
+  duration_ms: 394.393293
+  type: 'test'
+  ...
+# Subtest: paged bundle or transport drift is rejected before spending a judge attempt
+ok 32 - paged bundle or transport drift is rejected before spending a judge attempt
+  ---
+  duration_ms: 330.56205
+  type: 'test'
+  ...
+# Subtest: paged CLI configuration enables only the bounded accessor and preserves judge isolation
+ok 33 - paged CLI configuration enables only the bounded accessor and preserves judge isolation
+  ---
+  duration_ms: 3.216594
+  type: 'test'
+  ...
+# Subtest: judge timeout terminates the actual evidence accessor descendant
+ok 34 - judge timeout terminates the actual evidence accessor descendant
+  ---
+  duration_ms: 2014.346187
+  type: 'test'
+  ...
+# Accessor final state: gone; a zombie is terminated and waiting for host reaping.
+# Subtest: Codex preserves replies, commands, thread and usage
+ok 35 - Codex preserves replies, commands, thread and usage
+  ---
+  duration_ms: 1.404674
+  type: 'test'
+  ...
+# Subtest: Codex partial turns, API failures and failing exits never count as complete
+ok 36 - Codex partial turns, API failures and failing exits never count as complete
+  ---
+  duration_ms: 0.234396
+  type: 'test'
+  ...
+# Subtest: Codex resume retains isolation and judge disables shell tools
+ok 37 - Codex resume retains isolation and judge disables shell tools
+  ---
+  duration_ms: 1.270945
+  type: 'test'
+  ...
+# Subtest: test agents default to Sol and judges to Astra; explicit choices are preserved
+ok 38 - test agents default to Sol and judges to Astra; explicit choices are preserved
+  ---
+  duration_ms: 0.192718
+  type: 'test'
+  ...
+# Subtest: final Codex message excludes commentary while the historical aggregate stays intact
+ok 39 - final Codex message excludes commentary while the historical aggregate stays intact
+  ---
+  duration_ms: 0.415473
+  type: 'test'
+  ...
+# Subtest: final Codex message never searches earlier messages or strips non-JSON wrappers
+ok 40 - final Codex message never searches earlier messages or strips non-JSON wrappers
+  ---
+  duration_ms: 0.53218
+  type: 'test'
+  ...
+# Subtest: final Codex message rejects absent, failed, interrupted, ambiguous and corrupt turns
+ok 41 - final Codex message rejects absent, failed, interrupted, ambiguous and corrupt turns
+  ---
+  duration_ms: 0.56425
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12356.917136

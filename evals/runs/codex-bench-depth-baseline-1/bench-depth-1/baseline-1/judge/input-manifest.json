@@ -1,0 +1,2329 @@
+{
+  "schemaVersion": 1,
+  "run": {
+    "cohort": "codex-bench-depth-baseline-1",
+    "caseId": "bench-depth-1",
+    "rep": 1,
+    "inputsRelative": "evals/runs/codex-bench-depth-baseline-1/inputs"
+  },
+  "inputDigest": "57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e",
+  "promptSha256": "a85e5d30700b626a548fef7f0d7dd7d6951d375c2cd352e3df7894761228a5ae",
+  "promptBytes": 1419,
+  "artifacts": {
+    "run/meta.json": {
+      "sha256": "5830765c2a63ec54075c30fb93ded1e65d476f0931847f8202a697a5b31eb88c",
+      "bytes": 706
+    },
+    "run/setup/pre-scaffold-inventory.json": {
+      "sha256": "ba33c1c5bdff9d69d15ba38ab44d22704ec4b31114322095af68c16d7db8d5df",
+      "bytes": 6132
+    },
+    "inputs/capabilities.json": {
+      "sha256": "3b41c5b94fbd46487a8d936a4326701067cdfd5971287dde0b457b004bd33241",
+      "bytes": 5482
+    },
+    "inputs/expectations.json": {
+      "sha256": "5d0750ccd9c017bd09b1c019e019ed2da8a48f50fe17d0d791a64cf3d8cbdddd",
+      "bytes": 4095
+    },
+    "inputs/protocol.md": {
+      "sha256": "2c5190035086114c767fcb748867be70c670dec88d440ec1f21c7e2761b283f8",
+      "bytes": 8464
+    },
+    "inputs/fixture/docs/story/assets.md": {
+      "sha256": "0f0ae7207472660c54b1505d11b095bd19d525e472293774d680876ab459f67e",
+      "bytes": 1893
+    },
+    "inputs/fixture/docs/story/confirmations.md": {
+      "sha256": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d",
+      "bytes": 2860
+    },
+    "inputs/fixture/docs/story/facts.md": {
+      "sha256": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e",
+      "bytes": 3558
+    },
+    "inputs/fixture/docs/story/handover.md": {
+      "sha256": "bac4e8424e3f48de06020ccc7a5d638547f03c2831ff3bec146eb1f7c3a10c86",
+      "bytes": 1640
+    },
+    "inputs/fixture/docs/story/storyboard.md": {
+      "sha256": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6",
+      "bytes": 3766
+    },
+    "inputs/fixture/public/assets/bring-up-fixture.svg": {
+      "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+      "bytes": 1822
+    },
+    "inputs/fixture/public/assets/power-states.svg": {
+      "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+      "bytes": 1657
+    },
+    "run/setup/snapshot/manifest.json": {
+      "sha256": "7848a1614156325f9d6f6dbe435f8ca5e0752751baf08a77091febe9557f702f",
+      "bytes": 77263
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/.gitignore": {
+      "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "bytes": 69
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/AGENTS.md": {
+      "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "bytes": 1055
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/app/globals.css": {
+      "sha256": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "bytes": 263
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/app/layout.tsx": {
+      "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "bytes": 299
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/app/page.tsx": {
+      "sha256": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+      "bytes": 1271
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+      "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "bytes": 446
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/CLAUDE.md": {
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "bytes": 11
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+      "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "bytes": 1504
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+      "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "bytes": 1479
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": {
+      "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "bytes": 882
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+      "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "bytes": 1420
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": {
+      "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "bytes": 1714
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/faces.ts": {
+      "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "bytes": 3025
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+      "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "bytes": 1624
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+      "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "bytes": 504
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+      "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "bytes": 515
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": {
+      "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "bytes": 731
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+      "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "bytes": 711
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+      "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "bytes": 7753
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": {
+      "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "bytes": 452
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": {
+      "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "bytes": 4623
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": {
+      "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "bytes": 1230
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/story.css": {
+      "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "bytes": 5859
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/story.tsx": {
+      "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "bytes": 5735
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/types.ts": {
+      "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "bytes": 1324
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": {
+      "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "bytes": 897
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+      "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "bytes": 432
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+      "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "bytes": 591
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+      "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "bytes": 2192
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.ts": {
+      "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "bytes": 1972
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+      "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "bytes": 476
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/checks.json": {
+      "sha256": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+      "bytes": 130
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/copy.ts": {
+      "sha256": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+      "bytes": 1468
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/experience.tsx": {
+      "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "bytes": 260
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+      "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "bytes": 613
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/extras.ts": {
+      "sha256": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "bytes": 91
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/faces.ts": {
+      "sha256": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+      "bytes": 883
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/formations.ts": {
+      "sha256": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+      "bytes": 942
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/index.ts": {
+      "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "bytes": 427
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/links.ts": {
+      "sha256": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+      "bytes": 130
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/looks.ts": {
+      "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "bytes": 645
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": {
+      "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "bytes": 238
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/content/story.ts": {
+      "sha256": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+      "bytes": 518
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/eslint.config.mjs": {
+      "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "bytes": 309
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+      "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "bytes": 6594
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": {
+      "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "bytes": 5201
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+      "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "bytes": 1608
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": {
+      "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "bytes": 1054
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+      "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "bytes": 5294
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": {
+      "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "bytes": 5414
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+      "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "bytes": 2728
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+      "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "bytes": 4733
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+      "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "bytes": 1238
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": {
+      "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "bytes": 1262
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+      "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "bytes": 1844
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+      "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "bytes": 3252
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+      "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "bytes": 1838
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": {
+      "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "bytes": 1762
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+      "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "bytes": 567
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": {
+      "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "bytes": 384
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+      "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "bytes": 4065
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.ts": {
+      "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "bytes": 4796
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+      "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "bytes": 7998
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+      "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "bytes": 5697
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+      "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "bytes": 4495
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+      "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "bytes": 3329
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/LICENSE": {
+      "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "bytes": 1080
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/next.config.ts": {
+      "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "bytes": 94
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/package-lock.json": {
+      "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "bytes": 233717
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/package.json": {
+      "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "bytes": 1015
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/public/plain/face.svg": {
+      "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "bytes": 309
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": {
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "bytes": 775
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/README.md": {
+      "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+      "bytes": 6746
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+      "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "bytes": 4516
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+      "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "bytes": 4110
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/check.mjs": {
+      "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "bytes": 6374
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+      "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "bytes": 25709
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/engine/tsconfig.json": {
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "bytes": 706
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/references/asking.md": {
+      "sha256": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+      "bytes": 1486
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/references/concept.md": {
+      "sha256": "ba0780577d3157824d81c36b40374141d52df5e88ef67deee175792f4793dab1",
+      "bytes": 7863
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/references/reading-a-profile.md": {
+      "sha256": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca",
+      "bytes": 5537
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/references/storyboard.md": {
+      "sha256": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6",
+      "bytes": 4016
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/scripts/scaffold.mjs": {
+      "sha256": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+      "bytes": 3566
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+      "sha256": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+      "bytes": 4044
+    },
+    "run/setup/snapshot/files/.agents/skills/storyfolio/SKILL.md": {
+      "sha256": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+      "bytes": 4087
+    },
+    "run/setup/snapshot/files/.gitignore": {
+      "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "bytes": 69
+    },
+    "run/setup/snapshot/files/AGENTS.md": {
+      "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "bytes": 1055
+    },
+    "run/setup/snapshot/files/app/globals.css": {
+      "sha256": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "bytes": 263
+    },
+    "run/setup/snapshot/files/app/layout.tsx": {
+      "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "bytes": 299
+    },
+    "run/setup/snapshot/files/app/page.tsx": {
+      "sha256": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+      "bytes": 1271
+    },
+    "run/setup/snapshot/files/app/sketch/[id]/page.tsx": {
+      "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "bytes": 446
+    },
+    "run/setup/snapshot/files/CLAUDE.md": {
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "bytes": 11
+    },
+    "run/setup/snapshot/files/components/story/chapter.tsx": {
+      "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "bytes": 1504
+    },
+    "run/setup/snapshot/files/components/story/conductor.tsx": {
+      "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "bytes": 1479
+    },
+    "run/setup/snapshot/files/components/story/controls.tsx": {
+      "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "bytes": 882
+    },
+    "run/setup/snapshot/files/components/story/extra-frame.tsx": {
+      "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "bytes": 1420
+    },
+    "run/setup/snapshot/files/components/story/face-material.ts": {
+      "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "bytes": 1714
+    },
+    "run/setup/snapshot/files/components/story/faces.ts": {
+      "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "bytes": 3025
+    },
+    "run/setup/snapshot/files/components/story/guard-extra-callback.test.ts": {
+      "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "bytes": 1624
+    },
+    "run/setup/snapshot/files/components/story/guard-extra-callback.ts": {
+      "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "bytes": 504
+    },
+    "run/setup/snapshot/files/components/story/look-switch.tsx": {
+      "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "bytes": 515
+    },
+    "run/setup/snapshot/files/components/story/meter.tsx": {
+      "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "bytes": 731
+    },
+    "run/setup/snapshot/files/components/story/overlay.tsx": {
+      "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "bytes": 711
+    },
+    "run/setup/snapshot/files/components/story/pieces.tsx": {
+      "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "bytes": 7753
+    },
+    "run/setup/snapshot/files/components/story/rail.tsx": {
+      "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "bytes": 452
+    },
+    "run/setup/snapshot/files/components/story/scene.tsx": {
+      "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "bytes": 4623
+    },
+    "run/setup/snapshot/files/components/story/stage.tsx": {
+      "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "bytes": 1230
+    },
+    "run/setup/snapshot/files/components/story/story.css": {
+      "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "bytes": 5859
+    },
+    "run/setup/snapshot/files/components/story/story.tsx": {
+      "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "bytes": 5735
+    },
+    "run/setup/snapshot/files/components/story/types.ts": {
+      "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "bytes": 1324
+    },
+    "run/setup/snapshot/files/components/story/use-look.ts": {
+      "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "bytes": 897
+    },
+    "run/setup/snapshot/files/components/story/use-reduced-motion.ts": {
+      "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "bytes": 432
+    },
+    "run/setup/snapshot/files/components/story/use-webgl-supported.ts": {
+      "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "bytes": 591
+    },
+    "run/setup/snapshot/files/components/story/validate.test.ts": {
+      "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "bytes": 2192
+    },
+    "run/setup/snapshot/files/components/story/validate.ts": {
+      "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "bytes": 1972
+    },
+    "run/setup/snapshot/files/components/story/webgl-boundary.tsx": {
+      "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "bytes": 476
+    },
+    "run/setup/snapshot/files/content/checks.json": {
+      "sha256": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+      "bytes": 130
+    },
+    "run/setup/snapshot/files/content/copy.ts": {
+      "sha256": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+      "bytes": 1468
+    },
+    "run/setup/snapshot/files/content/experience.tsx": {
+      "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "bytes": 260
+    },
+    "run/setup/snapshot/files/content/extras/middle-line.tsx": {
+      "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "bytes": 613
+    },
+    "run/setup/snapshot/files/content/extras.ts": {
+      "sha256": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "bytes": 91
+    },
+    "run/setup/snapshot/files/content/faces.ts": {
+      "sha256": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+      "bytes": 883
+    },
+    "run/setup/snapshot/files/content/formations.ts": {
+      "sha256": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+      "bytes": 942
+    },
+    "run/setup/snapshot/files/content/index.ts": {
+      "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "bytes": 427
+    },
+    "run/setup/snapshot/files/content/links.ts": {
+      "sha256": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+      "bytes": 130
+    },
+    "run/setup/snapshot/files/content/looks.ts": {
+      "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "bytes": 645
+    },
+    "run/setup/snapshot/files/content/sketches/index.ts": {
+      "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "bytes": 238
+    },
+    "run/setup/snapshot/files/content/story.ts": {
+      "sha256": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+      "bytes": 518
+    },
+    "run/setup/snapshot/files/docs/story/assets.md": {
+      "sha256": "0f0ae7207472660c54b1505d11b095bd19d525e472293774d680876ab459f67e",
+      "bytes": 1893
+    },
+    "run/setup/snapshot/files/docs/story/confirmations.md": {
+      "sha256": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d",
+      "bytes": 2860
+    },
+    "run/setup/snapshot/files/docs/story/facts.md": {
+      "sha256": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e",
+      "bytes": 3558
+    },
+    "run/setup/snapshot/files/docs/story/handover.md": {
+      "sha256": "bac4e8424e3f48de06020ccc7a5d638547f03c2831ff3bec146eb1f7c3a10c86",
+      "bytes": 1640
+    },
+    "run/setup/snapshot/files/docs/story/storyboard.md": {
+      "sha256": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6",
+      "bytes": 3766
+    },
+    "run/setup/snapshot/files/eslint.config.mjs": {
+      "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "bytes": 309
+    },
+    "run/setup/snapshot/files/lib/story/camera.test.ts": {
+      "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "bytes": 6594
+    },
+    "run/setup/snapshot/files/lib/story/camera.ts": {
+      "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "bytes": 5201
+    },
+    "run/setup/snapshot/files/lib/story/controls.test.ts": {
+      "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "bytes": 1608
+    },
+    "run/setup/snapshot/files/lib/story/controls.ts": {
+      "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "bytes": 1054
+    },
+    "run/setup/snapshot/files/lib/story/formation.test.ts": {
+      "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "bytes": 5294
+    },
+    "run/setup/snapshot/files/lib/story/formation.ts": {
+      "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "bytes": 5414
+    },
+    "run/setup/snapshot/files/lib/story/layouts.test.ts": {
+      "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "bytes": 2728
+    },
+    "run/setup/snapshot/files/lib/story/layouts.ts": {
+      "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "bytes": 4733
+    },
+    "run/setup/snapshot/files/lib/story/looks.test.ts": {
+      "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "bytes": 1238
+    },
+    "run/setup/snapshot/files/lib/story/looks.ts": {
+      "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "bytes": 1262
+    },
+    "run/setup/snapshot/files/lib/story/overlay.test.ts": {
+      "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "bytes": 1844
+    },
+    "run/setup/snapshot/files/lib/story/overlay.ts": {
+      "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "bytes": 3252
+    },
+    "run/setup/snapshot/files/lib/story/quality.test.ts": {
+      "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "bytes": 1838
+    },
+    "run/setup/snapshot/files/lib/story/quality.ts": {
+      "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "bytes": 1762
+    },
+    "run/setup/snapshot/files/lib/story/rand.test.ts": {
+      "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "bytes": 567
+    },
+    "run/setup/snapshot/files/lib/story/rand.ts": {
+      "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "bytes": 384
+    },
+    "run/setup/snapshot/files/lib/story/story.test.ts": {
+      "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "bytes": 4065
+    },
+    "run/setup/snapshot/files/lib/story/story.ts": {
+      "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "bytes": 4796
+    },
+    "run/setup/snapshot/files/lib/story/timeline.test.ts": {
+      "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "bytes": 7998
+    },
+    "run/setup/snapshot/files/lib/story/timeline.ts": {
+      "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "bytes": 5697
+    },
+    "run/setup/snapshot/files/lib/story/typeset.test.ts": {
+      "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "bytes": 4495
+    },
+    "run/setup/snapshot/files/lib/story/typeset.ts": {
+      "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "bytes": 3329
+    },
+    "run/setup/snapshot/files/LICENSE": {
+      "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "bytes": 1080
+    },
+    "run/setup/snapshot/files/next.config.ts": {
+      "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "bytes": 94
+    },
+    "run/setup/snapshot/files/package-lock.json": {
+      "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "bytes": 233717
+    },
+    "run/setup/snapshot/files/package.json": {
+      "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "bytes": 1015
+    },
+    "run/setup/snapshot/files/postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    "run/setup/snapshot/files/public/assets/bring-up-fixture.svg": {
+      "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+      "bytes": 1822
+    },
+    "run/setup/snapshot/files/public/assets/power-states.svg": {
+      "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+      "bytes": 1657
+    },
+    "run/setup/snapshot/files/public/plain/face.svg": {
+      "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "bytes": 309
+    },
+    "run/setup/snapshot/files/public/plain/fan.svg": {
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "bytes": 775
+    },
+    "run/setup/snapshot/files/README.md": {
+      "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+      "bytes": 6746
+    },
+    "run/setup/snapshot/files/scripts/check-lib.mjs": {
+      "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "bytes": 4516
+    },
+    "run/setup/snapshot/files/scripts/check-lib.test.mjs": {
+      "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "bytes": 4110
+    },
+    "run/setup/snapshot/files/scripts/check.mjs": {
+      "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "bytes": 6374
+    },
+    "run/setup/snapshot/files/scripts/shoot.mjs": {
+      "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "bytes": 25709
+    },
+    "run/setup/snapshot/files/tsconfig.json": {
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "bytes": 706
+    },
+    "run/turns/01/prompt.md": {
+      "sha256": "418a8db1ae8b3c5a5ce2a4bafc3e96dd5b799670a6b0f18c9022cd2aeaab08ab",
+      "bytes": 799
+    },
+    "run/turns/01/process.json": {
+      "sha256": "19c6e4a3b9700863e63c1fa35ae5108444fe0cc62c8a474d53d3577fd261b3fd",
+      "bytes": 2297
+    },
+    "run/turns/01/reply.md": {
+      "sha256": "1af6d54e71f2bce1dd67f20b5c8a66f4a6187e72a4ef0ca9655a0a978f2efc50",
+      "bytes": 2791
+    },
+    "run/turns/01/stream.jsonl": {
+      "sha256": "233a97910bc8e51a1d8d765676f33faf75f3012f89984c03e7cf1e0bfab527c4",
+      "bytes": 306735
+    },
+    "run/turns/01/stderr.log": {
+      "sha256": "00dcb1a789ead6a5700c5cd5c2d6c57dc8c9dae7839a5461ebbbdfbdf42fc352",
+      "bytes": 890
+    },
+    "run/turns/01/result.json": {
+      "sha256": "9601dc01f4c3b9b2e152c31a5c3aeddf8a47a60c865285fe98238b2961be28cd",
+      "bytes": 352504
+    },
+    "run/turns/01/started.json": {
+      "sha256": "1ea0c0b503202d4c520be561e460af404360e1bcdf9a8c189f98e7e7ca577817",
+      "bytes": 342
+    },
+    "run/turns/01/before/manifest.json": {
+      "sha256": "11240ed50a32d01d630f6ea8f55da047abc7aef9fbd8b9ccd19d3598455702eb",
+      "bytes": 78146
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/.gitignore": {
+      "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "bytes": 69
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/AGENTS.md": {
+      "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "bytes": 1055
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/app/globals.css": {
+      "sha256": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "bytes": 263
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/app/layout.tsx": {
+      "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "bytes": 299
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/app/page.tsx": {
+      "sha256": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+      "bytes": 1271
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+      "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "bytes": 446
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/CLAUDE.md": {
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "bytes": 11
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+      "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "bytes": 1504
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+      "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "bytes": 1479
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": {
+      "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "bytes": 882
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+      "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "bytes": 1420
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": {
+      "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "bytes": 1714
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/faces.ts": {
+      "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "bytes": 3025
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+      "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "bytes": 1624
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+      "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "bytes": 504
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+      "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "bytes": 515
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": {
+      "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "bytes": 731
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+      "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "bytes": 711
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+      "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "bytes": 7753
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": {
+      "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "bytes": 452
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": {
+      "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "bytes": 4623
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": {
+      "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "bytes": 1230
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/story.css": {
+      "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "bytes": 5859
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/story.tsx": {
+      "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "bytes": 5735
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/types.ts": {
+      "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "bytes": 1324
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": {
+      "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "bytes": 897
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+      "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "bytes": 432
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+      "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "bytes": 591
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+      "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "bytes": 2192
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/validate.ts": {
+      "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "bytes": 1972
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+      "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "bytes": 476
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/checks.json": {
+      "sha256": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+      "bytes": 130
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/copy.ts": {
+      "sha256": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+      "bytes": 1468
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/experience.tsx": {
+      "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "bytes": 260
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+      "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "bytes": 613
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/extras.ts": {
+      "sha256": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "bytes": 91
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/faces.ts": {
+      "sha256": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+      "bytes": 883
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/formations.ts": {
+      "sha256": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+      "bytes": 942
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/index.ts": {
+      "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "bytes": 427
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/links.ts": {
+      "sha256": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+      "bytes": 130
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/looks.ts": {
+      "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "bytes": 645
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": {
+      "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "bytes": 238
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/content/story.ts": {
+      "sha256": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+      "bytes": 518
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/eslint.config.mjs": {
+      "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "bytes": 309
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+      "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "bytes": 6594
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": {
+      "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "bytes": 5201
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+      "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "bytes": 1608
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": {
+      "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "bytes": 1054
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+      "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "bytes": 5294
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": {
+      "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "bytes": 5414
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+      "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "bytes": 2728
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+      "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "bytes": 4733
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+      "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "bytes": 1238
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": {
+      "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "bytes": 1262
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+      "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "bytes": 1844
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+      "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "bytes": 3252
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+      "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "bytes": 1838
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": {
+      "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "bytes": 1762
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+      "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "bytes": 567
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": {
+      "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "bytes": 384
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+      "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "bytes": 4065
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/story.ts": {
+      "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "bytes": 4796
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+      "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "bytes": 7998
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+      "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "bytes": 5697
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+      "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "bytes": 4495
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+      "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "bytes": 3329
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/LICENSE": {
+      "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "bytes": 1080
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/next.config.ts": {
+      "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "bytes": 94
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/package-lock.json": {
+      "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "bytes": 233717
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/package.json": {
+      "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "bytes": 1015
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/public/plain/face.svg": {
+      "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "bytes": 309
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": {
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "bytes": 775
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/README.md": {
+      "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+      "bytes": 6746
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+      "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "bytes": 4516
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+      "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "bytes": 4110
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/scripts/check.mjs": {
+      "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "bytes": 6374
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+      "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "bytes": 25709
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/engine/tsconfig.json": {
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "bytes": 706
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/references/asking.md": {
+      "sha256": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+      "bytes": 1486
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/references/concept.md": {
+      "sha256": "ba0780577d3157824d81c36b40374141d52df5e88ef67deee175792f4793dab1",
+      "bytes": 7863
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/references/reading-a-profile.md": {
+      "sha256": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca",
+      "bytes": 5537
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/references/storyboard.md": {
+      "sha256": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6",
+      "bytes": 4016
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/scripts/scaffold.mjs": {
+      "sha256": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+      "bytes": 3566
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+      "sha256": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+      "bytes": 4044
+    },
+    "run/turns/01/before/files/.agents/skills/storyfolio/SKILL.md": {
+      "sha256": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+      "bytes": 4087
+    },
+    "run/turns/01/before/files/.gitignore": {
+      "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "bytes": 69
+    },
+    "run/turns/01/before/files/AGENTS.md": {
+      "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "bytes": 1055
+    },
+    "run/turns/01/before/files/app/globals.css": {
+      "sha256": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "bytes": 263
+    },
+    "run/turns/01/before/files/app/layout.tsx": {
+      "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "bytes": 299
+    },
+    "run/turns/01/before/files/app/page.tsx": {
+      "sha256": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+      "bytes": 1271
+    },
+    "run/turns/01/before/files/app/sketch/[id]/page.tsx": {
+      "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "bytes": 446
+    },
+    "run/turns/01/before/files/CLAUDE.md": {
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "bytes": 11
+    },
+    "run/turns/01/before/files/components/story/chapter.tsx": {
+      "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "bytes": 1504
+    },
+    "run/turns/01/before/files/components/story/conductor.tsx": {
+      "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "bytes": 1479
+    },
+    "run/turns/01/before/files/components/story/controls.tsx": {
+      "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "bytes": 882
+    },
+    "run/turns/01/before/files/components/story/extra-frame.tsx": {
+      "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "bytes": 1420
+    },
+    "run/turns/01/before/files/components/story/face-material.ts": {
+      "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "bytes": 1714
+    },
+    "run/turns/01/before/files/components/story/faces.ts": {
+      "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "bytes": 3025
+    },
+    "run/turns/01/before/files/components/story/guard-extra-callback.test.ts": {
+      "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "bytes": 1624
+    },
+    "run/turns/01/before/files/components/story/guard-extra-callback.ts": {
+      "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "bytes": 504
+    },
+    "run/turns/01/before/files/components/story/look-switch.tsx": {
+      "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "bytes": 515
+    },
+    "run/turns/01/before/files/components/story/meter.tsx": {
+      "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "bytes": 731
+    },
+    "run/turns/01/before/files/components/story/overlay.tsx": {
+      "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "bytes": 711
+    },
+    "run/turns/01/before/files/components/story/pieces.tsx": {
+      "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "bytes": 7753
+    },
+    "run/turns/01/before/files/components/story/rail.tsx": {
+      "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "bytes": 452
+    },
+    "run/turns/01/before/files/components/story/scene.tsx": {
+      "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "bytes": 4623
+    },
+    "run/turns/01/before/files/components/story/stage.tsx": {
+      "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "bytes": 1230
+    },
+    "run/turns/01/before/files/components/story/story.css": {
+      "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "bytes": 5859
+    },
+    "run/turns/01/before/files/components/story/story.tsx": {
+      "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "bytes": 5735
+    },
+    "run/turns/01/before/files/components/story/types.ts": {
+      "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "bytes": 1324
+    },
+    "run/turns/01/before/files/components/story/use-look.ts": {
+      "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "bytes": 897
+    },
+    "run/turns/01/before/files/components/story/use-reduced-motion.ts": {
+      "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "bytes": 432
+    },
+    "run/turns/01/before/files/components/story/use-webgl-supported.ts": {
+      "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "bytes": 591
+    },
+    "run/turns/01/before/files/components/story/validate.test.ts": {
+      "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "bytes": 2192
+    },
+    "run/turns/01/before/files/components/story/validate.ts": {
+      "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "bytes": 1972
+    },
+    "run/turns/01/before/files/components/story/webgl-boundary.tsx": {
+      "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "bytes": 476
+    },
+    "run/turns/01/before/files/content/checks.json": {
+      "sha256": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+      "bytes": 130
+    },
+    "run/turns/01/before/files/content/copy.ts": {
+      "sha256": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+      "bytes": 1468
+    },
+    "run/turns/01/before/files/content/experience.tsx": {
+      "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "bytes": 260
+    },
+    "run/turns/01/before/files/content/extras/middle-line.tsx": {
+      "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "bytes": 613
+    },
+    "run/turns/01/before/files/content/extras.ts": {
+      "sha256": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "bytes": 91
+    },
+    "run/turns/01/before/files/content/faces.ts": {
+      "sha256": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+      "bytes": 883
+    },
+    "run/turns/01/before/files/content/formations.ts": {
+      "sha256": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+      "bytes": 942
+    },
+    "run/turns/01/before/files/content/index.ts": {
+      "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "bytes": 427
+    },
+    "run/turns/01/before/files/content/links.ts": {
+      "sha256": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+      "bytes": 130
+    },
+    "run/turns/01/before/files/content/looks.ts": {
+      "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "bytes": 645
+    },
+    "run/turns/01/before/files/content/sketches/index.ts": {
+      "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "bytes": 238
+    },
+    "run/turns/01/before/files/content/story.ts": {
+      "sha256": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+      "bytes": 518
+    },
+    "run/turns/01/before/files/docs/story/assets.md": {
+      "sha256": "0f0ae7207472660c54b1505d11b095bd19d525e472293774d680876ab459f67e",
+      "bytes": 1893
+    },
+    "run/turns/01/before/files/docs/story/confirmations.md": {
+      "sha256": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d",
+      "bytes": 2860
+    },
+    "run/turns/01/before/files/docs/story/environment-setup.json": {
+      "sha256": "20d17e6cafebc188765b60d6f3400ec957efde2a63d5ba10e9b0a730a0097ad4",
+      "bytes": 1148
+    },
+    "run/turns/01/before/files/docs/story/facts.md": {
+      "sha256": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e",
+      "bytes": 3558
+    },
+    "run/turns/01/before/files/docs/story/handover.md": {
+      "sha256": "bac4e8424e3f48de06020ccc7a5d638547f03c2831ff3bec146eb1f7c3a10c86",
+      "bytes": 1640
+    },
+    "run/turns/01/before/files/docs/story/storyboard.md": {
+      "sha256": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6",
+      "bytes": 3766
+    },
+    "run/turns/01/before/files/eslint.config.mjs": {
+      "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "bytes": 309
+    },
+    "run/turns/01/before/files/lib/story/camera.test.ts": {
+      "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "bytes": 6594
+    },
+    "run/turns/01/before/files/lib/story/camera.ts": {
+      "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "bytes": 5201
+    },
+    "run/turns/01/before/files/lib/story/controls.test.ts": {
+      "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "bytes": 1608
+    },
+    "run/turns/01/before/files/lib/story/controls.ts": {
+      "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "bytes": 1054
+    },
+    "run/turns/01/before/files/lib/story/formation.test.ts": {
+      "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "bytes": 5294
+    },
+    "run/turns/01/before/files/lib/story/formation.ts": {
+      "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "bytes": 5414
+    },
+    "run/turns/01/before/files/lib/story/layouts.test.ts": {
+      "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "bytes": 2728
+    },
+    "run/turns/01/before/files/lib/story/layouts.ts": {
+      "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "bytes": 4733
+    },
+    "run/turns/01/before/files/lib/story/looks.test.ts": {
+      "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "bytes": 1238
+    },
+    "run/turns/01/before/files/lib/story/looks.ts": {
+      "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "bytes": 1262
+    },
+    "run/turns/01/before/files/lib/story/overlay.test.ts": {
+      "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "bytes": 1844
+    },
+    "run/turns/01/before/files/lib/story/overlay.ts": {
+      "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "bytes": 3252
+    },
+    "run/turns/01/before/files/lib/story/quality.test.ts": {
+      "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "bytes": 1838
+    },
+    "run/turns/01/before/files/lib/story/quality.ts": {
+      "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "bytes": 1762
+    },
+    "run/turns/01/before/files/lib/story/rand.test.ts": {
+      "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "bytes": 567
+    },
+    "run/turns/01/before/files/lib/story/rand.ts": {
+      "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "bytes": 384
+    },
+    "run/turns/01/before/files/lib/story/story.test.ts": {
+      "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "bytes": 4065
+    },
+    "run/turns/01/before/files/lib/story/story.ts": {
+      "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "bytes": 4796
+    },
+    "run/turns/01/before/files/lib/story/timeline.test.ts": {
+      "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "bytes": 7998
+    },
+    "run/turns/01/before/files/lib/story/timeline.ts": {
+      "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "bytes": 5697
+    },
+    "run/turns/01/before/files/lib/story/typeset.test.ts": {
+      "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "bytes": 4495
+    },
+    "run/turns/01/before/files/lib/story/typeset.ts": {
+      "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "bytes": 3329
+    },
+    "run/turns/01/before/files/LICENSE": {
+      "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "bytes": 1080
+    },
+    "run/turns/01/before/files/next-env.d.ts": {
+      "sha256": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b",
+      "bytes": 288
+    },
+    "run/turns/01/before/files/next.config.ts": {
+      "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "bytes": 94
+    },
+    "run/turns/01/before/files/package-lock.json": {
+      "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "bytes": 233717
+    },
+    "run/turns/01/before/files/package.json": {
+      "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "bytes": 1015
+    },
+    "run/turns/01/before/files/postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    "run/turns/01/before/files/public/assets/bring-up-fixture.svg": {
+      "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+      "bytes": 1822
+    },
+    "run/turns/01/before/files/public/assets/power-states.svg": {
+      "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+      "bytes": 1657
+    },
+    "run/turns/01/before/files/public/plain/face.svg": {
+      "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "bytes": 309
+    },
+    "run/turns/01/before/files/public/plain/fan.svg": {
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "bytes": 775
+    },
+    "run/turns/01/before/files/README.md": {
+      "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+      "bytes": 6746
+    },
+    "run/turns/01/before/files/scripts/check-lib.mjs": {
+      "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "bytes": 4516
+    },
+    "run/turns/01/before/files/scripts/check-lib.test.mjs": {
+      "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "bytes": 4110
+    },
+    "run/turns/01/before/files/scripts/check.mjs": {
+      "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "bytes": 6374
+    },
+    "run/turns/01/before/files/scripts/shoot.mjs": {
+      "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "bytes": 25709
+    },
+    "run/turns/01/before/files/tsconfig.json": {
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "bytes": 706
+    },
+    "run/turns/01/snapshot/manifest.json": {
+      "sha256": "b4a5e0a0c2c391efc4aadab5a3d21f95f83975cd61fb7a4673147f5c01ebe3d5",
+      "bytes": 50133
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/.gitignore": {
+      "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "bytes": 69
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/AGENTS.md": {
+      "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "bytes": 1055
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/app/globals.css": {
+      "sha256": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "bytes": 263
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/app/layout.tsx": {
+      "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "bytes": 299
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/app/page.tsx": {
+      "sha256": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+      "bytes": 1271
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+      "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "bytes": 446
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/CLAUDE.md": {
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "bytes": 11
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+      "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "bytes": 1504
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+      "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "bytes": 1479
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": {
+      "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "bytes": 882
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+      "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "bytes": 1420
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": {
+      "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "bytes": 1714
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/faces.ts": {
+      "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "bytes": 3025
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+      "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "bytes": 1624
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+      "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "bytes": 504
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+      "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "bytes": 515
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": {
+      "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "bytes": 731
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+      "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "bytes": 711
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+      "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "bytes": 7753
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": {
+      "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "bytes": 452
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": {
+      "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "bytes": 4623
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": {
+      "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "bytes": 1230
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/story.css": {
+      "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "bytes": 5859
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/story.tsx": {
+      "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "bytes": 5735
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/types.ts": {
+      "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "bytes": 1324
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": {
+      "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "bytes": 897
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+      "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "bytes": 432
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+      "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "bytes": 591
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+      "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "bytes": 2192
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.ts": {
+      "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "bytes": 1972
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+      "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "bytes": 476
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/checks.json": {
+      "sha256": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+      "bytes": 130
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/copy.ts": {
+      "sha256": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+      "bytes": 1468
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/experience.tsx": {
+      "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "bytes": 260
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+      "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "bytes": 613
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/extras.ts": {
+      "sha256": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "bytes": 91
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/faces.ts": {
+      "sha256": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+      "bytes": 883
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/formations.ts": {
+      "sha256": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+      "bytes": 942
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/index.ts": {
+      "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "bytes": 427
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/links.ts": {
+      "sha256": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+      "bytes": 130
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/looks.ts": {
+      "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "bytes": 645
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": {
+      "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "bytes": 238
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/content/story.ts": {
+      "sha256": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+      "bytes": 518
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/eslint.config.mjs": {
+      "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "bytes": 309
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+      "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "bytes": 6594
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": {
+      "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "bytes": 5201
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+      "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "bytes": 1608
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": {
+      "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "bytes": 1054
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+      "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "bytes": 5294
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": {
+      "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "bytes": 5414
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+      "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "bytes": 2728
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+      "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "bytes": 4733
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+      "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "bytes": 1238
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": {
+      "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "bytes": 1262
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+      "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "bytes": 1844
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+      "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "bytes": 3252
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+      "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "bytes": 1838
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": {
+      "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "bytes": 1762
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+      "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "bytes": 567
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": {
+      "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "bytes": 384
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+      "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "bytes": 4065
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.ts": {
+      "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "bytes": 4796
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+      "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "bytes": 7998
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+      "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "bytes": 5697
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+      "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "bytes": 4495
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+      "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "bytes": 3329
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/LICENSE": {
+      "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "bytes": 1080
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/next.config.ts": {
+      "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "bytes": 94
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/package-lock.json": {
+      "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "bytes": 233717
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/package.json": {
+      "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "bytes": 1015
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/public/plain/face.svg": {
+      "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "bytes": 309
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": {
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "bytes": 775
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/README.md": {
+      "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+      "bytes": 6746
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+      "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "bytes": 4516
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+      "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "bytes": 4110
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/scripts/check.mjs": {
+      "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "bytes": 6374
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+      "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "bytes": 25709
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/engine/tsconfig.json": {
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "bytes": 706
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/references/asking.md": {
+      "sha256": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+      "bytes": 1486
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/references/concept.md": {
+      "sha256": "ba0780577d3157824d81c36b40374141d52df5e88ef67deee175792f4793dab1",
+      "bytes": 7863
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/references/reading-a-profile.md": {
+      "sha256": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca",
+      "bytes": 5537
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/references/storyboard.md": {
+      "sha256": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6",
+      "bytes": 4016
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/scripts/scaffold.mjs": {
+      "sha256": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+      "bytes": 3566
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+      "sha256": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+      "bytes": 4044
+    },
+    "run/turns/01/snapshot/files/.agents/skills/storyfolio/SKILL.md": {
+      "sha256": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+      "bytes": 4087
+    },
+    "run/turns/01/snapshot/files/.gitignore": {
+      "sha256": "f6c1709eaf0b64f334422a34e1b6b32eb4dac6ae52d34e004fbaf6e6dcf54bf3",
+      "bytes": 89
+    },
+    "run/turns/01/snapshot/files/AGENTS.md": {
+      "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "bytes": 1055
+    },
+    "run/turns/01/snapshot/files/app/globals.css": {
+      "sha256": "c1425a9534412ddf4b9535e13032e5aa3f5ff1ab1b8a2533687f66f67e83d9ef",
+      "bytes": 2620
+    },
+    "run/turns/01/snapshot/files/app/layout.tsx": {
+      "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "bytes": 299
+    },
+    "run/turns/01/snapshot/files/app/page.tsx": {
+      "sha256": "04359cb56f2385738ab5a5f444cfa7327f71b225a551b8ff60e769dc10453439",
+      "bytes": 1969
+    },
+    "run/turns/01/snapshot/files/app/sketch/[id]/page.tsx": {
+      "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "bytes": 446
+    },
+    "run/turns/01/snapshot/files/CLAUDE.md": {
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "bytes": 11
+    },
+    "run/turns/01/snapshot/files/components/story/chapter.tsx": {
+      "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "bytes": 1504
+    },
+    "run/turns/01/snapshot/files/components/story/conductor.tsx": {
+      "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "bytes": 1479
+    },
+    "run/turns/01/snapshot/files/components/story/controls.tsx": {
+      "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "bytes": 882
+    },
+    "run/turns/01/snapshot/files/components/story/extra-frame.tsx": {
+      "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "bytes": 1420
+    },
+    "run/turns/01/snapshot/files/components/story/face-material.ts": {
+      "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "bytes": 1714
+    },
+    "run/turns/01/snapshot/files/components/story/faces.ts": {
+      "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "bytes": 3025
+    },
+    "run/turns/01/snapshot/files/components/story/guard-extra-callback.test.ts": {
+      "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "bytes": 1624
+    },
+    "run/turns/01/snapshot/files/components/story/guard-extra-callback.ts": {
+      "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "bytes": 504
+    },
+    "run/turns/01/snapshot/files/components/story/look-switch.tsx": {
+      "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "bytes": 515
+    },
+    "run/turns/01/snapshot/files/components/story/meter.tsx": {
+      "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "bytes": 731
+    },
+    "run/turns/01/snapshot/files/components/story/overlay.tsx": {
+      "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "bytes": 711
+    },
+    "run/turns/01/snapshot/files/components/story/pieces.tsx": {
+      "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "bytes": 7753
+    },
+    "run/turns/01/snapshot/files/components/story/rail.tsx": {
+      "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "bytes": 452
+    },
+    "run/turns/01/snapshot/files/components/story/scene.tsx": {
+      "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "bytes": 4623
+    },
+    "run/turns/01/snapshot/files/components/story/stage.tsx": {
+      "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "bytes": 1230
+    },
+    "run/turns/01/snapshot/files/components/story/story.css": {
+      "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "bytes": 5859
+    },
+    "run/turns/01/snapshot/files/components/story/story.tsx": {
+      "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "bytes": 5735
+    },
+    "run/turns/01/snapshot/files/components/story/types.ts": {
+      "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "bytes": 1324
+    },
+    "run/turns/01/snapshot/files/components/story/use-look.ts": {
+      "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "bytes": 897
+    },
+    "run/turns/01/snapshot/files/components/story/use-reduced-motion.ts": {
+      "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "bytes": 432
+    },
+    "run/turns/01/snapshot/files/components/story/use-webgl-supported.ts": {
+      "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "bytes": 591
+    },
+    "run/turns/01/snapshot/files/components/story/validate.test.ts": {
+      "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "bytes": 2192
+    },
+    "run/turns/01/snapshot/files/components/story/validate.ts": {
+      "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "bytes": 1972
+    },
+    "run/turns/01/snapshot/files/components/story/webgl-boundary.tsx": {
+      "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "bytes": 476
+    },
+    "run/turns/01/snapshot/files/content/apparatus.tsx": {
+      "sha256": "7293bf45f451c820ab29683faa3ec89e4e3041a06213fde6c64b8a5793737b55",
+      "bytes": 1910
+    },
+    "run/turns/01/snapshot/files/content/checks.json": {
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "run/turns/01/snapshot/files/content/copy.ts": {
+      "sha256": "7f36fab6b13507107899d02611c3a7935a35473729d900d2943bc17a83344259",
+      "bytes": 3549
+    },
+    "run/turns/01/snapshot/files/content/experience.tsx": {
+      "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "bytes": 260
+    },
+    "run/turns/01/snapshot/files/content/extras/middle-line.tsx": {
+      "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "bytes": 613
+    },
+    "run/turns/01/snapshot/files/content/extras.ts": {
+      "sha256": "6c738050d7a8fc2e6bb214a401994e6a69ade3c052a263f45749699ffc5fc454",
+      "bytes": 26
+    },
+    "run/turns/01/snapshot/files/content/faces.ts": {
+      "sha256": "d5a770753263e32c0269c72b3599accb391b4155f58f05c08cbcab7b5f04de42",
+      "bytes": 2059
+    },
+    "run/turns/01/snapshot/files/content/formations.ts": {
+      "sha256": "61d710d45b1fa87e4699f0bfcfefbeff89b07a5bea857d3e2d65827202086915",
+      "bytes": 1183
+    },
+    "run/turns/01/snapshot/files/content/index.ts": {
+      "sha256": "0541eaa47dd833971433ff5328645735dc50b7c6e15f7e121df2a26b3a771898",
+      "bytes": 486
+    },
+    "run/turns/01/snapshot/files/content/links.ts": {
+      "sha256": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb",
+      "bytes": 25
+    },
+    "run/turns/01/snapshot/files/content/looks.ts": {
+      "sha256": "ca5aaefb451f27b0c6f455d33c40c383c09241d043dafd0597bc47dcd0083b11",
+      "bytes": 367
+    },
+    "run/turns/01/snapshot/files/content/sketches/index.ts": {
+      "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "bytes": 238
+    },
+    "run/turns/01/snapshot/files/content/story.ts": {
+      "sha256": "ca282d5655683c28c64a0c4c87354c04a8f9b6b690bb680aace78cdde49e7bbd",
+      "bytes": 790
+    },
+    "run/turns/01/snapshot/files/docs/story/assets.md": {
+      "sha256": "9ac980bd48e5a35215ca8e591b6382ca3642ca3ded6482779d2e40a350032faa",
+      "bytes": 2676
+    },
+    "run/turns/01/snapshot/files/docs/story/concepts.md": {
+      "sha256": "1e1b1ea7f296259623666333ffd3d39c863de4e2a7faf84538510eebc06d7c92",
+      "bytes": 653
+    },
+    "run/turns/01/snapshot/files/docs/story/confirmations.md": {
+      "sha256": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d",
+      "bytes": 2860
+    },
+    "run/turns/01/snapshot/files/docs/story/decided-for-you.md": {
+      "sha256": "b351d2840987749b88d91eaabdb45e9bccffd2e3088e13204d8add804f18de39",
+      "bytes": 2813
+    },
+    "run/turns/01/snapshot/files/docs/story/environment-setup.json": {
+      "sha256": "20d17e6cafebc188765b60d6f3400ec957efde2a63d5ba10e9b0a730a0097ad4",
+      "bytes": 1148
+    },
+    "run/turns/01/snapshot/files/docs/story/facts.md": {
+      "sha256": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e",
+      "bytes": 3558
+    },
+    "run/turns/01/snapshot/files/docs/story/handover.md": {
+      "sha256": "35c0d74be882a1504021f62818a6a6d1c9335f4b77cfca54e6e86224a1018386",
+      "bytes": 7192
+    },
+    "run/turns/01/snapshot/files/docs/story/local-review.md": {
+      "sha256": "fb486e03e2bf55a7574b7bd0a55e217a5483a17dfb0579f2aa000bf873593f9a",
+      "bytes": 1105
+    },
+    "run/turns/01/snapshot/files/docs/story/review/desktop-evidence.png": {
+      "sha256": "0ccc88cc7437d1a1032dc8e03147a6b2a2350778f1b7ca9a197a68a81c28bcc6",
+      "bytes": 204492
+    },
+    "run/turns/01/snapshot/files/docs/story/review/fallback-opening.png": {
+      "sha256": "1678ff8377454c3d00c8c3dd9de908a2ea38990b34d351d39fe18f51bd75e346",
+      "bytes": 111322
+    },
+    "run/turns/01/snapshot/files/docs/story/review/final-fallback/build.log": {
+      "sha256": "35a08c90ac5e7aae6b12a7adf47674fe40fe9efd78ae6188352a547889029a70",
+      "bytes": 2161
+    },
+    "run/turns/01/snapshot/files/docs/story/review/final-fallback/context-loss-report.json": {
+      "sha256": "640986430cf5bc9a044fcecd443482772dc402fe3c81a620e76315592a6b9e70",
+      "bytes": 2069
+    },
+    "run/turns/01/snapshot/files/docs/story/review/final-fallback/light-no-webgl-report.json": {
+      "sha256": "f638fb082ad23eefaff35a27728c3808e0bc1c7e2764c414a6a91eaa6d20fbf3",
+      "bytes": 1794
+    },
+    "run/turns/01/snapshot/files/docs/story/review/final-fallback/manifest.json": {
+      "sha256": "6ba8b6597a38bb8b381b56abcb05f4e431772f56a075599d61d0f24015c58ec9",
+      "bytes": 4785
+    },
+    "run/turns/01/snapshot/files/docs/story/review/final-fallback/no-js-report.json": {
+      "sha256": "30b2c1969bb63f2a66c4c49d77e86fa6bb6c4ace5c0a4e2167c061659718ab9e",
+      "bytes": 2012
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/build.log": {
+      "sha256": "7fa1dcd9c64b664dbfa7296c3d49df913aa45648cbb8d8ab5c975a830f096ff3",
+      "bytes": 2162
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/context-loss-report.json": {
+      "sha256": "2ade2b71ef0c7e2bb00e83602b80fcabf335ddb101439729155638581adcf843",
+      "bytes": 2069
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/light-no-webgl-report.json": {
+      "sha256": "71adbdf0ea9f00aabd1d85c95b1c6ae3800b532e552471488c1702deb308ed66",
+      "bytes": 1794
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/light-phone-report.json": {
+      "sha256": "56dbf5afb7c5903d37dc45df836c660fe59eb87eccc8f52803532df814bf8b28",
+      "bytes": 1793
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/light-reduced-report.json": {
+      "sha256": "cbe2eaf256f1f5eacb30fc8869108a67335933c4eab91b79f7d61d5e20f25253",
+      "bytes": 8086
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/light-short-report.json": {
+      "sha256": "d98fb73ef3de4d62a8be136b39989738eb1e950d3597d8e5d12989416676be59",
+      "bytes": 1846
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/light-wide-report.json": {
+      "sha256": "501673b1648457036dad4e35cddc8093e1180f735be32d984a98bffb185a5d2f",
+      "bytes": 4655
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/manifest.json": {
+      "sha256": "ac8031a3fbe9d46707bd7a2e08581eeb16784b5383b2575dca80f304390044d6",
+      "bytes": 10185
+    },
+    "run/turns/01/snapshot/files/docs/story/review/full-matrix/no-js-report.json": {
+      "sha256": "51f3caefd945245010bcff7c4da3006e875561a0b3ed1dbc79775b7692d76502",
+      "bytes": 2012
+    },
+    "run/turns/01/snapshot/files/docs/story/review/phone-evidence.png": {
+      "sha256": "50b791eee3a41b18579bbcbcf0ac1c3f2f4a7affc53676a5b25a4f63730cfe8f",
+      "bytes": 83929
+    },
+    "run/turns/01/snapshot/files/docs/story/review/supplemental/keyboard.json": {
+      "sha256": "db0132a9de7f7f2943e109c273fcd8d834d403c18e47a8bde03310db3b144c34",
+      "bytes": 183
+    },
+    "run/turns/01/snapshot/files/docs/story/review/supplemental/phone-no-js-report.json": {
+      "sha256": "015d780d553cd720548adb47c2e8b02c64dfea9da86b8e5878412154050db2d4",
+      "bytes": 2007
+    },
+    "run/turns/01/snapshot/files/docs/story/review/supplemental/phone-reduced-report.json": {
+      "sha256": "65c2bbeecb35d6c95d146e9b6002fa5033662631caa5ef718feb9887fac2c850",
+      "bytes": 2922
+    },
+    "run/turns/01/snapshot/files/docs/story/review/supplemental/run.log": {
+      "sha256": "4e5470940990e1839ab4ad84783efdc494ee268f638dbae4efdfeeabcc96f132",
+      "bytes": 8797
+    },
+    "run/turns/01/snapshot/files/docs/story/review/supplemental/ultra-short-report.json": {
+      "sha256": "5116252a7c7760d38e5954ab590a422cd8306948d02d70ad4b8e17dc6864f61f",
+      "bytes": 1719
+    },
+    "run/turns/01/snapshot/files/docs/story/storyboard.md": {
+      "sha256": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6",
+      "bytes": 3766
+    },
+    "run/turns/01/snapshot/files/eslint.config.mjs": {
+      "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "bytes": 309
+    },
+    "run/turns/01/snapshot/files/lib/story/camera.test.ts": {
+      "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "bytes": 6594
+    },
+    "run/turns/01/snapshot/files/lib/story/camera.ts": {
+      "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "bytes": 5201
+    },
+    "run/turns/01/snapshot/files/lib/story/controls.test.ts": {
+      "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "bytes": 1608
+    },
+    "run/turns/01/snapshot/files/lib/story/controls.ts": {
+      "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "bytes": 1054
+    },
+    "run/turns/01/snapshot/files/lib/story/formation.test.ts": {
+      "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "bytes": 5294
+    },
+    "run/turns/01/snapshot/files/lib/story/formation.ts": {
+      "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "bytes": 5414
+    },
+    "run/turns/01/snapshot/files/lib/story/layouts.test.ts": {
+      "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "bytes": 2728
+    },
+    "run/turns/01/snapshot/files/lib/story/layouts.ts": {
+      "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "bytes": 4733
+    },
+    "run/turns/01/snapshot/files/lib/story/looks.test.ts": {
+      "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "bytes": 1238
+    },
+    "run/turns/01/snapshot/files/lib/story/looks.ts": {
+      "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "bytes": 1262
+    },
+    "run/turns/01/snapshot/files/lib/story/overlay.test.ts": {
+      "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "bytes": 1844
+    },
+    "run/turns/01/snapshot/files/lib/story/overlay.ts": {
+      "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "bytes": 3252
+    },
+    "run/turns/01/snapshot/files/lib/story/quality.test.ts": {
+      "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "bytes": 1838
+    },
+    "run/turns/01/snapshot/files/lib/story/quality.ts": {
+      "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "bytes": 1762
+    },
+    "run/turns/01/snapshot/files/lib/story/rand.test.ts": {
+      "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "bytes": 567
+    },
+    "run/turns/01/snapshot/files/lib/story/rand.ts": {
+      "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "bytes": 384
+    },
+    "run/turns/01/snapshot/files/lib/story/story.test.ts": {
+      "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "bytes": 4065
+    },
+    "run/turns/01/snapshot/files/lib/story/story.ts": {
+      "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "bytes": 4796
+    },
+    "run/turns/01/snapshot/files/lib/story/timeline.test.ts": {
+      "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "bytes": 7998
+    },
+    "run/turns/01/snapshot/files/lib/story/timeline.ts": {
+      "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "bytes": 5697
+    },
+    "run/turns/01/snapshot/files/lib/story/typeset.test.ts": {
+      "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "bytes": 4495
+    },
+    "run/turns/01/snapshot/files/lib/story/typeset.ts": {
+      "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "bytes": 3329
+    },
+    "run/turns/01/snapshot/files/LICENSE": {
+      "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "bytes": 1080
+    },
+    "run/turns/01/snapshot/files/next-env.d.ts": {
+      "sha256": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b",
+      "bytes": 288
+    },
+    "run/turns/01/snapshot/files/next.config.ts": {
+      "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "bytes": 94
+    },
+    "run/turns/01/snapshot/files/package-lock.json": {
+      "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "bytes": 233717
+    },
+    "run/turns/01/snapshot/files/package.json": {
+      "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "bytes": 1015
+    },
+    "run/turns/01/snapshot/files/postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "bytes": 94
+    },
+    "run/turns/01/snapshot/files/public/assets/bring-up-fixture.svg": {
+      "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+      "bytes": 1822
+    },
+    "run/turns/01/snapshot/files/public/assets/power-states.svg": {
+      "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+      "bytes": 1657
+    },
+    "run/turns/01/snapshot/files/public/plain/face.svg": {
+      "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "bytes": 309
+    },
+    "run/turns/01/snapshot/files/public/plain/fan.svg": {
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "bytes": 775
+    },
+    "run/turns/01/snapshot/files/README.md": {
+      "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+      "bytes": 6746
+    },
+    "run/turns/01/snapshot/files/scripts/check-lib.mjs": {
+      "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "bytes": 4516
+    },
+    "run/turns/01/snapshot/files/scripts/check-lib.test.mjs": {
+      "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "bytes": 4110
+    },
+    "run/turns/01/snapshot/files/scripts/check.mjs": {
+      "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "bytes": 6374
+    },
+    "run/turns/01/snapshot/files/scripts/prototype-probes.mjs": {
+      "sha256": "4d1a880ca3e7183f4b24deadb7793e5e40d57eeee1bd2b9a7386cae7c3d2616f",
+      "bytes": 2749
+    },
+    "run/turns/01/snapshot/files/scripts/review-sheets.mjs": {
+      "sha256": "02c43064266cf0b647640fe6753328cb569761a2b7ae12c89f6526fab379ee86",
+      "bytes": 1394
+    },
+    "run/turns/01/snapshot/files/scripts/shoot.mjs": {
+      "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "bytes": 25709
+    },
+    "run/turns/01/snapshot/files/tsconfig.json": {
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "bytes": 706
+    }
+  },
+  "transport": "paged-v1",
+  "bundleSha256": "ea89f8c8aad68de4abf13e2fb1b10aa7021d535949917bd9bc2d0bbaee38bc11",
+  "logicalPrompt": {
+    "sha256": "6cc9be6f40516bb7ed8d10fc23b942f10b9e63fde38ce8078246e567b7cb08d1",
+    "bytes": 744403,
+    "codeUnits": 744204
+  },
+  "limits": [
+    "No third-party installation-source packet is supplied; source/command verification is unobserved.",
+    "No screenshot pixels or real phone evidence is supplied.",
+    "All fixture text and changed source bodies are included. Other unchanged source is represented by hashes. Inherited fixture source must not be credited as newly authored actor work.",
+    "Tool events emitted by exec JSONL are included, but the CLI can omit image-view calls and returned image blocks. Their absence does not establish that screenshot review was skipped or a review claim was unsupported. Without supplemental proof, the visual-review observation is unobserved; do not infer pixel quality.",
+    "Subprocess file reads may not be individually logged; configuration isolation is not a read jail.",
+    "Baseline-only input is not arm-blinded. Report further unblinding cues."
+  ],
+  "model": "gpt-6-astra",
+  "reasoningEffort": "medium",
+  "timeoutMs": 600000,
+  "cli": {
+    "executable": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+    "sha256": "628e35487d888a28f0427fc37501da529dd3d81fcbad7a2c3421c1e8670d92e1",
+    "version": "codex-cli 0.162.1"
+  },
+  "disabledSkills": [
+    "/home/kshitij/.codex/skills/.system/imagegen/SKILL.md",
+    "/home/kshitij/.codex/skills/.system/imagegen",
+    "/home/kshitij/.codex/skills/.system/openai-docs/SKILL.md",
+    "/home/kshitij/.codex/skills/.system/openai-docs",
+    "/home/kshitij/.codex/skills/.system/review-agent/SKILL.md",
+    "/home/kshitij/.codex/skills/.system/review-agent",
+    "/home/kshitij/.codex/skills/.system/skill-creator/SKILL.md",
+    "/home/kshitij/.codex/skills/.system/skill-creator",
+    "/home/kshitij/.codex/skills/.system/skill-installer/SKILL.md",
+    "/home/kshitij/.codex/skills/.system/skill-installer"
+  ]
+}

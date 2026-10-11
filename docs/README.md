@@ -32,8 +32,8 @@ specifies an unchanged-skill five-beat diagnostic, local preparation and a
 proposed paid envelope. The author subsequently
 [approved no-model preparation](history/2026-10-11-build-preparation-approval.md).
 The [implemented tooling and diagnostic evidence](../evals/runs/build-workflow-preparation-1/findings.md)
-now stop before final freeze, pending shared-controls and judge-transport
-decisions. No paid run is authorized. The earlier
+at that checkpoint stopped before final freeze, pending shared-controls and
+judge-transport decisions. No paid run was authorized then. The earlier
 [planning record](history/2026-10-11-build-workflow-planning.md) remains intact.
 The author subsequently [approved the shared-controls repair](history/2026-10-11-shared-controls-approval.md).
 Its [engineering study](../evals/engine/shared-controls-1/findings.md) records
@@ -41,8 +41,8 @@ the narrow provider fix and local verification. The subsequently
 [authorized local transport repair](history/2026-10-11-judge-transport-approval.md)
 is now implemented. Its [study](../evals/runs/judge-transport-1/findings.md)
 records byte-exact historical packet delivery, bounded read-only pages,
-305 passing tests and the untested live-model limits. Final input freeze,
-actor-workspace capability proof and paid-run approval remain separate gates.
+305 passing tests and the then-untested live-model limits. Final input freeze,
+actor-workspace capability proof and paid-run approval were separate later gates.
 
 The author then [approved the final local preparation](history/2026-10-11-build-freeze-approval.md).
 The [freeze and capability study](../evals/runs/build-workflow-freeze-1/findings.md)
@@ -56,11 +56,25 @@ validation. At the freeze checkpoint no actor or judge had started. Process
 deadlines are not hard token or spending caps. The study is the home for exact
 recheck commands and the separately retained `TMPDIR` requirement.
 
-The authorized actor subsequently made one incomplete attempt: it requested
-the blocked package registry during `npm ci` before implementation. There is
-no candidate, visual result or judge. The [actor result](../evals/runs/codex-bench-depth-baseline-1/findings.md)
-retains the evidence and makes clear that another attempt needs a separate
-decision.
+The actor subsequently completed the five-beat prototype after recovering
+from the blocked package registry with its offline cache. The earlier
+incomplete report was premature and is
+[explicitly corrected](history/2026-10-11-baseline-reconciliation-and-development.md).
+The [baseline findings](../evals/runs/codex-bench-depth-baseline-1/findings.md)
+separate the completed source, actor-owned checks, coordinator visual and
+technical evidence, usage and information-boundary limits. The single judge
+received every page, but the original evaluator mixed progress messages with
+final JSON. Its failed result is preserved beside a no-model terminal-message
+audit. The author authorized continued local development after the tests;
+the [parser repair](../evals/runs/judge-response-parsing-1/findings.md) is a
+separate engineering change, not a new paid judgement or skill improvement.
+The new output has no author visual or physical-phone approval.
+Independent review covers all 274 completed-capture originals plus 35 from
+an interrupted attempt. The completed seven-mode checker fails on its
+focus-only skip-link pointer requirement; separate visual review finds a
+weak bench relationship and overlapping transition labels. The
+[post-baseline plan](superpowers/plans/2026-10-11-post-baseline-attribution.md)
+keeps measurement repair and visual improvement distinct.
 
 For a new session, read:
 

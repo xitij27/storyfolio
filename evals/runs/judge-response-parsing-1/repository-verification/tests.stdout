@@ -1,0 +1,2093 @@
+
+> test
+> node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test "evals/lib/*.test.mjs" "skills/storyfolio/engine/lib/story/*.test.ts" "skills/storyfolio/scripts/*.test.mjs" "skills/storyfolio/engine/scripts/*.test.mjs" "skills/storyfolio/engine/components/story/*.test.ts"
+
+TAP version 13
+# Subtest: diagnostic expectations permit original wording but freeze structural headings and seven conditions
+ok 1 - diagnostic expectations permit original wording but freeze structural headings and seven conditions
+  ---
+  duration_ms: 3.914353
+  type: 'test'
+  ...
+# Subtest: authored but empty, hidden or incorrectly levelled diagnostic headings fail
+ok 2 - authored but empty, hidden or incorrectly levelled diagnostic headings fail
+  ---
+  duration_ms: 3.064151
+  type: 'test'
+  ...
+# Subtest: geometry uses frozen IDs and measured boxes, not actor formations
+ok 3 - geometry uses frozen IDs and measured boxes, not actor formations
+  ---
+  duration_ms: 0.691236
+  type: 'test'
+  ...
+# Subtest: missing beat or original cannot pass diagnostic rest completeness
+ok 4 - missing beat or original cannot pass diagnostic rest completeness
+  ---
+  duration_ms: 0.418759
+  type: 'test'
+  ...
+# Subtest: motion intervals cannot be omitted, reordered, reversed or replaced with settled frames
+ok 5 - motion intervals cannot be omitted, reordered, reversed or replaced with settled frames
+  ---
+  duration_ms: 0.758882
+  type: 'test'
+  ...
+# Subtest: every post-context-loss beat must have a real fallback capture
+ok 6 - every post-context-loss beat must have a real fallback capture
+  ---
+  duration_ms: 0.334453
+  type: 'test'
+  ...
+# Subtest: reduced-motion stillness requires five timed, unchanged pairs even for static fallback
+ok 7 - reduced-motion stillness requires five timed, unchanged pairs even for static fallback
+  ---
+  duration_ms: 0.490813
+  type: 'test'
+  ...
+# Subtest: every discovered control needs actual pointer and keyboard evidence
+ok 8 - every discovered control needs actual pointer and keyboard evidence
+  ---
+  duration_ms: 0.5913
+  type: 'test'
+  ...
+# Subtest: wrong or non-responding declared control targets fail even when the button changes
+ok 9 - wrong or non-responding declared control targets fail even when the button changes
+  ---
+  duration_ms: 0.446381
+  type: 'test'
+  ...
+# Subtest: canvas target meaning remains unobserved rather than inferred from hover or pixel changes
+ok 10 - canvas target meaning remains unobserved rather than inferred from hover or pixel changes
+  ---
+  duration_ms: 0.6717
+  type: 'test'
+  ...
+# Subtest: no implemented controls is allowed only after a complete inventory
+ok 11 - no implemented controls is allowed only after a complete inventory
+  ---
+  duration_ms: 0.423748
+  type: 'test'
+  ...
+# Subtest: reused selector indices cannot hide controls replaced between beats
+ok 12 - reused selector indices cannot hide controls replaced between beats
+  ---
+  duration_ms: 0.867995
+  type: 'test'
+  ...
+# Subtest: fixed expectations reject unknown versions, misspelled fields, duplicates and unsafe paths
+ok 13 - fixed expectations reject unknown versions, misspelled fields, duplicates and unsafe paths
+  ---
+  duration_ms: 2.469886
+  type: 'test'
+  ...
+# Subtest: coordinator paths cannot be inside or identical to the actor root
+ok 14 - coordinator paths cannot be inside or identical to the actor root
+  ---
+  duration_ms: 0.993839
+  type: 'test'
+  ...
+# Subtest: artifact hashes preserve binary evidence and expose report tampering without self-hashing
+ok 15 - artifact hashes preserve binary evidence and expose report tampering without self-hashing
+  ---
+  duration_ms: 9.425336
+  type: 'test'
+  ...
+# Subtest: fixed commands ignore a tampered actor package checker and script aliases
+ok 16 - fixed commands ignore a tampered actor package checker and script aliases
+  ---
+  duration_ms: 0.287906
+  type: 'test'
+  ...
+# Subtest: identical Next copies select the workspace runtime for typegen and build
+ok 17 - identical Next copies select the workspace runtime for typegen and build
+  ---
+  duration_ms: 1.585269
+  type: 'test'
+  ...
+# Subtest: changed Next version or CLI bytes cannot produce an executable entrypoint
+ok 18 - changed Next version or CLI bytes cannot produce an executable entrypoint
+  ---
+  duration_ms: 0.303184
+  type: 'test'
+  ...
+# Subtest: Next verification rejects actor-owned trust and malformed identities
+ok 19 - Next verification rejects actor-owned trust and malformed identities
+  ---
+  duration_ms: 0.379656
+  type: 'test'
+  ...
+# Subtest: one-screen animated beats sample their actual rest rather than three copies of arrival
+ok 20 - one-screen animated beats sample their actual rest rather than three copies of arrival
+  ---
+  duration_ms: 0.463623
+  type: 'test'
+  ...
+# Subtest: missing or reordered beat cannot pass through actor-derived expectations
+ok 21 - missing or reordered beat cannot pass through actor-derived expectations
+  ---
+  duration_ms: 1.346555
+  type: 'test'
+  ...
+# Subtest: hidden, offscreen, occluded and unfocusable links all fail
+ok 22 - hidden, offscreen, occluded and unfocusable links all fail
+  ---
+  duration_ms: 1.125204
+  type: 'test'
+  ...
+# Subtest: observed arrow and accurate file-format suffixes preserve the approved link label
+ok 23 - observed arrow and accurate file-format suffixes preserve the approved link label
+  ---
+  duration_ms: 1.056296
+  type: 'test'
+  ...
+# Subtest: link suffix matching rejects misleading text and retains destination and usability checks
+ok 24 - link suffix matching rejects misleading text and retains destination and usability checks
+  ---
+  duration_ms: 0.560794
+  type: 'test'
+  ...
+# Subtest: keyboard-only links require actual focused, visible observations
+ok 25 - keyboard-only links require actual focused, visible observations
+  ---
+  duration_ms: 0.233775
+  type: 'test'
+  ...
+# Subtest: static mobile expectations fail a still-running visible canvas
+ok 26 - static mobile expectations fail a still-running visible canvas
+  ---
+  duration_ms: 0.243092
+  type: 'test'
+  ...
+# Subtest: wording in hidden DOM or screenshot-only text is not accepted as visible HTML
+ok 27 - wording in hidden DOM or screenshot-only text is not accepted as visible HTML
+  ---
+  duration_ms: 0.142225
+  type: 'test'
+  ...
+# Subtest: inline emphasis separators do not turn matching approved words into a miss
+ok 28 - inline emphasis separators do not turn matching approved words into a miss
+  ---
+  duration_ms: 0.126094
+  type: 'test'
+  ...
+# Subtest: fallback probes and browser failures cannot silently pass
+ok 29 - fallback probes and browser failures cannot silently pass
+  ---
+  duration_ms: 0.277356
+  type: 'test'
+  ...
+# Subtest: only the precise no-JavaScript preload CSP case is expected
+ok 30 - only the precise no-JavaScript preload CSP case is expected
+  ---
+  duration_ms: 0.335975
+  type: 'test'
+  ...
+# Subtest: build judgement requires every criterion, valid status and real artifact excerpts
+ok 31 - build judgement requires every criterion, valid status and real artifact excerpts
+  ---
+  duration_ms: 4.667615
+  type: 'test'
+  ...
+# Subtest: unvisited stops and unavailable source verification cannot silently pass or fail
+ok 32 - unvisited stops and unavailable source verification cannot silently pass or fail
+  ---
+  duration_ms: 1.919181
+  type: 'test'
+  ...
+# Subtest: continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+ok 33 - continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+  ---
+  duration_ms: 3.566827
+  type: 'test'
+  ...
+# Subtest: prototype eligibility separates implementation and build-start checks from journey gates
+ok 34 - prototype eligibility separates implementation and build-start checks from journey gates
+  ---
+  duration_ms: 3.17651
+  type: 'test'
+  ...
+# Subtest: judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+ok 35 - judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+  ---
+  duration_ms: 0.657213
+  type: 'test'
+  ...
+# Subtest: judge prompt accepts the exact character boundary and rejects one more ASCII character
+ok 36 - judge prompt accepts the exact character boundary and rejects one more ASCII character
+  ---
+  duration_ms: 6.547873
+  type: 'test'
+  ...
+# Subtest: judge prompt byte boundary remains independent of its character boundary
+ok 37 - judge prompt byte boundary remains independent of its character boundary
+  ---
+  duration_ms: 9.576799
+  type: 'test'
+  ...
+# Subtest: judge prompt character guard cannot be bypassed by a raised byte allowance
+ok 38 - judge prompt character guard cannot be bypassed by a raised byte allowance
+  ---
+  duration_ms: 3.292816
+  type: 'test'
+  ...
+# Subtest: judge prompt explicitly uses conservative UTF-16 units for astral characters
+ok 39 - judge prompt explicitly uses conservative UTF-16 units for astral characters
+  ---
+  duration_ms: 180.731411
+  type: 'test'
+  ...
+# Subtest: saved build judging binds hashes and includes full fixture, commands and changed text only
+ok 40 - saved build judging binds hashes and includes full fixture, commands and changed text only
+  ---
+  duration_ms: 499.000683
+  type: 'test'
+  ...
+# Subtest: fresh continuation packets preserve inherited source and map two attempted stops, including failure
+ok 41 - fresh continuation packets preserve inherited source and map two attempted stops, including failure
+  ---
+  duration_ms: 615.273182
+  type: 'test'
+  ...
+# Subtest: a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+ok 42 - a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+  ---
+  duration_ms: 358.193859
+  type: 'test'
+  ...
+# Subtest: failed actor turns remain judgeable without claiming later stops were visited
+ok 43 - failed actor turns remain judgeable without claiming later stops were visited
+  ---
+  duration_ms: 267.459708
+  type: 'test'
+  ...
+# Subtest: a failed prototype attempt has a complete judgeable packet without claiming any journey gate
+ok 44 - a failed prototype attempt has a complete judgeable packet without claiming any journey gate
+  ---
+  duration_ms: 400.306623
+  type: 'test'
+  ...
+# Subtest: prototype judging rejects frozen task identity drift in run, result and started records
+ok 45 - prototype judging rejects frozen task identity drift in run, result and started records
+  ---
+  duration_ms: 803.180427
+  type: 'test'
+  ...
+# Subtest: prototype judging blocks missing source evidence even when capture failure is disclosed
+ok 46 - prototype judging blocks missing source evidence even when capture failure is disclosed
+  ---
+  duration_ms: 295.597675
+  type: 'test'
+  ...
+# Subtest: current judge implementation drift prevents a call against frozen actor inputs
+ok 47 - current judge implementation drift prevents a call against frozen actor inputs
+  ---
+  duration_ms: 247.818346
+  type: 'test'
+  ...
+# Subtest: acceptance reports stay separate and their frozen implementation and artifacts are verified
+ok 48 - acceptance reports stay separate and their frozen implementation and artifacts are verified
+  ---
+  duration_ms: 369.357191
+  type: 'test'
+  ...
+# Subtest: prototype acceptance must bind the independent capture helper as well as the checker
+ok 49 - prototype acceptance must bind the independent capture helper as well as the checker
+  ---
+  duration_ms: 1198.723112
+  type: 'test'
+  ...
+# Subtest: one mocked judge call preserves commentary, parses only the final message and refuses all retries
+ok 50 - one mocked judge call preserves commentary, parses only the final message and refuses all retries
+  ---
+  duration_ms: 332.798599
+  type: 'test'
+  ...
+# Subtest: invalid judge JSON is preserved as a failed attempt without retry
+ok 51 - invalid judge JSON is preserved as a failed attempt without retry
+  ---
+  duration_ms: 277.784331
+  type: 'test'
+  ...
+# Subtest: a malformed terminal judge message cannot fall back to earlier valid JSON
+ok 52 - a malformed terminal judge message cannot fall back to earlier valid JSON
+  ---
+  duration_ms: 307.839481
+  type: 'test'
+  ...
+# Subtest: process interruption prevents scoring even with completed stream and valid terminal JSON
+ok 53 - process interruption prevents scoring even with completed stream and valid terminal JSON
+  ---
+  duration_ms: 864.759877
+  type: 'test'
+  ...
+# Subtest: evidence drift after dry preparation stops before a judge directory or model call
+ok 54 - evidence drift after dry preparation stops before a judge directory or model call
+  ---
+  duration_ms: 267.885112
+  type: 'test'
+  ...
+# Subtest: judge invocation uses the shared isolated helper with no model override, shell or resume
+ok 55 - judge invocation uses the shared isolated helper with no model override, shell or resume
+  ---
+  duration_ms: 4.245159
+  type: 'test'
+  ...
+# Subtest: judge deadline forcibly terminates a local process that ignores SIGTERM
+ok 56 - judge deadline forcibly terminates a local process that ignores SIGTERM
+  ---
+  duration_ms: 609.490528
+  type: 'test'
+  ...
+# Subtest: full prompt assembly preserves literal placeholder text without recursively replacing evidence
+ok 57 - full prompt assembly preserves literal placeholder text without recursively replacing evidence
+  ---
+  duration_ms: 0.149378
+  type: 'test'
+  ...
+# Subtest: a frozen paged case preserves a complete prompt too large for inline, including selected stream hashes
+ok 58 - a frozen paged case preserves a complete prompt too large for inline, including selected stream hashes
+  ---
+  duration_ms: 474.476658
+  type: 'test'
+  ...
+# Subtest: paged invocation accepts only full delivery, preserves evidence and never retries
+ok 59 - paged invocation accepts only full delivery, preserves evidence and never retries
+  ---
+  duration_ms: 440.264905
+  type: 'test'
+  ...
+# Subtest: a partial paged delivery cannot become a score even if final JSON is valid
+ok 60 - a partial paged delivery cannot become a score even if final JSON is valid
+  ---
+  duration_ms: 350.515745
+  type: 'test'
+  ...
+# Subtest: complete paged delivery does not weaken original citation validation
+ok 61 - complete paged delivery does not weaken original citation validation
+  ---
+  duration_ms: 351.915191
+  type: 'test'
+  ...
+# Subtest: paged bundle or transport drift is rejected before spending a judge attempt
+ok 62 - paged bundle or transport drift is rejected before spending a judge attempt
+  ---
+  duration_ms: 281.989765
+  type: 'test'
+  ...
+# Subtest: paged CLI configuration enables only the bounded accessor and preserves judge isolation
+ok 63 - paged CLI configuration enables only the bounded accessor and preserves judge isolation
+  ---
+  duration_ms: 2.23611
+  type: 'test'
+  ...
+# Subtest: judge timeout terminates the actual evidence accessor descendant
+ok 64 - judge timeout terminates the actual evidence accessor descendant
+  ---
+  duration_ms: 2014.392232
+  type: 'test'
+  ...
+# Accessor final state: gone; a zombie is terminated and waiting for host reaping.
+# Subtest: build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+ok 65 - build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+  ---
+  duration_ms: 129.010647
+  type: 'test'
+  ...
+# Subtest: declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+ok 66 - declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+  ---
+  duration_ms: 67.674085
+  type: 'test'
+  ...
+# Subtest: case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+ok 67 - case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+  ---
+  duration_ms: 6.74491
+  type: 'test'
+  ...
+# Subtest: prototype-depth is a versioned one-turn task, never an alias for a journey stop
+ok 68 - prototype-depth is a versioned one-turn task, never an alias for a journey stop
+  ---
+  duration_ms: 6.541732
+  type: 'test'
+  ...
+# Subtest: prototype task identity is frozen and failed single attempts cannot overwrite or advance
+ok 69 - prototype task identity is frozen and failed single attempts cannot overwrite or advance
+  ---
+  duration_ms: 146.611085
+  type: 'test'
+  ...
+# Subtest: current source or frozen input drift cannot silently reuse a build cohort
+ok 70 - current source or frozen input drift cannot silently reuse a build cohort
+  ---
+  duration_ms: 218.118473
+  type: 'test'
+  ...
+# Subtest: fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+ok 71 - fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+  ---
+  duration_ms: 29.378472
+  type: 'test'
+  ...
+# Subtest: fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+ok 72 - fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+  ---
+  duration_ms: 66.622298
+  type: 'test'
+  ...
+# Subtest: snapshots preserve binary source, deletion and symlink records while excluding generated trees
+ok 73 - snapshots preserve binary source, deletion and symlink records while excluding generated trees
+  ---
+  duration_ms: 25.63199
+  type: 'test'
+  ...
+# Subtest: snapshot bounds fail before oversized source is copied
+ok 74 - snapshot bounds fail before oversized source is copied
+  ---
+  duration_ms: 8.677886
+  type: 'test'
+  ...
+# Subtest: turn planning requires observed gates and enforces turn, wall and soft token bounds
+ok 75 - turn planning requires observed gates and enforces turn, wall and soft token bounds
+  ---
+  duration_ms: 12.077592
+  type: 'test'
+  ...
+# Subtest: uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+ok 76 - uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+  ---
+  duration_ms: 6.731053
+  type: 'test'
+  ...
+# Subtest: uncached and wall accounting aggregate every actor turn without double-counting output
+ok 77 - uncached and wall accounting aggregate every actor turn without double-counting output
+  ---
+  duration_ms: 10.620441
+  type: 'test'
+  ...
+# Subtest: uncached bound fails closed on missing or unreliable cached accounting
+ok 78 - uncached bound fails closed on missing or unreliable cached accounting
+  ---
+  duration_ms: 10.656618
+  type: 'test'
+  ...
+# Subtest: aggregate accounting rejects safe individual counters whose sum is unsafe
+ok 79 - aggregate accounting rejects safe individual counters whose sum is unsafe
+  ---
+  duration_ms: 9.653531
+  type: 'test'
+  ...
+# Subtest: build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+ok 80 - build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+  ---
+  duration_ms: 1.13383
+  type: 'test'
+  ...
+# Subtest: actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+ok 81 - actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+  ---
+  duration_ms: 137.075424
+  type: 'test'
+  ...
+# Subtest: CLI config serialization emits restricted TOML tables and rejects unsupported values
+ok 82 - CLI config serialization emits restricted TOML tables and rejects unsupported values
+  ---
+  duration_ms: 0.627698
+  type: 'test'
+  ...
+# Subtest: the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+ok 83 - the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+  ---
+  duration_ms: 3.642117
+  type: 'test'
+  ...
+# Subtest: one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+ok 84 - one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+  ---
+  duration_ms: 348.074851
+  type: 'test'
+  ...
+# Subtest: failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+ok 85 - failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+  ---
+  duration_ms: 162.618769
+  type: 'test'
+  ...
+# Subtest: actor timeout kills its process group including a descendant that ignores SIGTERM
+ok 86 - actor timeout kills its process group including a descendant that ignores SIGTERM
+  ---
+  duration_ms: 620.506439
+  type: 'test'
+  ...
+# Descendant cleanup observed after 0ms; final state: Z
+# Subtest: parent interruption terminates the actor and preserves partial output without retaining signal listeners
+ok 87 - parent interruption terminates the actor and preserves partial output without retaining signal listeners
+  ---
+  duration_ms: 83.237209
+  type: 'test'
+  ...
+# Subtest: Codex preserves replies, commands, thread and usage
+ok 88 - Codex preserves replies, commands, thread and usage
+  ---
+  duration_ms: 1.258431
+  type: 'test'
+  ...
+# Subtest: Codex partial turns, API failures and failing exits never count as complete
+ok 89 - Codex partial turns, API failures and failing exits never count as complete
+  ---
+  duration_ms: 0.401938
+  type: 'test'
+  ...
+# Subtest: Codex resume retains isolation and judge disables shell tools
+ok 90 - Codex resume retains isolation and judge disables shell tools
+  ---
+  duration_ms: 0.989922
+  type: 'test'
+  ...
+# Subtest: test agents default to Sol and judges to Astra; explicit choices are preserved
+ok 91 - test agents default to Sol and judges to Astra; explicit choices are preserved
+  ---
+  duration_ms: 0.34415
+  type: 'test'
+  ...
+# Subtest: final Codex message excludes commentary while the historical aggregate stays intact
+ok 92 - final Codex message excludes commentary while the historical aggregate stays intact
+  ---
+  duration_ms: 0.523524
+  type: 'test'
+  ...
+# Subtest: final Codex message never searches earlier messages or strips non-JSON wrappers
+ok 93 - final Codex message never searches earlier messages or strips non-JSON wrappers
+  ---
+  duration_ms: 0.779942
+  type: 'test'
+  ...
+# Subtest: final Codex message rejects absent, failed, interrupted, ambiguous and corrupt turns
+ok 94 - final Codex message rejects absent, failed, interrupted, ambiguous and corrupt turns
+  ---
+  duration_ms: 0.840283
+  type: 'test'
+  ...
+# Subtest: a stream is read a line at a time, and what is not an event is left out
+ok 95 - a stream is read a line at a time, and what is not an event is left out
+  ---
+  duration_ms: 4.826221
+  type: 'test'
+  ...
+# Subtest: a turn is everything the agent said, in order, and each tool it called
+ok 96 - a turn is everything the agent said, in order, and each tool it called
+  ---
+  duration_ms: 0.488178
+  type: 'test'
+  ...
+# Subtest: a turn that was cut off before its result has failed
+ok 97 - a turn that was cut off before its result has failed
+  ---
+  duration_ms: 0.189413
+  type: 'test'
+  ...
+# Subtest: a turn that ended in an error has failed
+ok 98 - a turn that ended in an error has failed
+  ---
+  duration_ms: 0.154428
+  type: 'test'
+  ...
+# Subtest: a skill is used when the Skill tool is called with its name
+ok 99 - a skill is used when the Skill tool is called with its name
+  ---
+  duration_ms: 0.371801
+  type: 'test'
+  ...
+# Subtest: the files written are each listed once, in the order they were first written
+ok 100 - the files written are each listed once, in the order they were first written
+  ---
+  duration_ms: 0.215942
+  type: 'test'
+  ...
+# Subtest: the last words given for each file are remembered, whether or not the write was allowed
+ok 101 - the last words given for each file are remembered, whether or not the write was allowed
+  ---
+  duration_ms: 0.273178
+  type: 'test'
+  ...
+# Subtest: a file the agent wrote is kept under its path in its folder, or by name if written elsewhere
+ok 102 - a file the agent wrote is kept under its path in its folder, or by name if written elsewhere
+  ---
+  duration_ms: 8.098253
+  type: 'test'
+  ...
+# Subtest: what the agent was given is not kept, even if it wrote over it
+ok 103 - what the agent was given is not kept, even if it wrote over it
+  ---
+  duration_ms: 0.575494
+  type: 'test'
+  ...
+# Subtest: a note the agent wrote to its own memory is not kept
+ok 104 - a note the agent wrote to its own memory is not kept
+  ---
+  duration_ms: 0.591911
+  type: 'test'
+  ...
+# Subtest: a private file is touched when a tool that reads is pointed at it
+ok 105 - a private file is touched when a tool that reads is pointed at it
+  ---
+  duration_ms: 0.391939
+  type: 'test'
+  ...
+# Subtest: a private file that is only written about is not touched
+ok 106 - a private file that is only written about is not touched
+  ---
+  duration_ms: 0.162813
+  type: 'test'
+  ...
+# Subtest: no private files, nothing touched
+ok 107 - no private files, nothing touched
+  ---
+  duration_ms: 0.171088
+  type: 'test'
+  ...
+# Subtest: a private string is leaked in any case, and not when it is absent
+ok 108 - a private string is leaked in any case, and not when it is absent
+  ---
+  duration_ms: 0.149328
+  type: 'test'
+  ...
+# Subtest: the folders agents run in are in no part of this repository
+ok 109 - the folders agents run in are in no part of this repository
+  ---
+  duration_ms: 0.923308
+  type: 'test'
+  ...
+# Subtest: what the runs leave is kept in the repository
+ok 110 - what the runs leave is kept in the repository
+  ---
+  duration_ms: 0.27398
+  type: 'test'
+  ...
+# Subtest: real MCP client reads every immutable page and reconstructs the exact packet
+ok 111 - real MCP client reads every immutable page and reconstructs the exact packet
+  ---
+  duration_ms: 213.463736
+  type: 'test'
+  ...
+# Subtest: server snapshot cannot change when the bundle file changes after initialization
+ok 112 - server snapshot cannot change when the bundle file changes after initialization
+  ---
+  duration_ms: 97.939178
+  type: 'test'
+  ...
+# Subtest: invalid JSON, unknown fields, methods and page IDs never earn a receipt
+ok 113 - invalid JSON, unknown fields, methods and page IDs never earn a receipt
+  ---
+  duration_ms: 78.437711
+  type: 'test'
+  ...
+# Subtest: evidence requires initialization and duplicate initialization is rejected
+ok 114 - evidence requires initialization and duplicate initialization is rejected
+  ---
+  duration_ms: 76.395252
+  type: 'test'
+  ...
+# Subtest: reserved MCP parameter metadata is inert while tool arguments stay closed-world
+ok 115 - reserved MCP parameter metadata is inert while tool arguments stay closed-world
+  ---
+  duration_ms: 49.940841
+  type: 'test'
+  ...
+# Subtest: existing ledger is preserved and no evidence response is sent
+ok 116 - existing ledger is preserved and no evidence response is sent
+  ---
+  duration_ms: 67.327439
+  type: 'test'
+  ...
+# Subtest: tampered bundles fail before creating a ledger or responding
+ok 117 - tampered bundles fail before creating a ledger or responding
+  ---
+  duration_ms: 53.248825
+  type: 'test'
+  ...
+# Subtest: non-file, oversized and malformed UTF-8 bundles are rejected before ledger creation
+ok 118 - non-file, oversized and malformed UTF-8 bundles are rejected before ledger creation
+  ---
+  duration_ms: 118.486887
+  type: 'test'
+  ...
+# Subtest: bundle symlinks and symlinked parent directories are rejected
+ok 119 - bundle symlinks and symlinked parent directories are rejected
+  ---
+  duration_ms: 91.608418
+  type: 'test'
+  ...
+# Subtest: only normalized absolute bundle and ledger paths are accepted
+ok 120 - only normalized absolute bundle and ledger paths are accepted
+  ---
+  duration_ms: 190.423593
+  type: 'test'
+  ...
+# Subtest: escaped pages and maximal escaped request IDs stay within the full wire limit
+ok 121 - escaped pages and maximal escaped request IDs stay within the full wire limit
+  ---
+  duration_ms: 105.986729
+  type: 'test'
+  ...
+# Subtest: maximum-size ASCII packet is served and receipted without repeated full verification
+ok 122 - maximum-size ASCII packet is served and receipted without repeated full verification
+  ---
+  duration_ms: 938.543683
+  type: 'test'
+  ...
+# Subtest: oversized JSON lines and read request floods stop without receipts
+ok 123 - oversized JSON lines and read request floods stop without receipts
+  ---
+  duration_ms: 183.697548
+  type: 'test'
+  ...
+# Subtest: notification floods are bounded too
+ok 124 - notification floods are bounded too
+  ---
+  duration_ms: 86.039195
+  type: 'test'
+  ...
+# Subtest: clean EOF, final line without LF and malformed final JSON terminate gracefully
+ok 125 - clean EOF, final line without LF and malformed final JSON terminate gracefully
+  ---
+  duration_ms: 119.696428
+  type: 'test'
+  ...
+# Subtest: a failed response flush cannot append a delivery receipt
+ok 126 - a failed response flush cannot append a delivery receipt
+  ---
+  duration_ms: 5.282194
+  type: 'test'
+  ...
+# Subtest: a delivery receipt is appended only after the page response callback succeeds
+ok 127 - a delivery receipt is appended only after the page response callback succeeds
+  ---
+  duration_ms: 3.843205
+  type: 'test'
+  ...
+# Subtest: paged v1 restores every prompt byte without normalizing whitespace or duplicate bodies
+ok 128 - paged v1 restores every prompt byte without normalizing whitespace or duplicate bodies
+  ---
+  duration_ms: 5.646365
+  type: 'test'
+  ...
+# Subtest: empty prompt has one explicit empty page and complete coverage requires reading it
+ok 129 - empty prompt has one explicit empty page and complete coverage requires reading it
+  ---
+  duration_ms: 1.543121
+  type: 'test'
+  ...
+# Subtest: document inventory keeps original and selected text hashes distinct and retains duplicate bodies by path
+ok 130 - document inventory keeps original and selected text hashes distinct and retains duplicate bodies by path
+  ---
+  duration_ms: 1.23597
+  type: 'test'
+  ...
+# Subtest: UTF-8 page boundaries preserve astral, combining and multibyte text exactly
+ok 131 - UTF-8 page boundaries preserve astral, combining and multibyte text exactly
+  ---
+  duration_ms: 26.463058
+  type: 'test'
+  ...
+# Subtest: a long single line is split, never omitted or summarized
+ok 132 - a long single line is split, never omitted or summarized
+  ---
+  duration_ms: 10.832165
+  type: 'test'
+  ...
+# Subtest: full serialized MCP responses fit the byte cap even for maximally escaped text
+ok 133 - full serialized MCP responses fit the byte cap even for maximally escaped text
+  ---
+  duration_ms: 196.519816
+  type: 'test'
+  ...
+# Subtest: prompt byte and page-count bounds reject instead of truncating
+ok 134 - prompt byte and page-count bounds reject instead of truncating
+  ---
+  duration_ms: 1303.838522
+  type: 'test'
+  ...
+# Subtest: lone UTF-16 surrogates are rejected instead of replaced with different UTF-8 bytes
+ok 135 - lone UTF-16 surrogates are rejected instead of replaced with different UTF-8 bytes
+  ---
+  duration_ms: 0.296471
+  type: 'test'
+  ...
+# Subtest: strict verification rejects missing, reordered, duplicate, malformed and tampered bundle data
+ok 136 - strict verification rejects missing, reordered, duplicate, malformed and tampered bundle data
+  ---
+  duration_ms: 6.143992
+  type: 'test'
+  ...
+# Subtest: even rehashed noncanonical page boundaries cannot masquerade as paged v1
+ok 137 - even rehashed noncanonical page boundaries cannot masquerade as paged v1
+  ---
+  duration_ms: 2.550746
+  type: 'test'
+  ...
+# Subtest: invalid original/selected document descriptors and selection metadata fail closed
+ok 138 - invalid original/selected document descriptors and selection metadata fail closed
+  ---
+  duration_ms: 0.867204
+  type: 'test'
+  ...
+# Subtest: verified page readers isolate responses from later bundle or returned-response mutation
+ok 139 - verified page readers isolate responses from later bundle or returned-response mutation
+  ---
+  duration_ms: 2.080562
+  type: 'test'
+  ...
+# Subtest: coverage accepts repeated and out-of-order exact reads but counts each page once
+ok 140 - coverage accepts repeated and out-of-order exact reads but counts each page once
+  ---
+  duration_ms: 6.493611
+  type: 'test'
+  ...
+# Subtest: coverage rejects incomplete, malformed, forged and partially written receipts
+ok 141 - coverage rejects incomplete, malformed, forged and partially written receipts
+  ---
+  duration_ms: 19.629994
+  type: 'test'
+  ...
+# Subtest: resume rejects a valid judgement from another saved run or runner
+ok 142 - resume rejects a valid judgement from another saved run or runner
+  ---
+  duration_ms: 39.485118
+  type: 'test'
+  ...
+# Subtest: only a missing judgement schedules work, while existing null or false fails
+ok 143 - only a missing judgement schedules work, while existing null or false fails
+  ---
+  duration_ms: 15.009125
+  type: 'test'
+  ...
+# Subtest: scoring fixtures come from the source harness commit, with no silent current-file fallback
+ok 144 - scoring fixtures come from the source harness commit, with no silent current-file fallback
+  ---
+  duration_ms: 11.389161
+  type: 'test'
+  ...
+# Subtest: source selection is explicit and cannot target a source cohort or escape runs
+ok 145 - source selection is explicit and cannot target a source cohort or escape runs
+  ---
+  duration_ms: 0.695263
+  type: 'test'
+  ...
+# Subtest: v2 preserves the exact original evidence and resolved example instruction
+ok 146 - v2 preserves the exact original evidence and resolved example instruction
+  ---
+  duration_ms: 0.293897
+  type: 'test'
+  ...
+# Subtest: preparing and resuming never replace originals; source or snapshot drift fails closed
+ok 147 - preparing and resuming never replace originals; source or snapshot drift fails closed
+  ---
+  duration_ms: 135.068148
+  type: 'test'
+  ...
+# Subtest: a pre-existing non-v2 output directory is never adopted or overwritten
+ok 148 - a pre-existing non-v2 output directory is never adopted or overwritten
+  ---
+  duration_ms: 20.541791
+  type: 'test'
+  ...
+# Subtest: review preparation freezes exact bytes, resumes unchanged and excludes unallowlisted material
+ok 149 - review preparation freezes exact bytes, resumes unchanged and excludes unallowlisted material
+  ---
+  duration_ms: 85.077646
+  type: 'test'
+  ...
+# Subtest: current source, request, criteria, skill, harness or capability drift cannot reuse a cohort
+ok 150 - current source, request, criteria, skill, harness or capability drift cannot reuse a cohort
+  ---
+  duration_ms: 70.477831
+  type: 'test'
+  ...
+# Subtest: frozen evidence tampering, additions and incomplete preparation fail closed
+ok 151 - frozen evidence tampering, additions and incomplete preparation fail closed
+  ---
+  duration_ms: 28.018341
+  type: 'test'
+  ...
+# Subtest: allowlisted inputs cannot traverse directories, include Git metadata or follow symlinks
+ok 152 - allowlisted inputs cannot traverse directories, include Git metadata or follow symlinks
+  ---
+  duration_ms: 6.621551
+  type: 'test'
+  ...
+# Subtest: workspace collection preserves changed binary bytes, additions, deletions and symlinks without following them
+ok 153 - workspace collection preserves changed binary bytes, additions, deletions and symlinks without following them
+  ---
+  duration_ms: 26.984067
+  type: 'test'
+  ...
+# Subtest: completed runs require matching identity and unchanged artifacts; incomplete runs never silently retry
+ok 154 - completed runs require matching identity and unchanged artifacts; incomplete runs never silently retry
+  ---
+  duration_ms: 8.923542
+  type: 'test'
+  ...
+# Subtest: v2 keeps the original schema intact and covers every criterion
+ok 155 - v2 keeps the original schema intact and covers every criterion
+  ---
+  duration_ms: 2.89666
+  type: 'test'
+  ...
+# Subtest: asking and asserting both survive, and the assertion fails the full bar
+ok 156 - asking and asserting both survive, and the assertion fails the full bar
+  ---
+  duration_ms: 0.434198
+  type: 'test'
+  ...
+# Subtest: silent avoidance is clean but remains a discovery miss
+ok 157 - silent avoidance is clean but remains a discovery miss
+  ---
+  duration_ms: 0.387243
+  type: 'test'
+  ...
+# Subtest: explicit exclusion passes discovery without inventing a question or assertion
+ok 158 - explicit exclusion passes discovery without inventing a question or assertion
+  ---
+  duration_ms: 0.374807
+  type: 'test'
+  ...
+# Subtest: neither silence nor an assertion gains a pass when fields are split
+ok 159 - neither silence nor an assertion gains a pass when fields are split
+  ---
+  duration_ms: 0.693791
+  type: 'test'
+  ...
+# Subtest: missing, duplicate or ill-typed trap evidence cannot silently pass
+ok 160 - missing, duplicate or ill-typed trap evidence cannot silently pass
+  ---
+  duration_ms: 0.608692
+  type: 'test'
+  ...
+# Subtest: privacy, honesty and an unresolved closing answer remain full-bar failures
+ok 161 - privacy, honesty and an unresolved closing answer remain full-bar failures
+  ---
+  duration_ms: 1.609084
+  type: 'test'
+  ...
+# Subtest: the forty original Codex results still recompute to 12 of 20 and 0 of 20
+ok 162 - the forty original Codex results still recompute to 12 of 20 and 0 of 20
+  ---
+  duration_ms: 134.694414
+  type: 'test'
+  ...
+# Subtest: the schema asks for every field, and the criteria have one name each
+ok 163 - the schema asks for every field, and the criteria have one name each
+  ---
+  duration_ms: 4.442026
+  type: 'test'
+  ...
+# Subtest: a plan with nothing wrong meets the bar, and has a verdict for every criterion
+ok 164 - a plan with nothing wrong meets the bar, and has a verdict for every criterion
+  ---
+  duration_ms: 3.997878
+  type: 'test'
+  ...
+# Subtest: what does not apply to a person is null, and does not count against the bar
+ok 165 - what does not apply to a person is null, and does not count against the bar
+  ---
+  duration_ms: 0.208307
+  type: 'test'
+  ...
+# Subtest: a trap that was avoided, or that the judge left out, was not asked about
+ok 166 - a trap that was avoided, or that the judge left out, was not asked about
+  ---
+  duration_ms: 0.469514
+  type: 'test'
+  ...
+# Subtest: a trap asserted at first fails both, and only one of them is in the bar
+ok 167 - a trap asserted at first fails both, and only one of them is in the bar
+  ---
+  duration_ms: 0.211123
+  type: 'test'
+  ...
+# Subtest: each thing the judge reports moves the criterion that is named for it
+ok 168 - each thing the judge reports moves the criterion that is named for it
+  ---
+  duration_ms: 0.953544
+  type: 'test'
+  ...
+# Subtest: asking nothing first is reported, and is not in the bar
+ok 169 - asking nothing first is reported, and is not in the bar
+  ---
+  duration_ms: 0.389966
+  type: 'test'
+  ...
+# Subtest: planning before the person has answered is reported, and is not in the bar
+ok 170 - planning before the person has answered is reported, and is not in the bar
+  ---
+  duration_ms: 1.983361
+  type: 'test'
+  ...
+# Subtest: the reference's example counts only for a person who has one
+ok 171 - the reference's example counts only for a person who has one
+  ---
+  duration_ms: 0.583777
+  type: 'test'
+  ...
+# Subtest: an untrue claim is handled only by refusing it and offering a true one
+ok 172 - an untrue claim is handled only by refusing it and offering a true one
+  ---
+  duration_ms: 0.762308
+  type: 'test'
+  ...
+# Subtest: private files count only for a person who has some
+ok 173 - private files count only for a person who has some
+  ---
+  duration_ms: 0.279581
+  type: 'test'
+  ...
+# Subtest: a criterion a person is let off is null whatever the judge said
+ok 174 - a criterion a person is let off is null whatever the judge said
+  ---
+  duration_ms: 0.364819
+  type: 'test'
+  ...
+# Subtest: a tally counts, for each arm, the runs that passed of those a criterion applies to
+ok 175 - a tally counts, for each arm, the runs that passed of those a criterion applies to
+  ---
+  duration_ms: 3.847979
+  type: 'test'
+  ...
+# Subtest: passes each frame's arguments unchanged to a healthy extra
+ok 176 - passes each frame's arguments unchanged to a healthy extra
+  ---
+  duration_ms: 1.868176
+  type: 'test'
+  ...
+# Subtest: reports a synchronous frame exception once and disables that callback
+ok 177 - reports a synchronous frame exception once and disables that callback
+  ---
+  duration_ms: 0.394384
+  type: 'test'
+  ...
+# Subtest: a failed extra does not stop subsequent core or independent extra callbacks
+ok 178 - a failed extra does not stop subsequent core or independent extra callbacks
+  ---
+  duration_ms: 0.323872
+  type: 'test'
+  ...
+# Subtest: accepts a complete bundle without optional extras or links
+ok 179 - accepts a complete bundle without optional extras or links
+  ---
+  duration_ms: 4.744908
+  type: 'test'
+  ...
+# Subtest: rejects face identities that would share or overwrite the wrong texture
+ok 180 - rejects face identities that would share or overwrite the wrong texture
+  ---
+  duration_ms: 0.432915
+  type: 'test'
+  ...
+# Subtest: rejects an absent look before hydration tries to read it
+ok 181 - rejects an absent look before hydration tries to read it
+  ---
+  duration_ms: 0.422817
+  type: 'test'
+  ...
+# Subtest: rejects links and extras that could never appear
+ok 182 - rejects links and extras that could never appear
+  ---
+  duration_ms: 0.439808
+  type: 'test'
+  ...
+# Subtest: cameraDistance
+    # Subtest: stays at its nearest on a wide screen
+    ok 1 - stays at its nearest on a wide screen
+      ---
+      duration_ms: 0.836366
+      type: 'test'
+      ...
+    # Subtest: pulls back on a phone for something wide
+    ok 2 - pulls back on a phone for something wide
+      ---
+      duration_ms: 0.283868
+      type: 'test'
+      ...
+    # Subtest: does not pull back on a phone for something small
+    ok 3 - does not pull back on a phone for something small
+      ---
+      duration_ms: 0.154377
+      type: 'test'
+      ...
+    # Subtest: pulls back when the caption leaves only a short band for the scene
+    ok 4 - pulls back when the caption leaves only a short band for the scene
+      ---
+      duration_ms: 0.175667
+      type: 'test'
+      ...
+    # Subtest: fits the whole width on screen, with a margin
+    ok 5 - fits the whole width on screen, with a margin
+      ---
+      duration_ms: 0.207797
+      type: 'test'
+      ...
+    # Subtest: falls back to its nearest for a screen with no size
+    ok 6 - falls back to its nearest for a screen with no size
+      ---
+      duration_ms: 0.124502
+      type: 'test'
+      ...
+    1..6
+ok 183 - cameraDistance
+  ---
+  duration_ms: 4.390648
+  type: 'suite'
+  ...
+# Subtest: cameraDistance with room on one side only
+    # Subtest: pulls back for something pushed to one side of the screen
+    ok 1 - pulls back for something pushed to one side of the screen
+      ---
+      duration_ms: 0.385126
+      type: 'test'
+      ...
+    1..1
+ok 184 - cameraDistance with room on one side only
+  ---
+  duration_ms: 0.667152
+  type: 'suite'
+  ...
+# Subtest: viewHalf
+    # Subtest: is half of what the camera sees at a distance
+    ok 1 - is half of what the camera sees at a distance
+      ---
+      duration_ms: 0.411826
+      type: 'test'
+      ...
+    1..1
+ok 185 - viewHalf
+  ---
+  duration_ms: 0.646703
+  type: 'suite'
+  ...
+# Subtest: roomBeside
+    # Subtest: is the share of the screen left when something is off centre
+    ok 1 - is the share of the screen left when something is off centre
+      ---
+      duration_ms: 0.309896
+      type: 'test'
+      ...
+    # Subtest: never drops to nothing
+    ok 2 - never drops to nothing
+      ---
+      duration_ms: 0.266666
+      type: 'test'
+      ...
+    1..2
+ok 186 - roomBeside
+  ---
+  duration_ms: 0.718927
+  type: 'suite'
+  ...
+# Subtest: bandShare
+    # Subtest: is the share of the screen between the header and the caption
+    ok 1 - is the share of the screen between the header and the caption
+      ---
+      duration_ms: 0.243363
+      type: 'test'
+      ...
+    # Subtest: never drops to nothing, however tall the caption
+    ok 2 - never drops to nothing, however tall the caption
+      ---
+      duration_ms: 0.116737
+      type: 'test'
+      ...
+    # Subtest: is the whole screen when the screen has no size
+    ok 3 - is the whole screen when the screen has no size
+      ---
+      duration_ms: 0.109093
+      type: 'test'
+      ...
+    1..3
+ok 187 - bandShare
+  ---
+  duration_ms: 0.666951
+  type: 'suite'
+  ...
+# Subtest: bandFit
+    # Subtest: leaves the scene as it is where the band is as thick as it is framed for
+    ok 1 - leaves the scene as it is where the band is as thick as it is framed for
+      ---
+      duration_ms: 0.19366
+      type: 'test'
+      ...
+    # Subtest: draws the scene smaller by as much as the band is thinner than that
+    ok 2 - draws the scene smaller by as much as the band is thinner than that
+      ---
+      duration_ms: 0.107219
+      type: 'test'
+      ...
+    # Subtest: draws nothing where the caption leaves almost no band, or none
+    ok 3 - draws nothing where the caption leaves almost no band, or none
+      ---
+      duration_ms: 0.104144
+      type: 'test'
+      ...
+    # Subtest: leaves the scene as it is when the screen has no size
+    ok 4 - leaves the scene as it is when the screen has no size
+      ---
+      duration_ms: 0.138207
+      type: 'test'
+      ...
+    1..4
+ok 188 - bandFit
+  ---
+  duration_ms: 0.710993
+  type: 'suite'
+  ...
+# Subtest: stageLift
+    # Subtest: is zero when the header and the caption take the same room
+    ok 1 - is zero when the header and the caption take the same room
+      ---
+      duration_ms: 0.208088
+      type: 'test'
+      ...
+    # Subtest: raises the scene by half the difference, as a share of the screen
+    ok 2 - raises the scene by half the difference, as a share of the screen
+      ---
+      duration_ms: 0.09632
+      type: 'test'
+      ...
+    # Subtest: is zero when the screen has no size
+    ok 3 - is zero when the screen has no size
+      ---
+      duration_ms: 0.077454
+      type: 'test'
+      ...
+    1..3
+ok 189 - stageLift
+  ---
+  duration_ms: 0.497937
+  type: 'suite'
+  ...
+# Subtest: a formation over the caption, on a screen shorter than it was framed for
+    # Subtest: is left alone on the screen it was framed for, and on a taller one
+    ok 1 - is left alone on the screen it was framed for, and on a taller one
+      ---
+      duration_ms: 0.230028
+      type: 'test'
+      ...
+    # Subtest: is drawn smaller, by as much as the band above the caption has shrunk
+    ok 2 - is drawn smaller, by as much as the band above the caption has shrunk
+      ---
+      duration_ms: 0.12918
+      type: 'test'
+      ...
+    # Subtest: keeps its place within that band
+    ok 3 - keeps its place within that band
+      ---
+      duration_ms: 0.166009
+      type: 'test'
+      ...
+    # Subtest: so that what cleared the caption there clears it here
+    ok 4 - so that what cleared the caption there clears it here
+      ---
+      duration_ms: 0.300068
+      type: 'test'
+      ...
+    # Subtest: is never drawn smaller than four tenths, however little room is left
+    ok 5 - is never drawn smaller than four tenths, however little room is left
+      ---
+      duration_ms: 0.110856
+      type: 'test'
+      ...
+    # Subtest: is left alone when the screen has no size
+    ok 6 - is left alone when the screen has no size
+      ---
+      duration_ms: 0.147564
+      type: 'test'
+      ...
+    1..6
+ok 190 - a formation over the caption, on a screen shorter than it was framed for
+  ---
+  duration_ms: 1.282066
+  type: 'suite'
+  ...
+# Subtest: controls
+    # Subtest: give back what was set, and nothing for what was not
+    ok 1 - give back what was set, and nothing for what was not
+      ---
+      duration_ms: 0.639309
+      type: 'test'
+      ...
+    # Subtest: forget a value set back to nothing
+    ok 2 - forget a value set back to nothing
+      ---
+      duration_ms: 0.238433
+      type: 'test'
+      ...
+    # Subtest: tell whoever is listening when a value changes, and only then
+    ok 3 - tell whoever is listening when a value changes, and only then
+      ---
+      duration_ms: 0.323602
+      type: 'test'
+      ...
+    1..3
+ok 191 - controls
+  ---
+  duration_ms: 2.440942
+  type: 'suite'
+  ...
+# Subtest: the piece the pointer is on
+    # Subtest: is none until the reader points at one, and none again when they leave it
+    ok 1 - is none until the reader points at one, and none again when they leave it
+      ---
+      duration_ms: 4.466111
+      type: 'test'
+      ...
+    # Subtest: the first piece counts as one: it is number 0
+    ok 2 - the first piece counts as one: it is number 0
+      ---
+      duration_ms: 0.191516
+      type: 'test'
+      ...
+    1..2
+ok 192 - the piece the pointer is on
+  ---
+  duration_ms: 4.861476
+  type: 'suite'
+  ...
+# Subtest: smoothstep
+    # Subtest: is 0 below the range, 1 above it and 0.5 in the middle
+    ok 1 - is 0 below the range, 1 above it and 0.5 in the middle
+      ---
+      duration_ms: 0.787886
+      type: 'test'
+      ...
+    # Subtest: is a plain step when the range has no width
+    ok 2 - is a plain step when the range has no width
+      ---
+      duration_ms: 0.163324
+      type: 'test'
+      ...
+    1..2
+ok 193 - smoothstep
+  ---
+  duration_ms: 1.832299
+  type: 'suite'
+  ...
+# Subtest: mixFormation
+    # Subtest: is the first formation at 0 and the second at 1
+    ok 1 - is the first formation at 0 and the second at 1
+      ---
+      duration_ms: 1.321598
+      type: 'test'
+      ...
+    # Subtest: is halfway at 0.5
+    ok 2 - is halfway at 0.5
+      ---
+      duration_ms: 0.459334
+      type: 'test'
+      ...
+    # Subtest: writes into the formation it is given and leaves its inputs alone
+    ok 3 - writes into the formation it is given and leaves its inputs alone
+      ---
+      duration_ms: 1.863167
+      type: 'test'
+      ...
+    1..3
+ok 194 - mixFormation
+  ---
+  duration_ms: 3.909133
+  type: 'suite'
+  ...
+# Subtest: lerp
+    # Subtest: blends two numbers
+    ok 1 - blends two numbers
+      ---
+      duration_ms: 0.291893
+      type: 'test'
+      ...
+    1..1
+ok 195 - lerp
+  ---
+  duration_ms: 0.625293
+  type: 'suite'
+  ...
+# Subtest: stagger
+    # Subtest: has every piece at rest at both ends of a move
+    ok 1 - has every piece at rest at both ends of a move
+      ---
+      duration_ms: 0.433086
+      type: 'test'
+      ...
+    # Subtest: sends the first piece off first and brings the last in last
+    ok 2 - sends the first piece off first and brings the last in last
+      ---
+      duration_ms: 0.210752
+      type: 'test'
+      ...
+    # Subtest: never runs a piece backwards
+    ok 3 - never runs a piece backwards
+      ---
+      duration_ms: 5.167805
+      type: 'test'
+      ...
+    # Subtest: moves the pieces as one when there is no spread, or one piece
+    ok 4 - moves the pieces as one when there is no spread, or one piece
+      ---
+      duration_ms: 0.346063
+      type: 'test'
+      ...
+    1..4
+ok 196 - stagger
+  ---
+  duration_ms: 6.448208
+  type: 'suite'
+  ...
+# Subtest: mixFormation with a progress for each piece
+    # Subtest: moves each piece by its own progress and the rest by the shared one
+    ok 1 - moves each piece by its own progress and the rest by the shared one
+      ---
+      duration_ms: 0.193971
+      type: 'test'
+      ...
+    1..1
+ok 197 - mixFormation with a progress for each piece
+  ---
+  duration_ms: 0.341836
+  type: 'suite'
+  ...
+# Subtest: swing
+    # Subtest: is nothing halfway through a beat's rest
+    ok 1 - is nothing halfway through a beat's rest
+      ---
+      duration_ms: 0.193169
+      type: 'test'
+      ...
+    # Subtest: runs from minus half the sway to plus half across the rest
+    ok 2 - runs from minus half the sway to plus half across the rest
+      ---
+      duration_ms: 0.110426
+      type: 'test'
+      ...
+    # Subtest: arrives at the next beat where that beat's own rest begins
+    ok 3 - arrives at the next beat where that beat's own rest begins
+      ---
+      duration_ms: 0.098012
+      type: 'test'
+      ...
+    1..3
+ok 198 - swing
+  ---
+  duration_ms: 0.504939
+  type: 'suite'
+  ...
+# Subtest: atRest
+    # Subtest: moves within a beat, clamps dwell and leaves the source intact
+    ok 1 - moves within a beat, clamps dwell and leaves the source intact
+      ---
+      duration_ms: 0.318884
+      type: 'test'
+      ...
+    # Subtest: holds a beat without a within formation
+    ok 2 - holds a beat without a within formation
+      ---
+      duration_ms: 0.125574
+      type: 'test'
+      ...
+    1..2
+ok 199 - atRest
+  ---
+  duration_ms: 0.544152
+  type: 'suite'
+  ...
+# Subtest: every layout returns independent poses for the requested pieces
+ok 200 - every layout returns independent poses for the requested pieces
+  ---
+  duration_ms: 2.632489
+  type: 'test'
+  ...
+# Subtest: rows and grids account for piece dimensions and centre an incomplete final row
+ok 201 - rows and grids account for piece dimensions and centre an incomplete final row
+  ---
+  duration_ms: 0.654077
+  type: 'test'
+  ...
+# Subtest: scatter is repeatable from its seed and changes with another seed
+ok 202 - scatter is repeatable from its seed and changes with another seed
+  ---
+  duration_ms: 0.448775
+  type: 'test'
+  ...
+# Subtest: measure includes turned corners instead of unrotated sizes
+ok 203 - measure includes turned corners instead of unrotated sizes
+  ---
+  duration_ms: 0.240778
+  type: 'test'
+  ...
+# Subtest: measure uses all corners of a compound XYZ rotation
+ok 204 - measure uses all corners of a compound XYZ rotation
+  ---
+  duration_ms: 0.227474
+  type: 'test'
+  ...
+# Subtest: measure frames an offset piece around the origin the camera aims at
+ok 205 - measure frames an offset piece around the origin the camera aims at
+  ---
+  duration_ms: 0.271045
+  type: 'test'
+  ...
+# Subtest: looks are resolved against supplied IDs with a validated default
+ok 206 - looks are resolved against supplied IDs with a validated default
+  ---
+  duration_ms: 1.775844
+  type: 'test'
+  ...
+# Subtest: switching looks preserves other search parameters and omits the default
+ok 207 - switching looks preserves other search parameters and omits the default
+  ---
+  duration_ms: 0.330365
+  type: 'test'
+  ...
+# Subtest: projects the piece centre and both half axes for a DOM transform
+ok 208 - projects the piece centre and both half axes for a DOM transform
+  ---
+  duration_ms: 1.914342
+  type: 'test'
+  ...
+# Subtest: projection follows formation translation and piece rotation
+ok 209 - projection follows formation translation and piece rotation
+  ---
+  duration_ms: 0.413971
+  type: 'test'
+  ...
+# Subtest: turning in depth accounts for perspective instead of a fixed scale
+ok 210 - turning in depth accounts for perspective instead of a fixed scale
+  ---
+  duration_ms: 0.201925
+  type: 'test'
+  ...
+# Subtest: pieces behind the camera produce nonfinite coordinates so links can be hidden
+ok 211 - pieces behind the camera produce nonfinite coordinates so links can be hidden
+  ---
+  duration_ms: 0.178282
+  type: 'test'
+  ...
+# Subtest: one slow frame cannot reduce quality before a complete window
+ok 212 - one slow frame cannot reduce quality before a complete window
+  ---
+  duration_ms: 1.834314
+  type: 'test'
+  ...
+# Subtest: sustained slow frames reduce DPR and then shadows, with fresh evidence each time
+ok 213 - sustained slow frames reduce DPR and then shadows, with fresh evidence each time
+  ---
+  duration_ms: 0.427706
+  type: 'test'
+  ...
+# Subtest: the window forgets old fast frames and ignores invalid or hidden-tab pauses
+ok 214 - the window forgets old fast frames and ignores invalid or hidden-tab pauses
+  ---
+  duration_ms: 0.186287
+  type: 'test'
+  ...
+# Subtest: a low initial DPR never rises and can still drop expensive shadows
+ok 215 - a low initial DPR never rises and can still drop expensive shadows
+  ---
+  duration_ms: 0.250867
+  type: 'test'
+  ...
+# Subtest: random placements repeat for an index and salt, within zero and one
+ok 216 - random placements repeat for an index and salt, within zero and one
+  ---
+  duration_ms: 1.930452
+  type: 'test'
+  ...
+# Subtest: story helpers follow supplied chapters rather than global story data
+ok 217 - story helpers follow supplied chapters rather than global story data
+  ---
+  duration_ms: 1.925668
+  type: 'test'
+  ...
+# Subtest: chapter proximity covers the entire chapter and bounded travel on each side
+ok 218 - chapter proximity covers the entire chapter and bounded travel on each side
+  ---
+  duration_ms: 0.329362
+  type: 'test'
+  ...
+# Subtest: a valid story with faces has no content problems
+ok 219 - a valid story with faces has no content problems
+  ---
+  duration_ms: 0.554232
+  type: 'test'
+  ...
+# Subtest: validation reports duplicate IDs, invalid heights, missing formations and stale faces together
+ok 220 - validation reports duplicate IDs, invalid heights, missing formations and stale faces together
+  ---
+  duration_ms: 0.493218
+  type: 'test'
+  ...
+# Subtest: both rest and within must match the piece count and contain finite geometry
+ok 221 - both rest and within must match the piece count and contain finite geometry
+  ---
+  duration_ms: 0.376902
+  type: 'test'
+  ...
+# Subtest: nonfinite heights and piece indices cannot bypass numeric checks
+ok 222 - nonfinite heights and piece indices cannot bypass numeric checks
+  ---
+  duration_ms: 0.355661
+  type: 'test'
+  ...
+# Subtest: playhead
+    # Subtest: rests on the first beat at the top of the page
+    ok 1 - rests on the first beat at the top of the page
+      ---
+      duration_ms: 4.20254
+      type: 'test'
+      ...
+    # Subtest: dwell rises while the first block still reaches the bottom of the screen
+    ok 2 - dwell rises while the first block still reaches the bottom of the screen
+      ---
+      duration_ms: 0.355562
+      type: 'test'
+      ...
+    # Subtest: travels to the next beat over 0.4 of a screen
+    ok 3 - travels to the next beat over 0.4 of a screen
+      ---
+      duration_ms: 0.394013
+      type: 'test'
+      ...
+    # Subtest: rests on the second beat once the travel is done
+    ok 4 - rests on the second beat once the travel is done
+      ---
+      duration_ms: 0.298274
+      type: 'test'
+      ...
+    # Subtest: stays on the first beat above the page and the last beat below it
+    ok 5 - stays on the first beat above the page and the last beat below it
+      ---
+      duration_ms: 0.25781
+      type: 'test'
+      ...
+    # Subtest: gives a resting first beat for input it cannot use
+    ok 6 - gives a resting first beat for input it cannot use
+      ---
+      duration_ms: 0.132967
+      type: 'test'
+      ...
+    # Subtest: never jumps or runs backwards as the page scrolls
+    ok 7 - never jumps or runs backwards as the page scrolls
+      ---
+      duration_ms: 0.570552
+      type: 'test'
+      ...
+    # Subtest: gives the same answer at any screen size
+    ok 8 - gives the same answer at any screen size
+      ---
+      duration_ms: 0.326317
+      type: 'test'
+      ...
+    1..8
+ok 223 - playhead
+  ---
+  duration_ms: 10.790837
+  type: 'suite'
+  ...
+# Subtest: phase
+    # Subtest: runs from 2i to 2i+1 while the scene rests on beat i
+    ok 1 - runs from 2i to 2i+1 while the scene rests on beat i
+      ---
+      duration_ms: 0.341406
+      type: 'test'
+      ...
+    # Subtest: runs from 2i+1 to 2i+2 while the scene travels on
+    ok 2 - runs from 2i+1 to 2i+2 while the scene travels on
+      ---
+      duration_ms: 0.262629
+      type: 'test'
+      ...
+    # Subtest: only grows, and never jumps, as the page is scrolled
+    ok 3 - only grows, and never jumps, as the page is scrolled
+      ---
+      duration_ms: 7.317185
+      type: 'test'
+      ...
+    1..3
+ok 224 - phase
+  ---
+  duration_ms: 8.174831
+  type: 'suite'
+  ...
+# Subtest: place
+    # Subtest: undoes phase
+    ok 1 - undoes phase
+      ---
+      duration_ms: 0.265063
+      type: 'test'
+      ...
+    # Subtest: agrees with the playhead it came from, all the way down the page
+    ok 2 - agrees with the playhead it came from, all the way down the page
+      ---
+      duration_ms: 1.766637
+      type: 'test'
+      ...
+    # Subtest: stays inside the paper
+    ok 3 - stays inside the paper
+      ---
+      duration_ms: 0.181387
+      type: 'test'
+      ...
+    1..3
+ok 225 - place
+  ---
+  duration_ms: 2.398863
+  type: 'suite'
+  ...
+# Subtest: weight
+    # Subtest: is 1 on a beat and fades to 0 a beat away
+    ok 1 - is 1 on a beat and fades to 0 a beat away
+      ---
+      duration_ms: 0.159246
+      type: 'test'
+      ...
+    1..1
+ok 226 - weight
+  ---
+  duration_ms: 0.262308
+  type: 'suite'
+  ...
+# Subtest: dwellAt
+    # Subtest: is 0 before a beat, its dwell while resting on it, 1 after
+    ok 1 - is 0 before a beat, its dwell while resting on it, 1 after
+      ---
+      duration_ms: 0.125133
+      type: 'test'
+      ...
+    # Subtest: is 1 for the beat being left
+    ok 2 - is 1 for the beat being left
+      ---
+      duration_ms: 0.12369
+      type: 'test'
+      ...
+    1..2
+ok 227 - dwellAt
+  ---
+  duration_ms: 0.428898
+  type: 'suite'
+  ...
+# Subtest: approach
+    # Subtest: lands on the target on the first frame
+    ok 1 - lands on the target on the first frame
+      ---
+      duration_ms: 0.205012
+      type: 'test'
+      ...
+    # Subtest: moves part of the way on later frames
+    ok 2 - moves part of the way on later frames
+      ---
+      duration_ms: 0.098312
+      type: 'test'
+      ...
+    # Subtest: does not overshoot after a long pause
+    ok 3 - does not overshoot after a long pause
+      ---
+      duration_ms: 0.081191
+      type: 'test'
+      ...
+    # Subtest: holds still when no time has passed
+    ok 4 - holds still when no time has passed
+      ---
+      duration_ms: 0.068488
+      type: 'test'
+      ...
+    # Subtest: recovers from a value that is not a number
+    ok 5 - recovers from a value that is not a number
+      ---
+      duration_ms: 0.074579
+      type: 'test'
+      ...
+    # Subtest: finishes a stationary beat arrival so its resting content can appear
+    ok 6 - finishes a stationary beat arrival so its resting content can appear
+      ---
+      duration_ms: 0.167792
+      type: 'test'
+      ...
+    1..6
+ok 228 - approach
+  ---
+  duration_ms: 0.897931
+  type: 'suite'
+  ...
+# Subtest: settle
+    # Subtest: leaves a resting scene where it is
+    ok 1 - leaves a resting scene where it is
+      ---
+      duration_ms: 0.125213
+      type: 'test'
+      ...
+    # Subtest: puts a travelling scene on the nearer beat
+    ok 2 - puts a travelling scene on the nearer beat
+      ---
+      duration_ms: 0.088374
+      type: 'test'
+      ...
+    1..2
+ok 229 - settle
+  ---
+  duration_ms: 0.29031
+  type: 'suite'
+  ...
+# Subtest: gathered
+    # Subtest: is whole while the scene rests on the beat
+    ok 1 - is whole while the scene rests on the beat
+      ---
+      duration_ms: 0.167422
+      type: 'test'
+      ...
+    # Subtest: is as far as the last page to arrive has come
+    ok 2 - is as far as the last page to arrive has come
+      ---
+      duration_ms: 0.087102
+      type: 'test'
+      ...
+    # Subtest: falls as soon as the first page has set off
+    ok 3 - falls as soon as the first page has set off
+      ---
+      duration_ms: 0.075631
+      type: 'test'
+      ...
+    # Subtest: is nothing for a beat the scene is neither on, coming to nor leaving
+    ok 4 - is nothing for a beat the scene is neither on, coming to nor leaving
+      ---
+      duration_ms: 0.083976
+      type: 'test'
+      ...
+    1..4
+ok 230 - gathered
+  ---
+  duration_ms: 0.536689
+  type: 'suite'
+  ...
+# Subtest: wrapText
+    # Subtest: breaks between words so no line is wider than the measure
+    ok 1 - breaks between words so no line is wider than the measure
+      ---
+      duration_ms: 1.48872
+      type: 'test'
+      ...
+    # Subtest: gives a word too long for the measure a line of its own
+    ok 2 - gives a word too long for the measure a line of its own
+      ---
+      duration_ms: 0.167372
+      type: 'test'
+      ...
+    # Subtest: ignores runs of space and gives nothing for no text
+    ok 3 - ignores runs of space and gives nothing for no text
+      ---
+      duration_ms: 0.253481
+      type: 'test'
+      ...
+    1..3
+ok 231 - wrapText
+  ---
+  duration_ms: 2.932906
+  type: 'suite'
+  ...
+# Subtest: intoColumns
+    # Subtest: fills one column, then the next
+    ok 1 - fills one column, then the next
+      ---
+      duration_ms: 0.306901
+      type: 'test'
+      ...
+    # Subtest: drops what does not fit, and leaves short text in the first column
+    ok 2 - drops what does not fit, and leaves short text in the first column
+      ---
+      duration_ms: 0.196746
+      type: 'test'
+      ...
+    1..2
+ok 232 - intoColumns
+  ---
+  duration_ms: 0.841716
+  type: 'suite'
+  ...
+# Subtest: fitSize
+    # Subtest: takes the largest size at which the text fits the lines it has
+    ok 1 - takes the largest size at which the text fits the lines it has
+      ---
+      duration_ms: 0.347396
+      type: 'test'
+      ...
+    # Subtest: settles for the smallest size when nothing fits
+    ok 2 - settles for the smallest size when nothing fits
+      ---
+      duration_ms: 0.264291
+      type: 'test'
+      ...
+    1..2
+ok 233 - fitSize
+  ---
+  duration_ms: 0.931152
+  type: 'suite'
+  ...
+# Subtest: fitLine
+    # Subtest: takes the largest size at which the text is no wider than the line
+    ok 1 - takes the largest size at which the text is no wider than the line
+      ---
+      duration_ms: 0.757555
+      type: 'test'
+      ...
+    # Subtest: shrinks a single long word, which wrapping would leave as it is
+    ok 2 - shrinks a single long word, which wrapping would leave as it is
+      ---
+      duration_ms: 0.255676
+      type: 'test'
+      ...
+    # Subtest: falls back to the smallest size when none fits
+    ok 3 - falls back to the smallest size when none fits
+      ---
+      duration_ms: 0.292915
+      type: 'test'
+      ...
+    1..3
+ok 234 - fitLine
+  ---
+  duration_ms: 1.537607
+  type: 'suite'
+  ...
+# Subtest: primaryFamily
+    # Subtest: keeps the first family and drops the fallback next/font adds
+    ok 1 - keeps the first family and drops the fallback next/font adds
+      ---
+      duration_ms: 0.332042
+      type: 'test'
+      ...
+    # Subtest: is the generic family alone when the variable is not set
+    ok 2 - is the generic family alone when the variable is not set
+      ---
+      duration_ms: 0.155679
+      type: 'test'
+      ...
+    1..2
+ok 235 - primaryFamily
+  ---
+  duration_ms: 0.649262
+  type: 'suite'
+  ...
+# Subtest: intoRows
+    # Subtest: keeps every item whole and in order
+    ok 1 - keeps every item whole and in order
+      ---
+      duration_ms: 0.234036
+      type: 'test'
+      ...
+    # Subtest: starts a new row when the next item and its gap would not fit
+    ok 2 - starts a new row when the next item and its gap would not fit
+      ---
+      duration_ms: 0.108752
+      type: 'test'
+      ...
+    # Subtest: counts the gap between items and not after the last
+    ok 3 - counts the gap between items and not after the last
+      ---
+      duration_ms: 0.098934
+      type: 'test'
+      ...
+    # Subtest: gives an item wider than the row a row to itself
+    ok 4 - gives an item wider than the row a row to itself
+      ---
+      duration_ms: 0.110095
+      type: 'test'
+      ...
+    # Subtest: makes no rows of nothing
+    ok 5 - makes no rows of nothing
+      ---
+      duration_ms: 0.082744
+      type: 'test'
+      ...
+    1..5
+ok 236 - intoRows
+  ---
+  duration_ms: 0.786945
+  type: 'suite'
+  ...
+# Subtest: later tall beats sample their whole dwell from arrival, not just their block top
+ok 237 - later tall beats sample their whole dwell from arrival, not just their block top
+  ---
+  duration_ms: 3.02599
+  type: 'test'
+  ...
+# Subtest: empty request ignore does not suppress HTTP errors or failures without responses
+ok 238 - empty request ignore does not suppress HTTP errors or failures without responses
+  ---
+  duration_ms: 0.552367
+  type: 'test'
+  ...
+# Subtest: only explicitly blocked or ignored requests are omitted
+ok 239 - only explicitly blocked or ignored requests are omitted
+  ---
+  duration_ms: 0.281884
+  type: 'test'
+  ...
+# Subtest: only disabled-JavaScript CSP failures for same-origin Next scripts are expected
+ok 240 - only disabled-JavaScript CSP failures for same-origin Next scripts are expected
+  ---
+  duration_ms: 0.658595
+  type: 'test'
+  ...
+# Subtest: every matrix case expects the declared IDs, including a beat missing from every rendering
+ok 241 - every matrix case expects the declared IDs, including a beat missing from every rendering
+  ---
+  duration_ms: 1.16592
+  type: 'test'
+  ...
+# Subtest: fixture-specific probes require explicit content contracts
+ok 242 - fixture-specific probes require explicit content contracts
+  ---
+  duration_ms: 0.342097
+  type: 'test'
+  ...
+# Subtest: scaffold copies an empty destination and excludes generated trees
+ok 243 - scaffold copies an empty destination and excludes generated trees
+  ---
+  duration_ms: 45.34367
+  type: 'test'
+  ...
+# Subtest: scaffold preserves an existing docs/story directory
+ok 244 - scaffold preserves an existing docs/story directory
+  ---
+  duration_ms: 13.467016
+  type: 'test'
+  ...
+# Subtest: a file conflict prevents every write, including earlier alphabetic files
+ok 245 - a file conflict prevents every write, including earlier alphabetic files
+  ---
+  duration_ms: 4.621269
+  type: 'test'
+  ...
+# Subtest: scaffold refuses a symlink destination ancestor without following it
+ok 246 - scaffold refuses a symlink destination ancestor without following it
+  ---
+  duration_ms: 8.243144
+  type: 'test'
+  ...
+# Subtest: CLI help succeeds without creating a directory or copying files
+ok 247 - CLI help succeeds without creating a directory or copying files
+  ---
+  duration_ms: 90.605234
+  type: 'test'
+  ...
+# Subtest: CLI rejects unknown flags and invalid argument counts without writes
+ok 248 - CLI rejects unknown flags and invalid argument counts without writes
+  ---
+  duration_ms: 182.475985
+  type: 'test'
+  ...
+1..248
+# tests 310
+# suites 31
+# pass 310
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11993.662008

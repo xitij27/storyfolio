@@ -5,7 +5,7 @@ import { lstat, mkdir, readFile, readdir } from "node:fs/promises";
 import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
-import { codexArgs, disabledSkills, EFFORT, JUDGE_MODEL, summariseCodex } from "./lib/codex.mjs";
+import { codexArgs, disabledSkills, EFFORT, finalCodexMessage, JUDGE_MODEL, summariseCodex } from "./lib/codex.mjs";
 import { buildTaskIdentity, hash, json, readTurnHistory, regularBytes, safeId, safePath, validateCase, verifyInputs, writeNew } from "./lib/build.mjs";
 import { assembleBuildJudgePrompt, buildJudgementSchema, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./lib/build-score.mjs";
 import { SOURCE_EXCLUSIONS, sourcePathExcluded } from "./lib/build-capture.mjs";
@@ -13,7 +13,7 @@ import { createPagedEvidence, verifyPagedEvidence, verifyPageCoverage } from "./
 
 export const JUDGE_TIMEOUT_MS = 600000;
 export const JUDGE_IMPLEMENTATION_FILES = [
-  "evals/codex-build-judge.mjs", "evals/lib/build-score.mjs", "evals/lib/build-capture.mjs",
+  "evals/codex-build-judge.mjs", "evals/lib/codex.mjs", "evals/lib/build-score.mjs", "evals/lib/build-capture.mjs",
   "evals/lib/judge-transport.mjs", "evals/judge-evidence-server.mjs",
   "evals/prompts/build-criteria.md", "evals/prompts/judge-build.md",
 ];
@@ -313,13 +313,15 @@ export async function runBuildJudge(prepared, { invoke = invokeBuildJudge, disab
     const turn = summariseCodex(response.stdout, response.code);
     Object.assign(result, { usage: turn.usage, durationMs: response.durationMs, sessionId: turn.sessionId, timedOut: response.timedOut ?? false, interruptedBy: response.interruptedBy ?? null });
     await writeNew(join(directory, "reply.md"), turn.reply + "\n");
-    if (turn.failed || !turn.sessionId) throw new Error(`Judge did not complete a fresh session: ${json(turn.error)}`);
+    if (turn.failed || !turn.sessionId || response.timedOut || response.interruptedBy || response.spawnError) throw new Error(`Judge did not complete a fresh session: ${json(turn.error)}`);
     if (prepared.bundle) {
       if (hash(await regularBytes(directory, "evidence-bundle.json")) !== prepared.bundleSha256 || hash(await regularBytes(directory, "full-prompt.md")) !== prepared.bundle.prompt.sha256) throw new Error("Judge evidence bundle changed during invocation");
       result.delivery = verifyPageCoverage(prepared.bundle, (await regularBytes(directory, "page-delivery.jsonl")).toString("utf8"));
       await writeNew(join(directory, "delivery.json"), json({ ...result.delivery, meaning: "Every page was emitted by the accessor. This does not establish semantic reading, model-history retention, comprehension or visual review." }));
     }
-    const judgement = JSON.parse(turn.reply);
+    const finalMessage = finalCodexMessage(response.stdout, response.code);
+    await writeNew(join(directory, "final-message.txt"), finalMessage);
+    const judgement = JSON.parse(finalMessage);
     const problems = validateBuildJudgement(judgement, { turnCount: prepared.packet.turnCount, taskKind: prepared.packet.taskKind, requestedStops: prepared.packet.requestedStops, refusalTurns: prepared.packet.refusalTurns, evidence: prepared.evidence, sourcePacketAvailable: false });
     if (problems.length) throw new Error(`Invalid judgement: ${problems.join("; ")}`);
     await writeNew(join(directory, "judgement.json"), json({ schemaVersion: 1, judge: JUDGE_MODEL, reasoningEffort: EFFORT, usage: turn.usage, durationMs: response.durationMs, costUsd: null, inputDigest: prepared.frozen.digest, judgement }));

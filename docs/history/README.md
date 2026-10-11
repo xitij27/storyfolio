@@ -43,10 +43,16 @@ The [five-beat baseline launch approval](2026-10-11-build-baseline-launch-approv
 records the later explicit approval for one frozen actor turn and a
 conditionally eligible text judge. It does not allow retries, continuation,
 additional candidates or a push.
-Its single actor attempt is retained as incomplete in the
-[baseline result](../../evals/runs/codex-bench-depth-baseline-1/findings.md):
-the actor attempted a blocked registry request before implementation, so no
-judge was eligible.
+Its single actor attempt actually completed. The earlier incomplete report
+was premature and is corrected in the
+[reconciliation and development record](2026-10-11-baseline-reconciliation-and-development.md).
+That record preserves the author's full-access direction and links the
+[verbatim preceding handover](2026-10-11-before-baseline-reconciliation-handover.md)
+and erroneous historical findings. The
+[current baseline result](../../evals/runs/codex-bench-depth-baseline-1/findings.md)
+separates completed actor evidence, independent checks, the single judge's
+parser failure and the separate terminal-message audit. No paid retry or
+push is inferred from the latest local-development authorization.
 
 Captured on 10 October 2026 from the working tree at commit
 `4c1007b6607075e895c892931f72db00ef5d7b5c`. The handover included the other

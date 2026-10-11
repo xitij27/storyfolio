@@ -395,3 +395,45 @@ or dollar caps; the one-turn token threshold cannot bound that turn's spend.
 Local delivery proof does not establish model context fit, judging quality
 or prototype quality. Any later matched comparison must hold this common
 engine, fixture, request, measurement and transport fixed.
+
+## Executed baseline and measurement repair, 11 October 2026
+
+The author subsequently [approved the bounded test](../../history/2026-10-11-build-baseline-launch-approval.md).
+One unchanged-skill actor completed the five-beat prototype in 766.005 seconds.
+The assistant's premature setup-only failure report is explicitly corrected
+and preserved [historically](../../history/2026-10-11-baseline-reconciliation-and-development.md).
+The [actual findings](../../../evals/runs/codex-bench-depth-baseline-1/findings.md)
+retain completed source, every actor-owned capture tree, usage, source and
+access audits, and separate coordinator assessment. One generic cross-run
+contact-sheet helper was read; no held-out design read is shown by saved
+commands, but strict fixture-only independence cannot be claimed.
+
+The conditionally authorized text judge received all 23 evidence pages and
+completed in 318.070 seconds. The evaluator then failed to parse progress
+updates concatenated with its final JSON. Preserve that raw failure. A
+separate no-model audit validates the exact terminal response against the
+frozen schema, criterion eligibility and citation bodies: 14 pass, one fail,
+ten unobserved. These are reviewed text judgements, not pixel assessment,
+new author approval or a successful original runner result.
+
+The author's latest full-access direction authorizes continued local
+development after the tests under this plan. The demonstrated parsing
+defect is repaired with [local regression evidence](../../../evals/runs/judge-response-parsing-1/findings.md).
+It changes no skill instructions, engine, original evidence or frozen
+measurement. Future execution must freeze the new evaluator; this is not
+permission to replace the old failed attempt or claim a matched experiment
+with changed evaluator bytes. Separate retained-evidence analysis of both
+arms can be planned explicitly if a later comparison needs the repair.
+
+The coordinator checks also distinguish designed keyboard-only skip-link
+behavior from the diagnostic's unconditional pointer requirement. Do not
+turn an evaluator's modality mismatch into a portfolio defect or quietly
+relax the frozen contract. The current findings determine which observations
+are pass, fail or unobserved before any prospective measurement change.
+
+The one-appearance diagnostic still does not complete stops 4, 5 or 6.
+Do not advance to the early-journey case merely because source-level text
+criteria pass: finish the visual attribution first. If that quality bar
+fails, the earlier "What follows the baseline" branch governs, with the
+smallest supported candidate and a separate rerun decision. No additional
+paid conversation or push has been authorized.

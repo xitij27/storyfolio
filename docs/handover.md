@@ -25,6 +25,10 @@ preserves `3e23cc9` verbatim before the authorized local judge-delivery repair.
 The [pre-freeze handover](history/2026-10-11-before-build-freeze-handover.md)
 preserves `6d419ea` verbatim before the authorized final local preparation.
 
+The [pre-reconciliation handover](history/2026-10-11-before-baseline-reconciliation-handover.md)
+preserves `b81d2b7` verbatim, including the premature incomplete-actor report
+corrected in [the reconciliation record](history/2026-10-11-baseline-reconciliation-and-development.md).
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -155,11 +159,37 @@ The author subsequently approved the proposed paid envelope, recorded in the
 It permits exactly one fresh actor turn and at most one validated text judge,
 with no retry or continuation. Results, including a failure to launch or
 complete, must be retained in the frozen cohort before any new decision.
-That actor turn has now been spent and is incomplete: it attempted a blocked
-registry request during `npm ci` before implementing anything. No judge was
-eligible or launched. The retained [actor result](../evals/runs/codex-bench-depth-baseline-1/findings.md)
-records the raw evidence and the fact that this is not a test of build quality.
-Any follow-up requires a new protocol and approval.
+The same actor turn completed in 766.005 seconds, after recovering from the
+blocked registry request with the offline cache. The assistant's earlier
+incomplete report was premature, not a second actor attempt. The
+[corrected findings](../evals/runs/codex-bench-depth-baseline-1/findings.md)
+retain the final source, raw events, actor-owned checks and separate
+coordinator assessment. The one authorized judge received all 23 evidence
+pages, but the runner failed while parsing concatenated progress messages
+and final JSON. Its raw failed result is unchanged; a separate audit
+validates the terminal JSON against the frozen evidence and rules. Neither
+text assessment nor technical checks establish visual acceptance.
+
+The independent browser check completed all seven conditions with unchanged
+source. Its frozen verdict fails in every condition on the same intentionally
+focus-only skip-link pointer trial, while keyboard activation works. The
+separate modality review attributes that checker mismatch without rewriting
+the results. Original-image review also finds genuine visual weaknesses:
+the bench relationship is mostly in prose beside disconnected labels, and
+console wording overlaps during sampled transitions. This is not a visual
+pass or approval to advance to the full-site gate. The first interrupted
+capture and a caught signal in the completed second attempt remain recorded.
+
+The author then authorized continued development after the tests, with
+[full local access](history/2026-10-11-baseline-reconciliation-and-development.md).
+The demonstrated judge-response parsing defect is now repaired, with
+deterministic regression evidence in the
+[parsing study](../evals/runs/judge-response-parsing-1/findings.md).
+The next local measurement work concerns focus-only skip-link applicability,
+as the [post-baseline plan](superpowers/plans/2026-10-11-post-baseline-attribution.md) records.
+The shipped skill and engine remain unchanged. New behavioral instructions
+still require a supported miss and a separately decided matched rerun;
+there is no new paid allowance or push authorization.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -424,6 +454,11 @@ The subsequent [explicit paid-run approval](history/2026-10-11-build-baseline-la
 authorizes one actor and a conditionally eligible judge only. It does not
 authorize retry, continuation, instruction change or push. The preceding
 approval boundaries remain historical records.
+The author's subsequent full-access direction authorizes continuing local
+development after test assessment under the existing plan, recorded
+[verbatim here](history/2026-10-11-baseline-reconciliation-and-development.md).
+It is not approval of the new prototype's appearance or physical-phone
+behavior, and does not reopen the consumed actor/judge allowance.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -479,58 +514,53 @@ repository change was made for this planning amendment.
 
 ## Start the next session
 
-The five-beat fixture story on port 3012 is accepted for narrative depth and
-direction at `fd03055`, with the [physical-phone check now confirmed](history/2026-10-11-fixture-phone-approval.md).
-The bounded prototype review gate is closed. The next planning step is a
-bounded Stage 3 build-workflow protocol using this as a quality reference,
-with explicit scope, question, stopping conditions and cost decision before
-any paid run. These approvals do not request further implementation or
-permit a push. The non-sheet whole-site proof and packaging remain open.
-That planning step is now authorized and the
-[five-beat reproduction plan](superpowers/plans/2026-10-11-build-workflow-reproduction.md)
-is drafted. Its approved local preparation now has
-[implemented tooling and retained diagnostics](../evals/runs/build-workflow-preparation-1/findings.md).
-The shared-controls correction is now authorized and implemented, with
-[separate engine evidence](../evals/engine/shared-controls-1/findings.md).
-The lossless transport correction is also now authorized, implemented and
-[locally verified](../evals/runs/judge-transport-1/findings.md). The subsequently
-authorized [final local preparation](../evals/runs/build-workflow-freeze-1/findings.md)
-now freezes the corrected common engine, current evaluator and unchanged
-case in `codex-bench-depth-baseline-1`, with capability proof in its actual
-external workspace. Use that study's exact recheck commands and retain its
-separately recorded `TMPDIR`; do not recreate the workspace or silently
-refresh the frozen inputs. Recheck current source, CLI, Node, environment,
-disabled skills and retained setup evidence before any newly authorized turn.
+Read [AGENTS.md](../AGENTS.md), this page and the
+[corrected baseline findings](../evals/runs/codex-bench-depth-baseline-1/findings.md).
+The five-beat test is spent: one completed actor and one delivered judge
+response whose original runner failed JSON parsing. Its complete evidence,
+separate final-message audit, usage, cross-run tooling caveat and independent
+technical/visual assessment are retained. Do not resume, retry or overwrite
+the cohort, or ask for the already granted launch approval again.
 
-Next obtain explicit paid-run approval: one fresh `gpt-6.1-sol` medium
-actor turn with a fifteen-minute process deadline, then at most one fresh
-`gpt-6-astra` medium text judge with a ten-minute deadline after unpaid
-validation of the complete actual packet. No continuation, correction or
-retry is included. These bound process time and invocations, not token
-consumption or dollars. The one-turn token threshold is not a hard spending
-cap. Do not reinterpret phone, planning or local-preparation approval as
-that cost decision. No actor or judge has started in the prepared cohort.
+The [judge parser repair](../evals/runs/judge-response-parsing-1/findings.md)
+is implemented and passes 310 repository tests. The author's
+[full-access direction](history/2026-10-11-baseline-reconciliation-and-development.md)
+permits continued local development under the reproduction plan. Read the
+[control-modality review](../evals/runs/codex-bench-depth-baseline-1/checker-modality-review.md)
+before future measurement work: the frozen checker requires pointer access
+to an inherited keyboard-focus-only skip link. Preserve its actual failed
+verdict separately from that attribution. The proposed repair and negative
+regressions are not yet implemented.
+The [post-baseline plan](superpowers/plans/2026-10-11-post-baseline-attribution.md)
+orders that local repair, information-boundary preparation and the later
+behavioral decision, without inventing a new paid allowance.
 
-Hold the frozen engine, fixture, request, evaluator and transport fixed in
-any later matched comparison. Do not rewrite the old failing probe or
-attribute changed-engine arms to a skill effect. A future complete packet
-needs its own transport preflight; historical local calibration does not
-establish model context fit, history retention, judging quality, token cost
-or deadline feasibility. Configuration isolation is not a filesystem read
-jail, and future actor evidence must be checked for held-out material access.
-Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
+Follow the baseline findings' quality attribution before choosing the next
+behavioral experiment. Source-level passes do not establish a convincing
+visual explanation or justify advancing to early-journey support. Do not
+add skill prose for behavior that already passes, or treat environment and
+measurement failures as actor instruction defects. New paid work requires
+the plan's specific question, scope and cost decision. No additional paid
+allowance or push is inferred from full filesystem access.
+
+The accepted manual five-beat prototype at `fd03055`, preview port 3012,
+remains the narrative/visual reference with its
+[physical-phone confirmation](history/2026-10-11-fixture-phone-approval.md).
+That approval does not transfer to the new actor output. Its
+[depth findings](../evals/runs/visual-recovery-depth-1/findings.md),
 [first prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md)
-and [setup](../prototypes/fixture-study/README.md). The author found the first
-version better visually but wanted more story depth. The new five sections
-develop scheduling, bench work, evidence provenance and bounded sample scope.
-The author has now accepted that revision. Its printing is fixed
-across beats after reverse-scroll review caught overlapping text during
-crossfades. Connectors now wait for positive clearance between parts after
-a later frame exposed a reversed arrow inside the overlapping assembly.
-Desktop/phone controls and movement, short view and still modes
-have source-bound capture evidence, separate from the author's phone report.
-That report supplies no device/browser details or measured frame rate. It
-does not restart the paid build cohort or change the planning-only skill.
+and [setup](../prototypes/fixture-study/README.md) retain the reviewed
+printing, connector, movement, phone and fallback observations. No device
+details or measured frame rate were supplied by the author.
+
+Keep the old frozen engine, fixture, request and evaluator intact. The
+parser repair changes future evaluator identity; any common retrospective
+analysis or new measurement baseline must be explicitly labelled, not
+passed off as an unchanged skill-only comparison. Configuration isolation
+is not a filesystem read jail. Every new actor record needs its own access
+audit and every judge packet its own complete-delivery preflight.
+Supported build activation, three implemented looks, three whole-beat
+wording options, the non-sheet full journey and packaging remain open.
 
 On 11 October the author asked about token consumption for reviewing and
 building portfolios. The [saved usage audit](../evals/runs/codex-token-usage-audit-1/findings.md)
@@ -581,6 +611,13 @@ verifier. The actual prepared sandbox passes local HTTP, blocked external
 HTTPS, production build and starter-browser checks. Its nine inspected
 images establish setup capability only. The final source/environment audit
 and retained proof are linked from that study; no paid execution is implied.
+The subsequent [parser-repair checkpoint](../evals/runs/judge-response-parsing-1/repository-verification/result.json)
+passes 310 tests across 31 suites, the skill, people and fixture checks,
+and frozen actor/judge artifact verification. It retains the initial host
+Node TypeScript-loading failure separately and uses the existing native
+Node binary for the successful full suite. Historical skill/engine,
+accepted prototype and frozen input bytes are unchanged. These engineering
+tests do not establish visual acceptance of the new five-beat output.
 The visual-quality review repeated the required checks: all 246 tests,
 the skill check and the people check pass. Its
 [preservation record](../evals/runs/codex-visual-quality-review-1/verification.json)

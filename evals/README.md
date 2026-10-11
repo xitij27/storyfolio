@@ -327,15 +327,23 @@ setup data is byte-bound to the retained coordinator record. Generated
 trees remain explicitly excluded from source auditing; configuration
 isolation is not a filesystem read jail.
 
-The paid envelope is still unapproved. The proposed next allowance is one
-fresh `gpt-6.1-sol` medium actor turn with a fifteen-minute deadline, then
-at most one fresh `gpt-6-astra` medium text judge with a ten-minute deadline
-after unpaid validation of the complete actual packet. No continuation,
-correction or retry is included. These bound process time and invocations,
-not usage or dollars; the one-turn token threshold is not a hard spending
-cap. No `--turn` or paid judge invocation follows from local preparation.
-The frozen prospective fixture/protocol wording remains unchanged; current
-preparation status and remaining gates are recorded in the freeze study.
+The author subsequently approved that bounded envelope and it is consumed:
+one completed Sol medium actor and one Astra medium text judgement attempt
+after complete-packet preflight. The
+[actual findings](runs/codex-bench-depth-baseline-1/findings.md) supersede the
+premature incomplete-actor report. All 23 judge pages were delivered; the
+original runner then failed while parsing commentary plus terminal JSON.
+The failed raw result and separate frozen-rule terminal-message audit are
+preserved. Do not run `--turn`, continue, retry or rejudge this cohort.
+
+The [local parser repair](runs/judge-response-parsing-1/findings.md) applies
+to future frozen evaluator versions, not historical replacement results.
+The [post-baseline plan](../docs/superpowers/plans/2026-10-11-post-baseline-attribution.md)
+separates visual attribution, the focus-only skip-link measurement issue,
+information-boundary preparation and any later paid decision. Full local
+access does not create a new paid allowance. The one-turn threshold was
+not a hard spending cap; actual cached, uncached and output usage is saved.
+Frozen prospective protocol wording remains unchanged as historical input.
 
 ### Historical approved build continuation
 

@@ -1,0 +1,41 @@
+(node:33) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.ts took 21ms
+
+  Creating an optimized production build ...
+(node:33) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:75) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ Compiled successfully in 1971ms
+  Running TypeScript ...
+  Finished TypeScript in 1838ms ...
+  Collecting page data using 5 workers ...
+(node:120) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:123) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:127) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:134) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:141) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  Generating static pages using 5 workers (0/3) ...
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+Error: Invalid story: id used twice: question; id used twice: scheduling; id used twice: bench; id used twice: evidence; id used twice: scope
+    at w (components/story/story.tsx:22:28)
+  20 | export function Story({ bundle, children }: { bundle: StoryBundle; children: ReactNode }) {
+  21 |   const issues = useMemo(() => checkBundle(bundle), [bundle]);
+> 22 |   if (issues.length) throw new Error(`Invalid story: ${issues.join("; ")}`);
+     |                            ^
+  23 |   const rootRef = useRef<HTMLDivElement>(null);
+  24 |   const headRef = useRef<Playhead>({ beat: 0, dwell: 0 });
+  25 |   const stageRef = useRef<Stage>({ viewport: 0, header: 0, captions: [] }); {
+  digest: '4131837653'
+}
+Export encountered an error on /page: /, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null

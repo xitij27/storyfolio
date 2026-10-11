@@ -1,0 +1,14 @@
+{
+  "command": "node --test evals/lib/codex.test.mjs",
+  "node": "v22.22.1",
+  "exitCode": 1,
+  "tests": 7,
+  "pass": 5,
+  "fail": 2,
+  "failedTests": [
+    "final Codex message excludes commentary while the historical aggregate stays intact",
+    "final Codex message never searches earlier messages or strips non-JSON wrappers"
+  ],
+  "error": "codex.finalCodexMessage is not a function",
+  "qualification": "The broad rejection test also passes when the helper is absent because TypeError is an Error. Its pre-fix pass is not evidence of correct rejection handling; the new positive tests fail, and the repaired suite must exercise it with the helper present."
+}

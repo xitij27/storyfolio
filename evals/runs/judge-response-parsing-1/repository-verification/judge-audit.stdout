@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "modelCalls": 0,
+  "writes": false,
+  "date": "2026-10-11",
+  "meaning": "Coordinator derivative validates the existing final message against frozen helpers. Original runner result remains incomplete; this is not a rerun or official replacement judgement.",
+  "frozenInputDigest": "57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e",
+  "judgeSessionId": "01a12c9c-a6bf-7672-b00c-3bf938ddcb5b",
+  "finalMessage": {
+    "eventId": "item_26",
+    "streamLine": 53,
+    "characters": 21770,
+    "sha256": "0a465061efc61c63e47ba24d7f4a3b1cc715b9975bb93adcef66c21b03c1defa",
+    "derivativeBytesSha256": "502b478675bd72ad033b5b90e44cdfd32204a9f2436bea06b2f7bff36dd3e813"
+  },
+  "messageCount": 3,
+  "originalRunnerComplete": false,
+  "originalRunnerError": "SyntaxError: Unexpected token 'I', \"I’ll read \"... is not valid JSON",
+  "processExit": 0,
+  "durationMs": 318070,
+  "usage": {
+    "input_tokens": 2673456,
+    "cached_input_tokens": 2375552,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5773,
+    "reasoning_output_tokens": 185
+  },
+  "inputArtifactCount": 570,
+  "judgeArtifactCount": 13,
+  "documents": 60,
+  "delivery": {
+    "complete": true,
+    "count": 23,
+    "receiptCount": 24,
+    "sha256": "2b071c4caf2c46fd5f784e218ae452ff250a954afafb2d5210cf5b28d53ffe3b"
+  },
+  "fullPrompt": {
+    "sha256": "6cc9be6f40516bb7ed8d10fc23b942f10b9e63fde38ce8078246e567b7cb08d1",
+    "bytes": 744403,
+    "codeUnits": 744204
+  },
+  "schemaEligibilityCitationProblems": [],
+  "automaticAcceptanceSupplied": false,
+  "derivativeCounts": {
+    "pass": 14,
+    "fail": 1,
+    "unobserved": 10
+  },
+  "failedCriteria": [
+    "preflight_skills"
+  ],
+  "hashes": {
+    "stream.jsonl": "1739f2114940ff6613c3ace4061248f091eefd2aa5803332a9ef9396aae561f4",
+    "result.json": "f8acb96276b37ba646c904007c00739b0925f730bc21b750f8cc3845b986ab1a",
+    "input-manifest.json": "a496d0b8612f7ce23bb5ba2cdc8d0ce7cd796f6343bc10eb82747be80ee42b38",
+    "evidence-bundle.json": "ea89f8c8aad68de4abf13e2fb1b10aa7021d535949917bd9bc2d0bbaee38bc11",
+    "full-prompt.md": "6cc9be6f40516bb7ed8d10fc23b942f10b9e63fde38ce8078246e567b7cb08d1",
+    "schema.json": "6923c296d4105fdc6ad8e222ecb671d22c7ae1fb3889bba97d29c73a2d3a9ab2",
+    "reply.md": "2a482b2d70e826b69ea2534f65f3584a1b38451bb2cb9ccc9352a805b2fb524d",
+    "page-delivery.jsonl": "2b071c4caf2c46fd5f784e218ae452ff250a954afafb2d5210cf5b28d53ffe3b"
+  },
+  "limitations": [
+    "Exact schema, eligible statuses and whitespace-normalized citation matching do not establish correctness of each judgement.",
+    "The judge received actor checks but no coordinator acceptance manifest, screenshot pixels, physical-phone evidence or author approval.",
+    "Page receipt and ordered calls do not establish model comprehension or history retention.",
+    "The prior-run contact-sheet helper exposure remains a reproduction caveat; no held-out visual solution read was established."
+  ]
+}

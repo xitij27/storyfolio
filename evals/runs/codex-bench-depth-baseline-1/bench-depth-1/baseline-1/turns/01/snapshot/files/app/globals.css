@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+.bench-header { position:absolute; z-index:5; top:0; left:0; width:100%; padding:1.5rem clamp(1.25rem,5vw,5rem); display:flex; justify-content:space-between; gap:1rem; font: .68rem ui-monospace,monospace; letter-spacing:.08em; border-bottom:1px solid #162d2b25; }
+.story-caption-text { max-width:31rem; }
+.story-caption { padding-bottom:3.5rem; }
+.story-title { font-size:clamp(2rem,3.6vw,3.7rem); }
+.story-body { line-height:1.55; }
+.bench-detail { font-size:.93rem; line-height:1.55; margin:1rem 0 0; }
+.story-note { font: .72rem/1.5 ui-monospace,monospace; border-top:1px solid #162d2b25; padding-top:.8rem; }
+.evidence-paths { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem; }
+.evidence-paths div { padding-left:.7rem; border-left:2px solid #96502d; }
+.evidence-paths strong { display:block; font-size:.85rem; }
+.evidence-paths span { display:block; font-size:.75rem; line-height:1.4; margin-top:.3rem; }
+.bench-return { display:inline-block; margin-top:1rem; font: .8rem ui-monospace,monospace; }
+@media (max-width:47.99rem) {
+ .bench-header { padding-block:1rem; font-size:.56rem; flex-wrap:wrap; }
+ .bench-header span:last-child { display:none; }
+ .story-caption { padding:1.25rem; }
+ .story-title { font-size:2rem; }
+ .story-body { font-size:.91rem; margin-top:.75rem; line-height:1.45; }
+ .bench-detail { font-size:.8rem; margin-top:.65rem; line-height:1.45; }
+ .story-note { margin-top:.7rem; font-size:.64rem; padding-top:.6rem; }
+ .story[data-scene="on"] .story-caption-text::before { inset:-1rem; filter:blur(1rem); }
+}
+@media (min-width:48rem) and (max-height:34rem) {
+ .story-caption-text { max-width:44vw; }
+ .story-title { font-size:2rem; }
+ .story-caption { padding:4.5rem 2rem 1.5rem; }
+ .story-body,.bench-detail { font-size:.8rem; line-height:1.4; margin-top:.7rem; }
+ .story-note { font-size:.65rem; }
+ .bench-header { padding:1rem 2rem; }
+}
+@media (min-width:64rem) {
+ .story-rail { top:1.5rem; right:1.5rem; transform:none; }
+ .story-rail ol { display:flex; gap:.35rem; }
+ .story-rail a { padding:.7rem .45rem; }
+ .story-rail a span:first-child { display:none; }
+ .story-rail a[aria-current] { border-bottom:2px solid var(--story-accent); }
+ .bench-header { padding-right:16rem; }
+}
+.story[data-scene="off"] { padding-top:0; }
+.story[data-scene="off"] .bench-header { position:relative; margin-bottom:1rem; }
