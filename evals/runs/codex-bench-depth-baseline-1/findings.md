@@ -8,8 +8,9 @@ excludes retries and continuation.
 ## Outcome
 
 The single actor turn is incomplete. It produced no prototype, final agent
-reply, source snapshot, build result, browser evidence or complete judge
-packet. Consequently no judge was launched.
+reply, post-turn source capture, build result, browser evidence or complete
+judge packet. Consequently no judge was launched. The runner did retain its
+automatic pre-turn source snapshot; it is not evidence of an implementation.
 
 The frozen unpaid recheck passed immediately before launch with input digest
 `57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e`.
@@ -25,9 +26,9 @@ Its retained evidence is [the fixed prompt](bench-depth-1/baseline-1/turns/01/pr
 [stderr](bench-depth-1/baseline-1/turns/01/stderr.log) and
 [start record](bench-depth-1/baseline-1/turns/01/started.json). The stream
 contains no recorded agent write command and the runner created no turn
-`result.json`; this is evidence of an incomplete attempt, not proof that
-the workspace was technically unchanged. The shared capability probe remains
-separate coordinator evidence, not actor evidence.
+`result.json` or post-turn capture; this is evidence of an incomplete attempt,
+not proof that the workspace was technically unchanged. The shared capability
+probe remains separate coordinator evidence, not actor evidence.
 
 The retained stream SHA-256 is
 `83c0f0e07c5fc8851740e49129eaf7d8c28fd50925ccd5d307fb351592169a64`; its
