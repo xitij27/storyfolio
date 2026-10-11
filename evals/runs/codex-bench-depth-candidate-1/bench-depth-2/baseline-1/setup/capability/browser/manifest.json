@@ -1,0 +1,78 @@
+{
+  "started": "2026-10-11T23:24:48.111Z",
+  "node": "v22.22.1",
+  "scope": "selected cases",
+  "contract": {
+    "ids": [
+      "opening.gather",
+      "middle.fan",
+      "close.whole"
+    ],
+    "lookIds": [
+      "light",
+      "dark"
+    ]
+  },
+  "probes": {
+    "overlay": {
+      "beat": "close.whole",
+      "selector": ".story-piece-link[data-story-link=\"0\"]"
+    },
+    "lazyExtra": true
+  },
+  "matrix": [
+    {
+      "name": "light-wide",
+      "look": "light",
+      "flags": [
+        "--expect-beats=3",
+        "--expect-ids=opening.gather,middle.fan,close.whole",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "43999"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:43999/?look=light",
+      "--out=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/setup-capability/browser/light-wide",
+      "--report=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/setup-capability/browser/light-wide/report.json",
+      "--expect-beats=3",
+      "--expect-ids=opening.gather,middle.fan,close.whole",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-wide",
+      "code": 0,
+      "signal": null,
+      "report": "light-wide/report.json",
+      "problems": []
+    }
+  ],
+  "complete": true,
+  "finished": "2026-10-11T23:25:23.717Z"
+}

@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-11T23:33:16.222Z",
+  "modelCalls": 0,
+  "browserCalls": 0,
+  "valid": true,
+  "baselineInputDigest": "40fea471970e15abbded1a2f4a51ca40917711e109aab189cc7fcf078257cf6a",
+  "candidateInputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "frozenInputsPerArm": 124,
+  "changedInputs": [
+    {
+      "path": "skill/SKILL.md",
+      "baseline": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+      "candidate": "cea93b6a009a405d4bd0497e5a8e1bdae53901259a9a7739e334008a0274cee2"
+    }
+  ],
+  "equalInputPaths": [
+    "capabilities.json",
+    "case.json",
+    "expectations.json",
+    "fixture/docs/story/assets.md",
+    "fixture/docs/story/confirmations.md",
+    "fixture/docs/story/evaluation-environment.md",
+    "fixture/docs/story/facts.md",
+    "fixture/docs/story/handover.md",
+    "fixture/docs/story/storyboard.md",
+    "fixture/public/assets/bring-up-fixture.svg",
+    "fixture/public/assets/power-states.svg",
+    "fixture/scripts/review-sheets.mjs",
+    "implementation/evals/builds/bench-depth-1/criteria.md",
+    "implementation/evals/builds/bench-depth-2/README.md",
+    "implementation/evals/builds/bench-depth-2/source-manifest.json",
+    "implementation/evals/builds/bench-depth-2/verify-fixture.mjs",
+    "implementation/evals/builds/bench-depth-2/workspace-inventory.json",
+    "implementation/evals/builds/local-capabilities.json",
+    "implementation/evals/check-build.mjs",
+    "implementation/evals/codex-build-judge.mjs",
+    "implementation/evals/codex-build-run.mjs",
+    "implementation/evals/judge-evidence-server.mjs",
+    "implementation/evals/lib/build-capture.mjs",
+    "implementation/evals/lib/build-check.mjs",
+    "implementation/evals/lib/build-score.mjs",
+    "implementation/evals/lib/build.mjs",
+    "implementation/evals/lib/codex.mjs",
+    "implementation/evals/lib/events.mjs",
+    "implementation/evals/lib/files.mjs",
+    "implementation/evals/lib/judge-transport.mjs",
+    "implementation/evals/lib/review.mjs",
+    "implementation/evals/lib/source-scope.mjs",
+    "implementation/evals/probe-build-environment.mjs",
+    "implementation/evals/prompts/judge-build.md",
+    "implementation/skills/storyfolio/scripts/scaffold.mjs",
+    "prompts/turn1.md",
+    "protocol.md",
+    "rubric.md",
+    "skill/engine/.gitignore",
+    "skill/engine/AGENTS.md",
+    "skill/engine/CLAUDE.md",
+    "skill/engine/LICENSE",
+    "skill/engine/README.md",
+    "skill/engine/app/globals.css",
+    "skill/engine/app/layout.tsx",
+    "skill/engine/app/page.tsx",
+    "skill/engine/app/sketch/[id]/page.tsx",
+    "skill/engine/components/story/chapter.tsx",
+    "skill/engine/components/story/conductor.tsx",
+    "skill/engine/components/story/controls.tsx",
+    "skill/engine/components/story/extra-frame.tsx",
+    "skill/engine/components/story/face-material.ts",
+    "skill/engine/components/story/faces.ts",
+    "skill/engine/components/story/guard-extra-callback.test.ts",
+    "skill/engine/components/story/guard-extra-callback.ts",
+    "skill/engine/components/story/look-switch.tsx",
+    "skill/engine/components/story/meter.tsx",
+    "skill/engine/components/story/overlay.tsx",
+    "skill/engine/components/story/pieces.tsx",
+    "skill/engine/components/story/rail.tsx",
+    "skill/engine/components/story/scene.tsx",
+    "skill/engine/components/story/stage.tsx",
+    "skill/engine/components/story/story.css",
+    "skill/engine/components/story/story.tsx",
+    "skill/engine/components/story/types.ts",
+    "skill/engine/components/story/use-look.ts",
+    "skill/engine/components/story/use-reduced-motion.ts",
+    "skill/engine/components/story/use-webgl-supported.ts",
+    "skill/engine/components/story/validate.test.ts",
+    "skill/engine/components/story/validate.ts",
+    "skill/engine/components/story/webgl-boundary.tsx",
+    "skill/engine/content/checks.json",
+    "skill/engine/content/copy.ts",
+    "skill/engine/content/experience.tsx",
+    "skill/engine/content/extras.ts",
+    "skill/engine/content/extras/middle-line.tsx",
+    "skill/engine/content/faces.ts",
+    "skill/engine/content/formations.ts",
+    "skill/engine/content/index.ts",
+    "skill/engine/content/links.ts",
+    "skill/engine/content/looks.ts",
+    "skill/engine/content/sketches/index.ts",
+    "skill/engine/content/story.ts",
+    "skill/engine/eslint.config.mjs",
+    "skill/engine/lib/story/camera.test.ts",
+    "skill/engine/lib/story/camera.ts",
+    "skill/engine/lib/story/controls.test.ts",
+    "skill/engine/lib/story/controls.ts",
+    "skill/engine/lib/story/formation.test.ts",
+    "skill/engine/lib/story/formation.ts",
+    "skill/engine/lib/story/layouts.test.ts",
+    "skill/engine/lib/story/layouts.ts",
+    "skill/engine/lib/story/looks.test.ts",
+    "skill/engine/lib/story/looks.ts",
+    "skill/engine/lib/story/overlay.test.ts",
+    "skill/engine/lib/story/overlay.ts",
+    "skill/engine/lib/story/quality.test.ts",
+    "skill/engine/lib/story/quality.ts",
+    "skill/engine/lib/story/rand.test.ts",
+    "skill/engine/lib/story/rand.ts",
+    "skill/engine/lib/story/story.test.ts",
+    "skill/engine/lib/story/story.ts",
+    "skill/engine/lib/story/timeline.test.ts",
+    "skill/engine/lib/story/timeline.ts",
+    "skill/engine/lib/story/typeset.test.ts",
+    "skill/engine/lib/story/typeset.ts",
+    "skill/engine/next.config.ts",
+    "skill/engine/package-lock.json",
+    "skill/engine/package.json",
+    "skill/engine/postcss.config.mjs",
+    "skill/engine/public/plain/face.svg",
+    "skill/engine/public/plain/fan.svg",
+    "skill/engine/scripts/check-lib.mjs",
+    "skill/engine/scripts/check-lib.test.mjs",
+    "skill/engine/scripts/check.mjs",
+    "skill/engine/scripts/shoot.mjs",
+    "skill/engine/tsconfig.json",
+    "skill/references/asking.md",
+    "skill/references/concept.md",
+    "skill/references/reading-a-profile.md",
+    "skill/references/storyboard.md",
+    "skill/scripts/scaffold.mjs",
+    "skill/scripts/scaffold.test.mjs"
+  ],
+  "baselineRecorded": {
+    "commit": "8f1eec32d10b5974a83fcf5e81c23e1468849f32",
+    "sourceStatus": ""
+  },
+  "candidateRecorded": {
+    "commit": "e7a7230e65e995ff5bf7d13508bec396a67b3859",
+    "sourceStatus": ""
+  },
+  "metaDifferences": [
+    {
+      "key": "cohort",
+      "baseline": "codex-bench-depth-baseline-2",
+      "candidate": "codex-bench-depth-candidate-1"
+    },
+    {
+      "key": "inputDigest",
+      "baseline": "40fea471970e15abbded1a2f4a51ca40917711e109aab189cc7fcf078257cf6a",
+      "candidate": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353"
+    },
+    {
+      "key": "preparedAt",
+      "baseline": "2026-10-11T22:43:17.257Z",
+      "candidate": "2026-10-11T23:22:50.692Z"
+    },
+    {
+      "key": "inputs",
+      "baseline": "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-baseline-2/inputs",
+      "candidate": "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs"
+    },
+    {
+      "key": "work",
+      "baseline": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-tpXd60",
+      "candidate": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB"
+    }
+  ],
+  "counts": {
+    "fixture": 9,
+    "skill": 86,
+    "scaffold": 79
+  },
+  "preScaffoldFiles": 95,
+  "scaffoldFiles": 174,
+  "actorSourceFilesWithFactualSetup": 175,
+  "preScaffoldInventoriesEqual": true,
+  "snapshotDifferences": [
+    {
+      "path": ".agents/skills/storyfolio/SKILL.md",
+      "baseline": {
+        "type": "file",
+        "hash": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+        "size": 4087
+      },
+      "candidate": {
+        "type": "file",
+        "hash": "cea93b6a009a405d4bd0497e5a8e1bdae53901259a9a7739e334008a0274cee2",
+        "size": 4790
+      }
+    }
+  ],
+  "liveAndSavedSourceMatchesFrozenOrigins": true,
+  "frozenSourceHelperAndIndependentWalkAgree": true,
+  "currentSourceDigest": "07208bd1815bf1901b6988f1a629e03bd43ad3acbbae739bcf801d9caf56e09b",
+  "currentGeneratedExtras": [
+    "next-env.d.ts"
+  ],
+  "emptyUnexpectedDirectories": [],
+  "workspace": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB",
+  "runEntries": [
+    "meta.json",
+    "setup"
+  ],
+  "factualSetupDifference": "Only inputDigest differs; all other fields equal baseline and exact candidate live/saved bytes agree. No repository/held-out path in factual record.",
+  "matchedCapabilityEnvironment": {
+    "PATH": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+    "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+    "LANG": "C.UTF-8",
+    "TMPDIR": "/var/tmp/storyfolio-comparison-runtime-20261012"
+  },
+  "capabilityArgumentsEqualAfterMechanicalPathMapping": true,
+  "sameOfflineInstallCommand": true,
+  "wholeInstallEnvironmentEqual": false,
+  "dependencyExitCode": 0,
+  "qualified": true,
+  "originalStrictAuditPassed": false,
+  "originalVerifierSha256": "2769807af74e89875d48e4f9376ccf1b43ac0047a978152ecaf1c9a8acd9cb79",
+  "installEnvironmentDifferences": [
+    {
+      "key": "NEXT_TELEMETRY_DISABLED",
+      "baseline": "1",
+      "candidate": null
+    }
+  ],
+  "impactEvidence": {
+    "lifecycleOutputSha256": "1e258f2cb47b7559b8602423b4ad81fd121dd12f4cbaa1f164601281b511da18",
+    "dependencyInventorySha256": "e8213596afcb271f6f64d02b48529de8daf9616e547444bb50056b191ef09e89",
+    "currentDependencyDigest": "2964d62cdcedb14dfb1ba85b8cad2d909671f641eac0116e3070ae44bc3a7ca3"
+  },
+  "disposition": "Root accepted this exact non-material install-only provenance deviation after read-only impact evidence, not exact whole-install environment identity. Original records and failed strict audit remain unchanged. Baseline current dependency inventory follows its actor reinstall and is not a historical first-install inventory.",
+  "setupProofFilesVerified": 26,
+  "setupHelperHashes": {
+    "evals/runs/stage-3-comparison-1/check-ready.mjs": "488f68dcab4dc95fdd282c8af4a733e0f7e45f8b99e8e63fde7332927b5bebb3",
+    "evals/runs/stage-3-comparison-1/run-capability-probe.mjs": "6af46ca32e01f5105f1133978863b166731021aa5c23f3c7b21e6b88e7145c45"
+  },
+  "rawProbe": {
+    "sha256": "a3cae455fb8b79b7596bf74c7e84989f6d1d99940f87e27f87d3d2edb45dffa2",
+    "bytes": 2668,
+    "exposedStackPath": "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/probe-build-environment.mjs:43:22",
+    "contentsChangedOrSanitized": false
+  },
+  "limitations": [
+    "Generated dependency and Next build trees are not exhaustively content-audited.",
+    "Raw capability probe reveals current cohort evaluator path, as in the baseline; no held-out solution content is thereby established.",
+    "Configuration isolation is not a read jail or blinding. Actual actor access still requires its own completed-stream audit.",
+    "Fresh timestamps, random workspace path, input digest/source commit, independent probe timings and generated diagnostic bytes are per-run setup differences, not additional coaching.",
+    "This read-only material audit is not the coordinator final readiness gate or paid launch."
+  ]
+}

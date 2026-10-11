@@ -50,7 +50,7 @@ its review criteria and independent runtime observations are separate.
 | [control-modality-1](runs/control-modality-1/findings.md) | Prospective focus-only skip-link repair. Seven valid conditions and one ordinary control pass; 15 faulty variants fail. 31 browser executions, 112 reviewed originals. Historical failure unchanged, no actor or judge |
 | [source-inventory-1](runs/source-inventory-1/findings.md) | Shared conservative source scope, 45 focused tests pass. Historical 202/390 mismatch preserved; prospective inventories match 201 unchanged files. No paid run or comparator relaxation |
 | [stage-3-integration-1](runs/stage-3-integration-1/findings.md) | Measurement identity integration, reviewed nine-file neutral comparison fixture, real helper smoke and 342 passing tests. Two visual instruction drafts only; separate paid question unanswered. No shipped skill change or Stage 3 completion |
-| [stage-3-comparison-1](runs/stage-3-comparison-1/findings.md) | Author-approved baseline then candidate if needed, at most one judge per arm. Fresh baseline frozen and launched after actual-workspace proof; results pending. No retry, continuation or full-site acceptance implied |
+| [stage-3-comparison-1](runs/stage-3-comparison-1/findings.md) | Approved fresh baseline completed: seven technical passes, all 253 originals reviewed, both visual targets fail. Text judge 15 pass/0 fail/10 unobserved with valid inner evidence and retained outer-status anomaly. Two supported paragraphs committed; matched candidate preparation underway. No retry, continuation or full-site acceptance implied |
 
 ## Cases and comparison rules
 

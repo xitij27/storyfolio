@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "modelCalls": 0,
+  "browserCalls": 0,
+  "command": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node evals/runs/stage-3-comparison-1/verify-candidate-prelaunch.mjs --save",
+  "toolChunkId": "35ba9f",
+  "exitCode": 1,
+  "stdout": "",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal",
+  "failedAssertion": "assert.deepEqual(install.environment, baseInstall.environment)",
+  "scriptLineAtObservation": 141,
+  "candidateRecord": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/setup/dependency-install/command.json",
+  "baselineRecord": "evals/runs/codex-bench-depth-baseline-2/bench-depth-2/baseline-1/setup/dependency-install/command.json",
+  "difference": {
+    "field": "environment.NEXT_TELEMETRY_DISABLED",
+    "baseline": "1",
+    "candidate": null
+  },
+  "equalRecordedInstallEnvironmentKeys": [
+    "PATH",
+    "PLAYWRIGHT_BROWSERS_PATH",
+    "LD_LIBRARY_PATH",
+    "LANG",
+    "TMPDIR"
+  ],
+  "priorAssertionsPassed": [
+    "Exactly 124 frozen inputs per arm, only skill/SKILL.md differs",
+    "Nine fixture files, 86 skill files, 79 scaffold files",
+    "Initial 174-file snapshot differs only in installed main skill",
+    "Final 175 live source files match frozen origins plus factual setup",
+    "Factual setup differs only in inputDigest and has no held-out path",
+    "Frozen source helper and independent file traversal agree",
+    "Probe completed, original raw stack-path exposure retained",
+    "Capability environment and mechanically mapped probe arguments match"
+  ],
+  "dispositionAtFailure": "Reported immediately to root and acceptance. No environment claim waived, installation rerun, model call, actor launch or saved source change. Await root decision on this non-frozen setup difference."
+}

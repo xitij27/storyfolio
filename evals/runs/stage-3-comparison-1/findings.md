@@ -201,3 +201,59 @@ The pre-candidate staged whitespace check finds EOF blank lines only in
 raw actor/checker/command logs and inherited engine snapshot copies.
 Those hashed evidence bytes are preserved. The authored skill, documentation,
 reviews and coordinator scripts pass their whitespace check.
+
+## Candidate preparation
+
+Commit `e7a7230` saves the complete baseline, its supported misses and the
+two-paragraph candidate before candidate preparation. The main skill hash
+is `cea93b6a009a405d4bd0497e5a8e1bdae53901259a9a7739e334008a0274cee2`.
+The separately allowed fresh candidate uses `codex-bench-depth-candidate-1`.
+Unpaid preparation is now underway using the same factual setup procedure,
+frozen baseline environment, neutral helper and exact-sandbox capability
+proof. No candidate actor or judge has launched at this entry. Its frozen
+input diff and actual-workspace readiness must pass before the paid turn.
+
+The candidate freeze records digest
+`a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353`
+from committed candidate `e7a7230`. Exactly 124 frozen inputs compare;
+only `skill/SKILL.md` differs. The fresh workspace is
+`/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB`.
+Its offline install and capability probe pass, with nine original setup
+images reviewed, 174 starter source files unchanged and only the factual
+setup record added before the actor. The readiness helper passes its
+frozen-environment checks.
+
+The independent stricter setup comparison then catches a non-frozen
+install-only difference: baseline dependency installation records
+`NEXT_TELEMETRY_DISABLED=1`, while candidate installation records it unset.
+The four frozen environment values and separate TMPDIR match. The initial
+failed audit is retained as `candidate-prelaunch-audit-failure.json`.
+Candidate launch is held pending a read-only impact assessment and explicit
+disposition. No installation/probe is retried, no original proof is edited,
+and no paid candidate call has been spent. Readiness-helper success alone
+does not waive this broader comparison discrepancy.
+
+The [explicit coordinator disposition](candidate-install-disposition.md)
+accepts the one installer-only deviation after read-only impact checks:
+the executed install hook does not use the flag or invoke Next; all current
+dependency paths, bytes, permissions and symlink targets match; both actual
+capability build/browser subprocesses force the same flag; and frozen
+actor inputs/runtime environments remain matched. The inventory is current,
+not a historical first-install snapshot, since the baseline actor later
+reinstalled. No telemetry-event absence is inferred. The final setup audit
+must retain the original failed equality result and state this qualification,
+not claim identical whole-install environments. No rerun or proof edit was
+made to make the discrepancy disappear.
+
+The [qualified final audit](candidate-prelaunch-qualified-audit.json) now
+passes every remaining assertion: all 124 inputs, the sole main-skill
+change, all 175 live source files, 26 setup proof files and two unchanged
+coordinator helpers. It explicitly retains `qualified: true`,
+`wholeInstallEnvironmentEqual: false` and `originalStrictAuditPassed: false`.
+The original failed verifier, result and full tool return remain separate.
+The [setup review](candidate-setup-review.md) links the capability, source,
+original-image and install-lifecycle evidence. The
+[prelaunch local checks](candidate-prelaunch-local-tests/result.json)
+again pass all 342 tests and skill/people/fixture checks, with no paid
+process running during this test command. Candidate launch is now eligible
+within the existing approved envelope, not a new or expanded allowance.

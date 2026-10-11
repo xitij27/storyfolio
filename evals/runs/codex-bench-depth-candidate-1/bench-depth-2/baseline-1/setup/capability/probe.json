@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "modelCalls": 0,
+  "started": "2026-10-11T23:24:39.595Z",
+  "workspace": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB",
+  "node": "v22.22.1",
+  "observations": [
+    {
+      "name": "local-http",
+      "passed": true
+    },
+    {
+      "name": "external-request",
+      "blocked": true,
+      "error": "TypeError: fetch failed",
+      "cause": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:14902:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/probe-build-environment.mjs:43:22 {\n  [cause]: DOMException [Error]: Request was cancelled.\n      at new DOMException (node:internal/per_context/domexception:76:18)\n      at makeAppropriateNetworkError (node:internal/deps/undici/undici:9531:182)\n      at httpNetworkFetch (node:internal/deps/undici/undici:11242:18)\n      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n      at async httpNetworkOrCacheFetch (node:internal/deps/undici/undici:11117:33)\n      at async httpFetch (node:internal/deps/undici/undici:10950:37)\n      at async node:internal/deps/undici/undici:10712:20\n      at async mainFetch (node:internal/deps/undici/undici:10702:20) {\n    cause: RequestAbortedError [AbortError]: Proxy response (403) !== 200 when HTTP Tunneling\n        at Client.connect (node:internal/deps/undici/undici:8553:26)\n        at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {\n      code: 'UND_ERR_ABORTED',\n      [Symbol(undici.error.UND_ERR)]: true,\n      [Symbol(undici.error.UND_ERR_ABORT)]: true,\n      [Symbol(undici.error.UND_ERR_ABORTED)]: true\n    }\n  }\n}"
+    },
+    {
+      "name": "build",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "timeout": false,
+      "durationMs": 8395
+    },
+    {
+      "name": "browser",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "scripts/check.mjs",
+        "--skip-build",
+        "--only=light-wide",
+        "--out=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/setup-capability/browser"
+      ],
+      "code": 0,
+      "signal": null,
+      "timeout": false,
+      "durationMs": 35718
+    }
+  ],
+  "passed": true,
+  "finished": "2026-10-11T23:25:23.745Z"
+}

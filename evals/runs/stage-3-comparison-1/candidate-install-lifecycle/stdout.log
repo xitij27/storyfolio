@@ -1,0 +1,4890 @@
+{
+  "schemaVersion": 1,
+  "readOnly": true,
+  "modelCalls": 0,
+  "writes": false,
+  "launchDisposition": "held pending coordinator decision; this analysis cannot authorize a launch",
+  "inputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "work": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB",
+  "lockSha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+  "npmCommand": {
+    "path": "/usr/bin/npm",
+    "realpath": "/usr/share/nodejs/npm/bin/npm-cli.js"
+  },
+  "installCommands": {
+    "codex-bench-depth-baseline-2": {
+      "path": "evals/runs/codex-bench-depth-baseline-2/bench-depth-2/baseline-1/setup/dependency-install/command.json",
+      "sha256": "8c29baf67ed03b71508a3a9e5f78f4f1af99f8ab263b8a732d5835ffff6b2edc",
+      "executable": "npm",
+      "args": [
+        "ci",
+        "--offline",
+        "--cache=/tmp/storyfolio-npm-cache"
+      ],
+      "environment": {
+        "PATH": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+        "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+        "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+        "LANG": "C.UTF-8",
+        "TMPDIR": "/var/tmp/storyfolio-comparison-runtime-20261012",
+        "NEXT_TELEMETRY_DISABLED": "1"
+      }
+    },
+    "codex-bench-depth-candidate-1": {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/setup/dependency-install/command.json",
+      "sha256": "8eb5fc931e58f18d29f2484069aa67f74b33c56b7187608babada604c664c485",
+      "executable": "npm",
+      "args": [
+        "ci",
+        "--offline",
+        "--cache=/tmp/storyfolio-npm-cache"
+      ],
+      "environment": {
+        "PATH": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+        "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+        "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+        "LANG": "C.UTF-8",
+        "TMPDIR": "/var/tmp/storyfolio-comparison-runtime-20261012",
+        "NEXT_TELEMETRY_DISABLED": null
+      }
+    }
+  },
+  "packages": [
+    {
+      "path": ".",
+      "name": "storyfolio-site",
+      "version": "0.1.0",
+      "packageJsonSha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@alloc/quick-lru",
+      "name": "@alloc/quick-lru",
+      "version": "5.3.0",
+      "packageJsonSha256": "d0f49e388ec17dbcfda6573e1b7672a20af11d0cf4c7247299d0bc19bdb58d71",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/code-frame",
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "packageJsonSha256": "f9cccb2e601db93851f10935b4e723c95a730c467f187462eb54b16bb353b036",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/compat-data",
+      "name": "@babel/compat-data",
+      "version": "7.29.7",
+      "packageJsonSha256": "a871a1f7397a91d00f877751ab2da88904ff1dd30c5bb4ab2e5badd9f3adf6d4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/core",
+      "name": "@babel/core",
+      "version": "7.29.7",
+      "packageJsonSha256": "6c2893db41b54a1c03ba68e676aa3ea987db9a5c9b9a3a3aa2e8d0d9a63066c4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/generator",
+      "name": "@babel/generator",
+      "version": "7.29.8",
+      "packageJsonSha256": "9abb52650988f263a4e319eba536f7cdd681ad71b1e1383acb7e04f7825bc409",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helper-compilation-targets",
+      "name": "@babel/helper-compilation-targets",
+      "version": "7.29.7",
+      "packageJsonSha256": "6ac5b42b124c964fb3c0feed98cd2c13aaf5c5827021374db6884bab91f206d2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helper-globals",
+      "name": "@babel/helper-globals",
+      "version": "7.29.7",
+      "packageJsonSha256": "c06a17222ad81933dbae3768fe59cd6737ebdcfa88b84097f3a8e659e28d2c9f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helper-module-imports",
+      "name": "@babel/helper-module-imports",
+      "version": "7.29.7",
+      "packageJsonSha256": "fa2e7c54b6b86e250770f9b2703571bcff0c8166995e01c756539745859fedb7",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helper-module-transforms",
+      "name": "@babel/helper-module-transforms",
+      "version": "7.29.7",
+      "packageJsonSha256": "4f5010bdec7a80d93d84a1ecff8fbdd0a9a865f1bd22ceb5b0215a07255de3b3",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helper-string-parser",
+      "name": "@babel/helper-string-parser",
+      "version": "7.29.7",
+      "packageJsonSha256": "ecbd1aaffa9ad000d3bc5a526067b89244cb3ec64c738fbae8b64a9e805f401b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helper-validator-identifier",
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "packageJsonSha256": "1ad6aeced8b186ac259da45fea50ab9d65d3d958f6458c80e3c8013649d1b12d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helper-validator-option",
+      "name": "@babel/helper-validator-option",
+      "version": "7.29.7",
+      "packageJsonSha256": "b2d7eca451e536f18f4757a54be48df604385ad978508e32ce8f2edb4973f257",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/helpers",
+      "name": "@babel/helpers",
+      "version": "7.29.10",
+      "packageJsonSha256": "ccd314c91c9bcd25324efe0d0f4da114a6b49554b96bf31ab5c65fcc083c4f03",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/parser",
+      "name": "@babel/parser",
+      "version": "7.29.9",
+      "packageJsonSha256": "fa70cca00587bdb335e8249fa40e9356ed7b7c9a4fc92b1e74245ab1b852cda1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/runtime",
+      "name": "@babel/runtime",
+      "version": "7.29.10",
+      "packageJsonSha256": "c770ba825368b8421666fe5ffe841d55dc0ebc703415422c31ba7f048a32d14a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/template",
+      "name": "@babel/template",
+      "version": "7.29.7",
+      "packageJsonSha256": "82b96cbb7f576768c6298b816600c0cfb2d8487c963050406d2bd895e3724145",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/traverse",
+      "name": "@babel/traverse",
+      "version": "7.29.10",
+      "packageJsonSha256": "a1cc0751121cf332f73a42a394518f0e4090e9c45febc8887d047fbb72ca7d7b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@babel/types",
+      "name": "@babel/types",
+      "version": "7.29.8",
+      "packageJsonSha256": "f32460a35cc4649d81f10d4bc6dcfa1ade7a47f95df5db4bb4483f34d24b476e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@dimforge/rapier3d-compat",
+      "name": "@dimforge/rapier3d-compat",
+      "version": "0.12.0",
+      "packageJsonSha256": "35df43c94785a840dd08965552d6d2bac912583e863c461ccfe32c01ed4cebca",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@emnapi/core",
+      "name": "@emnapi/core",
+      "version": "1.10.0",
+      "packageJsonSha256": "9d93d85c0fd78ef680677dff067cb112ad2ddc33edb3e9a45ca02637de0448ac",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@emnapi/runtime",
+      "name": "@emnapi/runtime",
+      "version": "1.11.3",
+      "packageJsonSha256": "751db16171cb4d111905122be8a4c0dc2b5c82e6ba2a590ca24fbc6cca048f93",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@emnapi/wasi-threads",
+      "name": "@emnapi/wasi-threads",
+      "version": "1.2.1",
+      "packageJsonSha256": "16d921d0acc045e7dea6f46fa64a5e8c40269e0c027915d0da98b1ae8a0436ad",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint-community/eslint-utils",
+      "name": "@eslint-community/eslint-utils",
+      "version": "4.10.1",
+      "packageJsonSha256": "d30a772ab56a2fd981086e6bda0288db650c35628b1114e7bd877e366a3c2fac",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys",
+      "name": "eslint-visitor-keys",
+      "version": "3.4.3",
+      "packageJsonSha256": "54feabdd2ef488414247dd4ecf71542549db02baced1153465c3ac2e5bf61a6c",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint-community/regexpp",
+      "name": "@eslint-community/regexpp",
+      "version": "4.12.2",
+      "packageJsonSha256": "63a3c5c082235b46ac213fe91d4b8869d16b0e90d8047f5fe50aefa2dd11d292",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint/config-array",
+      "name": "@eslint/config-array",
+      "version": "0.21.2",
+      "packageJsonSha256": "b42773cfa9a04f5cd7b0825ba8fe29a95aea7b1a1e31017b3628077f6ec1e020",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint/config-helpers",
+      "name": "@eslint/config-helpers",
+      "version": "0.4.2",
+      "packageJsonSha256": "9eeb5b6fc0a17a5552a53fe5c02d98854930acff99fa0cd75e26d6166365529d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint/core",
+      "name": "@eslint/core",
+      "version": "0.17.0",
+      "packageJsonSha256": "65aa1d2127fd7d10d6041db32f47439d9aa6abc98f55aaed300b575e7bd71993",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint/eslintrc",
+      "name": "@eslint/eslintrc",
+      "version": "3.3.7",
+      "packageJsonSha256": "764fdc3e4eb545eb1f75d21ddfd8cad02c2c8a8e8ced548302d48dbb359c97aa",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint/js",
+      "name": "@eslint/js",
+      "version": "9.39.4",
+      "packageJsonSha256": "c68baf2c859b03e43de607b9f1e392008e678a982baed3c93ab52f89843af260",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint/object-schema",
+      "name": "@eslint/object-schema",
+      "version": "2.1.7",
+      "packageJsonSha256": "bda6acdfdddc3dbfacf8669e568d66754af7963c3c58935f9573cc32701dc26b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@eslint/plugin-kit",
+      "name": "@eslint/plugin-kit",
+      "version": "0.4.1",
+      "packageJsonSha256": "fe173d1b3cc381fce094f316e9d21296e83ea781ad7f2900fa2f4ee77c1c1af0",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@humanfs/core",
+      "name": "@humanfs/core",
+      "version": "0.19.2",
+      "packageJsonSha256": "853dea133b11341a1706835191e591535cc470f1101e4070a453b6cc4847e659",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@humanfs/node",
+      "name": "@humanfs/node",
+      "version": "0.16.8",
+      "packageJsonSha256": "bc1bac9440bc97611a0a8b233960780cff13d8aba4192f6b1ff6739ab6c9c9ed",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@humanfs/types",
+      "name": "@humanfs/types",
+      "version": "0.15.0",
+      "packageJsonSha256": "1b849aa49814883fc0e70ca461c9faccb675ed1c801e784f1858e75e3b36eec5",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@humanwhocodes/module-importer",
+      "name": "@humanwhocodes/module-importer",
+      "version": "1.0.1",
+      "packageJsonSha256": "8c22f2bce041e8f99fb983b622ed64efb8098e75d9b01e9cddc3254f5731045b",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@humanwhocodes/retry",
+      "name": "@humanwhocodes/retry",
+      "version": "0.4.3",
+      "packageJsonSha256": "8e18a261a246f3e65a25664362cf367e18567ae214b1094b297fc1d056c48211",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@img/colour",
+      "name": "@img/colour",
+      "version": "1.1.0",
+      "packageJsonSha256": "bc38c5097693ed53b91c32f35fb0a52569736c7854ba2eb6d080f3252071f75c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@img/sharp-libvips-linux-x64",
+      "name": "@img/sharp-libvips-linux-x64",
+      "version": "1.3.4",
+      "packageJsonSha256": "2c5f6f9abf74c1492622d5dc4e4da056ab0712fd71de61e03a687c88b8cdab4e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@img/sharp-libvips-linuxmusl-x64",
+      "name": "@img/sharp-libvips-linuxmusl-x64",
+      "version": "1.3.4",
+      "packageJsonSha256": "9d93c5ff1a47f5c79286f6c832e0ab9001feff6db50b9085f578b20a663b580e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@img/sharp-linux-x64",
+      "name": "@img/sharp-linux-x64",
+      "version": "0.35.5",
+      "packageJsonSha256": "181c58413d16ac3ce035f39c94c614031e03c023d88315712a81ed210c9fa04c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@img/sharp-linuxmusl-x64",
+      "name": "@img/sharp-linuxmusl-x64",
+      "version": "0.35.5",
+      "packageJsonSha256": "1d41eb946e8c574f27606680c8a674adce6936ef3fc05b754be38a3e3fd3857e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@img/sharp-wasm32",
+      "name": "@img/sharp-wasm32",
+      "version": "0.35.5",
+      "packageJsonSha256": "59d5eeaaac1c43434701f08e9ea78648aa54011159ff2eb192550432608e05c1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@jridgewell/gen-mapping",
+      "name": "@jridgewell/gen-mapping",
+      "version": "0.3.13",
+      "packageJsonSha256": "6264fca78382a9782f8e8d5e653e7bf43dc8aa6d469f3322a82e531093896a01",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@jridgewell/remapping",
+      "name": "@jridgewell/remapping",
+      "version": "2.3.5",
+      "packageJsonSha256": "cc535fb0665977104146fb8fe6c81ff63d2c9ae7f7b783d86e7f7db064cde57a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@jridgewell/resolve-uri",
+      "name": "@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "packageJsonSha256": "0793e722ffe08f3b4f1862c4dc96d920a62d6811a3648b4feb02f06c63227e8b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@jridgewell/sourcemap-codec",
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "packageJsonSha256": "ac7afd57294dbee1f891ca797e19e405340f2cd6031808e6d3845fec60a5b43f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@jridgewell/trace-mapping",
+      "name": "@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "packageJsonSha256": "7f5eacc669d36013f9b792ab15721a97d48b26b093100122aa6c8691ebe656be",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@napi-rs/wasm-runtime",
+      "name": "@napi-rs/wasm-runtime",
+      "version": "1.2.5",
+      "packageJsonSha256": "10024ee55d504c4ffec917640769ca36c781f51b958cddf6971974e3d272f86f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@next/env",
+      "name": "@next/env",
+      "version": "16.3.8",
+      "packageJsonSha256": "225932e843b7307bee980b1a63c1474c468f72107a801fd6d1db0457302da4ed",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@next/eslint-plugin-next",
+      "name": "@next/eslint-plugin-next",
+      "version": "16.3.8",
+      "packageJsonSha256": "ca413c6096bb8c2c28e95b5cd9be84a0ac6d926435985fe1701e2d0d7f985d07",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@next/eslint-plugin-next/node_modules/@eslint-community/eslint-utils",
+      "name": "@eslint-community/eslint-utils",
+      "version": "4.9.1",
+      "packageJsonSha256": "8bd084d739f6ad91bd4cbe7ff4ec39179da919037d6bc3d9a23897e584632bd9",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@next/eslint-plugin-next/node_modules/eslint-visitor-keys",
+      "name": "eslint-visitor-keys",
+      "version": "3.4.3",
+      "packageJsonSha256": "54feabdd2ef488414247dd4ecf71542549db02baced1153465c3ac2e5bf61a6c",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@next/swc-linux-x64-gnu",
+      "name": "@next/swc-linux-x64-gnu",
+      "version": "16.3.8",
+      "packageJsonSha256": "dca7a240d53c8edd8833ad465f85d304d307637159ec6243da6190d02cd969fe",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@next/swc-linux-x64-musl",
+      "name": "@next/swc-linux-x64-musl",
+      "version": "16.3.8",
+      "packageJsonSha256": "8225ef6fa70db32e6632815cae657bdba41c4e26a9addc5572589ecc5b2b2975",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@nodelib/fs.scandir",
+      "name": "@nodelib/fs.scandir",
+      "version": "2.1.5",
+      "packageJsonSha256": "d2dd608ef7400bc51bfa744f658b6a32b679ac5c053ef6d21499b2b0db1ccaba",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@nodelib/fs.stat",
+      "name": "@nodelib/fs.stat",
+      "version": "2.0.5",
+      "packageJsonSha256": "ad8601ad12a424f995579ffa7ae24042c44df9f89248b715dcd8ef56c54aacca",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@nodelib/fs.walk",
+      "name": "@nodelib/fs.walk",
+      "version": "1.2.8",
+      "packageJsonSha256": "509382ca0b57206ef4ccec2738a6ba060094eb65bd2f4bee1462d941c72d4344",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@nolyfill/is-core-module",
+      "name": "@nolyfill/is-core-module",
+      "version": "1.0.39",
+      "packageJsonSha256": "d72fcf69285a3be9bbe82c3deea4a3931f6caa1f91ee0d2d8ad58c1b9c53fa2b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@react-three/fiber",
+      "name": "@react-three/fiber",
+      "version": "9.6.1",
+      "packageJsonSha256": "a4d04c276030b69da8e45a15459f817fcc467d242a58cb0c40f8ba6aea273bf5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@rtsao/scc",
+      "name": "@rtsao/scc",
+      "version": "1.1.0",
+      "packageJsonSha256": "429faa9400dae214186d7a0cc09713e7704601e4f8a18b113e21d035dd1712c6",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@swc/helpers",
+      "name": "@swc/helpers",
+      "version": "0.5.23",
+      "packageJsonSha256": "10ee79b75759afbf8cfa2b8e5a2eff946c487143e935fc31b2433aa68be84596",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@tailwindcss/node",
+      "name": "@tailwindcss/node",
+      "version": "4.3.2",
+      "packageJsonSha256": "57886caacc28bbc6c4090da0d5f3a3f1a7726754622acc8abe5eedb50d25a42e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@tailwindcss/oxide",
+      "name": "@tailwindcss/oxide",
+      "version": "4.3.2",
+      "packageJsonSha256": "da439c7aefeda4508284947aa5c4243e728bee7e1156fba4ebec07a09ef8cd58",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@tailwindcss/oxide-linux-x64-gnu",
+      "name": "@tailwindcss/oxide-linux-x64-gnu",
+      "version": "4.3.2",
+      "packageJsonSha256": "54cd03c49fa7912f22c329254f3a5584d01c7f557d7336b262ddba1c37c77960",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@tailwindcss/oxide-linux-x64-musl",
+      "name": "@tailwindcss/oxide-linux-x64-musl",
+      "version": "4.3.2",
+      "packageJsonSha256": "eba8813898022d732efac76ed4e6e660eff4f1b1ffea5038bbc8eaeebfbcdbc2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@tailwindcss/postcss",
+      "name": "@tailwindcss/postcss",
+      "version": "4.3.2",
+      "packageJsonSha256": "c208667cb39ba99dc29e4124d6dbfc86b39e778399f4913eb9304ef785d86882",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@tweenjs/tween.js",
+      "name": "@tweenjs/tween.js",
+      "version": "23.1.3",
+      "packageJsonSha256": "3f977e60052211d7d703997f75f97fb6e7f8cc2154d1b0da21792974ed476d0f",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@tybys/wasm-util",
+      "name": "@tybys/wasm-util",
+      "version": "0.10.4",
+      "packageJsonSha256": "c20faec761415a8eaab8d309dfdbd005ffd8f32f36bd5bbdcdaba3cdfeb18613",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/estree",
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "packageJsonSha256": "3537a6a503f57901111d8a29df81962887653deb199b9a795c7fb50bbfdd1bdc",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/json-schema",
+      "name": "@types/json-schema",
+      "version": "7.0.15",
+      "packageJsonSha256": "6bf0cb0808cafc14023ae10d55d6a88228397dc54c16106d121f42ac88d64fc8",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/json5",
+      "name": "@types/json5",
+      "version": "0.0.29",
+      "packageJsonSha256": "3713801b9752f96a2722287af03053a6f0b0ed0b0f1898f38baa7127058cf96d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/node",
+      "name": "@types/node",
+      "version": "22.20.5",
+      "packageJsonSha256": "234e64edc31580d6052f8abc89b96f156de29d3b4c7121214b960dec09bd2a25",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/react",
+      "name": "@types/react",
+      "version": "19.2.17",
+      "packageJsonSha256": "36496fc09a9dcf31b0ca969ce5677c9ce9ebb5c89da9bd6212e0c89b6fae3f88",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/react-dom",
+      "name": "@types/react-dom",
+      "version": "19.2.3",
+      "packageJsonSha256": "bf90986beaec5f757c164bf1d374f3038dc41b0b06673de4a55fd975d1e5deca",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/react-reconciler",
+      "name": "@types/react-reconciler",
+      "version": "0.28.9",
+      "packageJsonSha256": "5cadb9d3ae7047f247bad566240b38fc0aa093734f851c280ce7bd3c4d4bf7ef",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/stats.js",
+      "name": "@types/stats.js",
+      "version": "0.17.4",
+      "packageJsonSha256": "12d5f7ea32961ad2841c1556f777da8c4da73d38a7696095cd26ce059a052891",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/three",
+      "name": "@types/three",
+      "version": "0.180.0",
+      "packageJsonSha256": "b3aca396a9c08cb7cbaa03b0dff2f2e0ebc55958715b465acd76c4f291a5eb2b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@types/webxr",
+      "name": "@types/webxr",
+      "version": "0.5.24",
+      "packageJsonSha256": "5d967f69ef8fbcf85034acc1954bfe4a1118cee7b7c2d240664e7eb3b58f75ea",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/eslint-plugin",
+      "name": "@typescript-eslint/eslint-plugin",
+      "version": "8.71.1",
+      "packageJsonSha256": "9885c7f8bce56410270de39e55cc95b0dc6f71d0e874539d2b1a6c99031cee88",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/eslint-plugin/node_modules/ignore",
+      "name": "ignore",
+      "version": "7.0.12",
+      "packageJsonSha256": "f69eac576ce3133c2dd2f7b5a33936a714fe90c45713350b5d5fd7f6e558f340",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/parser",
+      "name": "@typescript-eslint/parser",
+      "version": "8.71.1",
+      "packageJsonSha256": "515cec9723116e3ec517843242248c43ed7fee3b97f486bac1d3853561452d4a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/project-service",
+      "name": "@typescript-eslint/project-service",
+      "version": "8.71.1",
+      "packageJsonSha256": "eafc2f469b8943f41cb5b682673a0e833a9a3a72ad97335870b5a5b3f7342cb5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/scope-manager",
+      "name": "@typescript-eslint/scope-manager",
+      "version": "8.71.1",
+      "packageJsonSha256": "8bc8cd502f423c853b070d26de3a355f75f2b1abb5854e83e98e94da8daafec8",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/tsconfig-utils",
+      "name": "@typescript-eslint/tsconfig-utils",
+      "version": "8.71.1",
+      "packageJsonSha256": "cae5fcb387b60cce18a93c853c620b0787c42c379604c38bf8ba65b55e3f3042",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/type-utils",
+      "name": "@typescript-eslint/type-utils",
+      "version": "8.71.1",
+      "packageJsonSha256": "6037b46ed7e3a70d35f1432bb64ea0361923278b336c562cd8e000d0f105e5a1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/types",
+      "name": "@typescript-eslint/types",
+      "version": "8.71.1",
+      "packageJsonSha256": "082cad6693f6068f424305768b070db12ef70c27aa12a86953fbcc86905e4c85",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/typescript-estree",
+      "name": "@typescript-eslint/typescript-estree",
+      "version": "8.71.1",
+      "packageJsonSha256": "19cafcdc7723d7f8bb7b21a91346e05af8c63a8671b6cbab516f80edc6e1618d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/typescript-estree/node_modules/balanced-match",
+      "name": "balanced-match",
+      "version": "4.0.4",
+      "packageJsonSha256": "c984e6ae5c41fac085a07a732b665b22e0a26f28b61c692ba18ff458a8ecc95a",
+      "hooks": {
+        "prepare": "tshy"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/typescript-estree/node_modules/brace-expansion",
+      "name": "brace-expansion",
+      "version": "5.0.12",
+      "packageJsonSha256": "8af7dc0916002266f3b01459ef691d9f834d8ecdb0e021263280a50b913d85fa",
+      "hooks": {
+        "prepare": "tshy"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch",
+      "name": "minimatch",
+      "version": "10.2.6",
+      "packageJsonSha256": "bb847ba240909c9a36d4eaeb4e0efdc3e31182aeef208c1611259a48f282ea75",
+      "hooks": {
+        "prepare": "tshy"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/typescript-estree/node_modules/semver",
+      "name": "semver",
+      "version": "7.8.5",
+      "packageJsonSha256": "7c94cb7f2a53c27b20d76386ec144c062894dbcc909cfabd0f728c37874b1776",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/utils",
+      "name": "@typescript-eslint/utils",
+      "version": "8.71.1",
+      "packageJsonSha256": "0ef708336b492b15dbb6ef27471ecef524455ffd23b369bbf7f49153a4898753",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/visitor-keys",
+      "name": "@typescript-eslint/visitor-keys",
+      "version": "8.71.1",
+      "packageJsonSha256": "a8b338e6f161a0a785f849ab0d94ab8b7f23e7929fec571ce6012a5782f8f58f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@typescript-eslint/visitor-keys/node_modules/eslint-visitor-keys",
+      "name": "eslint-visitor-keys",
+      "version": "5.0.1",
+      "packageJsonSha256": "13f8b0207958a2d504740826e8245bc2b023248136275550907a5569d8659242",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@unrs/resolver-binding-linux-x64-gnu",
+      "name": "@unrs/resolver-binding-linux-x64-gnu",
+      "version": "1.12.2",
+      "packageJsonSha256": "72cecf001066926be4b669b4501d629fb81034ddc94dc87bd194415af37f3101",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@unrs/resolver-binding-linux-x64-musl",
+      "name": "@unrs/resolver-binding-linux-x64-musl",
+      "version": "1.12.2",
+      "packageJsonSha256": "8baf9d1ca25e0280eb89e02d7e20bf2862dbf92eed160700c4a2a68b64b34939",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/@webgpu/types",
+      "name": "@webgpu/types",
+      "version": "0.1.74",
+      "packageJsonSha256": "c58597e365f42b61a165210e49e90a864730ee4716473de67d36dfa42519ec99",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/acorn",
+      "name": "acorn",
+      "version": "8.19.0",
+      "packageJsonSha256": "04d6fecaafb5e3d20a38fc3b64fed84bb3830a7759a8c00400ebcb87331fec00",
+      "hooks": {
+        "prepare": "cd ..; npm run build:main"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/acorn-jsx",
+      "name": "acorn-jsx",
+      "version": "5.3.2",
+      "packageJsonSha256": "5e123a5ee3b16fd10fe4b44ef70ff7885f05117fb9ae75f72a0d821f919d423d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/ajv",
+      "name": "ajv",
+      "version": "6.15.0",
+      "packageJsonSha256": "be4fd09eb4658674ed5ffb9da2786d2056fd78429192a3619e0458f84fe0ca6b",
+      "hooks": {
+        "prepublish": "npm run build && npm run bundle"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/ansi-styles",
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "packageJsonSha256": "d405f010681d53f77691015e98461f8484b2afe6a9edfdd2ddb27b1e8a8e883d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/argparse",
+      "name": "argparse",
+      "version": "2.0.1",
+      "packageJsonSha256": "688bace28e14392b3a1c4137eb56bc48b684dbf5cb56278ed7056cd2ece07990",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/aria-query",
+      "name": "aria-query",
+      "version": "5.3.2",
+      "packageJsonSha256": "3e79dcdafd4e2226a2775c0cf423bb72622dd6890908dddfbba66c10a93606de",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/array-buffer-byte-length",
+      "name": "array-buffer-byte-length",
+      "version": "1.0.2",
+      "packageJsonSha256": "477d1c0349dfbe051b3bc99b289a8360570264a1731f73e3c594ed8b9a3b6252",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/array-includes",
+      "name": "array-includes",
+      "version": "3.2.0",
+      "packageJsonSha256": "f9fc6a85ae5c7ab12f4eda02cb9cf5f0565099d12b1b0cb70a24ae65760c7ec9",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/array.prototype.findlast",
+      "name": "array.prototype.findlast",
+      "version": "1.2.5",
+      "packageJsonSha256": "e4a0bdacc86cecf6bf4ac9920f860f1fbdbf4476f06335911fcf6b95f6c70bd1",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/array.prototype.findlastindex",
+      "name": "array.prototype.findlastindex",
+      "version": "1.2.6",
+      "packageJsonSha256": "5a20c051840f67322f822eb7d6286c7e54823ce6508cb6937d87f62ff5dd8f0e",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/array.prototype.flat",
+      "name": "array.prototype.flat",
+      "version": "1.3.3",
+      "packageJsonSha256": "bb82078c7152da9b2d2e8f4b427c13665eec7cb79d91bcc2216528f7e6a88448",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/array.prototype.flatmap",
+      "name": "array.prototype.flatmap",
+      "version": "1.3.3",
+      "packageJsonSha256": "541481106ea1b06f7eec620516ad31349948ea235d13b5914ab8d1c39de99056",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/array.prototype.tosorted",
+      "name": "array.prototype.tosorted",
+      "version": "1.1.4",
+      "packageJsonSha256": "5653cb5cd460cc404ad12866d06a9537dba0f50e692fa7159f0beee6bfb47032",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/arraybuffer.prototype.slice",
+      "name": "arraybuffer.prototype.slice",
+      "version": "1.0.4",
+      "packageJsonSha256": "19489eaebd7e2bf6603d8f6bd32462f315249fe1cccd8931043eacdcb02838ed",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/ast-types-flow",
+      "name": "ast-types-flow",
+      "version": "0.0.8",
+      "packageJsonSha256": "0fbc169df284b8197de4e408148320bd5f94eb552af71cf1ae2ec0fffb175fb7",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/async-function",
+      "name": "async-function",
+      "version": "1.0.0",
+      "packageJsonSha256": "b4ba11bf2c4ab7d34d64b74a6b549e813d793693eb1364d9c48c63660b06c75f",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/available-typed-arrays",
+      "name": "available-typed-arrays",
+      "version": "1.0.7",
+      "packageJsonSha256": "ffce2bbb0b85b9a20bcc674e4c78307ead42af0299e1d28a9dfb249566e0a319",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/axe-core",
+      "name": "axe-core",
+      "version": "4.14.0",
+      "packageJsonSha256": "486715407f3c8c7d1de882bacc2622acb0adf1ec0f21807fc1251aed64bf9001",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/axobject-query",
+      "name": "axobject-query",
+      "version": "4.1.0",
+      "packageJsonSha256": "d600d64fa6c998f77bd9a2fc6e0e2186ff39fea2d89a4ecbb98a77aa94cf74b3",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/balanced-match",
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "packageJsonSha256": "b30c328501dead1870b894ad604405b2284b571c1f12664cdc61d92a2e3397c2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/base64-js",
+      "name": "base64-js",
+      "version": "1.5.1",
+      "packageJsonSha256": "9758f3ab8c45e07bb9a368e32f9a8b3729623bbf47cbbb205b32d674ab2a91f0",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/baseline-browser-mapping",
+      "name": "baseline-browser-mapping",
+      "version": "2.11.28",
+      "packageJsonSha256": "d65aafecbf300a4ce93d19f827e97e71bfd7fb33c09ec8a4f97eeb849de8ab8e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/brace-expansion",
+      "name": "brace-expansion",
+      "version": "1.1.21",
+      "packageJsonSha256": "3183ac1fc70f2bdd53b876019fe35fafc25536889529352db26da06e047e8a00",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/braces",
+      "name": "braces",
+      "version": "3.0.3",
+      "packageJsonSha256": "56f08b888a4f30dc7cf8a7dbb36ffe92b737912ba36abe9d069d32167c957ac7",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/browserslist",
+      "name": "browserslist",
+      "version": "4.29.3",
+      "packageJsonSha256": "837c596bf1bbcabec84142e5d746e7dcd1dc39e7d23bbc9655cc85af1add21d1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/buffer",
+      "name": "buffer",
+      "version": "6.0.3",
+      "packageJsonSha256": "5b105ac0abbf5985cbe62ad28a34032d85c7ef623e0eb01f39441b0feb419004",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/call-bind",
+      "name": "call-bind",
+      "version": "1.0.9",
+      "packageJsonSha256": "c11be8b7f9bbe367c27d42fba734b8226c0b15e1e5e1c2d842822d9791f053c7",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/call-bind-apply-helpers",
+      "name": "call-bind-apply-helpers",
+      "version": "1.0.2",
+      "packageJsonSha256": "59639b628c6846f674857c6a613fd47e2e4d2a24036cdf0f7a62ac634f4c8a5f",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/call-bound",
+      "name": "call-bound",
+      "version": "1.0.4",
+      "packageJsonSha256": "dcc8abb3c4ad3774234272149020cb36d7b1a3d377a419454d1e7adb368dd9c3",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/callsites",
+      "name": "callsites",
+      "version": "3.1.0",
+      "packageJsonSha256": "9c27ea7f90c3a348c038fd6b3213848552ed1ec5dd38e0a06016af19d19e526a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/caniuse-lite",
+      "name": "caniuse-lite",
+      "version": "1.0.30001815",
+      "packageJsonSha256": "9e9e706aee141b078f97ffc2b537f0a3a4cc0b6b0adbe3a8abceb7eb3b5f9436",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/chalk",
+      "name": "chalk",
+      "version": "4.1.2",
+      "packageJsonSha256": "9cd907d34a45cb73b5c8a459d5602a36ccd456794665c529a3a5b0f02e196f26",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/client-only",
+      "name": "client-only",
+      "version": "0.0.1",
+      "packageJsonSha256": "4d6342705767832f299b9a59c28e4275bcf02db19472732f93f67d979441df8f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/color-convert",
+      "name": "color-convert",
+      "version": "2.0.1",
+      "packageJsonSha256": "9471d21744ca3137410448da6b3bd7b30ee91d42edce3b82ebcbf84faef74fb4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/color-name",
+      "name": "color-name",
+      "version": "1.1.4",
+      "packageJsonSha256": "4a557ea373907e4643badb89ff21b3f4b969d20631086d78eab2e03d05c2efa4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/concat-map",
+      "name": "concat-map",
+      "version": "0.0.1",
+      "packageJsonSha256": "4fe5e8089b65ebfd55bb86f465ba896ba6a8e24b7b61de1e0f420f590616b118",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/convert-source-map",
+      "name": "convert-source-map",
+      "version": "2.0.0",
+      "packageJsonSha256": "e6bf802e6ee220d66321808ce3d619fbb85ff4d5729ea4f649bd65dfe9ee8956",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/cross-spawn",
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "packageJsonSha256": "2e106cd9b4ae4e34ead35218371a0d4e172da72515a4f8f97d69a2e1fe3dee82",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/csstype",
+      "name": "csstype",
+      "version": "3.2.3",
+      "packageJsonSha256": "c818b74a9bc1556488b7ec2a65399224738f6619228f9a6491c5c02ca91f849e",
+      "hooks": {
+        "prepublish": "npm install --no-save --prefix __tests__ && npm install --no-save --prefix __tests__/__fixtures__"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/damerau-levenshtein",
+      "name": "damerau-levenshtein",
+      "version": "1.0.8",
+      "packageJsonSha256": "3cc395c00576d44f27af6847060fb9d0fd7155de42485d4eac3c9699a7f4933c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/data-view-buffer",
+      "name": "data-view-buffer",
+      "version": "1.0.2",
+      "packageJsonSha256": "91bf9780fcff17c79516215cc88259e3154cdcf15dfce17448492c4e9f4983d9",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/data-view-byte-length",
+      "name": "data-view-byte-length",
+      "version": "1.0.2",
+      "packageJsonSha256": "dc93bd72a25b10167fa06b98b271db6f418937f46865b3703aa53400721b9c12",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/data-view-byte-offset",
+      "name": "data-view-byte-offset",
+      "version": "1.0.1",
+      "packageJsonSha256": "a1d8635176b9cf7dd9eb4741e62c63d24b6c4186c7339a162a6ed982061ba194",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/debug",
+      "name": "debug",
+      "version": "4.4.3",
+      "packageJsonSha256": "ea8e33d63fe5f3a4c36609b6c3df8e2ef1f8b8ba2fc3a2e1e53cb27291f384af",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/deep-is",
+      "name": "deep-is",
+      "version": "0.1.4",
+      "packageJsonSha256": "5caed41b62144a29c30415d2d92293c8122b4adeb281bffd097cbfca0f70645d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/define-data-property",
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "packageJsonSha256": "bde7f1465b344a24da2b10d2ee99f87edf8e0ecd177c28370b60ad9595de730e",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/define-properties",
+      "name": "define-properties",
+      "version": "1.2.1",
+      "packageJsonSha256": "b61b15058833610f17197bfb60847926703e077b180de684ccc50866906f6fb1",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/detect-libc",
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "packageJsonSha256": "ee88e5b954fdf3a8480b1d01ef767d68d8ca2c6da269f58c5cf1c5550e9aa2a7",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/doctrine",
+      "name": "doctrine",
+      "version": "2.1.0",
+      "packageJsonSha256": "e9955a173d565aa7f8df3e2465536b8833c5751d1c5e7545e3d5e17c6276b0d7",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/dunder-proto",
+      "name": "dunder-proto",
+      "version": "1.0.1",
+      "packageJsonSha256": "24df71008e4225c858f389dd2728b76cf66b752256d42a38ed7930aacae7fe2b",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/electron-to-chromium",
+      "name": "electron-to-chromium",
+      "version": "1.5.452",
+      "packageJsonSha256": "5e0d0be177217cc53b706edc5e06a0261b49f7e3f0f490fe3a965996f73bf670",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/emoji-regex",
+      "name": "emoji-regex",
+      "version": "9.2.2",
+      "packageJsonSha256": "181fa046bdbb7d8958c57dcef2e63aea9af667036e218c7222479a8618375f1a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/enhanced-resolve",
+      "name": "enhanced-resolve",
+      "version": "5.21.6",
+      "packageJsonSha256": "0821d2c2add45008b8a6828d4f0cb243216761d8813f13a4319e327b6b2b4fc1",
+      "hooks": {
+        "prepare": "husky"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-abstract",
+      "name": "es-abstract",
+      "version": "1.24.2",
+      "packageJsonSha256": "d9c11548d62b1b3d9da4d6932e9bb15a4cb658ee1671fccad3fbcd666e3355cc",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-abstract-get",
+      "name": "es-abstract-get",
+      "version": "1.0.0",
+      "packageJsonSha256": "39802988d8e35acfe09fb22dae3a0e630839b03909a21065d7458aa33a4cd8f1",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-define-property",
+      "name": "es-define-property",
+      "version": "1.0.1",
+      "packageJsonSha256": "3a2cb30dae30a96705dcd9aa2d5fb190cf8200f27badccfa5a81a4374e5708b4",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-errors",
+      "name": "es-errors",
+      "version": "1.3.0",
+      "packageJsonSha256": "1a0a0bcccc76b915cb64073317312840cf6363e9144b96f406d0059774dd5278",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-iterator-helpers",
+      "name": "es-iterator-helpers",
+      "version": "1.4.0",
+      "packageJsonSha256": "b195bf5d712fef18f89b18eb517df219c7e6354e5409d0913d6730805bc908c1",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-object-atoms",
+      "name": "es-object-atoms",
+      "version": "1.1.2",
+      "packageJsonSha256": "e4b7882975d10c68457945c883e1060d0b058af5b1216215c872263f42e12fc9",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-set-tostringtag",
+      "name": "es-set-tostringtag",
+      "version": "2.1.0",
+      "packageJsonSha256": "c9506942c9ef472286aff079bb65b7f3edcaccbc7f59fac9f419787b570086e5",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-shim-unscopables",
+      "name": "es-shim-unscopables",
+      "version": "1.1.0",
+      "packageJsonSha256": "28b7d900336cb65fa0775242ad1c84d1d2fa9e088004b5263c95f3973b039d6b",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/es-to-primitive",
+      "name": "es-to-primitive",
+      "version": "1.3.4",
+      "packageJsonSha256": "56237f64650c2ba1a2f73b4d3b6399b0283479903c7deb33f822f57be04aa024",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/escalade",
+      "name": "escalade",
+      "version": "3.2.0",
+      "packageJsonSha256": "acd22b264ecbea162e320a360dab0ad0f3e5438fa4382288df844fa08b484e73",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/escape-string-regexp",
+      "name": "escape-string-regexp",
+      "version": "4.0.0",
+      "packageJsonSha256": "63763f28aefa6c49e6e6599e44b7c9aa5afd6518ae04bcfa534ff3759ad428e8",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint",
+      "name": "eslint",
+      "version": "9.39.4",
+      "packageJsonSha256": "80a7caf2adf34963e47b32a1e75157de6d6814c3ae5a9d90358ddd9364833fe7",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-config-next",
+      "name": "eslint-config-next",
+      "version": "16.3.8",
+      "packageJsonSha256": "9e7e4749898bef6b096a7ba5ffec6f07383d12c729831576d5b6a42812884196",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-config-next/node_modules/globals",
+      "name": "globals",
+      "version": "16.4.0",
+      "packageJsonSha256": "1c67d55add77bbddaf7ae6c193d36f1574ebafbe9b39a4aa6de218689f229234",
+      "hooks": {
+        "prepare": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-import-resolver-node",
+      "name": "eslint-import-resolver-node",
+      "version": "0.3.10",
+      "packageJsonSha256": "89056794cf6e791e10fa6b7f845ccd17a883c68f0041853768d526a657a1859b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-import-resolver-node/node_modules/debug",
+      "name": "debug",
+      "version": "3.2.7",
+      "packageJsonSha256": "bc3ebfd4898960d942e65f60696f2af26917d6ddf016dd159c52beb9241d3983",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-import-resolver-typescript",
+      "name": "eslint-import-resolver-typescript",
+      "version": "3.10.1",
+      "packageJsonSha256": "3ee6dac32c4e66c61ad810a6eb0d4bebd9b4ffddd44807c958eb3449197f2776",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-module-utils",
+      "name": "eslint-module-utils",
+      "version": "2.14.0",
+      "packageJsonSha256": "3dde6c9a0a1bab1a3ee469af8e33c37a6e50da6af1af592a39e5fce832ea0f22",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-module-utils/node_modules/debug",
+      "name": "debug",
+      "version": "3.2.7",
+      "packageJsonSha256": "bc3ebfd4898960d942e65f60696f2af26917d6ddf016dd159c52beb9241d3983",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-plugin-import",
+      "name": "eslint-plugin-import",
+      "version": "2.32.0",
+      "packageJsonSha256": "7acb3fccc7ba2ee463c08e65443df95dc6243f74ac098deb7f2a5d69b51293f2",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-plugin-import/node_modules/debug",
+      "name": "debug",
+      "version": "3.2.7",
+      "packageJsonSha256": "bc3ebfd4898960d942e65f60696f2af26917d6ddf016dd159c52beb9241d3983",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-plugin-jsx-a11y",
+      "name": "eslint-plugin-jsx-a11y",
+      "version": "6.10.2",
+      "packageJsonSha256": "952fc60d13cacdc35cef8234832187672822a10b6767da4f8596b97eb3f2cecc",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-plugin-react",
+      "name": "eslint-plugin-react",
+      "version": "7.37.5",
+      "packageJsonSha256": "f6cf43d8467c9a7777ccf4b779ad03c594a3203c83bdf3506741a58db66a3b62",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-plugin-react-hooks",
+      "name": "eslint-plugin-react-hooks",
+      "version": "7.1.1",
+      "packageJsonSha256": "c745f6ec0ce838f395eb5da17e3f907094fcd14c87c30b94810f217fe5e7b476",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-scope",
+      "name": "eslint-scope",
+      "version": "8.4.0",
+      "packageJsonSha256": "5d0d647be190cc44954e520036832957f55dd4738536b9f85eaf479b4a279ab8",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/eslint-visitor-keys",
+      "name": "eslint-visitor-keys",
+      "version": "4.2.1",
+      "packageJsonSha256": "f479c384cbd48ab3d95ba3f02f332ee42320b408a09f1cb8f1d3da96273ed4d3",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/espree",
+      "name": "espree",
+      "version": "10.4.0",
+      "packageJsonSha256": "76d68e5b8ac5aae00882165c4feae4a8a8825ccb4ea76ab8af0f02ba320fd250",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/esquery",
+      "name": "esquery",
+      "version": "1.7.0",
+      "packageJsonSha256": "e69c382432559247e50fd8886b0476d4066fd90a47d80e6e722db4d164dcf61c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/esrecurse",
+      "name": "esrecurse",
+      "version": "4.3.0",
+      "packageJsonSha256": "3bc67cb54672ec6957b53947613c23599371bf9222dbbe97275d20516a561a20",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/estraverse",
+      "name": "estraverse",
+      "version": "5.3.0",
+      "packageJsonSha256": "133a5be160a0123ad20ab8f2bdaa9da2fd94ebf3403996bf4cb69606e6a84a65",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/esutils",
+      "name": "esutils",
+      "version": "2.0.3",
+      "packageJsonSha256": "af08fd13ef49c88af75c5f4ad02812216028ad848f8354fd97346e7ddc816c0e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fast-deep-equal",
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "packageJsonSha256": "a5c63940db0260739be9e2ac67f3aac268df4db5770420ee4e34e493152f97d2",
+      "hooks": {
+        "prepublish": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fast-glob",
+      "name": "fast-glob",
+      "version": "3.3.1",
+      "packageJsonSha256": "8ad595ebee47ca89a32323be8dd2a21e6074e91db95e8add8b628af4ff025981",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fast-glob/node_modules/glob-parent",
+      "name": "glob-parent",
+      "version": "5.1.2",
+      "packageJsonSha256": "858af9aa27cfe6eea1cfd1abbda15ad0ccc87e66e88b3ad249fab8df6dd13192",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fast-json-stable-stringify",
+      "name": "fast-json-stable-stringify",
+      "version": "2.1.0",
+      "packageJsonSha256": "c4907a6cf1a242f65589b9bb762b9330088aa4a940d382b470d3c47b5309ef44",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fast-levenshtein",
+      "name": "fast-levenshtein",
+      "version": "2.0.6",
+      "packageJsonSha256": "80167ee3483f23228b48d5cf5c9db355bacf55922282eb132af83136b9c9213e",
+      "hooks": {
+        "prepublish": "npm run build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fastq",
+      "name": "fastq",
+      "version": "1.20.3",
+      "packageJsonSha256": "0e01425632d69b4e148bcde6edcfddce0f39889cb4ea70a4d52bbf622b44e553",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fflate",
+      "name": "fflate",
+      "version": "0.8.3",
+      "packageJsonSha256": "5922d8150b307bc0e4e441491c779c45379e9913d348848fca8d5cf02db4d134",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/file-entry-cache",
+      "name": "file-entry-cache",
+      "version": "8.0.0",
+      "packageJsonSha256": "1d88b9fe323d9766712599c0ee134c56e02a472e1fa633f304bc7be8cdc4dcec",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/fill-range",
+      "name": "fill-range",
+      "version": "7.1.1",
+      "packageJsonSha256": "87f5c78f9b47d21f9ca62b60cff1d250a3b468eab320dd13c3f3ab2464a02735",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/find-up",
+      "name": "find-up",
+      "version": "5.0.0",
+      "packageJsonSha256": "d1de12b1501bb90cf2fe6ef2668eb9d56a3dadeccdcaf075db46287bcb2f43ea",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/flat-cache",
+      "name": "flat-cache",
+      "version": "4.0.1",
+      "packageJsonSha256": "8086a3cb7efb10e538f6d55d820c22c237d686454f8b0e6b144c4baf92ea7e1e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/flatted",
+      "name": "flatted",
+      "version": "3.4.4",
+      "packageJsonSha256": "b2ff4da4785cbefcbdb4bd5951cf9232f3fe8d9c55c210cab5e28c0a120f0ba0",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/for-each",
+      "name": "for-each",
+      "version": "0.3.5",
+      "packageJsonSha256": "789a488ade1ea7535497f7c86fded54281c4e7ff861fe8e0e667772a00680711",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/function-bind",
+      "name": "function-bind",
+      "version": "1.1.2",
+      "packageJsonSha256": "edb1c4faf4148e6e3d74ed8dbac1a1dc359a647ff4207aad4851396dc7a3559a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/function.prototype.name",
+      "name": "function.prototype.name",
+      "version": "1.2.0",
+      "packageJsonSha256": "60ca54aff1f30b8015c00a0c3ba7c07fe8efd746e7b87b70ececcfc0ac8aa7a4",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/functions-have-names",
+      "name": "functions-have-names",
+      "version": "1.2.3",
+      "packageJsonSha256": "b821fe786f7afa6f8b2090ddbc053717528314ed39bdbff0e283a0b0103afee5",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/generator-function",
+      "name": "generator-function",
+      "version": "2.0.1",
+      "packageJsonSha256": "b7627a785e689ec434dc28b7e1dc2e75db98695b1361a696c519ae6875553761",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/gensync",
+      "name": "gensync",
+      "version": "1.0.0-beta.2",
+      "packageJsonSha256": "80cddca71baa1ba0cf44f65585e1c1ed7576abdb759ed391007925c961ca6334",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/get-intrinsic",
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "packageJsonSha256": "45b14763baacc59b0fd7b39e3ad983d5d2aaf7f5ed682f2fce9edb469826c999",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/get-proto",
+      "name": "get-proto",
+      "version": "1.0.1",
+      "packageJsonSha256": "73839e012ac7134a632c9d9fc6bdb700ac9ab5553cce39eb789ba2b65663e734",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/get-symbol-description",
+      "name": "get-symbol-description",
+      "version": "1.1.0",
+      "packageJsonSha256": "2bc0449553b5e1bed1d8465283a5dc5b3c3bbfabc370aa4cfd7d721f6ef80120",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/get-tsconfig",
+      "name": "get-tsconfig",
+      "version": "4.14.3",
+      "packageJsonSha256": "4e5880985b33ecaa87f6aef1b6581dec5555d88a0738a7379576e80891873355",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/glob-parent",
+      "name": "glob-parent",
+      "version": "6.0.2",
+      "packageJsonSha256": "1a0b9ff627b3ded5a3e8c7e7ab99eface3c79e92d7691a11e3eff8d78e0f8e24",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/globals",
+      "name": "globals",
+      "version": "14.0.0",
+      "packageJsonSha256": "7825cb9a75020bbeba926f89926588ccc21322d4e8be27a0c5c70fec340f6ec1",
+      "hooks": {
+        "prepare": "npm run --silent update-types"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/globalthis",
+      "name": "globalthis",
+      "version": "1.0.4",
+      "packageJsonSha256": "b0417292023b26946ddbfef45cba32974b744fd65297d37367a97649210493cb",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/gopd",
+      "name": "gopd",
+      "version": "1.2.0",
+      "packageJsonSha256": "33ace32dc861f6da9d1fd9d0a44c66e8c6ff3b13358d070683c1c2978ff5f19f",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/graceful-fs",
+      "name": "graceful-fs",
+      "version": "4.2.11",
+      "packageJsonSha256": "5747d4ba6b17165c6ecac30ab3a331715f41c7ad546e1f1574dab1bdcb116181",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/has-bigints",
+      "name": "has-bigints",
+      "version": "1.1.0",
+      "packageJsonSha256": "b811e76ed3775f79abd7ea695c4407d800678a71703762f50bdde6f1f03098d4",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/has-flag",
+      "name": "has-flag",
+      "version": "4.0.0",
+      "packageJsonSha256": "3fef4b52efbeabeadfffd5994e90b1025eb24263286e34170675956637d368b1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/has-property-descriptors",
+      "name": "has-property-descriptors",
+      "version": "1.0.2",
+      "packageJsonSha256": "59a91e2cf32e4303d248708999a9ec3afd8e3649a87ba7abcf2177dc1984e3d5",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/has-proto",
+      "name": "has-proto",
+      "version": "1.2.0",
+      "packageJsonSha256": "93dba5204e076effb4f66bb8c6f92ff57a80dd1bb0868bbc5864d45aa8ea86f6",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/has-symbols",
+      "name": "has-symbols",
+      "version": "1.1.0",
+      "packageJsonSha256": "5190268c0e3308d7446d1f7c036238f329f786938453e6017cb90980b3612e7a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/has-tostringtag",
+      "name": "has-tostringtag",
+      "version": "1.0.2",
+      "packageJsonSha256": "30ab773c52021a6b800ea48f251abeeb1f6e378300f819204dfbb38d6e43f3ad",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/hasown",
+      "name": "hasown",
+      "version": "2.0.4",
+      "packageJsonSha256": "40b750c55a8bacf2c5ac316f5299dd44d48acc101c189a00cd59d39376b5eb89",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/hermes-estree",
+      "name": "hermes-estree",
+      "version": "0.25.1",
+      "packageJsonSha256": "bc6e559f8a1f89a531c9ed45f3aacdb1a45d17302aa7e730edfc53170b9d9f2c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/hermes-parser",
+      "name": "hermes-parser",
+      "version": "0.25.1",
+      "packageJsonSha256": "768cc73e0cefe52baf831359bee1b37622dd917ca19bc08fb268493cd8144208",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/ieee754",
+      "name": "ieee754",
+      "version": "1.2.1",
+      "packageJsonSha256": "a8004b9c8dffe2e1b01a058ecf968a5d50beabcabc43cc98c655184ba6afc050",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/ignore",
+      "name": "ignore",
+      "version": "5.3.2",
+      "packageJsonSha256": "a9f40bd310889f21ed824bc19ce140714b7459d658f6708041af53e9855258a6",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/import-fresh",
+      "name": "import-fresh",
+      "version": "3.3.1",
+      "packageJsonSha256": "c71eb71fede603ba3191c01c55c9d5a3977dd5f8d91f24835aaffc9785c19534",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/imurmurhash",
+      "name": "imurmurhash",
+      "version": "0.1.4",
+      "packageJsonSha256": "aa3b07e7fa3d63aa96e401c3842b8cca1dd3247954baf92377094766e903c185",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/internal-slot",
+      "name": "internal-slot",
+      "version": "1.1.0",
+      "packageJsonSha256": "c75e491911f4ec299ffa5415dd20e914feea1b69ddccea2a58c82b6e4c7a714c",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-array-buffer",
+      "name": "is-array-buffer",
+      "version": "3.0.5",
+      "packageJsonSha256": "38a3c4698e3f4f2235481483558a96e67be7e4e90ce5647950da73efd7ccfb1a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-async-function",
+      "name": "is-async-function",
+      "version": "2.1.1",
+      "packageJsonSha256": "ca54a2b37e73a8248eece4ff0971a1385027d8af5da671207a827eeb6f5a531b",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-bigint",
+      "name": "is-bigint",
+      "version": "1.1.0",
+      "packageJsonSha256": "079916fe1d9e42dd3ed230521911d4ffa718f3bbd7efcc53d4bd8803b0cd11d9",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-boolean-object",
+      "name": "is-boolean-object",
+      "version": "1.2.2",
+      "packageJsonSha256": "908dcc16536fcfa62185c80010d9e92891f41e1d279b337d830d99a8dae9aed5",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-bun-module",
+      "name": "is-bun-module",
+      "version": "2.0.0",
+      "packageJsonSha256": "8b3a583e016bb5e564ea91e43072819b21c9f5a62c7a6a3a64f49acc99fdedd2",
+      "hooks": {
+        "prepare": "bun husky"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-bun-module/node_modules/semver",
+      "name": "semver",
+      "version": "7.8.5",
+      "packageJsonSha256": "7c94cb7f2a53c27b20d76386ec144c062894dbcc909cfabd0f728c37874b1776",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-callable",
+      "name": "is-callable",
+      "version": "1.2.7",
+      "packageJsonSha256": "0d0981565f03ca488d263c94d038717ec4face8b129b8ff18e792dabae2af755",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-core-module",
+      "name": "is-core-module",
+      "version": "2.17.0",
+      "packageJsonSha256": "81a8a96ac71ffeaa488ec2352e64afd4e669b527e2129086d85164d50f896122",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-data-view",
+      "name": "is-data-view",
+      "version": "1.0.2",
+      "packageJsonSha256": "f85851eb278449e6d5b06943c4d48f97a10cad78977955e3591b76788103b19b",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-date-object",
+      "name": "is-date-object",
+      "version": "1.1.0",
+      "packageJsonSha256": "224b3f8b6f9564aba91aefa417a925e00f3be92896af5bbeecf1e9e669e05ba5",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-document.all",
+      "name": "is-document.all",
+      "version": "1.0.0",
+      "packageJsonSha256": "696edd6adf8a7a8e8eccad166e2c20e1ac454e8c1342ff400eb45361917dcc69",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-extglob",
+      "name": "is-extglob",
+      "version": "2.1.1",
+      "packageJsonSha256": "8031afcd87f448d75ba8a5dd2cde9c68f982a94f406ebae8e5fb7cf6dfdeede2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-finalizationregistry",
+      "name": "is-finalizationregistry",
+      "version": "1.1.1",
+      "packageJsonSha256": "f46180b8ee3e4daae260c29ad942a6cd5f97c184e9d4e3dd5854b775bfe8e4d0",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-generator-function",
+      "name": "is-generator-function",
+      "version": "1.1.2",
+      "packageJsonSha256": "03f415ea6031c1c9497892bf2b85fdc8d1d45e1d12787334d0d4da74836d8f6a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-glob",
+      "name": "is-glob",
+      "version": "4.0.3",
+      "packageJsonSha256": "1cce62b80db12fc033d85250b5881b1a288476229abda8e1abd983724befd56f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-map",
+      "name": "is-map",
+      "version": "2.0.3",
+      "packageJsonSha256": "b2d7c205058919c957fed69cbf8cdcd589dfc82c0aadc4c2e298f9ee3afd296a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-negative-zero",
+      "name": "is-negative-zero",
+      "version": "2.0.3",
+      "packageJsonSha256": "e8725666b579386951a020478b03a5e1da2dbd07cdc34a8a3913a475f1142f10",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-number",
+      "name": "is-number",
+      "version": "7.0.0",
+      "packageJsonSha256": "51c133f4e41df982aef69027249ff9d7262645029f437d079adc7c83328fb620",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-number-object",
+      "name": "is-number-object",
+      "version": "1.1.1",
+      "packageJsonSha256": "0f647c3741eea832398ec6d2fab6dfc7d431e3a66e3def47ef01dae9ac79eb53",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-regex",
+      "name": "is-regex",
+      "version": "1.2.1",
+      "packageJsonSha256": "b99ff9cb5a079a1d6060bce2d31f06780d4296539a5b57106047a86561cd4db3",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-set",
+      "name": "is-set",
+      "version": "2.0.3",
+      "packageJsonSha256": "1e23457a11d7836233f8a98ee97dd7a2cfdde4381e46a92b160ffeffe2c3d001",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-shared-array-buffer",
+      "name": "is-shared-array-buffer",
+      "version": "1.0.4",
+      "packageJsonSha256": "a8c03e6ca8d6879d13cd4bc2cfd1e14c634006532a295016f4abdee27f5877e8",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-string",
+      "name": "is-string",
+      "version": "1.1.1",
+      "packageJsonSha256": "e34f86b9cc8a1811587ca3eb5efdb7f158f3646693b5e657e7188c52b54a696c",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-symbol",
+      "name": "is-symbol",
+      "version": "1.1.1",
+      "packageJsonSha256": "ae8d1155c6252e4b7077944b25b03a2c175ae632e3ee78508f12cc1c94f8296a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-typed-array",
+      "name": "is-typed-array",
+      "version": "1.1.15",
+      "packageJsonSha256": "51dcf15ccc424ce76b36bef2ef64df7a53e75294cbddf08b4f7e639133145cc5",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-weakmap",
+      "name": "is-weakmap",
+      "version": "2.0.2",
+      "packageJsonSha256": "483ce3a97e913446c2e43013b79ae03240d583d938a61c3c3c0e2f095f56b553",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-weakref",
+      "name": "is-weakref",
+      "version": "1.1.1",
+      "packageJsonSha256": "94ee37a9d8cf4693e7ec54de4c1880db91a22711c4706ef74bcda85c053a4b7d",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/is-weakset",
+      "name": "is-weakset",
+      "version": "2.0.4",
+      "packageJsonSha256": "689f191f14c6dd30bfc0325475a738cd9633cf632c8e4ec81714591817b4ad36",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/isarray",
+      "name": "isarray",
+      "version": "2.0.5",
+      "packageJsonSha256": "b0802c09bce6bf067d3e5f52390ea26972e11c88bb6ae38991316ac83ca14127",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/isexe",
+      "name": "isexe",
+      "version": "2.0.0",
+      "packageJsonSha256": "395c2af9abeeaafe7391974c1eacfb2a2bdeef187f21c3f5582c49e0368e59bf",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/iterator.prototype",
+      "name": "iterator.prototype",
+      "version": "1.1.5",
+      "packageJsonSha256": "2ab3872747c8d2c394b621ce90341b6363fbb2ff2b19a208cef1656ecb321529",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/its-fine",
+      "name": "its-fine",
+      "version": "2.1.1",
+      "packageJsonSha256": "97c65cc11d8ec38c071bcf1e37ea13c5da651c5ee1f439b422b5d375cf117b9a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/jiti",
+      "name": "jiti",
+      "version": "2.7.0",
+      "packageJsonSha256": "aab8aafc42d9aeec14a6e2fe0e15ea1514c0c205a624055a7e776f2ec456283c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/js-tokens",
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "packageJsonSha256": "47345931827b3e26db9fe690abb81f856a0d040cbca8af1e69711a64cd58ce0d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/js-yaml",
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "packageJsonSha256": "3eeb05aa0ceb4c3686e44c9b5d9b88f914b099ba9a7426b36947e65c6373d9a5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/jsesc",
+      "name": "jsesc",
+      "version": "3.1.0",
+      "packageJsonSha256": "6127ab2ccfbf576671dcfedcf2a8d97c9bbb3e5e4cff1274b3210b86a97a287c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/json-buffer",
+      "name": "json-buffer",
+      "version": "3.0.1",
+      "packageJsonSha256": "67bd0213396ba4664a9f2fafa3d2d25864a29f4f3800e766ea17c2aa3f4dbef9",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/json-schema-traverse",
+      "name": "json-schema-traverse",
+      "version": "0.4.1",
+      "packageJsonSha256": "bdedf225125f10e80911bb94f9a3992f93835e3c70894b3d5081ed75f25c5126",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/json-stable-stringify-without-jsonify",
+      "name": "json-stable-stringify-without-jsonify",
+      "version": "1.0.1",
+      "packageJsonSha256": "49bfc3a3a94d19ccb890f71c39f41a2a56ae8cc54b45d6330d4e30dc59418ae7",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/json5",
+      "name": "json5",
+      "version": "2.2.3",
+      "packageJsonSha256": "1927c4592e3811cf9b8c86e568df1c41a373b628b4b322f88872395ef87e2ba5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/jsx-ast-utils",
+      "name": "jsx-ast-utils",
+      "version": "3.3.5",
+      "packageJsonSha256": "c7201143d7741c111f3c035f5a243224aaafca3b3ae092dc5a15106d09e08f84",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/keyv",
+      "name": "keyv",
+      "version": "4.5.4",
+      "packageJsonSha256": "e8afd30f2f2a40ef5023928b50fdaed3a3338aa7e1c4e86205413afb05e8a099",
+      "hooks": {
+        "prepare": "yarn build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/language-subtag-registry",
+      "name": "language-subtag-registry",
+      "version": "0.3.23",
+      "packageJsonSha256": "407de8da40e645a2f281a8f558ba2488424ac00f524b75832133367a126beda6",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/language-tags",
+      "name": "language-tags",
+      "version": "1.0.9",
+      "packageJsonSha256": "24c81125ee2c65b548fe4642fa14aae3e1b8fc548bc64c88d2ae6b94be738e36",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/levn",
+      "name": "levn",
+      "version": "0.4.1",
+      "packageJsonSha256": "0a25421ab66ec56def7407234858f52c1d593b2454155c06df1d7feaa324c8fe",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/lightningcss",
+      "name": "lightningcss",
+      "version": "1.32.0",
+      "packageJsonSha256": "1b7fbd47a660ecb37d1fa8304a14b726aa44a31bb3d3338f417593f6276b762f",
+      "hooks": {
+        "prepare": "patch-package"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/lightningcss-linux-x64-gnu",
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.32.0",
+      "packageJsonSha256": "38c8b40149b0492fbfcc06b4b8fab20314d9b9d0e648c7da8c5c0634b6a90412",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/lightningcss-linux-x64-musl",
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.32.0",
+      "packageJsonSha256": "6d7a4bcc5fef739dae30dbf9852578f2d31b69a174f7b9333eb0dbdf03a959c9",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/locate-path",
+      "name": "locate-path",
+      "version": "6.0.0",
+      "packageJsonSha256": "f77d343dc6be5bc096137fb765753139e8d23971f5ad740b7a40bc8dc6a24f82",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/lodash.merge",
+      "name": "lodash.merge",
+      "version": "4.6.2",
+      "packageJsonSha256": "5aaf4c24df9052e680d0728754c249fb94c11aef2e76ec3f76320431915c92f1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/loose-envify",
+      "name": "loose-envify",
+      "version": "1.4.0",
+      "packageJsonSha256": "8c2e27dae366396ced36fe0f7c6d35d71a1440fd8e82df5f2005a5297888a0d4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/lru-cache",
+      "name": "lru-cache",
+      "version": "5.1.1",
+      "packageJsonSha256": "f5a3379f52a453412f5d8551bf11fa0bef4316cc88645c9d190a017e1c58a4c2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/magic-string",
+      "name": "magic-string",
+      "version": "0.30.21",
+      "packageJsonSha256": "86814aaf7dacba9d31fbf361c3285981f1cbbda0a87108caa4131d297bd9eba2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/math-intrinsics",
+      "name": "math-intrinsics",
+      "version": "1.1.0",
+      "packageJsonSha256": "39d74aa5a354153130706286dd60a2d8409ce0c8f66546eff2edcac0afff17e1",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/merge2",
+      "name": "merge2",
+      "version": "1.4.1",
+      "packageJsonSha256": "5424b2be337f1f0a1fa376fa67262bceaead62275d5f8df6ff82103e283cc358",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/meshoptimizer",
+      "name": "meshoptimizer",
+      "version": "0.22.0",
+      "packageJsonSha256": "559c5fdb441f735c53c84ad7c3d0025420315f891190326853fd423aae138fe6",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/micromatch",
+      "name": "micromatch",
+      "version": "4.0.8",
+      "packageJsonSha256": "94dbc881c0329813f2481f35fcfa725a2285d45926d33e9b9b8b80b28487752b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/minimatch",
+      "name": "minimatch",
+      "version": "3.1.5",
+      "packageJsonSha256": "eefa1c89527d52bbb2e8b053fe8ecf3e3ced399bdba82cf27e0e92edfd833938",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/minimist",
+      "name": "minimist",
+      "version": "1.2.8",
+      "packageJsonSha256": "252881f6a068a3e70386706d88a694b5e8e9e053b6d9f309fd9a329e651bbf81",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/ms",
+      "name": "ms",
+      "version": "2.1.3",
+      "packageJsonSha256": "1a6b4d9739790c0b94ab96c8cc0507e281c164c311ff4fbf5e57fb8d26290b40",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/nanoid",
+      "name": "nanoid",
+      "version": "3.3.20",
+      "packageJsonSha256": "e2a77185ded1c006171e4e2f8b316d0e3b4c51a135a190851cfc888ea428f6bf",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/napi-postinstall",
+      "name": "napi-postinstall",
+      "version": "0.3.4",
+      "packageJsonSha256": "1bc0ea8874adb494c2b21ec47b9a434ae067ad65d6908c090299b1aa9e266687",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/natural-compare",
+      "name": "natural-compare",
+      "version": "1.4.0",
+      "packageJsonSha256": "3d99911ccfa0ca34ae0c68bfd32c038b952542e55db7c649c37b11dd1573f6af",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/next",
+      "name": "next",
+      "version": "16.3.8",
+      "packageJsonSha256": "6da8fc4823b66b8f2906d150002618e3f3e0d2446ebf3823b2a2f7efe73a46a4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/next/node_modules/postcss",
+      "name": "postcss",
+      "version": "8.5.23",
+      "packageJsonSha256": "df43e035f054943454c49556c89cea8a288d91f5d4b1a6f4e56d48b85c7ebd75",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/node-exports-info",
+      "name": "node-exports-info",
+      "version": "1.6.2",
+      "packageJsonSha256": "ecc85e7303465a9aaed1a9ec7382484910e6d09c0bdec28a54a700341eb559df",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/node-releases",
+      "name": "node-releases",
+      "version": "2.0.58",
+      "packageJsonSha256": "9fe8d79b84eb4b4758b229b4897962f102685c176777c3d959f68c7202ddfea8",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object-assign",
+      "name": "object-assign",
+      "version": "4.1.1",
+      "packageJsonSha256": "5990bbffa235fc675debd925d50f6c3f48a2b4526d8c9f7555cadec9029d0d7f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object-inspect",
+      "name": "object-inspect",
+      "version": "1.13.4",
+      "packageJsonSha256": "21c5c63f653705f44a60f5fe93752b231caf6ff07b01805740bd89b71b2d6d8a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object-keys",
+      "name": "object-keys",
+      "version": "1.1.1",
+      "packageJsonSha256": "60128330481888bf0e83a713699bee6668c5948821ef06106d8c9613b6081b45",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object.assign",
+      "name": "object.assign",
+      "version": "4.1.7",
+      "packageJsonSha256": "982c86a45d0edc61215628380656301e17e5a7f83c9e3072b38dff6778b0e1aa",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object.entries",
+      "name": "object.entries",
+      "version": "1.1.9",
+      "packageJsonSha256": "fad8bbe033330504260e1097c0c7afe94c05bee4f192a98de78893c8e8a6ed65",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object.fromentries",
+      "name": "object.fromentries",
+      "version": "2.0.8",
+      "packageJsonSha256": "ade6e7afbe631f6bbcad17ad20b54ea510a8455493b4900ddce0d2802c7f9622",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object.groupby",
+      "name": "object.groupby",
+      "version": "1.0.3",
+      "packageJsonSha256": "f28c041db46ee3d6e5024fb4b84695c3df6d08c3ad9c167aa559b02143966514",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/object.values",
+      "name": "object.values",
+      "version": "1.2.1",
+      "packageJsonSha256": "85352c40c1ba1c9c4933e8d5ff9181cecd4c45ac7fb0020783f6e0347230283f",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/optionator",
+      "name": "optionator",
+      "version": "0.9.4",
+      "packageJsonSha256": "8011d3db01182479d3881e788bacb5a9f603ca74bd564c4d26f713d5f5f571d1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/own-keys",
+      "name": "own-keys",
+      "version": "1.0.2",
+      "packageJsonSha256": "bce77d0bbcda331773c21b4af64dcf568a77f06a7883739ce76d72dfe5607273",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/p-limit",
+      "name": "p-limit",
+      "version": "3.1.0",
+      "packageJsonSha256": "0de84d3e2ad5bc3a7bac54354fe6f049ce7b351d67fcc57eda6660f9fa2e83b5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/p-locate",
+      "name": "p-locate",
+      "version": "5.0.0",
+      "packageJsonSha256": "3a3baffa53cfac8fd6281250dd824d56118f46ad258edb09d8aed1a15e0003d2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/parent-module",
+      "name": "parent-module",
+      "version": "1.0.1",
+      "packageJsonSha256": "4c6c519739db25dabf32a8fe29b08e34fb763ca897f14b776a0e2e99fc40afed",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/path-exists",
+      "name": "path-exists",
+      "version": "4.0.0",
+      "packageJsonSha256": "5e258d1a0d185ae469fec34de2af18913421b94181ef61238efcfe0b00d1b2c3",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/path-key",
+      "name": "path-key",
+      "version": "3.1.1",
+      "packageJsonSha256": "25594dab72681c910d9cc919263a4daf27d77a75e0d2c26a4d958d6d6b798f86",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/path-parse",
+      "name": "path-parse",
+      "version": "1.0.7",
+      "packageJsonSha256": "9c680ecfd322afe056b4ccbfdb6c7043342276903f017c0a29b77c3926790d13",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/picocolors",
+      "name": "picocolors",
+      "version": "1.1.1",
+      "packageJsonSha256": "ef2ac226c4811d312e12c64214c453878653e834482125ae475f27cea60de737",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/picomatch",
+      "name": "picomatch",
+      "version": "2.3.2",
+      "packageJsonSha256": "63264d817e856a4bff57d4304f2b38d2964a4f6df520eb169e7bcdb619f13e9a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/playwright-core",
+      "name": "playwright-core",
+      "version": "1.64.0",
+      "packageJsonSha256": "1d6b6f80ffb0c52865af0f9fe01abf2140df019e49ae6ac134605e462d583f3a",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/possible-typed-array-names",
+      "name": "possible-typed-array-names",
+      "version": "1.1.0",
+      "packageJsonSha256": "0ff73753495cfff4556a5f8b7847ba1c06530341986e642a8637c6db74d87894",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/postcss",
+      "name": "postcss",
+      "version": "8.5.29",
+      "packageJsonSha256": "d6f3d1e4970b5f3b4424348769974fecc13afccefccb95f09f8883f70b7f3d2e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/prelude-ls",
+      "name": "prelude-ls",
+      "version": "1.2.1",
+      "packageJsonSha256": "d943e3b5a7189692268bf64e3a068249696985a9c8728397fc8786b59a198b53",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/prop-types",
+      "name": "prop-types",
+      "version": "15.8.1",
+      "packageJsonSha256": "96aa387585c686397a80616d6a563759576e9b9fac1f80d57874aa4ee4730a2c",
+      "hooks": {
+        "prepublish": "not-in-publish || yarn build"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/punycode",
+      "name": "punycode",
+      "version": "2.3.1",
+      "packageJsonSha256": "e025033bd11110af671fb8eb62f0db8895073ccdca70b596aa94a27eb5bf9acb",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/queue-microtask",
+      "name": "queue-microtask",
+      "version": "1.2.3",
+      "packageJsonSha256": "e6d153dda4c9aee863e7d8cc59419d4eb94b9829277cda9289a40f96efb36c11",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/react",
+      "name": "react",
+      "version": "19.2.4",
+      "packageJsonSha256": "e60b92f6031f023907bbfab8f96e63e44307776ec1488f310ba61d41b8cda8cc",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/react-dom",
+      "name": "react-dom",
+      "version": "19.2.4",
+      "packageJsonSha256": "b8448092689c7e6191595a98526ced808288f35138d97fbce5801a94922e3c36",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/react-is",
+      "name": "react-is",
+      "version": "16.13.1",
+      "packageJsonSha256": "06784c4340af9853928c519791684487b83076b3c84e8de6ba5f240e33700b71",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/react-use-measure",
+      "name": "react-use-measure",
+      "version": "2.1.7",
+      "packageJsonSha256": "a333d0e78edb65ebc66e9ff5a44199dd446754f3ff0f18760b5b124233dbb852",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/reflect.getprototypeof",
+      "name": "reflect.getprototypeof",
+      "version": "1.0.10",
+      "packageJsonSha256": "2d1a2f5bfd38c17ad9977313ddd5aafe7e76b2484d717e561bf5a9c43e9f51ba",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/regexp.prototype.flags",
+      "name": "regexp.prototype.flags",
+      "version": "1.5.4",
+      "packageJsonSha256": "03b311526afa87b388a05af86fb9ad86331888d2b5ef260e635c9023a9a14a1e",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/resolve",
+      "name": "resolve",
+      "version": "2.0.0-next.7",
+      "packageJsonSha256": "908d5caed0017ae9c8b345f9f1f2e55cb86e379e00398175d8018dfe900a7ada",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/resolve-from",
+      "name": "resolve-from",
+      "version": "4.0.0",
+      "packageJsonSha256": "dd5b0fa6d310443ccf3e93e9eb6277bd7004c18f5263ca2ac2ebf52f3708f39f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/resolve-pkg-maps",
+      "name": "resolve-pkg-maps",
+      "version": "1.0.0",
+      "packageJsonSha256": "e372f809865bc3fc6ad75be76a90b031eece36e9d12d283de9955aca6be8537d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/reusify",
+      "name": "reusify",
+      "version": "1.1.0",
+      "packageJsonSha256": "db69497e33cebb1296cd68a9202cc4df7b8d1dc895a423f2153e8c157068aa76",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/run-parallel",
+      "name": "run-parallel",
+      "version": "1.2.0",
+      "packageJsonSha256": "a45d96ac517ff7b6612a6e9961b66fc3e6d74adb1eeba5242ae0d36f77a35b58",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/safe-array-concat",
+      "name": "safe-array-concat",
+      "version": "1.1.4",
+      "packageJsonSha256": "dadb04276fe43f0d29ce612f44f698e7f2daf058d81790c2c4ee8f1d29c2fdcf",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/safe-push-apply",
+      "name": "safe-push-apply",
+      "version": "1.0.0",
+      "packageJsonSha256": "5449d7ce73cc39da3b88cbe56fc5ebf944a4105dec1db2dd74461ad1e42dc6ee",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/safe-regex-test",
+      "name": "safe-regex-test",
+      "version": "1.1.0",
+      "packageJsonSha256": "b9efdb318b7f4094e6d2605ba9fbef93570abe1119488a491a4e8f3216781030",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/scheduler",
+      "name": "scheduler",
+      "version": "0.27.0",
+      "packageJsonSha256": "393bb96b7e481bf50189a1a02c7e0e7f4d01acba5abc6fbe7d214638624462fc",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/semver",
+      "name": "semver",
+      "version": "6.3.1",
+      "packageJsonSha256": "aa906c5bf8a2fa68683cae07d18553ae2538ed0d5a567911980b2ef25ee8b9ba",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/set-function-length",
+      "name": "set-function-length",
+      "version": "1.2.2",
+      "packageJsonSha256": "2c81bab7f7a60d625164bd840d863548e3f9d4d1aa976b9d2966e5e1e36132a7",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/set-function-name",
+      "name": "set-function-name",
+      "version": "2.0.2",
+      "packageJsonSha256": "fc56137cbf0646e79e68881215cd5937db9830f3293e880e757b31832303e1fa",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/set-proto",
+      "name": "set-proto",
+      "version": "1.0.0",
+      "packageJsonSha256": "fc7259ccee1244983a81a99e3da720a46a99ac14c6844a46e26554bff42cd152",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/sharp",
+      "name": "sharp",
+      "version": "0.35.5",
+      "packageJsonSha256": "ad4a2535d72eb638053a38867b1abf43c328cd1c1dbae5cf4172d498365a8b97",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/sharp/node_modules/semver",
+      "name": "semver",
+      "version": "7.8.5",
+      "packageJsonSha256": "7c94cb7f2a53c27b20d76386ec144c062894dbcc909cfabd0f728c37874b1776",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/shebang-command",
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "packageJsonSha256": "44de390ae5ed6c5f9758b8b9c90b93fa53977d5361731600429f1de08f4b3f30",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/shebang-regex",
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "packageJsonSha256": "b8018c6b8cc9900dfd1ac18a54956ba34c453fdc2da5e5fe555ee8f04133a1c5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/side-channel",
+      "name": "side-channel",
+      "version": "1.1.1",
+      "packageJsonSha256": "14da3b013c3762da85cfd8b173290285394dfa41870bc4a1e8243aaa38316f2a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/side-channel-list",
+      "name": "side-channel-list",
+      "version": "1.0.1",
+      "packageJsonSha256": "90f0c08c6c17f4a3fa3dd61873223957b89da4201f01dc0c8b95b0b9e6a2a59a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/side-channel-map",
+      "name": "side-channel-map",
+      "version": "1.0.1",
+      "packageJsonSha256": "914a8bd732b82523d95bb697eec3e6d95badc5eb13b196fb0772e59354a3ab25",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/side-channel-weakmap",
+      "name": "side-channel-weakmap",
+      "version": "1.0.2",
+      "packageJsonSha256": "8c11f0a1c6cfa549588d991a5cb1b04d62953277ed29f47463d415d5946388a8",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/source-map-js",
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "packageJsonSha256": "9f1ea63b1661d0f6e5fcd50b625d86cddd77de870a0019b23262360987b487f5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/stable-hash",
+      "name": "stable-hash",
+      "version": "0.0.5",
+      "packageJsonSha256": "8c0b1ce6729fd4ac946735e8410236cbe838be0f3475c40e4c7fb2cad14deae5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/stop-iteration-iterator",
+      "name": "stop-iteration-iterator",
+      "version": "1.1.0",
+      "packageJsonSha256": "d081cc886d55d23d704721c7b03b78b0f5600459a75d9b2fb63449d99d87cc81",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/string.prototype.includes",
+      "name": "string.prototype.includes",
+      "version": "2.0.1",
+      "packageJsonSha256": "76b611c251a4b410e6d4a5c4c24baefd65ee60ab1adc6cdbdafbe35eb178da32",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/string.prototype.matchall",
+      "name": "string.prototype.matchall",
+      "version": "4.1.0",
+      "packageJsonSha256": "90920ec12f50abf219bf746a1e616e3c57d5ce038dfdf7b156603a6b0a9e9a86",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/string.prototype.repeat",
+      "name": "string.prototype.repeat",
+      "version": "1.0.0",
+      "packageJsonSha256": "467a661c81a7884d73f52abbe7bdbf1295f355c9ed017459b64ca09ce10f0ed8",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/string.prototype.trim",
+      "name": "string.prototype.trim",
+      "version": "1.2.11",
+      "packageJsonSha256": "b152a39e333b265cb9963f3aba473aa82daf3eaa03cdb97a7ed4f5ee58ce1226",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/string.prototype.trimend",
+      "name": "string.prototype.trimend",
+      "version": "1.0.10",
+      "packageJsonSha256": "3b48f60e1c55b9dcf071b88e4d22ac0bdeaecf92503a3695aadd41d777536571",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/string.prototype.trimstart",
+      "name": "string.prototype.trimstart",
+      "version": "1.0.8",
+      "packageJsonSha256": "a867b974bc282a6e11680d045ecc66ddb9630c31d381e9e1e35dc3e8b02b5754",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/strip-bom",
+      "name": "strip-bom",
+      "version": "3.0.0",
+      "packageJsonSha256": "3165a2242ce2f930e841df38ea2383a6bb1e18758b782a392af63eb32facb93d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/strip-json-comments",
+      "name": "strip-json-comments",
+      "version": "3.1.1",
+      "packageJsonSha256": "92b83192db22eb46049920e4b750555193d10eafe609cf2adc4f14125c951ed4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/styled-jsx",
+      "name": "styled-jsx",
+      "version": "5.1.6",
+      "packageJsonSha256": "0a11b14d7bbeab650019db18883a14cb67daa3615f498a5a625d45828be7eef9",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/supports-color",
+      "name": "supports-color",
+      "version": "7.2.0",
+      "packageJsonSha256": "d410a772f9f64b224482ec13815a4bbf1837c533e1be04b3687755c48b2efa1f",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/supports-preserve-symlinks-flag",
+      "name": "supports-preserve-symlinks-flag",
+      "version": "1.0.0",
+      "packageJsonSha256": "aef0ae2d21ae9181d8702c2063ce0ee274ba1063e5312e4baab5673aa6d4d5db",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/suspend-react",
+      "name": "suspend-react",
+      "version": "0.1.3",
+      "packageJsonSha256": "69ae8a1a5bdc088a46a7dfbbb3162145b3cbc2f448815bbfcfcf94d23e1e6031",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tailwindcss",
+      "name": "tailwindcss",
+      "version": "4.3.2",
+      "packageJsonSha256": "92a1151a2e1adb85c736228008ae2d3fa293dc1c51c058f5317a238194298a97",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tapable",
+      "name": "tapable",
+      "version": "2.3.3",
+      "packageJsonSha256": "82d5903b3a6f9d6e41868f405176da8122799e8c71a51f5507087091862a2a3d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/three",
+      "name": "three",
+      "version": "0.180.0",
+      "packageJsonSha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tinyglobby",
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "packageJsonSha256": "bd2b2af3c9ba0580f1acfb22c55d0b6d29abf683af5cac8a2efe82fa7c943f23",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tinyglobby/node_modules/fdir",
+      "name": "fdir",
+      "version": "6.5.0",
+      "packageJsonSha256": "aca49395d61ef383a09f74555c66ed45817ca2b5724e710a4dc9e0471b83d8f5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tinyglobby/node_modules/picomatch",
+      "name": "picomatch",
+      "version": "4.0.7",
+      "packageJsonSha256": "479b70b87aa7b44344d62c8a459ae7e53dd2bca6c61f1396bd55e63e9de73fc6",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/to-regex-range",
+      "name": "to-regex-range",
+      "version": "5.0.1",
+      "packageJsonSha256": "766fc1bb34fffcd503c89f4194188ce059795c52fd0dc6753cd4b7dcfc3fe1ec",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/ts-api-utils",
+      "name": "ts-api-utils",
+      "version": "2.5.0",
+      "packageJsonSha256": "2c4e0f9e0ea7a0813a9f6ac4967d69f00a1d857f3fd9ce41f5eeba97a6ed72c4",
+      "hooks": {
+        "prepare": "husky"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tsconfig-paths",
+      "name": "tsconfig-paths",
+      "version": "3.15.0",
+      "packageJsonSha256": "072e191d8d9fe404f9502df8efe23164ce0293b7c3e5de5e211372bb4ac53b0e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tsconfig-paths/node_modules/json5",
+      "name": "json5",
+      "version": "1.0.2",
+      "packageJsonSha256": "fdd54a2e5eda522012ba3511734e0965ed1d715095e445ce4d8307e34cc96e5c",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/tslib",
+      "name": "tslib",
+      "version": "2.8.1",
+      "packageJsonSha256": "f02b4851df316f29bdfcd404aa1eb41e4e216b5859015f81fcd3e91caf8be931",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/type-check",
+      "name": "type-check",
+      "version": "0.4.0",
+      "packageJsonSha256": "f52058410cf8e57ed28dd462eece693ba490c619c70c17caef8af60b84dc4ed0",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/typed-array-buffer",
+      "name": "typed-array-buffer",
+      "version": "1.0.3",
+      "packageJsonSha256": "f0f933ad37d3be61efcb8c4fe64088cd97a4bc86038d5bc19f33df1e995bac56",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/typed-array-byte-length",
+      "name": "typed-array-byte-length",
+      "version": "1.0.3",
+      "packageJsonSha256": "43b754cc1b28510d905f2190cd1120ec779cfc71989907e05e70ca08943ef63a",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/typed-array-byte-offset",
+      "name": "typed-array-byte-offset",
+      "version": "1.0.5",
+      "packageJsonSha256": "137609213caafff09feff1623e9d7641496c0e258c6d47ccbcbb23ebc00d97bc",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/typed-array-length",
+      "name": "typed-array-length",
+      "version": "1.0.8",
+      "packageJsonSha256": "86a5a1e7fb90197ef55d99b439a09a446318b3f22742e82876edb28bf5fcae16",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/typescript",
+      "name": "typescript",
+      "version": "5.9.3",
+      "packageJsonSha256": "822ef7ca6452205657b6288b066481ecf508bfbf43455d715cf7d3ec457561e6",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/typescript-eslint",
+      "name": "typescript-eslint",
+      "version": "8.71.1",
+      "packageJsonSha256": "2b907d09df3378dc1df90d0e1cb5059a2a8e35f55f7be4f997d605f00d8a3f6e",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/unbox-primitive",
+      "name": "unbox-primitive",
+      "version": "1.1.0",
+      "packageJsonSha256": "0998c7a83a2b6daae7d35de0d64e675bca88eaae30acd5c241625ee9d61e0347",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/undici-types",
+      "name": "undici-types",
+      "version": "6.21.0",
+      "packageJsonSha256": "11f873b423b96a5ad444a099685ca6b9de1379dcd83fd8d368e757ddb53658e4",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/unrs-resolver",
+      "name": "unrs-resolver",
+      "version": "1.12.2",
+      "packageJsonSha256": "3ef3f74675fe31a88dc490e4136178a5fd8f96142df0c565d66be9a894543adf",
+      "hooks": {
+        "postinstall": "node postinstall.js"
+      },
+      "lockHasInstallScript": true,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/update-browserslist-db",
+      "name": "update-browserslist-db",
+      "version": "1.3.4",
+      "packageJsonSha256": "dc6e9b00df55afed365bfd907d840f25d0e91fc00abd53c097a3b56b0066f0b5",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/uri-js",
+      "name": "uri-js",
+      "version": "4.4.1",
+      "packageJsonSha256": "13f6722afc3b74de0487b56d3087df1954a156e93f341aebb6ca9c1471891d6b",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/use-sync-external-store",
+      "name": "use-sync-external-store",
+      "version": "1.7.0",
+      "packageJsonSha256": "ba3694aec166f2f53612c4978bc85fb31dd4eee75a2eccc1ad1a1cc49c9428d2",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/which",
+      "name": "which",
+      "version": "2.0.2",
+      "packageJsonSha256": "43010039ed5e89f7186960be682b3cb5cda5ab6cdfb06cbfd4f081cf0e7b4260",
+      "hooks": {
+        "prepublish": "npm run changelog"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/which-boxed-primitive",
+      "name": "which-boxed-primitive",
+      "version": "1.1.1",
+      "packageJsonSha256": "9e0869e7c145b1d1e6ea0e63b2870a1aa230e7f75ffe69240908c90d35c02aa9",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/which-builtin-type",
+      "name": "which-builtin-type",
+      "version": "1.2.1",
+      "packageJsonSha256": "336a5750758b113446480c131ceedf6b3fe8c0c639354a85033fac77e3f2b17d",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/which-collection",
+      "name": "which-collection",
+      "version": "1.0.2",
+      "packageJsonSha256": "bf95e02a88d5b89dbc6b544c334a317c234f3c4a237f9f1dcf611506990ed196",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/which-typed-array",
+      "name": "which-typed-array",
+      "version": "1.1.24",
+      "packageJsonSha256": "e175b4177a92cd5f7ae31bc7954edd57369dd059d6faf5f1100f1ab962c6ef01",
+      "hooks": {
+        "prepublish": "not-in-publish || npm run prepublishOnly"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/word-wrap",
+      "name": "word-wrap",
+      "version": "1.2.5",
+      "packageJsonSha256": "917ace72e6293d7bc27ce908ed87f59526c05438930afcdf04462845e103fb94",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/yallist",
+      "name": "yallist",
+      "version": "3.1.1",
+      "packageJsonSha256": "27699a6415a43f128c0e8ddcd5bf6e265f6cf3a581a9d959c11b977244fadc34",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/yocto-queue",
+      "name": "yocto-queue",
+      "version": "0.1.0",
+      "packageJsonSha256": "e94d571d03c65c94eab2216f4fde773918a152d5d36e5672e1f5c158ff6ac42d",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/zod",
+      "name": "zod",
+      "version": "4.6.5",
+      "packageJsonSha256": "a046ed85fa09571dba539fee9ef236152d12dabd1f229b014ec3bd2ebaad9000",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/zod-validation-error",
+      "name": "zod-validation-error",
+      "version": "4.0.2",
+      "packageJsonSha256": "14bd31fdb08c61e75573c0b8360d5ca15d80fc7b2b59be02f5768a14195c7da9",
+      "hooks": {
+        "prepare": "husky"
+      },
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    },
+    {
+      "path": "node_modules/zustand",
+      "name": "zustand",
+      "version": "5.0.15",
+      "packageJsonSha256": "b53b4d5e7f6baeb1e832792390354f8af54edaefbd6fe23b490a4d2d2e37dff1",
+      "hooks": {},
+      "lockHasInstallScript": false,
+      "link": false,
+      "bindingGyp": false,
+      "gypfile": null
+    }
+  ],
+  "absentOptionalPaths": [
+    "node_modules/@img/sharp-darwin-arm64",
+    "node_modules/@img/sharp-darwin-x64",
+    "node_modules/@img/sharp-freebsd-wasm32",
+    "node_modules/@img/sharp-libvips-darwin-arm64",
+    "node_modules/@img/sharp-libvips-darwin-x64",
+    "node_modules/@img/sharp-libvips-linux-arm",
+    "node_modules/@img/sharp-libvips-linux-arm64",
+    "node_modules/@img/sharp-libvips-linux-ppc64",
+    "node_modules/@img/sharp-libvips-linux-riscv64",
+    "node_modules/@img/sharp-libvips-linux-s390x",
+    "node_modules/@img/sharp-libvips-linuxmusl-arm64",
+    "node_modules/@img/sharp-linux-arm",
+    "node_modules/@img/sharp-linux-arm64",
+    "node_modules/@img/sharp-linux-ppc64",
+    "node_modules/@img/sharp-linux-riscv64",
+    "node_modules/@img/sharp-linux-s390x",
+    "node_modules/@img/sharp-linuxmusl-arm64",
+    "node_modules/@img/sharp-webcontainers-wasm32",
+    "node_modules/@img/sharp-win32-arm64",
+    "node_modules/@img/sharp-win32-ia32",
+    "node_modules/@img/sharp-win32-x64",
+    "node_modules/@next/swc-darwin-arm64",
+    "node_modules/@next/swc-darwin-x64",
+    "node_modules/@next/swc-linux-arm64-gnu",
+    "node_modules/@next/swc-linux-arm64-musl",
+    "node_modules/@next/swc-win32-arm64-msvc",
+    "node_modules/@next/swc-win32-x64-msvc",
+    "node_modules/@tailwindcss/oxide-android-arm64",
+    "node_modules/@tailwindcss/oxide-darwin-arm64",
+    "node_modules/@tailwindcss/oxide-darwin-x64",
+    "node_modules/@tailwindcss/oxide-freebsd-x64",
+    "node_modules/@tailwindcss/oxide-linux-arm-gnueabihf",
+    "node_modules/@tailwindcss/oxide-linux-arm64-gnu",
+    "node_modules/@tailwindcss/oxide-linux-arm64-musl",
+    "node_modules/@tailwindcss/oxide-wasm32-wasi",
+    "node_modules/@tailwindcss/oxide-win32-arm64-msvc",
+    "node_modules/@tailwindcss/oxide-win32-x64-msvc",
+    "node_modules/@unrs/resolver-binding-android-arm-eabi",
+    "node_modules/@unrs/resolver-binding-android-arm64",
+    "node_modules/@unrs/resolver-binding-darwin-arm64",
+    "node_modules/@unrs/resolver-binding-darwin-x64",
+    "node_modules/@unrs/resolver-binding-freebsd-x64",
+    "node_modules/@unrs/resolver-binding-linux-arm-gnueabihf",
+    "node_modules/@unrs/resolver-binding-linux-arm-musleabihf",
+    "node_modules/@unrs/resolver-binding-linux-arm64-gnu",
+    "node_modules/@unrs/resolver-binding-linux-arm64-musl",
+    "node_modules/@unrs/resolver-binding-linux-loong64-gnu",
+    "node_modules/@unrs/resolver-binding-linux-loong64-musl",
+    "node_modules/@unrs/resolver-binding-linux-ppc64-gnu",
+    "node_modules/@unrs/resolver-binding-linux-riscv64-gnu",
+    "node_modules/@unrs/resolver-binding-linux-riscv64-musl",
+    "node_modules/@unrs/resolver-binding-linux-s390x-gnu",
+    "node_modules/@unrs/resolver-binding-openharmony-arm64",
+    "node_modules/@unrs/resolver-binding-wasm32-wasi",
+    "node_modules/@unrs/resolver-binding-wasm32-wasi/node_modules/@emnapi/runtime",
+    "node_modules/@unrs/resolver-binding-win32-arm64-msvc",
+    "node_modules/@unrs/resolver-binding-win32-ia32-msvc",
+    "node_modules/@unrs/resolver-binding-win32-x64-msvc",
+    "node_modules/lightningcss-android-arm64",
+    "node_modules/lightningcss-darwin-arm64",
+    "node_modules/lightningcss-darwin-x64",
+    "node_modules/lightningcss-freebsd-x64",
+    "node_modules/lightningcss-linux-arm-gnueabihf",
+    "node_modules/lightningcss-linux-arm64-gnu",
+    "node_modules/lightningcss-linux-arm64-musl",
+    "node_modules/lightningcss-win32-arm64-msvc",
+    "node_modules/lightningcss-win32-x64-msvc"
+  ],
+  "installedPackages": 392,
+  "executedLifecycleEvidence": {
+    "path": "/tmp/storyfolio-npm-cache/_logs/2026-10-11T23_24_07_749Z-debug-0.log",
+    "sha256": "bbd67cabcc36e5ab7d9294ca23dc25e0114918af7e988f2124643f15e33b61d5",
+    "bytes": 83414,
+    "selectedLines": [
+      {
+        "line": 1,
+        "text": "0 verbose cli /tmp/storyfolio-node-check-20261011/node_modules/node/bin/node /usr/bin/npm"
+      },
+      {
+        "line": 2,
+        "text": "1 info using npm@9.2.0"
+      },
+      {
+        "line": 3,
+        "text": "2 info using node@v22.22.1"
+      },
+      {
+        "line": 810,
+        "text": "675 info run unrs-resolver@1.12.2 postinstall node_modules/unrs-resolver node postinstall.js"
+      },
+      {
+        "line": 811,
+        "text": "676 info run unrs-resolver@1.12.2 postinstall { code: 0, signal: null }"
+      },
+      {
+        "line": 812,
+        "text": "677 timing build:run:postinstall:node_modules/unrs-resolver Completed in 73ms"
+      },
+      {
+        "line": 813,
+        "text": "678 timing build:run:postinstall Completed in 73ms"
+      },
+      {
+        "line": 1279,
+        "text": "1144 verbose exit 0"
+      }
+    ]
+  },
+  "sourceBindings": [
+    {
+      "path": "/usr/share/nodejs/npm/lib/commands/ci.js",
+      "bytes": 3674,
+      "sha256": "d9881b8aa544c59482d917490b3900799126b3d58ca8031916447a20610d7b5c",
+      "telemetryVariableLines": [],
+      "imports": [
+        "util",
+        "@npmcli/arborist",
+        "rimraf",
+        "../utils/reify-finish.js",
+        "@npmcli/run-script",
+        "fs",
+        "../utils/log-shim.js",
+        "../utils/validate-lockfile.js",
+        "../arborist-cmd.js",
+        "./install.js"
+      ]
+    },
+    {
+      "path": "/usr/share/nodejs/@npmcli/arborist/lib/arborist/rebuild.js",
+      "bytes": 12749,
+      "sha256": "fc18e5291a7db507cc729162b494661630b6964d0569460713f59b5fca3b79f0",
+      "telemetryVariableLines": [],
+      "imports": [
+        "@isaacs/string-locale-compare",
+        "treeverse",
+        "promise-all-reject-late",
+        "read-package-json-fast",
+        "bin-links",
+        "@npmcli/run-script",
+        "promise-call-limit",
+        "path",
+        "@npmcli/node-gyp",
+        "proc-log"
+      ]
+    },
+    {
+      "path": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/unrs-resolver/postinstall.js",
+      "bytes": 156,
+      "sha256": "446a0aeed55eeb28eadd9ac31f0b71654265aba8ca5a99dbc22dab0b26a02469",
+      "telemetryVariableLines": [],
+      "imports": [
+        "napi-postinstall",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/napi-postinstall/lib/index.js",
+      "bytes": 10533,
+      "sha256": "5c2547bb5ff29882a69737fe31509e32efc5a9cf0f4aa832e31e718403d70b04",
+      "telemetryVariableLines": [],
+      "imports": [
+        "node:child_process",
+        "node:fs",
+        "node:http",
+        "node:https",
+        "node:path",
+        "node:zlib",
+        "./constants.js",
+        "./helpers.js"
+      ]
+    },
+    {
+      "path": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/napi-postinstall/lib/helpers.js",
+      "bytes": 8228,
+      "sha256": "31740188ff37907a490c98d1d483a0814257c4a35a182c732468a8dd053ddf67",
+      "telemetryVariableLines": [],
+      "imports": [
+        "node:child_process",
+        "node:fs",
+        "node:path",
+        "./constants.js",
+        "./target.js"
+      ]
+    },
+    {
+      "path": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/napi-postinstall/lib/constants.js",
+      "bytes": 703,
+      "sha256": "4e9382602f4ea68f6c598e7fd7a20088cb6a0da67700619b6dad654d811c9b61",
+      "telemetryVariableLines": [],
+      "imports": [
+        "node:path"
+      ]
+    },
+    {
+      "path": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/napi-postinstall/lib/target.js",
+      "bytes": 1796,
+      "sha256": "12e912381504712b12b28674797f925e620a5d331d4ded88b9b0f0e89cab949c",
+      "telemetryVariableLines": [],
+      "imports": [
+        "./constants.js"
+      ]
+    },
+    {
+      "path": "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/probe-build-environment.mjs",
+      "bytes": 3667,
+      "sha256": "113ecba332218ec655fe6ac070c98a1ebf98683427dc5333d59b8c11180bb7b5",
+      "telemetryVariableLines": [
+        {
+          "line": 23,
+          "text": "    const child = spawn(process.execPath, args, { cwd: workspace, env: { ...process.env, NEXT_TELEMETRY_DISABLED: \"1\" }, stdio: [\"ignore\", log.fd, log.fd] });"
+        }
+      ],
+      "imports": []
+    }
+  ],
+  "retainedCode": {
+    "postinstall": "const { checkAndPreparePackage } = require(\"napi-postinstall\");\n\nconst packageJson = require(\"./package.json\");\n\ncheckAndPreparePackage(packageJson, true);\n",
+    "checkAndPreparePackage": "async function checkAndPreparePackage(packageNameOrPackageJson, versionOrCheckVersion, checkVersion) {\n    let packageJson;\n    if (typeof packageNameOrPackageJson === 'string') {\n        try {\n            packageJson = require(packageNameOrPackageJson + `/${constants_js_1.PACKAGE_JSON}`);\n        }\n        catch {\n            if (typeof versionOrCheckVersion !== 'string') {\n                throw new TypeError((0, helpers_js_1.errorMessage)(`Failed to load \\`${constants_js_1.PACKAGE_JSON}\\` from \\`${packageNameOrPackageJson}\\`, please provide a version.`));\n            }\n            const pkg = packageNameOrPackageJson;\n            const packageJsonBuffer = await fetch(`${(0, helpers_js_1.getGlobalNpmRegistry)()}${pkg}/${versionOrCheckVersion}`);\n            packageJson = JSON.parse(packageJsonBuffer.toString('utf8'));\n        }\n    }\n    else {\n        packageJson = packageNameOrPackageJson;\n        if (checkVersion === undefined &&\n            typeof versionOrCheckVersion === 'boolean') {\n            checkVersion = versionOrCheckVersion;\n        }\n    }\n    const { name, version: pkgVersion, optionalDependencies } = packageJson;\n    const { napi, version = pkgVersion } = (0, helpers_js_1.getNapiInfoFromPackageJson)(packageJson, checkVersion);\n    if (checkVersion && pkgVersion !== version) {\n        throw new Error((0, helpers_js_1.errorMessage)(`Inconsistent package versions found for \\`${name}\\` v${pkgVersion} vs \\`${napi.packageName}\\` v${version}.`));\n    }\n    const targets = (0, helpers_js_1.getNapiNativeTargets)();\n    for (const target of targets) {\n        const pkg = `${napi.packageName}-${target}`;\n        if (!optionalDependencies?.[pkg]) {\n            continue;\n        }\n        const isWasm32Wasi = target === constants_js_1.WASM32_WASI;\n        const binaryPrefix = napi.binaryName ? `${napi.binaryName}.` : '';\n        const subpath = `${binaryPrefix}${target}.${isWasm32Wasi ? 'wasm' : 'node'}`;\n        try {\n            require.resolve(`${pkg}/${subpath}`);\n            break;\n        }\n        catch {\n            try {\n                require.resolve(`${name}/${subpath}`);\n                break;\n            }\n            catch { }\n            if (isPnp()) {\n                if (isWasm32Wasi) {\n                    try {\n                        (0, node_child_process_1.execSync)(`yarn add -D ${pkg}@${version}`);\n                    }\n                    catch (err) {\n                        (0, helpers_js_1.errorLog)(`Failed to install package \\`${pkg}\\` automatically in the yarn P'n'P environment`, (0, helpers_js_1.getErrorMessage)(err));\n                        (0, helpers_js_1.errorLog)(\"You'll have to install it manually in this case.\");\n                    }\n                }\n                return;\n            }\n            if (!isNpm()) {\n                (0, helpers_js_1.errorLog)(`Failed to find package \"${pkg}\" on the file system\n\nThis can happen if you use the \"--no-optional\" flag. The \"optionalDependencies\"\n${constants_js_1.PACKAGE_JSON} feature is used by ${name} to install the correct napi binary\nfor your current platform. This install script will now attempt to work around\nthis. If that fails, you need to remove the \"--no-optional\" flag to use ${name}.\n`);\n            }\n            let nodePath;\n            try {\n                nodePath = (0, helpers_js_1.downloadedNodePath)(name, subpath);\n            }\n            catch {\n                const nodeModulesDir = path.resolve(require.resolve(constants_js_1.meta.name + `/${constants_js_1.PACKAGE_JSON}`), '../..');\n                nodePath = path.join(nodeModulesDir, name, subpath);\n                fs.mkdirSync(path.dirname(nodePath), { recursive: true });\n            }\n            try {\n                (0, helpers_js_1.errorLog)(`Trying to install package \"${pkg}\" using npm`);\n                installUsingNPM(name, pkg, version, target, subpath, nodePath);\n                break;\n            }\n            catch (err) {\n                (0, helpers_js_1.errorLog)(`Failed to install package \"${pkg}\" using npm`, (0, helpers_js_1.getErrorMessage)(err));\n                try {\n                    await downloadDirectlyFromNPM(pkg, version, subpath, nodePath);\n                    break;\n                }\n                catch (err) {\n                    throw new Error((0, helpers_js_1.errorMessage)(`Failed to install package \"${pkg}\"`, (0, helpers_js_1.getErrorMessage)(err)));\n                }\n            }\n        }\n    }\n}\n//# sourceMappingURL=index.js.map"
+  },
+  "observations": [
+    "Candidate npm log records exactly one lifecycle hook: unrs-resolver@1.12.2 postinstall node postinstall.js, exit0.",
+    "The root project defines no preinstall/install/postinstall/prepublish/preprepare/prepare/postprepare hook.",
+    "Declared installed dependency hooks are inventoried, not assumed executed; registry-package prepare/prepublish hooks differ from root hooks and linked-package preparation.",
+    "unrs-resolver postinstall imports napi-postinstall, calls checkAndPreparePackage with its local package data and true version checking.",
+    "The inspected hook path contains no NEXT_TELEMETRY_DISABLED lookup and no Next import; no Next execution is recorded during npm ci.",
+    "The exact frozen capability probe explicitly sets NEXT_TELEMETRY_DISABLED to 1 for both production-build and browser child commands.",
+    "Baseline installer recorded 1 and candidate installer null. Original records and successful checker readiness remain intact; exact all-variable install matching therefore fails."
+  ],
+  "limits": [
+    "Read-only code/log attribution is not a historical network trace or proof of every process side effect.",
+    "Dependency byte identity is independently measured and linked separately.",
+    "No install or probe rerun, environment rewrite, paid call or silent waiver occurred."
+  ]
+}
+

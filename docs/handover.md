@@ -445,7 +445,7 @@ not establish whether the earlier publication review was completed.
    `other-skills.md` remains unwritten. Source/install verification and an
    actual recommendation-then-refusal branch remain unobserved.
 
-   Shipped skill instructions remain unchanged. The later
+   Those earlier studies left shipped skill instructions unchanged. The
    [shared-controls repair](../evals/engine/shared-controls-1/findings.md)
    changes only the engine's Story provider scope, not the accepted prototype.
    Stage 3 still needs its supported build entry point, before-stop-1 and
@@ -498,6 +498,10 @@ development after test assessment under the existing plan, recorded
 [verbatim here](history/2026-10-11-baseline-reconciliation-and-development.md).
 It is not approval of the new prototype's appearance or physical-phone
 behavior, and does not reopen the consumed actor/judge allowance.
+On 12 October, the author explicitly [approved the new bounded comparison](history/2026-10-12-stage-3-comparison-approval.md),
+one fresh baseline and one supported matched candidate, each with at most
+one judge and no retries. That separate allowance does not include natural
+entry, planning regression, full-journey runs or push permission.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -570,7 +574,12 @@ inventories match on 201 unchanged source files. The
 [new fixture](../evals/builds/bench-depth-2/README.md) makes the reviewed
 neutral helper, environment facts and skip-navigation contract explicit.
 Its verifier, real-browser helper smoke and read-only runner preparation
-pass. No new cohort or actor workspace is frozen or prepared yet.
+pass. Those were preparation-only findings. The later
+[approved comparison](../evals/runs/stage-3-comparison-1/findings.md) now
+records the fresh baseline's completed actor, passing seven-mode technical
+check, all 253 reviewed originals and both remaining visual misses. Its
+text judge has a valid complete inner result, with an explicitly retained
+outer-tool exit-status anomaly. Do not relaunch either spent baseline call.
 
 Follow the [completion plan](superpowers/plans/2026-10-12-stage-3-completion.md)
 for the product milestones. The [separate paid question](history/2026-10-12-stage-3-development.md#separate-paid-comparison-question)
@@ -579,7 +588,12 @@ one fresh baseline and one matched candidate if needed,
 at most one judge each, 15 minutes per build and 10 per judge, no retries.
 These deadlines are not a hard token-cost cap. Do not ask for this same
 approval again, reopen the spent old cohort or exceed the new envelope.
-The two visual instruction candidates are drafts, not shipped behavior.
+The two supported visual paragraphs were committed as a conditional skill
+candidate at `e7a7230`, after the baseline review. The main skill is 799
+words and still planning-only in ordinary use. Fresh candidate preparation
+is underway; use the comparison findings and actual cohort artifacts for
+the latest lifecycle. Do not infer candidate success before its completed
+technical, source/access, text and original-image assessments.
 
 Follow the baseline findings' quality attribution before choosing the next
 behavioral experiment. Source-level passes do not establish a convincing

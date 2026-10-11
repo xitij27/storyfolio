@@ -72,3 +72,12 @@ choice gates, planning regression, full six-stop non-sheet proof and actual
 author desktop/phone approval remain outside this paid allowance. No push
 is authorized. Do not describe the conditional candidate as a completed
 build workflow or established skill improvement before its result.
+
+## Subsequent setup disposition
+
+The actual prelaunch audit found one installer-only telemetry-flag
+difference. Its [explicit disposition](candidate-install-disposition.md)
+retains the failed exact-environment check, bounds impact from lifecycle
+and package evidence, and requires qualified reporting. Frozen actor
+inputs still differ only in the intended main skill. The original selection
+and frozen protocol are not rewritten to hide that setup deviation.

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "role": "coordinator-setup",
+  "coordinatorSetup": true,
+  "actorPreflight": false,
+  "inputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "node": {
+    "version": "v22.22.1",
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node"
+  },
+  "dependencyInstall": {
+    "command": "npm ci --offline --cache=/tmp/storyfolio-npm-cache",
+    "offline": true,
+    "exitCode": 0
+  },
+  "capabilities": {
+    "localHttp": true,
+    "externalHttps": "proxy-403",
+    "productionBuild": true,
+    "starterBrowser": "light-wide"
+  },
+  "limitations": [
+    "These are coordinator setup observations, not your own preflight or evidence of completing the requested prototype.",
+    "The browser check covers only the supplied starter at 1440 by 900, not phone behavior or final visual acceptance.",
+    "The configured proxy permits loopback destinations only. Configuration isolation is not a filesystem read jail.",
+    "Use the recorded Node executable and existing browser resources. Dependencies were installed from the supplied lockfile without external downloads."
+  ]
+}
