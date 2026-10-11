@@ -10,6 +10,9 @@ preserves this day's earlier current-state wording verbatim.
 The [pre-prototype handover](history/2026-10-11-before-fixture-prototype-handover.md)
 preserves the state before the author authorized visual recovery implementation.
 
+The [pre-depth-approval handover](history/2026-10-11-before-depth-approval-handover.md)
+preserves `fd03055` verbatim before recording acceptance of the revised story.
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -39,8 +42,8 @@ The author then said, "yes lets proceed with it". The new manual
 three beats using an illustrative bench assembly, connected observation
 relationship and distinct observed/projected evidence. Its
 [specification](superpowers/specs/2026-10-11-fixture-prototype.md) records the
-new design choices. This is a reviewable development study, with actual
-author visual approval still pending. It is not an unchanged-agent rerun or
+new design choices. At that checkpoint, actual author visual approval was
+still pending. It is not an unchanged-agent rerun or
 a completed Stage 3 proof. Local evidence and final verification are in
 [the prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md).
 The author subsequently said it looks better, but clarified that
@@ -51,7 +54,10 @@ evidence-provenance sections, develops inspection explanations, and promotes
 sample scope into the ending. The physical object is not enlarged or
 decorated in response to this clarification. Its new
 [depth study](../evals/runs/visual-recovery-depth-1/findings.md) remains manual
-development, pending the author's review of the revision. The first source
+development. Asked whether its depth was closer to their intent, the author
+said, "yes this is good". The [approval record](history/2026-10-11-story-depth-approval.md)
+accepts the revised story's depth and direction at `fd03055`; physical-phone
+assessment and full Stage 3 acceptance remain separate. The first source
 is preserved at `71ae3ea`, and its evidence is unchanged.
 The depth study's build, lint, type checks and local tests pass. All 96
 original images were inspected across the seven-mode capture and a focused
@@ -243,8 +249,11 @@ not establish whether the earlier publication review was completed.
    vector fallback preserves the explanation without WebGL or JavaScript.
    Review the preview on port 3012 and the
    [saved findings](../evals/runs/visual-recovery-prototype-1/findings.md).
-   Author approval and physical-phone assessment remain pending; expansion
-   follows that gate. No new actor/judge cohort was invoked. The original and frozen outputs
+   The author subsequently accepted the five-beat story's depth and direction
+   in the [approval record](history/2026-10-11-story-depth-approval.md).
+   Physical-phone assessment remains unconfirmed before full-site expansion.
+   This reply does not request implementation or a paid run. No new actor/judge
+   cohort was invoked. The original and frozen outputs
    remain intact. The [preceding handover](history/2026-10-11-before-visual-quality-review-handover.md)
    preserves the earlier acceptance wording verbatim.
 
@@ -301,7 +310,8 @@ prototype. Their exact words and the preceding recommendation are in
 [the authorization record](history/2026-10-11-visual-prototype-approval.md).
 They later reported visual improvement but requested a deeper story, not
 more physical detail. Their [exact feedback and clarification](history/2026-10-11-prototype-depth-feedback.md)
-govern the current five-beat revision; this is not full-site approval.
+govern the five-beat revision. They then [accepted the revised story](history/2026-10-11-story-depth-approval.md)
+with "yes this is good"; this is not full-site or physical-phone approval.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -357,19 +367,23 @@ repository change was made for this planning amendment.
 
 ## Start the next session
 
-The immediate review target is the manual fixture prototype on port 3012.
+The five-beat fixture story on port 3012 is accepted for narrative depth and
+direction at `fd03055`. The [exact approval](history/2026-10-11-story-depth-approval.md)
+does not confirm a physical-phone check, authorize a paid evaluation, request
+further implementation or permit a push. The nearest remaining prototype
+gate is physical-phone assessment before full-site expansion.
 Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
 [first prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md)
 and [setup](../prototypes/fixture-study/README.md). The author found the first
 version better visually but wanted more story depth. The new five sections
 develop scheduling, bench work, evidence provenance and bounded sample scope.
-Review that revised story before any further expansion. Its printing is fixed
+The author has now accepted that revision. Its printing is fixed
 across beats after reverse-scroll review caught overlapping text during
 crossfades. Connectors now wait for positive clearance between parts after
 a later frame exposed a reversed arrow inside the overlapping assembly.
 Desktop/phone controls and movement, short view and still modes
-have source-bound capture evidence; the author still needs to assess the
-visual direction and a physical phone before full-site expansion. This
+have source-bound capture evidence; physical-phone assessment is still
+unconfirmed before full-site expansion. This
 does not restart the paid build cohort or change the planning-only skill.
 
 On 11 October the author asked about token consumption for reviewing and

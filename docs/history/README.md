@@ -219,3 +219,12 @@ for larger or more decorated geometry. The
 [five-beat revision](../superpowers/specs/2026-10-11-fixture-story-depth.md)
 retains the first source at `71ae3ea` and all its evidence unchanged. This
 feedback is qualified, not final acceptance or a paid-run/push authorization.
+
+## Revised story accepted
+
+[The approval record](2026-10-11-story-depth-approval.md) preserves the author's
+"yes this is good" in reply to the question about the five-beat story's depth.
+It accepts that revision's narrative direction, not physical-phone review or
+full Stage 3 completion. The [pre-approval handover](2026-10-11-before-depth-approval-handover.md)
+preserves `fd03055:docs/handover.md` verbatim. Prototype source and captured
+study evidence remain untouched; no new build, paid run or push is authorized.

@@ -122,3 +122,11 @@ It deepens the case study without inventing a debugging success or changing
 the physical styling. The [new study](../../../evals/runs/visual-recovery-depth-1/findings.md)
 is the next review target. This revision is not approval of a complete site;
 the earlier visual, factual, phone and evaluated-workflow gates still apply.
+
+## Author acceptance of the revised story
+
+The author subsequently [said "yes this is good"](../../history/2026-10-11-story-depth-approval.md)
+when asked whether the revision meets the requested story depth. This accepts
+the narrative direction of `fd03055`, superseding the pending-depth verdict
+above. Physical-phone assessment remains unconfirmed before expansion. The
+reply does not request a new build, authorize paid evaluation or permit a push.

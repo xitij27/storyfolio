@@ -15,13 +15,15 @@ remains future work.
 The author subsequently authorized a manual three-beat recovery prototype.
 Its [source and setup](../prototypes/fixture-study/README.md),
 [design](superpowers/specs/2026-10-11-fixture-prototype.md) and
-[findings](../evals/runs/visual-recovery-prototype-1/findings.md) are the next
-review checkpoint. Actual author visual approval remains pending.
+[findings](../evals/runs/visual-recovery-prototype-1/findings.md) record that
+first checkpoint, before author approval.
 The author then requested more story depth. The
 [five-beat revision](superpowers/specs/2026-10-11-fixture-story-depth.md) and
-[new study](../evals/runs/visual-recovery-depth-1/findings.md) are the current
-review target, with [the exact clarification](history/2026-10-11-prototype-depth-feedback.md)
-preserved separately from full approval.
+[new study](../evals/runs/visual-recovery-depth-1/findings.md) record the result,
+with [the exact clarification](history/2026-10-11-prototype-depth-feedback.md)
+preserved separately. The author then [accepted the revised story's depth
+and direction](history/2026-10-11-story-depth-approval.md). Physical-phone
+assessment remains unconfirmed, and full Stage 3 acceptance remains open.
 
 For a new session, read:
 

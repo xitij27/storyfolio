@@ -48,3 +48,7 @@ the author's clarification that the story needs more depth. Its
 [separate study](../../../evals/runs/visual-recovery-depth-1/findings.md)
 preserves the first prototype's evidence. This is a bounded revision, not
 unqualified visual acceptance or completion of the full-site gate.
+
+Subsequently, the author [accepted the revised story's depth and direction](../../history/2026-10-11-story-depth-approval.md)
+at `fd03055`. This supersedes the pending author-depth status above; physical-phone
+assessment, the evaluated build workflow and full-site acceptance remain open.
