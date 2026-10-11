@@ -228,3 +228,12 @@ It accepts that revision's narrative direction, not physical-phone review or
 full Stage 3 completion. The [pre-approval handover](2026-10-11-before-depth-approval-handover.md)
 preserves `fd03055:docs/handover.md` verbatim. Prototype source and captured
 study evidence remain untouched; no new build, paid run or push is authorized.
+
+## Fixture phone confirmation
+
+[The exact confirmation](2026-10-11-fixture-phone-approval.md) records
+"yeah it works fine on phone" after the requested real-phone check. Together
+with the story approval, it closes the five-beat prototype's author-review
+gate, not Stage 3 as a whole. Device/browser details and performance metrics
+were not supplied. Earlier records and captured evidence retain their
+original status; no new implementation, paid run or push is authorized.

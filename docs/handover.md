@@ -56,8 +56,10 @@ decorated in response to this clarification. Its new
 [depth study](../evals/runs/visual-recovery-depth-1/findings.md) remains manual
 development. Asked whether its depth was closer to their intent, the author
 said, "yes this is good". The [approval record](history/2026-10-11-story-depth-approval.md)
-accepts the revised story's depth and direction at `fd03055`; physical-phone
-assessment and full Stage 3 acceptance remain separate. The first source
+accepts the revised story's depth and direction at `fd03055`. The author then
+said, "yeah it works fine on phone". That [phone confirmation](history/2026-10-11-fixture-phone-approval.md)
+closes this bounded prototype's author-review gate. Full Stage 3 acceptance
+remains separate. The first source
 is preserved at `71ae3ea`, and its evidence is unchanged.
 The depth study's build, lint, type checks and local tests pass. All 96
 original images were inspected across the seven-mode capture and a focused
@@ -251,8 +253,9 @@ not establish whether the earlier publication review was completed.
    [saved findings](../evals/runs/visual-recovery-prototype-1/findings.md).
    The author subsequently accepted the five-beat story's depth and direction
    in the [approval record](history/2026-10-11-story-depth-approval.md).
-   Physical-phone assessment remains unconfirmed before full-site expansion.
-   This reply does not request implementation or a paid run. No new actor/judge
+   The subsequent [phone confirmation](history/2026-10-11-fixture-phone-approval.md)
+   closes the bounded prototype review gate. Neither reply requests new
+   implementation or authorizes a paid run. No new actor/judge
    cohort was invoked. The original and frozen outputs
    remain intact. The [preceding handover](history/2026-10-11-before-visual-quality-review-handover.md)
    preserves the earlier acceptance wording verbatim.
@@ -312,6 +315,8 @@ They later reported visual improvement but requested a deeper story, not
 more physical detail. Their [exact feedback and clarification](history/2026-10-11-prototype-depth-feedback.md)
 govern the five-beat revision. They then [accepted the revised story](history/2026-10-11-story-depth-approval.md)
 with "yes this is good"; this is not full-site or physical-phone approval.
+Their subsequent ["yeah it works fine on phone"](history/2026-10-11-fixture-phone-approval.md)
+confirms the phone check, without approving a full site or starting new work.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -368,10 +373,12 @@ repository change was made for this planning amendment.
 ## Start the next session
 
 The five-beat fixture story on port 3012 is accepted for narrative depth and
-direction at `fd03055`. The [exact approval](history/2026-10-11-story-depth-approval.md)
-does not confirm a physical-phone check, authorize a paid evaluation, request
-further implementation or permit a push. The nearest remaining prototype
-gate is physical-phone assessment before full-site expansion.
+direction at `fd03055`, with the [physical-phone check now confirmed](history/2026-10-11-fixture-phone-approval.md).
+The bounded prototype review gate is closed. The next planning step is a
+bounded Stage 3 build-workflow protocol using this as a quality reference,
+with explicit scope, question, stopping conditions and cost decision before
+any paid run. These approvals do not request further implementation or
+permit a push. The non-sheet whole-site proof and packaging remain open.
 Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
 [first prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md)
 and [setup](../prototypes/fixture-study/README.md). The author found the first
@@ -382,8 +389,8 @@ across beats after reverse-scroll review caught overlapping text during
 crossfades. Connectors now wait for positive clearance between parts after
 a later frame exposed a reversed arrow inside the overlapping assembly.
 Desktop/phone controls and movement, short view and still modes
-have source-bound capture evidence; physical-phone assessment is still
-unconfirmed before full-site expansion. This
+have source-bound capture evidence, separate from the author's phone report.
+That report supplies no device/browser details or measured frame rate. It
 does not restart the paid build cohort or change the planning-only skill.
 
 On 11 October the author asked about token consumption for reviewing and

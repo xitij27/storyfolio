@@ -39,8 +39,8 @@ its review criteria and independent runtime observations are separate.
 | [codex-build-1](#first-stage-3-build-baseline-11-october-2026) | Bounded spine conversation and judgement, complete within its cost gate |
 | [codex-build-completion-1](#bounded-stage-3-completion-11-october-2026) | Two-turn implementation continuation, technically checked; visual result rejected |
 | [codex-visual-quality-review-1](#visual-quality-review-11-october-2026) | Source and image review after author rejection; Stage 3 visual proof remains open |
-| [visual-recovery-prototype-1](#visual-recovery-prototype-11-october-2026) | Manual three-beat implementation and local visual/browser study; author approval pending |
-| [visual-recovery-depth-1](#visual-recovery-story-depth-11-october-2026) | Manual five-beat narrative revision after author feedback; revised acceptance pending |
+| [visual-recovery-prototype-1](#visual-recovery-prototype-11-october-2026) | Historical three-beat implementation; author requested the deeper revision below |
+| [visual-recovery-depth-1](#visual-recovery-story-depth-11-october-2026) | Manual five-beat revision; story accepted and phone confirmed, closing the bounded prototype gate |
 
 ## Cases and comparison rules
 
@@ -523,8 +523,9 @@ the longest run and battery projection shown distinctly.
 
 This is collaborative design and implementation, not an unchanged-agent
 rerun or paid actor/judge cohort. Browser assertions, visual observations,
-source hashes and capture conditions are preserved. Actual author visual
-approval and physical-phone assessment remain pending. The result does not
+source hashes and capture conditions are preserved. At this checkpoint,
+author approval and physical-phone assessment were pending; the later
+five-beat revision below received acceptance. The result does not
 close the non-sheet whole-site proof, establish a skill success rate or
 authorize expansion past the prototype review gate.
 
@@ -537,3 +538,10 @@ provenance join the existing assembly, bench relationship and conclusion.
 The first source is preserved at `71ae3ea`, its evidence remains unchanged,
 and shipped skill/engine instructions are not changed. This is not a paid
 actor/judge cohort, a matched instruction experiment or final acceptance.
+
+After capture, the author [accepted the story's depth](../docs/history/2026-10-11-story-depth-approval.md)
+and [confirmed it works on phone](../docs/history/2026-10-11-fixture-phone-approval.md).
+This closes the bounded prototype review gate at `fd03055`, not full Stage 3
+acceptance. The saved study retains its original pre-approval status and
+unchanged source/capture records. No new evaluation or implementation follows
+automatically from these replies.

@@ -22,8 +22,10 @@ The author then requested more story depth. The
 [new study](../evals/runs/visual-recovery-depth-1/findings.md) record the result,
 with [the exact clarification](history/2026-10-11-prototype-depth-feedback.md)
 preserved separately. The author then [accepted the revised story's depth
-and direction](history/2026-10-11-story-depth-approval.md). Physical-phone
-assessment remains unconfirmed, and full Stage 3 acceptance remains open.
+and direction](history/2026-10-11-story-depth-approval.md), then
+[confirmed it works on phone](history/2026-10-11-fixture-phone-approval.md).
+The bounded prototype review gate is closed; full Stage 3 acceptance remains
+open. The next planning step is a scoped build-workflow protocol.
 
 For a new session, read:
 
