@@ -309,18 +309,33 @@ coverage with source/artifact hashes. These are measurements, not visual
 approval. [Calibration and known blockers](runs/build-workflow-preparation-1/findings.md)
 are retained outside the historical studies.
 
-Only a read-only input inspection is currently appropriate for this case:
+The author subsequently approved the final local freeze. The
+[freeze study](runs/build-workflow-freeze-1/findings.md) now records the
+prepared `codex-bench-depth-baseline-1` cohort, 121 fixed inputs, and passing
+capability checks in its actual external workspace. Use that study's exact
+recheck commands, not an invented fresh preparation command. Its digest is
+`57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e`.
+Do not overwrite the cohort, refresh its frozen files or copy held-out
+prototype material into the workspace.
 
-```sh
-node evals/codex-build-run.mjs --case evals/builds/bench-depth-1/case.json --cohort codex-bench-depth-baseline-1 --capabilities evals/builds/local-capabilities.json --dry
-```
+Keep the exact frozen Node, CLI, four environment values and disabled-skill
+inventory. Runtime storage uses
+`TMPDIR=/var/tmp/storyfolio-freeze-runtime-20261011`, which the runner does
+not include in its capability digest. A separate retained setup record
+binds it, and the study's final read-only audit enforces it. Factual actor
+setup data is byte-bound to the retained coordinator record. Generated
+trees remain explicitly excluded from source auditing; configuration
+isolation is not a filesystem read jail.
 
-The paid envelope is not approved. Shared-controls and paged transport now
-have separate local engineering proof; the case opts into paged delivery.
-Final `--prepare`, common input freeze and the exact workspace capability
-proof remain a separate next step. The reserved cohort is not
-a ready workspace. No `--turn` or paid judge invocation follows from this
-preparation authorization.
+The paid envelope is still unapproved. The proposed next allowance is one
+fresh `gpt-6.1-sol` medium actor turn with a fifteen-minute deadline, then
+at most one fresh `gpt-6-astra` medium text judge with a ten-minute deadline
+after unpaid validation of the complete actual packet. No continuation,
+correction or retry is included. These bound process time and invocations,
+not usage or dollars; the one-turn token threshold is not a hard spending
+cap. No `--turn` or paid judge invocation follows from local preparation.
+The frozen prospective fixture/protocol wording remains unchanged; current
+preparation status and remaining gates are recorded in the freeze study.
 
 ### Historical approved build continuation
 

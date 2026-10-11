@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "startingRevision": "6d419ea49fcd9aed1da2913dc1e6650979d92d92",
+  "checks": [
+    { "command": "PATH=/tmp/storyfolio-node-check-20261011/node_modules/.bin:$PATH TMPDIR=/var/tmp/storyfolio-freeze-runtime-20261011 npm test", "exitCode": 0, "tests": 305, "suites": 31, "passed": 305, "failed": 0, "log": "repository-tests.tap" },
+    { "command": "node evals/check-skill.mjs", "exitCode": 0, "output": "ok: SKILL.md is 687 words, with 4 references" },
+    { "command": "node evals/check-people.mjs", "exitCode": 0, "output": "ok: 17 people" },
+    { "command": "node evals/builds/bench-depth-1/verify-fixture.mjs", "exitCode": 0, "result": "7 actor files, 4 retained hashes, 2 SVGs, 5 beat IDs, exact actor prompt; paged-v1 schema-2 case verified" },
+    { "command": "node evals/runs/build-workflow-freeze-1/check-ready.mjs", "exitCode": 0, "result": "Strict final audit and exact environment runner --dry pass with the same frozen digest", "record": "readiness.json" },
+    { "command": "git diff --check", "exitCode": 0 }
+  ],
+  "preservation": {
+    "priorHandover": { "source": "6d419ea:docs/handover.md", "archive": "docs/history/2026-10-11-before-build-freeze-handover.md", "sourceGitBlob": "9fb59c57d947ecc884080cbcfce79c413477d175", "archiveGitBlob": "9fb59c57d947ecc884080cbcfce79c413477d175", "identical": true },
+    "unchangedTrackedTrees": ["skills", "prototypes", "evals/engine", "evals/lib", "evals/builds", "evals/codex-build-run.mjs", "evals/codex-build-judge.mjs", "evals/judge-evidence-server.mjs", "evals/runs/judge-transport-1", "evals/runs/build-workflow-preparation-1", "evals/runs/codex-build-1", "evals/runs/codex-build-completion-1"],
+    "deletions": 0,
+    "paidActorOrJudgeInvocations": 0,
+    "pushes": 0
+  },
+  "finalDocumentationReview": {
+    "files": 12,
+    "localLinks": 576,
+    "localMarkdownAnchors": 77,
+    "missingTargetsOrAnchors": 0,
+    "exclusions": "Verbatim archived handover and frozen copies; external official-doc links not fetched by this final local-link check",
+    "wordingCorrection": "Only the CLI binary hash is recorded; both Node and CLI executable paths are retained. Findings now state this precisely.",
+    "authorizationIssues": 0
+  },
+  "stagedWhitespace": {
+    "fullCheckExitCode": 2,
+    "warnings": 11,
+    "cause": "Nine exact frozen-source copies retain their existing blank EOF lines; two original runtime command logs also end with a blank line.",
+    "action": "Preserved exact bytes and hashes. Authored documentation/tooling subset checked separately."
+  },
+  "scope": "Final local freeze and coordinator capability proof only. Native Node and subprocess tests used approved outer execution; actor-style runtime proof retained the frozen restricted inner sandbox."
+}

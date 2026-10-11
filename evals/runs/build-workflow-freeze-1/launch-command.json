@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "paidExecutionAuthorized": false,
+  "executed": false,
+  "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+  "cwd": "/home/kshitij/projects/storyfolio",
+  "args": [
+    "evals/codex-build-run.mjs",
+    "--case",
+    "evals/builds/bench-depth-1/case.json",
+    "--cohort",
+    "codex-bench-depth-baseline-1",
+    "--capabilities",
+    "evals/builds/local-capabilities.json",
+    "--turn",
+    "1"
+  ],
+  "environment": {
+    "PATH": "/tmp/storyfolio-node-check-20261011/node_modules/.bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+    "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+    "LANG": "C.UTF-8",
+    "TMPDIR": "/var/tmp/storyfolio-freeze-runtime-20261011"
+  },
+  "inputDigest": "57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e",
+  "preconditions": [
+    "Explicit new approval of paid allowance",
+    "Passing check-ready.mjs in the unchanged prepared workspace",
+    "No existing actor turn or judge attempt"
+  ],
+  "limitations": "Argument specification only, not a model-session test. This is one actor process with a 15-minute deadline, not an in-flight token or dollar cap."
+}

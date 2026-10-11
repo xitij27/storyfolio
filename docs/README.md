@@ -44,6 +44,17 @@ records byte-exact historical packet delivery, bounded read-only pages,
 305 passing tests and the untested live-model limits. Final input freeze,
 actor-workspace capability proof and paid-run approval remain separate gates.
 
+The author then [approved the final local preparation](history/2026-10-11-build-freeze-approval.md).
+The [freeze and capability study](../evals/runs/build-workflow-freeze-1/findings.md)
+now records 121 fixed inputs, the fresh external workspace, offline locked
+dependencies and passing loopback, blocked-external-request, production-build
+and starter-browser checks under the exact frozen sandbox configuration.
+It supersedes the pending-freeze status above, not the paid-run gate.
+No actor or judge has started. The next decision is approval of the bounded
+one-turn baseline and optional single judge; process deadlines are not
+hard token or spending caps. The study is the home for exact recheck
+commands and the separately retained `TMPDIR` requirement.
+
 For a new session, read:
 
 1. [Repository rules](../AGENTS.md), then [current handover](handover.md).

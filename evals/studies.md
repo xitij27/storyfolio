@@ -44,6 +44,8 @@ its review criteria and independent runtime observations are separate.
 | [build-workflow-preparation-1](runs/build-workflow-preparation-1/findings.md) | No-model diagnostic tooling, fixture and calibration; final freeze gated by shared-controls and judge transport |
 | [shared-controls-1](engine/shared-controls-1/findings.md) | Authorized shipped-engine provider repair; frozen failing baseline, React regressions and real Canvas verification. No actor/judge evaluation or skill instruction change |
 | [judge-transport-1](runs/judge-transport-1/findings.md) | Authorized local-only lossless evidence delivery repair; exact historical reconstruction, bounded read-only pages, CLI configuration proof and 305 passing tests. No live judge, old retry or final cohort freeze |
+| [build-workflow-freeze-1](runs/build-workflow-freeze-1/findings.md) | Authorized final local preparation: 121 fixed inputs, clean external actor workspace, offline dependencies, exact-sandbox build/browser and network-boundary proof. No paid actor or judge; cost approval remains separate |
+| [codex-bench-depth-baseline-1](runs/codex-bench-depth-baseline-1/inputs/manifest.json) | Prepared, not executed: seven fixture files and unchanged skill/engine, source-bound scaffold and retained setup evidence. No actor conversation, implementation result or judge score; see the freeze study for commands and limits |
 
 ## Cases and comparison rules
 

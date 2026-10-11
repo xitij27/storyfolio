@@ -22,6 +22,9 @@ preserves `39ceeb7` verbatim before the authorized shared-controls correction.
 The [pre-transport handover](history/2026-10-11-before-judge-transport-handover.md)
 preserves `3e23cc9` verbatim before the authorized local judge-delivery repair.
 
+The [pre-freeze handover](history/2026-10-11-before-build-freeze-handover.md)
+preserves `6d419ea` verbatim before the authorized final local preparation.
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -123,6 +126,32 @@ transport without changing actor inputs, rubric or expectations. Final
 input freeze and actual actor-workspace proof still need their own step;
 the reserved cohort is unprepared. No paid call, old retry, behavioral skill
 change or push was authorized or made.
+
+The author then answered "yes" to completing the
+[final local input freeze and actor-workspace preparation](history/2026-10-11-build-freeze-approval.md).
+The [new freeze study](../evals/runs/build-workflow-freeze-1/findings.md)
+supersedes the deferred-freeze status above. The cohort
+`codex-bench-depth-baseline-1` now contains 121 frozen inputs from `6d419ea`,
+with digest
+`57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e`.
+The initial external workspace contains only the seven fixture files and
+86 unchanged skill files before scaffolding, then 172 source-bound files.
+Locked offline installation adds 392 packages. The exact frozen Codex
+sandbox passes loopback access, an explicit external-request proxy 403,
+production build and the starter's `light-wide` browser check. Nine original
+images were inspected. These are coordinator capability observations, not
+actor preflight, an implemented five-beat prototype or new visual approval.
+
+The external runtime uses `/var/tmp/storyfolio-freeze-runtime-20261011`
+after explicit storage approval because `/tmp` had only 71 MB available.
+No existing data was deleted. `TMPDIR` is not included in the runner's
+input digest, so it is retained in a separate setup record and enforced by
+the final read-only audit alongside the exact Node and four frozen
+environment values. The study retains factual actor setup information,
+source-change checks and the commands for rechecking the prepared workspace.
+No actor or judge turn, skill/engine edit, historical retry or push was made.
+The next decision is explicit approval of the proposed paid envelope, not
+another implementation or automatic launch.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -382,6 +411,9 @@ and its local checks, not transport implementation or paid execution.
 The subsequent "yes lets get the next thing done"
 [authorizes the local transport correction](history/2026-10-11-judge-transport-approval.md),
 not a final cohort freeze, paid execution, historical retry or push.
+The latest "yes" [authorizes the final local freeze and capability proof](history/2026-10-11-build-freeze-approval.md).
+It still does not approve a paid actor or judge, retry, instruction change
+or push. The preceding approval boundaries remain historical records.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -451,17 +483,31 @@ is drafted. Its approved local preparation now has
 The shared-controls correction is now authorized and implemented, with
 [separate engine evidence](../evals/engine/shared-controls-1/findings.md).
 The lossless transport correction is also now authorized, implemented and
-[locally verified](../evals/runs/judge-transport-1/findings.md). Next obtain
-direction to complete the final freeze and actual actor-workspace capability
-proof. That step does not include a paid actor or judge. Freeze the
-corrected common engine revision for any future matched comparison; do not
-rewrite the old failing probe or compare changed-engine arms as a skill effect.
-Hold the new transport fixed across those arms too. The paid-run decision
-remains separate. A future complete packet needs its own transport preflight;
-the local historical calibration does not establish model context fit,
-history retention, judging quality, token cost or deadline feasibility.
-Do not reinterpret the phone, planning or no-model preparation approvals
-as that cost approval. The reserved baseline cohort has not been prepared.
+[locally verified](../evals/runs/judge-transport-1/findings.md). The subsequently
+authorized [final local preparation](../evals/runs/build-workflow-freeze-1/findings.md)
+now freezes the corrected common engine, current evaluator and unchanged
+case in `codex-bench-depth-baseline-1`, with capability proof in its actual
+external workspace. Use that study's exact recheck commands and retain its
+separately recorded `TMPDIR`; do not recreate the workspace or silently
+refresh the frozen inputs. Recheck current source, CLI, Node, environment,
+disabled skills and retained setup evidence before any newly authorized turn.
+
+Next obtain explicit paid-run approval: one fresh `gpt-6.1-sol` medium
+actor turn with a fifteen-minute process deadline, then at most one fresh
+`gpt-6-astra` medium text judge with a ten-minute deadline after unpaid
+validation of the complete actual packet. No continuation, correction or
+retry is included. These bound process time and invocations, not token
+consumption or dollars. The one-turn token threshold is not a hard spending
+cap. Do not reinterpret phone, planning or local-preparation approval as
+that cost decision. No actor or judge has started in the prepared cohort.
+
+Hold the frozen engine, fixture, request, evaluator and transport fixed in
+any later matched comparison. Do not rewrite the old failing probe or
+attribute changed-engine arms to a skill effect. A future complete packet
+needs its own transport preflight; historical local calibration does not
+establish model context fit, history retention, judging quality, token cost
+or deadline feasibility. Configuration isolation is not a filesystem read
+jail, and future actor evidence must be checked for held-out material access.
 Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
 [first prototype findings](../evals/runs/visual-recovery-prototype-1/findings.md)
 and [setup](../prototypes/fixture-study/README.md). The author found the first
@@ -518,6 +564,13 @@ and the diagnostic fixture verifier. Local real-process calibration serves
 the old spine and completion prompts in 26 and 79 pages respectively,
 preserving every byte and checking complete delivery receipts. The actual
 accessor descendant terminates on the judge deadline. No model was invoked.
+The later [final-freeze study](../evals/runs/build-workflow-freeze-1/findings.md)
+again passes all 305 repository tests across 31 suites, the 687-word,
+four-reference skill check, all seventeen fictional people and the fixture
+verifier. The actual prepared sandbox passes local HTTP, blocked external
+HTTPS, production build and starter-browser checks. Its nine inspected
+images establish setup capability only. The final source/environment audit
+and retained proof are linked from that study; no paid execution is implied.
 The visual-quality review repeated the required checks: all 246 tests,
 the skill check and the people check pass. Its
 [preservation record](../evals/runs/codex-visual-quality-review-1/verification.json)

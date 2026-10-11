@@ -30,6 +30,15 @@ preserves `3e23cc9:docs/handover.md` verbatim. The new
 [transport study](../../evals/runs/judge-transport-1/findings.md) keeps local
 server/configuration proof separate from unobserved live-model behavior.
 
+The [final local preparation approval](2026-10-11-build-freeze-approval.md)
+records the latest "yes" as authorization for the common input freeze and
+actual actor-workspace capability proof, not a paid actor/judge or push.
+Its [preceding handover](2026-10-11-before-build-freeze-handover.md) preserves
+`6d419ea:docs/handover.md` verbatim. The
+[new freeze study](../../evals/runs/build-workflow-freeze-1/findings.md)
+retains the fixed input identity, local setup observations, separate runtime
+storage record and remaining cost-approval gate.
+
 Captured on 10 October 2026 from the working tree at commit
 `4c1007b6607075e895c892931f72db00ef5d7b5c`. The handover included the other
 session's uncommitted existing-portfolio review direction and final verification.

@@ -356,3 +356,42 @@ evaluator and case inputs, then prove the actual actor workspace. Keep the
 transport fixed in any matched comparison. The reserved cohort remains
 unprepared, and any future complete packet needs its own dry validation.
 The paid envelope still requires explicit approval after local preparation.
+
+## Final local freeze checkpoint, 11 October 2026
+
+The author's next "yes" [approved final local preparation](../../history/2026-10-11-build-freeze-approval.md).
+The [new study](../../../evals/runs/build-workflow-freeze-1/findings.md)
+supersedes the pending step-7 status above. It freezes 121 inputs from
+`6d419ea` in `codex-bench-depth-baseline-1`, with digest
+`57b8614b2334d19a387829598e9978f7d5ecc0412bfd364448c1cb5643b77f7e`.
+The original seven actor files, fixed request, rubric, expectations, skill,
+corrected common engine and paged judge implementation remain unchanged.
+Pre-scaffold inventory contains the seven fixture files and 86 skill files,
+then the source-bound scaffold has 172 files. No accepted implementation,
+coordinator rubric or prior actor output was copied into it.
+
+Locked offline installation provides 392 packages. The exact frozen Codex
+sandbox passes loopback access, explicit external HTTPS proxy denial,
+production build and the starter's `light-wide` browser check. Nine original
+images were inspected. The 305 repository tests in 31 suites, skill, people
+and fixture checks pass. These are coordinator setup observations, not actor
+preflight or a five-beat visual result. The study links the retained raw
+proof, final source/environment audit and exact commands.
+
+The low-space `/tmp` mount required explicitly approved runtime storage at
+`/var/tmp/storyfolio-freeze-runtime-20261011`; no data was deleted. The
+runner's input digest does not include `TMPDIR`, so that exact setting is
+recorded separately and enforced alongside Node and the four frozen
+environment values. Preserve the prepared workspace and all frozen inputs;
+do not silently regenerate them to fit a different environment. Configuration
+isolation still does not provide a filesystem read jail.
+
+No actor or judge turn, historical retry, skill/engine edit or push occurred.
+Next obtain explicit approval for one fresh Sol medium actor turn, fifteen
+minutes, and at most one fresh Astra medium text judge, ten minutes, after
+unpaid validation of the complete actual packet. No continuation, correction
+or retry is included. Deadlines and invocation counts are not hard token
+or dollar caps; the one-turn token threshold cannot bound that turn's spend.
+Local delivery proof does not establish model context fit, judging quality
+or prototype quality. Any later matched comparison must hold this common
+engine, fixture, request, measurement and transport fixed.
