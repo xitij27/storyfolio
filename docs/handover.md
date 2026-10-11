@@ -150,8 +150,11 @@ the final read-only audit alongside the exact Node and four frozen
 environment values. The study retains factual actor setup information,
 source-change checks and the commands for rechecking the prepared workspace.
 No actor or judge turn, skill/engine edit, historical retry or push was made.
-The next decision is explicit approval of the proposed paid envelope, not
-another implementation or automatic launch.
+The author subsequently approved the proposed paid envelope, recorded in the
+[launch authorization](history/2026-10-11-build-baseline-launch-approval.md).
+It permits exactly one fresh actor turn and at most one validated text judge,
+with no retry or continuation. Results, including a failure to launch or
+complete, must be retained in the frozen cohort before any new decision.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -412,8 +415,10 @@ The subsequent "yes lets get the next thing done"
 [authorizes the local transport correction](history/2026-10-11-judge-transport-approval.md),
 not a final cohort freeze, paid execution, historical retry or push.
 The latest "yes" [authorizes the final local freeze and capability proof](history/2026-10-11-build-freeze-approval.md).
-It still does not approve a paid actor or judge, retry, instruction change
-or push. The preceding approval boundaries remain historical records.
+The subsequent [explicit paid-run approval](history/2026-10-11-build-baseline-launch-approval.md)
+authorizes one actor and a conditionally eligible judge only. It does not
+authorize retry, continuation, instruction change or push. The preceding
+approval boundaries remain historical records.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 

@@ -50,10 +50,11 @@ now records 121 fixed inputs, the fresh external workspace, offline locked
 dependencies and passing loopback, blocked-external-request, production-build
 and starter-browser checks under the exact frozen sandbox configuration.
 It supersedes the pending-freeze status above, not the paid-run gate.
-No actor or judge has started. The next decision is approval of the bounded
-one-turn baseline and optional single judge; process deadlines are not
-hard token or spending caps. The study is the home for exact recheck
-commands and the separately retained `TMPDIR` requirement.
+The author has since [approved the bounded launch](history/2026-10-11-build-baseline-launch-approval.md):
+one actor turn, followed by at most one judge only after complete-packet
+validation. No actor or judge has started at this record's update. Process
+deadlines are not hard token or spending caps. The study is the home for exact
+recheck commands and the separately retained `TMPDIR` requirement.
 
 For a new session, read:
 

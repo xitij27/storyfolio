@@ -39,6 +39,11 @@ Its [preceding handover](2026-10-11-before-build-freeze-handover.md) preserves
 retains the fixed input identity, local setup observations, separate runtime
 storage record and remaining cost-approval gate.
 
+The [five-beat baseline launch approval](2026-10-11-build-baseline-launch-approval.md)
+records the later explicit approval for one frozen actor turn and a
+conditionally eligible text judge. It does not allow retries, continuation,
+additional candidates or a push.
+
 Captured on 10 October 2026 from the working tree at commit
 `4c1007b6607075e895c892931f72db00ef5d7b5c`. The handover included the other
 session's uncommitted existing-portfolio review direction and final verification.
