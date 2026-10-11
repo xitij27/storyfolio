@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: build judgement requires every criterion, valid status and real artifact excerpts
+ok 1 - build judgement requires every criterion, valid status and real artifact excerpts
+  ---
+  duration_ms: 2.504871
+  type: 'test'
+  ...
+# Subtest: unvisited stops and unavailable source verification cannot silently pass or fail
+ok 2 - unvisited stops and unavailable source verification cannot silently pass or fail
+  ---
+  duration_ms: 1.94066
+  type: 'test'
+  ...
+# Subtest: continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+ok 3 - continuation eligibility follows attempted stops and actual refusal turns, not ordinal
+  ---
+  duration_ms: 3.040627
+  type: 'test'
+  ...
+# Subtest: judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+ok 4 - judge prompt assembly preserves all supplied text and rejects byte overflow without truncation
+  ---
+  duration_ms: 0.577956
+  type: 'test'
+  ...
+# Subtest: saved build judging binds hashes and includes full fixture, commands and changed text only
+ok 5 - saved build judging binds hashes and includes full fixture, commands and changed text only
+  ---
+  duration_ms: 431.014246
+  type: 'test'
+  ...
+# Subtest: fresh continuation packets preserve inherited source and map two attempted stops, including failure
+ok 6 - fresh continuation packets preserve inherited source and map two attempted stops, including failure
+  ---
+  duration_ms: 577.910427
+  type: 'test'
+  ...
+# Subtest: a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+ok 7 - a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected
+  ---
+  duration_ms: 343.340659
+  type: 'test'
+  ...
+# Subtest: failed actor turns remain judgeable without claiming later stops were visited
+ok 8 - failed actor turns remain judgeable without claiming later stops were visited
+  ---
+  duration_ms: 283.42594
+  type: 'test'
+  ...
+# Subtest: current judge implementation drift prevents a call against frozen actor inputs
+ok 9 - current judge implementation drift prevents a call against frozen actor inputs
+  ---
+  duration_ms: 188.602088
+  type: 'test'
+  ...
+# Subtest: acceptance reports stay separate and their frozen implementation and artifacts are verified
+ok 10 - acceptance reports stay separate and their frozen implementation and artifacts are verified
+  ---
+  duration_ms: 381.617117
+  type: 'test'
+  ...
+# Subtest: one mocked judge call preserves every result and refuses all retries
+ok 11 - one mocked judge call preserves every result and refuses all retries
+  ---
+  duration_ms: 668.776394
+  type: 'test'
+  ...
+# Subtest: invalid judge JSON is preserved as a failed attempt without retry
+ok 12 - invalid judge JSON is preserved as a failed attempt without retry
+  ---
+  duration_ms: 345.262835
+  type: 'test'
+  ...
+# Subtest: evidence drift after dry preparation stops before a judge directory or model call
+ok 13 - evidence drift after dry preparation stops before a judge directory or model call
+  ---
+  duration_ms: 318.632547
+  type: 'test'
+  ...
+# Subtest: judge invocation uses the shared isolated helper with no model override, shell or resume
+ok 14 - judge invocation uses the shared isolated helper with no model override, shell or resume
+  ---
+  duration_ms: 3.938298
+  type: 'test'
+  ...
+# Subtest: judge deadline forcibly terminates a local process that ignores SIGTERM
+ok 15 - judge deadline forcibly terminates a local process that ignores SIGTERM
+  ---
+  duration_ms: 609.512214
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4214.083729

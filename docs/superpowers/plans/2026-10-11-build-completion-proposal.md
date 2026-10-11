@@ -1,6 +1,7 @@
-# Proposed bounded build completion
+# Bounded build completion
 
-Status: proposed for the author's cost review, not authorized by this file.
+Status: authorized by the author on 11 October 2026, after the first probe's
+usage review. [Exact approval](../../history/2026-10-11-build-completion-approval.md).
 The [first probe](../../../evals/runs/codex-build-1/findings.md) reached the
 spine but consumed its between-turn threshold before chapters and finish.
 It used 431,129 uncached-input-plus-output tokens across actor and judge,
@@ -40,7 +41,7 @@ raw usage and final browser evidence. Do not alter the completed baseline
 or describe post-study measurement fixes as new actor success. An actor
 failure or timeout consumes the allowance; no automatic retry.
 
-## Proposed maximum exposure
+## Approved maximum exposure
 
 - One fresh Sol medium conversation, at most two actor turns.
 - At most fifteen minutes per actor turn, with a twenty-five-minute
@@ -56,20 +57,20 @@ failure or timeout consumes the allowance; no automatic retry.
   deadline and two-MiB evidence-prompt limit. No selective rejudgement.
 
 This proposal acknowledges the substantial cached context in the first
-run instead of quietly discounting it under the old bounds. Approval is
-required before applying these new bounds or making another paid call.
+run instead of quietly discounting it under the old bounds. The author has approved
+these bounds and the preparatory implementation for this continuation only.
 The non-sheet full-site proof, before-stop-1/sketch study, planning
 regression and any instruction candidate still need their own explicit
 questions and run decisions. They are not included in this allowance.
 
 ## Preparation gates before a paid call
 
-The current runner does not yet support this case. Alongside the declared
+At approval, the runner did not yet support this case. Alongside the declared
 existing-site preparation path, implement the uncached-token threshold
 above and preserve the original total-token check. Test exact-boundary,
 missing-accounting and cumulative-turn behavior without model calls.
 
-The current judge maps conversation turns 1 to 3 to stops 4 to 6. Make the
+At approval, the judge mapped conversation turns 1 to 3 to stops 4 to 6. Make the
 case's requested stops explicit as 5 and 6, and apply observation eligibility
 to those stops rather than turn numbers. Test that the first continuation
 turn can cover chapter/copy criteria and that the second can cover finishing
@@ -77,5 +78,5 @@ criteria, without claiming an observed look-selection or earlier preflight
 sequence in this fresh conversation.
 
 Freeze these tested changes, the self-contained first prompt and source
-provenance together in a new cohort only after the cost decision. These
-preparation gates are not represented as implemented or verified now.
+provenance together in a new cohort only after the cost decision. Record implementation and verification of these
+preparation gates before beginning the paid conversation.

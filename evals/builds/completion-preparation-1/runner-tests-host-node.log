@@ -1,0 +1,158 @@
+TAP version 13
+# Subtest: build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+ok 1 - build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+  ---
+  duration_ms: 133.028026
+  type: 'test'
+  ...
+# Subtest: declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+ok 2 - declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+  ---
+  duration_ms: 92.346701
+  type: 'test'
+  ...
+# Subtest: case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+ok 3 - case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+  ---
+  duration_ms: 18.573047
+  type: 'test'
+  ...
+# Subtest: current source or frozen input drift cannot silently reuse a build cohort
+ok 4 - current source or frozen input drift cannot silently reuse a build cohort
+  ---
+  duration_ms: 204.975583
+  type: 'test'
+  ...
+# Subtest: fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+ok 5 - fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+  ---
+  duration_ms: 73.356528
+  type: 'test'
+  ...
+# Subtest: snapshots preserve binary source, deletion and symlink records while excluding generated trees
+ok 6 - snapshots preserve binary source, deletion and symlink records while excluding generated trees
+  ---
+  duration_ms: 27.849407
+  type: 'test'
+  ...
+# Subtest: snapshot bounds fail before oversized source is copied
+ok 7 - snapshot bounds fail before oversized source is copied
+  ---
+  duration_ms: 19.244195
+  type: 'test'
+  ...
+# Subtest: turn planning requires observed gates and enforces turn, wall and soft token bounds
+ok 8 - turn planning requires observed gates and enforces turn, wall and soft token bounds
+  ---
+  duration_ms: 13.070921
+  type: 'test'
+  ...
+# Subtest: uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+ok 9 - uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+  ---
+  duration_ms: 12.617145
+  type: 'test'
+  ...
+# Subtest: uncached and wall accounting aggregate every actor turn without double-counting output
+ok 10 - uncached and wall accounting aggregate every actor turn without double-counting output
+  ---
+  duration_ms: 12.792813
+  type: 'test'
+  ...
+# Subtest: uncached bound fails closed on missing or unreliable cached accounting
+ok 11 - uncached bound fails closed on missing or unreliable cached accounting
+  ---
+  duration_ms: 13.109101
+  type: 'test'
+  ...
+# Subtest: aggregate accounting rejects safe individual counters whose sum is unsafe
+ok 12 - aggregate accounting rejects safe individual counters whose sum is unsafe
+  ---
+  duration_ms: 10.832456
+  type: 'test'
+  ...
+# Subtest: build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+ok 13 - build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+  ---
+  duration_ms: 1.285993
+  type: 'test'
+  ...
+# Subtest: actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+ok 14 - actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+  ---
+  duration_ms: 184.852531
+  type: 'test'
+  ...
+# Subtest: CLI config serialization emits restricted TOML tables and rejects unsupported values
+ok 15 - CLI config serialization emits restricted TOML tables and rejects unsupported values
+  ---
+  duration_ms: 0.985794
+  type: 'test'
+  ...
+# Subtest: the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+ok 16 - the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+  ---
+  duration_ms: 1.425152
+  type: 'test'
+  ...
+# Subtest: one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+ok 17 - one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+  ---
+  duration_ms: 397.643044
+  type: 'test'
+  ...
+# Subtest: failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+ok 18 - failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+  ---
+  duration_ms: 190.110293
+  type: 'test'
+  ...
+# Subtest: actor timeout kills its process group including a descendant that ignores SIGTERM
+not ok 19 - actor timeout kills its process group including a descendant that ignores SIGTERM
+  ---
+  duration_ms: 629.23842
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/lib/build.test.mjs:346:1'
+  failureType: 'testCodeFailure'
+  error: 'Unexpected end of JSON input'
+  code: 'ERR_TEST_FAILURE'
+  name: 'SyntaxError'
+  stack: |-
+    JSON.parse (<anonymous>)
+    TestContext.<anonymous> (file:///home/kshitij/projects/storyfolio/evals/lib/build.test.mjs:355:21)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: parent interruption terminates the actor and preserves partial output without retaining signal listeners
+not ok 20 - parent interruption terminates the actor and preserves partial output without retaining signal listeners
+  ---
+  duration_ms: 5067.730539
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/lib/build.test.mjs:364:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    null !== 'SIGTERM'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'SIGTERM'
+  actual: ~
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/kshitij/projects/storyfolio/evals/lib/build.test.mjs:372:10)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 18
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7116.992988

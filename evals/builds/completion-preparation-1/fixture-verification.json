@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-11T02:45:38.406Z",
+  "checks": {
+    "byteVerification": {
+      "passed": true,
+      "fixture": "evals/builds/embedded-completion-1",
+      "sourceManifestSha256": "0b22778952c20b064853c0d0e6bcf7bead60d3cb4f2cdcff7de0ee7593c01909",
+      "includedFiles": 97,
+      "excludedFiles": 88,
+      "workspaceBytes": 503374,
+      "expectationId": "embedded-completion-1",
+      "originalExpectationId": "embedded-1",
+      "unchangedRequirements": true,
+      "expectedBeats": 7,
+      "modelCalls": 0,
+      "dependencyInstalls": 0
+    },
+    "runnerCaseValidation": true,
+    "checkerExpectationsValidation": true,
+    "acceptanceJudgeIdentityConsistent": true
+  },
+  "hashes": {
+    "evals/builds/embedded-completion-1/case.json": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb",
+    "evals/builds/embedded-completion-1/source-manifest.json": "a2e2808a33e6cf38e6fa538e6b50a9fbe626f3f24020b57652c72a5364864eac",
+    "evals/builds/embedded-completion-1/expectations.json": "a75187339af15ec34dc8adf6a56989d56873cf5adb04ba1a0f2ab663b5d8d01a",
+    "evals/builds/embedded-1/expectations.json": "0bf3cfdc876ffdcccdcb41d03d2c80d14ab9f1268bcea3dc1c99a8eb9cf4aed4",
+    "evals/builds/embedded-completion-1/README.md": "0ac877eb283ad34d958a112f1262e158e385ff9ff11f6c2193940214c131318a",
+    "evals/builds/embedded-completion-1/verify-fixture.mjs": "bdd26ddb3b32bd4962a912987f32290f9b6d00ddeb36b77abf4223cf437b9912"
+  },
+  "earlierAttempt": {
+    "error": "spawnSync /usr/bin/node EPERM",
+    "phase": "Capturing verifier stdout with a child process in the outer workspace sandbox.",
+    "fileWritten": false,
+    "resolution": "Reran the same no-model input checks with approved execution outside the outer sandbox."
+  },
+  "limitations": [
+    "This verifies fixture bytes and input schemas only; the runner existing-site preparation path, dependencies and runtime require separate preparation evidence.",
+    "No model calls, dependency installation or site repair were performed."
+  ]
+}

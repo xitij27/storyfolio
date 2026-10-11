@@ -281,3 +281,13 @@ which are recorded separately from actor behavior. No further paid work is
 authorized by this status update; review the observed usage with the author
 before freezing any continuation or new cohort. Shipped skill instructions
 and the approved engine remain unchanged.
+
+## Continuation authorization
+
+After the first probe's usage and the bounded completion proposal were
+reviewed, the author said ["yeah we can proceed"](../../history/2026-10-11-build-completion-approval.md).
+The [completion protocol](2026-10-11-build-completion-proposal.md) now
+authorizes its preparation and one fresh conversation for stops 5 and 6,
+with at most two actor turns and one independent judge. Its time limits,
+between-turn token thresholds, copy-choice gate and no-retry rule apply.
+This does not reopen the exhausted first cohort or authorize other studies.

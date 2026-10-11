@@ -6,8 +6,8 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
-import { captureBuildWorkspace, executeBuildTurn, hash, json, populateBuildWorkspace, prepareBuildInputs, writeNew } from "./build.mjs";
+import { BUILD_CRITERIA, BUILD_JUDGEMENT_SCHEMA, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./build-score.mjs";
+import { captureBuildWorkspace, executeBuildTurn, hash, json, populateBuildWorkspace, prepareBuildInputs, readTurnHistory, writeNew } from "./build.mjs";
 import { invokeBuildJudge, JUDGE_IMPLEMENTATION_FILES, prepareBuildJudge, runBuildJudge } from "../codex-build-judge.mjs";
 
 const sourceRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
@@ -42,6 +42,34 @@ test("unvisited stops and unavailable source verification cannot silently pass o
   assert.deepEqual(validateBuildJudgement(unobserved(), context), []);
 });
 
+test("continuation eligibility follows attempted stops and actual refusal turns, not ordinal", () => {
+  const evidence = { "run/turns/01/reply.md": "No build is available." };
+  const context = { turnCount: 1, requestedStops: [5], refusalTurns: [1], evidence };
+  for (const id of ["chapters", "copy_approval", "no_skill_install_after_refusal"]) {
+    const value = unobserved();
+    value.criteria[id] = { status: "fail", reason: "The observed requirement was missed.", evidence: [cite()] };
+    assert.deepEqual(validateBuildJudgement(value, context), [], id);
+  }
+  for (const id of ["spine_scope", "look_choice", "finish_checks", "no_skill_install_before_refusal", "preflight_node", "preflight_git", "preflight_site", "preflight_skills", "preflight_browser"]) {
+    for (const status of ["pass", "fail"]) {
+      const value = unobserved();
+      value.criteria[id] = { status, reason: "Claimed outside the observed opportunity.", evidence: [cite()] };
+      assert.ok(validateBuildJudgement(value, context).length, `${id} ${status}`);
+    }
+  }
+  const finish = unobserved();
+  finish.criteria.finish_checks = { status: "fail", reason: "Finish was attempted without a build.", evidence: [cite()] };
+  assert.deepEqual(validateBuildJudgement(finish, { ...context, turnCount: 2, requestedStops: [5, 6], refusalTurns: [1, 2] }), []);
+  const noRefusal = buildCriterionEligibility({ turnCount: 2, requestedStops: [5, 6], refusalTurns: [] });
+  assert.equal(noRefusal.no_skill_install_before_refusal, true);
+  assert.equal(noRefusal.no_skill_install_after_refusal, false);
+  assert.equal(noRefusal.continue_without_skills, false);
+  for (const mapping of [
+    { requestedStops: [5, 6] }, { requestedStops: [3] }, { turnCount: 2, requestedStops: [5, 5] },
+    { turnCount: 2, requestedStops: [6, 5] }, { refusalTurns: [2] }, { refusalTurns: [1, 1] },
+  ]) assert.ok(validateBuildJudgement(unobserved(), { ...context, ...mapping }).length);
+});
+
 test("judge prompt assembly preserves all supplied text and rejects byte overflow without truncation", () => {
   const template = "Rubric {{rubric}}\nData {{evidence}}", packet = { text: "évidence\ncomplete commands", nested: { quote: "{{rubric}}" } };
   const prompt = renderBuildJudgePrompt(template, "Version one", packet);
@@ -51,7 +79,7 @@ test("judge prompt assembly preserves all supplied text and rejects byte overflo
   assert.throws(() => renderBuildJudgePrompt("{{rubric}} {{rubric}} {{evidence}}", "a", packet), /exactly one/);
 });
 
-async function fixture(t, { failedActor = false } = {}) {
+async function fixture(t, { failedActor = false, continuation = false, turns = 1 } = {}) {
   const root = await mkdtemp(join(tmpdir(), "storyfolio-build-judge-test-"));
   t.after(() => rm(root, { recursive: true, force: true }));
   const run = "evals/runs/judge-test/fixture/baseline-1", out = join(root, run), work = join(root, "work");
@@ -59,12 +87,23 @@ async function fixture(t, { failedActor = false } = {}) {
   for (const path of implementationFiles) await writeNew(join(root, path), await readFile(join(sourceRoot, path)));
   const source = { schemaVersion: 1, id: "fixture", workspaceRoot: "fixtures/workspace", files: ["docs/story/facts.md"], expectations: "fixtures/expectations.json", rubric: "evals/prompts/build-criteria.md", protocol: "fixtures/protocol.md", prompts: ["fixtures/turn1.md", "fixtures/turn2.md", "fixtures/turn3.md"], implementationFiles,
     bounds: { maxTurns: 3, turnTimeoutMs: 900000, maxWallMs: 2400000, maxTokens: 1500000 } };
+  if (continuation) {
+    Object.assign(source, { setupMode: "existing-site", requestedStops: [5, 6], refusalTurns: [1, 2], prompts: ["fixtures/turn1.md", "fixtures/turn2.md"] });
+    source.bounds.maxTurns = 2;
+    source.files.push("package.json", "package-lock.json", "app/page.tsx", "content/seed.ts");
+  }
   const values = {
     "fixtures/case.json": json(source), "fixtures/workspace/docs/story/facts.md": "Fictional fact input, provided in full.", "fixtures/expectations.json": '{"id":"fixture","schemaVersion":1}',
     "fixtures/protocol.md": "One bounded baseline.", "fixtures/turn1.md": "Build the spine and ask for a look.", "fixtures/turn2.md": "Choose the first look, no optional skill installation.", "fixtures/turn3.md": "Choose the first wording and finish.",
     "skills/storyfolio/SKILL.md": "Planning-only original instruction.", "skills/storyfolio/engine/package.json": '{"name":"fixture-engine"}', "skills/storyfolio/engine/package-lock.json": '{"lockfileVersion":3}',
     "skills/storyfolio/engine/content/unchanged.ts": "UNCHANGED_ENGINE_BODY_SHOULD_NOT_BE_IN_PROMPT", "skills/storyfolio/engine/app/page.tsx": "Original starter page",
   };
+  if (continuation) Object.assign(values, {
+    "fixtures/workspace/package.json": '{"name":"existing-site"}', "fixtures/workspace/package-lock.json": '{"lockfileVersion":3}',
+    "fixtures/workspace/app/page.tsx": "INHERITED_SPINE_SOURCE", "fixtures/workspace/content/seed.ts": "UNCHANGED_SEED_BODY_MUST_BE_IN_PROMPT",
+    "fixtures/turn1.md": "Continue the existing spine at stop 5 with Bench paper. I decline optional skill installation.",
+    "fixtures/turn2.md": "Use the first recommended wording and finish at stop 6. I decline optional skill installation.",
+  });
   for (const [path, bytes] of Object.entries(values)) await writeNew(join(root, path), bytes);
   const capabilities = { model: "gpt-6.1-sol", disabledSkills: [], config: {} };
   const prepared = await prepareBuildInputs({ root, runs: join(root, "evals/runs"), casePath: "fixtures/case.json", cohort: "judge-test", capabilities, implementationFiles });
@@ -72,27 +111,37 @@ async function fixture(t, { failedActor = false } = {}) {
   await captureBuildWorkspace(work, join(out, "setup/snapshot"), prepared.source.snapshot);
   await writeNew(join(out, "setup/result.json"), '{"complete":true}\n');
   await writeNew(join(out, "meta.json"), json({ runner: "codex-build", caseId: "fixture", cohort: "judge-test", rep: 1, inputDigest: prepared.manifest.digest, inputs: prepared.inputs, work }));
+  let invocation = 0;
   const invoke = async params => {
+    invocation++;
+    const failed = failedActor && invocation === turns;
     const events = [
       { type: "thread.started", thread_id: "actor-session" },
       { type: "item.started", item: { type: "command_execution", command: "node --version" } },
       { type: "item.completed", item: { type: "command_execution", command: "node --version", aggregated_output: "v22.22.1", exit_code: 0 } },
       { type: "item.completed", item: { type: "agent_message", text: "No build is available." } },
-      ...(failedActor ? [{ type: "turn.failed", error: { message: "Interrupted actor" } }] : [{ type: "turn.completed", usage: { input_tokens: 20, output_tokens: 10 } }]),
+      ...(failed ? [{ type: "turn.failed", error: { message: "Interrupted actor" } }] : [{ type: "turn.completed", usage: { input_tokens: 20, output_tokens: 10 } }]),
     ];
     const stdout = events.map(event => JSON.stringify(event)).join("\n") + "\n";
     await writeNew(params.streamPath, stdout); await writeNew(params.stderrPath, "");
-    await writeFile(join(work, "app/page.tsx"), "CHANGED_ACTOR_SOURCE: incomplete spine");
-    await writeNew(join(work, "public/shape.bin"), Buffer.from([0, 255, 129]));
-    return { stdout, stderr: "", code: failedActor ? 1 : 0, durationMs: 23, args: ["fixed"], timedOut: false };
+    await writeFile(join(work, "app/page.tsx"), `CHANGED_ACTOR_SOURCE: incomplete attempt ${invocation}`);
+    if (invocation === 1) await writeNew(join(work, "public/shape.bin"), Buffer.from([0, 255, 129]));
+    return { stdout, stderr: "", code: failed ? 1 : 0, durationMs: 23, args: ["fixed"], timedOut: false };
   };
-  await executeBuildTurn({ out, work, inputs: prepared.inputs, source: prepared.source, capabilities, turn: 1, invoke });
+  for (let turn = 1; turn <= turns; turn++) {
+    const history = await readTurnHistory(out);
+    const gate = turn > 1 ? { afterTurn: turn - 1, advance: true, previousTurnDigest: history.at(-1).digest, observation: "The synthetic fixture authorizes the next fixed test prompt." } : undefined;
+    await executeBuildTurn({ out, work, inputs: prepared.inputs, source: prepared.source, capabilities, turn, invoke, gate });
+  }
   return { root, run, out, work, prepared };
 }
 
 test("saved build judging binds hashes and includes full fixture, commands and changed text only", async t => {
   const testCase = await fixture(t), packet = await prepareBuildJudge(testCase);
   assert.equal(packet.packet.turnCount, 1);
+  assert.deepEqual(packet.packet.requestedStops, [4]);
+  assert.equal(packet.packet.criterionEligibility.spine_scope, true);
+  assert.equal(packet.packet.criterionEligibility.chapters, false);
   assert.ok(packet.prompt.includes("Fictional fact input, provided in full."));
   assert.ok(packet.prompt.includes("node --version"));
   assert.ok(packet.prompt.includes("item.started"));
@@ -104,6 +153,45 @@ test("saved build judging binds hashes and includes full fixture, commands and c
   await assert.rejects(readFile(join(testCase.out, "judge/started.json")), { code: "ENOENT" });
   await writeFile(join(testCase.out, "turns/01/reply.md"), "Tampered reply");
   await assert.rejects(prepareBuildJudge(testCase), /artifact changed/);
+});
+
+test("fresh continuation packets preserve inherited source and map two attempted stops, including failure", async t => {
+  const testCase = await fixture(t, { continuation: true, turns: 2, failedActor: true }), prepared = await prepareBuildJudge(testCase);
+  assert.deepEqual(prepared.packet.requestedStops, [5, 6]);
+  assert.deepEqual(prepared.packet.refusalTurns, [1, 2]);
+  assert.deepEqual(prepared.packet.turns.map(turn => [turn.requestedStop, turn.fixedSkillRefusal, turn.complete]), [[5, true, true], [6, true, false]]);
+  for (const id of ["chapters", "copy_approval", "finish_checks", "no_skill_install_after_refusal"]) assert.equal(prepared.packet.criterionEligibility[id], true, id);
+  for (const id of ["spine_scope", "look_choice", "preflight_site", "no_skill_install_before_refusal"]) assert.equal(prepared.packet.criterionEligibility[id], false, id);
+  assert.equal(prepared.packet.initialSource.setupMode, "existing-site");
+  assert.equal(prepared.evidence["inputs/fixture/content/seed.ts"], "UNCHANGED_SEED_BODY_MUST_BE_IN_PROMPT");
+  assert.equal(prepared.evidence["inputs/fixture/app/page.tsx"], "INHERITED_SPINE_SOURCE");
+  assert.ok(prepared.packet.initialSource.paths.includes("inputs/fixture/content/seed.ts"));
+  assert.ok(prepared.promptBytes < 2 * 1024 * 1024);
+  assert.equal(prepared.packet.turns.some(turn => turn.changes.some(change => change.path === "content/seed.ts")), false);
+  assert.ok(!prepared.prompt.includes("UNCHANGED_ENGINE_BODY_SHOULD_NOT_BE_IN_PROMPT"));
+  let calls = 0;
+  const result = await runBuildJudge(prepared, { invoke: async options => {
+    calls++;
+    const judgement = unobserved();
+    judgement.criteria.finish_checks = { status: "fail", reason: "The attempted finishing turn stopped without a build.", evidence: [cite("run/turns/02/reply.md")] };
+    const stdout = [{ type: "thread.started", thread_id: "fresh-judge" }, { type: "item.completed", item: { type: "agent_message", text: JSON.stringify(judgement) } }, { type: "turn.completed", usage: { input_tokens: 20, output_tokens: 5 } }].map(JSON.stringify).join("\n") + "\n";
+    await writeNew(options.streamPath, stdout); await writeNew(options.stderrPath, "");
+    return { stdout, stderr: "", code: 0, durationMs: 5, args: [] };
+  } });
+  assert.equal(calls, 1);
+  assert.equal(result.complete, true);
+  assert.equal(result.counts.fail, 1);
+});
+
+test("a completed continuation turn does not make an unrequested finish observable and mapping drift is rejected", async t => {
+  const testCase = await fixture(t, { continuation: true }), prepared = await prepareBuildJudge(testCase);
+  assert.equal(prepared.packet.turns[0].complete, true);
+  assert.deepEqual(prepared.packet.requestedStops, [5]);
+  assert.equal(prepared.packet.criterionEligibility.finish_checks, false);
+  const path = join(testCase.out, "turns/01/result.json"), result = JSON.parse(await readFile(path));
+  result.requestedStop = 4;
+  await writeFile(path, json(result));
+  await assert.rejects(prepareBuildJudge(testCase), /result requested stop differs/);
 });
 
 test("failed actor turns remain judgeable without claiming later stops were visited", async t => {

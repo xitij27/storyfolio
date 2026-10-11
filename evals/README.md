@@ -269,6 +269,29 @@ historical judgement, use its recorded implementation revision; do not
 modify old inputs to accommodate current code. CLI JSON can omit image
 calls, so absent visual events are not proof of skipped image review.
 
+### Approved build continuation
+
+The [completion protocol](../docs/superpowers/plans/2026-10-11-build-completion-proposal.md)
+has the author's cost-review approval for one fresh conversation with at
+most two actor turns and one judge. The
+[completion fixture](builds/embedded-completion-1/README.md) copies the
+saved first actor's spine without repairs. Its `setupMode: "existing-site"`
+supplies the unchanged skill separately and skips engine scaffolding.
+Its `requestedStops: [5, 6]` maps the two turns to chapters/copy and finish;
+`refusalTurns: [1, 2]` records the fixed prompts declining optional skills.
+Earlier spine/look-choice and build-start preflight criteria remain
+unobserved in this fresh continuation.
+
+The runner retains the total-token threshold and also checks
+`bounds.maxUncachedTokens` between turns. It sums reported actor input minus
+cached input plus output, requiring reliable nonnegative counters with
+cached input no greater than total input. Missing or invalid accounting
+stops advancement. These limits cannot cap one in-flight turn. A source
+snapshot, completed model turn or passing check alone does not establish
+the actual copy-choice gate. Preserve the coordinator's evidence-backed
+gate before sending the second prompt. Preparation and all results use a
+new cohort; the exhausted original baseline remains immutable.
+
 ## Single-turn existing-portfolio review pilot
 
 `review-run.mjs` evaluates one review request against an allowlisted local

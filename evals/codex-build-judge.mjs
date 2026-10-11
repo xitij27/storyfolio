@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { codexArgs, disabledSkills, EFFORT, JUDGE_MODEL, summariseCodex } from "./lib/codex.mjs";
 import { hash, json, readTurnHistory, regularBytes, safeId, safePath, validateCase, verifyInputs, writeNew } from "./lib/build.mjs";
-import { BUILD_JUDGEMENT_SCHEMA, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./lib/build-score.mjs";
+import { BUILD_JUDGEMENT_SCHEMA, buildCriterionEligibility, buildScoreCounts, renderBuildJudgePrompt, validateBuildJudgement } from "./lib/build-score.mjs";
 
 export const JUDGE_TIMEOUT_MS = 600000;
 export const JUDGE_IMPLEMENTATION_FILES = [
@@ -55,6 +55,9 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
   if (!setup.complete) throw new Error("No actor judgement for a failed preparation");
   const history = await readTurnHistory(out);
   if (!history.length || history.length > Math.min(3, source.bounds.maxTurns)) throw new Error("A saved one-to-three-turn actor attempt is required");
+  const requestedStops = (source.requestedStops ?? [4, 5, 6]).slice(0, history.length);
+  const refusalTurns = (source.refusalTurns ?? [2, 3]).filter(turn => turn <= history.length);
+  const criterionEligibility = buildCriterionEligibility({ turnCount: history.length, requestedStops, refusalTurns });
   const documents = [], evidence = {}, artifacts = {}, omitted = [];
   const add = (path, bytes, selection) => {
     const text = decode(bytes);
@@ -91,6 +94,7 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
   for (const [index, result] of history.entries()) {
     const prefix = `turns/${String(index + 1).padStart(2, "0")}`;
     if (result.turn !== index + 1) throw new Error(`Saved turn ordinal differs: ${prefix}`);
+    if (result.requestedStop !== undefined && result.requestedStop !== requestedStops[index]) throw new Error(`Saved result requested stop differs from frozen case: ${prefix}`);
     const actual = (await filePaths(join(out, prefix))).filter(path => path !== "result.json").sort();
     if (!same(actual, Object.keys(result.artifacts ?? {}).sort())) throw new Error(`Saved turn file set changed: ${prefix}`);
     const prompt = await keep(out, `${prefix}/prompt.md`, "run");
@@ -112,6 +116,7 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
     await record(out, `${prefix}/result.json`, "run");
     const started = JSON.parse(await keep(out, `${prefix}/started.json`, "run"));
     if (started.turn !== index + 1 || started.inputDigest !== frozen.digest) throw new Error(`Started turn is bound to different inputs: ${prefix}`);
+    if (started.requestedStop !== undefined && started.requestedStop !== requestedStops[index]) throw new Error(`Started requested stop differs from frozen case: ${prefix}`);
     if (index > 0) {
       const gate = JSON.parse(await keep(out, `${prefix}/gate.json`, "run"));
       if (gate.afterTurn !== index || gate.advance !== true || gate.previousTurnDigest !== history[index - 1].digest) throw new Error(`Saved gate does not bind the prior turn: ${prefix}`);
@@ -130,7 +135,7 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
       if (entry?.type === "file") await keep(out, `${prefix}/snapshot/files/${path}`, "run");
       else omitted.push({ path: `run/${prefix}/snapshot/files/${path}`, reason: entry ? `Non-file source: ${entry.type}` : "Deleted source; no after content" });
     }
-    turns.push({ turn: index + 1, requestedStop: index + 4, complete: result.complete, durationMs: result.durationMs, usage: result.usage, timedOut: result.timedOut ?? false, error: result.error ?? null, captureError: result.captureError ?? null, nonJsonLines, changes,
+    turns.push({ turn: index + 1, requestedStop: requestedStops[index], fixedSkillRefusal: refusalTurns.includes(index + 1), complete: result.complete, durationMs: result.durationMs, usage: result.usage, timedOut: result.timedOut ?? false, error: result.error ?? null, captureError: result.captureError ?? null, nonJsonLines, changes,
       note: "Source changes are relative to the actual before-turn snapshot. A complete model turn is not a completed stop. Unchanged fixture source appears under inputs/fixture; unchanged engine bodies and screenshot pixels are omitted." });
   }
 
@@ -159,9 +164,11 @@ export async function prepareBuildJudge({ root = ROOT, run, acceptance = null, m
     }
     automaticAcceptance = { supplied: true, path: `run/${acceptance}`, complete: report.complete, passed: report.passed, error: report.error ?? null, results: report.results, note: "Recorded automatic results remain independent and are not overwritten by the judge. No screenshot pixels are included." };
   }
-  const packet = { schemaVersion: 1, question: "Bounded baseline build at stops 4 to 6 from approved fictional input; no scene redesign task", inputDigest: frozen.digest,
-    turnCount: history.length, sourcePacketAvailable: false, fullJourney: false,
-    limitations: ["No third-party installation-source packet is supplied; source/command verification is unobserved.", "No screenshot pixels or real phone evidence is supplied.", "Only changed source bodies are included, with unchanged source hashes and the full fixture text retained.", "Tool events emitted by exec JSONL are included, but the CLI can omit image-view calls and returned image blocks. Their absence does not establish that screenshot review was skipped or a review claim was unsupported. Without supplemental proof, the visual-review observation is unobserved; do not infer pixel quality.", "Subprocess file reads may not be individually logged; configuration isolation is not a read jail.", "Baseline-only input is not arm-blinded. Report further unblinding cues."],
+  const packet = { schemaVersion: 1, question: "Bounded build from approved fictional input at the explicitly requested stops; no scene redesign task", inputDigest: frozen.digest,
+    turnCount: history.length, requestedStops, refusalTurns, criterionEligibility, sourcePacketAvailable: false, fullJourney: false,
+    observationScope: "Requested stops identify observed attempts, not successful gates. Failed or incomplete attempts can provide evidence. Inherited earlier work and an externally selected look do not establish that this actor performed earlier stops. False criterionEligibility entries must be unobserved; true entries still require actual evidence and opportunity. Refusal metadata identifies fixed prompts, not proof of a relevant prior recommendation or successful continuation.",
+    initialSource: { setupMode: source.setupMode ?? "scaffold", paths: Object.keys(frozen.hashes).filter(path => path.startsWith("fixture/")).map(path => `inputs/${path}`).sort(), note: "All supplied fixture text bodies, including existing-site seed source, appear in the packet. They are inherited input, not newly authored work. Unchanged engine bodies outside the fixture are represented by hashes only." },
+    limitations: ["No third-party installation-source packet is supplied; source/command verification is unobserved.", "No screenshot pixels or real phone evidence is supplied.", "All fixture text and changed source bodies are included. Other unchanged source is represented by hashes. Inherited fixture source must not be credited as newly authored actor work.", "Tool events emitted by exec JSONL are included, but the CLI can omit image-view calls and returned image blocks. Their absence does not establish that screenshot review was skipped or a review claim was unsupported. Without supplemental proof, the visual-review observation is unobserved; do not infer pixel quality.", "Subprocess file reads may not be individually logged; configuration isolation is not a read jail.", "Baseline-only input is not arm-blinded. Report further unblinding cues."],
     turns, automaticAcceptance, omitted, documents };
   const template = (await regularBytes(inputs, "implementation/evals/prompts/judge-build.md")).toString("utf8");
   const rubric = (await regularBytes(inputs, "rubric.md")).toString("utf8");
@@ -229,7 +236,7 @@ export async function runBuildJudge(prepared, { invoke = invokeBuildJudge, disab
     await writeNew(join(directory, "reply.md"), turn.reply + "\n");
     if (turn.failed || !turn.sessionId) throw new Error(`Judge did not complete a fresh session: ${json(turn.error)}`);
     const judgement = JSON.parse(turn.reply);
-    const problems = validateBuildJudgement(judgement, { turnCount: prepared.packet.turnCount, evidence: prepared.evidence, sourcePacketAvailable: false });
+    const problems = validateBuildJudgement(judgement, { turnCount: prepared.packet.turnCount, requestedStops: prepared.packet.requestedStops, refusalTurns: prepared.packet.refusalTurns, evidence: prepared.evidence, sourcePacketAvailable: false });
     if (problems.length) throw new Error(`Invalid judgement: ${problems.join("; ")}`);
     await writeNew(join(directory, "judgement.json"), json({ schemaVersion: 1, judge: JUDGE_MODEL, reasoningEffort: EFFORT, usage: turn.usage, durationMs: response.durationMs, costUsd: null, inputDigest: prepared.frozen.digest, judgement }));
     result.complete = true; result.counts = buildScoreCounts(judgement);

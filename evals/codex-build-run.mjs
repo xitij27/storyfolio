@@ -7,7 +7,7 @@ import { EFFORT, MODEL, disabledSkills } from "./lib/codex.mjs";
 import { ROOT, RUNS, WORK } from "./lib/files.mjs";
 import { buildCodexArgs, captureBuildWorkspace, executeBuildTurn, hash, inspectBuildInputs, json, populateBuildWorkspace, prepareBuildInputs, regularBytes, safeId, safePath, verifyInputs, writeNew } from "./lib/build.mjs";
 
-const usage = "Usage: node evals/codex-build-run.mjs --case <case.json> --cohort <id> --capabilities <json> --prepare\n       node evals/codex-build-run.mjs <same arguments> --turn <1..N> [--gate <json>]\n\nPreparation freezes inputs and scaffolds only. Install dependencies and save setup/probe.json before turn 1.\nOne invocation executes one actor turn. Later turns require a coordinator gate; no automatic advancement or retry.";
+const usage = "Usage: node evals/codex-build-run.mjs --case <case.json> --cohort <id> --capabilities <json> --prepare\n       node evals/codex-build-run.mjs <same arguments> --turn <1..N> [--gate <json>]\n\nPreparation freezes inputs and copies the declared fixture. Default setupMode scaffolds; existing-site skips scaffolding. Install dependencies and save setup/probe.json before turn 1.\nOne invocation executes one actor turn for its case.requestedStops entry. Later turns require a coordinator gate; no automatic advancement or retry.";
 const { values: args } = parseArgs({ options: {
   case: { type: "string" }, cohort: { type: "string" }, capabilities: { type: "string" },
   rep: { type: "string", default: "1" }, prepare: { type: "boolean", default: false },
@@ -37,13 +37,13 @@ const capabilities = {
   node: { version: process.version, executable: process.execPath },
   environment: Object.fromEntries(["PATH", "PLAYWRIGHT_BROWSERS_PATH", "LD_LIBRARY_PATH", "LANG"].map(key => [key, process.env[key] ?? null])),
   disabledSkills: disabled,
-  measurementLimits: "Configuration isolation is not a filesystem barrier. Source snapshots exclude generated trees. Token ceiling is checked between turns and cannot cap a single in-flight turn. Shell and skill-read attribution require inspection of raw events.",
+  measurementLimits: "Configuration isolation is not a filesystem barrier. Source snapshots exclude generated trees. Total and optional uncached-input-plus-output token ceilings are checked between actor turns and cannot cap a single in-flight turn. Uncached accounting requires a reliable cached-input subset. Shell and skill-read attribution require inspection of raw events.",
 };
 capabilities.argv = buildCodexArgs({ model: capabilities.model, disabled, config: capabilities.config, profile: capabilities.profile, permissionProfile: capabilities.permissionProfile, removeConfig: capabilities.removeConfig });
 const options = { root: ROOT, runs: RUNS, casePath: args.case, cohort: args.cohort, capabilities };
 if (args.dry) {
   const inspected = await inspectBuildInputs(options);
-  console.log(json({ caseId: inspected.source.id, frozenFiles: Object.keys(inspected.hashes).length, digest: inspected.digest, bounds: inspected.source.bounds, capabilities, writes: false, modelCalls: false }));
+  console.log(json({ caseId: inspected.source.id, setupMode: inspected.source.setupMode, requestedStops: inspected.source.requestedStops, refusalTurns: inspected.source.refusalTurns, frozenFiles: Object.keys(inspected.hashes).length, digest: inspected.digest, bounds: inspected.source.bounds, capabilities, writes: false, modelCalls: false }));
   process.exit(0);
 }
 const git = (...flags) => execFileSync("git", ["-C", ROOT, ...flags], { encoding: "utf8" }).trim();
@@ -67,9 +67,9 @@ if (args.prepare) {
   }
   await mkdir(WORK, { recursive: true });
   const work = await mkdtemp(join(WORK, `build-${source.id}-`));
-  await writeNew(join(out, "meta.json"), json({ ...identity, preparedAt: new Date().toISOString(), inputs, work, model: capabilities.model, reasoningEffort: EFFORT, bounds: source.bounds }));
+  await writeNew(join(out, "meta.json"), json({ ...identity, preparedAt: new Date().toISOString(), inputs, work, model: capabilities.model, reasoningEffort: EFFORT, setupMode: source.setupMode, requestedStops: source.requestedStops, refusalTurns: source.refusalTurns, bounds: source.bounds }));
   await writeNew(join(out, "setup/started.json"), json({ started: new Date().toISOString(), work, inputDigest: manifest.digest, paid: false }));
-  const setup = { complete: false, modelCalls: 0, networkCalls: 0 };
+  const setup = { complete: false, setupMode: source.setupMode, modelCalls: 0, networkCalls: 0 };
   try {
     setup.scaffold = await populateBuildWorkspace(inputs, work, { beforeScaffold: inventory => writeNew(join(out, "setup/pre-scaffold-inventory.json"), json(inventory)) });
     setup.snapshot = await captureBuildWorkspace(work, join(out, "setup/snapshot"), source.snapshot);
@@ -92,5 +92,5 @@ for (const path of probe.evidence) await regularBytes(join(out, "setup"), path);
 const gate = args.gate ? JSON.parse(await readFile(resolve(args.gate), "utf8")) : null;
 await verifyInputs(inputs);
 const result = await executeBuildTurn({ out, work: meta.work, inputs, source, capabilities, turn: Number(args.turn), gate });
-console.log(json({ complete: result.complete, turn: result.turn, sessionId: result.sessionId, durationMs: result.durationMs, usage: result.usage, result: join(result.location, "result.json"), error: result.error ?? result.captureError ?? null }));
+console.log(json({ complete: result.complete, turn: result.turn, requestedStop: result.requestedStop, sessionId: result.sessionId, durationMs: result.durationMs, usage: result.usage, result: join(result.location, "result.json"), error: result.error ?? result.captureError ?? null }));
 process.exit(result.complete ? 0 : 1);

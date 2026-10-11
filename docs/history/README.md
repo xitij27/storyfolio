@@ -163,3 +163,10 @@ The [build findings](../../evals/runs/codex-build-1/findings.md) record the
 first bounded conversation, usage stop, independent judgement, reviewed
 measurement corrections and remaining work. No new author approval is
 inferred from that experiment.
+
+## Build continuation approval
+
+[The approval record](2026-10-11-build-completion-approval.md) preserves the
+cost-review question and the author's acceptance of up to two build turns
+and one judge. [The pre-completion handover](2026-10-11-before-build-completion-handover.md)
+preserves the preceding current state verbatim.

@@ -48,7 +48,14 @@ export function validateCase(source) {
   source.files.forEach(path => { safePath(path); if (path.split("/").some(part => EXCLUDED.has(part))) throw new Error(`Generated fixture path is not allowed: ${path}`); });
   if (!Array.isArray(source.prompts) || !source.prompts.length) throw new Error("Case needs fixed prompt paths");
   source.prompts.forEach(safePath);
+  const setupMode = source.setupMode === undefined ? "scaffold" : source.setupMode;
+  if (!["scaffold", "existing-site"].includes(setupMode)) throw new Error("setupMode must be scaffold or existing-site");
+  const requestedStops = source.requestedStops === undefined ? [4, 5, 6].slice(0, source.prompts.length) : source.requestedStops;
+  if (!Array.isArray(requestedStops) || requestedStops.length !== source.prompts.length || requestedStops.some((stop, index) => ![4, 5, 6].includes(stop) || (index > 0 && stop <= requestedStops[index - 1]))) throw new Error("requestedStops must match the prompts as an ordered unique subset of 4, 5 and 6");
+  const refusalTurns = source.refusalTurns === undefined ? [2, 3].filter(turn => turn <= source.prompts.length) : source.refusalTurns;
+  if (!Array.isArray(refusalTurns) || refusalTurns.some((turn, index) => !Number.isSafeInteger(turn) || turn < 1 || turn > source.prompts.length || (index > 0 && turn <= refusalTurns[index - 1]))) throw new Error("refusalTurns must be ordered unique turn numbers within the prompt list");
   for (const key of ["maxTurns", "turnTimeoutMs", "maxWallMs", "maxTokens"]) positive(source.bounds?.[key], key);
+  if (source.bounds.maxUncachedTokens !== undefined) positive(source.bounds.maxUncachedTokens, "maxUncachedTokens");
   if (source.bounds.maxTurns > source.prompts.length) throw new Error("Every allowed turn needs a fixed prompt");
   if (source.bounds.turnTimeoutMs > source.bounds.maxWallMs) throw new Error("Per-turn timeout exceeds total wall budget");
   const snapshot = { ...DEFAULT_SNAPSHOT, ...source.snapshot };
@@ -57,7 +64,7 @@ export function validateCase(source) {
     snapshot[key].forEach(path => { safePath(path); if (path.split("/").some(part => EXCLUDED.has(part))) throw new Error(`Excluded snapshot path: ${path}`); });
   }
   for (const key of ["maxFiles", "maxBytes", "maxFileBytes"]) positive(snapshot[key], key);
-  return { ...source, snapshot };
+  return { ...source, setupMode, requestedStops, refusalTurns, snapshot };
 }
 
 export async function inspectBuildInputs({ root, casePath, capabilities, implementationFiles = IMPLEMENTATION_FILES }) {
@@ -93,19 +100,23 @@ export async function prepareBuildInputs(options) {
 
 export async function populateBuildWorkspace(inputs, work, { beforeScaffold } = {}) {
   const manifest = await verifyInputs(inputs);
+  const source = validateCase(JSON.parse(await regularBytes(inputs, "case.json")));
   const initialEntries = (await readdir(work, { withFileTypes: true }).catch(error => { if (error.code === "ENOENT") return []; throw error; }))
     .map(entry => ({ name: entry.name, type: entry.isDirectory() ? "directory" : entry.isSymbolicLink() ? "symlink" : "file" })).sort((a, b) => a.name.localeCompare(b.name));
   for (const path of Object.keys(manifest.hashes)) {
     const destination = path.startsWith("fixture/") ? path.slice(8) : path.startsWith("skill/") ? `.agents/skills/storyfolio/${path.slice(6)}` : null;
     if (destination) await writeNew(join(work, destination), await readFile(join(inputs, path)));
   }
-  const inventory = { schemaVersion: 1, initialEntries, files: await fileTree(work),
+  const inventory = { schemaVersion: 1, setupMode: source.setupMode, initialEntries, files: await fileTree(work),
     fixtureFiles: Object.keys(manifest.hashes).filter(path => path.startsWith("fixture/")).map(path => path.slice(8)).sort(),
-    phase: "Fixture and unchanged skill copied; engine not scaffolded yet. Installed skill engine files under .agents are not an existing root-level site." };
+    phase: source.setupMode === "existing-site"
+      ? "Existing site fixture and unchanged skill copied; engine scaffolding is explicitly skipped."
+      : "Fixture and unchanged skill copied; engine not scaffolded yet. Installed skill engine files under .agents are not an existing root-level site." };
   if (beforeScaffold) await beforeScaffold(inventory);
+  if (source.setupMode === "existing-site") return { setupMode: source.setupMode, scaffolded: false, copied: [], conflicts: [], inventory };
   const result = await scaffold(work, { source: join(inputs, "skill/engine") });
   if (result.conflicts.length) throw new Error(`Fixture conflicts with scaffold: ${result.conflicts.join(", ")}`);
-  return { ...result, inventory };
+  return { ...result, setupMode: source.setupMode, scaffolded: true, inventory };
 }
 
 /** Read only allowlisted source trees. Binary bytes remain bytes; generated trees are never walked. */
@@ -201,21 +212,38 @@ export function buildCodexArgs({ config = {}, profile, permissionProfile, remove
 }
 
 export function planTurn({ turn, source, history, gate }) {
+  source = validateCase(source);
   positive(turn, "turn");
   if (turn > source.bounds.maxTurns) throw new Error("Turn limit reached");
   if (history.length !== turn - 1) throw new Error("Turns must be contiguous; existing turns are never overwritten");
   if (history.some(item => !item.complete)) throw new Error("Failed turn is preserved; choose a new repetition for an explicit retry");
-  if (history.some(item => !Number.isSafeInteger(item.durationMs) || item.durationMs < 0 || !item.usage || ["input_tokens", "output_tokens"].some(key => !Number.isSafeInteger(item.usage[key]) || item.usage[key] < 0))) throw new Error("Previous turn lacks reliable duration or usage for the remaining budget");
-  const elapsedMs = history.reduce((sum, item) => sum + item.durationMs, 0);
-  const tokens = history.reduce((sum, item) => sum + (item.usage?.input_tokens ?? 0) + (item.usage?.output_tokens ?? 0), 0);
+  const requireCached = source.bounds.maxUncachedTokens !== undefined;
+  let elapsedMs = 0, inputTokens = 0, outputTokens = 0, cachedInputTokens = 0;
+  const add = (sum, value) => {
+    const total = sum + value;
+    if (!Number.isSafeInteger(total)) throw new Error("Aggregate duration or usage exceeds reliable safe integer accounting");
+    return total;
+  };
+  for (const item of history) {
+    if (!Number.isSafeInteger(item.durationMs) || item.durationMs < 0 || !item.usage || ["input_tokens", "output_tokens"].some(key => !Number.isSafeInteger(item.usage[key]) || item.usage[key] < 0)) throw new Error("Previous turn lacks reliable duration or usage for the remaining budget");
+    const cached = item.usage.cached_input_tokens;
+    if ((requireCached || cached !== undefined) && (!Number.isSafeInteger(cached) || cached < 0 || cached > item.usage.input_tokens)) throw new Error("Previous turn lacks reliable cached-input accounting: require a nonnegative safe integer no greater than input_tokens");
+    elapsedMs = add(elapsedMs, item.durationMs);
+    inputTokens = add(inputTokens, item.usage.input_tokens);
+    outputTokens = add(outputTokens, item.usage.output_tokens);
+    cachedInputTokens = cachedInputTokens === null || cached === undefined ? null : add(cachedInputTokens, cached);
+  }
+  const tokens = add(inputTokens, outputTokens);
+  const uncachedTokens = cachedInputTokens === null ? null : add(inputTokens - cachedInputTokens, outputTokens);
   if (elapsedMs >= source.bounds.maxWallMs) throw new Error("Cumulative actor wall budget exhausted");
   if (tokens >= source.bounds.maxTokens) throw new Error("Cumulative actor token ceiling reached");
+  if (requireCached && uncachedTokens >= source.bounds.maxUncachedTokens) throw new Error("Cumulative actor uncached-input-plus-output ceiling reached");
   if (turn > 1) {
     const previous = history.at(-1);
     if (!previous.sessionId) throw new Error("Previous turn lacks a resumable session");
     if (!gate || gate.afterTurn !== turn - 1 || gate.advance !== true || gate.previousTurnDigest !== previous.digest || typeof gate.observation !== "string" || !gate.observation.trim()) throw new Error("Coordinator gate must identify and approve the observed previous turn");
   }
-  return { sessionId: history.at(-1)?.sessionId ?? null, timeoutMs: Math.min(source.bounds.turnTimeoutMs, source.bounds.maxWallMs - elapsedMs), elapsedMs, tokens };
+  return { sessionId: history.at(-1)?.sessionId ?? null, requestedStop: source.requestedStops[turn - 1], timeoutMs: Math.min(source.bounds.turnTimeoutMs, source.bounds.maxWallMs - elapsedMs), elapsedMs, tokens, inputTokens, outputTokens, cachedInputTokens, uncachedTokens };
 }
 
 /** One process, one paid turn. Terminate the entire process group on timeout. */
@@ -284,9 +312,9 @@ export async function executeBuildTurn({ out, work, inputs, source, capabilities
   await writeNew(join(location, "prompt.md"), prompt);
   if (gate) await writeNew(join(location, "gate.json"), json(gate));
   await writeNew(join(location, "started.json"), json({ turn, started: new Date().toISOString(), ...limits, inputDigest: (await verifyInputs(inputs)).digest }));
-  const result = { turn, complete: false, durationMs: 0, sessionId: limits.sessionId, usage: null, artifacts: {},
+  const result = { turn, requestedStop: limits.requestedStop, complete: false, durationMs: 0, sessionId: limits.sessionId, usage: null, artifacts: {},
     completionMeaning: "The actor turn completed. This is not a passed build, reached stop or author approval.",
-    usageAggregation: "Raw turn.completed usage is preserved. The between-turn ceiling conservatively sums reported input_tokens plus output_tokens across turns; resumed counters may overlap. No dollar estimate or hard in-flight token cap is inferred." };
+    usageAggregation: "Raw turn.completed usage is preserved. Between turns, reported input_tokens plus output_tokens are summed across actor turns. If configured, maxUncachedTokens separately bounds input_tokens minus cached_input_tokens plus output_tokens; cached input must be a nonnegative safe integer no greater than input. Resumed counters may overlap. No dollar estimate or hard in-flight token cap is inferred." };
   try {
     await captureBuildWorkspace(work, join(location, "before"), source.snapshot);
     const process = await invoke({ cwd: work, prompt: prompt.toString("utf8"), streamPath: join(location, "stream.jsonl"), stderrPath: join(location, "stderr.log"), timeoutMs: limits.timeoutMs, model: capabilities.model, disabled: capabilities.disabledSkills, config: capabilities.config, profile: capabilities.profile, permissionProfile: capabilities.permissionProfile, removeConfig: capabilities.removeConfig, sessionId: limits.sessionId });

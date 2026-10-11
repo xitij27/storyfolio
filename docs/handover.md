@@ -193,7 +193,10 @@ not establish whether the earlier publication review was completed.
    requires review of actual cost before further paid work. A
    [concrete completion proposal](superpowers/plans/2026-10-11-build-completion-proposal.md)
    limits the next question to stops 5 and 6, with at most two actor turns
-   and one judge; it is not yet authorized. Do not repeat or
+   and one judge. The author has now [approved that continuation](history/2026-10-11-build-completion-approval.md)
+   after reviewing usage. [Preparation](../evals/builds/completion-preparation-1/findings.md)
+   now passes 242 repository tests and preserves the existing spine; the
+   exact-workspace capability check precedes paid execution. Do not repeat or
    resume this exhausted frozen cohort with changed bounds. Stage 4 remains
    governed by the [packaging plan](superpowers/plans/2026-10-11-packaging.md).
    All prior wording and implementation details are retained verbatim in
@@ -203,6 +206,9 @@ The [plan index](superpowers/plans/README.md) identifies completed work,
 proposals and historical instructions. The completed documentation migration
 is recorded in [its plan](superpowers/plans/2026-10-10-documentation-organization.md).
 No portfolio evaluation, skill change or paid run is part of that migration.
+
+The [pre-completion handover](history/2026-10-11-before-build-completion-handover.md)
+preserves the state before this continuation approval verbatim.
 
 ## Author directions and decision record
 

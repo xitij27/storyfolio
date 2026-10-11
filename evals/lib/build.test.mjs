@@ -24,6 +24,9 @@ test("build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, pr
   await writeNew(join(options.root, "skills/storyfolio/engine/node_modules/ignored"), "large generated tree");
   const prepared = await prepareBuildInputs(options);
   assert.equal(prepared.manifest.digest, hash(json(prepared.manifest.hashes)));
+  assert.equal(prepared.source.setupMode, "scaffold");
+  assert.deepEqual(prepared.source.requestedStops, [4, 5, 6]);
+  assert.deepEqual(prepared.source.refusalTurns, [2, 3]);
   assert.deepEqual(await prepareBuildInputs(options), prepared);
   assert.ok(prepared.manifest.hashes["skill/engine/package-lock.json"]);
   assert.ok(prepared.manifest.hashes["protocol.md"]);
@@ -42,11 +45,50 @@ test("build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, pr
   assert.ok(!recordedInventory.files.includes("package.json"));
   assert.ok(recordedInventory.files.includes(".agents/skills/storyfolio/engine/package.json"));
   assert.deepEqual(populated.inventory, recordedInventory);
+  assert.equal(populated.scaffolded, true);
   assert.equal(await readFile(join(work, "content/story.ts"), "utf8"), "export const story = []");
   assert.equal(await readFile(join(work, ".agents/skills/storyfolio/SKILL.md"), "utf8"), "Unchanged planning skill");
   await assert.rejects(readFile(join(work, "expectations.json")), { code: "ENOENT" });
   await assert.rejects(readFile(join(work, "rubric.md")), { code: "ENOENT" });
   await assert.rejects(readFile(join(work, "private.txt")), { code: "ENOENT" });
+});
+
+test("declared existing-site preparation retains supplied source and lockfile bytes without scaffolding", async t => {
+  const options = await fixture(t);
+  const site = { "package.json": '{"name":"existing-site"}\n', "package-lock.json": Buffer.from('{\n  "name": "existing-lock", "lockfileVersion": 3\n}\n'), "content/story.ts": "export const story = ['approved spine'];\n" };
+  for (const [path, bytes] of Object.entries(site)) await writeNew(join(options.root, "fixture/workspace", path), bytes);
+  await writeNew(join(options.root, "skills/storyfolio/engine/engine-only.txt"), "would be scaffolded");
+  const source = { ...options.source, setupMode: "existing-site", requestedStops: [5, 6], refusalTurns: [1, 2], prompts: options.source.prompts.slice(0, 2), files: [...options.source.files, ...Object.keys(site)], bounds: { ...options.source.bounds, maxTurns: 2, maxUncachedTokens: 350000 } };
+  await writeFile(join(options.root, options.casePath), json(source));
+  const prepared = await prepareBuildInputs(options), work = join(options.root, "work");
+  let inventory;
+  const result = await populateBuildWorkspace(prepared.inputs, work, { beforeScaffold: value => { inventory = value; } });
+  assert.equal(result.setupMode, "existing-site");
+  assert.equal(result.scaffolded, false);
+  assert.deepEqual(result.copied, []);
+  assert.deepEqual(result.conflicts, []);
+  assert.equal(inventory.setupMode, "existing-site");
+  assert.match(inventory.phase, /explicitly skipped/);
+  for (const [path, bytes] of Object.entries(site)) assert.deepEqual(await readFile(join(work, path)), Buffer.from(bytes));
+  assert.deepEqual(await readFile(join(work, "public/person.bin")), Buffer.from([255, 0, 130]));
+  assert.equal(await readFile(join(work, ".agents/skills/storyfolio/SKILL.md"), "utf8"), "Unchanged planning skill");
+  await assert.rejects(readFile(join(work, "engine-only.txt")), { code: "ENOENT" });
+  await assert.rejects(readFile(join(work, "next-env.d.ts")), { code: "ENOENT" });
+  await assert.rejects(populateBuildWorkspace(prepared.inputs, work), /EEXIST/);
+  for (const [path, bytes] of Object.entries(site)) assert.deepEqual(await readFile(join(work, path)), Buffer.from(bytes));
+});
+
+test("case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds", async t => {
+  const { source } = await fixture(t);
+  const shortened = { ...source, prompts: source.prompts.slice(0, 2), bounds: { ...source.bounds, maxTurns: 2 } };
+  assert.deepEqual(validateCase(shortened).requestedStops, [4, 5]);
+  assert.deepEqual(validateCase(shortened).refusalTurns, [2]);
+  assert.deepEqual(validateCase({ ...shortened, requestedStops: [5, 6], refusalTurns: [1, 2] }).requestedStops, [5, 6]);
+  assert.deepEqual(validateCase({ ...shortened, requestedStops: [4, 6], refusalTurns: [] }).refusalTurns, []);
+  for (const setupMode of [null, "overwrite", false]) assert.throws(() => validateCase({ ...source, setupMode }), /setupMode/);
+  for (const requestedStops of [null, [], [5], [6, 5], [5, 5], [3, 6], ["5", 6], [4, 5, 6]]) assert.throws(() => validateCase({ ...shortened, requestedStops }), /requestedStops/);
+  for (const refusalTurns of [null, [0], [3], [1.5], [2, 1], [1, 1], ["1"]]) assert.throws(() => validateCase({ ...shortened, refusalTurns }), /refusalTurns/);
+  for (const maxUncachedTokens of [null, 0, -1, 0.5, Infinity, Number.MAX_SAFE_INTEGER + 1]) assert.throws(() => validateCase({ ...source, bounds: { ...source.bounds, maxUncachedTokens } }), /maxUncachedTokens/);
 });
 
 test("current source or frozen input drift cannot silently reuse a build cohort", async t => {
@@ -118,7 +160,9 @@ test("turn planning requires observed gates and enforces turn, wall and soft tok
   const first = { complete: true, sessionId: "thread-1", durationMs: 890000, usage: { input_tokens: 800000, output_tokens: 100000 }, digest: "first" };
   const gate = { afterTurn: 1, advance: true, previousTurnDigest: "first", observation: "Spine and two looks shown; author can choose." };
   assert.equal(planTurn({ turn: 1, source, history: [] }).timeoutMs, 900000);
+  assert.equal(planTurn({ turn: 1, source, history: [] }).requestedStop, 4);
   assert.equal(planTurn({ turn: 2, source, history: [first], gate }).sessionId, "thread-1");
+  assert.equal(planTurn({ turn: 2, source, history: [first], gate }).uncachedTokens, null);
   assert.throws(() => planTurn({ turn: 2, source, history: [first] }), /Coordinator gate/);
   assert.throws(() => planTurn({ turn: 2, source, history: [first], gate: { ...gate, previousTurnDigest: "wrong" } }), /Coordinator gate/);
   assert.throws(() => planTurn({ turn: 1, source, history: [first] }), /contiguous/);
@@ -128,6 +172,63 @@ test("turn planning requires observed gates and enforces turn, wall and soft tok
   assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, usage: { input_tokens: 1500000, output_tokens: 0 } }], gate }), /token ceiling/);
   assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, usage: null }], gate }), /reliable duration or usage/);
   assert.equal(planTurn({ turn: 2, source, history: [{ ...first, durationMs: 2200000 }], gate }).timeoutMs, 200000);
+});
+
+test("uncached budget subtracts the cached subset and rejects the exact between-turn boundary", async t => {
+  const { source: original } = await fixture(t);
+  const source = { ...original, requestedStops: [4, 5, 6], bounds: { ...original.bounds, maxUncachedTokens: 100000 } };
+  const first = { complete: true, sessionId: "thread", durationMs: 1000, usage: { input_tokens: 200000, cached_input_tokens: 150000, output_tokens: 20000 }, digest: "first" };
+  const gate = { afterTurn: 1, advance: true, previousTurnDigest: "first", observation: "Copy gate observed." };
+  const planned = planTurn({ turn: 2, source, history: [first], gate });
+  assert.equal(planned.tokens, 220000);
+  assert.equal(planned.cachedInputTokens, 150000);
+  assert.equal(planned.uncachedTokens, 70000);
+  assert.equal(planned.requestedStop, 5);
+  const boundary = { ...first, usage: { ...first.usage, cached_input_tokens: 120000 } };
+  assert.throws(() => planTurn({ turn: 2, source, history: [boundary], gate }), /uncached-input-plus-output ceiling/);
+  assert.equal(planTurn({ turn: 2, source, history: [{ ...boundary, usage: { ...boundary.usage, cached_input_tokens: 120001 } }], gate }).uncachedTokens, 99999);
+  assert.throws(() => planTurn({ turn: 2, source: { ...source, bounds: { ...source.bounds, maxTokens: 220000 } }, history: [first], gate }), /actor token ceiling/);
+});
+
+test("uncached and wall accounting aggregate every actor turn without double-counting output", async t => {
+  const { source: original } = await fixture(t);
+  const source = { ...original, bounds: { ...original.bounds, maxUncachedTokens: 140001 } };
+  const first = { complete: true, sessionId: "thread", durationMs: 1000, usage: { input_tokens: 200000, cached_input_tokens: 150000, output_tokens: 20000 }, digest: "first" };
+  const second = { ...first, durationMs: 2000, digest: "second" };
+  const gate = { afterTurn: 2, advance: true, previousTurnDigest: "second", observation: "Second actual gate observed." };
+  const planned = planTurn({ turn: 3, source, history: [first, second], gate });
+  assert.equal(planned.elapsedMs, 3000);
+  assert.equal(planned.inputTokens, 400000);
+  assert.equal(planned.outputTokens, 40000);
+  assert.equal(planned.cachedInputTokens, 300000);
+  assert.equal(planned.tokens, 440000);
+  assert.equal(planned.uncachedTokens, 140000);
+  assert.throws(() => planTurn({ turn: 3, source: { ...source, bounds: { ...source.bounds, maxUncachedTokens: 140000 } }, history: [first, second], gate }), /uncached-input-plus-output ceiling/);
+});
+
+test("uncached bound fails closed on missing or unreliable cached accounting", async t => {
+  const { source: original } = await fixture(t);
+  const source = { ...original, bounds: { ...original.bounds, maxUncachedTokens: 350000 } };
+  const first = { complete: true, sessionId: "thread", durationMs: 1000, usage: { input_tokens: 20, output_tokens: 10 }, digest: "first" };
+  const gate = { afterTurn: 1, advance: true, previousTurnDigest: "first", observation: "Actual gate observed." };
+  for (const cached_input_tokens of [undefined, null, -1, 21, 0.1, "10", Infinity, NaN, Number.MAX_SAFE_INTEGER + 1]) {
+    assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, usage: { ...first.usage, cached_input_tokens } }], gate }), /reliable cached-input accounting/);
+  }
+  for (const [field, value] of [["input_tokens", -1], ["input_tokens", 1.5], ["output_tokens", "10"], ["output_tokens", Infinity]]) {
+    assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, usage: { ...first.usage, cached_input_tokens: 0, [field]: value } }], gate }), /reliable duration or usage/);
+  }
+  assert.equal(planTurn({ turn: 2, source, history: [{ ...first, usage: { ...first.usage, cached_input_tokens: 0 } }], gate }).uncachedTokens, 30);
+  assert.throws(() => planTurn({ turn: 2, source: original, history: [{ ...first, usage: { ...first.usage, cached_input_tokens: 21 } }], gate }), /reliable cached-input accounting/);
+});
+
+test("aggregate accounting rejects safe individual counters whose sum is unsafe", async t => {
+  const { source: original } = await fixture(t);
+  const source = { ...original, bounds: { ...original.bounds, maxTokens: Number.MAX_SAFE_INTEGER, maxUncachedTokens: Number.MAX_SAFE_INTEGER } };
+  const first = { complete: true, sessionId: "thread", durationMs: 1000, usage: { input_tokens: Number.MAX_SAFE_INTEGER, cached_input_tokens: 0, output_tokens: 1 }, digest: "first" };
+  const gate = { afterTurn: 1, advance: true, previousTurnDigest: "first", observation: "Actual gate observed." };
+  assert.throws(() => planTurn({ turn: 2, source, history: [first], gate }), /reliable safe integer accounting/);
+  const half = { ...first, usage: { input_tokens: Math.ceil(Number.MAX_SAFE_INTEGER / 2), cached_input_tokens: 0, output_tokens: 0 } };
+  assert.throws(() => planTurn({ turn: 3, source, history: [half, half], gate: { ...gate, afterTurn: 2 } }), /reliable safe integer accounting/);
 });
 
 test("build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides", () => {
@@ -206,6 +307,8 @@ test("one invocation preserves raw streams and source, resumes only with a revie
   const run = { out, work, inputs: prepared.inputs, source: prepared.source, capabilities: options.capabilities, invoke };
   const first = await executeBuildTurn({ ...run, turn: 1 });
   assert.equal(first.complete, true);
+  assert.equal(first.requestedStop, 4);
+  assert.equal(JSON.parse(await readFile(join(out, "turns/01/started.json"), "utf8")).requestedStop, 4);
   assert.equal(calls, 1);
   const history = await readTurnHistory(out);
   assert.equal(history[0].usage.input_tokens, 20);
@@ -251,8 +354,18 @@ test("actor timeout kills its process group including a descendant that ignores 
   assert.equal(result.code, -1);
   const pids = JSON.parse(result.stdout);
   assert.throws(() => process.kill(pids.pid, 0), { code: "ESRCH" });
-  const descendantState = await readFile(`/proc/${pids.descendant}/stat`, "utf8").catch(error => { if (error.code === "ENOENT") return null; throw error; });
-  assert.ok(descendantState === null || descendantState.split(") ")[1].startsWith("Z "), "descendant must be gone or awaiting reaping, not running");
+  // Sending SIGKILL does not synchronously change the descendant's /proc
+  // state. Allow bounded scheduling time, while still rejecting any live child.
+  const cleanupStarted = Date.now(), deadline = cleanupStarted + 1000;
+  let descendantState;
+  do {
+    const stat = await readFile(`/proc/${pids.descendant}/stat`, "utf8").catch(error => { if (error.code === "ENOENT") return null; throw error; });
+    descendantState = stat?.split(") ")[1].split(" ")[0] ?? null;
+    if (descendantState === null || descendantState === "Z") break;
+    await new Promise(resolve => setTimeout(resolve, 10));
+  } while (Date.now() < deadline);
+  assert.ok(descendantState === null || descendantState === "Z", `descendant must be gone or awaiting reaping within 1 second, not running (last state: ${descendantState})`);
+  t.diagnostic(`Descendant cleanup observed after ${Date.now() - cleanupStarted}ms; final state: ${descendantState ?? "gone"}`);
   assert.equal(signalHost.listenerCount("SIGINT"), 0);
   assert.equal(signalHost.listenerCount("SIGTERM"), 0);
   assert.equal(await readFile(join(root, "stream.jsonl"), "utf8"), result.stdout);
