@@ -16,6 +16,9 @@ preserves `fd03055` verbatim before recording acceptance of the revised story.
 The [pre-preparation handover](history/2026-10-11-before-build-preparation-handover.md)
 preserves `75d1f35` verbatim before implementing the local diagnostic tooling.
 
+The [pre-controls-fix handover](history/2026-10-11-before-shared-controls-handover.md)
+preserves `39ceeb7` verbatim before the authorized shared-controls correction.
+
 The complete previous handover, including every author statement, command,
 result and caveat, is preserved [verbatim in the archive](history/2026-10-10-handover.md).
 [The archive index](history/README.md) maps its sections and records the
@@ -92,6 +95,16 @@ evidence still exceeds the judge's transport limits. A separately reviewed
 engine correction and transport decision are needed before the actual
 actor-workspace proof. The proposed one-turn actor and optional single judge
 remain unapproved. No paid call, shipped skill/engine change or push was made.
+
+The author then answered "yes" to fixing the shared-controls bug next.
+The [authorization](history/2026-10-11-shared-controls-approval.md) is limited
+to that engine repair and local verification. The shipped Story now places
+its existing controls provider above both Canvas and HTML, sharing one stable
+store per Story. The [new engineering study](../evals/engine/shared-controls-1/findings.md)
+preserves the failing baseline and passing regression evidence separately.
+The accepted prototype and earlier studies remain unchanged. Behavioral skill
+instructions, judge transport, final diagnostic freeze and paid execution
+are not changed by this repair. No push is authorized.
 
 The latest direct skill changes are two paragraphs in
 [the storyboard reference](../skills/storyfolio/references/storyboard.md):
@@ -308,7 +321,9 @@ not establish whether the earlier publication review was completed.
    `other-skills.md` remains unwritten. Source/install verification and an
    actual recommendation-then-refusal branch remain unobserved.
 
-   Shipped skill instructions and the approved engine remain unchanged.
+   Shipped skill instructions remain unchanged. The later
+   [shared-controls repair](../evals/engine/shared-controls-1/findings.md)
+   changes only the engine's Story provider scope, not the accepted prototype.
    Stage 3 still needs its supported build entry point, before-stop-1 and
    concept-sketch coverage, any failure-backed instruction with matched
    reruns, planning regression, and the non-sheet whole-site proof with
@@ -344,6 +359,8 @@ The plan is written and local preparation is now authorized and implemented
 up to its engine/transport gates. Paid execution and new skill instructions
 remain gated. The [exact preparation reply](history/2026-10-11-build-preparation-approval.md)
 and test evidence are preserved separately.
+The next "yes" [authorizes the shared-controls correction](history/2026-10-11-shared-controls-approval.md)
+and its local checks, not transport implementation or paid execution.
 Exact historical wording and context remain linked, including earlier
 pauses and reversals.
 
@@ -410,9 +427,13 @@ That planning step is now authorized and the
 [five-beat reproduction plan](superpowers/plans/2026-10-11-build-workflow-reproduction.md)
 is drafted. Its approved local preparation now has
 [implemented tooling and retained diagnostics](../evals/runs/build-workflow-preparation-1/findings.md).
-Next obtain direction on the reproduced shared-controls correction and
-lossless judge-evidence transport, then complete the final freeze and actual
-actor-workspace capability proof. The paid-run decision remains separate.
+The shared-controls correction is now authorized and implemented, with
+[separate engine evidence](../evals/engine/shared-controls-1/findings.md).
+Next obtain direction on lossless judge-evidence transport, then complete
+the final freeze and actual actor-workspace capability proof. Freeze the
+corrected common engine revision for any future matched comparison; do not
+rewrite the old failing probe or compare changed-engine arms as a skill effect.
+The paid-run decision remains separate.
 Do not reinterpret the phone, planning or no-model preparation approvals
 as that cost approval. The reserved baseline cohort has not been prepared.
 Read its [depth-revision findings](../evals/runs/visual-recovery-depth-1/findings.md),
@@ -462,6 +483,9 @@ passes 266 tests across 31 suites, plus the fixture and skill checks. Its
 synthetic browser calibration passes seven good conditions and catches five
 deliberately bad variants, with final source/image hashes verified. This is
 measurement testing, not an actor build, new author approval or final freeze.
+The later shared-controls checkpoint again passes all 266 repository tests
+and adds six dedicated React-context regressions. The study keeps baseline
+failures, browser verification and source review separate from those counts.
 The visual-quality review repeated the required checks: all 246 tests,
 the skill check and the people check pass. Its
 [preservation record](../evals/runs/codex-visual-quality-review-1/verification.json)

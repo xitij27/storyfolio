@@ -42,6 +42,7 @@ its review criteria and independent runtime observations are separate.
 | [visual-recovery-prototype-1](#visual-recovery-prototype-11-october-2026) | Historical three-beat implementation; author requested the deeper revision below |
 | [visual-recovery-depth-1](#visual-recovery-story-depth-11-october-2026) | Manual five-beat revision; story accepted and phone confirmed, closing the bounded prototype gate |
 | [build-workflow-preparation-1](runs/build-workflow-preparation-1/findings.md) | No-model diagnostic tooling, fixture and calibration; final freeze gated by shared-controls and judge transport |
+| [shared-controls-1](engine/shared-controls-1/findings.md) | Authorized shipped-engine provider repair; frozen failing baseline, React regressions and real Canvas verification. No actor/judge evaluation or skill instruction change |
 
 ## Cases and comparison rules
 

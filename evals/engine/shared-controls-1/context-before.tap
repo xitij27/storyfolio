@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: scene hooks and HTML descendants share exactly the explicit scene store
+not ok 1 - scene hooks and HTML descendants share exactly the explicit scene store
+  ---
+  duration_ms: 107.074577
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:66:1'
+  failureType: 'testCodeFailure'
+  error: 'Story controls must be inside a Story'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Object.useControls (eval at load (file:///home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:26:3), <anonymous>:19:15)
+    read (file:///home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:35:28)
+    Scene (file:///home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:41:20)
+    Object.react_stack_bottom_frame (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:9808:18)
+    renderWithHooks (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5062:19)
+    renderElement (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5497:23)
+    retryNode (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6417:31)
+    renderNodeDestructive (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6367:11)
+    finishFunctionComponent (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5106:13)
+    renderElement (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5552:11)
+  ...
+# Subtest: HTML retains its store and sceneOff when WebGL is false
+ok 2 - HTML retains its store and sceneOff when WebGL is false
+  ---
+  duration_ms: 29.80159
+  type: 'test'
+  ...
+# Subtest: HTML retains its store and sceneOff when WebGL is null
+ok 3 - HTML retains its store and sceneOff when WebGL is null
+  ---
+  duration_ms: 29.863886
+  type: 'test'
+  ...
+# Subtest: separate Story instances never share their controls stores
+not ok 4 - separate Story instances never share their controls stores
+  ---
+  duration_ms: 20.343561
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:85:1'
+  failureType: 'testCodeFailure'
+  error: 'Story controls must be inside a Story'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Object.useControls (eval at load (file:///home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:26:3), <anonymous>:19:15)
+    read (file:///home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:35:28)
+    Scene (file:///home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:41:20)
+    Object.react_stack_bottom_frame (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:9808:18)
+    renderWithHooks (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5062:19)
+    renderElement (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5497:23)
+    retryNode (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6417:31)
+    renderNodeDestructive (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6367:11)
+    finishFunctionComponent (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5106:13)
+    renderElement (/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5552:11)
+  ...
+# Subtest: an outer provider cannot replace a Story's own store
+not ok 5 - an outer provider cannot replace a Story's own store
+  ---
+  duration_ms: 23.43293
+  type: 'test'
+  location: '/home/kshitij/projects/storyfolio/evals/engine/shared-controls-1/context.test.mjs:96:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Scene props and hook must share one store
+
+    {
+      get: [Function: get],
+      set: [Function: set],
+      subscribe: [Function: subscribe]
+    }
+
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: a controls hook outside every provider still reports misuse
+ok 6 - a controls hook outside every provider still reports misuse
+  ---
+  duration_ms: 18.169527
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 3
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 495.017455

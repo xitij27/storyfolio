@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-11T07:38:34.572Z",
+  "node": "v22.22.1",
+  "engineDifferences": [
+    "components/story/story.tsx"
+  ],
+  "fixtureIdentical": true,
+  "sourceAndArtifactsUnchanged": true,
+  "variants": {
+    "baseline": {
+      "sourceFilesChecked": 82,
+      "sourceManifestSha256": "47c7993aacb59de88dafe59fa9ac87c415e180508169cea04820bc48adbfd5c8",
+      "reportSha256": "c5be9a20a4af2e112e558a13296e68365540cd607f4d2bdcb0d50b7ee51c4484",
+      "cases": [
+        {
+          "name": "desktop",
+          "result": "pass"
+        },
+        {
+          "name": "phone",
+          "result": "pass"
+        }
+      ],
+      "imagesVerified": 6,
+      "checkLogSha256": {
+        "build": "4cc7b2bd64c8c7e3b6840add281ff47fb0b97a06b6b361839460f487af4f3204",
+        "typecheck": "417f5b0eaf7540fa8e4e26e4b03807ee3f87ae22f66dbafd798439f33e979d14",
+        "lint": "eecd443683b0f3bb03fc03525d4e064692a58f7eabdd9d455d5f6160ec088301"
+      }
+    },
+    "patched": {
+      "sourceFilesChecked": 82,
+      "sourceManifestSha256": "618b59d1888bb6dddcae6253ea2077d757e06abacabcc537a23287c457351245",
+      "reportSha256": "60c3d078b20f4f2146c523ae847d56146d10b053ab436392eb3bfae26be650ce",
+      "cases": [
+        {
+          "name": "desktop",
+          "result": "pass"
+        },
+        {
+          "name": "phone",
+          "result": "pass"
+        },
+        {
+          "name": "short",
+          "result": "pass"
+        },
+        {
+          "name": "reduced",
+          "result": "pass"
+        },
+        {
+          "name": "no-webgl",
+          "result": "pass"
+        },
+        {
+          "name": "no-js",
+          "result": "pass"
+        },
+        {
+          "name": "context-loss",
+          "result": "pass"
+        }
+      ],
+      "imagesVerified": 21,
+      "checkLogSha256": {
+        "build": "b8f24eacce62d3c49cbb7eae0a1f244e35388ee67db110c57641c43b588f3219",
+        "typecheck": "97a028511999ea4d1221245222934ef554b2372e420b5ebd2dfc84a2ba0846f6",
+        "lint": "bf9dced7aebbaa5035ba96a161169b50da5ae2524b1e34d46743deeab8150486"
+      }
+    }
+  },
+  "harnessSha256": {
+    "prepare.mjs": "f962281840fdefc4b22ec2215f71a1e0460a1906b9eb946cf09a3a8cf314e914",
+    "run-check.mjs": "5c5dd7b54e8bf8fc002f884a36ed595169d28a5aaccb2b4f6f88b1ebfed2c4f1",
+    "browser.mjs": "86f61e0e6eb8e8c9af146671a0f6bfba656c961b9632be649f50e9906d54242a",
+    "verify.mjs": "62a860c83eef537608befa7a2a755839b8f5cbb29ee263ea57c09f7884d3ed13"
+  }
+}

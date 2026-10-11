@@ -1,0 +1,1471 @@
+{
+  "schemaVersion": 1,
+  "variant": "patched",
+  "startedAt": "2026-10-11T07:36:56.815Z",
+  "node": "v22.22.1",
+  "playwright": "1.64.0",
+  "sourceManifestSha256": "618b59d1888bb6dddcae6253ea2077d757e06abacabcc537a23287c457351245",
+  "probeSha256": "86f61e0e6eb8e8c9af146671a0f6bfba656c961b9632be649f50e9906d54242a",
+  "limitation": "Software Chromium integration of one tiny fixture. Not physical-phone approval, a general visual score, a paid actor, or a complete-site evaluation.",
+  "cases": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "Custom Piece and lazy extra share the HTML store and report sceneOff=false; sibling stores differ",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Scene hook writes back to the same store, updating HTML and lazy extra",
+        "Look change preserves store identity and selection across remounted Piece",
+        "Second Story updates independently while first Story retains selection and store"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "78",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "live": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "80",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "91",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9896719326708291,0.024340902591871716,-0.14126919743737099,0,-0.005642114357686747,0.991329102101607,0.1312812929247595,0,0.14323977181342018,-0.12912835392521171,0.9812279225457277,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "128",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9896719326708291,0.024340902591871716,-0.14126919743737099,0,-0.005642114357686747,0.991329102101607,0.1312812929247595,0,0.14323977181342018,-0.12912835392521171,0.9812279225457277,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "sceneWriteBack": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "168",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9856700213607854,0.02515359192817965,-0.1667989982096401,0,-0.0030629353514804295,0.9913255206958376,0.13139379910847832,0,0.16865712975638344,-0.12900003422572076,0.9771968909856914,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "lookChange": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "16",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9652163399701829,0.010372360051589011,-0.26124668648908156,0,0.006461925255246024,0.9979611118930585,0.06349695009341927,0,0.26137264695556783,-0.06297645032971266,0.9631813464386181,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "34",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9897289962750675,0.02432822820953332,-0.14087104473429649,0,-0.005682232620811268,0.9913291746129922,0.13127901505406941,0,0.1428433623406782,-0.12913018575572663,0.9812854676198467,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "sceneStore": "2",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "14",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9897289962750675,0.02432822820953332,-0.14087104473429649,0,-0.005682232620811268,0.9913291746129922,0.13127901505406941,0,0.1428433623406782,-0.12913018575572663,0.9812854676198467,0,1.308125,0.314453125,0,1]",
+            "extraStore": "2",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        }
+      },
+      "screenshots": [
+        "patched/capture-1/desktop/pointer-amber.png",
+        "patched/capture-1/desktop/keyboard-blue.png",
+        "patched/capture-1/desktop/sibling-amber.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "externalRequests": [],
+      "result": "pass"
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "phone": true,
+      "checks": [
+        "Custom Piece and lazy extra share the HTML store and report sceneOff=false; sibling stores differ",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Scene hook writes back to the same store, updating HTML and lazy extra",
+        "Look change preserves store identity and selection across remounted Piece",
+        "Second Story updates independently while first Story retains selection and store"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "93",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,0,0.5987671274038462,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "live": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "95",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,0,0.5987671274038462,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "105",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,0,0.5987671274038462,0,1]",
+            "extraStore": "1",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "111",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,0,0.5987671274038462,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "sceneWriteBack": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "123",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9871051301530539,0.02527133149320015,-0.15806587813340156,0,-0.003940399592584709,0.9909962569852027,0.13383158032530534,0,0.1600247958179398,-0.13148299679380102,0.9783170683768877,0,0,0.5987671274038462,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "lookChange": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "21",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9687898066114478,0.01092723815630915,-0.2476426984024136,0,0.005059181926778934,0.9979482031380479,0.06382623701718022,0,0.24783203038345394,-0.06308707728066673,0.9667467638405612,0,0,0.5987671274038462,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "46",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9872625857138027,0.024737240230213547,-0.15716442280455598,0,-0.00403959040702229,0.9914175849090482,0.13067078496149595,0,0.15904800708918057,-0.12837149714365229,0.9788894167177705,0,0,0.5987671274038462,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "sceneStore": "2",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "21",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9872625857138027,0.024737240230213547,-0.15716442280455598,0,-0.00403959040702229,0.9914175849090482,0.13067078496149595,0,0.15904800708918057,-0.12837149714365229,0.9788894167177705,0,0,0.5987671274038462,0,1]",
+            "extraStore": "2",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        }
+      },
+      "screenshots": [
+        "patched/capture-1/phone/pointer-amber.png",
+        "patched/capture-1/phone/keyboard-blue.png",
+        "patched/capture-1/phone/sibling-amber.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "externalRequests": [],
+      "result": "pass"
+    },
+    {
+      "name": "short",
+      "width": 1280,
+      "height": 720,
+      "checks": [
+        "Custom Piece and lazy extra share the HTML store and report sceneOff=false; sibling stores differ",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Scene hook writes back to the same store, updating HTML and lazy extra",
+        "Look change preserves store identity and selection across remounted Piece",
+        "Second Story updates independently while first Story retains selection and store"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "88",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "live": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "90",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "97",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.989557064199564,0.024075807262974654,-0.1421167555124167,0,-0.005561693379310611,0.9915952929018369,0.1292588204405201,0,0.14403431625655902,-0.12711856905879715,0.9813740291759045,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "1",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "106",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.989557064199564,0.024075807262974654,-0.1421167555124167,0,-0.005561693379310611,0.9915952929018369,0.1292588204405201,0,0.14403431625655902,-0.12711856905879715,0.9813740291759045,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "sceneWriteBack": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "120",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9849853324570248,0.02493102871332649,-0.1708283894785045,0,-0.002659840150600211,0.991591731959392,0.12937836898085553,0,0.17261755442276894,-0.12698141957415832,0.9767696243168263,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "lookChange": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "21",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9653864890577445,0.010639501044220383,-0.26060646147456,0,0.006396824026142492,0.9979013040236184,0.06443654297322693,0,0.2607451004086939,-0.06387322166207049,0.9632923773015999,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "46",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9896216110374532,0.024062465861359215,-0.14166885580220767,0,-0.005606828415573539,0.9915953681874777,0.12925629293871443,0,0.14358840636609244,-0.12712050788842597,0.9814391198803085,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "sceneStore": "2",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "22",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9896216110374532,0.024062465861359215,-0.14166885580220767,0,-0.005606828415573539,0.9915953681874777,0.12925629293871443,0,0.14358840636609244,-0.12712050788842597,0.9814391198803085,0,1.3081250000000002,0.28300781250000007,0,1]",
+            "extraStore": "2",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        }
+      },
+      "screenshots": [
+        "patched/capture-1/short/pointer-amber.png",
+        "patched/capture-1/short/keyboard-blue.png",
+        "patched/capture-1/short/sibling-amber.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "externalRequests": [],
+      "result": "pass"
+    },
+    {
+      "name": "reduced",
+      "width": 1440,
+      "height": 900,
+      "reduced": true,
+      "checks": [
+        "Custom Piece and lazy extra share the HTML store and report sceneOff=false; sibling stores differ",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Scene hook writes back to the same store, updating HTML and lazy extra",
+        "Reduced motion: object world matrix unchanged across elapsed time and pointer movement",
+        "Look change preserves store identity and selection across remounted Piece",
+        "Second Story updates independently while first Story retains selection and store"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "80",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "live": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "82",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "91",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "117",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "sceneWriteBack": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "153",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "reducedStillness": {
+          "before": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+          "after": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]"
+        },
+        "lookChange": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "16",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "34",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "sceneStore": "2",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "15",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "2",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        }
+      },
+      "screenshots": [
+        "patched/capture-1/reduced/pointer-amber.png",
+        "patched/capture-1/reduced/keyboard-blue.png",
+        "patched/capture-1/reduced/sibling-amber.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "externalRequests": [],
+      "result": "pass"
+    },
+    {
+      "name": "no-webgl",
+      "width": 1440,
+      "height": 900,
+      "noWebgl": true,
+      "checks": [
+        "WebGL disabled: both stories use readable HTML fallback and sceneOff=true",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Second Story updates independently while first Story retains selection and store"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        }
+      },
+      "screenshots": [
+        "patched/capture-1/no-webgl/pointer-amber.png",
+        "patched/capture-1/no-webgl/keyboard-blue.png",
+        "patched/capture-1/no-webgl/sibling-amber.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "externalRequests": [],
+      "result": "pass"
+    },
+    {
+      "name": "no-js",
+      "width": 390,
+      "height": 844,
+      "noJs": true,
+      "phone": true,
+      "checks": [
+        "No JavaScript: both static stories and fallback explanations present, unusable controls hidden"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        }
+      },
+      "screenshots": [
+        "patched/capture-1/no-js/static-alpha.png",
+        "patched/capture-1/no-js/static-beta.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "externalRequests": [],
+      "result": "pass"
+    },
+    {
+      "name": "context-loss",
+      "width": 1440,
+      "height": 900,
+      "contextLoss": {
+        "supported": true,
+        "method": "WEBGL_lose_context.loseContext"
+      },
+      "checks": [
+        "Custom Piece and lazy extra share the HTML store and report sceneOff=false; sibling stores differ",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Scene hook writes back to the same store, updating HTML and lazy extra",
+        "Look change preserves store identity and selection across remounted Piece",
+        "Second Story updates independently while first Story retains selection and store",
+        "Actual context loss removes only the failed scene; same HTML store, pointer and keyboard controls keep working with sceneOff=true"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "79",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "live": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "null",
+            "sceneOff": "false",
+            "frames": "80",
+            "meshColor": "687580",
+            "worldMatrix": "[0.9800665778412416,0.019833838076209878,-0.19767681165408388,0,0,0.9950041652780257,0.09983341664682815,0,0.19866933079506124,-0.09784339500725572,0.9751703272018158,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "null",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "88",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9896719326708291,0.024340902591871716,-0.14126919743737099,0,-0.005642114357686747,0.991329102101607,0.1312812929247595,0,0.14323977181342018,-0.12912835392521171,0.9812279225457277,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "110",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9896719326708291,0.024340902591871716,-0.14126919743737099,0,-0.005642114357686747,0.991329102101607,0.1312812929247595,0,0.14323977181342018,-0.12912835392521171,0.9812279225457277,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "sceneWriteBack": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "144",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9856700213607854,0.02515359192817965,-0.1667989982096401,0,-0.0030629353514804295,0.9913255206958376,0.13139379910847832,0,0.16865712975638344,-0.12900003422572076,0.9771968909856914,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "light",
+            "canvases": 1
+          }
+        },
+        "lookChange": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "19",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9652163399701829,0.010372360051589011,-0.26124668648908156,0,0.006461925255246024,0.9979611118930585,0.06349695009341927,0,0.26137264695556783,-0.06297645032971266,0.9631813464386181,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "false",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "35",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9897289962750675,0.02432822820953332,-0.14087104473429649,0,-0.005682232620811268,0.9913291746129922,0.13127901505406941,0,0.1428433623406782,-0.12913018575572663,0.9812854676198467,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "sceneStore": "2",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "12",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9897289962750675,0.02432822820953332,-0.14087104473429649,0,-0.005682232620811268,0.9913291746129922,0.13127901505406941,0,0.1428433623406782,-0.12913018575572663,0.9812854676198467,0,1.308125,0.314453125,0,1]",
+            "extraStore": "2",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        },
+        "contextLoss": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "61",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9897289962750675,0.02432822820953332,-0.14087104473429649,0,-0.005682232620811268,0.9913291746129922,0.13127901505406941,0,0.1428433623406782,-0.12913018575572663,0.9812854676198467,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "off",
+            "look": "dark",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "sceneStore": "2",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "44",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9896719326708291,0.01866762334857168,-0.1421301710478875,0,-0.005642114357686747,0.9957889245004092,0.09150182723800038,0,0.14323977181342018,-0.0897548755268144,0.9856096743082453,0,1.308125,0.314453125,0,1]",
+            "extraStore": "2",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        },
+        "postLossKeyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "sceneStore": "1",
+            "sceneValue": "2",
+            "sceneOff": "false",
+            "frames": "61",
+            "meshColor": "206bc4",
+            "worldMatrix": "[0.9897289962750675,0.02432822820953332,-0.14087104473429649,0,-0.005682232620811268,0.9913291746129922,0.13127901505406941,0,0.1428433623406782,-0.12913018575572663,0.9812854676198467,0,1.308125,0.314453125,0,1]",
+            "extraStore": "1",
+            "extraValue": "2",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "off",
+            "look": "dark",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "false",
+            "htmlStore": "2",
+            "sceneStore": "2",
+            "sceneValue": "1",
+            "sceneOff": "false",
+            "frames": "46",
+            "meshColor": "d88716",
+            "worldMatrix": "[0.9896719326708291,0.01866762334857168,-0.1421301710478875,0,-0.005642114357686747,0.9957889245004092,0.09150182723800038,0,0.14323977181342018,-0.0897548755268144,0.9856096743082453,0,1.308125,0.314453125,0,1]",
+            "extraStore": "2",
+            "extraValue": "1",
+            "extraSceneOff": "false",
+            "extraPropSame": "true",
+            "scene": "on",
+            "look": "dark",
+            "canvases": 1
+          }
+        }
+      },
+      "screenshots": [
+        "patched/capture-1/context-loss/pointer-amber.png",
+        "patched/capture-1/context-loss/keyboard-blue.png",
+        "patched/capture-1/context-loss/sibling-amber.png",
+        "patched/capture-1/context-loss/context-loss-fallback.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "externalRequests": [],
+      "result": "pass"
+    }
+  ],
+  "artifacts": {
+    "patched/capture-1/desktop/pointer-amber.png": {
+      "sha256": "464127d21fc948ae89d01c166d465ca8ca9817f211c538da7bd497828e549652",
+      "scrollY": 0
+    },
+    "patched/capture-1/desktop/keyboard-blue.png": {
+      "sha256": "d5c97fe67b02fddeadf48f60499fc91ed8a1ceca9c92a82e0d5e231d0d2cbf44",
+      "scrollY": 0
+    },
+    "patched/capture-1/desktop/sibling-amber.png": {
+      "sha256": "cbe15f71bc4daff3825af325143861943ade1e73f2c5a5e19c4a04904d8f2d71",
+      "scrollY": 913
+    },
+    "patched/capture-1/phone/pointer-amber.png": {
+      "sha256": "186a01e6527bdda7a600804ed35ecdfcbca1a93c1288ea7ac676c5c4b9a5b949",
+      "scrollY": 0
+    },
+    "patched/capture-1/phone/keyboard-blue.png": {
+      "sha256": "a737bb8998275f26f7aa363c0a4ab00492eb75a3965e6f523e308980bfa46633",
+      "scrollY": 0
+    },
+    "patched/capture-1/phone/sibling-amber.png": {
+      "sha256": "7590cb22a407df2a03c23329e00444affa5b0e633fdab3519cb0cdeb920b308d",
+      "scrollY": 835
+    },
+    "patched/capture-1/short/pointer-amber.png": {
+      "sha256": "2ddb257e341b1683ca374db22419beeaf15e27ae64738481821366986a7e2056",
+      "scrollY": 0
+    },
+    "patched/capture-1/short/keyboard-blue.png": {
+      "sha256": "72aa8fcff5aa2dda1e15ed94ce4acf2ec7c6919775c2f91dc4219c4e125764b6",
+      "scrollY": 0
+    },
+    "patched/capture-1/short/sibling-amber.png": {
+      "sha256": "844fb486c35736eb9e3ee62ca92a0ee8d494f1d492130cc9a677a9411d49f98d",
+      "scrollY": 780
+    },
+    "patched/capture-1/reduced/pointer-amber.png": {
+      "sha256": "d7785732b8d8eef1b11a5cf7717dee35e478d8583ad9b6f8a99f3114d59e2e9f",
+      "scrollY": 0
+    },
+    "patched/capture-1/reduced/keyboard-blue.png": {
+      "sha256": "7f3d6ba1b905c19b5e5c15417ba1fa9e87b04ff70d08d08ffb673c69616e62fc",
+      "scrollY": 0
+    },
+    "patched/capture-1/reduced/sibling-amber.png": {
+      "sha256": "525dbf14e2c1c2be4379065aff5beb0fefe4d7139bd972b5667009634e4d2503",
+      "scrollY": 897
+    },
+    "patched/capture-1/no-webgl/pointer-amber.png": {
+      "sha256": "544c91242bb9e9fdbf9f44c53e5cf9ae70de60060b0cda35881616fd2e17f522",
+      "scrollY": 0
+    },
+    "patched/capture-1/no-webgl/keyboard-blue.png": {
+      "sha256": "ec6412f921c8e49d234641dde306dc7f032fde45288823f13aac7e12117dbd42",
+      "scrollY": 0
+    },
+    "patched/capture-1/no-webgl/sibling-amber.png": {
+      "sha256": "8100fdce951771a0381cb76c7e040d042264c64a1716a372e6e015141560fac7",
+      "scrollY": 0
+    },
+    "patched/capture-1/no-js/static-alpha.png": {
+      "sha256": "ab2c741f12ac8b054dd6bea6eebd5181bda8f7fa8af168a04106c441b2f70f5e",
+      "scrollY": 0
+    },
+    "patched/capture-1/no-js/static-beta.png": {
+      "sha256": "ab2c741f12ac8b054dd6bea6eebd5181bda8f7fa8af168a04106c441b2f70f5e",
+      "scrollY": 0
+    },
+    "patched/capture-1/context-loss/pointer-amber.png": {
+      "sha256": "464127d21fc948ae89d01c166d465ca8ca9817f211c538da7bd497828e549652",
+      "scrollY": 0
+    },
+    "patched/capture-1/context-loss/keyboard-blue.png": {
+      "sha256": "ad2d06b3a871264cb602a2c0b372048ec9252c93a3075225375d8e6cd51c86f4",
+      "scrollY": 0
+    },
+    "patched/capture-1/context-loss/sibling-amber.png": {
+      "sha256": "cbe15f71bc4daff3825af325143861943ade1e73f2c5a5e19c4a04904d8f2d71",
+      "scrollY": 913
+    },
+    "patched/capture-1/context-loss/context-loss-fallback.png": {
+      "sha256": "e50d43a6d95bd52859366603fdab9da8feb2be746b0d3c85fdb7bc0105f5fb00",
+      "scrollY": 0
+    }
+  },
+  "browser": "156.0.8078.4",
+  "endedAt": "2026-10-11T07:37:30.528Z",
+  "passed": true
+}

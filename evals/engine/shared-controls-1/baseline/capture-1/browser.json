@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "variant": "baseline",
+  "startedAt": "2026-10-11T07:36:53.698Z",
+  "node": "v22.22.1",
+  "playwright": "1.64.0",
+  "sourceManifestSha256": "47c7993aacb59de88dafe59fa9ac87c415e180508169cea04820bc48adbfd5c8",
+  "probeSha256": "86f61e0e6eb8e8c9af146671a0f6bfba656c961b9632be649f50e9906d54242a",
+  "limitation": "Software Chromium integration of one tiny fixture. Not physical-phone approval, a general visual score, a paid actor, or a complete-site evaluation.",
+  "cases": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "checks": [
+        "Baseline failure reproduced: hook throws, WebGL boundary switches both stories to HTML fallback",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Second Story updates independently while first Story retains selection and store"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        }
+      },
+      "screenshots": [
+        "baseline/capture-1/desktop/pointer-amber.png",
+        "baseline/capture-1/desktop/keyboard-blue.png",
+        "baseline/capture-1/desktop/sibling-amber.png"
+      ],
+      "consoleErrors": [
+        "Error: Story controls must be inside a Story\n    at a (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:15571)\n    at I (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:12581)\n    at e1 (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:19076)\n    at nd (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:34678)\n    at nE (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:44797)\n    at rT (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73892)\n    at http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73735\n    at rj (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73743)\n    at rb (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:71091)\n    at ef (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:6374)",
+        "Error: Story controls must be inside a Story\n    at a (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:15571)\n    at I (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:12581)\n    at e1 (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:19076)\n    at nd (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:34678)\n    at nE (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:44797)\n    at rT (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73892)\n    at http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73735\n    at rj (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73743)\n    at rb (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:71091)\n    at ef (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:6374)"
+      ],
+      "pageErrors": [
+        "Story controls must be inside a Story",
+        "Story controls must be inside a Story"
+      ],
+      "externalRequests": [],
+      "result": "pass"
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "phone": true,
+      "checks": [
+        "Baseline failure reproduced: hook throws, WebGL boundary switches both stories to HTML fallback",
+        "Pointer selection updates HTML, live scene and lazy extra without changing sibling",
+        "Tab reaches the next HTML control and Enter changes selection",
+        "Second Story updates independently while first Story retains selection and store"
+      ],
+      "snapshots": {
+        "initial": {
+          "alpha": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "pointer": {
+          "alpha": {
+            "htmlValue": "1",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "keyboard": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "null",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        },
+        "sibling": {
+          "alpha": {
+            "htmlValue": "2",
+            "htmlSceneOff": "true",
+            "htmlStore": "1",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          },
+          "beta": {
+            "htmlValue": "1",
+            "htmlSceneOff": "true",
+            "htmlStore": "2",
+            "scene": "off",
+            "look": "light",
+            "canvases": 0
+          }
+        }
+      },
+      "screenshots": [
+        "baseline/capture-1/phone/pointer-amber.png",
+        "baseline/capture-1/phone/keyboard-blue.png",
+        "baseline/capture-1/phone/sibling-amber.png"
+      ],
+      "consoleErrors": [
+        "Error: Story controls must be inside a Story\n    at a (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:15571)\n    at I (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:12581)\n    at e1 (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:19076)\n    at nd (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:34678)\n    at nE (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:44797)\n    at rT (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73892)\n    at http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73735\n    at rj (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73743)\n    at rb (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:71091)\n    at ef (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:6374)",
+        "Error: Story controls must be inside a Story\n    at a (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:15571)\n    at I (http://127.0.0.1:3041/_next/static/chunks/app/page-e3492680cecd6693.js:1:12581)\n    at e1 (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:19076)\n    at nd (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:34678)\n    at nE (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:44797)\n    at rT (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73892)\n    at http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73735\n    at rj (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:73743)\n    at rb (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:71091)\n    at ef (http://127.0.0.1:3041/_next/static/chunks/b4129b6e-e822589fd9b5545f.js:8:6374)"
+      ],
+      "pageErrors": [
+        "Story controls must be inside a Story",
+        "Story controls must be inside a Story"
+      ],
+      "externalRequests": [],
+      "result": "pass"
+    }
+  ],
+  "artifacts": {
+    "baseline/capture-1/desktop/pointer-amber.png": {
+      "sha256": "c5b7cbe64aa0346b4cf78d079fd809272a05587e39d9e478c98c8a9b4aa30d63",
+      "scrollY": 0
+    },
+    "baseline/capture-1/desktop/keyboard-blue.png": {
+      "sha256": "74ebafc2a97d594569573b1b7336aa29ad1a4e9c02f6862380e304330d2471fd",
+      "scrollY": 0
+    },
+    "baseline/capture-1/desktop/sibling-amber.png": {
+      "sha256": "1fcb747a504b042061f6ccc93734203c8b52cedb8253458d46d4e7a8799b7fe5",
+      "scrollY": 0
+    },
+    "baseline/capture-1/phone/pointer-amber.png": {
+      "sha256": "692117d0e3f241d3880e3ac0d83a7d9d0736e8379997d52101512e0868191cf0",
+      "scrollY": 0
+    },
+    "baseline/capture-1/phone/keyboard-blue.png": {
+      "sha256": "ba6ca0bddf24e003cf0e669b087c6a77a1dd48df59ebeeeec1fccac50a1aa569",
+      "scrollY": 0
+    },
+    "baseline/capture-1/phone/sibling-amber.png": {
+      "sha256": "82e93b2ec9aa0d5ac2dda0a443d2921c7eb0252215c8514d480316af94bef7fc",
+      "scrollY": 7
+    }
+  },
+  "browser": "156.0.8078.4",
+  "endedAt": "2026-10-11T07:37:00.251Z",
+  "passed": true
+}

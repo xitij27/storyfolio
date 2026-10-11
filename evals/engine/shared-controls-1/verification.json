@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-11",
+  "baselineRevision": "39ceeb70e2b50b483678db12bec95f8f61d38836",
+  "scope": "Authorized shared-controls engine repair and local verification only.",
+  "checks": {
+    "skill": {
+      "command": "node evals/check-skill.mjs",
+      "exitCode": 0,
+      "output": "ok: SKILL.md is 687 words, with 4 references"
+    },
+    "people": {
+      "command": "node evals/check-people.mjs",
+      "exitCode": 0,
+      "output": "ok: 17 people"
+    },
+    "repository": {
+      "command": "PATH=/tmp/storyfolio-node-check-20261011/node_modules/.bin:$PATH npm test",
+      "exitCode": 0,
+      "tests": 266,
+      "suites": 31,
+      "passed": 266,
+      "failed": 0,
+      "log": "repository-tests.tap"
+    },
+    "context": {
+      "command": "/tmp/storyfolio-node-check-20261011/node_modules/.bin/node --test evals/engine/shared-controls-1/context.test.mjs",
+      "before": {
+        "exitCode": 1,
+        "passed": 3,
+        "failed": 3,
+        "log": "context-before.tap",
+        "formatNote": "Whitespace-only TAP lines normalized to empty lines for git diff --check; result and error content unchanged."
+      },
+      "after": {
+        "exitCode": 0,
+        "passed": 6,
+        "failed": 0,
+        "log": "context-after.tap"
+      }
+    },
+    "browser": {
+      "evidence": "browser-verification.json",
+      "review": "review.md",
+      "note": "Separate verifier checks baseline and patched source, builds, type checks, lint, report and original image hashes."
+    },
+    "documentationLinks": {
+      "scope": "Updated documentation maps, current handover, approval history, reproduction plan, study catalogue and findings",
+      "checked": 456,
+      "missingTargets": 0,
+      "note": "Read-only local Markdown target existence check; URL and fragment-only targets excluded."
+    },
+    "whitespace": {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  },
+  "environmentDiagnostics": [
+    "Initial sandboxed context test returned a terse file-level failure. Approved execution outside the sandbox exposed the intended three regression failures.",
+    "An initial full npm test used /usr/bin/node v22.22.1, which lacks native TypeScript loading here: 137 pass and 14 fail among 151 reported file/subtests, with ERR_UNKNOWN_FILE_EXTENSION for .ts. Rerun with the existing standard Node 22.22.1 on PATH passes all 266 tests.",
+    "An additional identical final full-suite run retained complete untruncated TAP. Local checks invoke no model."
+  ],
+  "preservation": {
+    "handoverArchive": "docs/history/2026-10-11-before-shared-controls-handover.md",
+    "archivedGitBlob": "a4689d4e9e65cb77a19cc985eaaee1ecae76d832",
+    "sourceGitBlob": "a4689d4e9e65cb77a19cc985eaaee1ecae76d832",
+    "statusCommand": "git status --short --untracked-files=all -- evals/runs evals/builds prototypes skills/storyfolio/SKILL.md skills/storyfolio/references",
+    "statusOutput": "",
+    "note": "No changes to prior runs, fixture inputs, accepted prototype or behavioral instructions; only Story provider scope changes under the shipped engine."
+  },
+  "sha256": {
+    "evals/engine/shared-controls-1/context.test.mjs": "77f6b7e9be783036f62c3dd4acaf995b5d58dfe31f5137e53932a1584a7956a7",
+    "evals/engine/shared-controls-1/context-before.tap": "978d5dd18925a746710072818b215093f08941bf8782126d543d66aea767fed0",
+    "evals/engine/shared-controls-1/context-after.tap": "5af489823bb0c21cd713af6d34c3e03033157a67b47f25e1ebb9ae8300bfb088",
+    "evals/engine/shared-controls-1/repository-tests.tap": "2540c22692cc080f4ebeee22bbc296e93117093b58f077b170f06475c8cc23a7",
+    "skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+  },
+  "authority": {
+    "paidActorCalls": 0,
+    "paidJudgeCalls": 0,
+    "skillInstructionChanges": false,
+    "judgeTransportChanges": false,
+    "finalBaselinePrepared": false,
+    "push": false
+  },
+  "remaining": "Obtain direction on lossless judge-evidence transport, then final freeze/capability proof and separate paid-run decision."
+}

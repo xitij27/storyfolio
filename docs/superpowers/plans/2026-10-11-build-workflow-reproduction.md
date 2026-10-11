@@ -319,3 +319,19 @@ cohort freeze and exact actor-workspace capability proof, is deferred until
 the separate engineering and transport decisions. The paid envelope remains
 proposed and unapproved. Earlier frozen studies and accepted prototype
 source are unchanged.
+
+## Shared-controls engineering checkpoint, 11 October 2026
+
+The author next [approved fixing the shared-controls bug](../../history/2026-10-11-shared-controls-approval.md).
+The shipped engine now moves its single ControlsProvider above both Canvas
+and HTML. The [separate engineering study](../../../evals/engine/shared-controls-1/findings.md)
+records before/after React tests, the actual Canvas integration checks and
+source review. The accepted prototype and prior negative probe are preserved.
+This repairs an engine defect; it is not a behavioral skill improvement.
+
+The transport decision and final preparation remain outstanding. When those
+are authorized, pin this corrected common engine revision before a new
+baseline and hold it fixed for any matched candidate. Do not retrofit the
+earlier negative study or mix engine revisions in a causal skill comparison.
+No paid envelope, instruction change, transport implementation or push was
+authorized by this repair approval.

@@ -73,10 +73,10 @@ export function Story({ bundle, children }: { bundle: StoryBundle; children: Rea
     return () => window.removeEventListener("pointermove", move);
   }, [still]);
   const style = { "--story-ground": look.ground, "--story-ink": look.ink, "--story-faint": look.faint, "--story-accent": look.accent } as CSSProperties;
-  return <div ref={rootRef} className="story" data-scene={on ? "on" : "off"} data-look={look.id} style={style}>
+  return <ControlsProvider controls={controls} sceneOff={!on}><div ref={rootRef} className="story" data-scene={on ? "on" : "off"} data-look={look.id} style={style}>
     <noscript><style>{".story-look-switch, .story-control { display: none !important; }"}</style></noscript>
     {on ? <><div className="story-scene" aria-hidden="true"><WebGLBoundary onError={onError}><Scene bundle={bundle} headRef={headRef} stageRef={stageRef} pointerRef={pointerRef} controls={controls} look={look} still={still} running={running} rootRef={rootRef} fpsRef={fpsRef} onError={onError} onChapter={setActiveChapter} /></WebGLBoundary></div><div className="story-rail-holder"><ChapterRail label={bundle.copy.railLabel} items={items} active={activeChapter} /></div><Overlay links={bundle.links ?? []} controls={controls} /></> : null}
     {bundle.looks.length > 1 ? <div className="story-bar"><div data-story-top><LookSwitch looks={bundle.looks} active={look.id} defaultLook={bundle.defaultLook ?? bundle.looks[0].id} label={bundle.copy.lookLabel} /></div></div> : null}
-    <div className="story-content"><ControlsProvider controls={controls} sceneOff={!on}>{children}</ControlsProvider></div><Meter value={fpsRef} label={bundle.copy.fpsLabel} />
-  </div>;
+    <div className="story-content">{children}</div><Meter value={fpsRef} label={bundle.copy.fpsLabel} />
+  </div></ControlsProvider>;
 }

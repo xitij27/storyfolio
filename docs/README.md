@@ -35,6 +35,10 @@ The [implemented tooling and diagnostic evidence](../evals/runs/build-workflow-p
 now stop before final freeze, pending shared-controls and judge-transport
 decisions. No paid run is authorized. The earlier
 [planning record](history/2026-10-11-build-workflow-planning.md) remains intact.
+The author subsequently [approved the shared-controls repair](history/2026-10-11-shared-controls-approval.md).
+Its [engineering study](../evals/engine/shared-controls-1/findings.md) records
+the narrow provider fix and local verification. Judge transport still needs
+a decision; final freeze and paid evaluation remain separate gates.
 
 For a new session, read:
 

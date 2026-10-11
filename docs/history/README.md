@@ -16,6 +16,12 @@ preserves `75d1f35` verbatim.
 
 ## Capture and scope
 
+The [shared-controls approval](2026-10-11-shared-controls-approval.md)
+records the next "yes" specifically as authorization to repair the shipped
+engine provider scope, without paid execution or a push. Its
+[preceding handover](2026-10-11-before-shared-controls-handover.md)
+preserves `39ceeb7` verbatim.
+
 Captured on 10 October 2026 from the working tree at commit
 `4c1007b6607075e895c892931f72db00ef5d7b5c`. The handover included the other
 session's uncommitted existing-portfolio review direction and final verification.
