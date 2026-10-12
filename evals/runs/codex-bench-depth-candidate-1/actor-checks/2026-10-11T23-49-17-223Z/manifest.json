@@ -1,0 +1,39 @@
+{
+  "started": "2026-10-11T23:49:17.228Z",
+  "node": "v22.22.1",
+  "scope": "selected cases",
+  "contract": {
+    "ids": [
+      "question",
+      "scheduling",
+      "bench",
+      "evidence",
+      "scope"
+    ],
+    "lookIds": [
+      "light"
+    ]
+  },
+  "probes": {},
+  "matrix": [
+    {
+      "name": "light-reduced",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--assert-still=300"
+      ]
+    }
+  ],
+  "commands": [],
+  "results": [],
+  "complete": false
+}

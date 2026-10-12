@@ -1,0 +1,73 @@
+// Unpaid frozen checker execution of the settled, timed-out partial actor artifact.
+import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
+import { createWriteStream } from "node:fs";
+import { readFile } from "node:fs/promises";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import { hash, json, verifyInputs, writeNew } from "../../../../../lib/build.mjs";
+
+assert.equal(process.argv.length, 2, "No arguments accepted");
+const review = dirname(fileURLToPath(import.meta.url)), run = resolve(review, ".."), inputs = resolve(run, "../../inputs");
+const meta = JSON.parse(await readFile(join(run, "meta.json"), "utf8"));
+const actorBytes = await readFile(join(run, "turns/01/result.json"));
+const actor = JSON.parse(actorBytes);
+assert.equal(actor.complete, false, "Partial audit requires incomplete actor");
+assert.equal(actor.timedOut, true, "Partial audit requires recorded actor timeout");
+assert.ok(Object.keys(actor.snapshot?.files ?? {}).length > 0, "Saved actor snapshot required");
+const study = resolve(run, "../../../stage-3-comparison-1");
+const recorderBytes = await readFile(join(study, "candidate-actor-command/result.json"));
+const recorder = JSON.parse(recorderBytes);
+const terminalBytes = await readFile(join(study, "candidate-actor-tool-poll-07.json"));
+const terminal = JSON.parse(terminalBytes);
+assert.equal(recorder.code, 1);
+assert.equal(recorder.signal, null);
+assert.equal(terminal.exit_code, 1);
+assert.equal(terminal.session_id, undefined, "Actor session must be closed");
+assert.equal(JSON.parse(terminal.output).finished, recorder.finished);
+for (const stream of ["stdout", "stderr"]) assert.equal(hash(await readFile(join(study, "candidate-actor-command", stream + ".log"))), recorder[stream + "Sha256"]);
+for (const [path, record] of Object.entries(actor.snapshot.files)) {
+  const bytes = await readFile(join(run, "turns/01/snapshot/files", path));
+  assert.equal(hash(bytes), record.hash, "Retained snapshot changed: " + path);
+  assert.equal(bytes.length, record.size);
+}
+await writeNew(join(review, "partial-eligibility.json"), json({ schemaVersion: 1, scope: "One independent audit of the retained partial timed-out actor artifact. Any technical or visual result does not erase actor timeout or establish completed delivery.", actor: { complete: actor.complete, timedOut: actor.timedOut, durationMs: actor.durationMs, usage: actor.usage, sourceFiles: Object.keys(actor.snapshot.files).length, resultSha256: hash(actorBytes), snapshotBytesVerified: true }, lifecycle: { recorderSha256: hash(recorderBytes), terminalToolSha256: hash(terminalBytes), finished: recorder.finished, exitCode: terminal.exit_code, sessionClosed: true }, unexpectedDirectories: { paths: [".aws", ".codex"], readOnlyInspection: "Both empty directories. No credential contents read. Not part of file inventory." }, noRetries: true, modelCalls: 0 }));
+const frozen = await verifyInputs(inputs);
+assert.equal(meta.inputDigest, frozen.digest);
+const capabilities = JSON.parse(await readFile(join(inputs, "capabilities.json"), "utf8"));
+assert.equal(process.execPath, capabilities.node.executable);
+assert.equal(process.version, capabilities.node.version);
+const environment = { ...capabilities.environment, TMPDIR: "/var/tmp/storyfolio-comparison-runtime-20261012", NEXT_TELEMETRY_DISABLED: "1" };
+const { captureSource } = await import(pathToFileURL(join(inputs, "implementation/evals/lib/build-capture.mjs")));
+const before = await captureSource(meta.work);
+const beforeFiles = Object.fromEntries(before.files.map(file => [file.path, { type: "file", hash: file.sha256, size: file.bytes }]));
+const saved = actor.snapshot.files;
+const changed = [...new Set([...Object.keys(saved), ...Object.keys(beforeFiles)])].filter(path => json(saved[path]) !== json(beforeFiles[path]));
+await writeNew(join(review, "source-before.json"), json(before));
+await writeNew(join(review, "saved-source-comparison.json"), json({ actorResultSha256: hash(actorBytes), actorFiles: Object.keys(saved).length, captureFiles: before.files.length, changed, exactSourceSetAndBytesMatch: changed.length === 0 }));
+assert.equal(changed.length, 0, `Runtime differs from saved actor source: ${changed.join(", ")}`);
+const args = [join(inputs, "implementation/evals/check-build.mjs"), `--workspace=${meta.work}`, `--expectations=${join(inputs, "expectations.json")}`, `--out=${join(run, "acceptance")}`, "--dependencies=/tmp/storyfolio-build-capability-20261011"];
+const started = Date.now();
+await writeNew(join(review, "command.json"), json({ schemaVersion: 1, modelCalls: 0, started: new Date(started).toISOString(), executable: process.execPath, cwd: meta.work, args, environment, inputDigest: frozen.digest, wrapperSha256: hash(await readFile(fileURLToPath(import.meta.url))), scope: "Independent partial-artifact acceptance after actor timeout, using unmodified frozen coordinator code, expectations and actor source; no model calls or retries; does not establish completed delivery" }));
+const signals = createWriteStream(join(review, "signals.jsonl"), { flags: "wx" });
+const execution = await new Promise(done => {
+  const child = spawn(process.execPath, args, { cwd: meta.work, env: { ...process.env, ...environment }, stdio: ["ignore", "pipe", "pipe"] });
+  let stdout = "", stderr = "";
+  for (const signal of ["SIGTERM", "SIGINT"]) process.on(signal, () => {
+    signals.write(JSON.stringify({ at: new Date().toISOString(), signal, wrapperPid: process.pid, childPid: child.pid ?? null, sender: "unknown", action: "forward to frozen checker" }) + "\n");
+    if (child.pid && child.exitCode === null) child.kill(signal);
+  });
+  child.stdout.on("data", data => { stdout += data; process.stdout.write(data); });
+  child.stderr.on("data", data => { stderr += data; process.stderr.write(data); });
+  child.once("error", error => done({ code: null, signal: null, error: String(error), stdout, stderr }));
+  child.once("close", (code, signal) => done({ code, signal, stdout, stderr }));
+});
+await new Promise(done => signals.end(done));
+await writeNew(join(review, "process.json"), json({ ...execution, finished: new Date().toISOString(), durationMs: Date.now() - started, signalsSha256: hash(await readFile(join(review, "signals.jsonl"))) }));
+const after = await captureSource(meta.work);
+await writeNew(join(review, "source-after.json"), json(after));
+const unchanged = before.digest === after.digest;
+await writeNew(join(review, "source-comparison.json"), json({ sourceUnchanged: unchanged, beforeDigest: before.digest, afterDigest: after.digest, actorSourceMatchBefore: true, sourceFiles: before.files.length }));
+await verifyInputs(inputs);
+console.log(json({ code: execution.code, signal: execution.signal, sourceUnchanged: unchanged, result: join(run, "acceptance/manifest.json"), processEvidence: join(review, "process.json") }));
+process.exitCode = execution.code === 0 && unchanged ? 0 : 1;

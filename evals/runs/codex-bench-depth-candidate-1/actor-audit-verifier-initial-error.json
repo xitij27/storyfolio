@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "modelCalls": 0,
+  "command": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node evals/runs/codex-bench-depth-candidate-1/verify-actor-audit.mjs --save",
+  "exitCode": 1,
+  "meaning": "Initial derivative verifier incorrectly expected only three unmatched command starts. The full saved stream also contains item_30, the earlier dev server. No source or frozen evidence was altered and no successful derivative was written by this attempt.",
+  "toolOutput": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   'item_30',\n    'item_74',\n    'item_75',\n    'item_76'\n  ]\n\n    at file:///home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/verify-actor-audit.mjs:39:8 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: [ 'item_30', 'item_74', 'item_75', 'item_76' ],\n  expected: [ 'item_74', 'item_75', 'item_76' ],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v22.22.1\n"
+}

@@ -353,6 +353,12 @@ facts and fixed focus-only skip navigation. Its [protocol](builds/bench-depth-2/
 proposes two fresh one-turn builds with at most one judge each. The author
 has since [approved that envelope](../docs/history/2026-10-12-stage-3-comparison-approval.md).
 The [comparison record](runs/stage-3-comparison-1/findings.md) tracks execution.
+The baseline completed with two remaining visual misses. Its supported
+two-paragraph candidate timed out, and independent partial-source capture
+later received an external termination signal after desktop/phone passes.
+No candidate judge ran because the complete-packet gate failed. Preserve
+both interruptions and all partial evidence; do not resume or retry either
+actor, replace the partial capture or infer a further paid allowance.
 No model call or frozen workspace is created by its read-only verifier:
 
 ```bash

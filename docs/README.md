@@ -88,6 +88,11 @@ planning-only, with two evidence-backed visual paragraphs drafted but not
 applied at that checkpoint. The author then [approved the bounded comparison](history/2026-10-12-stage-3-comparison-approval.md).
 The [new comparison record](../evals/runs/stage-3-comparison-1/findings.md)
 tracks the actual baseline, any justified candidate and remaining limits.
+The baseline completed but retained both targeted visual misses. The
+two-paragraph candidate timed out; its independent desktop/phone checks
+pass, with visible improvements, but later browser capture was interrupted.
+There is no complete candidate acceptance or candidate judge score. Stage 3
+remains open, with no retry or new paid allowance inferred.
 
 For a new session, read:
 

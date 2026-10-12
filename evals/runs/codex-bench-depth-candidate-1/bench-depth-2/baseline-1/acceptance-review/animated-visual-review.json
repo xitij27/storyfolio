@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "next_plan",
+  "date": "2026-10-12",
+  "scope": "All available originals from the sole interrupted independent capture of a timed-out partial actor artifact. Not a completed comparison, actor delivery, seven-mode acceptance or Stage 3 proof.",
+  "actor": {
+    "complete": false,
+    "timedOut": true,
+    "durationMs": 900055,
+    "usage": null
+  },
+  "capture": {
+    "complete": false,
+    "passed": false,
+    "manifest": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/manifest.json",
+    "manifestSha256": "b21f8baa6e9568c71e7d0cde2957c4e2405eff4018c09594de76f2fa23296572",
+    "sourceDigest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "sourceFiles": 184,
+    "sourceUnchanged": true,
+    "interruption": {
+      "signal": "SIGTERM",
+      "at": "2026-10-12T00:00:05.043Z",
+      "sender": "unknown"
+    }
+  },
+  "coverage": {
+    "availableOriginalsReviewed": 118,
+    "availableOriginals": 118,
+    "allAvailableOriginalsReviewed": true,
+    "completeAcrossRequiredModes": false,
+    "desktop": {
+      "originals": 62,
+      "rests": 5,
+      "travel": 24,
+      "numbered": 10,
+      "controls": 23,
+      "technical": "pass"
+    },
+    "mobile": {
+      "originals": 42,
+      "rests": 5,
+      "travel": 24,
+      "numbered": 10,
+      "controls": 3,
+      "technical": "pass"
+    },
+    "short": {
+      "originals": 14,
+      "rests": 4,
+      "travel": 0,
+      "numbered": 10,
+      "controls": 0,
+      "technical": "interrupted, frozen report failed"
+    },
+    "shortMissing": [
+      "rest-scope",
+      "all forward and reverse travel samples",
+      "all control trial images"
+    ],
+    "unobservedModes": [
+      "reduced-motion",
+      "no-webgl",
+      "no-javascript",
+      "context-loss"
+    ]
+  },
+  "targets": [
+    {
+      "id": "settled-relationship-and-evidence",
+      "status": "pass",
+      "scope": "Observed bench and evidence rests in desktop, mobile and partial short only.",
+      "finding": "Command and observation panels flank the board response and connect visibly; board contacts meet the fixture access base. Evidence panels distinguish measured current plus assumed interval supporting projection from a separate observed bench run, with explicit limits. Accessible prose remains."
+    },
+    {
+      "id": "old-new-face-word-superimposition",
+      "status": "pass",
+      "scope": "No such collision observed in 24 desktop and 24 mobile travel originals, all four adjacent intervals, both directions, positions 0.2, 0.5 and 0.8. Short travel is unobserved.",
+      "finding": "Board and evidence labels remain stable; the fixture-to-scope wording is not visibly doubled in the retained samples. Mobile scrolling prose overlays a faded lower scene at intermediate positions, so this narrow result is not continuous readability of every scene word."
+    },
+    {
+      "id": "full-planned-comparison",
+      "status": "unobserved",
+      "scope": "Actor timed out, capture interrupted, short travel/controls and all four later modes absent.",
+      "finding": "No whole-scope visual acceptance or successful matched comparison established."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "backdrop",
+      "status": "pass",
+      "scope": "Observed settled bench/evidence rests only",
+      "finding": "Scene communicates command, response, access and observation, and distinct evidence provenance, rather than isolated names."
+    },
+    {
+      "id": "depth",
+      "status": "pass",
+      "scope": "All five meanings visible in retained numbered images in each captured viewport",
+      "finding": "Opening question, ordered cycle, bench check, evidence distinction and bounded ending develop a supported answer; contribution and qualification limits remain visible."
+    },
+    {
+      "id": "swap",
+      "status": "pass",
+      "scope": "Retained output only",
+      "finding": "Board loop, access contacts, command and observation composition and projection/observed displays are work-specific. This does not establish broad non-sheet build capability."
+    },
+    {
+      "id": "detail-and-hierarchy",
+      "status": "pass",
+      "scope": "Observed settled active artifacts, copy and available control images only",
+      "finding": "Scheduling enlarges the loop and evidence enlarges the two evidence panels. Active relationships are inspectable. Secondary phone labels are small. At phone travel the faded lower apparatus and some words are covered by foreground copy; no assertion of continuous scene-word readability."
+    },
+    {
+      "id": "spatial-quality",
+      "status": "pass",
+      "scope": "Desktop/mobile sampled motion and available short settled images only",
+      "finding": "A recognizable assembly persists; composition and scale emphasize the relevant relationship. Sampled old/new main label collision is absent. Some connections are not visible in travel/control-after frames. Short motion remains unobserved."
+    },
+    {
+      "id": "phone-and-still-modes",
+      "status": "unobserved",
+      "scope": "Phone captured, four required still/failure modes absent",
+      "finding": "Phone has meaningful separated scene and complete prose at rests, with travel overlay caveat. Reduced-motion, no-WebGL, no-JavaScript and actual context-loss behavior cannot be assessed."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/desktop/rest-bench.png",
+      "bytes": 229075,
+      "sha256": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/desktop/rest-evidence.png",
+      "bytes": 232609,
+      "sha256": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/desktop/travel-forward-bench-evidence-0.5.jpg",
+      "bytes": 116070,
+      "sha256": "ae107d167170f7d4a5e2e731cf4a246b186d5b55831c07d9262860ff5810cc6d",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/desktop/travel-reverse-evidence-bench-0.5.jpg",
+      "bytes": 112915,
+      "sha256": "ada63ef798619608675cdd25e28acf9abba1a5ee52f06c97ff63563c3187bbc5",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/desktop/travel-forward-evidence-scope-0.5.jpg",
+      "bytes": 117931,
+      "sha256": "f319aef774dc6d156d3032e943b4a9bd480588a2489b5da31806c87052af4fea",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/mobile/rest-bench.png",
+      "bytes": 109406,
+      "sha256": "8f6b11eb1cd2f0d9ca99c5fede62a2c1411db9bfb9f749db773a4638494732c6",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/mobile/rest-evidence.png",
+      "bytes": 112883,
+      "sha256": "5e526669886820d5cf3f4144fc93002e03fc8f7fd216624fbfdfbfe28dda4af1",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/mobile/travel-forward-bench-evidence-0.5.jpg",
+      "bytes": 68639,
+      "sha256": "bd9efece465ae62ddfdfa0526eca71dc4d42cbb562244b74cdb6017e3ad25e49",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/mobile/travel-forward-bench-evidence-0.8.jpg",
+      "bytes": 75345,
+      "sha256": "d86aac4d7ce1387c564ed6bf71dc71eb56ce7fe9758c6f844e65a35cbfcfb90c",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/mobile/travel-forward-evidence-scope-0.8.jpg",
+      "bytes": 75999,
+      "sha256": "6ea7b171f9f3c8096c45c9688e89f7910f75ec363ec37cfd10a39ea259d6e7e4",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/mobile/travel-reverse-scope-evidence-0.5.jpg",
+      "bytes": 72710,
+      "sha256": "bd0d499a9725d8687bc1d556111c5c0bbcec940281e6a2927789f30a4516307b",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/short/rest-bench.png",
+      "bytes": 192158,
+      "sha256": "72d46664e143f85725b116e2d6f34652f91c298238265ff1a7a027501d82eba7",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/short/rest-evidence.png",
+      "bytes": 199576,
+      "sha256": "f94da2b343252b0b667e6b44d415baa182f9b4ff457d02bbb07fe3c068b1f104",
+      "viewMethod": "view_image original"
+    },
+    {
+      "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance/short/04-scope-end.png",
+      "bytes": 213555,
+      "sha256": "8bad18646b89706dd1bbe419f4464c5847da7792fd9324919d42f7cde37392fe",
+      "viewMethod": "view_image original"
+    }
+  ],
+  "inventory": {
+    "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance-review/animated-review/viewed-images.json",
+    "sha256": "5aeca535894f945b873e7f147a686fb0b143caabc31c8df1cc26d5469a281505"
+  },
+  "integrity": {
+    "path": "evals/runs/codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance-review/partial-verification.json",
+    "sha256": "176b4df840cd4cc0893e8343747d00bd5b3df7e64092150fe83701d4ee8477eb",
+    "meaning": "Exact 118 original paths/hashes, all 134 capture artifacts and 184 unchanged source files verified. Integrity is not visual acceptance."
+  },
+  "attribution": "These are observed differences in the retained candidate artifact, not proof that the two paragraphs caused every difference. A single pair with both paragraphs changed cannot isolate their effects. Timeout and external capture interruption are separate from visual findings; sender of SIGTERM is unknown.",
+  "limits": [
+    "No candidate judge result; incomplete-packet gate remains unmet.",
+    "No every-frame, physical-phone, generalized skill success or author approval claim.",
+    "No actor/source edits, browser launches, model calls, retries, continuations, tests or process cleanup by this reviewer."
+  ]
+}

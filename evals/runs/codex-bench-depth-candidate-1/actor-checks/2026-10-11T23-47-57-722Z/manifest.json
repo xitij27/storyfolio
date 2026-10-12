@@ -1,0 +1,76 @@
+{
+  "started": "2026-10-11T23:47:57.727Z",
+  "node": "v22.22.1",
+  "scope": "selected cases",
+  "contract": {
+    "ids": [
+      "question",
+      "scheduling",
+      "bench",
+      "evidence",
+      "scope"
+    ],
+    "lookIds": [
+      "light"
+    ]
+  },
+  "probes": {},
+  "matrix": [
+    {
+      "name": "light-reduced",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--assert-still=300"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "46869"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:46869/?look=light",
+      "--out=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-47-57-722Z/light-reduced",
+      "--report=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-47-57-722Z/light-reduced/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--reduced-motion",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--assert-still=300",
+      "--wait=1200"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-reduced",
+      "code": 0,
+      "signal": null,
+      "report": "light-reduced/report.json",
+      "problems": []
+    }
+  ],
+  "complete": true,
+  "finished": "2026-10-11T23:48:50.974Z"
+}

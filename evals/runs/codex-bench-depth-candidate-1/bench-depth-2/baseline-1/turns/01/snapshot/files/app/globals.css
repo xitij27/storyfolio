@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+/* One appearance: a quiet laboratory page, with the apparatus beside its explanation. */
+.story-title { font-family: system-ui, sans-serif; font-weight: 560; font-size: clamp(2rem,3.5vw,3.7rem); letter-spacing: -.055em; line-height: 1.05; }
+.story-caption { padding: 3rem clamp(1.25rem,4vw,4rem); }
+.story-caption-text { max-width: min(36vw,31rem); }
+.story-body { line-height: 1.5; font-size: 1rem; }
+.story-detail { font-size: .95rem; line-height: 1.5; margin: 1rem 0 0; }
+.story-note { border-top: 1px solid #a8b5ab; padding-top: .8rem; font-size: .75rem; line-height: 1.45; }
+.story-kicker { text-transform: uppercase; letter-spacing: .12em; }
+.story-rail { top: 1.2rem; transform: none; }
+.story-rail ol { display:flex; gap:.2rem; }
+.story-rail a { min-height:44px; align-items:center; }
+.story-rail a span:first-child { display:none; }
+.story[data-scene="off"] .story-caption-text { max-width: 42rem; }
+@media(max-width:767px) {
+ .story-caption-text { max-width: 100%; }
+ .story-caption { padding: 1rem 1.25rem 1.4rem; }
+ .story-title { font-size: 1.8rem; max-width: 22rem; }
+ .story-body { font-size:.88rem; line-height:1.4; margin-top:.8rem; }
+ .story-detail { font-size:.8rem; line-height:1.4; margin-top:.65rem; }
+ .story-note { font-size:.65rem; margin-top:.65rem; padding-top:.6rem; }
+}
+@media(max-height:544px) and (min-width:768px) {
+ .story-caption-text { max-width: 36vw; }
+ .story-caption { position:sticky; padding:1rem 2rem; }
+ .story-title { font-size:1.9rem; }
+ .story-body,.story-detail {font-size:.8rem;line-height:1.4;margin-top:.6rem;}
+ .story-note {font-size:.65rem;margin-top:.6rem;padding-top:.5rem;}
+}
+/* The explanation remains readable between settled beats as well. */
+.story-caption-text { animation: none !important; }

@@ -24,10 +24,19 @@ instruction drafts. The author subsequently [approved the bounded comparison](hi
 with "Approve this bounded comparison". The fresh baseline completed its
 single turn in 645.672 seconds. All seven technical modes pass and all
 253 original images are reviewed, but both targeted visual gaps remain.
-Two supported conditional build-review paragraphs are now selected for
-the matched candidate. The [actual outcomes](../evals/runs/stage-3-comparison-1/findings.md)
+Two supported conditional build-review paragraphs were tested and are
+[retained provisionally](../evals/runs/stage-3-comparison-1/candidate-disposition.md).
+The [actual outcomes](../evals/runs/stage-3-comparison-1/findings.md)
 keep technical, text and visual results separate, including the judge's
-outer-status discrepancy. The candidate has not yet run. Stage 3 remains
+outer-status discrepancy and a disclosed install-only setup variance. The
+candidate's single paid turn hit its 15-minute deadline after commit
+`a32813e`, without a final reply. Its 184-file partial source is saved.
+Independent type, lint, build, desktop and phone checks pass, but browser
+capture was then externally interrupted; short-height and four later modes
+remain incomplete or unobserved. The complete-packet gate blocks a candidate
+judge, so none ran. Available images show narrower visual improvements,
+not a full acceptance result. No retry or continuation is allowed. All 342
+repository tests still pass. Stage 3 remains
 incomplete and normal skill use still ends at the approved storyboard.
 
 The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
@@ -590,10 +599,23 @@ These deadlines are not a hard token-cost cap. Do not ask for this same
 approval again, reopen the spent old cohort or exceed the new envelope.
 The two supported visual paragraphs were committed as a conditional skill
 candidate at `e7a7230`, after the baseline review. The main skill is 799
-words and still planning-only in ordinary use. Fresh candidate preparation
-is underway; use the comparison findings and actual cohort artifacts for
-the latest lifecycle. Do not infer candidate success before its completed
-technical, source/access, text and original-image assessments.
+words and still planning-only in ordinary use. Fresh candidate setup is
+verified with the explicitly recorded installer variance, and its single
+actor turn timed out at 900,055 ms without a final reply. Its last source
+edit followed its earlier passing checks. Independent checks of the saved
+184-file source pass type/lint/build and desktop/phone, but their browser
+capture was externally interrupted after 361,175 ms, with unknown signal
+origin. Short-height coverage is partial and four later modes are unobserved.
+No candidate judge ran because the complete-packet gate was not met.
+Use comparison findings and cohort artifacts for exact visual observations
+and limits. Do not retry, continue the actor or infer completion from
+narrower technical or visual successes. Terminal token usage is unknown.
+All 118 retained originals were individually reviewed. The two paragraphs
+remain provisional, with planning regression and normal build entry still
+untested. The next evidence gap is final-source browser coverage. Another
+verification attempt requires explicit new scope under the no-retry rule;
+it must preserve this interrupted capture and the actor timeout. No further
+paid allowance is inferred, and the candidate judge slot was not used.
 
 Follow the baseline findings' quality attribution before choosing the next
 behavioral experiment. Source-level passes do not establish a convincing

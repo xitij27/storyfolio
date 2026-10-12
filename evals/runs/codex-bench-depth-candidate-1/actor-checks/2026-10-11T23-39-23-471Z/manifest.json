@@ -1,0 +1,253 @@
+{
+  "started": "2026-10-11T23:39:23.476Z",
+  "node": "v22.22.1",
+  "scope": "full matrix",
+  "contract": {
+    "ids": [
+      "question",
+      "scheduling",
+      "bench",
+      "evidence",
+      "scope"
+    ],
+    "lookIds": [
+      "light"
+    ]
+  },
+  "probes": {},
+  "matrix": [
+    {
+      "name": "light-wide",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "light-short",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1280x720",
+        "--expect-scene=on",
+        "--late-shaders=40000"
+      ]
+    },
+    {
+      "name": "light-phone",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=390x844",
+        "--touch",
+        "--expect-scene=on"
+      ]
+    },
+    {
+      "name": "light-reduced",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--reduced-motion",
+        "--expect-scene=on",
+        "--positions=start,mid,end",
+        "--assert-still=300"
+      ]
+    },
+    {
+      "name": "light-no-webgl",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--expect-look=light",
+        "--size=1440x900",
+        "--no-webgl",
+        "--expect-scene=off"
+      ]
+    },
+    {
+      "name": "no-js",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--no-js",
+        "--expect-selector=h1",
+        "--hidden=canvas,.story-look-switch,.story-control"
+      ]
+    },
+    {
+      "name": "context-loss",
+      "look": "light",
+      "flags": [
+        "--expect-beats=5",
+        "--expect-ids=question,scheduling,bench,evidence,scope",
+        "--beats",
+        "--inside=.story-control",
+        "--size=1440x900",
+        "--lose-context",
+        "--expect-scene=off"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+      "build"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+      "start",
+      "--hostname",
+      "127.0.0.1",
+      "--port",
+      "43075"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:43075/?look=light",
+      "--out=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-wide",
+      "--report=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-wide/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--late-shaders=40000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:43075/?look=light",
+      "--out=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-short",
+      "--report=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-short/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1280x720",
+      "--expect-scene=on",
+      "--late-shaders=40000"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:43075/?look=light",
+      "--out=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-phone",
+      "--report=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-phone/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=390x844",
+      "--touch",
+      "--expect-scene=on"
+    ],
+    [
+      "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/scripts/shoot.mjs",
+      "--url=http://127.0.0.1:43075/?look=light",
+      "--out=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-reduced",
+      "--report=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/checks/2026-10-11T23-39-23-471Z/light-reduced/report.json",
+      "--expect-beats=5",
+      "--expect-ids=question,scheduling,bench,evidence,scope",
+      "--beats",
+      "--inside=.story-control",
+      "--expect-look=light",
+      "--size=1440x900",
+      "--reduced-motion",
+      "--expect-scene=on",
+      "--positions=start,mid,end",
+      "--assert-still=300"
+    ]
+  ],
+  "results": [
+    {
+      "name": "light-wide",
+      "code": 0,
+      "signal": null,
+      "report": "light-wide/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-short",
+      "code": 0,
+      "signal": null,
+      "report": "light-short/report.json",
+      "problems": []
+    },
+    {
+      "name": "light-phone",
+      "code": 1,
+      "signal": null,
+      "report": "light-phone/report.json",
+      "problems": [
+        "HTTP 500: http://127.0.0.1:43075/_next/static/chunks/0p53-nrz780vh.js",
+        "request failed (net::ERR_ABORTED): http://127.0.0.1:43075/_next/static/chunks/0p53-nrz780vh.js",
+        "expected data-scene=\"on\", found \"off\""
+      ]
+    },
+    {
+      "name": "light-reduced",
+      "code": 1,
+      "signal": null,
+      "report": "light-reduced/report.json",
+      "problems": [
+        "HTTP 500: http://127.0.0.1:43075/_next/static/chunks/0p53-nrz780vh.js",
+        "request failed (net::ERR_ABORTED): http://127.0.0.1:43075/_next/static/chunks/0p53-nrz780vh.js",
+        "question: no canvas for temporal check",
+        "question: no canvas for temporal check",
+        "question: no canvas for temporal check",
+        "scheduling: no canvas for temporal check",
+        "scheduling: no canvas for temporal check",
+        "scheduling: no canvas for temporal check",
+        "bench: no canvas for temporal check",
+        "bench: no canvas for temporal check",
+        "bench: no canvas for temporal check",
+        "evidence: no canvas for temporal check",
+        "evidence: no canvas for temporal check",
+        "evidence: no canvas for temporal check",
+        "scope: no canvas for temporal check",
+        "scope: no canvas for temporal check",
+        "scope: no canvas for temporal check",
+        "expected data-scene=\"on\", found \"off\""
+      ]
+    }
+  ],
+  "complete": false
+}

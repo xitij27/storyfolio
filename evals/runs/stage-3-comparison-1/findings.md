@@ -1,5 +1,11 @@
 # Bounded Stage 3 visual comparison
 
+Current disposition: the bounded study is closed with an incomplete
+candidate result, not a successful complete comparison. See
+[the final comparison](#final-comparison-and-disposition) and
+[the provisional skill decision](candidate-disposition.md). Historical
+entries below preserve what was known at each checkpoint.
+
 12 October 2026. The [author approved](../../../docs/history/2026-10-12-stage-3-comparison-approval.md)
 the [prepared comparison](../../builds/bench-depth-2/protocol.md) after local
 development at `8f1eec3`. This study records both arms without rewriting
@@ -257,3 +263,178 @@ original-image and install-lifecycle evidence. The
 again pass all 342 tests and skill/people/fixture checks, with no paid
 process running during this test command. Candidate launch is now eligible
 within the existing approved envelope, not a new or expanded allowance.
+
+## Candidate process
+
+Setup and its explicit variance disposition were committed as `a32813e`
+before launch. The candidate's single actor command started at
+`2026-10-11T23:34:30.285Z`, coordinator session 81752. Its
+[launch return](candidate-actor-tool-launch.json) and
+[command](candidate-actor-command/command.json) preserve exact execution.
+The launcher explicitly leaves the telemetry flag unset, matching the
+baseline actor, and restores the same frozen environment and TMPDIR.
+The actor is running at this entry with a 900,000 ms deadline, not yet
+complete or failed. No continuation, retry or candidate judge has launched.
+Wait for terminal settlement before independent acceptance or judgement.
+
+Live access review through actor `item_16` confirms the complete 4,790-byte
+candidate skill was printed in `item_2` before implementation, followed by
+the supplied factual/story/environment records. No held-out content read
+is observed in that prefix; it is not a final access audit. The actor's
+local `item_15` adapts `components/story/face-material.ts` to select a face
+at the transition midpoint rather than blend both textures. The supplied
+frozen engine and repository engine remain unchanged. Final assessment
+must record this actor-owned implementation adaptation and its actual
+visual/runtime consequences, not assume that final copied engine source
+is unchanged or claim a repository engine fix.
+
+### Candidate deadline and partial-artifact assessment
+
+The single candidate actor settled at its deadline. Its saved result is
+`complete: false`, `timedOut: true`, duration 900,055 ms, `usage: null`,
+with no final reply. The final snapshot contains 184 source files. The
+[terminal tool return](candidate-actor-tool-poll-07.json) closes session
+81752 with exit 1. The [recorder result](candidate-actor-command/result.json)
+also records child exit 1, no signal, finish `2026-10-11T23:49:32.350Z`
+and 902,065 ms including wrapper overhead. There is no retry or
+continuation. Missing terminal token usage means unknown cost, not zero.
+
+The actor's late progress message raises a possible empty-scene issue in
+its own reduced-motion images despite passing automated checks. That is
+an unresolved actor observation, not an independent diagnosis or a fixed
+defect. Full access/source audit and one independent frozen-checker capture
+of the retained partial artifact follow. Original complete-only coordinator
+wrappers remain untouched; a separately recorded partial-artifact wrapper
+must require the settled timeout and exact source identity. This does not
+change the frozen checker, expectations, actor source or completion result.
+Any technical or visual successes are findings about partial output, not
+completion within the approved time limit. No candidate judge has run.
+
+The complete saved actor stream ends at line 145 without `turn.completed`.
+Its last source-edit command adds `preserveDrawingBuffer` for still scenes;
+that command and subsequent type/lint commands have no saved completion
+events. Earlier actor-owned seven-mode passes therefore do not validate
+the final revision. The independent partial-artifact capture verifies all
+184 retained source files, digest
+`830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7`.
+Its final-source type generation, type checking, lint and production build
+pass. Browser capture is still running at this entry. The
+[eligibility record](../codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance-review/partial-eligibility.json)
+and adjacent exact wrapper diff keep this separate from completed delivery.
+
+The [settled actor audit](../codex-bench-depth-candidate-1/actor-audit.md)
+verifies all 124 frozen inputs, 367 turn artifacts and exact final source.
+It records nine source additions and 21 modifications relative to the
+actual 175-file before-turn snapshot. The final application changes five
+core components, plus local check scheduling; none is a coordinator edit
+to the shared engine or frozen checker. All skill and factual inputs stay
+unchanged. No held-out solution read is observed in the complete saved
+stream, with filesystem-isolation and telemetry limits retained. The
+actor-check archive preserves 358 files, 55,326,634 bytes and four empty
+directories with exact provenance. Four command starts lack completion
+events, including an earlier development server. The actor handover is
+honest about its reduced-motion concern but predates the last rendering
+edit. Its earlier passing commands are not final-revision validation.
+
+### Independent candidate capture interrupted
+
+The sole independent capture also stopped, separately from the actor's
+15-minute timeout. The wrapper records external `SIGTERM` at
+`2026-10-12T00:00:05.043Z`, sender unknown, forwarded to the frozen checker.
+Session 18520 closed with exit 1; the wrapper records 361,175 ms and
+finish `2026-10-12T00:00:05.277Z`. The final manifest remains
+`complete: false`, `passed: false`, with `Acceptance check interrupted`.
+Desktop and mobile technical modes pass. Short-height is interrupted;
+reduced motion, no WebGL, no JavaScript and context loss are unobserved.
+Missing short-height fields are interruption evidence, not established
+site regressions. No second capture, source fix or retry follows.
+
+Root and all three collaborating reviewers report no cleanup, test suite,
+kill or signal command at the interruption time. Root's nearby commands
+were original-image views, image hashes, evidence-file edits and read-only
+inspection. These accounts do not identify the sender or prove the cause.
+No platform diagnosis is inferred from elapsed time or command overlap.
+Read-only inspection of the frozen checker finds 180-second limits on
+individual build commands, cleared on child completion, and an untimed
+server launch. The coordinator wrapper has no six-minute deadline. Its
+SIGTERM record proves receipt and forwarding, not the sender; these source
+checks do not reconstruct an unavailable signal-origin trace. No speculative
+process-lifecycle fix is applied to either frozen or shared tooling.
+
+The [partial integrity check](../codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance-review/partial-integrity.json)
+verifies all 134 retained artifacts, 118 original images and exact unchanged
+184-file source before, after and at verification. The manifest hash is
+`b21f8baa6e9568c71e7d0cde2957c4e2405eff4018c09594de76f2fa23296572`.
+Integrity of partial evidence is not completeness. The
+[candidate judge preflight disposition](candidate-judge-preflight.md)
+records the complete-packet gate as blocked. Its script was prepared but
+never executed. No dry invocation, paid candidate judge or candidate text
+score exists, and no evidence was trimmed to make it eligible.
+
+Repository checks ran only after the capture's terminal settlement, with
+no paid actor or judge running. [Final local checks](final-local-tests/result.json)
+pass: skill, fictional people, neutral fixture, skill-creator structural
+validation and 342/342 tests across 31 suites. The command closed with
+exit 0 at `2026-10-12T00:02:47.653Z`. These tests do not fill the missing
+candidate browser modes or resolve either process outcome.
+
+## Final comparison and disposition
+
+The [candidate visual review](../codex-bench-depth-candidate-1/bench-depth-2/baseline-1/acceptance-review/animated-visual-review.md)
+is complete for all 118 available originals: 62 desktop, 42 mobile and 14
+short. It is not complete required-mode coverage. The short capture has
+four rests, ten numbered mid/end images, no travel and no controls. All
+48 desktop/phone travel samples were reviewed, with no old/new face-word
+superimposition observed. The settled relationship/evidence target passes
+within observed rests. Phone foreground prose can still cover faded scene
+words in travel; some relationship leads disappear in reverse/control
+frames, and secondary phone labels remain small. These limits remain
+separate from the narrower targeted improvements.
+
+| Measure | Fresh baseline | Matched candidate |
+|---|---|---|
+| Actor completion | Complete, 645.672 seconds | Timed out, 900.055 seconds, no final reply |
+| Independent technical evidence | Type/lint/build and all seven browser modes pass | Type/lint/build and desktop/phone pass; short interrupted, four modes unobserved |
+| Reviewed originals | All 253 across seven modes | All 118 available, not all required coverage |
+| Settled relationships/evidence | Target fails, useful partial relationships retained | Target passes in observed rests, no complete all-mode acceptance |
+| Old/new face-word collision | Target fails in sampled travel | No collision observed in 48 desktop/phone samples; short travel absent, broader readability limits remain |
+| Text judge | 15 pass, zero fail, ten unobserved; inner result verified, outer exit anomaly retained | Not run, complete-packet preflight gate blocked |
+
+Root's [final partial verification](final-partial-verification.json) replays
+the retained frozen assessments and verifies all source, artifact and
+available-original identities without a browser or model call. It explicitly
+retains both incomplete flags. No missing mode is silently treated as passed.
+
+The [final coordinator disposition](candidate-disposition.md) keeps the
+two tested conditional paragraphs provisionally, with independent closure
+review support. No additional skill sentence, engine change or endpoint
+activation is added. The skill-creator guidance influenced the narrow
+failure-backed edit, not a claim that the new build workflow is complete.
+Both paragraphs changed together and one incomplete pair cannot establish
+causality or a general success rate. The installer-only variance and all
+access/measurement qualifications remain disclosed above.
+
+Exactly three paid harness invocations occurred: two actor turns and the
+baseline judge. No candidate judge, retry or continuation occurred. The
+candidate's token usage is unknown; the baseline's known counters are not
+presented as total comparison cost. All evidence and decisions stay in
+this repository. A limited precommit credential-marker search found no
+matches in the two study paths; it is not a security audit or proof that
+arbitrary secrets cannot exist. Raw hashed evidence is not reformatted.
+
+Stage 3 remains incomplete. New authority is needed before another
+verification attempt under the no-retry condition or further paid work.
+The immediate evidence gap is the interrupted final-source browser capture,
+not a need for another guessed skill paragraph. Any later verification
+must preserve this attempt and must not relabel the actor as completed.
+Ordinary build entry, earlier choices, planning regression and the approved
+whole-site proof retain their separate requirements. Nothing was pushed.
+
+Final precommit checks cover 937 staged paths, all 23 newly authored or
+updated Markdown/scripts, and all 1,354 files in the candidate cohort and
+comparison record. Local links exist, authored whitespace and no-em-dash
+checks pass, and every evidence file is staged or already tracked.
+The unfiltered staged whitespace check reports EOF blank lines only in
+raw logs/reply and inherited snapshot source. Those exact hashed bytes
+are preserved, not silently cleaned. No shared engine, checker or additional
+skill change was made after the candidate freeze.

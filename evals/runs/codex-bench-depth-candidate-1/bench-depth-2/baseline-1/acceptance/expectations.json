@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "taskKind": "prototype-depth",
+  "id": "bench-depth-2",
+  "route": "/",
+  "beats": [
+    {
+      "id": "question",
+      "headingLevel": 1
+    },
+    {
+      "id": "scheduling",
+      "headingLevel": 2
+    },
+    {
+      "id": "bench",
+      "headingLevel": 2
+    },
+    {
+      "id": "evidence",
+      "headingLevel": 2
+    },
+    {
+      "id": "scope",
+      "headingLevel": 2
+    }
+  ],
+  "requiredText": [],
+  "links": [],
+  "assets": [
+    "public/assets/power-states.svg",
+    "public/assets/bring-up-fixture.svg"
+  ],
+  "requiredFiles": [
+    "docs/story/assets.md",
+    "docs/story/confirmations.md",
+    "docs/story/facts.md",
+    "docs/story/handover.md",
+    "docs/story/storyboard.md"
+  ],
+  "modes": {
+    "desktop": "animated",
+    "mobile": "animated",
+    "short": "animated",
+    "reducedMotion": "animated",
+    "noWebGL": "static",
+    "noJavaScript": "static"
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    },
+    "short": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "contentConstraints": {
+    "semanticReviewRequired": true,
+    "appearanceCount": 1,
+    "objectPremise": "An illustrative physical bench apparatus, not a sheet or card metaphor. Piece count, geometry, colors, composition and mechanisms are not prescribed.",
+    "beatMeanings": [
+      {
+        "id": "question",
+        "meaning": "Explain firmware and bring-up in ordinary language, introduce Ada's code-to-physical-check contribution and the question the ending will answer."
+      },
+      {
+        "id": "scheduling",
+        "meaning": "Use the explicitly illustrative Sleep, Measure, Transmit loop to explain power-state scheduling without inventing actual firmware topology, durations or measured values."
+      },
+      {
+        "id": "bench",
+        "meaning": "Connect a command, board response, fixture access and observation; keep Ada's firmware, scheduling and fixture separate from the colleague's PCB and analogue front end."
+      },
+      {
+        "id": "evidence",
+        "meaning": "Measured sleep and transmit current plus an assumed reporting interval support a two-year projection. A separate bench run supports 72 hours observed, not the projection's validation."
+      },
+      {
+        "id": "scope",
+        "meaning": "Answer the opening through firmware/scheduling and the fixture connecting code to an observable check. Bound it to six bench-tested of forty assembled engineering samples, none sent to customers, and a preliminary emissions pass with full qualification unfinished."
+      }
+    ],
+    "forbiddenClaims": [
+      "Ada designed the PCB or analogue front end.",
+      "Two years of runtime was measured or validated by the 72-hour run.",
+      "All forty samples were bench-tested, or any sample went to customers.",
+      "There was a field deployment, product launch or customer pilot.",
+      "Full qualification or certification was completed.",
+      "A debugging incident, its diagnosis, fix ownership or measured outcome is approved for publication.",
+      "Exact current values, interval, capacity, circuit detail, additional test counts or pass/fail counts were supplied.",
+      "An illustrative drawing is an actual photo, trace, circuit diagram, firmware specification or qualification report.",
+      "Scripted/browser checks establish real author approval, a physical-phone test or measured phone performance."
+    ],
+    "note": "The checker tests structure and capabilities, not these semantic meanings or pixel quality. Newly authored headings and prose are allowed. Normal desktop, phone and short modes use the engine's 3D scene; this is a diagnostic technical requirement, not a biographical fact. Static and failure modes preserve all five explanations."
+  },
+  "provenance": {
+    "fictional": true,
+    "derivativeDate": "2026-10-12",
+    "authorization": "Fictional factual and story input inherited unchanged from bench-depth-1, with neutral tooling, enabled-skill facts and fixed skip navigation for a separately labelled comparison. Not a paid-run authorization.",
+    "sourceManifest": "evals/builds/bench-depth-2/source-manifest.json",
+    "scope": "Approved-story realization, not concept discovery, automatic activation, stop 4/5/6 completion, full journey, generality or actual author approval."
+  },
+  "focusOnlyControls": [
+    {
+      "selector": "#story-skip",
+      "name": "Skip to the answer",
+      "href": "#chapter-scope",
+      "reason": "The coordinator-reviewed inherited story-skip CSS intentionally reveals this single bypass link on keyboard focus. Its exact identity and target are supplied equally in both arms; actual keyboard reachability and target response remain required."
+    }
+  ]
+}

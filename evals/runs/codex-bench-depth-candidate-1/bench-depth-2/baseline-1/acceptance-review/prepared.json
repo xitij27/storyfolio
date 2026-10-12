@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "preparedOnly": true,
+  "captureStarted": false,
+  "awaiting": "Root confirmation that actor session81752 has fully settled and saved result exists",
+  "actorLaunch": {
+    "reportedBy": "root",
+    "sessionId": 81752,
+    "started": "2026-10-11T23:34:30.285Z",
+    "setupCommit": "a32813e"
+  },
+  "baselineScripts": [
+    {
+      "name": "run-acceptance.mjs",
+      "sha256": "c729784a4c05af4cf8c17e24afb4f86fd00a5e00503622043d052bfcb98d9110"
+    },
+    {
+      "name": "verify-acceptance.mjs",
+      "sha256": "4cf233d2e81bae73fbfdfa9b7a1507e5f5ddf342c2125b7e3be548a086d84bf2"
+    }
+  ],
+  "measurement": "Unmodified candidate frozen check-build/expectations; exact same baseline wrapper/verifier bytes",
+  "sourceAndImageCounts": "Derived dynamically from final saved actor source, frozen case reports and manifest artifacts",
+  "reviewScopes": {
+    "next_plan": [
+      "desktop",
+      "mobile",
+      "short"
+    ],
+    "acceptance": [
+      "reduced-motion",
+      "no-webgl",
+      "no-javascript",
+      "context-loss"
+    ]
+  },
+  "trustedDependencies": "/tmp/storyfolio-build-capability-20261011",
+  "modelCalls": 0,
+  "noRetries": true
+}

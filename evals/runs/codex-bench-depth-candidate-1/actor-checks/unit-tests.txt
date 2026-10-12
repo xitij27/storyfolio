@@ -1,0 +1,1033 @@
+
+> storyfolio-site@0.1.0 test
+> node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test "lib/**/*.test.ts" "scripts/*.test.mjs" "components/story/*.test.ts"
+
+TAP version 13
+# (node:30) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: passes each frame's arguments unchanged to a healthy extra
+ok 1 - passes each frame's arguments unchanged to a healthy extra
+  ---
+  duration_ms: 2.342199
+  type: 'test'
+  ...
+# Subtest: reports a synchronous frame exception once and disables that callback
+ok 2 - reports a synchronous frame exception once and disables that callback
+  ---
+  duration_ms: 0.47875
+  type: 'test'
+  ...
+# Subtest: a failed extra does not stop subsequent core or independent extra callbacks
+ok 3 - a failed extra does not stop subsequent core or independent extra callbacks
+  ---
+  duration_ms: 0.318062
+  type: 'test'
+  ...
+# (node:31) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: accepts a complete bundle without optional extras or links
+ok 4 - accepts a complete bundle without optional extras or links
+  ---
+  duration_ms: 3.451112
+  type: 'test'
+  ...
+# Subtest: rejects face identities that would share or overwrite the wrong texture
+ok 5 - rejects face identities that would share or overwrite the wrong texture
+  ---
+  duration_ms: 0.35999
+  type: 'test'
+  ...
+# Subtest: rejects an absent look before hydration tries to read it
+ok 6 - rejects an absent look before hydration tries to read it
+  ---
+  duration_ms: 0.269021
+  type: 'test'
+  ...
+# Subtest: rejects links and extras that could never appear
+ok 7 - rejects links and extras that could never appear
+  ---
+  duration_ms: 0.984582
+  type: 'test'
+  ...
+# (node:32) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: cameraDistance
+    # Subtest: stays at its nearest on a wide screen
+    ok 1 - stays at its nearest on a wide screen
+      ---
+      duration_ms: 1.223066
+      type: 'test'
+      ...
+    # Subtest: pulls back on a phone for something wide
+    ok 2 - pulls back on a phone for something wide
+      ---
+      duration_ms: 0.262469
+      type: 'test'
+      ...
+    # Subtest: does not pull back on a phone for something small
+    ok 3 - does not pull back on a phone for something small
+      ---
+      duration_ms: 0.35476
+      type: 'test'
+      ...
+    # Subtest: pulls back when the caption leaves only a short band for the scene
+    ok 4 - pulls back when the caption leaves only a short band for the scene
+      ---
+      duration_ms: 0.18796
+      type: 'test'
+      ...
+    # Subtest: fits the whole width on screen, with a margin
+    ok 5 - fits the whole width on screen, with a margin
+      ---
+      duration_ms: 0.171709
+      type: 'test'
+      ...
+    # Subtest: falls back to its nearest for a screen with no size
+    ok 6 - falls back to its nearest for a screen with no size
+      ---
+      duration_ms: 0.14525
+      type: 'test'
+      ...
+    1..6
+ok 8 - cameraDistance
+  ---
+  duration_ms: 4.287397
+  type: 'suite'
+  ...
+# Subtest: cameraDistance with room on one side only
+    # Subtest: pulls back for something pushed to one side of the screen
+    ok 1 - pulls back for something pushed to one side of the screen
+      ---
+      duration_ms: 0.337047
+      type: 'test'
+      ...
+    1..1
+ok 9 - cameraDistance with room on one side only
+  ---
+  duration_ms: 0.706134
+  type: 'suite'
+  ...
+# Subtest: viewHalf
+    # Subtest: is half of what the camera sees at a distance
+    ok 1 - is half of what the camera sees at a distance
+      ---
+      duration_ms: 7.106533
+      type: 'test'
+      ...
+    1..1
+ok 10 - viewHalf
+  ---
+  duration_ms: 7.622072
+  type: 'suite'
+  ...
+# Subtest: roomBeside
+    # Subtest: is the share of the screen left when something is off centre
+    ok 1 - is the share of the screen left when something is off centre
+      ---
+      duration_ms: 0.352495
+      type: 'test'
+      ...
+    # Subtest: never drops to nothing
+    ok 2 - never drops to nothing
+      ---
+      duration_ms: 0.336476
+      type: 'test'
+      ...
+    1..2
+ok 11 - roomBeside
+  ---
+  duration_ms: 0.873235
+  type: 'suite'
+  ...
+# Subtest: bandShare
+    # Subtest: is the share of the screen between the header and the caption
+    ok 1 - is the share of the screen between the header and the caption
+      ---
+      duration_ms: 0.204791
+      type: 'test'
+      ...
+    # Subtest: never drops to nothing, however tall the caption
+    ok 2 - never drops to nothing, however tall the caption
+      ---
+      duration_ms: 0.099055
+      type: 'test'
+      ...
+    # Subtest: is the whole screen when the screen has no size
+    ok 3 - is the whole screen when the screen has no size
+      ---
+      duration_ms: 0.109083
+      type: 'test'
+      ...
+    1..3
+ok 12 - bandShare
+  ---
+  duration_ms: 0.657072
+  type: 'suite'
+  ...
+# Subtest: bandFit
+    # Subtest: leaves the scene as it is where the band is as thick as it is framed for
+    ok 1 - leaves the scene as it is where the band is as thick as it is framed for
+      ---
+      duration_ms: 0.179925
+      type: 'test'
+      ...
+    # Subtest: draws the scene smaller by as much as the band is thinner than that
+    ok 2 - draws the scene smaller by as much as the band is thinner than that
+      ---
+      duration_ms: 0.103282
+      type: 'test'
+      ...
+    # Subtest: draws nothing where the caption leaves almost no band, or none
+    ok 3 - draws nothing where the caption leaves almost no band, or none
+      ---
+      duration_ms: 0.087774
+      type: 'test'
+      ...
+    # Subtest: leaves the scene as it is when the screen has no size
+    ok 4 - leaves the scene as it is when the screen has no size
+      ---
+      duration_ms: 0.144238
+      type: 'test'
+      ...
+    1..4
+ok 13 - bandFit
+  ---
+  duration_ms: 0.684093
+  type: 'suite'
+  ...
+# Subtest: stageLift
+    # Subtest: is zero when the header and the caption take the same room
+    ok 1 - is zero when the header and the caption take the same room
+      ---
+      duration_ms: 0.153515
+      type: 'test'
+      ...
+    # Subtest: raises the scene by half the difference, as a share of the screen
+    ok 2 - raises the scene by half the difference, as a share of the screen
+      ---
+      duration_ms: 0.093063
+      type: 'test'
+      ...
+    # Subtest: is zero when the screen has no size
+    ok 3 - is zero when the screen has no size
+      ---
+      duration_ms: 0.132016
+      type: 'test'
+      ...
+    1..3
+ok 14 - stageLift
+  ---
+  duration_ms: 0.54804
+  type: 'suite'
+  ...
+# Subtest: a formation over the caption, on a screen shorter than it was framed for
+    # Subtest: is left alone on the screen it was framed for, and on a taller one
+    ok 1 - is left alone on the screen it was framed for, and on a taller one
+      ---
+      duration_ms: 0.389384
+      type: 'test'
+      ...
+    # Subtest: is drawn smaller, by as much as the band above the caption has shrunk
+    ok 2 - is drawn smaller, by as much as the band above the caption has shrunk
+      ---
+      duration_ms: 0.17715
+      type: 'test'
+      ...
+    # Subtest: keeps its place within that band
+    ok 3 - keeps its place within that band
+      ---
+      duration_ms: 0.192267
+      type: 'test'
+      ...
+    # Subtest: so that what cleared the caption there clears it here
+    ok 4 - so that what cleared the caption there clears it here
+      ---
+      duration_ms: 0.287796
+      type: 'test'
+      ...
+    # Subtest: is never drawn smaller than four tenths, however little room is left
+    ok 5 - is never drawn smaller than four tenths, however little room is left
+      ---
+      duration_ms: 0.139159
+      type: 'test'
+      ...
+    # Subtest: is left alone when the screen has no size
+    ok 6 - is left alone when the screen has no size
+      ---
+      duration_ms: 0.096019
+      type: 'test'
+      ...
+    1..6
+ok 15 - a formation over the caption, on a screen shorter than it was framed for
+  ---
+  duration_ms: 1.541708
+  type: 'suite'
+  ...
+# (node:37) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: controls
+    # Subtest: give back what was set, and nothing for what was not
+    ok 1 - give back what was set, and nothing for what was not
+      ---
+      duration_ms: 0.786764
+      type: 'test'
+      ...
+    # Subtest: forget a value set back to nothing
+    ok 2 - forget a value set back to nothing
+      ---
+      duration_ms: 0.191105
+      type: 'test'
+      ...
+    # Subtest: tell whoever is listening when a value changes, and only then
+    ok 3 - tell whoever is listening when a value changes, and only then
+      ---
+      duration_ms: 0.238224
+      type: 'test'
+      ...
+    1..3
+ok 16 - controls
+  ---
+  duration_ms: 2.321159
+  type: 'suite'
+  ...
+# Subtest: the piece the pointer is on
+    # Subtest: is none until the reader points at one, and none again when they leave it
+    ok 1 - is none until the reader points at one, and none again when they leave it
+      ---
+      duration_ms: 0.192408
+      type: 'test'
+      ...
+    # Subtest: the first piece counts as one: it is number 0
+    ok 2 - the first piece counts as one: it is number 0
+      ---
+      duration_ms: 0.165738
+      type: 'test'
+      ...
+    1..2
+ok 17 - the piece the pointer is on
+  ---
+  duration_ms: 0.595959
+  type: 'suite'
+  ...
+# (node:49) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: smoothstep
+    # Subtest: is 0 below the range, 1 above it and 0.5 in the middle
+    ok 1 - is 0 below the range, 1 above it and 0.5 in the middle
+      ---
+      duration_ms: 1.591111
+      type: 'test'
+      ...
+    # Subtest: is a plain step when the range has no width
+    ok 2 - is a plain step when the range has no width
+      ---
+      duration_ms: 0.710562
+      type: 'test'
+      ...
+    1..2
+ok 18 - smoothstep
+  ---
+  duration_ms: 3.405477
+  type: 'suite'
+  ...
+# Subtest: mixFormation
+    # Subtest: is the first formation at 0 and the second at 1
+    ok 1 - is the first formation at 0 and the second at 1
+      ---
+      duration_ms: 1.274682
+      type: 'test'
+      ...
+    # Subtest: is halfway at 0.5
+    ok 2 - is halfway at 0.5
+      ---
+      duration_ms: 0.444768
+      type: 'test'
+      ...
+    # Subtest: writes into the formation it is given and leaves its inputs alone
+    ok 3 - writes into the formation it is given and leaves its inputs alone
+      ---
+      duration_ms: 0.501873
+      type: 'test'
+      ...
+    1..3
+ok 19 - mixFormation
+  ---
+  duration_ms: 2.958144
+  type: 'suite'
+  ...
+# Subtest: lerp
+    # Subtest: blends two numbers
+    ok 1 - blends two numbers
+      ---
+      duration_ms: 0.284439
+      type: 'test'
+      ...
+    1..1
+ok 20 - lerp
+  ---
+  duration_ms: 0.588044
+  type: 'suite'
+  ...
+# Subtest: stagger
+    # Subtest: has every piece at rest at both ends of a move
+    ok 1 - has every piece at rest at both ends of a move
+      ---
+      duration_ms: 0.399433
+      type: 'test'
+      ...
+    # Subtest: sends the first piece off first and brings the last in last
+    ok 2 - sends the first piece off first and brings the last in last
+      ---
+      duration_ms: 0.250366
+      type: 'test'
+      ...
+    # Subtest: never runs a piece backwards
+    ok 3 - never runs a piece backwards
+      ---
+      duration_ms: 0.603994
+      type: 'test'
+      ...
+    # Subtest: moves the pieces as one when there is no spread, or one piece
+    ok 4 - moves the pieces as one when there is no spread, or one piece
+      ---
+      duration_ms: 0.367213
+      type: 'test'
+      ...
+    1..4
+ok 21 - stagger
+  ---
+  duration_ms: 1.938967
+  type: 'suite'
+  ...
+# Subtest: mixFormation with a progress for each piece
+    # Subtest: moves each piece by its own progress and the rest by the shared one
+    ok 1 - moves each piece by its own progress and the rest by the shared one
+      ---
+      duration_ms: 0.260204
+      type: 'test'
+      ...
+    1..1
+ok 22 - mixFormation with a progress for each piece
+  ---
+  duration_ms: 0.491785
+  type: 'suite'
+  ...
+# Subtest: swing
+    # Subtest: is nothing halfway through a beat's rest
+    ok 1 - is nothing halfway through a beat's rest
+      ---
+      duration_ms: 0.402058
+      type: 'test'
+      ...
+    # Subtest: runs from minus half the sway to plus half across the rest
+    ok 2 - runs from minus half the sway to plus half across the rest
+      ---
+      duration_ms: 0.156521
+      type: 'test'
+      ...
+    # Subtest: arrives at the next beat where that beat's own rest begins
+    ok 3 - arrives at the next beat where that beat's own rest begins
+      ---
+      duration_ms: 0.160158
+      type: 'test'
+      ...
+    1..3
+ok 23 - swing
+  ---
+  duration_ms: 0.889164
+  type: 'suite'
+  ...
+# Subtest: atRest
+    # Subtest: moves within a beat, clamps dwell and leaves the source intact
+    ok 1 - moves within a beat, clamps dwell and leaves the source intact
+      ---
+      duration_ms: 0.459575
+      type: 'test'
+      ...
+    # Subtest: holds a beat without a within formation
+    ok 2 - holds a beat without a within formation
+      ---
+      duration_ms: 0.160228
+      type: 'test'
+      ...
+    1..2
+ok 24 - atRest
+  ---
+  duration_ms: 0.76853
+  type: 'suite'
+  ...
+# (node:55) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: every layout returns independent poses for the requested pieces
+ok 25 - every layout returns independent poses for the requested pieces
+  ---
+  duration_ms: 3.405236
+  type: 'test'
+  ...
+# Subtest: rows and grids account for piece dimensions and centre an incomplete final row
+ok 26 - rows and grids account for piece dimensions and centre an incomplete final row
+  ---
+  duration_ms: 0.726231
+  type: 'test'
+  ...
+# Subtest: scatter is repeatable from its seed and changes with another seed
+ok 27 - scatter is repeatable from its seed and changes with another seed
+  ---
+  duration_ms: 0.433847
+  type: 'test'
+  ...
+# Subtest: measure includes turned corners instead of unrotated sizes
+ok 28 - measure includes turned corners instead of unrotated sizes
+  ---
+  duration_ms: 0.242241
+  type: 'test'
+  ...
+# Subtest: measure uses all corners of a compound XYZ rotation
+ok 29 - measure uses all corners of a compound XYZ rotation
+  ---
+  duration_ms: 0.648697
+  type: 'test'
+  ...
+# Subtest: measure frames an offset piece around the origin the camera aims at
+ok 30 - measure frames an offset piece around the origin the camera aims at
+  ---
+  duration_ms: 0.231601
+  type: 'test'
+  ...
+# (node:57) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: looks are resolved against supplied IDs with a validated default
+ok 31 - looks are resolved against supplied IDs with a validated default
+  ---
+  duration_ms: 1.361783
+  type: 'test'
+  ...
+# Subtest: switching looks preserves other search parameters and omits the default
+ok 32 - switching looks preserves other search parameters and omits the default
+  ---
+  duration_ms: 0.352496
+  type: 'test'
+  ...
+# (node:64) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: projects the piece centre and both half axes for a DOM transform
+ok 33 - projects the piece centre and both half axes for a DOM transform
+  ---
+  duration_ms: 1.054312
+  type: 'test'
+  ...
+# Subtest: projection follows formation translation and piece rotation
+ok 34 - projection follows formation translation and piece rotation
+  ---
+  duration_ms: 0.303194
+  type: 'test'
+  ...
+# Subtest: turning in depth accounts for perspective instead of a fixed scale
+ok 35 - turning in depth accounts for perspective instead of a fixed scale
+  ---
+  duration_ms: 0.163574
+  type: 'test'
+  ...
+# Subtest: pieces behind the camera produce nonfinite coordinates so links can be hidden
+ok 36 - pieces behind the camera produce nonfinite coordinates so links can be hidden
+  ---
+  duration_ms: 0.131335
+  type: 'test'
+  ...
+# (node:76) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: one slow frame cannot reduce quality before a complete window
+ok 37 - one slow frame cannot reduce quality before a complete window
+  ---
+  duration_ms: 1.714811
+  type: 'test'
+  ...
+# Subtest: sustained slow frames reduce DPR and then shadows, with fresh evidence each time
+ok 38 - sustained slow frames reduce DPR and then shadows, with fresh evidence each time
+  ---
+  duration_ms: 0.353938
+  type: 'test'
+  ...
+# Subtest: the window forgets old fast frames and ignores invalid or hidden-tab pauses
+ok 39 - the window forgets old fast frames and ignores invalid or hidden-tab pauses
+  ---
+  duration_ms: 1.658846
+  type: 'test'
+  ...
+# Subtest: a low initial DPR never rises and can still drop expensive shadows
+ok 40 - a low initial DPR never rises and can still drop expensive shadows
+  ---
+  duration_ms: 0.254854
+  type: 'test'
+  ...
+# (node:79) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: random placements repeat for an index and salt, within zero and one
+ok 41 - random placements repeat for an index and salt, within zero and one
+  ---
+  duration_ms: 2.316491
+  type: 'test'
+  ...
+# (node:93) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: story helpers follow supplied chapters rather than global story data
+ok 42 - story helpers follow supplied chapters rather than global story data
+  ---
+  duration_ms: 2.025999
+  type: 'test'
+  ...
+# Subtest: chapter proximity covers the entire chapter and bounded travel on each side
+ok 43 - chapter proximity covers the entire chapter and bounded travel on each side
+  ---
+  duration_ms: 0.320476
+  type: 'test'
+  ...
+# Subtest: a valid story with faces has no content problems
+ok 44 - a valid story with faces has no content problems
+  ---
+  duration_ms: 2.377564
+  type: 'test'
+  ...
+# Subtest: validation reports duplicate IDs, invalid heights, missing formations and stale faces together
+ok 45 - validation reports duplicate IDs, invalid heights, missing formations and stale faces together
+  ---
+  duration_ms: 0.979352
+  type: 'test'
+  ...
+# Subtest: both rest and within must match the piece count and contain finite geometry
+ok 46 - both rest and within must match the piece count and contain finite geometry
+  ---
+  duration_ms: 0.52132
+  type: 'test'
+  ...
+# Subtest: nonfinite heights and piece indices cannot bypass numeric checks
+ok 47 - nonfinite heights and piece indices cannot bypass numeric checks
+  ---
+  duration_ms: 1.84847
+  type: 'test'
+  ...
+# (node:95) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: playhead
+    # Subtest: rests on the first beat at the top of the page
+    ok 1 - rests on the first beat at the top of the page
+      ---
+      duration_ms: 1.464004
+      type: 'test'
+      ...
+    # Subtest: dwell rises while the first block still reaches the bottom of the screen
+    ok 2 - dwell rises while the first block still reaches the bottom of the screen
+      ---
+      duration_ms: 0.187579
+      type: 'test'
+      ...
+    # Subtest: travels to the next beat over 0.4 of a screen
+    ok 3 - travels to the next beat over 0.4 of a screen
+      ---
+      duration_ms: 0.127908
+      type: 'test'
+      ...
+    # Subtest: rests on the second beat once the travel is done
+    ok 4 - rests on the second beat once the travel is done
+      ---
+      duration_ms: 0.186276
+      type: 'test'
+      ...
+    # Subtest: stays on the first beat above the page and the last beat below it
+    ok 5 - stays on the first beat above the page and the last beat below it
+      ---
+      duration_ms: 0.266976
+      type: 'test'
+      ...
+    # Subtest: gives a resting first beat for input it cannot use
+    ok 6 - gives a resting first beat for input it cannot use
+      ---
+      duration_ms: 0.13982
+      type: 'test'
+      ...
+    # Subtest: never jumps or runs backwards as the page scrolls
+    ok 7 - never jumps or runs backwards as the page scrolls
+      ---
+      duration_ms: 0.835344
+      type: 'test'
+      ...
+    # Subtest: gives the same answer at any screen size
+    ok 8 - gives the same answer at any screen size
+      ---
+      duration_ms: 0.486525
+      type: 'test'
+      ...
+    1..8
+ok 48 - playhead
+  ---
+  duration_ms: 4.975898
+  type: 'suite'
+  ...
+# Subtest: phase
+    # Subtest: runs from 2i to 2i+1 while the scene rests on beat i
+    ok 1 - runs from 2i to 2i+1 while the scene rests on beat i
+      ---
+      duration_ms: 0.356915
+      type: 'test'
+      ...
+    # Subtest: runs from 2i+1 to 2i+2 while the scene travels on
+    ok 2 - runs from 2i+1 to 2i+2 while the scene travels on
+      ---
+      duration_ms: 0.267478
+      type: 'test'
+      ...
+    # Subtest: only grows, and never jumps, as the page is scrolled
+    ok 3 - only grows, and never jumps, as the page is scrolled
+      ---
+      duration_ms: 6.519921
+      type: 'test'
+      ...
+    1..3
+ok 49 - phase
+  ---
+  duration_ms: 7.406881
+  type: 'suite'
+  ...
+# Subtest: place
+    # Subtest: undoes phase
+    ok 1 - undoes phase
+      ---
+      duration_ms: 0.23656
+      type: 'test'
+      ...
+    # Subtest: agrees with the playhead it came from, all the way down the page
+    ok 2 - agrees with the playhead it came from, all the way down the page
+      ---
+      duration_ms: 0.72015
+      type: 'test'
+      ...
+    # Subtest: stays inside the paper
+    ok 3 - stays inside the paper
+      ---
+      duration_ms: 0.090809
+      type: 'test'
+      ...
+    1..3
+ok 50 - place
+  ---
+  duration_ms: 1.162302
+  type: 'suite'
+  ...
+# Subtest: weight
+    # Subtest: is 1 on a beat and fades to 0 a beat away
+    ok 1 - is 1 on a beat and fades to 0 a beat away
+      ---
+      duration_ms: 0.117649
+      type: 'test'
+      ...
+    1..1
+ok 51 - weight
+  ---
+  duration_ms: 0.196094
+  type: 'suite'
+  ...
+# Subtest: dwellAt
+    # Subtest: is 0 before a beat, its dwell while resting on it, 1 after
+    ok 1 - is 0 before a beat, its dwell while resting on it, 1 after
+      ---
+      duration_ms: 0.15001
+      type: 'test'
+      ...
+    # Subtest: is 1 for the beat being left
+    ok 2 - is 1 for the beat being left
+      ---
+      duration_ms: 0.23094
+      type: 'test'
+      ...
+    1..2
+ok 52 - dwellAt
+  ---
+  duration_ms: 0.571524
+  type: 'suite'
+  ...
+# Subtest: approach
+    # Subtest: lands on the target on the first frame
+    ok 1 - lands on the target on the first frame
+      ---
+      duration_ms: 0.307432
+      type: 'test'
+      ...
+    # Subtest: moves part of the way on later frames
+    ok 2 - moves part of the way on later frames
+      ---
+      duration_ms: 0.106819
+      type: 'test'
+      ...
+    # Subtest: does not overshoot after a long pause
+    ok 3 - does not overshoot after a long pause
+      ---
+      duration_ms: 0.082894
+      type: 'test'
+      ...
+    # Subtest: holds still when no time has passed
+    ok 4 - holds still when no time has passed
+      ---
+      duration_ms: 0.065031
+      type: 'test'
+      ...
+    # Subtest: recovers from a value that is not a number
+    ok 5 - recovers from a value that is not a number
+      ---
+      duration_ms: 0.101299
+      type: 'test'
+      ...
+    # Subtest: finishes a stationary beat arrival so its resting content can appear
+    ok 6 - finishes a stationary beat arrival so its resting content can appear
+      ---
+      duration_ms: 0.15076
+      type: 'test'
+      ...
+    1..6
+ok 53 - approach
+  ---
+  duration_ms: 1.030818
+  type: 'suite'
+  ...
+# Subtest: settle
+    # Subtest: leaves a resting scene where it is
+    ok 1 - leaves a resting scene where it is
+      ---
+      duration_ms: 0.122157
+      type: 'test'
+      ...
+    # Subtest: puts a travelling scene on the nearer beat
+    ok 2 - puts a travelling scene on the nearer beat
+      ---
+      duration_ms: 0.082734
+      type: 'test'
+      ...
+    1..2
+ok 54 - settle
+  ---
+  duration_ms: 0.282426
+  type: 'suite'
+  ...
+# Subtest: gathered
+    # Subtest: is whole while the scene rests on the beat
+    ok 1 - is whole while the scene rests on the beat
+      ---
+      duration_ms: 2.497237
+      type: 'test'
+      ...
+    # Subtest: is as far as the last page to arrive has come
+    ok 2 - is as far as the last page to arrive has come
+      ---
+      duration_ms: 0.157743
+      type: 'test'
+      ...
+    # Subtest: falls as soon as the first page has set off
+    ok 3 - falls as soon as the first page has set off
+      ---
+      duration_ms: 0.08085
+      type: 'test'
+      ...
+    # Subtest: is nothing for a beat the scene is neither on, coming to nor leaving
+    ok 4 - is nothing for a beat the scene is neither on, coming to nor leaving
+      ---
+      duration_ms: 0.071403
+      type: 'test'
+      ...
+    1..4
+ok 55 - gathered
+  ---
+  duration_ms: 2.946233
+  type: 'suite'
+  ...
+# (node:98) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: wrapText
+    # Subtest: breaks between words so no line is wider than the measure
+    ok 1 - breaks between words so no line is wider than the measure
+      ---
+      duration_ms: 1.546537
+      type: 'test'
+      ...
+    # Subtest: gives a word too long for the measure a line of its own
+    ok 2 - gives a word too long for the measure a line of its own
+      ---
+      duration_ms: 0.339592
+      type: 'test'
+      ...
+    # Subtest: ignores runs of space and gives nothing for no text
+    ok 3 - ignores runs of space and gives nothing for no text
+      ---
+      duration_ms: 0.190143
+      type: 'test'
+      ...
+    1..3
+ok 56 - wrapText
+  ---
+  duration_ms: 3.532552
+  type: 'suite'
+  ...
+# Subtest: intoColumns
+    # Subtest: fills one column, then the next
+    ok 1 - fills one column, then the next
+      ---
+      duration_ms: 0.400075
+      type: 'test'
+      ...
+    # Subtest: drops what does not fit, and leaves short text in the first column
+    ok 2 - drops what does not fit, and leaves short text in the first column
+      ---
+      duration_ms: 0.228996
+      type: 'test'
+      ...
+    1..2
+ok 57 - intoColumns
+  ---
+  duration_ms: 0.884516
+  type: 'suite'
+  ...
+# Subtest: fitSize
+    # Subtest: takes the largest size at which the text fits the lines it has
+    ok 1 - takes the largest size at which the text fits the lines it has
+      ---
+      duration_ms: 0.363155
+      type: 'test'
+      ...
+    # Subtest: settles for the smallest size when nothing fits
+    ok 2 - settles for the smallest size when nothing fits
+      ---
+      duration_ms: 0.280662
+      type: 'test'
+      ...
+    1..2
+ok 58 - fitSize
+  ---
+  duration_ms: 0.930601
+  type: 'suite'
+  ...
+# Subtest: fitLine
+    # Subtest: takes the largest size at which the text is no wider than the line
+    ok 1 - takes the largest size at which the text is no wider than the line
+      ---
+      duration_ms: 0.226902
+      type: 'test'
+      ...
+    # Subtest: shrinks a single long word, which wrapping would leave as it is
+    ok 2 - shrinks a single long word, which wrapping would leave as it is
+      ---
+      duration_ms: 0.216924
+      type: 'test'
+      ...
+    # Subtest: falls back to the smallest size when none fits
+    ok 3 - falls back to the smallest size when none fits
+      ---
+      duration_ms: 0.305709
+      type: 'test'
+      ...
+    1..3
+ok 59 - fitLine
+  ---
+  duration_ms: 1.000843
+  type: 'suite'
+  ...
+# Subtest: primaryFamily
+    # Subtest: keeps the first family and drops the fallback next/font adds
+    ok 1 - keeps the first family and drops the fallback next/font adds
+      ---
+      duration_ms: 0.226281
+      type: 'test'
+      ...
+    # Subtest: is the generic family alone when the variable is not set
+    ok 2 - is the generic family alone when the variable is not set
+      ---
+      duration_ms: 0.124352
+      type: 'test'
+      ...
+    1..2
+ok 60 - primaryFamily
+  ---
+  duration_ms: 0.510711
+  type: 'suite'
+  ...
+# Subtest: intoRows
+    # Subtest: keeps every item whole and in order
+    ok 1 - keeps every item whole and in order
+      ---
+      duration_ms: 0.208448
+      type: 'test'
+      ...
+    # Subtest: starts a new row when the next item and its gap would not fit
+    ok 2 - starts a new row when the next item and its gap would not fit
+      ---
+      duration_ms: 0.133098
+      type: 'test'
+      ...
+    # Subtest: counts the gap between items and not after the last
+    ok 3 - counts the gap between items and not after the last
+      ---
+      duration_ms: 0.12382
+      type: 'test'
+      ...
+    # Subtest: gives an item wider than the row a row to itself
+    ok 4 - gives an item wider than the row a row to itself
+      ---
+      duration_ms: 0.117329
+      type: 'test'
+      ...
+    # Subtest: makes no rows of nothing
+    ok 5 - makes no rows of nothing
+      ---
+      duration_ms: 0.113451
+      type: 'test'
+      ...
+    1..5
+ok 61 - intoRows
+  ---
+  duration_ms: 0.927265
+  type: 'suite'
+  ...
+# (node:132) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: later tall beats sample their whole dwell from arrival, not just their block top
+ok 62 - later tall beats sample their whole dwell from arrival, not just their block top
+  ---
+  duration_ms: 2.098223
+  type: 'test'
+  ...
+# Subtest: empty request ignore does not suppress HTTP errors or failures without responses
+ok 63 - empty request ignore does not suppress HTTP errors or failures without responses
+  ---
+  duration_ms: 0.406386
+  type: 'test'
+  ...
+# Subtest: only explicitly blocked or ignored requests are omitted
+ok 64 - only explicitly blocked or ignored requests are omitted
+  ---
+  duration_ms: 0.229186
+  type: 'test'
+  ...
+# Subtest: only disabled-JavaScript CSP failures for same-origin Next scripts are expected
+ok 65 - only disabled-JavaScript CSP failures for same-origin Next scripts are expected
+  ---
+  duration_ms: 0.480634
+  type: 'test'
+  ...
+# Subtest: every matrix case expects the declared IDs, including a beat missing from every rendering
+ok 66 - every matrix case expects the declared IDs, including a beat missing from every rendering
+  ---
+  duration_ms: 0.760745
+  type: 'test'
+  ...
+# Subtest: fixture-specific probes require explicit content contracts
+ok 67 - fixture-specific probes require explicit content contracts
+  ---
+  duration_ms: 0.376841
+  type: 'test'
+  ...
+1..67
+# tests 129
+# suites 31
+# pass 129
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 357.631181
