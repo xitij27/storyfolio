@@ -46,6 +46,14 @@ findings. At most two wording iterations per supported question, preserving
 each attempt. Use deterministic tests for technical repairs. Retain usage
 and mark missing counters unknown; time limits are not cost caps.
 
+Prospective execution update after the interrupted matched attempts:
+[root's remaining-proof sequence](../../../evals/runs/stage-3-completion-2/full-journey/preparation/final-proof-sequence.md)
+puts the fresh journey and any supported correction before renewed,
+separately named original-fixture candidate comparisons. It records finite
+renewed bounds, reuses saved baselines, and preserves the earlier incomplete
+outcomes. Neither the full journey nor regression replaces the matched
+entry and wording questions. Final author review remains required.
+
 ## Product bar and ownership
 
 The whole proof is not the five-beat diagnostic: six actual stops, a

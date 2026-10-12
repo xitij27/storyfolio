@@ -28,6 +28,16 @@ or turn partial evidence into a pass. See the
 [bounded no-model diagnostic decision](../evals/runs/stage-3-completion-2/process-supervision/longevity-1/launch-decision.md).
 The checkpoints below preserve the sequence leading here.
 
+Both neutral longevity probes have since completed their full 11 minutes,
+with journals/tool output verified and their exact PIDs absent afterward.
+Polling-cadence deviations and causal limits are retained. The
+[root disposition](../evals/runs/stage-3-completion-2/process-supervision/longevity-1/disposition.md)
+selects unchanged pipe transport and permits one new desktop apparatus
+calibration with durable logging. The
+[remaining-proof sequence](../evals/runs/stage-3-completion-2/full-journey/preparation/final-proof-sequence.md)
+puts the full journey before renewed matched entry/wording candidates so
+those checks use the final skill revision. No product-proof gate is waived.
+
 Current measurement checkpoint: the unchanged manual prototype's new
 full-journey calibration completed normally, with source/artifact integrity
 verified and all eight gate plus 102 desktop originals reviewed. It exposed
