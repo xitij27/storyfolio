@@ -1,0 +1,1594 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "started": "2026-10-12T06:09:06.246Z",
+  "finished": "2026-10-12T06:09:07.082Z",
+  "cohort": "/home/kshitij/projects/storyfolio/evals/runs/codex-full-journey-baseline-1",
+  "inputDigest": "8fbd93c6432e5a8972401959c1a326a8417eca77f47690bbde4bf5244f08a7ad",
+  "frozenInputCount": 149,
+  "fixtureFileCount": 7,
+  "skillFileCount": 87,
+  "sourceFiles": 94,
+  "exactInitialSource": true,
+  "sourceUnchanged": true,
+  "initialPreparationOnly": {
+    "complete": true,
+    "setupMode": "unscaffolded",
+    "scaffolded": false
+  },
+  "failure": {
+    "outer": {
+      "schemaVersion": 1,
+      "code": 1,
+      "signal": null,
+      "finished": "2026-10-12T06:01:18.695Z",
+      "durationMs": 1209,
+      "recorderPid": 323103,
+      "recorderParentPid": 2843635,
+      "childPid": 323114,
+      "childSpawned": true,
+      "childExited": true,
+      "childClosed": true,
+      "interruptedBy": null,
+      "signalSender": null,
+      "signalForwarded": false,
+      "shutdownGraceMs": 5000,
+      "forceAttempted": false,
+      "childError": null,
+      "complete": false,
+      "status": "child-exited-unsuccessfully",
+      "timeoutAttribution": "This recorder has no work deadline. A child timeout is established only by that child's retained result, not inferred from external signals or exit code.",
+      "rawArtifacts": {
+        "command.json": "412cfe430c04496bb0e20b7eb741d032a14adbaa14e83bbc2ad0e36fd91aa686",
+        "lifecycle.jsonl": "9b190e7b66e10eebdc8d49d16f56e81507bf43105643b9a58939b8436f975f52",
+        "stdout.log": "31cad62f1ce8a91eb88dfc0046c1d462d51baa8f472acde750eb642aad32137e",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "inner": {
+      "code": 1,
+      "signal": null,
+      "timedOut": false,
+      "externalSignal": null,
+      "spawnError": null,
+      "logError": null,
+      "childPid": 323163,
+      "durationMs": 240,
+      "finished": "2026-10-12T06:01:18.504Z",
+      "modelCalls": 0,
+      "actorPreflight": false,
+      "events": [
+        {
+          "at": "2026-10-12T06:01:18.279Z",
+          "elapsedMs": 15,
+          "type": "spawn-request",
+          "childPid": 323163
+        },
+        {
+          "at": "2026-10-12T06:01:18.504Z",
+          "elapsedMs": 240,
+          "type": "closed",
+          "childPid": 323163,
+          "code": 1,
+          "signal": null
+        }
+      ]
+    },
+    "stderrSha256": "6b428dea1fa02d8838f31acf3e71a098a5c76aeda9c4ec5b207ceaa02993ca33",
+    "sourceLocation": "frozen probe-environment.mjs:99:79",
+    "expectedPath": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+    "actualPath": "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ:/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+    "prefixes": [
+      "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ",
+      "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path"
+    ],
+    "capabilityFiles": 0,
+    "readinessAbsent": [
+      "probe.json",
+      "original-images.json",
+      "environment-visual-review.md",
+      "readiness-dry"
+    ],
+    "actorTurnsAbsent": true,
+    "modelCalls": 0,
+    "browserStarted": false,
+    "ordering": "Frozen strict PATH assertion precedes report creation, git/npm subprocesses, local HTTP server and browser. Those stages were not reached."
+  },
+  "launcherProvenance": {
+    "pathMetadata": [
+      {
+        "path": "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096,
+        "entries": [
+          {
+            "path": "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ/.lock",
+            "uid": 1000,
+            "gid": 1000,
+            "mode": "644",
+            "type": "file",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ/apply_patch",
+            "uid": 1000,
+            "gid": 1000,
+            "mode": "777",
+            "type": "symlink",
+            "bytes": 93,
+            "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+          },
+          {
+            "path": "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ/applypatch",
+            "uid": 1000,
+            "gid": 1000,
+            "mode": "777",
+            "type": "symlink",
+            "bytes": 93,
+            "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+          },
+          {
+            "path": "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ/codex-execve-wrapper",
+            "uid": 1000,
+            "gid": 1000,
+            "mode": "777",
+            "type": "symlink",
+            "bytes": 93,
+            "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+          },
+          {
+            "path": "/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ/codex-linux-sandbox",
+            "uid": 1000,
+            "gid": 1000,
+            "mode": "777",
+            "type": "symlink",
+            "bytes": 93,
+            "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+          }
+        ]
+      },
+      {
+        "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096,
+        "entries": [
+          {
+            "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path/rg",
+            "uid": 1000,
+            "gid": 1000,
+            "mode": "755",
+            "type": "file",
+            "bytes": 5408904,
+            "sha256": "e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849"
+          }
+        ]
+      }
+    ],
+    "ancestors": [
+      {
+        "path": "/home/kshitij/.codex/tmp/arg0",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "700",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home/kshitij/.codex/tmp",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home/kshitij/.codex",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home/kshitij",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "750",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home",
+        "uid": 0,
+        "gid": 0,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home/kshitij/.codex/packages/standalone/releases",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home/kshitij/.codex/packages/standalone",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096
+      },
+      {
+        "path": "/home/kshitij/.codex/packages",
+        "uid": 1000,
+        "gid": 1000,
+        "mode": "755",
+        "type": "directory",
+        "bytes": 4096
+      }
+    ],
+    "cliMetadata": {
+      "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": "755",
+      "type": "file",
+      "bytes": 294415048,
+      "sha256": "628e35487d888a28f0427fc37501da529dd3d81fcbad7a2c3421c1e8670d92e1"
+    },
+    "releaseRecord": {
+      "layoutVersion": 1,
+      "version": "0.162.1",
+      "target": "x86_64-unknown-linux-musl",
+      "variant": "codex",
+      "entrypoint": "bin/codex",
+      "resourcesDir": "codex-resources",
+      "pathDir": "codex-path"
+    },
+    "releaseRecordSha256": "f05ebff6db98bd613dd5654461985090c6416b41ad67902243d83a53b305ac05"
+  },
+  "evidence": {
+    "cohortFiles": {
+      "full-journey-1/baseline-1/meta.json": {
+        "type": "file",
+        "hash": "f1c0cb365e5fbd5e7ec5a17d4f84f7e4109e90e620be72d7cc9744e08895a4a4",
+        "size": 842
+      },
+      "full-journey-1/baseline-1/setup/environment-proof/closure.json": {
+        "type": "file",
+        "hash": "6e7c4949397ad911a80701452f4da6a59cbc67e66869ceb3df35d9a861cb694c",
+        "size": 386
+      },
+      "full-journey-1/baseline-1/setup/environment-proof/command.json": {
+        "type": "file",
+        "hash": "47ed77a85249280047e5ad4136e51c0993182c96a95ccf4ab1b9bc423c4ab940",
+        "size": 5055
+      },
+      "full-journey-1/baseline-1/setup/environment-proof/process.json": {
+        "type": "file",
+        "hash": "33d2e27f8e49cafac55d4b738371d6058b1eb13e1c7727229799e272840a7fd9",
+        "size": 569
+      },
+      "full-journey-1/baseline-1/setup/environment-proof/source-after.json": {
+        "type": "file",
+        "hash": "c04673c4e7d4645ba8dcbdab6a9cd6a3a8a2a88da628702b0baf2e5cdc128dbd",
+        "size": 18126
+      },
+      "full-journey-1/baseline-1/setup/environment-proof/source-before.json": {
+        "type": "file",
+        "hash": "c04673c4e7d4645ba8dcbdab6a9cd6a3a8a2a88da628702b0baf2e5cdc128dbd",
+        "size": 18126
+      },
+      "full-journey-1/baseline-1/setup/environment-proof/stderr.log": {
+        "type": "file",
+        "hash": "6b428dea1fa02d8838f31acf3e71a098a5c76aeda9c4ec5b207ceaa02993ca33",
+        "size": 4320
+      },
+      "full-journey-1/baseline-1/setup/environment-proof/stdout.log": {
+        "type": "file",
+        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      },
+      "full-journey-1/baseline-1/setup/next-steps.txt": {
+        "type": "file",
+        "hash": "f0708271b1d50b45c4877db62e4116bb96724ed4e4b7d22c9006cc2e49390738",
+        "size": 1393
+      },
+      "full-journey-1/baseline-1/setup/pre-scaffold-inventory.json": {
+        "type": "file",
+        "hash": "feac355ad0096dd01cdd11585b0226eb22c1f8a2a644639c8da372b77b4b6c64",
+        "size": 6247
+      },
+      "full-journey-1/baseline-1/setup/result.json": {
+        "type": "file",
+        "hash": "3b4419ac9ef683df80cf223a6cbaf2e1567bbbe375f24c174dab1ed2f5801a6e",
+        "size": 54672
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/SKILL.md": {
+        "type": "file",
+        "hash": "2dded80561342fa6945eb54c118c22c7b5067b3e0346ba57687671b20682f9a9",
+        "size": 4463
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/AGENTS.md": {
+        "type": "file",
+        "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+        "size": 1055
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/README.md": {
+        "type": "file",
+        "hash": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+        "size": 6746
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/app/globals.css": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/app/page.tsx": {
+        "type": "file",
+        "hash": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+        "size": 1271
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+        "size": 4623
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/story.css": {
+        "type": "file",
+        "hash": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+        "size": 5859
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/checks.json": {
+        "type": "file",
+        "hash": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+        "size": 130
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/copy.ts": {
+        "type": "file",
+        "hash": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+        "size": 1468
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+        "size": 613
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/faces.ts": {
+        "type": "file",
+        "hash": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+        "size": 883
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/formations.ts": {
+        "type": "file",
+        "hash": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+        "size": 942
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/links.ts": {
+        "type": "file",
+        "hash": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+        "size": 130
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+        "size": 238
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/content/story.ts": {
+        "type": "file",
+        "hash": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+        "size": 518
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+        "size": 4065
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.ts": {
+        "type": "file",
+        "hash": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+        "size": 4796
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/next.config.ts": {
+        "type": "file",
+        "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+        "size": 94
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/package.json": {
+        "type": "file",
+        "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+        "size": 1015
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/public/plain/face.svg": {
+        "type": "file",
+        "hash": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+        "size": 309
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": {
+        "type": "file",
+        "hash": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+        "size": 775
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/engine/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/references/asking.md": {
+        "type": "file",
+        "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+        "size": 1486
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/references/building.md": {
+        "type": "file",
+        "hash": "3a7f6f1620bde62e40ea2e8847485a2ebe6afa8435aeed6a426773d5c12b9a73",
+        "size": 1275
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/references/concept.md": {
+        "type": "file",
+        "hash": "11f1285c3b2380d17ab320377120b78a448aba1b52f5b9ffabdd787618719e18",
+        "size": 7822
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/references/reading-a-profile.md": {
+        "type": "file",
+        "hash": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca",
+        "size": 5537
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/references/storyboard.md": {
+        "type": "file",
+        "hash": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6",
+        "size": 4016
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/scripts/scaffold.mjs": {
+        "type": "file",
+        "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+        "size": 3566
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+        "type": "file",
+        "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+        "size": 4044
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/material/asset-notes.md": {
+        "type": "file",
+        "hash": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+        "size": 1296
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/material/cv.md": {
+        "type": "file",
+        "hash": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+        "size": 383
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/material/external-helper-catalog.json": {
+        "type": "file",
+        "hash": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+        "size": 14881
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/material/lab-notes.md": {
+        "type": "file",
+        "hash": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+        "size": 613
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/material/runtime-resources.json": {
+        "type": "file",
+        "hash": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+        "size": 928
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/public/assets/bring-up-fixture.svg": {
+        "type": "file",
+        "hash": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+        "size": 1822
+      },
+      "full-journey-1/baseline-1/setup/snapshot/files/public/assets/power-states.svg": {
+        "type": "file",
+        "hash": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+        "size": 1657
+      },
+      "full-journey-1/baseline-1/setup/snapshot/manifest.json": {
+        "type": "file",
+        "hash": "16afa9229fe9553074f5c396092422c9a489fdd70356d71ee53e7e07f97fa5a7",
+        "size": 44903
+      },
+      "full-journey-1/baseline-1/setup/started.json": {
+        "type": "file",
+        "hash": "1ee09789e4a81add61dc14e9ccc56f306948fb0dec79546b260b71edcde48354",
+        "size": 247
+      },
+      "inputs/capabilities.json": {
+        "type": "file",
+        "hash": "af3ef30f0615cb9382f742240be4be51f8d5ff20a36d62d76eced3ee89e0417f",
+        "size": 5784
+      },
+      "inputs/case.json": {
+        "type": "file",
+        "hash": "fe27bea6c16d25d186f1f5f9f24877ef5228e817d6d8a1c268941e3bd074fbcd",
+        "size": 3758
+      },
+      "inputs/expectations.json": {
+        "type": "file",
+        "hash": "fb0564dcc2ca4319cc151679ddcb53295ced702148b91d36c537582397f93d54",
+        "size": 1373
+      },
+      "inputs/fixture/material/asset-notes.md": {
+        "type": "file",
+        "hash": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+        "size": 1296
+      },
+      "inputs/fixture/material/cv.md": {
+        "type": "file",
+        "hash": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+        "size": 383
+      },
+      "inputs/fixture/material/external-helper-catalog.json": {
+        "type": "file",
+        "hash": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+        "size": 14881
+      },
+      "inputs/fixture/material/lab-notes.md": {
+        "type": "file",
+        "hash": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+        "size": 613
+      },
+      "inputs/fixture/material/runtime-resources.json": {
+        "type": "file",
+        "hash": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+        "size": 928
+      },
+      "inputs/fixture/public/assets/bring-up-fixture.svg": {
+        "type": "file",
+        "hash": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+        "size": 1822
+      },
+      "inputs/fixture/public/assets/power-states.svg": {
+        "type": "file",
+        "hash": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+        "size": 1657
+      },
+      "inputs/implementation/evals/builds/full-journey-1/README.md": {
+        "type": "file",
+        "hash": "55871f8d0d281837f2178e3c288ba47ad3ff26b6e91b17338f8668643eb7ab9a",
+        "size": 4596
+      },
+      "inputs/implementation/evals/builds/full-journey-1/derivative.md": {
+        "type": "file",
+        "hash": "245f00723be5e0cb06484cf70fd8d51b91d996e89479e01c83322415a9b39abd",
+        "size": 4707
+      },
+      "inputs/implementation/evals/builds/full-journey-1/journey.json": {
+        "type": "file",
+        "hash": "0c783c9c4f7aa87239eea1921e8908f5c37b88ddd3754887e111ef94731a6126",
+        "size": 1733
+      },
+      "inputs/implementation/evals/builds/full-journey-1/runner-contract.md": {
+        "type": "file",
+        "hash": "5a0f3169cf58d7e7fbe497ae7a68ec9407d9e0921ea0cbcfdb4bf0ca3775a3c8",
+        "size": 2972
+      },
+      "inputs/implementation/evals/builds/full-journey-1/source-manifest.json": {
+        "type": "file",
+        "hash": "8d96a45f993bc0cc344f976aa027abc9ccad91338d3dd62b42bcf2a88cd8bcd0",
+        "size": 7277
+      },
+      "inputs/implementation/evals/builds/full-journey-1/verify-fixture.mjs": {
+        "type": "file",
+        "hash": "a61797a1506d9b6a1395cbcabb48edbc227435abcf437e56ae18260e137ae964",
+        "size": 4370
+      },
+      "inputs/implementation/evals/builds/full-journey-1/workspace-inventory.json": {
+        "type": "file",
+        "hash": "1333da5c529603b98b435357f6f3fe6132d28c0a3c12156c0b06f524fa73af82",
+        "size": 1420
+      },
+      "inputs/implementation/evals/codex-build-run.mjs": {
+        "type": "file",
+        "hash": "322dd3571b3f5396d48e07b340d11162900585cf5885f54f68e7271365cca5a6",
+        "size": 9884
+      },
+      "inputs/implementation/evals/lib/build-capture.mjs": {
+        "type": "file",
+        "hash": "7472bf42a1bfc2a18c7b317e9c1b43274e431737a6ea82f9e66c927a4b39521e",
+        "size": 24306
+      },
+      "inputs/implementation/evals/lib/build-check.mjs": {
+        "type": "file",
+        "hash": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+        "size": 13633
+      },
+      "inputs/implementation/evals/lib/build.mjs": {
+        "type": "file",
+        "hash": "d78cce4c3914127da41154e7368f689ed1828cd0efa4a6b0959d6890d5edc731",
+        "size": 35203
+      },
+      "inputs/implementation/evals/lib/build.test.mjs": {
+        "type": "file",
+        "hash": "adfc835f8092357fcade188a23f3c12e8b94c7c0e25bc509421cc499021f5094",
+        "size": 56274
+      },
+      "inputs/implementation/evals/lib/codex.mjs": {
+        "type": "file",
+        "hash": "783f863195f191129de87aaebbd5fbda7a37d9bea7d256904d5391da4c034176",
+        "size": 5794
+      },
+      "inputs/implementation/evals/lib/events.mjs": {
+        "type": "file",
+        "hash": "e8f20d0cb721e155b073f703603d064a89ee1d8d38a3bf9d51845428674fafe5",
+        "size": 5114
+      },
+      "inputs/implementation/evals/lib/files.mjs": {
+        "type": "file",
+        "hash": "af97dcc663dc5c43913b143b29271cf509e5838de37d0c2931ae648c222f41c2",
+        "size": 2297
+      },
+      "inputs/implementation/evals/lib/review.mjs": {
+        "type": "file",
+        "hash": "b78728b17de43c0ce385dd2d964a5d7a410513f946e37b86ceb50116354f78aa",
+        "size": 8391
+      },
+      "inputs/implementation/evals/lib/source-scope.mjs": {
+        "type": "file",
+        "hash": "63bcdb119b0fd546aa5a27144204eb6deea89167d8b81121dffde8a22865c71b",
+        "size": 5215
+      },
+      "inputs/implementation/evals/runs/stage-3-candidate-verification-1/bounded-process.mjs": {
+        "type": "file",
+        "hash": "dab797cde4ee8d272e253aea78a0867d13cd4a3990bbf977e225976749101bcb",
+        "size": 3470
+      },
+      "inputs/implementation/evals/runs/stage-3-comparison-1/record-command.mjs": {
+        "type": "file",
+        "hash": "c3ab91eeb5833650ce9482accf96a5985c85471b9c714da6da820752f797a1b0",
+        "size": 2254
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/README.md": {
+        "type": "file",
+        "hash": "73b7e7ee5b9b477032bf590af5ce09340ff823847afd82a1d446950740041dc4",
+        "size": 7209
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/finalize-readiness.mjs": {
+        "type": "file",
+        "hash": "849527a5f69bbd2d4239e54eea582d7ea25f1769c6284b5103443e1e9a90fbda",
+        "size": 10906
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/launch-controls.md": {
+        "type": "file",
+        "hash": "1d63fce034cc32f1fcdd478e2226d5a92a85e4a3694a0e5003724218a8a946cc",
+        "size": 3786
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs": {
+        "type": "file",
+        "hash": "c5ee528bea9045c0d5dd846850dc88394c202f01444ab582800e164ad434851a",
+        "size": 13903
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.test.mjs": {
+        "type": "file",
+        "hash": "b7e9199e208fe9112f4b472332ffeb8bdbb6dbb6176d5540989061cda84be8e6",
+        "size": 6660
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/run-environment-proof.mjs": {
+        "type": "file",
+        "hash": "a077ea603f6a6f83d523d263b8e1d565c673e27c2c262e008128998011473e9f",
+        "size": 8803
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/README.md": {
+        "type": "file",
+        "hash": "c6d4d882ac9ad56eda8e4a50811969cf826a6f0f8804fa68767cce955e6c6088",
+        "size": 18191
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/binding-lib.mjs": {
+        "type": "file",
+        "hash": "731556522fe1c482196700f13c090d4d0e2e2e600d84d938d5725a8bb002368b",
+        "size": 16695
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/cache-identity.mjs": {
+        "type": "file",
+        "hash": "110e73ee34e8c6715404e7cffad9162619c82bd70e8753726da9a2f564a06878",
+        "size": 8960
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/cache-identity.test.mjs": {
+        "type": "file",
+        "hash": "24d6c10d91873382aec2b5f8a0f2b2d5a522cbb2922fc089c73ff31142797b15",
+        "size": 10196
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/calibrate.mjs": {
+        "type": "file",
+        "hash": "c27dde1315d2ab8f759a1ca7d75fda3c0de5d964015ccda397b7685d7fe3f75e",
+        "size": 5078
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/controls-lib.mjs": {
+        "type": "file",
+        "hash": "9fbadafef85a75acba473f596e47fe0cf60d08de3adc6a6066fbdcd29ea081dc",
+        "size": 15376
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/controls.test.mjs": {
+        "type": "file",
+        "hash": "20b179a9c37f22a2f9bef17443be7a79e9371fc482a4d1109fa33111ef28843c",
+        "size": 11574
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/final-worker.mjs": {
+        "type": "file",
+        "hash": "10b44ad590dbdac76650cc1e5b9576819e5984f7d8926fb22f3613a5a072acb5",
+        "size": 35684
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/gate-worker.mjs": {
+        "type": "file",
+        "hash": "53e28abcbabc9c08252043e9f5b6d51e5c25e5184af690fd4bcead6e4f2a2c31",
+        "size": 16310
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/measurement-lib.mjs": {
+        "type": "file",
+        "hash": "c74d4c57108858e62dae5ddd117c263fbcade52365f407ce7629bd82f7c140c5",
+        "size": 24727
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/measurement.test.mjs": {
+        "type": "file",
+        "hash": "cb2f415df1fd37f1a6cd623b9a175559d5684b9db7745fe6c7eeed36e00d3640",
+        "size": 23415
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/policy.json": {
+        "type": "file",
+        "hash": "fb0564dcc2ca4319cc151679ddcb53295ced702148b91d36c537582397f93d54",
+        "size": 1373
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/prepare-source.mjs": {
+        "type": "file",
+        "hash": "b9c79b65a3364fb45727b68872703e5f96a2480ce226066d38c4aca93b5ce4c3",
+        "size": 2370
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/run-unit.mjs": {
+        "type": "file",
+        "hash": "7bcaa2429ca0d80285b2a5ff8bc9d4fb001f038166eae0a8cd88fb44a9d77d06",
+        "size": 8295
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/full-journey-measurement/verify.mjs": {
+        "type": "file",
+        "hash": "9f1345e2ca368e78d319bd37818d2f97357218e15effdc3aff7174e9968bd163",
+        "size": 4475
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/process-supervision/README.md": {
+        "type": "file",
+        "hash": "3ebbb8e6169ff845d2ca08dd1b64c212bb61d6c24a537e5d37b8b8dd6565c2ff",
+        "size": 4695
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/process-supervision/recorder.mjs": {
+        "type": "file",
+        "hash": "fc92e1a3f4d4eaecbee0a952e0ea3dba4f7ec28487840698cb8aa83d9e262802",
+        "size": 8073
+      },
+      "inputs/implementation/evals/runs/stage-3-completion-2/process-supervision/recorder.test.mjs": {
+        "type": "file",
+        "hash": "5c7eb3136d56e12528acc06f71d1b45e33f9504c9a1e80ce4a9147aaabe7b77e",
+        "size": 10829
+      },
+      "inputs/implementation/skills/storyfolio/scripts/scaffold.mjs": {
+        "type": "file",
+        "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+        "size": 3566
+      },
+      "inputs/manifest.json": {
+        "type": "file",
+        "hash": "724f6aa6d1060e99dab18e8660b605b1e032e4da3bd8872006a31d303c53e3a4",
+        "size": 18142
+      },
+      "inputs/prompts/turn1.md": {
+        "type": "file",
+        "hash": "fb6bde048bf36d4fada24d63c809ff24e69dfc9da9fc9b9c6f94acb4f398f35b",
+        "size": 406
+      },
+      "inputs/prompts/turn2.md": {
+        "type": "file",
+        "hash": "a59e4be287d74791039c686640a574d5c0919b7fa632134e036d1e0a8dca580d",
+        "size": 3176
+      },
+      "inputs/prompts/turn3.md": {
+        "type": "file",
+        "hash": "919005327255a873af0f7f26c4693ca700769980dacee55d64a7e3b5a89e3a38",
+        "size": 276
+      },
+      "inputs/prompts/turn4.md": {
+        "type": "file",
+        "hash": "a5b93d64e91181399b40849f903cdb4ba8addd52674b85388e9e4cc5f6a47595",
+        "size": 178
+      },
+      "inputs/prompts/turn5.md": {
+        "type": "file",
+        "hash": "4f008aef11dcd1ccd764c6043cfe811d7564c26a841e1b102a10179decb36820",
+        "size": 256
+      },
+      "inputs/prompts/turn6.md": {
+        "type": "file",
+        "hash": "5bdecb8ae234909a2d849e799a82da531b2673c2ed7e608d85b184e73c96cefc",
+        "size": 378
+      },
+      "inputs/protocol.md": {
+        "type": "file",
+        "hash": "ec5f429416f862f6023f75fda6b2d161e7f78078a3aeeffaf0eecf402d4d0401",
+        "size": 7622
+      },
+      "inputs/rubric.md": {
+        "type": "file",
+        "hash": "9cc5842d15921deea10050be8d4452049c3e208341ae27c33648c51e364197e0",
+        "size": 5078
+      },
+      "inputs/skill/SKILL.md": {
+        "type": "file",
+        "hash": "2dded80561342fa6945eb54c118c22c7b5067b3e0346ba57687671b20682f9a9",
+        "size": 4463
+      },
+      "inputs/skill/engine/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      "inputs/skill/engine/AGENTS.md": {
+        "type": "file",
+        "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+        "size": 1055
+      },
+      "inputs/skill/engine/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      "inputs/skill/engine/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      "inputs/skill/engine/README.md": {
+        "type": "file",
+        "hash": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+        "size": 6746
+      },
+      "inputs/skill/engine/app/globals.css": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      "inputs/skill/engine/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      "inputs/skill/engine/app/page.tsx": {
+        "type": "file",
+        "hash": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+        "size": 1271
+      },
+      "inputs/skill/engine/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      "inputs/skill/engine/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      "inputs/skill/engine/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      "inputs/skill/engine/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      "inputs/skill/engine/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      "inputs/skill/engine/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      "inputs/skill/engine/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      "inputs/skill/engine/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      "inputs/skill/engine/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      "inputs/skill/engine/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      "inputs/skill/engine/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      "inputs/skill/engine/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      "inputs/skill/engine/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      "inputs/skill/engine/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      "inputs/skill/engine/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+        "size": 4623
+      },
+      "inputs/skill/engine/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      "inputs/skill/engine/components/story/story.css": {
+        "type": "file",
+        "hash": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+        "size": 5859
+      },
+      "inputs/skill/engine/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      "inputs/skill/engine/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      "inputs/skill/engine/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      "inputs/skill/engine/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      "inputs/skill/engine/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      "inputs/skill/engine/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      "inputs/skill/engine/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      "inputs/skill/engine/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      "inputs/skill/engine/content/checks.json": {
+        "type": "file",
+        "hash": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+        "size": 130
+      },
+      "inputs/skill/engine/content/copy.ts": {
+        "type": "file",
+        "hash": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+        "size": 1468
+      },
+      "inputs/skill/engine/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      "inputs/skill/engine/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+        "size": 613
+      },
+      "inputs/skill/engine/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      "inputs/skill/engine/content/faces.ts": {
+        "type": "file",
+        "hash": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+        "size": 883
+      },
+      "inputs/skill/engine/content/formations.ts": {
+        "type": "file",
+        "hash": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+        "size": 942
+      },
+      "inputs/skill/engine/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      "inputs/skill/engine/content/links.ts": {
+        "type": "file",
+        "hash": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+        "size": 130
+      },
+      "inputs/skill/engine/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      "inputs/skill/engine/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+        "size": 238
+      },
+      "inputs/skill/engine/content/story.ts": {
+        "type": "file",
+        "hash": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+        "size": 518
+      },
+      "inputs/skill/engine/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      "inputs/skill/engine/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      "inputs/skill/engine/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      "inputs/skill/engine/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      "inputs/skill/engine/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      "inputs/skill/engine/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      "inputs/skill/engine/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      "inputs/skill/engine/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      "inputs/skill/engine/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      "inputs/skill/engine/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      "inputs/skill/engine/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      "inputs/skill/engine/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      "inputs/skill/engine/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      "inputs/skill/engine/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      "inputs/skill/engine/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      "inputs/skill/engine/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      "inputs/skill/engine/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      "inputs/skill/engine/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+        "size": 4065
+      },
+      "inputs/skill/engine/lib/story/story.ts": {
+        "type": "file",
+        "hash": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+        "size": 4796
+      },
+      "inputs/skill/engine/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      "inputs/skill/engine/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      "inputs/skill/engine/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      "inputs/skill/engine/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      "inputs/skill/engine/next.config.ts": {
+        "type": "file",
+        "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+        "size": 94
+      },
+      "inputs/skill/engine/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      "inputs/skill/engine/package.json": {
+        "type": "file",
+        "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+        "size": 1015
+      },
+      "inputs/skill/engine/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      "inputs/skill/engine/public/plain/face.svg": {
+        "type": "file",
+        "hash": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+        "size": 309
+      },
+      "inputs/skill/engine/public/plain/fan.svg": {
+        "type": "file",
+        "hash": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+        "size": 775
+      },
+      "inputs/skill/engine/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      "inputs/skill/engine/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      "inputs/skill/engine/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      "inputs/skill/engine/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      "inputs/skill/engine/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      },
+      "inputs/skill/references/asking.md": {
+        "type": "file",
+        "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+        "size": 1486
+      },
+      "inputs/skill/references/building.md": {
+        "type": "file",
+        "hash": "3a7f6f1620bde62e40ea2e8847485a2ebe6afa8435aeed6a426773d5c12b9a73",
+        "size": 1275
+      },
+      "inputs/skill/references/concept.md": {
+        "type": "file",
+        "hash": "11f1285c3b2380d17ab320377120b78a448aba1b52f5b9ffabdd787618719e18",
+        "size": 7822
+      },
+      "inputs/skill/references/reading-a-profile.md": {
+        "type": "file",
+        "hash": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca",
+        "size": 5537
+      },
+      "inputs/skill/references/storyboard.md": {
+        "type": "file",
+        "hash": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6",
+        "size": 4016
+      },
+      "inputs/skill/scripts/scaffold.mjs": {
+        "type": "file",
+        "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+        "size": 3566
+      },
+      "inputs/skill/scripts/scaffold.test.mjs": {
+        "type": "file",
+        "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+        "size": 4044
+      }
+    },
+    "outerFiles": {
+      "command.json": {
+        "type": "file",
+        "hash": "412cfe430c04496bb0e20b7eb741d032a14adbaa14e83bbc2ad0e36fd91aa686",
+        "size": 1884
+      },
+      "lifecycle.jsonl": {
+        "type": "file",
+        "hash": "9b190e7b66e10eebdc8d49d16f56e81507bf43105643b9a58939b8436f975f52",
+        "size": 489
+      },
+      "result.json": {
+        "type": "file",
+        "hash": "e48ab9332f262249ca9f9044282aaa3891dac0a126c01201d357ba1d450200a8",
+        "size": 1042
+      },
+      "stderr.log": {
+        "type": "file",
+        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      },
+      "stdout.log": {
+        "type": "file",
+        "hash": "31cad62f1ce8a91eb88dfc0046c1d462d51baa8f472acde750eb642aad32137e",
+        "size": 387
+      }
+    },
+    "outerTool": {
+      "path": "../baseline-environment-tool-poll-1.json",
+      "sha256": "c3f0b5915ab16ed2b430ed276443f564324027dd9c214e2fd282ce236267a244"
+    },
+    "selfSha256": "2b175ac678ed8f55b29d6fe3c152eea0a352e5947d978451807c89de2316f865"
+  },
+  "limits": [
+    "This verifies the failed proof, not readiness or a built site. No original image exists to review.",
+    "Launcher metadata/bytes are observed after closure; no claim of a filesystem read jail or cryptographic release authenticity.",
+    "The empty runtime output remains retained. Nothing in the frozen cohort or workspace was rewritten; no retry or model was invoked."
+  ]
+}

@@ -4,21 +4,85 @@ import { spawn } from "node:child_process";
 import { createHash } from "node:crypto";
 import { createServer } from "node:http";
 import { createRequire } from "node:module";
-import { lstat, mkdir, readFile, realpath, writeFile } from "node:fs/promises";
-import { delimiter, join, resolve } from "node:path";
+import { lstat, mkdir, readFile, readdir, readlink, realpath, writeFile } from "node:fs/promises";
+import { basename, delimiter, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { inspect, parseArgs } from "node:util";
 
 export const PROOF = Object.freeze({
-  cohorts: ["codex-full-journey-baseline-1", "codex-full-journey-candidate-1"],
+  cohorts: ["codex-full-journey-baseline-1", "codex-full-journey-baseline-2", "codex-full-journey-candidate-1"],
   temporaryRoot: "/var/tmp/storyfolio-entry-runtime-20261012",
   dependencies: "/tmp/storyfolio-build-capability-20261011",
   playwrightSha256: "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b",
   timeoutMs: 120000, graceMs: 5000, commandMs: 30000, requestMs: 5000, browserMs: 30000,
   width: 1440, height: 900,
 });
+// Prospective launcher identity, inspected after the preserved baseline-1
+// PATH failure. Unknown releases, executable entries or aliases fail closed.
+export const LAUNCHER = Object.freeze({
+  metadata: { layoutVersion: 1, version: "0.162.1", target: "x86_64-unknown-linux-musl", variant: "codex", entrypoint: "bin/codex", resourcesDir: "codex-resources", pathDir: "codex-path" },
+  metadataSha256: "f05ebff6db98bd613dd5654461985090c6416b41ad67902243d83a53b305ac05", metadataBytes: 205,
+  pathFiles: [{ name: "rg", type: "file", bytes: 5408904, sha256: "e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849" }],
+  aliases: ["apply_patch", "applypatch", "codex-execve-wrapper", "codex-linux-sandbox"],
+});
 export const sha = bytes => createHash("sha256").update(bytes).digest("hex");
 export const json = value => JSON.stringify(value, null, 2) + "\n";
+export const selectedEnvironment = environment => Object.fromEntries(["PATH", "PLAYWRIGHT_BROWSERS_PATH", "LD_LIBRARY_PATH", "LANG", "TMPDIR", "NEXT_TELEMETRY_DISABLED"].map(key => [key, environment[key] ?? null]));
+export const expectedOuterEnvironment = capabilities => ({ ...capabilities.environment, TMPDIR: PROOF.temporaryRoot, NEXT_TELEMETRY_DISABLED: null });
+export function sandboxPathLayout(capabilities, environment) {
+  assert.deepEqual(environment.expectedOuter, expectedOuterEnvironment(capabilities));
+  assert.deepEqual(Object.keys(environment.sandbox).sort(), Object.keys(environment.expectedOuter).sort());
+  for (const key of Object.keys(environment.expectedOuter).filter(key => key !== "PATH")) assert.equal(environment.sandbox[key], environment.expectedOuter[key], key);
+  const expected = environment.expectedOuter.PATH, actual = environment.sandbox.PATH;
+  assert.equal(typeof expected, "string"); assert.ok(expected.length); assert.equal(typeof actual, "string");
+  const expectedParts = expected.split(delimiter), actualParts = actual.split(delimiter);
+  assert.equal(actualParts.length, expectedParts.length + 2, "Exactly two identified launcher prefixes are required");
+  assert.deepEqual(actualParts.slice(2), expectedParts, "The complete outer PATH suffix must remain exact");
+  const releaseRoot = dirname(dirname(capabilities.cliExecutable)), codexRoot = resolve(releaseRoot, "../../../..");
+  const releaseName = LAUNCHER.metadata.version + "-" + LAUNCHER.metadata.target;
+  assert.equal(releaseRoot, join(codexRoot, "packages/standalone/releases", releaseName));
+  assert.equal(capabilities.cliExecutable, join(releaseRoot, LAUNCHER.metadata.entrypoint));
+  assert.equal(capabilities.cliVersion, "codex-cli " + LAUNCHER.metadata.version);
+  assert.match(capabilities.cliSha256, /^[a-f0-9]{64}$/);
+  const arg0Root = join(codexRoot, "tmp/arg0"), arg0Directory = actualParts[0], pathDirectory = join(releaseRoot, LAUNCHER.metadata.pathDir);
+  assert.equal(dirname(arg0Directory), arg0Root); assert.match(basename(arg0Directory), /^codex-arg0[A-Za-z0-9]{6}$/);
+  assert.equal(actualParts[1], pathDirectory, "Package PATH prefix must come from this frozen CLI release");
+  return { releaseRoot, arg0Root, arg0Directory, pathDirectory, metadataPath: join(releaseRoot, "codex-package.json") };
+}
+export function assertSandboxEnvironment(environment, capabilities) {
+  const layout = sandboxPathLayout(capabilities, environment), evidence = environment.launcher;
+  assert.deepEqual(evidence.layout, layout);
+  assert.deepEqual(evidence.metadata, { path: layout.metadataPath, realpath: layout.metadataPath, type: "file", bytes: LAUNCHER.metadataBytes, sha256: LAUNCHER.metadataSha256, value: LAUNCHER.metadata });
+  assert.equal(evidence.cli.path, capabilities.cliExecutable); assert.equal(evidence.cli.realpath, capabilities.cliExecutable);
+  assert.equal(evidence.cli.type, "file"); assert.equal(evidence.cli.sha256, capabilities.cliSha256); assert.ok(Number.isSafeInteger(evidence.cli.bytes) && evidence.cli.bytes > 0);
+  assert.deepEqual(evidence.directories, [layout.releaseRoot, layout.arg0Root, layout.arg0Directory, layout.pathDirectory].map(path => ({ path, realpath: path, type: "directory" })));
+  assert.deepEqual(evidence.pathEntries, LAUNCHER.pathFiles);
+  assert.deepEqual(evidence.arg0Entries, [{ name: ".lock", type: "file", bytes: 0, sha256: sha("") }, ...LAUNCHER.aliases.map(name => ({ name, type: "symlink", target: capabilities.cliExecutable, realpath: capabilities.cliExecutable }))]);
+}
+async function observeLauncherEnvironment(capabilities, environment) {
+  const layout = sandboxPathLayout(capabilities, environment);
+  const regular = async path => {
+    const stat = await lstat(path); assert.ok(stat.isFile() && !stat.isSymbolicLink(), "Expected regular launcher file: " + path);
+    const canonical = await realpath(path); assert.equal(canonical, path);
+    const bytes = await readFile(path); return { path, realpath: canonical, type: "file", bytes: bytes.length, sha256: sha(bytes) };
+  };
+  const metadata = await regular(layout.metadataPath); metadata.value = JSON.parse(await readFile(layout.metadataPath, "utf8"));
+  const cli = await regular(capabilities.cliExecutable), directories = [];
+  for (const path of [layout.releaseRoot, layout.arg0Root, layout.arg0Directory, layout.pathDirectory]) {
+    const stat = await lstat(path); assert.ok(stat.isDirectory() && !stat.isSymbolicLink(), "Expected real launcher directory: " + path);
+    directories.push({ path, realpath: await realpath(path), type: "directory" });
+  }
+  assert.deepEqual((await readdir(layout.pathDirectory)).sort(), LAUNCHER.pathFiles.map(file => file.name));
+  const pathEntries = [];
+  for (const { name } of LAUNCHER.pathFiles) { const { path, realpath, ...file } = await regular(join(layout.pathDirectory, name)); pathEntries.push({ name, ...file }); }
+  assert.deepEqual((await readdir(layout.arg0Directory)).sort(), [".lock", ...LAUNCHER.aliases]);
+  const { path, realpath: lockRealpath, ...lock } = await regular(join(layout.arg0Directory, ".lock")), arg0Entries = [{ name: ".lock", ...lock }];
+  for (const name of LAUNCHER.aliases) {
+    const target = join(layout.arg0Directory, name); assert.ok((await lstat(target)).isSymbolicLink(), "Expected launcher alias: " + name);
+    arg0Entries.push({ name, type: "symlink", target: await readlink(target), realpath: await realpath(target) });
+  }
+  return { layout, metadata, cli, directories, pathEntries, arg0Entries };
+}
 export function assertContract({ cohort, source, meta, manifest, capabilities }) {
   assert.ok(PROOF.cohorts.includes(cohort), "Unsupported full-journey cohort");
   assert.equal(source.id, "full-journey-1");
@@ -52,7 +116,7 @@ export function assertInitialSnapshot(snapshot, manifest) {
     assert.ok(Number.isSafeInteger(snapshot.files[path].size) && snapshot.files[path].size >= 0);
   }
 }
-export function assertMeasured(report, processResult) {
+export function assertMeasured(report, processResult, capabilities) {
   assert.equal(processResult.code, 0);
   assert.equal(processResult.signal, null);
   assert.equal(processResult.timedOut, false);
@@ -68,6 +132,7 @@ export function assertMeasured(report, processResult) {
   assert.equal(report.modelCalls, 0);
   assert.equal(report.passed, true);
   assert.equal(report.interruptedBy, null);
+  assertSandboxEnvironment(report.environment, capabilities);
   assert.deepEqual(report.observations.map(row => row.name).sort(), ["browser", "external-request", "git", "local-http", "node", "npm", "resources"]);
   const row = name => report.observations.find(value => value.name === name);
   for (const name of ["node", "npm", "git", "resources", "local-http", "browser"]) assert.equal(row(name).passed, true, name);
@@ -94,12 +159,9 @@ async function main() {
   assert.ok(!out.startsWith(workspace + "/") && out !== workspace);
   await mkdir(out);
   const capabilities = JSON.parse(await readFile(resolve(values.capabilities)));
-  assert.equal(process.execPath, capabilities.node.executable);
-  assert.equal(process.version, capabilities.node.version);
-  for (const [key, value] of Object.entries(capabilities.environment)) assert.equal(process.env[key] ?? null, value);
-  assert.equal(process.env.TMPDIR, PROOF.temporaryRoot);
   const report = { schemaVersion: 1, scope: "unscaffolded-environment", actorPreflight: false, modelCalls: 0,
     started: new Date().toISOString(), workspace, out, passed: false, interruptedBy: null, observations: [],
+    environment: { expectedOuter: expectedOuterEnvironment(capabilities), sandbox: selectedEnvironment(process.env), launcher: null },
     limits: ["Neutral local page only, not a built application or actor preflight.", "No installation, optional-skill activation, real phone review or site acceptance.", "Command-only sandbox inherits user configuration and is not a filesystem read jail."] };
   const reportPath = join(out, "probe.json");
   await writeFile(reportPath, json(report), { flag: "wx" });
@@ -133,6 +195,9 @@ async function main() {
     assert.ok(passed, name + " version command failed");
   };
   try {
+    assert.equal(process.execPath, capabilities.node.executable); assert.equal(process.version, capabilities.node.version);
+    report.environment.launcher = await observeLauncherEnvironment(capabilities, report.environment);
+    assertSandboxEnvironment(report.environment, capabilities);
     report.observations.push({ name: "node", executable: process.execPath, version: process.version, passed: true });
     await command("npm"); await command("git");
     const resources = {};

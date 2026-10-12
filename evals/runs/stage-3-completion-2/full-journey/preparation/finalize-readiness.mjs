@@ -55,7 +55,8 @@ const expectedArgs = ["sandbox"];
 for (let index = 0; index < capabilities.argv.length; index++) if (capabilities.argv[index] === "-c") expectedArgs.push("-c", capabilities.argv[++index]);
 expectedArgs.push("--", capabilities.node.executable, join(inputs, "implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs"), "--out", command.runtimeOut, "--capabilities", join(inputs, "capabilities.json"), "--workspace", meta.work);
 assert.deepEqual(command.args, expectedArgs);
-assertMeasured(report, processResult);
+assertMeasured(report, processResult, capabilities);
+assert.deepEqual(report.environment.expectedOuter, command.environment);
 assert.equal(report.workspace, meta.work); assert.equal(report.out, command.runtimeOut);
 assert.equal(closure.processSucceeded, true); assert.equal(closure.sourceUnchanged, true); assert.equal(closure.copied, true);
 assert.equal(closure.runtimeOut, command.runtimeOut);
@@ -112,6 +113,7 @@ const evidenceHashes = {};
 for (const path of evidence) { const bytes = await regularBytes(setup, path); evidenceHashes[path] = { sha256: hash(bytes), bytes: bytes.length }; }
 await writeNew(join(setup, "probe.json"), json({ schemaVersion: 1, passed: true, scope: "unscaffolded-environment", actorPreflight: false, modelCalls: 0,
   inputDigest: manifest.digest, capabilitySha256: manifest.hashes["capabilities.json"], work: meta.work, evidence, evidenceHashes, coordinatorHelpers,
+  environment: { outer: command.environment, sandbox: report.environment.sandbox, launcher: report.environment.launcher },
   limits: ["One neutral desktop page, no application build, root install, actor preflight or site acceptance.", "The coordinator attests actual original-image review; software only verifies the saved attestation and bytes.", "No actor-visible file is written. Supplied material facts remain separately frozen.", "Command-only sandbox inherits user configuration; configuration isolation is not a filesystem read jail."] }));
 console.log(json({ passed: true, scope: "unscaffolded-environment", actorPreflight: false, modelCalls: 0, sourceFiles: Object.keys(expected).length, fixtureFiles: source.files.length,
   reviewedOriginals: 1, inputDigest: manifest.digest, proof: join(setup, "probe.json"), actorWorkspaceWrites: 0 }));

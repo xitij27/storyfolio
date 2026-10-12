@@ -13,7 +13,18 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: the third desktop calibration completed normally, with
+Newest checkpoint: the first full-journey neutral setup proof failed
+normally before browser or model activity because Codex prepended two
+launcher directories to PATH. All 149 frozen inputs and 94 source files
+are independently verified unchanged. The narrow, independently reviewed
+[prospective correction](../evals/runs/stage-3-completion-2/full-journey/preparation/environment-path-correction.md)
+checks those exact launcher contents while preserving the complete outer
+environment. Twelve focused tests and all 351 repository tests pass in
+`local-tests-8`. The failed baseline-1 stays immutable; a new baseline-2
+setup gets one neutral proof before the first paid baseline. No skill,
+capability or prompt changed, and no full-journey actor has launched.
+
+Earlier checkpoint: the third desktop calibration completed normally, with
 all 102 originals reviewed and source/build/artifact/lifecycle integrity
 independently verified. Twelve technical diagnostics and the five-beat
 scope finding remain failures. The apparatus faithfully records them;

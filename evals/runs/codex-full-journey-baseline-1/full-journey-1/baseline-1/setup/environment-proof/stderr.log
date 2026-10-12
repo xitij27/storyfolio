@@ -1,0 +1,23 @@
+(node:2) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ:/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64'
+- '/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64'
+
+    at main (file:///home/kshitij/projects/storyfolio/evals/runs/codex-full-journey-baseline-1/inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs:99:79)
+    at async file:///home/kshitij/projects/storyfolio/evals/runs/codex-full-journey-baseline-1/inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs:87:13 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '/home/kshitij/.codex/tmp/arg0/codex-arg0c9kfLQ:/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64',
+  expected: '/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.22.1

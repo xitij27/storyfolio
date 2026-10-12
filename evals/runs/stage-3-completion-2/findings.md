@@ -201,3 +201,24 @@ apparatus question and proceeds to fresh journey setup, not another
 all-green calibration. All 351 repository tests pass in `local-tests-7`.
 No skill or prototype change, paid full-journey launch, push or Stage 3
 completion occurred at this checkpoint.
+
+## First journey setup and narrow environment correction
+
+The first fresh setup froze 149 inputs and 94 initial source files. Its
+neutral proof closed normally with code 1 after 240 ms, before a browser
+or paid call. Codex prepended two launcher directories to the exact frozen
+outer PATH. The [independent preservation audit](full-journey/preparation/environment-failure-1/audit.md)
+verifies all frozen/source bytes and normal closure; no readiness exists.
+Baseline 1 is immutable and consumes no paid baseline allowance.
+
+The [prospective correction](full-journey/preparation/environment-path-correction.md)
+records outer and actual sandbox environments separately, verifies only
+the exact identified prefixes, package/CLI/rg identities and alias contents,
+and preserves exact suffix/non-PATH checks. It changes measurement only.
+Independent source review found no blocker. Root's recorded `local-tests-8`
+closed zero at 06:13:28.128 UTC after 14,389 ms: four syntax checks, all
+12 pure environment tests, skill and fictional-person checks, and all 351
+repository tests passed. No browser or model ran during these checks.
+The separate [decision](full-journey/preparation/environment-correction-decision.md)
+allows one newly frozen baseline-2 neutral proof after commit, not an old
+evidence overwrite, extra paid retry or relaxed product gate.

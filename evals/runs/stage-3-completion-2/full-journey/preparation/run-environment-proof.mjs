@@ -46,6 +46,7 @@ for (let index = 0; index < capabilities.argv.length; index++) if (capabilities.
 args.push("--", process.execPath, join(inputs, "implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs"), "--out", runtimeOut, "--capabilities", join(inputs, "capabilities.json"), "--workspace", meta.work);
 const command = { schemaVersion: 1, started: new Date().toISOString(), executable: capabilities.cliExecutable, args, cwd: meta.work,
   environment: { ...capabilities.environment, TMPDIR: process.env.TMPDIR, NEXT_TELEMETRY_DISABLED: null },
+  environmentScope: "observed-outer-launcher; selected actual sandbox environment is retained separately in capability/probe.json",
   inputDigest: manifest.digest, capabilitySha256: manifest.hashes["capabilities.json"], runtimeDirectory: allocated, runtimeOut,
   bounds: { timeoutMs: PROOF.timeoutMs, graceMs: PROOF.graceMs, totalCapMs: PROOF.timeoutMs + PROOF.graceMs },
   scope: "unscaffolded-environment", modelCalls: 0, actorPreflight: false,

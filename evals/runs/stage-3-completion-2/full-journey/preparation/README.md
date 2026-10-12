@@ -2,8 +2,11 @@
 
 Source-only preparation, 12 October 2026. Root approved one neutral
 environment proof per newly prepared full-journey arm. Allowed cohort
-identities are `codex-full-journey-baseline-1` and
-`codex-full-journey-candidate-1`. No full-journey case or cohort is created
+identities are `codex-full-journey-baseline-1`,
+`codex-full-journey-baseline-2` and `codex-full-journey-candidate-1`.
+The first baseline identity retains its failed neutral proof with no model
+call. The separately authorized corrected proof uses baseline 2, the first
+prospective paid baseline, not a retry inside the old freeze. No full-journey case or cohort is created
 by these helpers. Root owns execution and commits. No proof, test, model,
 build, installation or browser was launched by this preparer.
 
@@ -20,6 +23,19 @@ neutral HTML page in memory over loopback, reads that page through HTTP,
 opens it in existing Chromium and saves one original 1440-by-900 PNG.
 A separate external request must show explicit proxy 403 denial, not just
 a timeout or generic failure.
+
+The preserved first proof exposed a launcher PATH transformation before
+any version/browser observation. The [failure-backed correction](environment-path-correction.md)
+keeps the outer command environment exact and records the selected actual
+sandbox environment separately. Exactly two prefixes are accepted: a
+canonical Codex arg0 directory with only the four identified aliases to the
+frozen CLI plus an empty lock file, and that CLI release's metadata-declared
+`codex-path` directory containing only the pinned `rg` file. Package metadata,
+CLI and rg identities, canonical paths, all entries/targets, the complete
+outer PATH suffix and all five selected non-PATH values are checked. No PATH
+rewriting, arbitrary prefix allowance or host-UID assumption is made.
+The report retains the actual selected environment even when validation
+fails. Metadata and rg hashes are saved in the report and final attestation.
 
 Playwright is loaded from the trusted
 `/tmp/storyfolio-build-capability-20261011` dependency tree. Its entrypoint
@@ -64,7 +80,7 @@ The runner separately checks this attestation before a paid turn.
    implementation paths cover the helpers' build/review/source dependencies;
    retain the full actual transitive freeze. Do not modify older freezes.
 2. After active actors/captures are closed, root runs native syntax checks
-   and the six [pure guard tests](probe-environment.test.mjs), retaining
+   and the twelve [pure guard tests](probe-environment.test.mjs), retaining
    command/output records, then the repository-required checks before commit.
    Tests use in-memory examples only; they are not environment success.
 3. Supply the recorded native Node and the four exact environment values
