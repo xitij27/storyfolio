@@ -40,6 +40,13 @@ measures written planning, not a built site's visual or interaction quality.
 
 ## Before spending model usage
 
+The current [ordinary-entry baseline](runs/stage-3-natural-entry-1/findings.md)
+has separate approval for one unchanged-skill actor turn and one relevant
+browser verification, each at most 15 minutes. It uses the existing
+schema-1 stop-4 runner with a fresh fictional fixture. It has no paid judge,
+retry or continuation allowance; a correction and matched rerun require a
+new decision. Its narrow protocol does not replace full-site acceptance.
+
 Record the question, selected cases, repetitions, comparison group and
 stopping rule in a plan. A skill change must link to a saved run that needed
 it, then rerun the relevant cases. Keep fixtures, prompts and rubric fixed

@@ -5,6 +5,15 @@ call or skill edit is made here. The currently approved work is the
 separately labelled verification-only capture of unchanged candidate
 source. This experiment would need its own explicit approval.
 
+## Later approval
+
+The author subsequently [approved this single baseline test](../../history/2026-10-12-natural-entry-approval.md)
+with "Approve this single build-entry test". The original proposal below
+remains its scope: one actor turn and one relevant browser verification,
+each at most 15 minutes, no judge, retry or continuation. Correction and
+matched rerun remain separate decisions. Actual preparation and outcomes
+are retained in the [new study](../../../evals/runs/stage-3-natural-entry-1/findings.md).
+
 ## One question and one case
 
 **Given an approved storyboard and an ordinary request to build it, does

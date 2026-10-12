@@ -98,7 +98,13 @@ The author subsequently [approved one verification-only capture](history/2026-10
 The [new evidence](../evals/runs/stage-3-candidate-verification-1/findings.md)
 preserves the earlier attempt and uses unchanged source and measurement.
 The [ordinary build-entry proposal](superpowers/plans/2026-10-12-stage-3-natural-entry-proposal.md)
-is a separate next question, with no paid allowance inferred.
+is a separate next question. The author has now
+[approved one baseline](history/2026-10-12-natural-entry-approval.md): one
+unchanged-skill turn and one relevant browser verification, each at most
+15 minutes, with no judge, retry or continuation. Its
+[preparation and findings](../evals/runs/stage-3-natural-entry-1/findings.md)
+are separate from the interrupted candidate verification. A skill correction
+and matched rerun require a new decision.
 
 For a new session, read:
 

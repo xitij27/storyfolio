@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: actor-selected DOM and look IDs are valid without five fixed beats
+ok 1 - actor-selected DOM and look IDs are valid without five fixed beats
+  ---
+  duration_ms: 1.473653
+  type: 'test'
+  ...
+# Subtest: all approved middle meanings and two or three looks are accepted
+ok 2 - all approved middle meanings and two or three looks are accepted
+  ---
+  duration_ms: 0.382111
+  type: 'test'
+  ...
+# Subtest: one look, missing middle and excess looks remain problems, not trimmed
+ok 3 - one look, missing middle and excess looks remain problems, not trimmed
+  ---
+  duration_ms: 0.205652
+  type: 'test'
+  ...
+# Subtest: stock starter/refusal branches are not fake capture passes
+ok 4 - stock starter/refusal branches are not fake capture passes
+  ---
+  duration_ms: 0.193099
+  type: 'test'
+  ...
+# Subtest: routes stay local and inventories reject missing authority or duplicates
+ok 5 - routes stay local and inventories reject missing authority or duplicates
+  ---
+  duration_ms: 0.135001
+  type: 'test'
+  ...
+# Subtest: unknown middle is invalid rather than post-hoc approved
+ok 6 - unknown middle is invalid rather than post-hoc approved
+  ---
+  duration_ms: 0.130823
+  type: 'test'
+  ...
+# Subtest: existing engine geometry supplies bounded resting positions
+ok 7 - existing engine geometry supplies bounded resting positions
+  ---
+  duration_ms: 0.131064
+  type: 'test'
+  ...
+# Subtest: capture and cleanup fit the one authorized envelope
+ok 8 - capture and cleanup fit the one authorized envelope
+  ---
+  duration_ms: 0.068497
+  type: 'test'
+  ...
+# Subtest: production work and cleanup share the authorized fifteen-minute envelope
+ok 9 - production work and cleanup share the authorized fifteen-minute envelope
+  ---
+  duration_ms: 1.415634
+  type: 'test'
+  ...
+# Subtest: normal exit cancels deadline and captures output
+ok 10 - normal exit cancels deadline and captures output
+  ---
+  duration_ms: 60.703252
+  type: 'test'
+  ...
+# Subtest: actual child deadline sends TERM and preserves orderly close
+ok 11 - actual child deadline sends TERM and preserves orderly close
+  ---
+  duration_ms: 262.338853
+  type: 'test'
+  ...
+# Subtest: unresponsive child is killed after bounded grace without retry
+ok 12 - unresponsive child is killed after bounded grace without retry
+  ---
+  duration_ms: 402.803416
+  type: 'test'
+  ...
+# Subtest: external signal is recorded as unknown and forwarded, not a deadline
+ok 13 - external signal is recorded as unknown and forwarded, not a deadline
+  ---
+  duration_ms: 2.293287
+  type: 'test'
+  ...
+# Subtest: spawn failure closes once and does not retry
+ok 14 - spawn failure closes once and does not retry
+  ---
+  duration_ms: 2.814869
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 821.768394

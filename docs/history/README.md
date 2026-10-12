@@ -316,3 +316,7 @@ results. Later Stage 3 experiments remain separate scope decisions.
 The [subsequent natural-entry request](2026-10-12-natural-entry-request.md)
 preserves the specific next-test question, its bounds and the distinction
 between asking and receiving approval.
+
+The [single-entry-test approval](2026-10-12-natural-entry-approval.md)
+records the later answer, "Approve this single build-entry test". It grants
+one baseline turn and one relevant verification, not a correction or rerun.
