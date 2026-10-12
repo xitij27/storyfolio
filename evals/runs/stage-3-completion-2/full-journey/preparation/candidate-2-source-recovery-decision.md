@@ -38,3 +38,22 @@ gate and amendment binding; this preparation decision is not that gate.
 The final result must be described as an amended continuation, not an
 unchanged frozen skill-only comparison. Final author desktop/phone review
 and the other Stage 3 proof remain required.
+
+## Source-discovered chooser initialization defect
+
+During derivative review, root found another specific apparatus mismatch
+before capture. Original `gate-worker.mjs` lines 61 to 65 opens the target
+route, then looks for its chooser on that destination. Candidate primary
+chooser selectors are under `main.concept-index`, which exists only on
+their declared `control.fromRoute` (`/`), not `/sketch/<id>`. The original
+worker would record a missing-control initialization error even if actual
+index navigation works. Later pointer/keyboard trials already correctly
+start from `fromRoute`.
+
+Permit a narrow derivative correction to initialize through the declared
+source route and real control, including any declared preparation control.
+Do not discard errors or waive either interaction trial. Preserve the
+original worker and prove the mismatch and correction with an injected
+page before capture. This adds a declared chooser-initialization seam to
+the source/cwd amendment; it is not actor behavior evidence or a new skill
+instruction. The same capture deadline and all alternatives remain required.

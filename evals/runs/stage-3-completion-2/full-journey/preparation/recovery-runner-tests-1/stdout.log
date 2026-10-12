@@ -1,0 +1,231 @@
+TAP version 13
+# Subtest: original runner rejects the actual omitted-root shape without invoking or editing history
+ok 1 - original runner rejects the actual omitted-root shape without invoking or editing history
+  ---
+  duration_ms: 141.093354
+  type: 'test'
+  ...
+# Subtest: four amended turns use exact prompts/session and cumulative budgets without duplicating history
+ok 2 - four amended turns use exact prompts/session and cumulative budgets without duplicating history
+  ---
+  duration_ms: 1882.890827
+  type: 'test'
+  ...
+# Subtest: input, recovery digest, live bytes and gates fail before a fake invocation
+    # Subtest: input
+    ok 1 - input
+      ---
+      duration_ms: 86.130988
+      type: 'test'
+      ...
+    # Subtest: recovery
+    ok 2 - recovery
+      ---
+      duration_ms: 94.780813
+      type: 'test'
+      ...
+    # Subtest: live
+    ok 3 - live
+      ---
+      duration_ms: 106.729895
+      type: 'test'
+      ...
+    # Subtest: missing-gate
+    ok 4 - missing-gate
+      ---
+      duration_ms: 87.407553
+      type: 'test'
+      ...
+    # Subtest: amendment
+    ok 5 - amendment
+      ---
+      duration_ms: 92.364226
+      type: 'test'
+      ...
+    # Subtest: source-gate
+    ok 6 - source-gate
+      ---
+      duration_ms: 92.397407
+      type: 'test'
+      ...
+    # Subtest: session
+    ok 7 - session
+      ---
+      duration_ms: 91.962759
+      type: 'test'
+      ...
+    # Subtest: policy
+    ok 8 - policy
+      ---
+      duration_ms: 81.241341
+      type: 'test'
+      ...
+    1..8
+ok 3 - input, recovery digest, live bytes and gates fail before a fake invocation
+  ---
+  duration_ms: 735.820092
+  type: 'test'
+  ...
+# Subtest: unknown payloads and source symlinks cannot enter the expanded snapshot
+    # Subtest: unknown
+    ok 1 - unknown
+      ---
+      duration_ms: 100.076906
+      type: 'test'
+      ...
+    # Subtest: symlink
+    ok 2 - symlink
+      ---
+      duration_ms: 101.667075
+      type: 'test'
+      ...
+    # Subtest: missing
+    ok 3 - missing
+      ---
+      duration_ms: 103.105822
+      type: 'test'
+      ...
+    # Subtest: oversize
+    ok 4 - oversize
+      ---
+      duration_ms: 98.304579
+      type: 'test'
+      ...
+    1..4
+ok 4 - unknown payloads and source symlinks cannot enter the expanded snapshot
+  ---
+  duration_ms: 404.149113
+  type: 'test'
+  ...
+# Subtest: original artifact tampering and incomplete or over-budget history cannot be bypassed
+    # Subtest: artifact
+    ok 1 - artifact
+      ---
+      duration_ms: 85.704354
+      type: 'test'
+      ...
+    # Subtest: incomplete
+    ok 2 - incomplete
+      ---
+      duration_ms: 84.703612
+      type: 'test'
+      ...
+    # Subtest: missing-usage
+    ok 3 - missing-usage
+      ---
+      duration_ms: 88.606584
+      type: 'test'
+      ...
+    # Subtest: cached
+    ok 4 - cached
+      ---
+      duration_ms: 90.213074
+      type: 'test'
+      ...
+    # Subtest: time
+    ok 5 - time
+      ---
+      duration_ms: 86.538095
+      type: 'test'
+      ...
+    # Subtest: tokens
+    ok 6 - tokens
+      ---
+      duration_ms: 94.717314
+      type: 'test'
+      ...
+    # Subtest: uncached
+    ok 7 - uncached
+      ---
+      duration_ms: 91.049509
+      type: 'test'
+      ...
+    1..7
+ok 5 - original artifact tampering and incomplete or over-budget history cannot be bypassed
+  ---
+  duration_ms: 623.095802
+  type: 'test'
+  ...
+# Subtest: after turn3 the previous genuine snapshot is required, not recovery or current drift
+    # Subtest: live
+    ok 1 - live
+      ---
+      duration_ms: 298.545393
+      type: 'test'
+      ...
+    # Subtest: before
+    ok 2 - before
+      ---
+      duration_ms: 265.514925
+      type: 'test'
+      ...
+    # Subtest: snapshot
+    ok 3 - snapshot
+      ---
+      duration_ms: 266.72638
+      type: 'test'
+      ...
+    # Subtest: recovery-gate
+    ok 4 - recovery-gate
+      ---
+      duration_ms: 283.753
+      type: 'test'
+      ...
+    # Subtest: partial-output
+    ok 5 - partial-output
+      ---
+      duration_ms: 287.997559
+      type: 'test'
+      ...
+    1..5
+ok 6 - after turn3 the previous genuine snapshot is required, not recovery or current drift
+  ---
+  duration_ms: 1403.806418
+  type: 'test'
+  ...
+# Subtest: a failed invocation or missing usage stays failed and cannot be retried
+    # Subtest: throw
+    ok 1 - throw
+      ---
+      duration_ms: 223.149468
+      type: 'test'
+      ...
+    # Subtest: missing-usage
+    ok 2 - missing-usage
+      ---
+      duration_ms: 246.580537
+      type: 'test'
+      ...
+    # Subtest: changed-session
+    ok 3 - changed-session
+      ---
+      duration_ms: 201.492665
+      type: 'test'
+      ...
+    # Subtest: unknown-after
+    ok 4 - unknown-after
+      ---
+      duration_ms: 192.709341
+      type: 'test'
+      ...
+    1..4
+ok 7 - a failed invocation or missing usage stays failed and cannot be retried
+  ---
+  duration_ms: 865.045372
+  type: 'test'
+  ...
+# Subtest: last-moment binding revalidation failure prevents invocation and is preserved
+ok 8 - last-moment binding revalidation failure prevents invocation and is preserved
+  ---
+  duration_ms: 220.900734
+  type: 'test'
+  ...
+1..8
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6347.512869

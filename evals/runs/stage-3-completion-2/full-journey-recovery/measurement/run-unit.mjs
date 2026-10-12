@@ -1,0 +1,55 @@
+// Root launches one recovered concepts unit. No automatic next unit, retry or model.
+import assert from "node:assert/strict";
+import { mkdir, readFile } from "node:fs/promises";
+import { join } from "node:path";
+import { parseArgs } from "node:util";
+import { runBounded } from "../../../stage-3-candidate-verification-1/bounded-process.mjs";
+import { bounds, openCaptureLogs } from "../../full-journey-measurement/measurement-lib.mjs";
+import { loadBinding, loadPrepared, captureSource, regularBytes, inventory, hash, json, writeNew, study } from "./binding-lib.mjs";
+import { assertInstall } from "./app-root.mjs";
+const { values } = parseArgs({ options: { binding: { type: "string" }, unit: { type: "string" } } }); assert.ok(values.binding && values.unit);
+const binding = await loadBinding(values.binding), prepared = await loadPrepared(binding), unit = values.unit;
+assert.ok(binding.units.includes(unit), "Unit not in this stage's predeclared schedule");
+const readJson = async (base, path) => JSON.parse(await regularBytes(base, path));
+const install = await readJson(prepared.setup, "dependency-install/command.json"), installed = await readJson(prepared.setup, "dependency-install/result.json");
+assertInstall(install, prepared.application, binding.installContract);
+assert.equal(install.wrapperSha256, binding.helperHashes["evals/runs/stage-3-comparison-1/record-command.mjs"]);
+assert.equal(installed.code, 0); assert.equal(installed.signal, null); assert.ok(!installed.error && !installed.timedOut);
+for (const channel of ["stdout", "stderr"]) assert.equal(hash(await regularBytes(prepared.setup, `dependency-install/${channel}.log`)), installed[`${channel}Sha256`]);
+await mkdir(join(binding.output, "units"), { recursive: true });
+const directory = join(binding.output, "units", unit); await mkdir(directory); const review = join(directory, "review"), artifacts = join(directory, "artifacts"); await mkdir(review);
+const worker = "gate-worker.mjs";
+const args = [join(study, worker), `--workspace=${prepared.work}`, `--application-root=${binding.applicationRoot}`, `--targets=${join(prepared.setup, "targets.json")}`, `--expectations=${join(binding.meta.inputs, "expectations.json")}`, `--out=${artifacts}`, `--dependencies=${binding.policy.trustedDependencies.root}`];
+const limits = bounds(unit, binding.policy);
+await writeNew(join(review, "attempt.json"), json({ started: new Date().toISOString(), unit, stage: binding.record.turn, bindingSha256: binding.bindingSha256, actorResultSha256: binding.record.actorResultSha256, actorComplete: true, amendmentSha256: binding.amendmentSha256, sourceBasis: binding.amendment.record.sourceBasis, retries: 0, modelCalls: 0 }));
+await writeNew(join(review, "source-before.json"), json(binding.restored));
+await writeNew(join(review, "command.json"), json({ executable: process.execPath, args, cwd: prepared.application, wholeWorkspace: prepared.work, applicationRoot: binding.applicationRoot, amendmentSha256: binding.amendmentSha256, environment: binding.environment, ...limits, helperHashes: binding.helperHashes, inputDigest: binding.frozen.digest, workerSha256: hash(await readFile(args[0])), installResultSha256: hash(await regularBytes(prepared.setup, "dependency-install/result.json")), limit: "Total child lifetime includes shutdown grace, subject to scheduling jitter; hard worker exit does not prove all detached descendants exited" }));
+const logs = openCaptureLogs(review);
+const logErrors = []; let ownedPid = null, logStop = false, logKillTimer;
+function stopForLogError() {
+  if (logStop || !ownedPid) return; logStop = true;
+  const signal = name => { try { process.kill(ownedPid, name); } catch (error) { if (error.code !== "ESRCH") logErrors.push(`Owned worker shutdown: ${error}`); } };
+  signal("SIGTERM"); logKillTimer = setTimeout(() => signal("SIGKILL"), limits.graceMs);
+}
+const append = (name, bytes) => { try { logs.write(name, bytes); } catch (error) { logErrors.push(`${name}: ${error}`); stopForLogError(); } };
+let execution;
+try {
+  execution = await runBounded({ executable: process.execPath, args, cwd: prepared.application, env: { ...process.env, ...binding.environment }, ...limits,
+    onEvent: event => { if (["exit", "closed"].includes(event.type)) { ownedPid = null; clearTimeout(logKillTimer); } else if (["spawn-request", "spawned"].includes(event.type)) ownedPid = event.childPid; if (logErrors.length) stopForLogError(); append("lifecycle", JSON.stringify(event) + "\n"); },
+    onStdout: bytes => append("stdout", bytes), onStderr: bytes => append("stderr", bytes) });
+} finally { clearTimeout(logKillTimer); ownedPid = null; logErrors.push(...logs.close()); }
+execution.logError = logErrors.length ? { errors: logErrors, shutdown: "coordinator log failure, signalled only the owned worker PID; not an external-signal attribution" } : null;
+const logHash = async path => { try { return hash(await regularBytes(review, path)); } catch { return null; } };
+await writeNew(join(review, "process.json"), json({ ...execution, stdoutSha256: await logHash("stdout.log"), stderrSha256: await logHash("stderr.log"), lifecycleSha256: await logHash("lifecycle.jsonl") }));
+const closure = { unit, bindingSha256: binding.bindingSha256, amendmentSha256: binding.amendmentSha256, sourceBasis: binding.amendment.record.sourceBasis, closed: new Date().toISOString(), sourceUnchanged: false, originalPreserved: false, artifactBinding: false, captureComplete: false, errors: [] };
+try { const after = await captureSource(prepared.work); await writeNew(join(review, "source-after.json"), json(after)); assert.deepEqual(after, binding.restored); closure.sourceUnchanged = true; } catch (error) { closure.errors.push(String(error)); }
+try { const after = await loadBinding(values.binding); await loadPrepared(after); closure.originalPreserved = true; } catch (error) { closure.errors.push(String(error)); }
+try {
+  const files = await inventory(artifacts); await writeNew(join(review, "artifact-inventory.json"), json(files));
+  const manifest = await readJson(artifacts, "manifest.json"); assert.deepEqual(manifest.sourceBefore, binding.restored); assert.deepEqual(manifest.sourceAfter, binding.restored);
+  assert.deepEqual(Object.fromEntries(files.filter(file => file.path !== "manifest.json").map(file => [file.path, file.sha256])), manifest.artifacts);
+  closure.artifactBinding = true; closure.captureComplete = manifest.complete === true; closure.manifestSha256 = hash(await regularBytes(artifacts, "manifest.json"));
+} catch (error) { closure.errors.push(String(error)); }
+await writeNew(join(review, "closure.json"), json(closure));
+console.log(json({ ...closure, code: execution.code, timedOut: execution.timedOut, externalSignal: execution.externalSignal, next: "Root reviews closure; no next unit is automatically launched" }));
+process.exitCode = execution.code === 0 && !execution.timedOut && !execution.externalSignal && !execution.logError && closure.sourceUnchanged && closure.originalPreserved && closure.artifactBinding && closure.captureComplete ? 0 : 1;

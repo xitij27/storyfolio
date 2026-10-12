@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "kind": "prospective recovered-source measurement derivative",
+  "originalRun": "evals/runs/codex-full-journey-candidate-2/full-journey-1/baseline-1",
+  "originalInputDigest": "01b8086923dcb9f03102c84bcec346e29037b469fb4c760334f17a5057185566",
+  "actorResultSha256": "59067a559ac604d2e70ddafedbc7b592dc63d7ba30d4b97085e246511b9ff3a2",
+  "recoveredSourceDigest": "70a581fce400ea0edb47d5b95bf5a290614d1b5edbcf121952dd04357a733a10",
+  "sourceBasis": "182-file post-closure recovery, not the original 98-file actor snapshot or proof of full source identity at original closure",
+  "originals": {
+    "evals/runs/stage-3-completion-2/full-journey-measurement/binding-lib.mjs": "731556522fe1c482196700f13c090d4d0e2e2e600d84d938d5725a8bb002368b",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/prepare-source.mjs": "b9c79b65a3364fb45727b68872703e5f96a2480ce226066d38c4aca93b5ce4c3",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/run-unit.mjs": "7bcaa2429ca0d80285b2a5ff8bc9d4fb001f038166eae0a8cd88fb44a9d77d06",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/gate-worker.mjs": "53e28abcbabc9c08252043e9f5b6d51e5c25e5184af690fd4bcead6e4f2a2c31",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/measurement-lib.mjs": "c74d4c57108858e62dae5ddd117c263fbcade52365f407ce7629bd82f7c140c5",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/verify.mjs": "9f1345e2ca368e78d319bd37818d2f97357218e15effdc3aff7174e9968bd163",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/policy.json": "fb0564dcc2ca4319cc151679ddcb53295ced702148b91d36c537582397f93d54"
+  },
+  "changes": [
+    "Shared amendment validator binds original inputs, exact original artifact sets and normal lifecycle, then separately binds recovery/source provenance without synthesizing an original actor result.",
+    "Complete recovery restoration replaces original-snapshot-only restoration; original exclusions and limits are unchanged.",
+    "Canonical site application cwd is separate from whole-workspace source inventory; package and lock bytes must match recovery.",
+    "Gate-worker imports are rebased, stage is restricted to 2 and explicit recovered-source lineage is added.",
+    "Initial chooser activation starts at declared control.fromRoute with optional real prepareControl, not an assumed destination-page selector. Missing or renamed activation controls still fail. Entry image and original pointer/keyboard trials remain.",
+    "One concepts-only wrapper reuses original bounded process and raw log functions, records app cwd plus whole workspace and compares full recovery before/after.",
+    "Read-only verifier additionally binds reconstructed app cwd, install and command identities, amendment, full source and every original image.",
+    "Synthetic filesystem and injected-page tests cover identity drift, missing/additional files, unsafe/symlink paths, app-vs-workspace cwd, one-attempt writes and the old destination-only activation failure."
+  ],
+  "unchanged": [
+    "Original 149 inputs, 23 measurement helpers, original actor workspace and artifacts",
+    "Skill, engine, prompts, case, frozen policy and shared runner/source exclusions",
+    "Original observationProblems, assessGateReport, assertUnitCoverage and original-image review requirement",
+    "Actual pointer and Tab/keyboard control trials and response/failure interpretation",
+    "One 900000 ms concept child-lifetime envelope including 5000 ms grace, no automatic retry or model calls"
+  ],
+  "scopeLimits": [
+    "Source-only implementation at handoff; root must retain actual checks and launches separately.",
+    "No original closure-time full-source identity is retroactively established.",
+    "No semantic/visual/author approval or actor-continuation gate is awarded.",
+    "No stop-4 or stop-6 measurement adapter is supplied here."
+  ]
+}

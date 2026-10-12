@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-12T16:01:54.793Z",
+  "command": [
+    "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "evals/runs/stage-3-comparison-1/record-command.mjs",
+    "evals/runs/stage-3-completion-2/full-journey/preparation/recovery-target-check-1",
+    "/home/kshitij/projects/storyfolio",
+    "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "--input-type=module",
+    "-e",
+    "import assert from \"node:assert/strict\";import{readFile}from\"node:fs/promises\";import{createHash}from\"node:crypto\";import{validateTargets,observationProblems}from\"./evals/runs/stage-3-completion-2/full-journey-measurement/measurement-lib.mjs\";const path=\"evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/targets.json\";const bytes=await readFile(path),targets=JSON.parse(bytes),policy=JSON.parse(await readFile(\"evals/runs/codex-full-journey-candidate-2/inputs/expectations.json\"));assert.deepEqual(validateTargets(targets),[]);assert.deepEqual(observationProblems(targets,policy),[]);console.log(JSON.stringify({checkedAt:new Date().toISOString(),path,sha256:createHash(\"sha256\").update(bytes).digest(\"hex\"),alternatives:targets.alternatives.length,advertised:targets.alternatives.filter(x=>x.advertised).length,validationProblems:[],observationScopeProblems:[],limits:\"Pure target-schema/scope check only; no browser, semantic pass or continuation gate.\"},null,2));"
+  ],
+  "result": {
+    "chunk_id": "0dc88f",
+    "wall_time_seconds": 0.000019386,
+    "exit_code": 0,
+    "original_token_count": 413,
+    "output": "{\"started\":\"2026-10-12T16:01:54.713Z\",\"output\":\"/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/preparation/recovery-target-check-1\",\"executable\":\"/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node\",\"args\":[\"--input-type=module\",\"-e\",\"import assert from \\\"node:assert/strict\\\";import{readFile}from\\\"node:fs/promises\\\";import{createHash}from\\\"node:crypto\\\";import{validateTargets,observationProblems}from\\\"./evals/runs/stage-3-completion-2/full-journey-measurement/measurement-lib.mjs\\\";const path=\\\"evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/targets.json\\\";const bytes=await readFile(path),targets=JSON.parse(bytes),policy=JSON.parse(await readFile(\\\"evals/runs/codex-full-journey-candidate-2/inputs/expectations.json\\\"));assert.deepEqual(validateTargets(targets),[]);assert.deepEqual(observationProblems(targets,policy),[]);console.log(JSON.stringify({checkedAt:new Date().toISOString(),path,sha256:createHash(\\\"sha256\\\").update(bytes).digest(\\\"hex\\\"),alternatives:targets.alternatives.length,advertised:targets.alternatives.filter(x=>x.advertised).length,validationProblems:[],observationScopeProblems:[],limits:\\\"Pure target-schema/scope check only; no browser, semantic pass or continuation gate.\\\"},null,2));\"]}\n{\"output\":\"/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/preparation/recovery-target-check-1\",\"code\":0,\"signal\":null,\"finished\":\"2026-10-12T16:01:54.757Z\",\"durationMs\":44,\"stdoutSha256\":\"a9313cf8732fe066cefbb389c2a42540a5220b29108776ddf7d01c32b7aba1f7\",\"stderrSha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}\n"
+  }
+}

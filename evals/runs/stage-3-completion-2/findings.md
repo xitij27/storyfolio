@@ -449,3 +449,40 @@ The staged whitespace check reports existing trailing blank lines in
 byte-preserved engine copies and raw command logs. Those evidence bytes
 are intentionally not reformatted; authored tracked documentation passes
 the whitespace check.
+
+## Recovery amendment frozen for one concept capture
+
+Root and independent source review found no concrete adapter blocker. The
+new helpers preserve full 182-file source identity while using `site/` for
+package execution. A source-discovered initial chooser lookup mismatch is
+corrected only in the derivative: the actual chooser is activated from its
+declared source route. Original pointer/keyboard tests and failure criteria
+remain unchanged. A fake-page regression demonstrates both the old mismatch
+and corrected interaction. No skill or application bytes changed.
+
+The exclusive binding generator and actual-data preflight closed zero at
+16:14:30.104 UTC after 1817 ms. It checked 149 frozen inputs, 199 plus 204
+original artifacts, 182 source files, 84 omitted application files, 38
+measurement and four runner identities. Amendment hash:
+`17ec3ed49281be699d525513d075c46ebc37706bf020281ca528e23f4e4f8180`.
+Binding hash:
+`088469b9438b0649a106bae89feb88dd8aa4b7045041cf9a1a079aaa9ad090b8`.
+The original session and cumulative usage/time are carried forward exactly.
+This did not reconstruct, install, launch a browser or call a model.
+
+`local-tests-20` closed normally at 16:15:32.087 UTC after 20477 ms. All 52
+focused tests (16 measurement, 36 continuation), 351 repository tests,
+skill/people checks and generator syntax passed. Separate focused results
+and target validation are retained too. The
+[launch disposition](full-journey-recovery/candidate-2/concepts-launch-disposition.md)
+permits one bounded recovered-source concept capture after commit and final
+concrete-binding review, not a gate pass. Every actual original, control and
+alternative still needs review. No paid turn 3, retry or Stage 3 completion
+is claimed at this checkpoint.
+
+The final independent concrete-binding check found no blocker at
+16:18:44.780 UTC. Root accepts it in the launch disposition. Staged whitespace
+checking reports only a terminal blank line in the byte-preserved preflight
+stdout; authored documentation passes. The separate later-measurement note
+records prospective stop-4/6 nested-app seams only, not implementation or
+permission to skip the current gate.

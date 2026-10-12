@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: complete recovery binds both official sibling and all additional application files
+ok 1 - complete recovery binds both official sibling and all additional application files
+  ---
+  duration_ms: 28.5068
+  type: 'test'
+  ...
+# Subtest: root application still selects whole root while retaining sibling inventory
+ok 2 - root application still selects whole root while retaining sibling inventory
+  ---
+  duration_ms: 8.586296
+  type: 'test'
+  ...
+# Subtest: unsafe, escaped, absolute and empty application roots are rejected
+ok 3 - unsafe, escaped, absolute and empty application roots are rejected
+  ---
+  duration_ms: 0.384085
+  type: 'test'
+  ...
+# Subtest: a symlinked application root is rejected
+ok 4 - a symlinked application root is rejected
+  ---
+  duration_ms: 9.473616
+  type: 'test'
+  ...
+# Subtest: a symlinked package is rejected even when its bytes match
+ok 5 - a symlinked package is rejected even when its bytes match
+  ---
+  duration_ms: 13.827308
+  type: 'test'
+  ...
+# Subtest: changed or missing package and lock bytes reject application selection
+ok 6 - changed or missing package and lock bytes reject application selection
+  ---
+  duration_ms: 19.319125
+  type: 'test'
+  ...
+# Subtest: changed, missing or unexplained source including siblings rejects current/archive equality
+ok 7 - changed, missing or unexplained source including siblings rejects current/archive equality
+  ---
+  duration_ms: 33.99877
+  type: 'test'
+  ...
+# Subtest: declared empty unexpected directories cannot contain payloads
+ok 8 - declared empty unexpected directories cannot contain payloads
+  ---
+  duration_ms: 12.38273
+  type: 'test'
+  ...
+# Subtest: changed official or extra inventory, digest, counts, provenance and policy reject recovery
+ok 9 - changed official or extra inventory, digest, counts, provenance and policy reject recovery
+  ---
+  duration_ms: 8.032345
+  type: 'test'
+  ...
+# Subtest: omitted non-site application source cannot be recategorized as recovered metadata
+ok 10 - omitted non-site application source cannot be recategorized as recovered metadata
+  ---
+  duration_ms: 6.475618
+  type: 'test'
+  ...
+# Subtest: existing file, total byte and file count limits remain enforced
+ok 11 - existing file, total byte and file count limits remain enforced
+  ---
+  duration_ms: 8.363081
+  type: 'test'
+  ...
+# Subtest: install runs from application cwd, not whole workspace, with exact contract
+ok 12 - install runs from application cwd, not whole workspace, with exact contract
+  ---
+  duration_ms: 0.512324
+  type: 'test'
+  ...
+# Subtest: evidence writes refuse an existing target, never overwrite or retry
+ok 13 - evidence writes refuse an existing target, never overwrite or retry
+  ---
+  duration_ms: 7.241934
+  type: 'test'
+  ...
+# Subtest: cross-route initial activation finds chooser only on its declared source route
+ok 14 - cross-route initial activation finds chooser only on its declared source route
+  ---
+  duration_ms: 0.616056
+  type: 'test'
+  ...
+# Subtest: same-route choices use only a declared real preparation and record both observations
+ok 15 - same-route choices use only a declared real preparation and record both observations
+  ---
+  duration_ms: 0.233765
+  type: 'test'
+  ...
+# Subtest: missing or renamed initial chooser is still an activation error, never waived
+ok 16 - missing or renamed initial chooser is still an activation error, never waived
+  ---
+  duration_ms: 0.422426
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 226.888956

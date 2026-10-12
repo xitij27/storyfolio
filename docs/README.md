@@ -19,6 +19,9 @@ The candidate built three sketches, but its snapshot omitted the nested
 application. The [current recovery decision](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-source-recovery-decision.md)
 preserves that blocked evidence and permits narrowly amended apparatus
 preparation, not a concept pass or Stage 3 completion.
+The [separately bound concept capture](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/concepts-launch-disposition.md)
+now has passing actual-data and focused apparatus checks. Its browser and
+semantic results remain required before same-session continuation.
 
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what

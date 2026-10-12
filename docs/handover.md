@@ -56,6 +56,16 @@ all original artifacts/images. `local-tests-19` passes all 351 repository
 tests and skill/people checks; amendment implementation still needs its
 own focused tests and review before any amended capture.
 
+The amendment is now separately bound and ready for its final launch check.
+Its actual-data preflight verifies 149 original inputs, 403 actor artifacts,
+182 recovered files and 42 frozen helper identities. All 52 focused recovery
+tests and all 351 repository tests pass in `local-tests-20`, with skill and
+people checks. Root and independent source review preserve the original
+criteria and evidence. The [bounded capture disposition](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/concepts-launch-disposition.md)
+permits one recovered-source concept measurement after commit and final
+concrete-binding review. It does not pass the concepts or authorize turn 3.
+No new paid attempt or budget reset is allowed.
+
 Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed
 normally, not by timeout/interruption, with usage unavailable. All 149
