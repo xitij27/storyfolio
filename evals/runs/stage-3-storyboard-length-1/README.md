@@ -85,3 +85,11 @@ zero at 19:07:20.019 UTC after 14831 ms, stdout SHA-256
 This permits fresh preparation and its one neutral environment proof after
 commit, not a paid start. Root still reviews the fresh original, complete
 input delta and normal readiness closure, then commits before launch.
+
+Fresh setup and the complete [readiness audit](readiness-audit.json) now
+pass. The [launch disposition](launch-disposition.md) records exact scope
+and permits only the first paid turn after readiness is committed. Staged
+whitespace checking reports twelve EOF blank-line locations, all in raw
+logs or frozen source copies; their exact evidence bytes are preserved.
+Authored preparation documents pass. No frozen code changed after the
+passing `local-tests-2` checks.

@@ -8,6 +8,8 @@ The author has now [approved the narrow storyboard correction](history/2026-10-1
 and one fresh matched journey. Follow the [length study](../evals/runs/stage-3-storyboard-length-1/README.md)
 for the one-paragraph change and candidate-3 preparation. The failed prior
 storyboard remains preserved, not retroactively approved.
+The fresh candidate now has [verified readiness](../evals/runs/stage-3-storyboard-length-1/launch-disposition.md),
+with the exact input delta and unchanged unscaffolded source recorded.
 
 Latest outcome: [candidate-2 storyboard gate failed](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/turn-3-disposition.md)
 after normal turn-3 completion. It planned eight beats instead of the

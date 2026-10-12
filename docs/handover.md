@@ -15,6 +15,13 @@ The one-paragraph correction is independently source-reviewed and passes
 skill validation, skill/people checks and all 351 repository tests in the
 new study's `local-tests-1`. Behavioral improvement remains unproved until
 the fresh matched journey; no new paid actor has launched at this point.
+Candidate 3 now has a [passing fresh readiness and launch disposition](../evals/runs/stage-3-storyboard-length-1/launch-disposition.md):
+149 frozen inputs, 94 unchanged initial files, one reviewed neutral image
+and all 18 proof bindings verified. Only the declared paragraph, snapshot
+policy and five setup derivatives differ. All twelve focused tests and 351
+repository tests pass. After committing readiness, root may launch its
+single paid turn 1 under the approved finite bounds. No behavior pass or
+Stage 3 completion is inferred from setup.
 
 Latest completed checkpoint: the browser replacement passed and original
 candidate-2 turn 3 then completed normally at 18:15:06.499 UTC. Its
