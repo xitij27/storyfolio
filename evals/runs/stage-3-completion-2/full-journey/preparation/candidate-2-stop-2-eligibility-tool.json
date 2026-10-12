@@ -1,0 +1,18 @@
+{
+  "observedAt": "2026-10-12T15:49:23.019Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "--input-type=module",
+      "-e",
+      "import { gateDisposition } from \"./evals/runs/stage-3-completion-2/full-journey-measurement/measurement-lib.mjs\"; import {writeFile} from \"node:fs/promises\"; const state={actorSettled:true,actorComplete:true,hasSavedSnapshot:true,authoredApplication:true,sourceIdentity:false,unresolvedGate:false}; const record={observedAt:new Date().toISOString(),actorResultSha256:\"59067a559ac604d2e70ddafedbc7b592dc63d7ba30d4b97085e246511b9ff3a2\",state,result:gateDisposition(state),limits:\"A real concept choice is offered; source identity for its application is absent from the original saved snapshot. Snapshot exists but is incomplete for application measurement. No browser or turn3 launched; later recovered-source measurement needs separate amendment.\"}; await writeFile(\"evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-2-original-eligibility.json\",JSON.stringify(record,null,2)+\"\\n\",{flag:\"wx\"});console.log(JSON.stringify(record,null,2));"
+    ]
+  },
+  "result": {
+    "chunk_id": "ee7c69",
+    "wall_time_seconds": 0.000017222,
+    "exit_code": 0,
+    "original_token_count": 202,
+    "output": "{\n  \"observedAt\": \"2026-10-12T15:49:22.988Z\",\n  \"actorResultSha256\": \"59067a559ac604d2e70ddafedbc7b592dc63d7ba30d4b97085e246511b9ff3a2\",\n  \"state\": {\n    \"actorSettled\": true,\n    \"actorComplete\": true,\n    \"hasSavedSnapshot\": true,\n    \"authoredApplication\": true,\n    \"sourceIdentity\": false,\n    \"unresolvedGate\": false\n  },\n  \"result\": {\n    \"eligible\": false,\n    \"passed\": false,\n    \"status\": \"blocked-unobserved\",\n    \"reasons\": [\n      \"source identity unproved or blocked\"\n    ],\n    \"browserStarted\": false\n  },\n  \"limits\": \"A real concept choice is offered; source identity for its application is absent from the original saved snapshot. Snapshot exists but is incomplete for application measurement. No browser or turn3 launched; later recovered-source measurement needs separate amendment.\"\n}\n"
+  }
+}

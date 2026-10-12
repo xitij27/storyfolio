@@ -389,3 +389,63 @@ The [source-bound disposition](full-journey/preparation/candidate-2-stop-1-dispo
 permits unchanged turn 2 without a baseline exception after commit.
 All 351 tests and skill/people checks pass in `local-tests-18`, closed zero
 at 15:14:07.334 UTC after 14,036 ms. Stage 3 is not complete.
+
+## Candidate 2 built concepts; original source binding blocked
+
+Turn 2 completed normally at 15:30:17.216 UTC, actor 621331 ms and outer
+623360 ms. It scaffolded into `site/`, implemented three distinct three-beat
+concepts, recommended the fixture, and asked for A/B/C before a storyboard.
+The confirmed truth distinctions remain in its facts and captions. Unlike
+the baseline, real authored application source and actor browser images
+exist. This is a positive behavioral observation, not an independent gate
+pass. The same-session cumulative actor time is 773060 ms; reported input
+plus output is 1898573 tokens and uncached input plus output 184269.
+These sums may overlap on resume and are not dollar costs.
+
+The [common audit](full-journey/preparation/candidate-2-stop-2-integrity-command/stdout.log)
+verifies all 149 inputs, 204 current artifacts and 199 prior artifacts.
+Its 98-file source equality covers only the original snapshot allowlist,
+which omitted all 84 app files under the actor's legitimate `site/`
+destination. Measurement binding and the next-turn guard correctly block
+against that incomplete snapshot. The actual original
+[eligibility result](full-journey/preparation/candidate-2-stop-2-original-eligibility.json)
+is blocked-unobserved, with authored application present but source identity
+unproved. No browser or turn 3 is launched through those frozen guards.
+
+Root retained a separate 182-file post-closure recovery at 15:33:54.304 UTC,
+including the exact 98 official files, and all 19 actor-check images. That
+is a later source checkpoint, not retroactive closure-time identity.
+Root individually reviewed all 18 original screenshots and the contact
+sheet. The [visual review](full-journey/preparation/candidate-2-stop-2-visual-review.md)
+records readable main captions and visibly different non-sheet geometry,
+but small/rotated labels and weak object-to-claim relationships, especially
+the lead. The [access review](full-journey/preparation/candidate-2-stop-2-access-review.md)
+retains blocked external request attempts, the overly broad no-fetch claim,
+and actual contact-sheet-only actor inspection. Three exact native tool
+events are preserved separately; no private reasoning was copied. A later
+exact-cwd process check found no workspace/app processes, without asserting
+host-wide absence or an exact preview termination instant.
+
+The [root recovery decision](full-journey/preparation/candidate-2-source-recovery-decision.md)
+permits study-local binding/application-cwd/continuation repair preparation,
+without modifying skill, app, original inputs, artifacts or acceptance
+criteria. Original and amended identity must remain separate. Any actual
+concept capture needs tested, reviewed and committed helper identities and
+its own source-bound launch disposition. Only a real passing concept gate
+could permit the same session's four remaining fixed turns with unchanged
+cumulative bounds. No paid restart or further retry is authorized. Later
+stops, independent technical/visual acceptance and author review remain open.
+
+The independent recovery audit then closed zero at 15:51:01.501 UTC after
+1562 ms. It verified all 182 saved/live source files, the exact original
+98-file subset and 84 additions, all 19 images, native view provenance,
+149 inputs and both turns' 403 artifacts. This establishes the later
+checkpoint, not historical closure-time identity. Required checks in
+`full-journey/preparation/local-tests-19/` passed all 351 repository tests,
+skill/people checks and both auditor syntax checks at 15:51:49.500 UTC
+after 14468 ms. New amendment code is still under preparation and is not
+validated by that suite.
+The staged whitespace check reports existing trailing blank lines in
+byte-preserved engine copies and raw command logs. Those evidence bytes
+are intentionally not reformatted; authored tracked documentation passes
+the whitespace check.

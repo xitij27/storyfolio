@@ -33,7 +33,28 @@ omitted. Its deliberate no-current-helper decision is accepted conditionally,
 not scored as recommendation/refusal success; those branches remain
 unobserved. The [stop-1 decision](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-1-disposition.md)
 permits the unchanged truth reply without a baseline exception. All 351
-tests pass in `local-tests-18`. No turn 2 has launched at this checkpoint.
+tests pass in `local-tests-18` at that checkpoint.
+
+Turn 2 has since completed normally at 15:30:17.216 UTC. It built three
+distinct local concept sketches and genuinely asks which to select. All
+149 inputs and both turns' artifacts verify. The original snapshot captured
+98 files but omitted the 84 application files under `site/`, so frozen
+measurement and turn 3 are blocked, not passed. Root separately preserved
+the 182-file live source and 19 actor-check images after closure, then
+reviewed all originals. Small object labels and weak explanatory connections
+remain visual limitations; no independent browser capture or author
+acceptance is claimed. The
+[recovery decision](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-source-recovery-decision.md)
+authorizes only narrow study-local apparatus preparation and tests at this
+checkpoint. A separately frozen amendment may permit one concept capture
+and, only after a real passing gate, the same session's four remaining fixed
+turns. No additional paid attempt, retry, judge or reset budget is allowed.
+The original cohort and incomplete snapshot stay immutable. No turn 3 has
+launched; Stage 3 remains incomplete.
+The independent recovery audit verifies the 182-file later checkpoint and
+all original artifacts/images. `local-tests-19` passes all 351 repository
+tests and skill/people checks; amendment implementation still needs its
+own focused tests and review before any amended capture.
 
 Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed

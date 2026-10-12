@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "title": "External helper source catalog",
+  "observedOn": "2026-10-12",
+  "scope": "Remote source facts only. This catalog does not establish local installation, enabled status, tool access or runtime behavior. No entry is a project dependency.",
+  "installer": {
+    "package": "skills",
+    "version": "1.7.2",
+    "repository": "vercel-labs/skills",
+    "publishedGitHead": "671e8c320810d36fed80fac5f1a2c1bf7e82d812",
+    "nodeRequirement": ">=22.20.0",
+    "syntaxDocumentation": "https://github.com/vercel-labs/skills/blob/671e8c320810d36fed80fac5f1a2c1bf7e82d812/README.md",
+    "packageVersionSyntax": "https://docs.npmjs.com/cli/v11/commands/npx/",
+    "scope": "Project by default; the examples do not request global installation or skip confirmation.",
+    "operation": "npx may fetch the CLI into the npm cache; skills add installs the selected skill. These commands were not run.",
+    "agents": {
+      "codex": {
+        "projectPath": ".agents/skills",
+        "documentation": "https://learn.chatgpt.com/docs/build-skills"
+      },
+      "claudeCode": {
+        "argument": "claude-code",
+        "projectPath": ".claude/skills",
+        "documentation": "https://code.claude.com/docs/en/skills"
+      }
+    },
+    "agentWithoutSkillLoading": "A file or command cannot establish support for an agent without documented skill-loading capability. No installation or activation claim is made for such an agent."
+  },
+  "entries": [
+    {
+      "name": "frontend-design",
+      "purpose": "Visual direction, typography and distinctive interface composition.",
+      "repository": "anthropics/claude-plugins-official",
+      "commit": "f359d43b406057f1a8cdbc4ea93b827642c162e6",
+      "skillPath": "plugins/frontend-design/skills/frontend-design/SKILL.md",
+      "sourceDirectory": "https://github.com/anthropics/claude-plugins-official/tree/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design",
+      "rawSkillUrl": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design/SKILL.md",
+      "skillSha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/anthropics/claude-plugins-official/tree/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design --skill frontend-design --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/anthropics/claude-plugins-official/tree/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design --skill frontend-design --agent claude-code"
+      }
+    },
+    {
+      "name": "ui-design",
+      "purpose": "React, Next.js and Tailwind interface design, implementation and source review.",
+      "repository": "mblode/agent-skills",
+      "commit": "872bc83bdb6dd54a9ff456fbf1181beea6db7875",
+      "skillPath": "skills/ui-design/SKILL.md",
+      "sourceDirectory": "https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design",
+      "rawSkillUrl": "https://raw.githubusercontent.com/mblode/agent-skills/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design/SKILL.md",
+      "skillSha256": "77fdfd2ca8f8b31c7ce719ddc75e9af1f35f4bedffed0a87e6fc216fbb87f720",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design --skill ui-design --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design --skill ui-design --agent claude-code"
+      }
+    },
+    {
+      "name": "react-three-fiber",
+      "purpose": "Declarative React-based 3D scenes, interactions and scene performance.",
+      "repository": "freshtechbro/claudedesignskills",
+      "commit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "skillPath": "plugins/individual/react-three-fiber/skills/react-three-fiber/SKILL.md",
+      "sourceDirectory": "https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber",
+      "rawSkillUrl": "https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber/SKILL.md",
+      "skillSha256": "f9747e9e93bf939a1eff4a1c845146f38d8f9e06655be58653a9f95f36c342cc",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber --skill react-three-fiber --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber --skill react-three-fiber --agent claude-code"
+      }
+    },
+    {
+      "name": "threejs-webgl",
+      "purpose": "Three.js scene construction, rendering, assets and performance.",
+      "repository": "freshtechbro/claudedesignskills",
+      "commit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "skillPath": "plugins/individual/threejs-webgl/skills/threejs-webgl/SKILL.md",
+      "sourceDirectory": "https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl",
+      "rawSkillUrl": "https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl/SKILL.md",
+      "skillSha256": "2fb912c851db124e212afdd2e80b5213f756ca62af6e2eb50de320f6f8ba4f9e",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl --skill threejs-webgl --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl --skill threejs-webgl --agent claude-code"
+      }
+    },
+    {
+      "name": "web3d-integration-patterns",
+      "purpose": "Integration of 3D rendering, animation libraries and shared state.",
+      "repository": "freshtechbro/claudedesignskills",
+      "commit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "skillPath": "plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns/SKILL.md",
+      "sourceDirectory": "https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns",
+      "rawSkillUrl": "https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns/SKILL.md",
+      "skillSha256": "3c5f22042307a59751de6684fdae033c011048d5fe8d3a7525b9e51564254034",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns --skill web3d-integration-patterns --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns --skill web3d-integration-patterns --agent claude-code"
+      }
+    },
+    {
+      "name": "typography-audit",
+      "purpose": "Font loading, type hierarchy, measure, spacing and punctuation review.",
+      "repository": "mblode/agent-skills",
+      "commit": "872bc83bdb6dd54a9ff456fbf1181beea6db7875",
+      "skillPath": "skills/typography-audit/SKILL.md",
+      "sourceDirectory": "https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit",
+      "rawSkillUrl": "https://raw.githubusercontent.com/mblode/agent-skills/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit/SKILL.md",
+      "skillSha256": "9b603c6abfaccf85422e7c0a767231fd9f44aaaf0d4ef065975296facae7dcbd",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit --skill typography-audit --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit --skill typography-audit --agent claude-code"
+      }
+    },
+    {
+      "name": "ui-verification",
+      "purpose": "Browser probes for focus, layout, controls and runtime behavior.",
+      "repository": "mblode/agent-skills",
+      "commit": "872bc83bdb6dd54a9ff456fbf1181beea6db7875",
+      "skillPath": "skills/ui-verification/SKILL.md",
+      "sourceDirectory": "https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification",
+      "rawSkillUrl": "https://raw.githubusercontent.com/mblode/agent-skills/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification/SKILL.md",
+      "skillSha256": "f5cbdcd185cada0bad9dee833465f1e55066b6a39076077711a4a64913fb5193",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification --skill ui-verification --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification --skill ui-verification --agent claude-code"
+      }
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "purpose": "React and Next.js rendering, data loading and bundle performance.",
+      "repository": "vercel-labs/agent-skills",
+      "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "sourceDirectory": "https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices",
+      "rawSkillUrl": "https://raw.githubusercontent.com/vercel-labs/agent-skills/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/SKILL.md",
+      "skillSha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices --skill vercel-react-best-practices --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices --skill vercel-react-best-practices --agent claude-code"
+      }
+    },
+    {
+      "name": "blender-web-pipeline",
+      "purpose": "Blender model export, glTF preparation and web asset optimization.",
+      "repository": "freshtechbro/claudedesignskills",
+      "commit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "skillPath": "plugins/individual/blender-web-pipeline/skills/blender-web-pipeline/SKILL.md",
+      "sourceDirectory": "https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline",
+      "rawSkillUrl": "https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline/SKILL.md",
+      "skillSha256": "788e4c2fa8d559b5f682a0c49c87159bed06207fd04119ec6f8c3fc7203a7b4c",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline --skill blender-web-pipeline --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline --skill blender-web-pipeline --agent claude-code"
+      }
+    },
+    {
+      "name": "find-skills",
+      "purpose": "Discovery of additional skills and their installation sources.",
+      "repository": "vercel-labs/skills",
+      "commit": "13e4063a1cf913f5606d57d42ab83a86f5001e04",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "sourceDirectory": "https://github.com/vercel-labs/skills/tree/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills",
+      "rawSkillUrl": "https://raw.githubusercontent.com/vercel-labs/skills/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills/SKILL.md",
+      "skillSha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+      "remoteAvailability": "HTTP 200 on 2026-10-12",
+      "installation": {
+        "status": "documentation-and-source-checked, not executed",
+        "codex": "npx skills@1.7.2 add https://github.com/vercel-labs/skills/tree/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills --skill find-skills --agent codex",
+        "claudeCode": "npx skills@1.7.2 add https://github.com/vercel-labs/skills/tree/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills --skill find-skills --agent claude-code"
+      }
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "stage": 2,
+  "sourceDigest": null,
+  "actorResultSha256": "59067a559ac604d2e70ddafedbc7b592dc63d7ba30d4b97085e246511b9ff3a2",
+  "draft": {
+    "status": "not-executable: recovery source is bound separately; original snapshot/continuation binding remains blocked, awaiting root disposition",
+    "browserStarted": false,
+    "originalWorkspace": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-j8Zt2w",
+    "appRoot": "site",
+    "sourceProvenance": "Story files were read from saved turn-02 snapshot. Application sources were read only after normal closure from original workspace with root permission and directly hashed against the root-retained recovery archive; all 15 cited site source hashes matched. Recovery is not the original actor snapshot.",
+    "originalSnapshotSha256": "698882bf52f40113cde24fdde5767811131eb452a258db671263aa11f7d61c67",
+    "rawStreamSha256": "2b5088a083b56a50fe9035f93dca6377dc2893149ead478e5c933bbc90f76c91",
+    "rootRecoveryArchive": {
+      "path": "evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-2-recovery/recovery.json",
+      "sha256": "96933e373121316876d9b07370a0887d5c715828f8a65bec95821cba41824049",
+      "sourceManifest": {
+        "path": "evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-2-recovery/source/manifest.json",
+        "sha256": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24"
+      },
+      "sourceRoot": "evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-2-recovery/source/files",
+      "recoveredSourceDigest": "70a581fce400ea0edb47d5b95bf5a290614d1b5edbcf121952dd04357a733a10",
+      "sourceFiles": 182,
+      "officialSnapshotFiles": 98,
+      "additionalApplicationSourceFiles": 84,
+      "classification": "post-closure recovery, not original actor snapshot"
+    },
+    "measurementBlockers": [
+      "Original actor snapshot omits all 84 authored site/ files, so frozen strict binding rejects application extras.",
+      "Original measurement assumes package/build/install at workspace root; actual package is site/package.json.",
+      "Frozen runner continuation verifyJourneySource compares complete current fileTree to 98 original snapshot files and rejects the 182-file source; a measurement-only cwd adapter cannot make the existing conversation resumable.",
+      "Root has not approved final targets or any separately labelled adapter/recovery continuation. sourceDigest remains null intentionally so this draft is not executable."
+    ],
+    "boundOnCompletion": "Preserve this draft and all original result/snapshot/freeze bytes. Root must disposition the runner and measurement source-policy blockers before any final targets/adapter. Do not substitute recovery as the original snapshot, classify app extras as metadata, assert the existing run is resumable, or infer authority for another paid attempt."
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "Actual source defines three authored sketch components, substantive three-beat bundles, custom explanatory geometry and a chooser. Runtime/visual passing is unobserved; independent browser preconditions are separately blocked."
+  },
+  "discovery": {
+    "reviewer": "acceptance, post-closure read-only source review, 12 October 2026",
+    "exhaustive": true,
+    "sources": [
+      {
+        "path": "site/package.json",
+        "sha256": "04b6802977a0e964447f8c76adb3959bba681d30192a61da7e2cf258effffc8a",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/package-lock.json",
+        "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/app/page.tsx",
+        "sha256": "20a00f84d59cc97ed5c0e14ab6888df563e2c3bffae3ca7434de558c668db86d",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/app/sketch/[id]/page.tsx",
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/app/layout.tsx",
+        "sha256": "9034731c561356d0821decc68811717f5b38479eed1e7fd324bb659ceaa3237f",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/app/globals.css",
+        "sha256": "5489ae27e89e4964396edaca21f07b64fb93d18f2b1603cf63bd044d3741c9d0",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/content/sketches/index.ts",
+        "sha256": "15e0c54ff76651ac98d4f3d87c50fa397fc36ab68e7bc7db4eb916f4913a007f",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/content/sketches/concepts.tsx",
+        "sha256": "3b1976d9b91506974d3fd163f9a520e3f3deb2b0c78ff07c87f7ebf1e596e520",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/content/looks.ts",
+        "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/components/story/look-switch.tsx",
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/components/story/use-look.ts",
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/components/story/story.tsx",
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/components/story/rail.tsx",
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/components/story/meter.tsx",
+        "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "site/lib/story/looks.ts",
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "provenance": "post-closure recovery archive, hash matched original workspace read; not original actor snapshot"
+      },
+      {
+        "path": "docs/story/concepts.md",
+        "sha256": "05a83e4853d4689ff761dd854d78c8bb04d445c186a1435350ea8dd0d1c23cec",
+        "provenance": "saved turn-02 snapshot"
+      },
+      {
+        "path": "docs/story/handover.md",
+        "sha256": "72b27fdc1ed7499c6f96078b8495dd4f9e508950a0ac0b656e5c445574cb4119",
+        "provenance": "saved turn-02 snapshot"
+      }
+    ],
+    "advertisedConcepts": [
+      "fixture",
+      "states",
+      "lead"
+    ],
+    "recommendation": {
+      "id": "fixture",
+      "basis": "Actual terminal handoff and saved concepts.md recommend A because the fixture is grounded in work Ada built.",
+      "selection": "awaiting actual fixed turn-3 choice after independent gate"
+    },
+    "publicRouteInventory": [
+      {
+        "route": "/",
+        "purpose": "Comparison index, not a fourth concept or story. Three actual index chooser controls are exercised by primary alternatives."
+      },
+      {
+        "route": "/sketch/fixture",
+        "purpose": "A, At the fixture: a generic bring-up fixture built from seven socket/contact modules; opens from joined fixture to a command-to-observation arrangement, then reconnects. Personal fixture authorship grounds the recommendation; geometry is illustrative, not actual hardware.",
+        "lookIds": [
+          "light",
+          "dark"
+        ],
+        "defaultLook": "dark",
+        "queryAliases": [
+          "/sketch/fixture?look=light",
+          "/sketch/fixture?look=dark"
+        ],
+        "fragmentDestinations": [
+          "#opening",
+          "#middle",
+          "#close"
+        ]
+      },
+      {
+        "route": "/sketch/states",
+        "purpose": "B, Power-state selector: seven radial selector modules open into a teaching schedule; distinguishes a state schedule from physical observation and projected endurance from the observed run. Explicit teaching metaphor, not a device Ada built.",
+        "lookIds": [
+          "light",
+          "dark"
+        ],
+        "defaultLook": "dark",
+        "queryAliases": [
+          "/sketch/states?look=light",
+          "/sketch/states?look=dark"
+        ],
+        "fragmentDestinations": [
+          "#opening",
+          "#middle",
+          "#close"
+        ]
+      },
+      {
+        "route": "/sketch/lead",
+        "purpose": "C, Observation lead: seven cylindrical sleeves form a connected lead, then separate a claim from its evidence window and reconnect. Explicit metaphor, not wiring or a plotted current trace.",
+        "lookIds": [
+          "light",
+          "dark"
+        ],
+        "defaultLook": "dark",
+        "queryAliases": [
+          "/sketch/lead?look=light",
+          "/sketch/lead?look=dark"
+        ],
+        "fragmentDestinations": [
+          "#opening",
+          "#middle",
+          "#close"
+        ]
+      },
+      {
+        "route": "/sketch/<unregistered-id>",
+        "purpose": "Source calls notFound; not an advertised concept and no synthetic alternative selected."
+      }
+    ],
+    "nonConceptControls": [
+      {
+        "selector": "nav[aria-label=\"Concept choices\"] a[href=\"/\"]",
+        "name": "Concepts",
+        "href": "/",
+        "scope": "Shared sketch-to-index return; retained discovery only, not an additional concept-choice trial."
+      },
+      {
+        "selector": ".concept-links a[href=\"/\"]",
+        "name": "Compare concepts",
+        "href": "/",
+        "scope": "Ending return to index; retained discovery only."
+      },
+      {
+        "selector": ".concept-links a[href=\"#middle\"]",
+        "name": "Read the evidence",
+        "href": "#middle",
+        "scope": "Opening in-page navigation, not another concept."
+      },
+      {
+        "selector": ".concept-links a[href=\"mailto:ada@example.com\"]",
+        "names": [
+          "Email Ada",
+          "ada@example.com"
+        ],
+        "href": "mailto:ada@example.com",
+        "scope": "Opening/ending email links; do not send email or claim delivery."
+      },
+      {
+        "selector": "nav.story-rail[aria-label=\"Sketch chapters\"] a",
+        "hrefs": [
+          "#opening",
+          "#middle",
+          "#close"
+        ],
+        "labelsByConcept": {
+          "fixture": [
+            "Purpose",
+            "Observation",
+            "Handover"
+          ],
+          "states": [
+            "Scope",
+            "Transition",
+            "Next action"
+          ],
+          "lead": [
+            "Signal question",
+            "Observation window",
+            "Reading"
+          ]
+        },
+        "scope": "Chapter rail uses label followed by ordinal span; appears when scene is on. Not concept alternatives."
+      }
+    ],
+    "remainingSourceScope": [
+      "Inherited ?fps displays a diagnostic meter; it does not select another concept or look.",
+      "Unknown look values fall back to Dark; no infinite parameter matrix is invented.",
+      "Unregistered inherited content/story.ts and content/experience.ts are not public app routes in this source.",
+      "Shared provisional Light/Dark appearances are retained as aliases, not passed later-stage material looks.",
+      "All actual source-defined concept chooser labels are retained; shared nav trials do not claim every possible ordered route pair."
+    ],
+    "missingOrExcessAdvertisedChoices": []
+  },
+  "alternatives": [
+    {
+      "id": "fixture",
+      "route": "/sketch/fixture",
+      "advertised": true,
+      "meaning": "A, At the fixture: a generic bring-up fixture built from seven socket/contact modules; opens from joined fixture to a command-to-observation arrangement, then reconnects. Personal fixture authorship grounds the recommendation; geometry is illustrative, not actual hardware.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": "main.concept-index a[href=\"/sketch/fixture\"]",
+        "name": "A · At the fixture",
+        "fromRoute": "/"
+      },
+      "observationScope": "Primary advertised concept, provisional default Dark appearance. Index chooser is real source-authored navigation."
+    },
+    {
+      "id": "states",
+      "route": "/sketch/states",
+      "advertised": true,
+      "meaning": "B, Power-state selector: seven radial selector modules open into a teaching schedule; distinguishes a state schedule from physical observation and projected endurance from the observed run. Explicit teaching metaphor, not a device Ada built.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": "main.concept-index a[href=\"/sketch/states\"]",
+        "name": "B · Power-state selector",
+        "fromRoute": "/"
+      },
+      "observationScope": "Primary advertised concept, provisional default Dark appearance. Index chooser is real source-authored navigation."
+    },
+    {
+      "id": "lead",
+      "route": "/sketch/lead",
+      "advertised": true,
+      "meaning": "C, Observation lead: seven cylindrical sleeves form a connected lead, then separate a claim from its evidence window and reconnect. Explicit metaphor, not wiring or a plotted current trace.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": "main.concept-index a[href=\"/sketch/lead\"]",
+        "name": "C · Observation lead",
+        "fromRoute": "/"
+      },
+      "observationScope": "Primary advertised concept, provisional default Dark appearance. Index chooser is real source-authored navigation."
+    },
+    {
+      "id": "fixture-nav-alias",
+      "route": "/sketch/fixture",
+      "advertised": false,
+      "aliasOf": "fixture",
+      "aliasRationale": "Same advertised concept and route; separately retained source-authored concept-nav chooser label/selector, not another material concept.",
+      "meaning": "A, At the fixture: a generic bring-up fixture built from seven socket/contact modules; opens from joined fixture to a command-to-observation arrangement, then reconnects. Personal fixture authorship grounds the recommendation; geometry is illustrative, not actual hardware.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": "nav[aria-label=\"Concept choices\"] a[href=\"/sketch/fixture\"]",
+        "name": "A · Fixture",
+        "fromRoute": "/sketch/states"
+      },
+      "observationScope": "One real non-idempotent starting concept for each distinct nav chooser. The same shared nav is rendered on all three concepts; this does not claim testing every ordered route pair."
+    },
+    {
+      "id": "states-nav-alias",
+      "route": "/sketch/states",
+      "advertised": false,
+      "aliasOf": "states",
+      "aliasRationale": "Same advertised concept and route; separately retained source-authored concept-nav chooser label/selector, not another material concept.",
+      "meaning": "B, Power-state selector: seven radial selector modules open into a teaching schedule; distinguishes a state schedule from physical observation and projected endurance from the observed run. Explicit teaching metaphor, not a device Ada built.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": "nav[aria-label=\"Concept choices\"] a[href=\"/sketch/states\"]",
+        "name": "B · States",
+        "fromRoute": "/sketch/fixture"
+      },
+      "observationScope": "One real non-idempotent starting concept for each distinct nav chooser. The same shared nav is rendered on all three concepts; this does not claim testing every ordered route pair."
+    },
+    {
+      "id": "lead-nav-alias",
+      "route": "/sketch/lead",
+      "advertised": false,
+      "aliasOf": "lead",
+      "aliasRationale": "Same advertised concept and route; separately retained source-authored concept-nav chooser label/selector, not another material concept.",
+      "meaning": "C, Observation lead: seven cylindrical sleeves form a connected lead, then separate a claim from its evidence window and reconnect. Explicit metaphor, not wiring or a plotted current trace.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": "nav[aria-label=\"Concept choices\"] a[href=\"/sketch/lead\"]",
+        "name": "C · Lead",
+        "fromRoute": "/sketch/fixture"
+      },
+      "observationScope": "One real non-idempotent starting concept for each distinct nav chooser. The same shared nav is rendered on all three concepts; this does not claim testing every ordered route pair."
+    },
+    {
+      "id": "fixture-light-alias",
+      "route": "/sketch/fixture?look=light",
+      "advertised": false,
+      "aliasOf": "fixture",
+      "aliasRationale": "Source exposes provisional Light appearance for the same concept. This is not a fourth concept or a later approved look. Explicit Dark query aliases the default, and selecting Dark removes the query.",
+      "meaning": "A, At the fixture: a generic bring-up fixture built from seven socket/contact modules; opens from joined fixture to a command-to-observation arrangement, then reconnects. Personal fixture authorship grounds the recommendation; geometry is illustrative, not actual hardware. Provisional Light rendering alias.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Sketch appearance\"] button:nth-of-type(1)",
+        "name": "Light",
+        "fromRoute": "/sketch/fixture"
+      },
+      "observationScope": "Retain the real opposite-look starting route and both pointer/keyboard switch trials; no state forcing or assumed material-look pass."
+    },
+    {
+      "id": "fixture-dark-alias",
+      "route": "/sketch/fixture?look=dark",
+      "advertised": false,
+      "aliasOf": "fixture",
+      "aliasRationale": "Source exposes provisional Dark appearance for the same concept. This is not a fourth concept or a later approved look. Explicit Dark query aliases the default, and selecting Dark removes the query.",
+      "meaning": "A, At the fixture: a generic bring-up fixture built from seven socket/contact modules; opens from joined fixture to a command-to-observation arrangement, then reconnects. Personal fixture authorship grounds the recommendation; geometry is illustrative, not actual hardware. Provisional Dark rendering alias.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Sketch appearance\"] button:nth-of-type(2)",
+        "name": "Dark",
+        "fromRoute": "/sketch/fixture?look=light"
+      },
+      "observationScope": "Retain the real opposite-look starting route and both pointer/keyboard switch trials; no state forcing or assumed material-look pass."
+    },
+    {
+      "id": "states-light-alias",
+      "route": "/sketch/states?look=light",
+      "advertised": false,
+      "aliasOf": "states",
+      "aliasRationale": "Source exposes provisional Light appearance for the same concept. This is not a fourth concept or a later approved look. Explicit Dark query aliases the default, and selecting Dark removes the query.",
+      "meaning": "B, Power-state selector: seven radial selector modules open into a teaching schedule; distinguishes a state schedule from physical observation and projected endurance from the observed run. Explicit teaching metaphor, not a device Ada built. Provisional Light rendering alias.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Sketch appearance\"] button:nth-of-type(1)",
+        "name": "Light",
+        "fromRoute": "/sketch/states"
+      },
+      "observationScope": "Retain the real opposite-look starting route and both pointer/keyboard switch trials; no state forcing or assumed material-look pass."
+    },
+    {
+      "id": "states-dark-alias",
+      "route": "/sketch/states?look=dark",
+      "advertised": false,
+      "aliasOf": "states",
+      "aliasRationale": "Source exposes provisional Dark appearance for the same concept. This is not a fourth concept or a later approved look. Explicit Dark query aliases the default, and selecting Dark removes the query.",
+      "meaning": "B, Power-state selector: seven radial selector modules open into a teaching schedule; distinguishes a state schedule from physical observation and projected endurance from the observed run. Explicit teaching metaphor, not a device Ada built. Provisional Dark rendering alias.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Sketch appearance\"] button:nth-of-type(2)",
+        "name": "Dark",
+        "fromRoute": "/sketch/states?look=light"
+      },
+      "observationScope": "Retain the real opposite-look starting route and both pointer/keyboard switch trials; no state forcing or assumed material-look pass."
+    },
+    {
+      "id": "lead-light-alias",
+      "route": "/sketch/lead?look=light",
+      "advertised": false,
+      "aliasOf": "lead",
+      "aliasRationale": "Source exposes provisional Light appearance for the same concept. This is not a fourth concept or a later approved look. Explicit Dark query aliases the default, and selecting Dark removes the query.",
+      "meaning": "C, Observation lead: seven cylindrical sleeves form a connected lead, then separate a claim from its evidence window and reconnect. Explicit metaphor, not wiring or a plotted current trace. Provisional Light rendering alias.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Sketch appearance\"] button:nth-of-type(1)",
+        "name": "Light",
+        "fromRoute": "/sketch/lead"
+      },
+      "observationScope": "Retain the real opposite-look starting route and both pointer/keyboard switch trials; no state forcing or assumed material-look pass."
+    },
+    {
+      "id": "lead-dark-alias",
+      "route": "/sketch/lead?look=dark",
+      "advertised": false,
+      "aliasOf": "lead",
+      "aliasRationale": "Source exposes provisional Dark appearance for the same concept. This is not a fourth concept or a later approved look. Explicit Dark query aliases the default, and selecting Dark removes the query.",
+      "meaning": "C, Observation lead: seven cylindrical sleeves form a connected lead, then separate a claim from its evidence window and reconnect. Explicit metaphor, not wiring or a plotted current trace. Provisional Dark rendering alias.",
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.answer"
+      },
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Sketch appearance\"] button:nth-of-type(2)",
+        "name": "Dark",
+        "fromRoute": "/sketch/lead?look=light"
+      },
+      "observationScope": "Retain the real opposite-look starting route and both pointer/keyboard switch trials; no state forcing or assumed material-look pass."
+    }
+  ]
+}

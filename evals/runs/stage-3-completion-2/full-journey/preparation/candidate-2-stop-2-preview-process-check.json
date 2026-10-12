@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-12T15:35:57.752Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "-e",
+      "const fs=require('node:fs'),p=require('node:path');const wanted=new Set(['/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-j8Zt2w','/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-j8Zt2w/site']);const matches=[];for(const name of fs.readdirSync('/proc')){if(!/^\\d+$/.test(name))continue;try{const cwd=fs.readlinkSync('/proc/'+name+'/cwd');if(!wanted.has(cwd))continue;const stat=fs.readFileSync('/proc/'+name+'/stat','utf8'),tail=stat.slice(stat.lastIndexOf(')')+2).split(' ');matches.push({pid:Number(name),cwd,executable:fs.readlinkSync('/proc/'+name+'/exe'),argv:fs.readFileSync('/proc/'+name+'/cmdline','utf8').split('\\0').filter(Boolean),state:tail[0],ppid:Number(tail[1]),startTicks:tail[19]});}catch{}}console.log(JSON.stringify({observedAt:new Date().toISOString(),scope:'Only process cwd equal to exact candidate2 workspace or nested app; not a host-wide process absence audit',matches},null,2));"
+    ]
+  },
+  "result": {
+    "chunk_id": "b7187e",
+    "wall_time_seconds": 0.000020698,
+    "exit_code": 0,
+    "original_token_count": 46,
+    "output": "{\n  \"observedAt\": \"2026-10-12T15:35:57.724Z\",\n  \"scope\": \"Only process cwd equal to exact candidate2 workspace or nested app; not a host-wide process absence audit\",\n  \"matches\": []\n}\n"
+  }
+}

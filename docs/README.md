@@ -14,7 +14,11 @@ preserve earlier execution checkpoints. The
 [third calibration disposition](../evals/runs/stage-3-completion-2/full-journey/calibration-3/disposition.md)
 now records complete audited coverage and permits fresh full-journey setup.
 It preserves prototype failures and does not complete Stage 3.
-No full-journey paid actor has run yet.
+The full-journey baseline and candidate have now reached the concept stop.
+The candidate built three sketches, but its snapshot omitted the nested
+application. The [current recovery decision](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-source-recovery-decision.md)
+preserves that blocked evidence and permits narrowly amended apparatus
+preparation, not a concept pass or Stage 3 completion.
 
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
