@@ -39,6 +39,14 @@ not a full acceptance result. No retry or continuation is allowed. All 342
 repository tests still pass. Stage 3 remains
 incomplete and normal skill use still ends at the approved storyboard.
 
+The author then [approved one verification-only capture](history/2026-10-12-candidate-verification-approval.md)
+with "yes let us try to complete stage 3". The new
+[verification study](../evals/runs/stage-3-candidate-verification-1/findings.md)
+keeps the candidate source unchanged, preserves the interrupted attempt,
+and enforces a 15-minute process limit with no new actor, judge or retry.
+Preparation is underway. This approval does not expand the paid allowance
+or establish Stage 3 completion.
+
 The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` verbatim before this checkpoint's current-state updates.
 
@@ -616,6 +624,11 @@ untested. The next evidence gap is final-source browser coverage. Another
 verification attempt requires explicit new scope under the no-retry rule;
 it must preserve this interrupted capture and the actor timeout. No further
 paid allowance is inferred, and the candidate judge slot was not used.
+
+The subsequent [verification approval](history/2026-10-12-candidate-verification-approval.md)
+now grants that one explicitly scoped capture. Follow its separate study,
+not the old complete-only wrapper, and do not ask for the same approval
+again. No new actor or judge is permitted in this verification step.
 
 Follow the baseline findings' quality attribution before choosing the next
 behavioral experiment. Source-level passes do not establish a convincing

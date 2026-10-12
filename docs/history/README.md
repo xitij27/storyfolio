@@ -304,3 +304,11 @@ of the accepted quality. The resulting
 keeps skill instructions unchanged for a fresh diagnostic baseline, separates
 local preparation from paid execution, and records bounds for later approval.
 No new fixture, harness change or paid evaluation was made at this checkpoint.
+
+## Saved candidate verification
+
+The [12 October approval](2026-10-12-candidate-verification-approval.md)
+records "yes let us try to complete stage 3" after the specific offer of
+one 15-minute verification-only capture, no new actor or judge and no retry.
+It preserves the timed-out candidate and interrupted capture as historical
+results. Later Stage 3 experiments remain separate scope decisions.

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-12T00:28:02.151Z",
+  "verified": true,
+  "modelCalls": 0,
+  "browserCalls": 0,
+  "builds": 0,
+  "processMutations": 0,
+  "scope": "Readiness source/input/historical evidence integrity only, not a new capture, complete actor delivery or Stage 3 acceptance",
+  "inputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "frozenInputCount": 124,
+  "shippedSkillFiles": 86,
+  "shippedEngineFiles": 79,
+  "shippedSkillAndEngineEqualFrozenCandidate": true,
+  "mainSkillSha256": "cea93b6a009a405d4bd0497e5a8e1bdae53901259a9a7739e334008a0274cee2",
+  "actor": {
+    "resultSha256": "8dd3a7ae4b61df512ae02ae2817aa84fb5fc78a89d229208701fa59a8fe08d50",
+    "artifactHashesVerified": 367,
+    "complete": false,
+    "timedOut": true,
+    "usage": null
+  },
+  "source": {
+    "files": 184,
+    "digest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "savedSnapshotEqualsCurrent": true,
+    "actorAndCaptureScopesEqual": true,
+    "originalCaptureBeforeAfterEqual": true,
+    "workspace": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB",
+    "workspaceAccessible": true,
+    "emptyDirectories": [
+      {
+        "name": ".aws",
+        "symlink": false,
+        "entries": 0,
+        "contentsRead": false
+      },
+      {
+        "name": ".codex",
+        "symlink": false,
+        "entries": 0,
+        "contentsRead": false
+      },
+      {
+        "name": ".git",
+        "symlink": false,
+        "entries": 0,
+        "contentsRead": false
+      }
+    ]
+  },
+  "oldCapture": {
+    "manifestSha256": "b21f8baa6e9568c71e7d0cde2957c4e2405eff4018c09594de76f2fa23296572",
+    "complete": false,
+    "passed": false,
+    "artifactsVerified": 134,
+    "frozenEntryPointsVerified": 12,
+    "closedToolExitCode": 1,
+    "processFinished": "2026-10-12T00:00:05.277Z"
+  },
+  "processScan": {
+    "method": "Same-UID /proc cwd links and process comm names only; no command lines, environments, signals or process mutation",
+    "sameUidInspected": 91,
+    "unavailable": [
+      {
+        "pid": 372,
+        "code": "EACCES"
+      },
+      {
+        "pid": 374,
+        "code": "EACCES"
+      }
+    ],
+    "workspaceCwdProcesses": [],
+    "oldCapturePids": [
+      {
+        "pid": 4145954,
+        "exists": false
+      },
+      {
+        "pid": 4145966,
+        "exists": false
+      }
+    ]
+  },
+  "qualifications": [
+    "Candidate application includes the five actor-local core adaptations already present in its saved partial snapshot; unchanged means no post-turn edit, not an unmodified copied engine.",
+    "Process observation is instantaneous and same-user cwd scoped, not proof of absence of every possible reader/process.",
+    "No new dependency installation or historical dependency-tree reconstruction was attempted.",
+    "This source audit alone does not approve a capture wrapper or authorize launch. Root controls the separately approved one-capture launch."
+  ]
+}

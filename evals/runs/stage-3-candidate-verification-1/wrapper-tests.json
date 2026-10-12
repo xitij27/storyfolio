@@ -1,0 +1,9 @@
+{
+  "command": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node --test evals/runs/stage-3-candidate-verification-1/bounded-process.test.mjs",
+  "scope": "Bounded native child-process fixtures only. No browser, build, actor, judge, frozen input or source mutation.",
+  "chunk_id": "bec444",
+  "wall_time_seconds": 0.622928662,
+  "exit_code": 0,
+  "original_token_count": 261,
+  "output": "TAP version 13\n# Subtest: normal exit cancels deadline and captures output\nok 1 - normal exit cancels deadline and captures output\n  ---\n  duration_ms: 25.600602\n  type: 'test'\n  ...\n# Subtest: actual child deadline sends TERM and preserves orderly close\nok 2 - actual child deadline sends TERM and preserves orderly close\n  ---\n  duration_ms: 260.315818\n  type: 'test'\n  ...\n# Subtest: unresponsive child is killed after bounded grace without retry\nok 3 - unresponsive child is killed after bounded grace without retry\n  ---\n  duration_ms: 406.907432\n  type: 'test'\n  ...\n# Subtest: external signal is recorded as unknown and forwarded, not a deadline\nok 4 - external signal is recorded as unknown and forwarded, not a deadline\n  ---\n  duration_ms: 3.071234\n  type: 'test'\n  ...\n# Subtest: spawn failure closes once and does not retry\nok 5 - spawn failure closes once and does not retry\n  ---\n  duration_ms: 2.852818\n  type: 'test'\n  ...\n1..5\n# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 742.738352\n"
+}

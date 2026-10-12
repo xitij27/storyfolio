@@ -1,0 +1,38 @@
+{
+  "checked": "2026-10-12T00:32:27.005Z",
+  "supersedes": "wrapper-readiness.json prospective timing only, never launched",
+  "readyForCoordinatorLaunch": true,
+  "captureStarted": false,
+  "modelCalls": 0,
+  "source": {
+    "files": 184,
+    "digest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "strictSavedSnapshotIdentity": true
+  },
+  "inputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "oldCapture": {
+    "manifestSha256": "b21f8baa6e9568c71e7d0cde2957c4e2405eff4018c09594de76f2fa23296572",
+    "artifacts": 134,
+    "complete": false,
+    "passed": false
+  },
+  "newOutput": "/home/kshitij/projects/storyfolio/evals/runs/stage-3-candidate-verification-1/acceptance",
+  "outputAbsent": true,
+  "bounds": {
+    "timeoutMs": 895000,
+    "graceMs": 5000,
+    "totalCapMs": 900000
+  },
+  "helpers": {
+    "run-verification.mjs": "a5769f96cf76a2034b2c7009674c986dce5e26223a3a5f4fcd9a70dc84e88a64",
+    "bindings.mjs": "2a66ebddd0c0349191688ab4eeb17f3081b333be6399c75f9149cbc9883b6e32",
+    "bounded-process.mjs": "dab797cde4ee8d272e253aea78a0867d13cd4a3990bbf977e225976749101bcb",
+    "bounded-process.test.mjs": "63fe01cbb43df441d1740dac58e38567da9e21d1a77406f61e7b0f395a810202",
+    "verify-verification.mjs": "db9bd883668a466fa4ddf978ef5552386f62d9b4c265c96d4668f686f8353176"
+  },
+  "limits": [
+    "895000ms work deadline plus5000ms cleanup targets900000ms total lifetime; scheduler/signal/reaping jitter is recorded",
+    "Owned checker PID escalation does not prove detached descendants gone; coordinator must check process closure",
+    "Original actor timeout and earlier interrupted capture remain unchanged"
+  ]
+}
