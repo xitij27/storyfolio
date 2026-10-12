@@ -4,6 +4,13 @@ Current work: [finish Stage 3](superpowers/plans/2026-10-12-stage-3-completion-e
 with [necessary paid work authorized](history/2026-10-12-stage-3-completion-authority.md)
 and [evidence here](../evals/runs/stage-3-completion-2/findings.md).
 
+Latest outcome: [candidate-2 storyboard gate failed](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/turn-3-disposition.md)
+after normal turn-3 completion. It planned eight beats instead of the
+required 12 to 22 and omitted the total scroll length. Earlier concept
+verification passed; facts/checklist/approval behavior remain positive.
+No fixed build approval is sent. A [bounded correction/comparison request](history/2026-10-12-stage-3-storyboard-correction-request.md)
+is pending; no new skill change or attempt is claimed.
+
 Current preparation includes the
 [full-journey calibration](../evals/runs/stage-3-completion-2/full-journey/calibration-1/desktop-review.md)
 and [final planning-regression controls](../evals/runs/stage-3-completion-2/planning-regression/README.md).

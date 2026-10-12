@@ -1,0 +1,39 @@
+"use client";
+import Link from "next/link";
+import type { PieceProps, StoryBundle, FaceDef } from "@/components/story/types";
+import type { Pose, Formation } from "@/lib/story/formation";
+import { blankFormation } from "@/lib/story/formation";
+import { measure } from "@/lib/story/layouts";
+import { Story } from "@/components/story/story";
+import { Chapter, Beat, Kicker, Title, Body, Note } from "@/components/story/chapter";
+import { looks } from "@/content/looks";
+type Kind = "fixture" | "states" | "lead";
+const details = {
+ fixture:{question:"How do you connect a firmware decision to a physical observation?",middle:"Follow the observation",end:"A decision needs an observation",object:"Generic bring-up fixture; original explanatory geometry, not actual hardware.",labels:["CODE","STATE","BOARD","ACCESS","BENCH","MODEL","RUN"],chapters:["Purpose","Observation","Handover"]},
+ states:{question:"What can a power-state schedule tell us—and what must we observe?",middle:"A schedule meets the bench",end:"A model is only part of the answer",object:"Power-state selector; original teaching mechanism, not a device Ada built.",labels:["SLEEP","MEASURE","TRANSMIT","OBSERVE","MODEL","72 H","SCOPE"],chapters:["Scope","Transition","Next action"]},
+ lead:{question:"Where does a firmware claim meet its evidence?",middle:"Read within the evidence window",end:"State what the evidence supports",object:"Generic observation lead; metaphorical geometry, not actual wiring or a current trace.",labels:["CODE","STATE","SIGNAL","BENCH","MODEL","RUN","LIMIT"],chapters:["Signal question","Observation window","Reading"]},
+};
+function Fixture({material,look}:PieceProps){return <group><mesh castShadow receiveShadow><boxGeometry args={[1,1,.65]}/><meshStandardMaterial color={look.surface.color} roughness={.7}/></mesh><mesh position={[0,0,.331]} material={material}><planeGeometry args={[.85,.85]}/></mesh>{[-.26,.26].map(x=><group key={x}><mesh position={[x,.62,0]} castShadow><cylinderGeometry args={[.09,.09,.32,16]}/><meshStandardMaterial color="#b78b45" metalness={.7} roughness={.3}/></mesh><mesh position={[x,-.6,0]}><boxGeometry args={[.16,.22,.22]}/><meshStandardMaterial color="#24363b"/></mesh></group>)}</group>;}
+function Selector({material,look}:PieceProps){return <group><mesh rotation={[Math.PI/2,0,0]} castShadow><cylinderGeometry args={[.49,.49,.65,32]}/><meshStandardMaterial color={look.surface.color} roughness={.65}/></mesh><mesh position={[0,0,.33]} material={material}><circleGeometry args={[.43,32]}/></mesh><mesh position={[0,.45,0]}><boxGeometry args={[.16,.35,.2]}/><meshStandardMaterial color="#b78b45" metalness={.7} roughness={.4}/></mesh></group>;}
+function Lead({material,look}:PieceProps){return <group><mesh rotation={[0,0,Math.PI/2]} castShadow><cylinderGeometry args={[.34,.34,1,24]}/><meshStandardMaterial color={look.surface.color} roughness={.75}/></mesh><mesh position={[.47,0,0]} rotation={[0,0,Math.PI/2]}><cylinderGeometry args={[.27,.27,.19,24]}/><meshStandardMaterial color="#b78b45" metalness={.65} roughness={.35}/></mesh><mesh position={[0,0,.343]} material={material}><planeGeometry args={[.7,.3]}/></mesh></group>;}
+function pose(x:number,y:number,z=0,turn=0):Pose{return {position:[x,y,z],rotation:[0,0,turn],size:[1,1]};}
+function formation(pieces:Pose[]):Formation{const b=measure(pieces);return {...blankFormation(7),pieces,span:Math.max(5,b.span*1.3),rise:Math.max(4,b.rise*1.35),anchor:[.48,.18],turn:[.25,-.28],near:6,floor:-3.5};}
+function whole(kind:Kind){return Array.from({length:7},(_,i)=>kind==="fixture"?pose((i%4-1.5)*1.08,(Math.floor(i/4)-.5)*1.45):kind==="states"?pose(Math.cos(i/7*Math.PI*2)*1.5,Math.sin(i/7*Math.PI*2)*1.5,0,i/7*Math.PI*2-Math.PI/2):pose((i-3)*.95,Math.sin(i/6*Math.PI)*1.1,0,Math.cos(i/6*Math.PI)*.3));}
+function bundle(kind:Kind):StoryBundle{
+ const info=details[kind];
+ const story={pieces:7,chapters:[{id:"opening",number:1,name:info.chapters[0],role:"opening" as const,beats:[{id:"opening.object",height:1.15}]},{id:"middle",number:2,name:info.chapters[1],role:"how" as const,beats:[{id:"middle.observe",height:1.2}]},{id:"close",number:3,name:info.chapters[2],role:"close" as const,beats:[{id:"close.answer",height:1}]}]};
+ const faces:FaceDef[]=story.chapters.flatMap(c=>c.beats.flatMap(b=>info.labels.map((label,piece)=>({id:`${b.id}-${piece}`,beat:b.id,piece,draw(ctx,w,h,look){ctx.fillStyle=look.surface.color;ctx.fillRect(0,0,w,h);ctx.fillStyle=look.accent;ctx.font=`bold ${w*.12}px monospace`;ctx.textAlign="center";ctx.fillText(label,w/2,h*.53);ctx.font=`${w*.08}px monospace`;ctx.fillText("ILLUSTRATION",w/2,h*.78);}}))));
+ const open=whole(kind);
+ const middle=Array.from({length:7},(_,i)=>kind==="fixture"?pose((i%4-1.5)*1.5,(Math.floor(i/4)-.5)*2.1,i===4?.5:0):kind==="states"?pose((i%3-1)*1.6,(Math.floor(i/3)-1)*1.5):pose((i-3)*1.2,i<4?.65:-.65,0,i===3?Math.PI/2:0));
+ return {story,faces,formations:{"opening.object":{rest:formation(open)},"middle.observe":{rest:formation(middle)},"close.answer":{rest:formation(open)}},looks,defaultLook:"dark",copy:{railLabel:"Sketch chapters",lookLabel:"Sketch appearance"},Piece:kind==="fixture"?Fixture:kind==="states"?Selector:Lead};
+}
+const bundles={fixture:bundle("fixture"),states:bundle("states"),lead:bundle("lead")};
+export function Concept({kind}:{kind:Kind}){
+ const info=details[kind];const b=bundles[kind];
+ return <><nav className="concept-nav" aria-label="Concept choices"><Link href="/">Concepts</Link><Link href="/sketch/fixture">A · Fixture</Link><Link href="/sketch/states">B · States</Link><Link href="/sketch/lead">C · Lead</Link></nav><Story bundle={b}>{b.story.chapters.map((c,i)=><Chapter key={c.id} id={c.id}><Beat story={b.story} id={c.beats[0].id} fallback={
+ // eslint-disable-next-line @next/next/no-img-element
+ <img src={kind==="states"?"/assets/power-states.svg":"/assets/bring-up-fixture.svg"} alt="Teaching drawing; illustrative only, not actual hardware or measured evidence."/>}><Kicker number={i+1} id={`${c.id}-title`} as="h2">{c.name} · Concept {kind==="fixture"?"A":kind==="states"?"B":"C"}</Kicker><Title as={i===0?"h1":"h3"}>{i===0?info.question:i===1?info.middle:info.end}</Title>{i===0?<><Body>Ada Mensah · Embedded firmware</Body><Body>I wrote the Mosslink firmware, scheduled its power states and built its bring-up fixture.</Body><p className="concept-links"><a href="mailto:ada@example.com">Email Ada</a><a href="#middle">Read the evidence</a></p></>:i===1?<><Body>{kind==="fixture"?"The modules open into a path from firmware command to bench observation. Bring-up checks a new board’s basic operation.":kind==="states"?"The selector opens to distinguish a teaching state sequence from a physical observation. Sleep, Measure and Transmit are illustrative labels, with no claimed timings.":"The lead opens to separate a projected claim from an observed run. Its geometry is an explanation, not a plotted signal."}</Body><Body>A current trace showed the radio remaining awake after a failed transmission. No cause, fix or later resolution is confirmed.</Body><Note>Two-year battery life: projection from bench currents and an assumed reporting cycle. Longest run: 72 hours. No field endurance or weather testing supports the projection.</Note></>:<><Body>A firmware decision needs a physical observation. An estimate and an observed run support different claims.</Body><Note>Mosslink: forty engineering samples assembled; six bench-tested; none sent to customers. One preliminary emissions check passed; full qualification remains unfinished.</Note><p className="concept-links"><a href="mailto:ada@example.com">ada@example.com</a><Link href="/">Compare concepts</Link></p></>}<Note>{info.object}</Note></Beat></Chapter>)}</Story></>;
+}
+export function FixtureSketch(){return <Concept kind="fixture"/>;}
+export function StateSketch(){return <Concept kind="states"/>;}
+export function LeadSketch(){return <Concept kind="lead"/>;}

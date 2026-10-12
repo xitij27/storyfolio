@@ -563,3 +563,47 @@ incomplete.
 Staged whitespace checking reports only terminal blank lines in 27 raw
 stdout logs (13 outer commands, 13 inner operations and the verifier).
 Their hashed bytes are preserved; authored documents pass whitespace checks.
+
+## Candidate-2 turn 3 completed, storyboard scope fails
+
+After commit `79d026f`, same-session readiness passed without a model call.
+The original fixed turn 3 then completed normally at 18:15:06.499 UTC,
+301869 ms actor / 313725 ms outer duration. It selected A with the actual
+recommendation's reason, planned the site and genuinely requested approval.
+The saved storyboard nevertheless has only eight meaningful beats, totaling
+nine screens when calculated in review, and does not state that total.
+The unchanged case requires 12 to 22 and pre-approves no shorter exception.
+The [root disposition](full-journey-recovery/candidate-2/turn-3-disposition.md)
+therefore blocks the fixed turn-4 approval, without discarding successful
+facts, checklist, fallback/look planning and approval behavior.
+
+Read-only integrity passes: 149 original inputs, 403 old artifacts, 378
+new artifacts and all 184 source files, including the entire nested site.
+The new source digest is
+`48ee3f81127716aea365288f3723f232c47c6b4a7791d3ea8fe3768f54b300d8`.
+Two shell commands and five changed source paths were manually reviewed;
+no coordinator/other-run read is observed, with read-jail limits retained.
+Scoped process checks found no remaining known/exact-cwd match. Three-turn
+recorded totals are 1074929 ms, 3884636 input-plus-output and 379484
+uncached-input-plus-output; resume-counter overlap remains qualified.
+
+The actor actually read the supplied storyboard reference, which omits the
+approved whole-story length guidance. One narrow reference correction is
+supported, but no new instruction or paid attempt is made under an exhausted
+no-further-attempt allowance. Root asked for a separately bounded correction
+and fresh matched journey. No answer is recorded yet. The current failure
+is preserved, not coached or treated as author approval.
+
+`local-tests-25` passed 36 focused continuation tests, auditor syntax, all
+351 repository tests and skill/people checks, closing zero at
+18:17:40.527 UTC. No skill, frozen helper or evaluated runtime source was
+edited by the coordinator. No turn 4, new browser run, judge, push or actual
+author approval occurred. Stage 3 remains incomplete.
+
+Staged whitespace checking identifies only preserved EOF blank lines:
+twelve frozen source copies in before/after snapshots and two raw command
+stdout logs. These exact evidence bytes are not reformatted. Newly authored
+documents and the read-only auditor pass whitespace checks. Independent
+static review found no auditor API/schema blocker; root executed it only
+after normal actor closure. The later-measurement proposal is retained as
+unexecuted preparation, not authority to bypass this failed storyboard.

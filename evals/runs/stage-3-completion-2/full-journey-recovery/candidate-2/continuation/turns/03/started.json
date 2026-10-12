@@ -1,0 +1,60 @@
+{
+  "turn": 3,
+  "started": "2026-10-12T18:09:58.071Z",
+  "sessionId": "01a130a7-a4ce-7eb2-bc48-2015a0dab0be",
+  "taskKind": "full-journey",
+  "requestedStop": 3,
+  "timeoutMs": 900000,
+  "elapsedMs": 773060,
+  "tokens": 1898573,
+  "inputTokens": 1876308,
+  "outputTokens": 22265,
+  "cachedInputTokens": 1714304,
+  "uncachedTokens": 184269,
+  "inputDigest": "01b8086923dcb9f03102c84bcec346e29037b469fb4c760334f17a5057185566",
+  "amendmentSha256": "17ec3ed49281be699d525513d075c46ebc37706bf020281ca528e23f4e4f8180",
+  "previousTurnDigest": "59067a559ac604d2e70ddafedbc7b592dc63d7ba30d4b97085e246511b9ff3a2",
+  "gateSha256": "42e0ac90e8fc816a643ea3024c826f8b565a1acfe7010e2e7528079ce0480027",
+  "sourceBasis": {
+    "kind": "post-closure-recovery",
+    "sourceDigest": "70a581fce400ea0edb47d5b95bf5a290614d1b5edbcf121952dd04357a733a10",
+    "reference": {
+      "path": "evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-2-recovery/source/manifest.json",
+      "sha256": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24"
+    }
+  },
+  "capturePolicy": {
+    "roots": [
+      "app",
+      "components",
+      "content",
+      "docs",
+      "lib",
+      "public",
+      "scripts",
+      "styles",
+      "types",
+      "material",
+      ".agents",
+      "site"
+    ],
+    "files": [
+      "package.json",
+      "package-lock.json",
+      "next.config.ts",
+      "next.config.mjs",
+      "next-env.d.ts",
+      "tsconfig.json",
+      "eslint.config.mjs",
+      "postcss.config.mjs",
+      "README.md",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "LICENSE",
+      ".gitignore"
+    ],
+    "maxFiles": 400,
+    "maxBytes": 20971520,
+    "maxFileBytes": 2097152
+  }
+}

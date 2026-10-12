@@ -4,6 +4,20 @@ Current state as of 12 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest completed checkpoint: the browser replacement passed and original
+candidate-2 turn 3 then completed normally at 18:15:06.499 UTC. Its
+storyboard fails the fixed scope: eight beats, nine screens calculated in
+review, with no stated total, versus the required 12 to 22 and no approved
+shorter exception. Facts, checklist and genuine approval wait remain
+positive evidence. The [root disposition](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/turn-3-disposition.md)
+blocks fixed turn 4. Integrity verifies 149 inputs, 403 old artifacts,
+378 new artifacts and the full 184-file saved/live source. All 351 repository
+tests and 36 continuation tests pass in `local-tests-25`, with skill/people
+checks. The storyboard reference omits the design's whole-story length
+guidance. Root [asked for one narrow correction and fresh matched journey](history/2026-10-12-stage-3-storyboard-correction-request.md)
+because the present allowance permits no further attempt. No answer,
+skill edit, new journey or turn 4 is recorded yet. Stage 3 remains open.
+
 Latest direction: [finish Stage 3, using paid agents where needed](history/2026-10-12-stage-3-completion-authority.md).
 The author said, "its okay to use a paid agent if you want but please finish
 stage 3". Follow the [execution plan](superpowers/plans/2026-10-12-stage-3-completion-execution.md)

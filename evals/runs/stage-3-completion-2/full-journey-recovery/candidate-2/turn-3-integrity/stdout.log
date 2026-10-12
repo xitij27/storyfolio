@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "integrityVerified": true,
+  "normalActorClosure": true,
+  "originalInputs": 149,
+  "originalArtifacts": 403,
+  "continuationTurn": 3,
+  "continuationArtifacts": 378,
+  "snapshotFiles": 184,
+  "applicationFiles": 85,
+  "sourceDigest": "48ee3f81127716aea365288f3723f232c47c6b4a7791d3ea8fe3768f54b300d8",
+  "liveSourceMatchesFullSnapshot": true,
+  "sourceBasis": {
+    "kind": "post-closure-recovery",
+    "sourceDigest": "70a581fce400ea0edb47d5b95bf5a290614d1b5edbcf121952dd04357a733a10",
+    "reference": {
+      "path": "evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-2-recovery/source/manifest.json",
+      "sha256": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24"
+    }
+  },
+  "originalClosureIdentityLimitation": {
+    "label": "post-closure recovery, not original actor snapshot",
+    "observedAt": "2026-10-12T15:33:54.304Z",
+    "limitation": "The complete application identity at original turn-2 closure is not established. This separately preserved later checkpoint supports prospective measurement and conditional same-session continuation only."
+  },
+  "sessionId": "01a130a7-a4ce-7eb2-bc48-2015a0dab0be",
+  "inputDigest": "01b8086923dcb9f03102c84bcec346e29037b469fb4c760334f17a5057185566",
+  "amendmentSha256": "17ec3ed49281be699d525513d075c46ebc37706bf020281ca528e23f4e4f8180",
+  "gateSha256": "42e0ac90e8fc816a643ea3024c826f8b565a1acfe7010e2e7528079ce0480027",
+  "actorResultSha256": "c893e2e305f2da52aa5cfb891cc24b85f2ef360d6e1f6832b040a8115d38b318",
+  "streamSha256": "b22ed9a317f1b53cf7109217c976bb9110d01f6eb80a5fb16321d2e80a29ab25",
+  "terminalSha256": "6450f994c1f9f9b64ff5f4c52124672d54c212ca198b113177e3ba3c3b963ba8",
+  "outerResultSha256": "c4717249f5adb47b980681a57e5ab831d811f6ba318372c8537884beeb6fd684",
+  "outerDurationMs": 313725,
+  "usage": {
+    "input_tokens": 1962324,
+    "cached_input_tokens": 1790848,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 23739,
+    "reasoning_output_tokens": 1298
+  },
+  "historyTotals": {
+    "durationMs": 1074929,
+    "reportedTokens": 3884636,
+    "uncachedTokens": 379484
+  },
+  "bounds": {
+    "maxTurns": 6,
+    "turnTimeoutMs": 900000,
+    "maxWallMs": 5400000,
+    "maxTokens": 12000000,
+    "maxUncachedTokens": 1500000
+  },
+  "boundsExceeded": false,
+  "accountingLimit": "Original plus continuation accounting is not reset. Resumed reported counters may overlap; these totals do not imply a dollar estimate or hard in-flight token cap.",
+  "accessAudit": {
+    "commandCount": 2,
+    "commands": [
+      {
+        "id": "item_1",
+        "command": "/bin/bash -lc 'cat docs/story/handover.md docs/story/facts.md docs/story/concepts.md .agents/skills/storyfolio/references/storyboard.md'",
+        "streamLines": [
+          4,
+          5
+        ],
+        "events": [
+          "item.started",
+          "item.completed"
+        ],
+        "exitCode": 0,
+        "flags": []
+      },
+      {
+        "id": "item_5",
+        "command": "/bin/bash -lc \"rg -n 'awaiting|Chosen concept|Current stop|Question:|Chapter|Build, later' docs/story/concepts.md docs/story/storyboard.md docs/story/handover.md\"",
+        "streamLines": [
+          11,
+          12
+        ],
+        "events": [
+          "item.started",
+          "item.completed"
+        ],
+        "exitCode": 0,
+        "flags": []
+      }
+    ],
+    "flaggedCommands": [],
+    "incompleteCommands": [],
+    "limitation": "Literal command-text triage only, not syscall tracing, path resolution, or a read jail. Flags require manual context review; no flags do not prove absence of indirect, script-mediated, native-tool or network access. Configuration isolation is not filesystem isolation."
+  },
+  "manualAccessReviewRequired": true,
+  "behavioralGate": "Unobserved by this integrity audit; actual storyboard and handoff still need independent review. No next turn is authorized.",
+  "auditSha256": "bf9e9eb9add0284e60d61873b6e26dce6f2b412b2c07424dca5f28b991f56b9d",
+  "modelCalls": 0,
+  "writes": false
+}
