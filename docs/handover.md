@@ -4,6 +4,15 @@ Current state as of 12 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest direction: [finish Stage 3, using paid agents where needed](history/2026-10-12-stage-3-completion-authority.md).
+The author said, "its okay to use a paid agent if you want but please finish
+stage 3". Follow the [execution plan](superpowers/plans/2026-10-12-stage-3-completion-execution.md)
+and [new work record](../evals/runs/stage-3-completion-2/findings.md): saved-source
+verification, supported workflow corrections, matched tests and the full
+journey. Earlier per-test restrictions below are historical, not a reason
+to ask again for ordinary needed work. Real author desktop/phone acceptance,
+immutable old evidence and no-push remain. Stage 3 is not complete.
+
 Stage-level position: **Stage 3, the build, is active and incomplete.**
 Stage 1's planning method is implemented with closing review decisions open;
 Stage 2's engine is complete and approved. The shipped skill still ends at

@@ -18,6 +18,7 @@ its review criteria and independent runtime observations are separate.
 
 | Study | Kind and status |
 |---|---|
+| [stage-3-completion-2](runs/stage-3-completion-2/findings.md) | Authorized execution toward Stage 3 completion, including necessary paid tests. Starts with clean saved-source verification and failure-backed corrections. Real author approval remains required. |
 | [stage-3-natural-entry-1](runs/stage-3-natural-entry-1/findings.md) | Sole actor entered the build, bypassed the unanswered look choice, and timed out at 900.071 seconds. Two source looks exist, not independently visually verified. Browser launch blocked by 18 extra Git metadata files despite 180 matching saved source files. No judge, retry, continuation or skill correction. Measurement repair needs a separate decision. |
 | [stage-3-candidate-verification-1](runs/stage-3-candidate-verification-1/findings.md) | Separately approved single browser verification of unchanged 184-file candidate. Desktop, phone and short pass; external SIGTERM after 624.633 seconds leaves reduced-motion partial and three failure modes absent. All 203 originals reviewed, final integrity audit passes, no actor, judge or retry. Original timeout and both captures preserved. |
 | [1](#1-original-claude-comparison-complete) | Claude comparison, complete |

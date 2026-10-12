@@ -1,5 +1,8 @@
 # Historical documentation and preservation record
 
+Latest: [authority to finish Stage 3](2026-10-12-stage-3-completion-authority.md),
+including necessary paid agents. Earlier narrow approvals remain historical.
+
 Start with [the current handover](../handover.md) and [documentation map](../README.md).
 The files indexed here preserve historical wording, including instructions
 and status statements that were later superseded. Their commands are not

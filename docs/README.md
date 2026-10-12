@@ -1,5 +1,9 @@
 # Documentation map
 
+Current work: [finish Stage 3](superpowers/plans/2026-10-12-stage-3-completion-execution.md),
+with [necessary paid work authorized](history/2026-10-12-stage-3-completion-authority.md)
+and [evidence here](../evals/runs/stage-3-completion-2/findings.md).
+
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The skill currently plans a portfolio through an approved

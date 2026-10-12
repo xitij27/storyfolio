@@ -40,6 +40,11 @@ measures written planning, not a built site's visual or interaction quality.
 
 ## Before spending model usage
 
+The latest [finish-Stage-3 authority](../docs/history/2026-10-12-stage-3-completion-authority.md)
+permits necessary paid work under the [finite execution plan](../docs/superpowers/plans/2026-10-12-stage-3-completion-execution.md).
+Earlier single-test restrictions below are historical. Preserve those
+attempts; do not ask again for each ordinary needed test.
+
 The current [ordinary-entry baseline](runs/stage-3-natural-entry-1/findings.md)
 has separate approval for one unchanged-skill actor turn and one relevant
 browser verification, each at most 15 minutes. It uses the existing
