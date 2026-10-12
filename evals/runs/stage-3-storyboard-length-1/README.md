@@ -176,3 +176,24 @@ the prior failed evidence. Replacement SHA-256:
 `148b837d090f105d3e06804e7318dc03249ccdfb267b2ec0b1c87182290e5577`.
 Root may begin the exclusive setup after committing this preparation.
 No browser replacement or paid turn 3 has run at this checkpoint.
+
+## Replacement interrupted after complete second browser batch
+
+The [root disposition](replacement-interruption-disposition.md) preserves
+normal setup/fixture closure and the enclosure worker's successful complete
+capture, followed by an external SIGTERM to its supervisor. New observations
+confirm the wrapped-inline hit correction, including actual phone click and
+Enter responses. The outer failure remains unwaived, with unknown sender.
+All 32 fresh originals, four reports and unchanged source verify. Seven
+batches are absent and no paid turn 3 ran. Total execution is 133866 ms;
+766134 ms remains but is not automatic continuation permission.
+
+All 37 focused tests and 351 repository tests pass in `local-tests-7`, with
+skill/people checks. Root asks for a narrowly bound continuation using the
+completed evidence and only the remaining seven batches, no reruns, models
+or budget reset. This preserves the prior interruption and normal-gate
+failure, not a silent criterion change. No answer is recorded yet.
+
+This checkpoint keeps six EOF blank-line findings in raw outer/inner
+operation stdout unchanged. These are hashed evidence bytes, not authored
+formatting defects. Authored-document whitespace checks pass.

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "started": "2026-10-12T21:20:23.483Z",
+  "cwd": "/home/kshitij/projects/storyfolio",
+  "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+  "args": [
+    "--input-type=module",
+    "-e",
+    "import assert from'node:assert/strict';import{readFile}from'node:fs/promises';import{assertBatchCoverage}from'./evals/runs/stage-3-storyboard-length-1/measurement-2/verify.mjs';import{inventory,regularBytes,hash}from'./evals/runs/stage-3-storyboard-length-1/measurement-2/binding-lib.mjs';const audit=JSON.parse(await readFile('evals/runs/stage-3-storyboard-length-1/replacement-interruption-audit-command/stdout.log'));const review=JSON.parse(await readFile('evals/runs/stage-3-storyboard-length-1/concept-replacement-images-01-02.json'));assert.equal(review.images.length,32);assert.equal(review.measurementComplete,false);const rows=[];for(const image of review.images){assert.equal(image.viewMethod,'view_image original');const bytes=await readFile(image.path);assert.equal(bytes.length,image.bytes);assert.equal(hash(bytes),image.sha256);rows.push({path:image.path,sha256:image.sha256,bytes:image.bytes});}assert.deepEqual(rows.sort((a,b)=>a.path.localeCompare(b.path)),audit.originals.sort((a,b)=>a.path.localeCompare(b.path)));const batches=[];for(const stem of['01','02']){const folder=process.cwd()+'/evals/runs/stage-3-storyboard-length-1/concepts-2/batches/'+stem+'/artifacts';const manifest=JSON.parse(await regularBytes(folder,'manifest.json'));const reports=await Promise.all(['desktop','phone'].map(mode=>regularBytes(folder,stem+'-'+mode+'/report.json').then(b=>JSON.parse(b))));const assessment=assertBatchCoverage({batch:Number(stem),manifest,reports,targets:manifest.targets,policy:manifest.expected,files:await inventory(folder)});assert.equal(assessment.passed,true);batches.push({batch:Number(stem),reports:2,originals:assessment.originals.length,rawAssessmentPassed:true});}console.log(JSON.stringify({observedAt:new Date().toISOString(),all32ActualOriginalsReviewedAndVerified:true,batches,measurementComplete:false,normalOuterGatePassed:false,outerInterruptionNotWaived:true,modelCalls:0,browserCalls:0}));"
+  ],
+  "environment": {
+    "PATH": "/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+    "PLAYWRIGHT_BROWSERS_PATH": null,
+    "LD_LIBRARY_PATH": null,
+    "LANG": "C.UTF-8",
+    "TMPDIR": null,
+    "NEXT_TELEMETRY_DISABLED": null
+  },
+  "wrapperSha256": "c3ab91eeb5833650ce9482accf96a5985c85471b9c714da6da820752f797a1b0",
+  "note": "One command, no retry. Paid commands, when used, retain their own stricter actor/judge deadlines. This wrapper is not a spending cap."
+}

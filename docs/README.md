@@ -1,5 +1,12 @@
 # Documentation map
 
+Latest result: the [browser replacement confirmed the wrapped-link fix](../evals/runs/stage-3-storyboard-length-1/replacement-interruption-disposition.md),
+but its supervisor was externally interrupted after the second browser
+worker completed. All 32 originals are verified; seven batches remain.
+The [narrow continuation request](history/2026-10-12-stage-3-browser-continuation-request.md)
+would reuse completed evidence and keep the original remaining budget,
+not launch another paid attempt or rerun. No answer yet; Stage 3 stays open.
+
 The author has [approved one browser-only replacement](history/2026-10-12-stage-3-wrapped-link-verifier-approval.md)
 and the wrapped-link verifier correction. Same execution bounds, no model
 calls or further retry. Preparation is in the existing storyboard-length

@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "stage": 2,
+  "sourceDigest": "7104be428d5e26c867e8dbcc3f650a467931135346a54209ec8f3e137a45ceb9",
+  "actorResultSha256": "290c39f7aca8ae6e8254e78a6423292f4bf34af233ca2c94f34d09189615fbfe",
+  "discovery": {
+    "reviewer": "Root and acceptance subagent, complete saved public-source/terminal review",
+    "exhaustive": true,
+    "sources": [
+      {
+        "path": "site/app/page.tsx",
+        "sha256": "61541b6a20d3ee932763039f7e7c3da2bfe2e2a1946107faeb9ec55cd547ea38"
+      },
+      {
+        "path": "site/app/sketch/[id]/page.tsx",
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+      },
+      {
+        "path": "site/content/sketches/index.ts",
+        "sha256": "5cebdf7fab9041d71416dd8a00803d4c37f139c781b83d5a05efb9dac66b9f95"
+      },
+      {
+        "path": "site/content/sketches/concepts.tsx",
+        "sha256": "28c9e51ec0946915ae5c5846f9c4cc9f99a2017d61536d4a4c4b3138138982ff"
+      },
+      {
+        "path": "site/content/looks.ts",
+        "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559"
+      },
+      {
+        "path": "site/components/story/look-switch.tsx",
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": "site/components/story/use-look.ts",
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+      },
+      {
+        "path": "site/lib/story/looks.ts",
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+      },
+      {
+        "path": "site/components/story/story.tsx",
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      },
+      {
+        "path": "site/components/story/chapter.tsx",
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": "site/components/story/rail.tsx",
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": "site/app/globals.css",
+        "sha256": "185432be21fd905f48b6940a46562c20bafcf7640e8af01e1fda2818d5c243ca"
+      },
+      {
+        "path": "docs/story/concepts.md",
+        "sha256": "3555283da98b63a450e3dd89f16ce53e1f317fb6ac372a7be792a3620cd8cf23"
+      },
+      {
+        "path": "docs/story/handover.md",
+        "sha256": "1801dcbbf1167e5c8ef5b3e77df62b7bcf4ef848cae801be3c0102de2318194d"
+      }
+    ],
+    "scope": "All registered and advertised concept routes, actual chooser selectors and both shared appearance controls on every concept. Ordinary return, chapter and contact links are inventoried below, not relabelled concept alternatives."
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "The genuine complete turn-2 snapshot includes the authored nested site, its root chooser, three registered concept components, three actual beat rests and custom physical geometry. This is eligibility for measurement, not a runnable, technical or visual pass."
+  },
+  "applicationRoot": "site",
+  "evidence": {
+    "actorTurn": "evals/runs/codex-full-journey-candidate-3/full-journey-1/baseline-1/turns/02",
+    "sourceRecord": "evals/runs/stage-3-storyboard-length-1/turn-2-source.json",
+    "sourceBasis": "genuine turn-2 snapshot, root verified equal to all 185 current files including 87 site files",
+    "terminal": {
+      "stream": "evals/runs/codex-full-journey-candidate-3/full-journey-1/baseline-1/turns/02/stream.jsonl",
+      "sha256": "24a2816a403da2a878b5544d99e3cd93e409c4f30fa4d4b296d4e215ad612b2f",
+      "itemId": "item_40",
+      "event": "item.completed",
+      "type": "agent_message"
+    },
+    "validation": "Root source-reviewed all routes/registry/controls and exact labels; pure schema and binding checks precede launch. Browser behavior remains unobserved.",
+    "sourceProposal": {
+      "path": "evals/runs/stage-3-storyboard-length-1/concept-targets-proposal.json",
+      "sha256": "1753661e95d67033f06c3346f5656bb6bde115d183a93f869f1003d1593fe024"
+    }
+  },
+  "alternatives": [
+    {
+      "id": "fixture",
+      "route": "/sketch/fixture",
+      "advertised": true,
+      "control": {
+        "selector": ".concept-index a[href=\"/sketch/fixture\"]",
+        "name": "The bring-up fixture ↗",
+        "fromRoute": "/"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "A bench-checklist account uses six contact modules to connect Ada's firmware and personally built bring-up fixture to a physical observation, then distinguishes projected endurance from the 72-hour observed run."
+    },
+    {
+      "id": "enclosure",
+      "route": "/sketch/enclosure",
+      "advertised": true,
+      "control": {
+        "selector": ".concept-index a[href=\"/sketch/enclosure\"]",
+        "name": "Inside the power cycle ↗",
+        "fromRoute": "/"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "A state-table account uses six symbolic enclosure sections to open a teaching cycle and distinguish the unresolved radio observation, projected battery life and observed run."
+    },
+    {
+      "id": "probe",
+      "route": "/sketch/probe",
+      "advertised": true,
+      "control": {
+        "selector": ".concept-index a[href=\"/sketch/probe\"]",
+        "name": "Follow the observation ↗",
+        "fromRoute": "/"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "A timing-diagram account uses six symbolic connector sleeves to separate a command from its observation, without inventing timing, cause or resolution, and closes on sample and qualification limits."
+    },
+    {
+      "id": "fixture-light-appearance",
+      "route": "/sketch/fixture",
+      "advertised": false,
+      "control": {
+        "selector": ".story-look-switch button:nth-of-type(1)",
+        "name": "Light",
+        "fromRoute": "/sketch/fixture?look=dark"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "The existing Light appearance control on the fixture concept, not a fourth concept or a final look-selection result. Exercise from the opposite actual appearance so an unchanged selection cannot count as a response."
+    },
+    {
+      "id": "fixture-dark-appearance",
+      "route": "/sketch/fixture?look=dark",
+      "advertised": false,
+      "control": {
+        "selector": ".story-look-switch button:nth-of-type(2)",
+        "name": "Dark",
+        "fromRoute": "/sketch/fixture"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "The existing Dark appearance control on the fixture concept, not a fourth concept or a final look-selection result. Exercise from the opposite actual appearance so an unchanged selection cannot count as a response."
+    },
+    {
+      "id": "enclosure-light-appearance",
+      "route": "/sketch/enclosure",
+      "advertised": false,
+      "control": {
+        "selector": ".story-look-switch button:nth-of-type(1)",
+        "name": "Light",
+        "fromRoute": "/sketch/enclosure?look=dark"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "The existing Light appearance control on the enclosure concept, not a fourth concept or a final look-selection result. Exercise from the opposite actual appearance so an unchanged selection cannot count as a response."
+    },
+    {
+      "id": "enclosure-dark-appearance",
+      "route": "/sketch/enclosure?look=dark",
+      "advertised": false,
+      "control": {
+        "selector": ".story-look-switch button:nth-of-type(2)",
+        "name": "Dark",
+        "fromRoute": "/sketch/enclosure"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "The existing Dark appearance control on the enclosure concept, not a fourth concept or a final look-selection result. Exercise from the opposite actual appearance so an unchanged selection cannot count as a response."
+    },
+    {
+      "id": "probe-light-appearance",
+      "route": "/sketch/probe",
+      "advertised": false,
+      "control": {
+        "selector": ".story-look-switch button:nth-of-type(1)",
+        "name": "Light",
+        "fromRoute": "/sketch/probe?look=dark"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "The existing Light appearance control on the probe concept, not a fourth concept or a final look-selection result. Exercise from the opposite actual appearance so an unchanged selection cannot count as a response."
+    },
+    {
+      "id": "probe-dark-appearance",
+      "route": "/sketch/probe?look=dark",
+      "advertised": false,
+      "control": {
+        "selector": ".story-look-switch button:nth-of-type(2)",
+        "name": "Dark",
+        "fromRoute": "/sketch/probe"
+      },
+      "beats": {
+        "opening": "opening.start",
+        "middle": "middle.open",
+        "ending": "close.end"
+      },
+      "meaning": "The existing Dark appearance control on the probe concept, not a fourth concept or a final look-selection result. Exercise from the opposite actual appearance so an unchanged selection cannot count as a response."
+    }
+  ],
+  "sourceCensus": {
+    "registeredConcepts": [
+      "fixture",
+      "enclosure",
+      "probe"
+    ],
+    "advertisedConceptCount": 3,
+    "observationAlternativeCount": 9,
+    "lookIds": [
+      "light",
+      "dark"
+    ],
+    "defaultLook": "light",
+    "lookQuery": "look",
+    "otherRegisteredConceptAliases": [],
+    "routeFiles": [
+      "site/app/page.tsx",
+      "site/app/sketch/[id]/page.tsx"
+    ],
+    "ordinaryControls": [
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".concept-index > a[href=\"mailto:ada@example.com\"]",
+        "name": "ada@example.com",
+        "purpose": "contact, not a concept chooser"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": ".concept-nav a[href=\"/\"]",
+        "name": "All concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": "#close a[href=\"/\"]",
+        "name": "Compare concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": ".concept-contact a[href=\"#close\"]",
+        "name": "Read the conclusion",
+        "purpose": "same-story ending navigation"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": ".story-rail a",
+        "hrefs": [
+          "#opening",
+          "#middle",
+          "#close"
+        ],
+        "purpose": "three same-story chapter links"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": "a[href=\"mailto:ada@example.com\"]",
+        "names": [
+          "Email Ada",
+          "ada@example.com"
+        ],
+        "purpose": "two contact links, not concept alternatives"
+      },
+      {
+        "routes": [
+          "/sketch/enclosure"
+        ],
+        "selector": ".concept-nav a[href=\"/\"]",
+        "name": "All concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/enclosure"
+        ],
+        "selector": "#close a[href=\"/\"]",
+        "name": "Compare concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/enclosure"
+        ],
+        "selector": ".concept-contact a[href=\"#close\"]",
+        "name": "Read the conclusion",
+        "purpose": "same-story ending navigation"
+      },
+      {
+        "routes": [
+          "/sketch/enclosure"
+        ],
+        "selector": ".story-rail a",
+        "hrefs": [
+          "#opening",
+          "#middle",
+          "#close"
+        ],
+        "purpose": "three same-story chapter links"
+      },
+      {
+        "routes": [
+          "/sketch/enclosure"
+        ],
+        "selector": "a[href=\"mailto:ada@example.com\"]",
+        "names": [
+          "Email Ada",
+          "ada@example.com"
+        ],
+        "purpose": "two contact links, not concept alternatives"
+      },
+      {
+        "routes": [
+          "/sketch/probe"
+        ],
+        "selector": ".concept-nav a[href=\"/\"]",
+        "name": "All concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/probe"
+        ],
+        "selector": "#close a[href=\"/\"]",
+        "name": "Compare concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/probe"
+        ],
+        "selector": ".concept-contact a[href=\"#close\"]",
+        "name": "Read the conclusion",
+        "purpose": "same-story ending navigation"
+      },
+      {
+        "routes": [
+          "/sketch/probe"
+        ],
+        "selector": ".story-rail a",
+        "hrefs": [
+          "#opening",
+          "#middle",
+          "#close"
+        ],
+        "purpose": "three same-story chapter links"
+      },
+      {
+        "routes": [
+          "/sketch/probe"
+        ],
+        "selector": "a[href=\"mailto:ada@example.com\"]",
+        "names": [
+          "Email Ada",
+          "ada@example.com"
+        ],
+        "purpose": "two contact links, not concept alternatives"
+      }
+    ]
+  },
+  "limits": [
+    "No image was opened and no browser or validator was run for this source-only discovery.",
+    "Source declarations and actor claims do not establish usability, legibility, meaningful spatial explanation or genuine desktop/phone behavior.",
+    "The ordinary return, chapter and mail links are disclosed but are not exercised by the narrow concept-alternative worker; final whole-site ordinary-control coverage remains later.",
+    "Light and Dark are inherited provisional appearances and do not establish stop-4 materially distinct reviewable looks."
+  ],
+  "reviewedByRoot": true
+}

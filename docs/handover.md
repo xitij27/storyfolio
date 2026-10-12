@@ -4,6 +4,18 @@ Current state as of 12 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest result: the approved replacement observed successful phone pointer
+and keyboard navigation with the fragment-aware fix. Its browser worker
+closed normally, but the outer recorder then received external SIGTERM at
+21:16:23.969 UTC, sender unknown. The [root interruption disposition](../evals/runs/stage-3-storyboard-length-1/replacement-interruption-disposition.md)
+preserves four complete reports, all 32 reviewed originals and unchanged
+185-file source without passing the interrupted outer gate. Seven batches
+remain unstarted; no turn 3 or further retry. All 37 focused tests and 351
+repository tests pass. Root [asks to resume only those seven batches](history/2026-10-12-stage-3-browser-continuation-request.md)
+using verified completed captures within the original remaining 766134 ms,
+with no model calls or reruns. No new answer or exception is recorded yet.
+Stage 3 and the storyboard-length behavior remain unproved.
+
 Newest direction: the author answered, "you can retry", approving the
 [single browser-only replacement](history/2026-10-12-stage-3-wrapped-link-verifier-approval.md).
 Root is correcting only the wrapped-inline hit-test apparatus, with new

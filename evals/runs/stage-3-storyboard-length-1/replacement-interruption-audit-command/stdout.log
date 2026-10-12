@@ -1,0 +1,988 @@
+{
+  "observedAt": "2026-10-12T21:19:18.763Z",
+  "integrityVerified": true,
+  "measurementComplete": false,
+  "technicalPassed": false,
+  "behavioralGate": "blocked by outer interruption after complete worker, no operation03 or turn3",
+  "sourceFiles": 185,
+  "sourceDigest": "7104be428d5e26c867e8dbcc3f650a467931135346a54209ec8f3e137a45ceb9",
+  "inputDigest": "68c2bfd15305eb9b9fcb8114dbe64dd511d9a227627c8865833aad281f95ebeb",
+  "operations": [
+    {
+      "id": 0,
+      "started": "2026-10-12T21:13:22.542Z",
+      "finished": "2026-10-12T21:13:40.346Z",
+      "outerDurationMs": 17804,
+      "childDurationMs": 14807,
+      "code": 0,
+      "closureComplete": true,
+      "errors": [],
+      "outerResultSha256": "71d310307c518749e18c50212ef73ad63b33753c406b335b214eb82df5d91843"
+    },
+    {
+      "id": 1,
+      "started": "2026-10-12T21:14:09.338Z",
+      "finished": "2026-10-12T21:15:09.057Z",
+      "outerDurationMs": 59719,
+      "childDurationMs": 56569,
+      "code": 0,
+      "closureComplete": true,
+      "errors": [],
+      "outerResultSha256": "e79bf4399ab3a79d64c3c02375585e912f4071412a15d234ad0ed095afd52184"
+    },
+    {
+      "id": 2,
+      "started": "2026-10-12T21:15:27.632Z",
+      "finished": "2026-10-12T21:16:23.975Z",
+      "outerDurationMs": 56343,
+      "childDurationMs": 53144,
+      "code": null,
+      "closureComplete": true,
+      "errors": [],
+      "outerResultSha256": "611547081a0e87a6cf22d4a9f391ffff426139ea948cce83210208c99506cc41"
+    }
+  ],
+  "outerExecutionMs": 133866,
+  "unspentExecutionMs": 766134,
+  "budgetRemainingIsNotRetryPermission": true,
+  "historyRefusal": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n",
+  "reports": [
+    {
+      "batch": 1,
+      "mode": "desktop",
+      "complete": true,
+      "problems": [],
+      "images": 8,
+      "initialActivationUrl": "http://127.0.0.1:35543/sketch/fixture",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 135.984375,
+            "y": 432.5625,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": false,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 286.21875,
+              "y": 448.0625,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "unionRect": {
+              "x": 135.984375,
+              "y": 432.5625,
+              "width": 300.46875,
+              "height": 31,
+              "left": 135.984375,
+              "top": 432.5625,
+              "right": 436.453125,
+              "bottom": 463.5625
+            },
+            "unionCenter": {
+              "x": 286.21875,
+              "y": 448.0625,
+              "inViewport": true,
+              "hit": {
+                "tagName": "a",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": "/sketch/fixture",
+                "text": "The bring-up fixture ↗"
+              },
+              "hitTarget": true
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 135.984375,
+                "y": 432.5625,
+                "width": 300.46875,
+                "height": 31,
+                "left": 135.984375,
+                "top": 432.5625,
+                "right": 436.453125,
+                "bottom": 463.5625
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 286.21875,
+                "y": 448.0625,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/fixture",
+                  "text": "The bring-up fixture ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 135.984375,
+            "y": 432.5625,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": true,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 286.21875,
+              "y": 448.0625,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "unionRect": {
+              "x": 135.984375,
+              "y": 432.5625,
+              "width": 300.46875,
+              "height": 31,
+              "left": 135.984375,
+              "top": 432.5625,
+              "right": 436.453125,
+              "bottom": 463.5625
+            },
+            "unionCenter": {
+              "x": 286.21875,
+              "y": 448.0625,
+              "inViewport": true,
+              "hit": {
+                "tagName": "a",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": "/sketch/fixture",
+                "text": "The bring-up fixture ↗"
+              },
+              "hitTarget": true
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 135.984375,
+                "y": 432.5625,
+                "width": 300.46875,
+                "height": 31,
+                "left": 135.984375,
+                "top": 432.5625,
+                "right": 436.453125,
+                "bottom": 463.5625
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 286.21875,
+                "y": 448.0625,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/fixture",
+                  "text": "The bring-up fixture ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true,
+          "tabPresses": 1
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "mode": "phone",
+      "complete": true,
+      "problems": [],
+      "images": 8,
+      "initialActivationUrl": "http://127.0.0.1:35543/sketch/fixture",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 52.796875,
+            "y": 363.5,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": false,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 203.03125,
+              "y": 379,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "unionRect": {
+              "x": 52.796875,
+              "y": 363.5,
+              "width": 300.46875,
+              "height": 31,
+              "left": 52.796875,
+              "top": 363.5,
+              "right": 353.265625,
+              "bottom": 394.5
+            },
+            "unionCenter": {
+              "x": 203.03125,
+              "y": 379,
+              "inViewport": true,
+              "hit": {
+                "tagName": "a",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": "/sketch/fixture",
+                "text": "The bring-up fixture ↗"
+              },
+              "hitTarget": true
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 52.796875,
+                "y": 363.5,
+                "width": 300.46875,
+                "height": 31,
+                "left": 52.796875,
+                "top": 363.5,
+                "right": 353.265625,
+                "bottom": 394.5
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 203.03125,
+                "y": 379,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/fixture",
+                  "text": "The bring-up fixture ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 52.796875,
+            "y": 363.5,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": true,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 203.03125,
+              "y": 379,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "unionRect": {
+              "x": 52.796875,
+              "y": 363.5,
+              "width": 300.46875,
+              "height": 31,
+              "left": 52.796875,
+              "top": 363.5,
+              "right": 353.265625,
+              "bottom": 394.5
+            },
+            "unionCenter": {
+              "x": 203.03125,
+              "y": 379,
+              "inViewport": true,
+              "hit": {
+                "tagName": "a",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": "/sketch/fixture",
+                "text": "The bring-up fixture ↗"
+              },
+              "hitTarget": true
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 52.796875,
+                "y": 363.5,
+                "width": 300.46875,
+                "height": 31,
+                "left": 52.796875,
+                "top": 363.5,
+                "right": 353.265625,
+                "bottom": 394.5
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 203.03125,
+                "y": 379,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/fixture",
+                  "text": "The bring-up fixture ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true,
+          "tabPresses": 1
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "mode": "desktop",
+      "complete": true,
+      "problems": [],
+      "images": 8,
+      "initialActivationUrl": "http://127.0.0.1:33763/sketch/enclosure",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 135.984375,
+            "y": 524.75,
+            "width": 332.9375,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": false,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 302.453125,
+              "y": 540.25,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "unionRect": {
+              "x": 135.984375,
+              "y": 524.75,
+              "width": 332.9375,
+              "height": 31,
+              "left": 135.984375,
+              "top": 524.75,
+              "right": 468.921875,
+              "bottom": 555.75
+            },
+            "unionCenter": {
+              "x": 302.453125,
+              "y": 540.25,
+              "inViewport": true,
+              "hit": {
+                "tagName": "a",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": "/sketch/enclosure",
+                "text": "Inside the power cycle ↗"
+              },
+              "hitTarget": true
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 135.984375,
+                "y": 524.75,
+                "width": 332.9375,
+                "height": 31,
+                "left": 135.984375,
+                "top": 524.75,
+                "right": 468.921875,
+                "bottom": 555.75
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 302.453125,
+                "y": 540.25,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/enclosure",
+                  "text": "Inside the power cycle ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 135.984375,
+            "y": 524.75,
+            "width": 332.9375,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": true,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 302.453125,
+              "y": 540.25,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "unionRect": {
+              "x": 135.984375,
+              "y": 524.75,
+              "width": 332.9375,
+              "height": 31,
+              "left": 135.984375,
+              "top": 524.75,
+              "right": 468.921875,
+              "bottom": 555.75
+            },
+            "unionCenter": {
+              "x": 302.453125,
+              "y": 540.25,
+              "inViewport": true,
+              "hit": {
+                "tagName": "a",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": "/sketch/enclosure",
+                "text": "Inside the power cycle ↗"
+              },
+              "hitTarget": true
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 135.984375,
+                "y": 524.75,
+                "width": 332.9375,
+                "height": 31,
+                "left": 135.984375,
+                "top": 524.75,
+                "right": 468.921875,
+                "bottom": 555.75
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 302.453125,
+                "y": 540.25,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/enclosure",
+                  "text": "Inside the power cycle ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true,
+          "tabPresses": 2
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "mode": "phone",
+      "complete": true,
+      "problems": [],
+      "images": 8,
+      "initialActivationUrl": "http://127.0.0.1:33763/sketch/enclosure",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 52.796875,
+            "y": 482.875,
+            "width": 302.4375,
+            "height": 63,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": false,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 204.015625,
+              "y": 498.375,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "unionRect": {
+              "x": 52.796875,
+              "y": 482.875,
+              "width": 302.4375,
+              "height": 63,
+              "left": 52.796875,
+              "top": 482.875,
+              "right": 355.234375,
+              "bottom": 545.875
+            },
+            "unionCenter": {
+              "x": 204.015625,
+              "y": 514.375,
+              "inViewport": true,
+              "hit": {
+                "tagName": "li",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": null,
+                "text": "Inside the power cycle ↗A state table, carried by six sensor-enclosure sections."
+              },
+              "hitTarget": false
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 52.796875,
+                "y": 482.875,
+                "width": 302.4375,
+                "height": 31,
+                "left": 52.796875,
+                "top": 482.875,
+                "right": 355.234375,
+                "bottom": 513.875
+              },
+              {
+                "index": 1,
+                "x": 52.796875,
+                "y": 514.875,
+                "width": 22.125,
+                "height": 31,
+                "left": 52.796875,
+                "top": 514.875,
+                "right": 74.921875,
+                "bottom": 545.875
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 204.015625,
+                "y": 498.375,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/enclosure",
+                  "text": "Inside the power cycle ↗"
+                },
+                "hitTarget": true
+              },
+              {
+                "rectIndex": 1,
+                "rectInView": true,
+                "x": 63.859375,
+                "y": 530.375,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/enclosure",
+                  "text": "Inside the power cycle ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 52.796875,
+            "y": 482.875,
+            "width": 302.4375,
+            "height": 63,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": true,
+            "disabled": false,
+            "actionable": true,
+            "pointerPoint": {
+              "x": 204.015625,
+              "y": 498.375,
+              "rectIndex": 0
+            },
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "unionRect": {
+              "x": 52.796875,
+              "y": 482.875,
+              "width": 302.4375,
+              "height": 63,
+              "left": 52.796875,
+              "top": 482.875,
+              "right": 355.234375,
+              "bottom": 545.875
+            },
+            "unionCenter": {
+              "x": 204.015625,
+              "y": 514.375,
+              "inViewport": true,
+              "hit": {
+                "tagName": "li",
+                "id": null,
+                "className": null,
+                "role": null,
+                "ariaLabel": null,
+                "href": null,
+                "text": "Inside the power cycle ↗A state table, carried by six sensor-enclosure sections."
+              },
+              "hitTarget": false
+            },
+            "clientRects": [
+              {
+                "index": 0,
+                "x": 52.796875,
+                "y": 482.875,
+                "width": 302.4375,
+                "height": 31,
+                "left": 52.796875,
+                "top": 482.875,
+                "right": 355.234375,
+                "bottom": 513.875
+              },
+              {
+                "index": 1,
+                "x": 52.796875,
+                "y": 514.875,
+                "width": 22.125,
+                "height": 31,
+                "left": 52.796875,
+                "top": 514.875,
+                "right": 74.921875,
+                "bottom": 545.875
+              }
+            ],
+            "candidates": [
+              {
+                "rectIndex": 0,
+                "rectInView": true,
+                "x": 204.015625,
+                "y": 498.375,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/enclosure",
+                  "text": "Inside the power cycle ↗"
+                },
+                "hitTarget": true
+              },
+              {
+                "rectIndex": 1,
+                "rectInView": true,
+                "x": 63.859375,
+                "y": 530.375,
+                "inViewport": true,
+                "hit": {
+                  "tagName": "a",
+                  "id": null,
+                  "className": null,
+                  "role": null,
+                  "ariaLabel": null,
+                  "href": "/sketch/enclosure",
+                  "text": "Inside the power cycle ↗"
+                },
+                "hitTarget": true
+              }
+            ]
+          },
+          "activated": true,
+          "identityChanged": true,
+          "tabPresses": 2
+        }
+      ]
+    }
+  ],
+  "originals": [
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/ending.png",
+      "sha256": "5db170a47ad7c9c3472db041856ccdbe2b185f93ce958cd02773c734226afa49",
+      "bytes": 189717
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/entry.png",
+      "sha256": "5b59304b4e0e83708e82926de69f798654941d9ff740c265a1a2503361476dc2",
+      "bytes": 192639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/keyboard-after.png",
+      "sha256": "5b59304b4e0e83708e82926de69f798654941d9ff740c265a1a2503361476dc2",
+      "bytes": 192639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/keyboard-before.png",
+      "sha256": "72acb2de43ebedad820a92cc2662d4d17238399fd33aa7c05932356bc388946b",
+      "bytes": 106119
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/middle.png",
+      "sha256": "09bc20bb4057d772bb46608e7d8dc2236e334fff9e5346c23a172c3ca105726e",
+      "bytes": 206412
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/opening.png",
+      "sha256": "6a486d8f8e48a146e242462833557a8f25d4e82fa159c7e2e7bae46d2a8ff38d",
+      "bytes": 200486
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/pointer-after.png",
+      "sha256": "5b59304b4e0e83708e82926de69f798654941d9ff740c265a1a2503361476dc2",
+      "bytes": 192639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-desktop/pointer-before.png",
+      "sha256": "9195102e69240fde26ebf08cceacff5ad27341bc2b004b7818a1e4e81a6387f8",
+      "bytes": 105981
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/ending.png",
+      "sha256": "b94099396215082c20cd11eef9b6e6af3edf832ccefc0b0a606be15c5fb11e32",
+      "bytes": 90250
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/entry.png",
+      "sha256": "94cc045b7e601122fa60450a52e2a380568ab9986259e21ad11288ce633ca3fa",
+      "bytes": 96639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/keyboard-after.png",
+      "sha256": "94cc045b7e601122fa60450a52e2a380568ab9986259e21ad11288ce633ca3fa",
+      "bytes": 96639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/keyboard-before.png",
+      "sha256": "bb1c0584b9a2982c0e96c3831904d2ab332542b0f75fe7867f56503c58ced56c",
+      "bytes": 70734
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/middle.png",
+      "sha256": "f400a32d92d2ef378b5aabd00243df0639656ed0d7b9b9e7b4db261551651ad6",
+      "bytes": 92359
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/opening.png",
+      "sha256": "34cdc63080ebb5f9a9008b418234fcb585c2c80f3b13327c22d7c97d060850a7",
+      "bytes": 95756
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/pointer-after.png",
+      "sha256": "94cc045b7e601122fa60450a52e2a380568ab9986259e21ad11288ce633ca3fa",
+      "bytes": 96639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/01/artifacts/01-phone/pointer-before.png",
+      "sha256": "64007eb1db7e48cf86de3ab24661fea79bf2c8e1d173863a3c630e674caba5c3",
+      "bytes": 70659
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/ending.png",
+      "sha256": "3a039e1ac97daa3bfed364a2aa165985ab75ab4248801b141dfea40798cbbff1",
+      "bytes": 192616
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/entry.png",
+      "sha256": "cf35b7d05a41c08489a5c9e10ce1c374861e2e91a9ccb937171cff85283c389b",
+      "bytes": 184380
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/keyboard-after.png",
+      "sha256": "cf35b7d05a41c08489a5c9e10ce1c374861e2e91a9ccb937171cff85283c389b",
+      "bytes": 184380
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/keyboard-before.png",
+      "sha256": "078baf2e0232a2280d6a4d0e9701bb71b4da691fadf2e3b5d24b6a5f6f216c82",
+      "bytes": 106438
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/middle.png",
+      "sha256": "87778fdb3cfe72452dd2d5753545e35783bc7e4ef2afa08785e15c60bca1145f",
+      "bytes": 247072
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/opening.png",
+      "sha256": "2ad13b32db6f4e60bceccbf79bd20bb3d4719349ff83d476f3e277f776bcb647",
+      "bytes": 193832
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/pointer-after.png",
+      "sha256": "cf35b7d05a41c08489a5c9e10ce1c374861e2e91a9ccb937171cff85283c389b",
+      "bytes": 184380
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-desktop/pointer-before.png",
+      "sha256": "9195102e69240fde26ebf08cceacff5ad27341bc2b004b7818a1e4e81a6387f8",
+      "bytes": 105981
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/ending.png",
+      "sha256": "05b30e49748464ce9c32c49e5e7b9081ae5e5f50c0df8df01841bbe91e7fb85e",
+      "bytes": 90260
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/entry.png",
+      "sha256": "0196c646e81fc80b9f4f7ac4f49bbba01fea157c24b3e6ea6c4ba317fce300c1",
+      "bytes": 92928
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/keyboard-after.png",
+      "sha256": "0196c646e81fc80b9f4f7ac4f49bbba01fea157c24b3e6ea6c4ba317fce300c1",
+      "bytes": 92928
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/keyboard-before.png",
+      "sha256": "89abdd00bcb48dfa5841c32bf33dfa72dd0871d4ab3403832dd664da00beb9ae",
+      "bytes": 71099
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/middle.png",
+      "sha256": "ddd152003629897ef3744f58c53c8ad3cda7099d63f30a0c1197a5ba69b62753",
+      "bytes": 106981
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/opening.png",
+      "sha256": "c261890e6b987d7e13cc61881133ffadbb6168fd9bd48e47d85ec4d86f328529",
+      "bytes": 92006
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/pointer-after.png",
+      "sha256": "0196c646e81fc80b9f4f7ac4f49bbba01fea157c24b3e6ea6c4ba317fce300c1",
+      "bytes": 92928
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-2/batches/02/artifacts/02-phone/pointer-before.png",
+      "sha256": "64007eb1db7e48cf86de3ab24661fea79bf2c8e1d173863a3c630e674caba5c3",
+      "bytes": 70659
+    }
+  ],
+  "processObservation": {
+    "workspaceRoots": [
+      "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-measure-2-O43efR",
+      "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9"
+    ],
+    "matches": [],
+    "limitation": "cwd-scoped observation only, not universal descendant-exit proof"
+  },
+  "modelCalls": 0,
+  "browserCalls": 0,
+  "sourceWrites": false
+}
