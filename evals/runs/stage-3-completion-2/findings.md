@@ -364,3 +364,28 @@ independent readiness audit pass with 94 unchanged source files and all
 `local-tests-17`, closed zero at 15:06:40.762 UTC after 13,860 ms. The
 [launch disposition](full-journey/preparation/candidate-2-launch-disposition.md)
 allows turn 1 after commit, not a behavior pass or Stage 3 completion.
+
+## Candidate 2 factual stop
+
+Turn 1 completed normally at 15:10:07.333 UTC, actor 151,729 ms and outer
+153,444 ms. It asks all four fact distinctions and preserves unresolved
+claims, then waits. Unlike the baseline it performs Node/native-TypeScript,
+Git, folder/skill and actual local-browser checks. The first failed browser
+import is retained. Root separately archived the final neutral script/PNG;
+three exact native-session events corroborate image delivery omitted by
+the CLI stream. All 149 inputs, 199 artifacts and 97 saved/live source
+files verify, with reliable usage of 214,732 reported and 64,076 uncached
+input plus output tokens.
+
+Independent reviewers initially differed on the missing optional advice.
+The actor expressly records no need for a helper at initial fact review
+and reassessment later. Its necessity/initial-facts wording is narrower
+than materially-helpful-build guidance, but no concrete unmet current need
+is established merely by catalog topic overlap. Root accepts this qualified
+conditional decision under the frozen no-quota rule; advice/source-route
+quality and continuation after relevant refusal remain unobserved. This
+does not rewrite baseline 2's original failure or prove the missing branch.
+The [source-bound disposition](full-journey/preparation/candidate-2-stop-1-disposition.md)
+permits unchanged turn 2 without a baseline exception after commit.
+All 351 tests and skill/people checks pass in `local-tests-18`, closed zero
+at 15:14:07.334 UTC after 14,036 ms. Stage 3 is not complete.

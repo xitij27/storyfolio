@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "started": "2026-10-12T15:12:45.607Z",
+  "finished": "2026-10-12T15:12:46.557Z",
+  "cohort": "codex-full-journey-candidate-2",
+  "inputDigest": "01b8086923dcb9f03102c84bcec346e29037b469fb4c760334f17a5057185566",
+  "frozenInputs": 149,
+  "turn": 1,
+  "complete": true,
+  "requestedStop": 1,
+  "sessionId": "01a130a7-a4ce-7eb2-bc48-2015a0dab0be",
+  "sourceFiles": 97,
+  "beforeSourceFiles": 94,
+  "liveEqualsSnapshot": true,
+  "artifactHashes": 199,
+  "exclusions": [],
+  "unexpected": [],
+  "resultSha256": "d740dc624fb943648adf2de629f63243ee8da2b3d5966a04b2bfae7fdc967645",
+  "usage": {
+    "input_tokens": 211422,
+    "cached_input_tokens": 150656,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3310,
+    "reasoning_output_tokens": 44
+  },
+  "actorDurationMs": 151729,
+  "budget": {
+    "reportedInputPlusOutput": 214732,
+    "uncachedInputPlusOutput": 64076,
+    "bounds": {
+      "maxTurns": 6,
+      "turnTimeoutMs": 900000,
+      "maxWallMs": 5400000,
+      "maxTokens": 12000000,
+      "maxUncachedTokens": 1500000
+    },
+    "nextTimeoutMs": 900000
+  },
+  "closure": {
+    "process": 0,
+    "outerCode": 0,
+    "outerFinished": "2026-10-12T15:10:07.333Z",
+    "outerDurationMs": 153444,
+    "interruptedBy": null,
+    "timedOut": false
+  },
+  "terminal": {
+    "eventId": "item_17",
+    "text": "Your material lists you as Ada Mensah, an embedded systems engineer at Reedglass Sensing since 2021, with Mosslink work spanning low-power design, bring-up and verification. Your notes describe a radio staying awake after a failed transmission, made visible by a current trace.\n\nBefore choosing the story, please answer these by number; short answers are fine.\n\n1. Are your name, formal title and dates correct? What firmware work did you personally own on Mosslink, and what did teammates handle?\n2. Is “two-year battery life” a projected estimate? What reporting interval does it assume, who made the calculation, and what did the 72-hour run verify?\n3. Were the forty units engineering samples, tested devices or deployed devices? What do the six bench-log entries represent, and what was your part?\n4. Was emissions testing preliminary or final? What did you personally contribute?\n5. For the radio issue, what did you investigate, change and verify? How much of that story may we describe publicly?\n6. May we name Reedglass and Mosslink? What must stay private? The photograph and colleague’s diagram are absent; whose permission would their use require?\n7. Which visitors matter most—firmware hiring managers, recruiters or others—and what should they do at the end? Is `ada@example.com` a placeholder?\n8. How do state tables, timing diagrams and bench checklists fit into your daily work? What experience, person or resource taught you most?\n\nNode and a local browser check passed. Everything will stay local.\n\nThe [storyfolio skill](.agents/skills/storyfolio/SKILL.md) requires: “The first stop. You read the profile material, write down what you found, and ask. You do not plan yet.” These answers resolve claims and permissions that would otherwise shape the design incorrectly; then I’ll build three local concept sketches for you to choose from.",
+    "sha256": "ed116889e7df0827ef659cf77752abc10ac55ae31ea5e323a0f8087b22dc427b",
+    "streamEvents": 36
+  },
+  "changedSource": [
+    {
+      "path": "docs/story/decided-for-you.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "33bb48492a67e82b711c76deadba4f4590692894c4bd6d0f163fd5727e403509",
+        "size": 686
+      }
+    },
+    {
+      "path": "docs/story/facts.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "5cd31656e263dfefc2fb4dd1492cfa0c7210a55c62ce6539a9e7889a95093174",
+        "size": 4142
+      }
+    },
+    {
+      "path": "docs/story/handover.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "e488ecb1936d54e5fb648c39fa3c205b3881df22ad8b0f259994e524d6586c4b",
+        "size": 2275
+      }
+    }
+  ],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g 'SKILL.md' -g '*' material .agents/skills/storyfolio\"",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/SKILL.md'",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/references/reading-a-profile.md'",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat material/cv.md material/lab-notes.md material/asset-notes.md material/runtime-resources.json material/external-helper-catalog.json'",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files -g AGENTS.md -g '\"'!node_modules'\"' -g '\"'!.agents/**'\"'; ls -la\"",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/engine/README.md'",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"node --version; git --version; rg --files .agents public /tmp/storyfolio-node-check-20261011 -g '*playwright*' -g 'package.json' -g '*.svg' -g 'SKILL.md'\"",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"ls /tmp; cat .agents/skills/storyfolio/engine/package.json; rg --files /var/tmp/storyfolio-entry-runtime-20261012 -g 'package.json' -g '*playwright*' -g '\"'!storyfolio-evals/**'\"'\"",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"node --input-type=module -e 'import {writeFileSync,unlinkSync} from \\\"node:fs\\\"; const p=\\\"/tmp/storyfolio-native-check.ts\\\"; writeFileSync(p,\\\"const value: number = 7; console.log(value);\\\\n\\\"); await import(p); unlinkSync(p);'; git status --short; ls /tmp/storyfolio-browser-cache\"",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node /tmp/storyfolio-neutral-check.mjs'",
+      "exitCode": 1
+    },
+    {
+      "command": "/bin/bash -lc 'ls -la /var/tmp/storyfolio-entry-runtime-20261012/storyfolio-sheet-cli-qqVt7x/node_modules/playwright-core; ls /tmp/storyfolio-build-capability-20261011/node_modules/playwright-core; ls /tmp/storyfolio-engine-final-20261011/node_modules/playwright-core'",
+      "exitCode": 2
+    },
+    {
+      "command": "/bin/bash -lc 'PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node /tmp/storyfolio-neutral-check.mjs'",
+      "exitCode": 0
+    }
+  ],
+  "hashes": {
+    "self": "9c1d7eaafc7df929fbc6f5ff49f9de7752e8658fad647019fec4e30efac09bad",
+    "tool": "ae52487906c71c29f422bf5858ab04d7a43b04ba3a349659197d11a87e59fb59",
+    "outerResult": "7954459e27998273147427423f913a5649eadf0c0c834727337a0469c0cc82cf",
+    "snapshot": "7568b03788be573b3df9349d4b697ce36bb6d0cc155422a629868d497affab53",
+    "stream": "d8b166607ca90500c943699f67282ca9f2895c2bf1bc8587a169b618768c4bf6"
+  },
+  "limits": "Common integrity/lifecycle/session/usage gates only. No advance:true gate is created, and no semantic stop, actor preflight, recommendation, technical/visual acceptance or process absence is inferred. Root owns the actual behavior review and decision. No subprocess/model/browser was launched."
+}
+

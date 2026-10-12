@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-12T15:12:31.327Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "-e",
+      "const fs=require('node:fs'),p=require('node:path'),c=require('node:crypto');const out='evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-actor-owned-checks';fs.mkdirSync(out);const artifacts=[];for(const name of ['storyfolio-neutral-check.mjs','storyfolio-neutral-check.png']){const source='/tmp/'+name,s=fs.lstatSync(source);if(!s.isFile()||s.isSymbolicLink())throw Error('not regular');const b=fs.readFileSync(source);fs.writeFileSync(p.join(out,name),b,{flag:'wx'});artifacts.push({source,destination:p.join(out,name),bytes:b.length,sha256:c.createHash('sha256').update(b).digest('hex'),mtime:s.mtime.toISOString()});}const report={observedAt:new Date().toISOString(),scope:'Exact final actor-authored external neutral check files, separately retained after turn1 normal closure; not part of frozen turn snapshot or model inputs. First failed script revision was not captured and is not reconstructed.',artifacts};fs.writeFileSync(p.join(out,'manifest.json'),JSON.stringify(report,null,2)+'\\n',{flag:'wx'});console.log(JSON.stringify(report,null,2));"
+    ]
+  },
+  "result": {
+    "chunk_id": "e4c21a",
+    "wall_time_seconds": 0.000016852,
+    "exit_code": 0,
+    "original_token_count": 254,
+    "output": "{\n  \"observedAt\": \"2026-10-12T15:12:31.297Z\",\n  \"scope\": \"Exact final actor-authored external neutral check files, separately retained after turn1 normal closure; not part of frozen turn snapshot or model inputs. First failed script revision was not captured and is not reconstructed.\",\n  \"artifacts\": [\n    {\n      \"source\": \"/tmp/storyfolio-neutral-check.mjs\",\n      \"destination\": \"evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-actor-owned-checks/storyfolio-neutral-check.mjs\",\n      \"bytes\": 951,\n      \"sha256\": \"f542daa7cf015e22fb48945b6a18a1ac45a1560952937272fc894543ef6bd1d6\",\n      \"mtime\": \"2026-10-12T15:08:52.078Z\"\n    },\n    {\n      \"source\": \"/tmp/storyfolio-neutral-check.png\",\n      \"destination\": \"evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-actor-owned-checks/storyfolio-neutral-check.png\",\n      \"bytes\": 9754,\n      \"sha256\": \"76449ae132b88fff45fbcfcb8d3788647dcd51a10fdb315c76622d57e963f745\",\n      \"mtime\": \"2026-10-12T15:08:52.626Z\"\n    }\n  ]\n}\n"
+  }
+}

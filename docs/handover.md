@@ -25,7 +25,15 @@ and an independent audit of all 18 proof bindings. Only the three declared
 helper/test/document bytes differ from candidate 1; skill/model/prompts
 remain exact. All 351 tests pass. The
 [launch disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-launch-disposition.md)
-permits its one paid attempt after commit; none has launched yet.
+permitted its one paid attempt after commit. Turn 1 has now completed
+normally: factual questions and real actor preflight pass. The integrity
+audit verifies 149 inputs, 199 artifacts and 97 live/saved files. Native
+session evidence corroborates its screenshot viewing, which the CLI stream
+omitted. Its deliberate no-current-helper decision is accepted conditionally,
+not scored as recommendation/refusal success; those branches remain
+unobserved. The [stop-1 decision](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-stop-1-disposition.md)
+permits the unchanged truth reply without a baseline exception. All 351
+tests pass in `local-tests-18`. No turn 2 has launched at this checkpoint.
 
 Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed
