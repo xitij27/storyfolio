@@ -244,3 +244,23 @@ skill/people checks and all 351 repository tests passed. Commit this
 readiness before one turn-1 launch using the already fixed controls and
 stop-review checklist. No setup check is represented as actor preflight,
 human approval or Stage 3 completion.
+
+## First paid journey fact stop
+
+Baseline-2 turn 1 completed normally at 06:21:43.253 UTC, actor duration
+98,504 ms, outer duration 100,106 ms. Its factual handoff raises all four
+claim distinctions and leaves unsupported claims pending. Independent
+behavior and integrity reviews bind the actual terminal message, all 149
+inputs, 199 artifacts and 97 live/saved source files. Usage is 66,899 input,
+53,248 cached and 1,943 output: 68,842 reported and 15,594 uncached plus
+output, within the predeclared bounds.
+
+The actor omitted Node/native-TypeScript, Git, actual browser capability
+and complete enabled-skill checks, and offered no useful optional helper
+despite reading the dated catalog. These remain failures; refusal handling
+is unobserved. Root's [disposition](full-journey/preparation/baseline-2-stop-1-disposition.md)
+uses the prospective baseline-only exception to send the unchanged truth
+reply and observe concept output. Whole-site eligibility is false, with
+no coaching, invented choice or waived factual gate. All 351 tests and
+skill/people checks passed in `local-tests-10`, closed zero at
+06:23:27.742 UTC after 13,861 ms. No skill edit or push occurred.

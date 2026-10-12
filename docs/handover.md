@@ -13,7 +13,16 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: baseline-2 is ready for paid turn 1. Its single neutral
+Newest checkpoint: the first paid journey turn completed normally. Its
+factual handoff passes, but actor preflight and relevant optional-helper
+recommendations were omitted. The
+[root disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/baseline-2-stop-1-disposition.md)
+permits unchanged turn 2 under the predeclared baseline-only exception.
+This baseline cannot serve as whole-site proof. Integrity, lifecycle,
+session and usage pass; all 351 repository tests pass in `local-tests-10`.
+The skill remains unchanged pending completed baseline discovery.
+
+Earlier checkpoint: baseline-2 is ready for paid turn 1. Its single neutral
 proof passed normally, root reviewed the new original, final readiness
 passed, and an independent byte/source/evidence audit verified all 149
 inputs and 94 unscaffolded source files. The
