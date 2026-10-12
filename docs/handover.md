@@ -4,6 +4,18 @@ Current state as of 12 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Newest direction: the author [approved the storyboard correction and one
+fresh matched journey](history/2026-10-12-stage-3-storyboard-correction-approval.md).
+The [new study](../evals/runs/stage-3-storyboard-length-1/README.md) records the
+single length paragraph and candidate-3 preparation. Same model/prompts,
+up to six gated 15-minute turns, existing browser limits, no judge or retry.
+Do not ask for this approval again. Candidate 2's failed storyboard stays
+closed; source capture is corrected prospectively before the new run.
+The one-paragraph correction is independently source-reviewed and passes
+skill validation, skill/people checks and all 351 repository tests in the
+new study's `local-tests-1`. Behavioral improvement remains unproved until
+the fresh matched journey; no new paid actor has launched at this point.
+
 Latest completed checkpoint: the browser replacement passed and original
 candidate-2 turn 3 then completed normally at 18:15:06.499 UTC. Its
 storyboard fails the fixed scope: eight beats, nine screens calculated in

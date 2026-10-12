@@ -15,6 +15,8 @@ A row to a chapter:
 
 Under each chapter, a row to a beat. A beat is one settled state of the scene and one block of text.
 
+A full story normally has twelve to twenty-two meaningful beats. Add up their screen heights, state the total, and trim repetition. Do not pad or invent facts to reach the range. If the confirmed material calls for a shorter story, propose that exception explicitly for the person's approval.
+
 | Beat | Screens | How the pieces stand | What is on their faces | What the chapter adds | What its caption stands on |
 |---|---|---|---|---|---|
 
