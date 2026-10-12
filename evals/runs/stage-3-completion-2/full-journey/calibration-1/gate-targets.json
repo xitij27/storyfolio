@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "sourceDigest": "1c499ad1346aa437d5701993b7b71f1b60cc35670e9afe0b7c76d48a1c18a060",
+  "actorResultSha256": "d68f11151669a760ddaf454dcc4316ca6820781b59cf3dc1c264d06ef3620f0f",
+  "discovery": {
+    "reviewer": "root, manual prototype source review",
+    "exhaustive": true,
+    "sources": [
+      {
+        "path": "app/page.tsx",
+        "sha256": "f08a38dd07db2d655d1f6b7abd0624d495185c322348799d2977989121bc0dad"
+      },
+      {
+        "path": "content/story.ts",
+        "sha256": "c71780070dbbf040e7b96e5580ba05141f87da7edab20749c115dd6ead12de5d"
+      },
+      {
+        "path": "content/looks.ts",
+        "sha256": "8b5fec42585f3557960fecfc13e91957ee8e2b99b171bc2612d542962cd83f38"
+      }
+    ]
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "Known manually authored five-beat prototype, fresh copy, no actor lifecycle claim"
+  },
+  "calibrationOnly": true,
+  "stage": 4,
+  "alternatives": [
+    {
+      "id": "bench",
+      "advertised": true,
+      "route": "/",
+      "control": null,
+      "beats": {
+        "opening": "opening.assembly",
+        "middle": "middle.relationship",
+        "ending": "close.evidence"
+      },
+      "meaning": "Actual single Bench look. Expected count failure against the unchanged two-to-three-look journey policy."
+    }
+  ]
+}

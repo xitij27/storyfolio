@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: three concepts retain per-concept IDs, actual routes and choosers
+ok 1 - three concepts retain per-concept IDs, actual routes and choosers
+  ---
+  duration_ms: 1.930232
+  type: 'test'
+  ...
+# Subtest: all looks remain valid observed inputs, wrong counts become failures rather than omissions
+ok 2 - all looks remain valid observed inputs, wrong counts become failures rather than omissions
+  ---
+  duration_ms: 0.559851
+  type: 'test'
+  ...
+# Subtest: missing three-point content remains observable and cannot pass
+ok 3 - missing three-point content remains observable and cannot pass
+  ---
+  duration_ms: 0.259403
+  type: 'test'
+  ...
+# Subtest: 12 to 22 arbitrary final beats, never five fixed IDs
+ok 4 - 12 to 22 arbitrary final beats, never five fixed IDs
+  ---
+  duration_ms: 0.648326
+  type: 'test'
+  ...
+# Subtest: missing approved story meaning is not hidden by complete actual inventory
+ok 5 - missing approved story meaning is not hidden by complete actual inventory
+  ---
+  duration_ms: 0.119653
+  type: 'test'
+  ...
+# Subtest: required wording must equal the selected whole versions, not snippets extracted from output
+ok 6 - required wording must equal the selected whole versions, not snippets extracted from output
+  ---
+  duration_ms: 0.169976
+  type: 'test'
+  ...
+# Subtest: whole-version viewport coverage keeps exact positional identity across samples
+ok 7 - whole-version viewport coverage keeps exact positional identity across samples
+  ---
+  duration_ms: 0.378634
+  type: 'test'
+  ...
+# Subtest: whole wording preserves word boundaries while normalizing whitespace
+ok 8 - whole wording preserves word boundaries while normalizing whitespace
+  ---
+  duration_ms: 0.074037
+  type: 'test'
+  ...
+# Subtest: actual browser observer handles prototype BR and inline emphasis without joining words
+ok 9 - actual browser observer handles prototype BR and inline emphasis without joining words
+  ---
+  duration_ms: 1.808264
+  type: 'test'
+  ...
+# Subtest: actual browser observer cannot claim a clipped wrapped word fully visible
+ok 10 - actual browser observer cannot claim a clipped wrapped word fully visible
+  ---
+  duration_ms: 0.337689
+  type: 'test'
+  ...
+# Subtest: duplicate screenshot names fail before overwriting any original
+ok 11 - duplicate screenshot names fail before overwriting any original
+  ---
+  duration_ms: 0.738093
+  type: 'test'
+  ...
+# Subtest: source discovery, routes, controls and duplicate IDs fail closed
+ok 12 - source discovery, routes, controls and duplicate IDs fail closed
+  ---
+  duration_ms: 1.481627
+  type: 'test'
+  ...
+# Subtest: focus-only exception requires explicit narrow source-first authority
+ok 13 - focus-only exception requires explicit narrow source-first authority
+  ---
+  duration_ms: 0.365921
+  type: 'test'
+  ...
+# Subtest: no source, nonterminal actor, unresolved gate and starter are explicit non-passes
+ok 14 - no source, nonterminal actor, unresolved gate and starter are explicit non-passes
+  ---
+  duration_ms: 0.14493
+  type: 'test'
+  ...
+# Subtest: finite unit schedule and shutdown-inclusive caps are frozen
+ok 15 - finite unit schedule and shutdown-inclusive caps are frozen
+  ---
+  duration_ms: 3.006844
+  type: 'test'
+  ...
+# Subtest: actual HTML beat IDs cannot escape image paths or collide by lossy replacement
+ok 16 - actual HTML beat IDs cannot escape image paths or collide by lossy replacement
+  ---
+  duration_ms: 0.122037
+  type: 'test'
+  ...
+# Subtest: gate coverage binds every alternative, entry, three rests and both control methods
+ok 17 - gate coverage binds every alternative, entry, three rests and both control methods
+  ---
+  duration_ms: 0.970837
+  type: 'test'
+  ...
+# Subtest: gate omitted alternative, entry, control method or control original fails
+ok 18 - gate omitted alternative, entry, control method or control original fails
+  ---
+  duration_ms: 2.342709
+  type: 'test'
+  ...
+# Subtest: idempotent switch and raw request errors cannot be technical passes
+ok 19 - idempotent switch and raw request errors cannot be technical passes
+  ---
+  duration_ms: 0.205202
+  type: 'test'
+  ...
+# Subtest: all 12 final rests and both directions of all 11 transitions are required
+ok 20 - all 12 final rests and both directions of all 11 transitions are required
+  ---
+  duration_ms: 0.732433
+  type: 'test'
+  ...
+# Subtest: omitted reverse, forward, moving sample, control trial, census or original fails coverage
+ok 21 - omitted reverse, forward, moving sample, control trial, census or original fails coverage
+  ---
+  duration_ms: 4.19754
+  type: 'test'
+  ...
+# Subtest: reduced-motion requires a bound still pair at every actual beat
+ok 22 - reduced-motion requires a bound still pair at every actual beat
+  ---
+  duration_ms: 0.596961
+  type: 'test'
+  ...
+# Subtest: exact originals review rejects missing, duplicate, added, modified and non-original views
+ok 23 - exact originals review rejects missing, duplicate, added, modified and non-original views
+  ---
+  duration_ms: 0.924501
+  type: 'test'
+  ...
+# Subtest: source exactness is a whole-set assertion, not subset agreement
+ok 24 - source exactness is a whole-set assertion, not subset agreement
+  ---
+  duration_ms: 0.755366
+  type: 'test'
+  ...
+# Subtest: only exact root-reviewed identified Git metadata, never omitted app or credentials
+ok 25 - only exact root-reviewed identified Git metadata, never omitted app or credentials
+  ---
+  duration_ms: 1.421665
+  type: 'test'
+  ...
+# Subtest: new supervisor requires full clean terminal lifecycle, never legacy missing-result fallback
+ok 26 - new supervisor requires full clean terminal lifecycle, never legacy missing-result fallback
+  ---
+  duration_ms: 1.206054
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 99.688786

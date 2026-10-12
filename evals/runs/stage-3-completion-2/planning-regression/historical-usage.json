@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "prepared": "2026-10-12",
+  "source": "codex-closing-1",
+  "arithmetic": "Sum raw reported usage across all three turns; resumed counters may overlap. No dollar conversion.",
+  "runs": [
+    {
+      "path": "evals/runs/codex-closing-1/analyst/with-1",
+      "actorDurationMs": 422602,
+      "actorReportedTokens": 831862,
+      "actorReportedUncachedPlusOutput": 104438,
+      "judgeTokens": 27335,
+      "judgeUncachedPlusOutput": 18375
+    },
+    {
+      "path": "evals/runs/codex-closing-1/analyst/with-2",
+      "actorDurationMs": 438649,
+      "actorReportedTokens": 499986,
+      "actorReportedUncachedPlusOutput": 121234,
+      "judgeTokens": 29915,
+      "judgeUncachedPlusOutput": 29915
+    },
+    {
+      "path": "evals/runs/codex-closing-1/analyst-overstate/with-1",
+      "actorDurationMs": 343987,
+      "actorReportedTokens": 458588,
+      "actorReportedUncachedPlusOutput": 106716,
+      "judgeTokens": 26774,
+      "judgeUncachedPlusOutput": 17814
+    },
+    {
+      "path": "evals/runs/codex-closing-1/analyst-overstate/with-2",
+      "actorDurationMs": 413045,
+      "actorReportedTokens": 536119,
+      "actorReportedUncachedPlusOutput": 170167,
+      "judgeTokens": 27314,
+      "judgeUncachedPlusOutput": 18354
+    },
+    {
+      "path": "evals/runs/codex-closing-1/student/with-1",
+      "actorDurationMs": 372938,
+      "actorReportedTokens": 684205,
+      "actorReportedUncachedPlusOutput": 117037,
+      "judgeTokens": 25890,
+      "judgeUncachedPlusOutput": 16930
+    },
+    {
+      "path": "evals/runs/codex-closing-1/student/with-2",
+      "actorDurationMs": 331447,
+      "actorReportedTokens": 454855,
+      "actorReportedUncachedPlusOutput": 136775,
+      "judgeTokens": 24845,
+      "judgeUncachedPlusOutput": 15885
+    }
+  ],
+  "rawRunCounters": [
+    {
+      "path": "evals/runs/codex-closing-1/analyst/with-1",
+      "runner": "codex",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "complete": true,
+      "turns": [
+        {
+          "failed": false,
+          "durationMs": 88991,
+          "usage": {
+            "input_tokens": 69496,
+            "cached_input_tokens": 60800,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3348,
+            "reasoning_output_tokens": 65
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 242473,
+          "usage": {
+            "input_tokens": 306501,
+            "cached_input_tokens": 278272,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 13294,
+            "reasoning_output_tokens": 462
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 91138,
+          "usage": {
+            "input_tokens": 422349,
+            "cached_input_tokens": 388352,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16874,
+            "reasoning_output_tokens": 552
+          }
+        }
+      ],
+      "judge": {
+        "model": "gpt-6-astra",
+        "reasoningEffort": "medium",
+        "usage": {
+          "input_tokens": 25985,
+          "cached_input_tokens": 8960,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1350,
+          "reasoning_output_tokens": 228
+        }
+      }
+    },
+    {
+      "path": "evals/runs/codex-closing-1/analyst/with-2",
+      "runner": "codex",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "complete": true,
+      "turns": [
+        {
+          "failed": false,
+          "durationMs": 81243,
+          "usage": {
+            "input_tokens": 54441,
+            "cached_input_tokens": 36992,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3227,
+            "reasoning_output_tokens": 144
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 272784,
+          "usage": {
+            "input_tokens": 171737,
+            "cached_input_tokens": 139136,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 14409,
+            "reasoning_output_tokens": 744
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 84622,
+          "usage": {
+            "input_tokens": 238126,
+            "cached_input_tokens": 202624,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 18046,
+            "reasoning_output_tokens": 842
+          }
+        }
+      ],
+      "judge": {
+        "model": "gpt-6-astra",
+        "reasoningEffort": "medium",
+        "usage": {
+          "input_tokens": 28786,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1129,
+          "reasoning_output_tokens": 36
+        }
+      }
+    },
+    {
+      "path": "evals/runs/codex-closing-1/analyst-overstate/with-1",
+      "runner": "codex",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "complete": true,
+      "turns": [
+        {
+          "failed": false,
+          "durationMs": 66546,
+          "usage": {
+            "input_tokens": 53492,
+            "cached_input_tokens": 36736,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2537,
+            "reasoning_output_tokens": 46
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 197518,
+          "usage": {
+            "input_tokens": 142842,
+            "cached_input_tokens": 113920,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10379,
+            "reasoning_output_tokens": 318
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 79923,
+          "usage": {
+            "input_tokens": 235777,
+            "cached_input_tokens": 201216,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 13561,
+            "reasoning_output_tokens": 380
+          }
+        }
+      ],
+      "judge": {
+        "model": "gpt-6-astra",
+        "reasoningEffort": "medium",
+        "usage": {
+          "input_tokens": 25585,
+          "cached_input_tokens": 8960,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1189,
+          "reasoning_output_tokens": 59
+        }
+      }
+    },
+    {
+      "path": "evals/runs/codex-closing-1/analyst-overstate/with-2",
+      "runner": "codex",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "complete": true,
+      "turns": [
+        {
+          "failed": false,
+          "durationMs": 97091,
+          "usage": {
+            "input_tokens": 55128,
+            "cached_input_tokens": 37120,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3720,
+            "reasoning_output_tokens": 236
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 210165,
+          "usage": {
+            "input_tokens": 173239,
+            "cached_input_tokens": 123264,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 12349,
+            "reasoning_output_tokens": 791
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 105789,
+          "usage": {
+            "input_tokens": 274938,
+            "cached_input_tokens": 205568,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 16745,
+            "reasoning_output_tokens": 1097
+          }
+        }
+      ],
+      "judge": {
+        "model": "gpt-6-astra",
+        "reasoningEffort": "medium",
+        "usage": {
+          "input_tokens": 26120,
+          "cached_input_tokens": 8960,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1194,
+          "reasoning_output_tokens": 64
+        }
+      }
+    },
+    {
+      "path": "evals/runs/codex-closing-1/student/with-1",
+      "runner": "codex",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "complete": true,
+      "turns": [
+        {
+          "failed": false,
+          "durationMs": 69156,
+          "usage": {
+            "input_tokens": 53020,
+            "cached_input_tokens": 36480,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2735,
+            "reasoning_output_tokens": 85
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 230950,
+          "usage": {
+            "input_tokens": 249257,
+            "cached_input_tokens": 217216,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 12130,
+            "reasoning_output_tokens": 515
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 72832,
+          "usage": {
+            "input_tokens": 351637,
+            "cached_input_tokens": 313472,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 15426,
+            "reasoning_output_tokens": 660
+          }
+        }
+      ],
+      "judge": {
+        "model": "gpt-6-astra",
+        "reasoningEffort": "medium",
+        "usage": {
+          "input_tokens": 25032,
+          "cached_input_tokens": 8960,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 858,
+          "reasoning_output_tokens": 43
+        }
+      }
+    },
+    {
+      "path": "evals/runs/codex-closing-1/student/with-2",
+      "runner": "codex",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "complete": true,
+      "turns": [
+        {
+          "failed": false,
+          "durationMs": 70773,
+          "usage": {
+            "input_tokens": 53106,
+            "cached_input_tokens": 33664,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2798,
+            "reasoning_output_tokens": 93
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 180630,
+          "usage": {
+            "input_tokens": 140161,
+            "cached_input_tokens": 97664,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 10139,
+            "reasoning_output_tokens": 491
+          }
+        },
+        {
+          "failed": false,
+          "durationMs": 80044,
+          "usage": {
+            "input_tokens": 235136,
+            "cached_input_tokens": 186752,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 13515,
+            "reasoning_output_tokens": 529
+          }
+        }
+      ],
+      "judge": {
+        "model": "gpt-6-astra",
+        "reasoningEffort": "medium",
+        "usage": {
+          "input_tokens": 23932,
+          "cached_input_tokens": 8960,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 913,
+          "reasoning_output_tokens": 86
+        }
+      }
+    }
+  ],
+  "limits": "Historical observations only, not predictions or a new actor/judge result."
+}

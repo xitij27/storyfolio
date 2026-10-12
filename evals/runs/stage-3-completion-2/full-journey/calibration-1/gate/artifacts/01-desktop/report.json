@@ -1,0 +1,620 @@
+{
+  "alternative": {
+    "id": "bench",
+    "advertised": true,
+    "route": "/",
+    "control": null,
+    "beats": {
+      "opening": "opening.assembly",
+      "middle": "middle.relationship",
+      "ending": "close.evidence"
+    },
+    "meaning": "Actual single Bench look. Expected count failure against the unchanged two-to-three-look journey policy."
+  },
+  "mode": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "rests": [
+    {
+      "role": "opening",
+      "id": "opening.assembly",
+      "observation": {
+        "url": "http://127.0.0.1:44047/",
+        "scroll": 225,
+        "scene": "on",
+        "look": "bench",
+        "palette": [
+          [
+            "--story-ground",
+            "#e9e6de"
+          ],
+          [
+            "--story-ink",
+            "#202c2a"
+          ],
+          [
+            "--story-accent",
+            "#a84c2d"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the evidence\nam\nAda Mensah\nEmbedded firmware\nExplore the work\n↗\nEvidence\n↗\nMOSSLINK / A FICTIONAL PORTFOLIO STUDY\n1\n2\n3\n4\n5\n\n01 / THE QUESTION\n\nBetween code\nand the bench.\n\nHow do you connect a firmware decision to something you can actually observe?\n\nI wrote the firmware, scheduled the power states and built the bring-up fixture for Mosslink, an environmental sensor.\n\nFirmware is code that controls a physical device.\n↓\nFollow the work\n\n02 / THE SCHEDULE\n\nLow power is\na schedule.\n\nI scheduled the firmware's power states. This teaching loop separates a device's work into three states.\n\n01\nSleep\nWait between work.\n02\nMeasure\nTake a reading.\n03\nTransmit\nSend a report.\n\n↶ Then back to Sleep.\n\nExplanatory teaching loop, not Mosslink's actual firmware. No timings or current values are shown.\n\nMy working documents include state tables, timing diagrams and bench checklists: ways to describe the work to check.\n\n03 / THE BENCH\n\nFrom a command\nto a check.\n\nBring-up means checking a new board's basic operation. My fixture makes its response available to bench instruments.\n\n01\nCommand\n02\nBoard\n03\nFixture\n04\nObserve\n\nAda wrote the firmware and scheduled its power states. State tables and timing diagrams are part of her working documents; this is not a reproduction of that firmware.\n\nI wrote the firmware and built the fixture. A colleague designed the PCB and analogue front end.\n\nCommand → board → fixture → observation.\nAn explanatory relationship, not electrical wiring.\n\n04 / THE EVIDENCE\n\nTwo numbers.\nDifferent evidence.\nINPUTS TO AN ESTIMATE\n\nMEASURED\nSleep and transmit current on the bench.\n\n+\n\nASSUMED\nThe reporting interval.\n\n→\n2 years\nProjected battery life\n\nA SEPARATE OBSERVATION\n\nA continuous run on the bench.\n\n→\n72 hours\nThe longest observed run\n\nAuthored explanation of the supplied fictional notes, not the original spreadsheet or a measured trace. The run does not establish two years of operation.\n\nAn estimate is not two years of observed operation.\n\n05 / THE SCOPE\n\nA connection.\nNot a leap.\n\nI connect firmware decisions to bench observations through power-state scheduling and the bring-up fixture, while keeping the evidence limits visible.\n\nEngineering samples assembled\n40\nTested on the bench\n6\nSent to customers\n0\nSix highlighted cells mark the bench-tested subset of forty. This illustrative count is not a pass/fail chart.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nRead the source and limits\n↘\n\nFROM THE SUPPLIED NOTES\n\nThe source behind\nthe story.\n“Battery spreadsheet uses measured sleep and transmit current with an assumed reporting interval.”\n\nFrom the fictional Mosslink lab notes. The spreadsheet, current values and reporting interval are not supplied.\n\nBack to the question ↑\n\nThe longest run was 72 hours. Two years is a projection from bench current readings and an assumed reporting cycle.\n\nForty engineering samples were assembled. Six were tested on the bench. None went to customers.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nAda wrote the firmware, scheduled the power states and built the bring-up fixture. A colleague designed the PCB and analogue front end.\n\nAda and Mosslink are fictional. Illustrative bench model: shapes and connections are explanatory, not a photograph, circuit diagram, wiring plan or measured signal.\n\nIllustrative bench model\n/ shapes and connections are explanatory",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the evidence",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "amAda MensahEmbedded firmware",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Explore the work ↗",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Evidence ↗",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The question1",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The schedule2",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The bench3",
+            "href": "#middle",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The evidence4",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The scope5",
+            "href": "#close",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "↓ Follow the work",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "01Command",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "02Board",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "03Fixture",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "04Observe",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Read the source and limits ↘",
+            "href": "#scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Back to the question ↑",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "image": {
+        "path": "01-desktop/opening.png",
+        "sha256": "3285967f749680b986a6cb51e39c535d1cc509b7ef8a5b82951463b64f5c602b",
+        "bytes": 249962
+      }
+    },
+    {
+      "role": "middle",
+      "id": "middle.relationship",
+      "observation": {
+        "url": "http://127.0.0.1:44047/",
+        "scroll": 3195,
+        "scene": "on",
+        "look": "bench",
+        "palette": [
+          [
+            "--story-ground",
+            "#e9e6de"
+          ],
+          [
+            "--story-ink",
+            "#202c2a"
+          ],
+          [
+            "--story-accent",
+            "#a84c2d"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the evidence\nam\nAda Mensah\nEmbedded firmware\nExplore the work\n↗\nEvidence\n↗\nMOSSLINK / A FICTIONAL PORTFOLIO STUDY\n1\n2\n3\n4\n5\n\n01 / THE QUESTION\n\nBetween code\nand the bench.\n\nHow do you connect a firmware decision to something you can actually observe?\n\nI wrote the firmware, scheduled the power states and built the bring-up fixture for Mosslink, an environmental sensor.\n\nFirmware is code that controls a physical device.\n↓\nFollow the work\n\n02 / THE SCHEDULE\n\nLow power is\na schedule.\n\nI scheduled the firmware's power states. This teaching loop separates a device's work into three states.\n\n01\nSleep\nWait between work.\n02\nMeasure\nTake a reading.\n03\nTransmit\nSend a report.\n\n↶ Then back to Sleep.\n\nExplanatory teaching loop, not Mosslink's actual firmware. No timings or current values are shown.\n\nMy working documents include state tables, timing diagrams and bench checklists: ways to describe the work to check.\n\n03 / THE BENCH\n\nFrom a command\nto a check.\n\nBring-up means checking a new board's basic operation. My fixture makes its response available to bench instruments.\n\n01\nCommand\n02\nBoard\n03\nFixture\n04\nObserve\n\nAda wrote the firmware and scheduled its power states. State tables and timing diagrams are part of her working documents; this is not a reproduction of that firmware.\n\nI wrote the firmware and built the fixture. A colleague designed the PCB and analogue front end.\n\nCommand → board → fixture → observation.\nAn explanatory relationship, not electrical wiring.\n\n04 / THE EVIDENCE\n\nTwo numbers.\nDifferent evidence.\nINPUTS TO AN ESTIMATE\n\nMEASURED\nSleep and transmit current on the bench.\n\n+\n\nASSUMED\nThe reporting interval.\n\n→\n2 years\nProjected battery life\n\nA SEPARATE OBSERVATION\n\nA continuous run on the bench.\n\n→\n72 hours\nThe longest observed run\n\nAuthored explanation of the supplied fictional notes, not the original spreadsheet or a measured trace. The run does not establish two years of operation.\n\nAn estimate is not two years of observed operation.\n\n05 / THE SCOPE\n\nA connection.\nNot a leap.\n\nI connect firmware decisions to bench observations through power-state scheduling and the bring-up fixture, while keeping the evidence limits visible.\n\nEngineering samples assembled\n40\nTested on the bench\n6\nSent to customers\n0\nSix highlighted cells mark the bench-tested subset of forty. This illustrative count is not a pass/fail chart.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nRead the source and limits\n↘\n\nFROM THE SUPPLIED NOTES\n\nThe source behind\nthe story.\n“Battery spreadsheet uses measured sleep and transmit current with an assumed reporting interval.”\n\nFrom the fictional Mosslink lab notes. The spreadsheet, current values and reporting interval are not supplied.\n\nBack to the question ↑\n\nThe longest run was 72 hours. Two years is a projection from bench current readings and an assumed reporting cycle.\n\nForty engineering samples were assembled. Six were tested on the bench. None went to customers.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nAda wrote the firmware, scheduled the power states and built the bring-up fixture. A colleague designed the PCB and analogue front end.\n\nAda and Mosslink are fictional. Illustrative bench model: shapes and connections are explanatory, not a photograph, circuit diagram, wiring plan or measured signal.\n\nIllustrative bench model\n/ shapes and connections are explanatory",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the evidence",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "amAda MensahEmbedded firmware",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Explore the work ↗",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Evidence ↗",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The question1",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The schedule2",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The bench3",
+            "href": "#middle",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The evidence4",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The scope5",
+            "href": "#close",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "↓ Follow the work",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "01Command",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "02Board",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "03Fixture",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "04Observe",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Read the source and limits ↘",
+            "href": "#scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Back to the question ↑",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "image": {
+        "path": "01-desktop/middle.png",
+        "sha256": "2156616343a319cb33bdefb6b1d295bd9d8bc2ca9c4dba431103918812263752",
+        "bytes": 205999
+      }
+    },
+    {
+      "role": "ending",
+      "id": "close.evidence",
+      "observation": {
+        "url": "http://127.0.0.1:44047/",
+        "scroll": 6368,
+        "scene": "on",
+        "look": "bench",
+        "palette": [
+          [
+            "--story-ground",
+            "#e9e6de"
+          ],
+          [
+            "--story-ink",
+            "#202c2a"
+          ],
+          [
+            "--story-accent",
+            "#a84c2d"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the evidence\nam\nAda Mensah\nEmbedded firmware\nExplore the work\n↗\nEvidence\n↗\nMOSSLINK / A FICTIONAL PORTFOLIO STUDY\n1\n2\n3\n4\n5\n\n01 / THE QUESTION\n\nBetween code\nand the bench.\n\nHow do you connect a firmware decision to something you can actually observe?\n\nI wrote the firmware, scheduled the power states and built the bring-up fixture for Mosslink, an environmental sensor.\n\nFirmware is code that controls a physical device.\n↓\nFollow the work\n\n02 / THE SCHEDULE\n\nLow power is\na schedule.\n\nI scheduled the firmware's power states. This teaching loop separates a device's work into three states.\n\n01\nSleep\nWait between work.\n02\nMeasure\nTake a reading.\n03\nTransmit\nSend a report.\n\n↶ Then back to Sleep.\n\nExplanatory teaching loop, not Mosslink's actual firmware. No timings or current values are shown.\n\nMy working documents include state tables, timing diagrams and bench checklists: ways to describe the work to check.\n\n03 / THE BENCH\n\nFrom a command\nto a check.\n\nBring-up means checking a new board's basic operation. My fixture makes its response available to bench instruments.\n\n01\nCommand\n02\nBoard\n03\nFixture\n04\nObserve\n\nAda wrote the firmware and scheduled its power states. State tables and timing diagrams are part of her working documents; this is not a reproduction of that firmware.\n\nI wrote the firmware and built the fixture. A colleague designed the PCB and analogue front end.\n\nCommand → board → fixture → observation.\nAn explanatory relationship, not electrical wiring.\n\n04 / THE EVIDENCE\n\nTwo numbers.\nDifferent evidence.\nINPUTS TO AN ESTIMATE\n\nMEASURED\nSleep and transmit current on the bench.\n\n+\n\nASSUMED\nThe reporting interval.\n\n→\n2 years\nProjected battery life\n\nA SEPARATE OBSERVATION\n\nA continuous run on the bench.\n\n→\n72 hours\nThe longest observed run\n\nAuthored explanation of the supplied fictional notes, not the original spreadsheet or a measured trace. The run does not establish two years of operation.\n\nAn estimate is not two years of observed operation.\n\n05 / THE SCOPE\n\nA connection.\nNot a leap.\n\nI connect firmware decisions to bench observations through power-state scheduling and the bring-up fixture, while keeping the evidence limits visible.\n\nEngineering samples assembled\n40\nTested on the bench\n6\nSent to customers\n0\nSix highlighted cells mark the bench-tested subset of forty. This illustrative count is not a pass/fail chart.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nRead the source and limits\n↘\n\nFROM THE SUPPLIED NOTES\n\nThe source behind\nthe story.\n“Battery spreadsheet uses measured sleep and transmit current with an assumed reporting interval.”\n\nFrom the fictional Mosslink lab notes. The spreadsheet, current values and reporting interval are not supplied.\n\nBack to the question ↑\n\nThe longest run was 72 hours. Two years is a projection from bench current readings and an assumed reporting cycle.\n\nForty engineering samples were assembled. Six were tested on the bench. None went to customers.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nAda wrote the firmware, scheduled the power states and built the bring-up fixture. A colleague designed the PCB and analogue front end.\n\nAda and Mosslink are fictional. Illustrative bench model: shapes and connections are explanatory, not a photograph, circuit diagram, wiring plan or measured signal.\n\nIllustrative bench model\n/ shapes and connections are explanatory",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the evidence",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "amAda MensahEmbedded firmware",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Explore the work ↗",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Evidence ↗",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The question1",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The schedule2",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The bench3",
+            "href": "#middle",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The evidence4",
+            "href": "#proof",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The scope5",
+            "href": "#close",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "↓ Follow the work",
+            "href": "#power",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "01Command",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "02Board",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "03Fixture",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "04Observe",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Read the source and limits ↘",
+            "href": "#scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Back to the question ↑",
+            "href": "#opening",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "image": {
+        "path": "01-desktop/ending.png",
+        "sha256": "a72dc3924590dd34525f89224392187688e9ed6d9cc98310ff96b90666f4843d",
+        "bytes": 248231
+      }
+    }
+  ],
+  "controls": [],
+  "requests": [],
+  "responses": [],
+  "errors": [],
+  "images": [
+    {
+      "path": "01-desktop/entry.png",
+      "sha256": "2390be70f4865275ceb8f364e649c5846285b01758a7e0c94c94547d9bb26979",
+      "bytes": 229160
+    },
+    {
+      "path": "01-desktop/opening.png",
+      "sha256": "3285967f749680b986a6cb51e39c535d1cc509b7ef8a5b82951463b64f5c602b",
+      "bytes": 249962
+    },
+    {
+      "path": "01-desktop/middle.png",
+      "sha256": "2156616343a319cb33bdefb6b1d295bd9d8bc2ca9c4dba431103918812263752",
+      "bytes": 205999
+    },
+    {
+      "path": "01-desktop/ending.png",
+      "sha256": "a72dc3924590dd34525f89224392187688e9ed6d9cc98310ff96b90666f4843d",
+      "bytes": 248231
+    }
+  ],
+  "complete": true,
+  "entry": {
+    "url": "http://127.0.0.1:44047/",
+    "scroll": 0,
+    "scene": "on",
+    "look": "bench",
+    "palette": [
+      [
+        "--story-ground",
+        "#e9e6de"
+      ],
+      [
+        "--story-ink",
+        "#202c2a"
+      ],
+      [
+        "--story-accent",
+        "#a84c2d"
+      ]
+    ],
+    "overflowX": false,
+    "text": "Skip to the evidence\nam\nAda Mensah\nEmbedded firmware\nExplore the work\n↗\nEvidence\n↗\nMOSSLINK / A FICTIONAL PORTFOLIO STUDY\n1\n2\n3\n4\n5\n\n01 / THE QUESTION\n\nBetween code\nand the bench.\n\nHow do you connect a firmware decision to something you can actually observe?\n\nI wrote the firmware, scheduled the power states and built the bring-up fixture for Mosslink, an environmental sensor.\n\nFirmware is code that controls a physical device.\n↓\nFollow the work\n\n02 / THE SCHEDULE\n\nLow power is\na schedule.\n\nI scheduled the firmware's power states. This teaching loop separates a device's work into three states.\n\n01\nSleep\nWait between work.\n02\nMeasure\nTake a reading.\n03\nTransmit\nSend a report.\n\n↶ Then back to Sleep.\n\nExplanatory teaching loop, not Mosslink's actual firmware. No timings or current values are shown.\n\nMy working documents include state tables, timing diagrams and bench checklists: ways to describe the work to check.\n\n03 / THE BENCH\n\nFrom a command\nto a check.\n\nBring-up means checking a new board's basic operation. My fixture makes its response available to bench instruments.\n\n01\nCommand\n02\nBoard\n03\nFixture\n04\nObserve\n\nAda wrote the firmware and scheduled its power states. State tables and timing diagrams are part of her working documents; this is not a reproduction of that firmware.\n\nI wrote the firmware and built the fixture. A colleague designed the PCB and analogue front end.\n\nCommand → board → fixture → observation.\nAn explanatory relationship, not electrical wiring.\n\n04 / THE EVIDENCE\n\nTwo numbers.\nDifferent evidence.\nINPUTS TO AN ESTIMATE\n\nMEASURED\nSleep and transmit current on the bench.\n\n+\n\nASSUMED\nThe reporting interval.\n\n→\n2 years\nProjected battery life\n\nA SEPARATE OBSERVATION\n\nA continuous run on the bench.\n\n→\n72 hours\nThe longest observed run\n\nAuthored explanation of the supplied fictional notes, not the original spreadsheet or a measured trace. The run does not establish two years of operation.\n\nAn estimate is not two years of observed operation.\n\n05 / THE SCOPE\n\nA connection.\nNot a leap.\n\nI connect firmware decisions to bench observations through power-state scheduling and the bring-up fixture, while keeping the evidence limits visible.\n\nEngineering samples assembled\n40\nTested on the bench\n6\nSent to customers\n0\nSix highlighted cells mark the bench-tested subset of forty. This illustrative count is not a pass/fail chart.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nRead the source and limits\n↘\n\nFROM THE SUPPLIED NOTES\n\nThe source behind\nthe story.\n“Battery spreadsheet uses measured sleep and transmit current with an assumed reporting interval.”\n\nFrom the fictional Mosslink lab notes. The spreadsheet, current values and reporting interval are not supplied.\n\nBack to the question ↑\n\nThe longest run was 72 hours. Two years is a projection from bench current readings and an assumed reporting cycle.\n\nForty engineering samples were assembled. Six were tested on the bench. None went to customers.\n\nOne preliminary emissions check passed. Full qualification is unfinished.\n\nAda wrote the firmware, scheduled the power states and built the bring-up fixture. A colleague designed the PCB and analogue front end.\n\nAda and Mosslink are fictional. Illustrative bench model: shapes and connections are explanatory, not a photograph, circuit diagram, wiring plan or measured signal.\n\nIllustrative bench model\n/ shapes and connections are explanatory",
+    "canvases": [
+      {
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "controls": [
+      {
+        "name": "Skip to the evidence",
+        "href": "#proof",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "amAda MensahEmbedded firmware",
+        "href": "#opening",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Explore the work ↗",
+        "href": "#power",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Evidence ↗",
+        "href": "#proof",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "The question1",
+        "href": "#opening",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "The schedule2",
+        "href": "#power",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "The bench3",
+        "href": "#middle",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "The evidence4",
+        "href": "#proof",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "The scope5",
+        "href": "#close",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "↓ Follow the work",
+        "href": "#power",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "01Command",
+        "href": null,
+        "pressed": "true",
+        "selected": null
+      },
+      {
+        "name": "02Board",
+        "href": null,
+        "pressed": "false",
+        "selected": null
+      },
+      {
+        "name": "03Fixture",
+        "href": null,
+        "pressed": "false",
+        "selected": null
+      },
+      {
+        "name": "04Observe",
+        "href": null,
+        "pressed": "false",
+        "selected": null
+      },
+      {
+        "name": "Read the source and limits ↘",
+        "href": "#scope",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Back to the question ↑",
+        "href": "#opening",
+        "pressed": null,
+        "selected": null
+      }
+    ]
+  },
+  "entryImage": {
+    "path": "01-desktop/entry.png",
+    "sha256": "2390be70f4865275ceb8f364e649c5846285b01758a7e0c94c94547d9bb26979",
+    "bytes": 229160
+  },
+  "beatInventory": [
+    {
+      "id": "opening.assembly",
+      "text": "01 / THE QUESTIONBetween codeand the bench.How do you connect a firmware decision to something you can actually observe?I wrote the firmware, scheduled the power states and built the bring-up fixture for Mosslink, an environmental sensor.Firmware is code that controls a physical device.↓ Follow the work01 / BENCH STUDYCOMMANDFIRMWARE DECISION02 / BENCH STUDYBOARDCOLLEAGUE'S CIRCUITRY03 / ACCESSFIXTUREADA'S BRING-UP FIXTURE04 / BENCH STUDYOBSERVEBENCH OBSERVATIONILLUSTRATIVE MODEL / NOT A WIRING PLAN"
+    },
+    {
+      "id": "power.cycle",
+      "text": "02 / THE SCHEDULELow power isa schedule.I scheduled the firmware's power states. This teaching loop separates a device's work into three states.01SleepWait between work.02MeasureTake a reading.03TransmitSend a report.↶ Then back to Sleep.Explanatory teaching loop, not Mosslink's actual firmware. No timings or current values are shown.My working documents include state tables, timing diagrams and bench checklists: ways to describe the work to check.AN EXPLANATORY TEACHING LOOP01SLEEP02MEASURE03TRANSMITRETURN TO SLEEPNot Mosslink's actual firmware.No timings or current values shown."
+    },
+    {
+      "id": "middle.relationship",
+      "text": "03 / THE BENCHFrom a commandto a check.Bring-up means checking a new board's basic operation. My fixture makes its response available to bench instruments.01Command02Board03Fixture04ObserveAda wrote the firmware and scheduled its power states. State tables and timing diagrams are part of her working documents; this is not a reproduction of that firmware.I wrote the firmware and built the fixture. A colleague designed the PCB and analogue front end.Command → board → fixture → observation.An explanatory relationship, not electrical wiring.01 / BENCH STUDYCOMMANDFIRMWARE DECISION02 / BENCH STUDYBOARDCOLLEAGUE'S CIRCUITRY03 / ACCESSFIXTUREADA'S BRING-UP FIXTURE04 / BENCH STUDYOBSERVEBENCH OBSERVATIONILLUSTRATIVE MODEL / NOT A WIRING PLAN"
+    },
+    {
+      "id": "proof.boundaries",
+      "text": "04 / THE EVIDENCETwo numbers.Different evidence.Inputs to an estimateMeasuredSleep and transmit current on the bench.+AssumedThe reporting interval.→2 yearsProjected battery lifeA separate observationA continuous run on the bench.→72 hoursThe longest observed runAuthored explanation of the supplied fictional notes, not the original spreadsheet or a measured trace. The run does not establish two years of operation.An estimate is not two years of observed operation.INPUTS TO AN ESTIMATEMeasured sleep / transmitcurrent on the bench+ assumed reporting interval2 YEARSProjectedbattery lifeA SEPARATE OBSERVATIONContinuous bench runLongest recorded duration72 HOURSObservedExplanatory diagram from the fictional notes.Not the original spreadsheet or a measured trace."
+    },
+    {
+      "id": "close.evidence",
+      "text": "05 / THE SCOPEA connection.Not a leap.I connect firmware decisions to bench observations through power-state scheduling and the bring-up fixture, while keeping the evidence limits visible.Engineering samples assembled40Tested on the bench6Sent to customers0Six highlighted cells mark the bench-tested subset of forty. This illustrative count is not a pass/fail chart.One preliminary emissions check passed. Full qualification is unfinished.Read the source and limits ↘01 / BENCH STUDYCOMMANDFIRMWARE DECISION02 / BENCH STUDYBOARDCOLLEAGUE'S CIRCUITRY03 / ACCESSFIXTUREADA'S BRING-UP FIXTURE04 / BENCH STUDYOBSERVE72h run / 2yr projectionILLUSTRATIVE MODEL / NOT A WIRING PLAN"
+    }
+  ],
+  "controlStatus": "unobserved: no public switch recorded; routes and handover still require review",
+  "problems": []
+}

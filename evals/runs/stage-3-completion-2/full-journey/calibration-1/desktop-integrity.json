@@ -1,0 +1,234 @@
+{
+  "verified": true,
+  "at": "2026-10-12T04:52:11.956Z",
+  "modelCalls": 0,
+  "writes": false,
+  "outcomePreserved": {
+    "code": 1,
+    "complete": true,
+    "passed": false,
+    "sourceUnchanged": true,
+    "buildUnchanged": false,
+    "observationProblems": [
+      "final beat count 5, normal scope 12 to 22"
+    ],
+    "desktopProblems": [
+      "control-4b4377bd3a0a1283/keyboard: declared control targets did not respond",
+      "control-4b4377bd3a0a1283/keyboard: no observable control response (requires review, not a functional pass)",
+      "control-4b4377bd3a0a1283/keyboard: missing actual declared skip target response",
+      "control-5081d714285764f9/pointer: declared control targets did not respond",
+      "control-5081d714285764f9/pointer: no observable control response (requires review, not a functional pass)",
+      "control-5081d714285764f9/keyboard: declared control targets did not respond",
+      "control-5081d714285764f9/keyboard: no observable control response (requires review, not a functional pass)",
+      "control-56e7c6a74afccc18/pointer: declared control targets did not respond",
+      "control-56e7c6a74afccc18/pointer: no observable control response (requires review, not a functional pass)",
+      "control-56e7c6a74afccc18/keyboard: declared control targets did not respond",
+      "control-56e7c6a74afccc18/keyboard: no observable control response (requires review, not a functional pass)",
+      "control-7c30f7cd27b3b32b/pointer: declared control targets did not respond",
+      "control-7c30f7cd27b3b32b/pointer: no observable control response (requires review, not a functional pass)",
+      "control-7c30f7cd27b3b32b/keyboard: declared control targets did not respond",
+      "control-7c30f7cd27b3b32b/keyboard: no observable control response (requires review, not a functional pass)",
+      "control-584cd2843abe788e/pointer: declared control targets did not respond",
+      "control-584cd2843abe788e/pointer: no observable control response (requires review, not a functional pass)",
+      "control-584cd2843abe788e/keyboard: declared control targets did not respond",
+      "control-584cd2843abe788e/keyboard: no observable control response (requires review, not a functional pass)",
+      "control-d3d3b317ee1ad7b9/pointer: no observable control response (requires review, not a functional pass)",
+      "control-d3d3b317ee1ad7b9/keyboard: no observable control response (requires review, not a functional pass)",
+      "control-e96fd7cd390c706b/keyboard: declared control targets did not respond",
+      "control-e96fd7cd390c706b/keyboard: no observable control response (requires review, not a functional pass)"
+    ],
+    "error": "\nBuild identity changed: AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n+   digest: '35f65c100277899a70aa4b0be1a0921914bbc21c6f9227f93031e3b2149dc671',\n-   digest: '5355c4e11c31b6b4778fcfa6aba9aa6e52f52a2b6d131541d355990863e597b6',\n    exclusions: [\n      'cache',\n      'trace',\n      'trace-build',\n      'diagnostics',\n...\n      {\n+       bytes: 64977,\n+       path: 'server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.html',\n+       sha256: '4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f'\n+     },\n+     {\n+       bytes: 481,\n+       path: 'server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.meta',\n+       sha256: 'd9b8085f7b00e9c6cd6ac21c62328db5581720ef1201229f81790a61b45a76da'\n+     },\n+     {\n+       bytes: 34143,\n+       path: 'server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.rsc',\n+       sha256: 'd15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9'\n+     },\n+     {\n+       bytes: 33628,\n+       path: 'server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/__PAGE__.segment.rsc',\n+       sha256: 'ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a'\n+     },\n+     {\n+       bytes: 34143,\n+       path: 'server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_full.segment.rsc',\n+       sha256: 'd15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9'\n+     },\n+     {\n+       bytes: 249,\n+       path: 'server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_tree.segment.rsc',\n+       sha256: '4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f'\n+     },\n+     {\n        bytes: 138,\n        path: 'server/server-reference-manifest.js',\n        sha256: '5545be86fee4837b95182641968381edef13768eec3e962e2983eb879952c7a9'\n      },\n      {\n\n    at file:///home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey-measurement/final-worker.mjs:422:109"
+  },
+  "lifecycle": {
+    "started": "2026-10-12T04:39:07.443Z",
+    "finished": "2026-10-12T04:46:29.869Z",
+    "durationMs": 442426,
+    "outer": {
+      "code": 1,
+      "signal": null,
+      "finished": "2026-10-12T04:46:29.911Z",
+      "durationMs": 442555,
+      "stdoutSha256": "b3c3fe2bdb7ab2fc3fee749d5d2c961af2200a5f0780a2d0b33e35f4c8035ffe",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pids": {
+      "230580": "ENOENT",
+      "230591": "ENOENT"
+    }
+  },
+  "source": {
+    "files": 86,
+    "digest": "1c499ad1346aa437d5701993b7b71f1b60cc35670e9afe0b7c76d48a1c18a060"
+  },
+  "artifacts": 109,
+  "coverage": {
+    "originals": 102,
+    "midEnd": 10,
+    "rests": 5,
+    "transitions": 8,
+    "travelFrames": 24,
+    "controls": 16,
+    "trials": 32,
+    "notApplicable": 1,
+    "controlOriginals": 63,
+    "samples": 21,
+    "wording": 4,
+    "requests": 0,
+    "warnings": 0,
+    "errors": 0
+  },
+  "build": {
+    "beforeFiles": 167,
+    "afterFiles": 173,
+    "beforeDigest": "5355c4e11c31b6b4778fcfa6aba9aa6e52f52a2b6d131541d355990863e597b6",
+    "afterDigest": "35f65c100277899a70aa4b0be1a0921914bbc21c6f9227f93031e3b2149dc671",
+    "added": [
+      {
+        "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.html",
+        "bytes": 64977,
+        "sha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f",
+        "seed": "server/app/index.html",
+        "seedSha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f",
+        "sameBytesAsSeed": true
+      },
+      {
+        "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.meta",
+        "bytes": 481,
+        "sha256": "d9b8085f7b00e9c6cd6ac21c62328db5581720ef1201229f81790a61b45a76da",
+        "seed": "server/app/index.meta",
+        "seedSha256": "364b5f5dfdd03a659407755e2d891feb1100a3e1242d1753888957d41158c31c",
+        "sameBytesAsSeed": false,
+        "metadataOnlyAddition": {
+          "routeCacheLastModified": 1791779672713
+        },
+        "seedOwner": {
+          "kind": "APP_PAGE",
+          "sourceRoute": "/page"
+        },
+        "seedKey": "/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index"
+      },
+      {
+        "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.rsc",
+        "bytes": 34143,
+        "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9",
+        "seed": "server/app/index.rsc",
+        "seedSha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9",
+        "sameBytesAsSeed": true
+      },
+      {
+        "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/__PAGE__.segment.rsc",
+        "bytes": 33628,
+        "sha256": "ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a",
+        "seed": "server/app/index.segments/__PAGE__.segment.rsc",
+        "seedSha256": "ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a",
+        "sameBytesAsSeed": true
+      },
+      {
+        "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_full.segment.rsc",
+        "bytes": 34143,
+        "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9",
+        "seed": "server/app/index.segments/_full.segment.rsc",
+        "seedSha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9",
+        "sameBytesAsSeed": true
+      },
+      {
+        "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_tree.segment.rsc",
+        "bytes": 249,
+        "sha256": "4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f",
+        "seed": "server/app/index.segments/_tree.segment.rsc",
+        "seedSha256": "4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f",
+        "sameBytesAsSeed": true
+      }
+    ],
+    "removed": [],
+    "changed": []
+  },
+  "next": {
+    "packageVersion": "16.3.8",
+    "lock": {
+      "version": "16.3.8",
+      "resolved": "https://registry.npmjs.org/next/-/next-16.3.8.tgz",
+      "integrity": "sha512-U7QEZaTini6wKrb8A8hqLLqYQyCetegKjCpJOyxk642vWoMoU1x5PyZCJFvgYgiptA8xc5j/9xYlZFO7w9Sjmw==",
+      "dependencies": {
+        "@next/env": "16.3.8",
+        "@swc/helpers": "0.5.23",
+        "baseline-browser-mapping": "^2.9.19",
+        "caniuse-lite": "^1.0.30001579",
+        "postcss": "8.5.23",
+        "styled-jsx": "5.1.6"
+      },
+      "bin": {
+        "next": "dist/bin/next"
+      },
+      "engines": {
+        "node": ">=20.9.0"
+      },
+      "optionalDependencies": {
+        "@next/swc-darwin-arm64": "16.3.8",
+        "@next/swc-darwin-x64": "16.3.8",
+        "@next/swc-linux-arm64-gnu": "16.3.8",
+        "@next/swc-linux-arm64-musl": "16.3.8",
+        "@next/swc-linux-x64-gnu": "16.3.8",
+        "@next/swc-linux-x64-musl": "16.3.8",
+        "@next/swc-win32-arm64-msvc": "16.3.8",
+        "@next/swc-win32-x64-msvc": "16.3.8",
+        "sharp": "^0.35.4"
+      },
+      "peerDependencies": {
+        "@opentelemetry/api": "^1.1.0",
+        "@playwright/test": "^1.51.1",
+        "babel-plugin-react-compiler": "*",
+        "react": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
+        "react-dom": "^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0",
+        "sass": "^1.3.0"
+      },
+      "peerDependenciesMeta": {
+        "@opentelemetry/api": {
+          "optional": true
+        },
+        "@playwright/test": {
+          "optional": true
+        },
+        "babel-plugin-react-compiler": {
+          "optional": true
+        },
+        "sass": {
+          "optional": true
+        }
+      }
+    },
+    "inspectedSource": [
+      {
+        "path": "package.json",
+        "bytes": 3173,
+        "sha256": "6da8fc4823b66b8f2906d150002618e3f3e0d2446ebf3823b2a2f7efe73a46a4",
+        "sameAsTrustedDependency": true
+      },
+      {
+        "path": "dist/server/lib/route-cache-key.js",
+        "bytes": 3329,
+        "sha256": "9887ca766b6bf1a85567c963a76e8cc7f682f66347079f1c00893d9c623d9dc8",
+        "sameAsTrustedDependency": true
+      },
+      {
+        "path": "dist/server/lib/incremental-cache/file-system-cache.js",
+        "bytes": 28449,
+        "sha256": "f720f694b11d5d5e70deeee4d69ac26fd06122d3a293c03739df04cc832abcca",
+        "sameAsTrustedDependency": true
+      },
+      {
+        "path": "dist/lib/constants.js",
+        "bytes": 15682,
+        "sha256": "5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639",
+        "sameAsTrustedDependency": true
+      }
+    ]
+  },
+  "hashes": {
+    "desktop/artifacts/manifest.json": "283b8153e10f6b4de2d09c5bbd12338b773ebf0226dfbe80f70aab90c6f7bb54",
+    "desktop/artifacts/desktop/report.json": "d7e7b67b8434ba159a576fcdcd78656f1c62281fc65d702a20035f4cb04ba242",
+    "desktop/review/result.json": "0100a2517166fb13dd46bc01792ce44fdf5fc97b8cc00f3c690fadba7ca9d896",
+    "desktop/review/lifecycle.jsonl": "818d35fa827fc022786aa10fd9ba7f607dab662180135cd00e92b1825d551a4f",
+    "desktop-command/result.json": "8ecaac846e856c5e7ca89ffcd95773b5ddcbed808c5122fa0c00ef2ed386b12a"
+  }
+}

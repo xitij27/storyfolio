@@ -4,6 +4,11 @@ Current work: [finish Stage 3](superpowers/plans/2026-10-12-stage-3-completion-e
 with [necessary paid work authorized](history/2026-10-12-stage-3-completion-authority.md)
 and [evidence here](../evals/runs/stage-3-completion-2/findings.md).
 
+Current preparation includes the
+[full-journey calibration](../evals/runs/stage-3-completion-2/full-journey/calibration-1/desktop-review.md)
+and [final planning-regression controls](../evals/runs/stage-3-completion-2/planning-regression/README.md).
+These are measurement preparation, not completed paid full-journey proof.
+
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The candidate skill now routes requested builds through look

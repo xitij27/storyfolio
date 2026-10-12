@@ -13,6 +13,23 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
+Current measurement checkpoint: the unchanged manual prototype's new
+full-journey calibration completed normally, with source/artifact integrity
+verified and all eight gate plus 102 desktop originals reviewed. It exposed
+two apparatus issues, scroll-response timing and Next response-cache
+identity. Original failed results and helper bytes are preserved; narrow
+study-local corrections are in preparation. See the
+[calibration review](../evals/runs/stage-3-completion-2/full-journey/calibration-1/desktop-review.md).
+The planning-regression adapter has 13 passing focused tests, and all 351
+repository tests still pass. No full-journey actor or final regression has
+launched at this checkpoint.
+
+The two measurement corrections are now implemented and independently
+source-reviewed. All 51 focused measurement checks and 351 repository tests
+pass. The [new-labelled second calibration](../evals/runs/stage-3-completion-2/full-journey/calibration-2/protocol.md)
+is prepared with 23 preserved helper files and the same unchanged prototype
+source/build. It still awaits its single desktop capture at this checkpoint.
+
 Latest implementation checkpoint: the saved entry source has now passed a
 fresh independent narrow capture. All 32 originals were reviewed; both
 looks render and switch on desktop and phone. Small 3D labels remain a

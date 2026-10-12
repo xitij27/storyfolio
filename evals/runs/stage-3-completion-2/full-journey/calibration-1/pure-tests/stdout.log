@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: three concepts retain per-concept IDs, actual routes and choosers
+ok 1 - three concepts retain per-concept IDs, actual routes and choosers
+  ---
+  duration_ms: 1.596691
+  type: 'test'
+  ...
+# Subtest: all looks remain valid observed inputs, wrong counts become failures rather than omissions
+ok 2 - all looks remain valid observed inputs, wrong counts become failures rather than omissions
+  ---
+  duration_ms: 0.567485
+  type: 'test'
+  ...
+# Subtest: missing three-point content remains observable and cannot pass
+ok 3 - missing three-point content remains observable and cannot pass
+  ---
+  duration_ms: 0.247079
+  type: 'test'
+  ...
+# Subtest: 12 to 22 arbitrary final beats, never five fixed IDs
+ok 4 - 12 to 22 arbitrary final beats, never five fixed IDs
+  ---
+  duration_ms: 0.564049
+  type: 'test'
+  ...
+# Subtest: missing approved story meaning is not hidden by complete actual inventory
+ok 5 - missing approved story meaning is not hidden by complete actual inventory
+  ---
+  duration_ms: 0.114964
+  type: 'test'
+  ...
+# Subtest: required wording must equal the selected whole versions, not snippets extracted from output
+ok 6 - required wording must equal the selected whole versions, not snippets extracted from output
+  ---
+  duration_ms: 0.207416
+  type: 'test'
+  ...
+# Subtest: whole-version viewport coverage keeps exact positional identity across samples
+ok 7 - whole-version viewport coverage keeps exact positional identity across samples
+  ---
+  duration_ms: 0.519426
+  type: 'test'
+  ...
+# Subtest: whole wording preserves word boundaries while normalizing whitespace
+ok 8 - whole wording preserves word boundaries while normalizing whitespace
+  ---
+  duration_ms: 0.127628
+  type: 'test'
+  ...
+# Subtest: source discovery, routes, controls and duplicate IDs fail closed
+ok 9 - source discovery, routes, controls and duplicate IDs fail closed
+  ---
+  duration_ms: 0.839442
+  type: 'test'
+  ...
+# Subtest: focus-only exception requires explicit narrow source-first authority
+ok 10 - focus-only exception requires explicit narrow source-first authority
+  ---
+  duration_ms: 0.666891
+  type: 'test'
+  ...
+# Subtest: no source, nonterminal actor, unresolved gate and starter are explicit non-passes
+ok 11 - no source, nonterminal actor, unresolved gate and starter are explicit non-passes
+  ---
+  duration_ms: 0.311109
+  type: 'test'
+  ...
+# Subtest: finite unit schedule and shutdown-inclusive caps are frozen
+ok 12 - finite unit schedule and shutdown-inclusive caps are frozen
+  ---
+  duration_ms: 3.841317
+  type: 'test'
+  ...
+# Subtest: actual HTML beat IDs cannot escape image paths or collide by lossy replacement
+ok 13 - actual HTML beat IDs cannot escape image paths or collide by lossy replacement
+  ---
+  duration_ms: 0.11255
+  type: 'test'
+  ...
+# Subtest: gate coverage binds every alternative, entry, three rests and both control methods
+ok 14 - gate coverage binds every alternative, entry, three rests and both control methods
+  ---
+  duration_ms: 0.826447
+  type: 'test'
+  ...
+# Subtest: gate omitted alternative, entry, control method or control original fails
+ok 15 - gate omitted alternative, entry, control method or control original fails
+  ---
+  duration_ms: 3.141776
+  type: 'test'
+  ...
+# Subtest: idempotent switch and raw request errors cannot be technical passes
+ok 16 - idempotent switch and raw request errors cannot be technical passes
+  ---
+  duration_ms: 0.235388
+  type: 'test'
+  ...
+# Subtest: all 12 final rests and both directions of all 11 transitions are required
+ok 17 - all 12 final rests and both directions of all 11 transitions are required
+  ---
+  duration_ms: 0.731992
+  type: 'test'
+  ...
+# Subtest: omitted reverse, forward, moving sample, control trial, census or original fails coverage
+ok 18 - omitted reverse, forward, moving sample, control trial, census or original fails coverage
+  ---
+  duration_ms: 4.018025
+  type: 'test'
+  ...
+# Subtest: reduced-motion requires a bound still pair at every actual beat
+ok 19 - reduced-motion requires a bound still pair at every actual beat
+  ---
+  duration_ms: 0.469654
+  type: 'test'
+  ...
+# Subtest: exact originals review rejects missing, duplicate, added, modified and non-original views
+ok 20 - exact originals review rejects missing, duplicate, added, modified and non-original views
+  ---
+  duration_ms: 0.910184
+  type: 'test'
+  ...
+# Subtest: source exactness is a whole-set assertion, not subset agreement
+ok 21 - source exactness is a whole-set assertion, not subset agreement
+  ---
+  duration_ms: 0.756949
+  type: 'test'
+  ...
+# Subtest: only exact root-reviewed identified Git metadata, never omitted app or credentials
+ok 22 - only exact root-reviewed identified Git metadata, never omitted app or credentials
+  ---
+  duration_ms: 0.611288
+  type: 'test'
+  ...
+# Subtest: new supervisor requires full clean terminal lifecycle, never legacy missing-result fallback
+ok 23 - new supervisor requires full clean terminal lifecycle, never legacy missing-result fallback
+  ---
+  duration_ms: 0.863447
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 90.575838

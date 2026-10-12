@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "started": "2026-10-12T04:51:02.482Z",
+  "cwd": "/home/kshitij/projects/storyfolio",
+  "executable": "/bin/sh",
+  "args": [
+    "-c",
+    "node --test evals/runs/stage-3-completion-2/planning-regression/contracts.test.mjs evals/runs/stage-3-completion-2/planning-regression/process.test.mjs && for planning_file in evals/runs/stage-3-completion-2/planning-regression/*.mjs; do node --check \"$planning_file\" || exit; done && node evals/builds/full-journey-1/verify-fixture.mjs && node evals/check-skill.mjs && node evals/check-people.mjs && npm test"
+  ],
+  "environment": {
+    "PATH": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+    "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+    "LANG": "C.UTF-8",
+    "TMPDIR": "/var/tmp/storyfolio-entry-runtime-20261012",
+    "NEXT_TELEMETRY_DISABLED": null
+  },
+  "wrapperSha256": "c3ab91eeb5833650ce9482accf96a5985c85471b9c714da6da820752f797a1b0",
+  "note": "One command, no retry. Paid commands, when used, retain their own stricter actor/judge deadlines. This wrapper is not a spending cap."
+}

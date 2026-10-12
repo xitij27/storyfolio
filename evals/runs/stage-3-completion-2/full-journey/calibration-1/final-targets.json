@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "sourceDigest": "1c499ad1346aa437d5701993b7b71f1b60cc35670e9afe0b7c76d48a1c18a060",
+  "actorResultSha256": "d68f11151669a760ddaf454dcc4316ca6820781b59cf3dc1c264d06ef3620f0f",
+  "discovery": {
+    "reviewer": "root, manual prototype source review",
+    "exhaustive": true,
+    "sources": [
+      {
+        "path": "app/page.tsx",
+        "sha256": "f08a38dd07db2d655d1f6b7abd0624d495185c322348799d2977989121bc0dad"
+      },
+      {
+        "path": "content/story.ts",
+        "sha256": "c71780070dbbf040e7b96e5580ba05141f87da7edab20749c115dd6ead12de5d"
+      },
+      {
+        "path": "content/looks.ts",
+        "sha256": "8b5fec42585f3557960fecfc13e91957ee8e2b99b171bc2612d542962cd83f38"
+      }
+    ]
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "Known manually authored five-beat prototype, fresh copy, no actor lifecycle claim"
+  },
+  "calibrationOnly": true,
+  "stage": 6,
+  "route": "/",
+  "beats": [
+    {
+      "id": "opening.assembly",
+      "headingLevel": 1,
+      "meaning": "opening.assembly"
+    },
+    {
+      "id": "power.cycle",
+      "headingLevel": 2,
+      "meaning": "power.cycle"
+    },
+    {
+      "id": "middle.relationship",
+      "headingLevel": 2,
+      "meaning": "middle.relationship"
+    },
+    {
+      "id": "proof.boundaries",
+      "headingLevel": 2,
+      "meaning": "proof.boundaries"
+    },
+    {
+      "id": "close.evidence",
+      "headingLevel": 2,
+      "meaning": "close.evidence"
+    }
+  ],
+  "approvedBeats": [
+    {
+      "meaning": "opening.assembly",
+      "actualId": "opening.assembly"
+    },
+    {
+      "meaning": "power.cycle",
+      "actualId": "power.cycle"
+    },
+    {
+      "meaning": "middle.relationship",
+      "actualId": "middle.relationship"
+    },
+    {
+      "meaning": "proof.boundaries",
+      "actualId": "proof.boundaries"
+    },
+    {
+      "meaning": "close.evidence",
+      "actualId": "close.evidence"
+    }
+  ],
+  "requiredText": [
+    "01 / THE QUESTION Between code and the bench. How do you connect a firmware decision to something you can actually observe? I wrote the firmware, scheduled the power states and built the bring-up fixture for Mosslink, an environmental sensor. Firmware is code that controls a physical device. ↓ Follow the work"
+  ],
+  "selectedWording": {
+    "record": {
+      "path": "evals/runs/stage-3-completion-2/full-journey/calibration-1/selection.json",
+      "sha256": "eabb2c2da264f0b8bf1042c7049d228f6120f87635986308325ab672ea94283f"
+    },
+    "versions": [
+      {
+        "meaning": "opening.assembly",
+        "version": "Actual manual prototype opening, not a simulated author choice",
+        "text": "01 / THE QUESTION Between code and the bench. How do you connect a firmware decision to something you can actually observe? I wrote the firmware, scheduled the power states and built the bring-up fixture for Mosslink, an environmental sensor. Firmware is code that controls a physical device. ↓ Follow the work"
+      }
+    ]
+  },
+  "links": [],
+  "assets": [],
+  "requiredFiles": [],
+  "auxiliaryPages": [],
+  "focusOnlyControls": [
+    {
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > a:nth-of-type(1)",
+      "name": "Skip to the evidence",
+      "href": "#proof",
+      "reason": "Existing first link in manual app/page.tsx, revealed on focus and jumps into main story evidence"
+    }
+  ],
+  "focusOnlyAttestation": {
+    "purpose": "document-start-to-main-story",
+    "reviewedByRoot": true,
+    "sourcePath": "app/page.tsx"
+  }
+}

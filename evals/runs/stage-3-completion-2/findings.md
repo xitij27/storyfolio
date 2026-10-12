@@ -139,3 +139,45 @@ tests, skill check, fictional-person check and all 351 repository tests
 passed. The retained command closed zero at 04:26:29.762 UTC after 14,031 ms
 in `full-journey/preparation/local-tests-1/`. These are local verification,
 not an actual full-journey environment proof or paid-agent result.
+
+## Full-journey measurement calibration
+
+The no-model calibration used an unchanged fresh copy of the accepted
+manual prototype, 86 source files, digest
+`1c499ad1346aa437d5701993b7b71f1b60cc35670e9afe0b7c76d48a1c18a060`.
+Its offline install and final type/lint/build passed. The gate completed
+with the expected one-look count failure, with all eight originals reviewed.
+The desktop capture closed normally at 04:46:29.911Z, code 1, not interrupted.
+All 109 artifacts and 102 originals verify, and root individually reviewed
+every original. Source stayed unchanged. The expected five-beat count
+failure remains, alongside 23 control-response problems and a build-identity
+failure. See the [desktop review](full-journey/calibration-1/desktop-review.md).
+
+The control checker observes too early during smooth scrolling and does
+not prepare the initially selected Command button's declared group peer.
+The build mismatch consists only of six independently verified Next
+APP_PAGE seed promotions. Original helper bytes and failed results are
+preserved before prospective, study-local corrections. These findings
+change measurement only, not the skill or accepted prototype.
+
+The final planning-regression adapter is now source-prepared, not frozen or
+launched. All 13 focused deterministic tests passed. The full-journey fixture
+check, skill and fictional-person checks, and all 351 repository tests also
+passed in `full-journey/preparation/local-tests-2/`, closed zero at
+04:51:16.644Z after 14,162 ms. No paid planning result is inferred.
+
+Root integrated the two study-local apparatus corrections after preserving
+the first calibration. All 51 measurement checks (26 original, 13 control,
+12 cache), syntax checks, fixture/skill/people checks and 351 repository tests
+passed in `full-journey/preparation/local-tests-3/`, closed zero at
+05:00:48.729Z after 14,459 ms. An earlier direct focused control command
+also passed its 13 tests (tool chunk `333793`); the combined recorded suite
+is the durable full verification. No skill or prototype bytes changed.
+
+The [second calibration protocol](full-journey/calibration-2/protocol.md)
+authorizes one new-labelled desktop capture only, reusing the exact earlier
+successful build and unchanged source. Preparation at 05:01:19.486Z saved
+all 23 corrected implementation/transitive files. Its initial comparison
+correctly reports unequal full inventories and equal immutable build, with
+all six cache files validated and retained. No rebuild, installation or
+paid actor is needed for this apparatus question.
