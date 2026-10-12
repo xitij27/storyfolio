@@ -264,3 +264,24 @@ reply and observe concept output. Whole-site eligibility is false, with
 no coaching, invented choice or waived factual gate. All 351 tests and
 skill/people checks passed in `local-tests-10`, closed zero at
 06:23:27.742 UTC after 13,861 ms. No skill edit or push occurred.
+
+## Baseline closed on missing runnable concepts
+
+Turn 2 closed normally at 06:27:52.833 UTC, actor 137,430 ms and outer
+139,269 ms. It faithfully records the fixed truth reply, offers three
+written concepts and recommends one, then waits honestly. Its handover
+explicitly says no application was built. The frozen concept instruction
+it read says concepts are shown in words. No authored app or sketch route
+exists among the 98 source files. The required runnable-concept gate fails;
+visual usability and later stops remain unobserved. No browser or turn 3
+is launched. Root's [baseline disposition](full-journey/preparation/baseline-2-disposition.md)
+closes discovery and permits only the previously bounded fresh matched
+journey after a narrow supported correction.
+
+Independent audits verify all 149 inputs and 403 artifacts across both
+turns. Cumulative actor time is 235,934 ms, reported tokens 219,206 and
+uncached input plus output 41,542. The actual frozen measurement gate is
+blocked-unobserved for absent authored implementation. Facts and honest
+choice-wait pass and do not justify added rules. All 351 tests and
+skill/people checks pass in `local-tests-11`, closed zero at
+06:30:32.187 UTC after 13,832 ms. No skill edit or publication yet.

@@ -13,7 +13,17 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: the first paid journey turn completed normally. Its
+Newest checkpoint: baseline-2 is closed after two normally completed turns.
+It preserved facts and offered three written concepts with a real choice
+handoff, but built no runnable concept previews. The
+[baseline disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/baseline-2-disposition.md)
+blocks turn 3 and browser measurement; no fictional selection is sent.
+All inputs, both turns' 403 artifacts and 98 source files verify. Root now
+makes only the demonstrated preflight/helper and runnable-concept
+corrections before the one planned fresh matched journey. All 351 tests
+pass in `local-tests-11`; no skill change has yet been applied.
+
+Earlier checkpoint: the first paid journey turn completed normally. Its
 factual handoff passes, but actor preflight and relevant optional-helper
 recommendations were omitted. The
 [root disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/baseline-2-stop-1-disposition.md)
