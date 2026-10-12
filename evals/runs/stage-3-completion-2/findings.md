@@ -119,3 +119,23 @@ Before that launch the fresh setup checks closed zero at 04:09:53.543 UTC:
 checks. The tested new recorder stays separate from the frozen actor
 inputs, with its exact code hash retained in the launch disposition and
 each command record. It changes coordinator observability, not the prompt.
+
+## Interrupted wording candidate
+
+The wording actor launched once and received external SIGTERM after about
+six and a half minutes, before its own deadline. Genuine incomplete
+process/result/snapshot records and all 379 artifact hashes are retained.
+Its 186-file source is unchanged, and 380 workspace-check files are archived
+with setup and actor provenance separated. The partial draft contains
+three opening and three closing versions, but no terminal choice handoff
+or usage exists. No second turn is permitted. The
+[disposition](wording/interruption-disposition.md) and
+[independent audit](wording/interruption-audit.md) preserve the details.
+The signal sender remains unknown; no source-only preparation or polling
+change is claimed to fix it. Stage 3 remains incomplete.
+
+After confirmed actor closure, the six neutral environment-proof pure
+tests, skill check, fictional-person check and all 351 repository tests
+passed. The retained command closed zero at 04:26:29.762 UTC after 14,031 ms
+in `full-journey/preparation/local-tests-1/`. These are local verification,
+not an actual full-journey environment proof or paid-agent result.

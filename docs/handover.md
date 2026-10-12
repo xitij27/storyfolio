@@ -47,6 +47,16 @@ fixed. See the [next launch](../evals/runs/stage-3-completion-2/wording/preparat
 The full-journey runner passes the now 351 repository tests; actual whole
 journey behavior and final acceptance remain unproved.
 
+The wording actor then launched once and was externally interrupted before
+its deadline. This time genuine incomplete result and snapshot records were
+retained. Its draft contains three opening and three closing versions, but
+the final choice handoff and usage are absent, so turn 2 cannot run. All
+186 source files match; 379 actor artifact hashes verify. The
+[wording disposition](../evals/runs/stage-3-completion-2/wording/interruption-disposition.md)
+preserves this as inconclusive, not a pass or an instruction defect. The
+new recorder captured SIGTERM but its sender remains unknown. Full-journey
+preparation continues separately; there is no hidden retry.
+
 Stage-level position: **Stage 3, the build, is active and incomplete.**
 Stage 1's planning method is implemented with closing review decisions open;
 Stage 2's engine is complete and approved. The candidate skill now routes

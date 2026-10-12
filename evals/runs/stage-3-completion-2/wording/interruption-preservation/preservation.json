@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "recorded": "2026-10-12T04:23:23.183Z",
+  "kind": "preserve-genuine-interrupted-result",
+  "inputDigest": "f769a7bc93d45c1a2e17394809d43e2cd36c21c0992a2ffe3af31bb31c9facb0",
+  "actorResultSha256": "d417a23e61beaecc5ca4b4d2ea67b07a0e18efd09c789bc49654ff0bd242584f",
+  "recorderResultSha256": "60b65061bda7f498510eed663889505228e5495ad77db8cb4f48a5a2ad590501",
+  "actorComplete": false,
+  "timedOut": false,
+  "interruptedBy": "SIGTERM",
+  "signalSender": "unknown",
+  "usage": null,
+  "sourceUnchanged": true,
+  "sourceFiles": 186,
+  "sourceDigest": "f5650b2628b8b99338dd11ae073dd091665d71f9c6907f4bb32d5204e63f506a",
+  "verifiedActorArtifacts": 379,
+  "checkGroups": {
+    "2026-10-12T04-14-57-955Z": {
+      "files": 252,
+      "pngs": 213,
+      "bytes": 23542557
+    },
+    "2026-10-12T04-17-31-162Z": {
+      "files": 112,
+      "pngs": 94,
+      "bytes": 12099815
+    },
+    "setup-capability": {
+      "files": 16,
+      "pngs": 9,
+      "bytes": 1573477
+    }
+  },
+  "workspaceChecksInventorySha256": "a590224198e7da8437e1033934f715c5088843c40c0ee57c71da86015293ca18",
+  "actorTemporaryHelper": {
+    "original": "/tmp/storyfolio-contact-sheets.cjs",
+    "sha256": "7eb95fbfaea8e86be2b3d9cc4333756a5abf5a15c7ee7c1bc6ab2e984155da82",
+    "bytes": 1638
+  },
+  "streamEvents": 60,
+  "terminalEvents": [],
+  "unmatchedCommands": [
+    {
+      "id": "item_25",
+      "command": "/bin/bash -lc 'PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache NEXT_TELEMETRY_DISABLED=1 npm run check -- --jobs=3 --wait=1000'"
+    },
+    {
+      "id": "item_29",
+      "command": "/bin/bash -lc \"node - <<'JS'\nconst fs=require('fs'); const m=JSON.parse(fs.readFileSync('checks/2026-10-12T04-14-57-955Z/manifest.json')); console.log(m.results.filter(r=>r.code||r.problems.length));\nJS\nPLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache node scripts/check-spine.mjs checks/2026-10-12T04-17-31-162Z/supplemental\""
+    }
+  ],
+  "modelCalls": 0,
+  "sourceChanges": 0,
+  "browserCalls": 0,
+  "nextTurnAllowed": false,
+  "limitations": "Setup-capability is coordinator evidence, the two timestamped groups are unfinished actor checks. Their images are archived, not independently reviewed. This copy does not repair closure, supply usage or create a final choice handoff. Scoped process checks are separate."
+}
