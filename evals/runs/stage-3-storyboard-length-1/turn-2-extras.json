@@ -1,0 +1,19 @@
+{
+  "reviewedByRoot": true,
+  "rationale": "The complete 185-file source equals the genuine saved snapshot. No source files are omitted. Only two verified empty sandbox metadata directories are unexpected.",
+  "extraFiles": [],
+  "unexpected": [
+    {
+      "path": ".aws",
+      "type": "directory",
+      "classification": "empty-directory",
+      "rationale": "Verified empty directory by turn-audit; no credentials or source omitted."
+    },
+    {
+      "path": ".codex",
+      "type": "directory",
+      "classification": "empty-directory",
+      "rationale": "Verified empty directory by turn-audit; no configuration or source omitted."
+    }
+  ]
+}

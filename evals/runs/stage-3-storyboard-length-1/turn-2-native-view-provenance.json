@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "source": "/home/kshitij/.codex/sessions/2026/10/12/rollout-2026-10-12T21-14-14-01a13189-6311-7042-a63f-394a33e47fc6.jsonl",
+  "sourceBytes": 1519363,
+  "sourceSha256": "0e5a5d91dbc4b5d709f3483054f14746c4065d5e0733bcd7a90259d4fbf8907c",
+  "sourceLines": 336,
+  "sessionId": "01a13189-6311-7042-a63f-394a33e47fc6",
+  "calls": [
+    {
+      "callLine": 289,
+      "callLineSha256": "47cd5f709ddd3bbeacc3d4329eb866aa081325e4a94c6e1dc11f79eabb410dcf",
+      "timestamp": "2026-10-12T19:29:19.502Z",
+      "callId": "call_TM3ElYRgB93lqB08MMxWWRh4",
+      "input": "for (const kind of [\"fixture\",\"enclosure\",\"probe\"]) image((await tools.view_image({path:`/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/${kind}-review.jpg`})).image_url);\n",
+      "outputLine": 294,
+      "outputLineSha256": "0153f6d0852524d990ff0673e8f6697431921b87c3f7556290a1f26d07a905c6",
+      "outputTimestamp": "2026-10-12T19:29:19.622Z",
+      "images": [
+        {
+          "kind": "fixture",
+          "path": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/fixture-review.jpg",
+          "detail": "high",
+          "mimeType": "image/jpeg",
+          "deliveredBytes": 93135,
+          "deliveredSha256": "c2661de288be1ae42c85fc2c95591cfd8b28e9ba5fabf46c2c0b0dba028084db",
+          "originalBytes": 93135,
+          "originalSha256": "c2661de288be1ae42c85fc2c95591cfd8b28e9ba5fabf46c2c0b0dba028084db",
+          "byteIdentical": true
+        },
+        {
+          "kind": "enclosure",
+          "path": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/enclosure-review.jpg",
+          "detail": "high",
+          "mimeType": "image/jpeg",
+          "deliveredBytes": 93704,
+          "deliveredSha256": "3024e09658e41e55e542b415f8b4e57cd89726f6bc812326ec469fca3413ff80",
+          "originalBytes": 93704,
+          "originalSha256": "3024e09658e41e55e542b415f8b4e57cd89726f6bc812326ec469fca3413ff80",
+          "byteIdentical": true
+        },
+        {
+          "kind": "probe",
+          "path": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/probe-review.jpg",
+          "detail": "high",
+          "mimeType": "image/jpeg",
+          "deliveredBytes": 88506,
+          "deliveredSha256": "64abbcff1ac0eee1cd34eb914b888cfceea5240829ad0aa25d0277f7eea1647f",
+          "originalBytes": 88506,
+          "originalSha256": "64abbcff1ac0eee1cd34eb914b888cfceea5240829ad0aa25d0277f7eea1647f",
+          "byteIdentical": true
+        }
+      ]
+    },
+    {
+      "callLine": 322,
+      "callLineSha256": "4ee7ffb06f66aac337145fb3c5c908e67f5d55b753d250a0645a7ee63506d03d",
+      "timestamp": "2026-10-12T19:30:42.326Z",
+      "callId": "call_3BK1aTJHw1GW0zhKM0zA13BD",
+      "input": "text(await tools.write_stdin({session_id:4926,chars:\"\",\"yield_time_ms\":1000,\"max_output_tokens\":1500}));\nfor(const kind of [\"fixture\",\"enclosure\",\"probe\"]) image((await tools.view_image({path:`/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/${kind}-phone-2.png`})).image_url);\ntext(await tools.exec_command({cmd:\"cat >> docs/story/handover.md <<'EOF'\\nFocused browser recheck after hiding dev indicator passed all six concept/viewport cases with no page errors or horizontal overflow and WebGL on. Updated ending phone captures inspected; indicator no longer obscures links. Temporary preview server stopped. User can start continuous local preview with cd site && npm run dev; instructions in site/LOCAL-PREVIEW.md.\\nEOF\",\"max_output_tokens\":500}));\n",
+      "outputLine": 328,
+      "outputLineSha256": "b11f0417d497c4eeeb9796c595c2ea1ab15cb3b61bcaac8742af89d878a94979",
+      "outputTimestamp": "2026-10-12T19:30:42.659Z",
+      "images": [
+        {
+          "kind": "fixture",
+          "path": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/fixture-phone-2.png",
+          "detail": "high",
+          "mimeType": "image/png",
+          "deliveredBytes": 84327,
+          "deliveredSha256": "29128979062518b73460cbe269dff0a1ca3b1636a377427a985f766dce9d83e0",
+          "originalBytes": 84327,
+          "originalSha256": "29128979062518b73460cbe269dff0a1ca3b1636a377427a985f766dce9d83e0",
+          "byteIdentical": true
+        },
+        {
+          "kind": "enclosure",
+          "path": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/enclosure-phone-2.png",
+          "detail": "high",
+          "mimeType": "image/png",
+          "deliveredBytes": 84413,
+          "deliveredSha256": "f0759bdbe29c2796b07c35a14d89355ebafc5b6fd3fabdd340abb7546a2cddcb",
+          "originalBytes": 84413,
+          "originalSha256": "f0759bdbe29c2796b07c35a14d89355ebafc5b6fd3fabdd340abb7546a2cddcb",
+          "byteIdentical": true
+        },
+        {
+          "kind": "probe",
+          "path": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/checks/concepts/probe-phone-2.png",
+          "detail": "high",
+          "mimeType": "image/png",
+          "deliveredBytes": 81591,
+          "deliveredSha256": "12a9b3fa77781641646c3f14d7549e4ccea5e134d9ea61d697644c33942c0d0d",
+          "originalBytes": 81591,
+          "originalSha256": "12a9b3fa77781641646c3f14d7549e4ccea5e134d9ea61d697644c33942c0d0d",
+          "byteIdentical": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Metadata and actual call text only; raw images, session analysis and unrelated sessions not copied",
+    "Three montage views before final dev-indicator change plus three updated phone-ending views afterward; not 18 final originals individually viewed",
+    "Image delivery corroborated, not comprehension or independent acceptance"
+  ]
+}

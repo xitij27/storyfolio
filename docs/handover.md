@@ -33,6 +33,18 @@ All 351 tests and skill/people checks pass in `local-tests-3`. After this
 checkpoint is committed, root may send the unchanged fixed turn-2 truth
 reply. No concept, storyboard improvement or Stage 3 completion is claimed.
 
+Candidate 3 turn 2 then completed normally at 19:31:03.249 UTC and genuinely
+waits for a concept choice. Its prospective snapshot captures all 185 files,
+including 87 nested app files. Facts, recommendation and wait are supported;
+independent browser usability remains unobserved. Root reviewed all 21
+retained actor images and recorded small-label/spatial limits. The
+[concept launch disposition](../evals/runs/stage-3-storyboard-length-1/concept-launch-disposition.md)
+permits one fresh nine-target measurement after concrete-binding preflight
+and commit, with one 15-minute summed execution cap, no model call or retry.
+All 24 focused tests and 351 repository tests pass in `local-tests-4`.
+No turn 3 has launched. The corrected storyboard-length behavior remains
+unobserved, and actual author desktop/phone review is still required.
+
 Latest completed checkpoint: the browser replacement passed and original
 candidate-2 turn 3 then completed normally at 18:15:06.499 UTC. Its
 storyboard fails the fixed scope: eight beats, nine screens calculated in

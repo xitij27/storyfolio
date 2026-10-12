@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-12T19:38:15.516Z",
+  "script": "import {loadBinding} from \"./evals/runs/stage-3-completion-2/full-journey-measurement/binding-lib.mjs\";const b=await loadBinding(\"evals/runs/stage-3-storyboard-length-1/concept-binding.json\");console.log(JSON.stringify({verified:true,stage:b.record.turn,inputDigest:b.frozen.digest,sourceDigest:b.restored.digest,files:b.restored.files.length,targets:b.targets.alternatives.length,bindingSha256:b.bindingSha256,units:b.units,modelCalls:0,browserCalls:0},null,2));",
+  "toolResult": {
+    "chunk_id": "c375e2",
+    "wall_time_seconds": 0.578929067,
+    "exit_code": 0,
+    "original_token_count": 100,
+    "output": "{\n  \"verified\": true,\n  \"stage\": 2,\n  \"inputDigest\": \"68c2bfd15305eb9b9fcb8114dbe64dd511d9a227627c8865833aad281f95ebeb\",\n  \"sourceDigest\": \"7104be428d5e26c867e8dbcc3f650a467931135346a54209ec8f3e137a45ceb9\",\n  \"files\": 185,\n  \"targets\": 9,\n  \"bindingSha256\": \"1b3dab4e75b706f6b0b8cf61f91dda0675df0a783876877909c71acf4b767827\",\n  \"units\": [\n    \"concepts\"\n  ],\n  \"modelCalls\": 0,\n  \"browserCalls\": 0\n}\n"
+  }
+}

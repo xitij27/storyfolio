@@ -110,3 +110,30 @@ frozen source copies and the raw actor recorder stdout. These are evidence
 bytes, not authored whitespace corrections. Root independently rechecked the
 native call/output line hashes and delivered image bytes against the exact
 session before creating `gate-after-1.json`.
+
+## Concept turn and prospective measurement
+
+Turn 2 completed normally, with all 185 source files captured prospectively,
+including its 87-file nested app. The [semantic review](turn-2-semantic-review.md)
+supports factual limits and a genuine choice handoff; the [access review](turn-2-access-review.md)
+retains failed setup attempts and the actor's limited image-check scope.
+Root preserved all 22 actor-check artifacts and viewed all 21 images. These
+are diagnostics, not the independent gate. The full new source audit passes.
+
+The [launch disposition](concept-launch-disposition.md) declares one fresh
+concept measurement, with actual nine-target coverage, nested-app/chooser
+adaptation and a single 900000-ms whole-execution budget. The independent
+[source review](concept-measurement-source-review.md) and `local-tests-4`
+pass: 24 focused checks, skill/people and all 351 repository tests. Concrete
+supplemental binding and commit precede browser execution. No turn 3,
+storyboard improvement, final-site pass or author approval is claimed yet.
+
+The concrete supplemental binding passed at 19:44:24.923 UTC, normal zero
+closure after 737 ms. It validates the 185-file source, actual nine targets,
+all original frozen helpers and thirteen supplemental helper identities.
+The source-only trailing-prefix correction and its focused test are included
+in that freeze. No browser or paid turn 3 started during preparation.
+
+This checkpoint preserves ten EOF blank-line findings in frozen source
+copies and the raw turn-2 recorder stdout. Authored preparation files pass
+whitespace checking; evidence bytes are not reformatted.
