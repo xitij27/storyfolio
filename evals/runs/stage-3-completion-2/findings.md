@@ -319,3 +319,25 @@ files and all 18 evidence bindings. The
 permits only the predeclared fresh matched conversation after commit.
 All 351 tests and skill/people checks pass in `local-tests-14`, closed zero
 at 06:39:25.702 UTC after 13,628 ms. This is setup, not improved behavior.
+
+## Candidate invocation rejected for model capacity
+
+The one planned candidate invocation received `Selected model is at
+capacity. Please try a different model.` It closed normally at
+06:40:55.692 UTC after 8,092 ms inner/9,717 ms outer, with zero agent
+messages or commands, `complete:false` and no reported usage. This is not
+a behavioral skill result, an interruption, a timeout or proof of zero
+cost. No model was substituted or automatically retried.
+
+The independent preservation audit verifies all 149 frozen inputs, 196
+artifacts and 94 unchanged initial/before/snapshot/live source files.
+Root's [disposition](full-journey/preparation/candidate-capacity-disposition.md)
+keeps the skill correction pending its matched proof. A separately bounded
+same-model attempt was requested, not assumed authorized; the exact
+question is recorded in project history. The user has not answered at
+this checkpoint. No further paid run or browser starts.
+
+All 351 tests plus skill/people checks pass in `local-tests-15`, closed
+zero at 06:43:54.956 UTC after 13,789 ms. Stage 3 remains incomplete and
+its remaining proof sequence is unchanged. Everything from this attempted
+comparison is retained locally; no push or publication is authorized.

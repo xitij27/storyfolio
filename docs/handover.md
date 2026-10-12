@@ -13,7 +13,19 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: the fresh matched candidate is ready for its first paid
+Newest checkpoint: the matched candidate invocation was rejected by the
+model service for capacity before any agent reply or command. It closed
+normally, not by timeout/interruption, with usage unavailable. All 149
+inputs, 196 artifacts and 94 unchanged source files verify. The
+[capacity disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-capacity-disposition.md)
+preserves this as an execution failure with no skill behavior result.
+All 351 tests still pass. The correction is committed but remains unproved;
+Stage 3 is incomplete. The current no-retry bound is exhausted, so root
+asked for [one separately bounded same-model attempt](history/2026-10-12-stage-3-capacity-retry-request.md).
+No answer is recorded at this checkpoint; no retry/model switch/push was
+made. A user answer must be preserved verbatim before any new launch.
+
+Earlier checkpoint: the fresh matched candidate is ready for its first paid
 turn. Exactly three skill files differ from baseline-2 among 149 inputs;
 all other input/capability/measurement bytes match. Its own neutral proof,
 original review and independent readiness audit pass, with 94 unchanged

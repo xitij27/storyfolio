@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "verifiedPreservation": true,
+  "started": "2026-10-12T06:44:06.948Z",
+  "finished": "2026-10-12T06:44:07.951Z",
+  "cohort": "codex-full-journey-candidate-1",
+  "inputDigest": "e6ca5f6bf8e24a9e176a03a1289c56245d27353342fc43896a7b0c4063ade71d",
+  "frozenInputs": 149,
+  "sourceFiles": 94,
+  "initialBeforeSnapshotLiveIdentical": true,
+  "artifactHashes": 196,
+  "actorComplete": false,
+  "sessionId": "01a12ed7-a76f-7403-8590-0576cdaf22c5",
+  "events": [
+    {
+      "type": "thread.started",
+      "thread_id": "01a12ed7-a76f-7403-8590-0576cdaf22c5"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "type": "error",
+      "message": "Selected model is at capacity. Please try a different model."
+    },
+    {
+      "type": "turn.failed",
+      "error": {
+        "message": "Selected model is at capacity. Please try a different model."
+      }
+    }
+  ],
+  "actorMessages": 0,
+  "actorCommands": 0,
+  "usage": null,
+  "cost": "unknown, not zero; no terminal usage was reported",
+  "closure": {
+    "actorCode": 1,
+    "actorDurationMs": 8092,
+    "timedOut": false,
+    "interruptedBy": null,
+    "outerCode": 1,
+    "outerDurationMs": 9717,
+    "outerFinished": "2026-10-12T06:40:55.692Z",
+    "outerStatus": "child-exited-unsuccessfully",
+    "childExited": true,
+    "childClosed": true
+  },
+  "hashes": {
+    "result": "7c9add733fe8b400aaeac23bd96a222566e9f9ec7e4d7a22042d1cbafd02dcf3",
+    "stream": "d3ba110573e52429b2d8418a954bf204c4ae1beca360d80324f9af21cbdf7b83",
+    "snapshot": "cdb9170b31f5aa9a8cbc96f2e010cfcbcc8b063c76e40bd9c532faebd194db77",
+    "outerResult": "075fc3235c62b584103556470489fc3cfa78049055bf01003175c340bbffd8ba",
+    "terminalTool": "358a789fee7754118ef01948efc623e0a33939ac6cfd5433a4b2055bb7c3cc69",
+    "self": "1bd4b3d95c5a4433cdeda5db386691963be47c66fd7de2f2b0de4d6a19a2102f"
+  },
+  "disposition": "Failed invocation preserved. No successful fact/concept handoff, behavioral result, continuation gate, retry or model substitution. No browser/model/runtime was launched by this audit; no process absence claim.",
+  "limits": "The raw static completionMeaning string does not override complete:false. Four saved events report capacity failure; underlying provider capacity or billing was not independently measured. Readiness was successful separately, but is not evidence the candidate behavior ran."
+}
