@@ -58,9 +58,12 @@ unanswered at that checkpoint. The author has now
 [approved that single build-entry test](history/2026-10-12-natural-entry-approval.md)
 with "Approve this single build-entry test". The
 [new baseline work](../evals/runs/stage-3-natural-entry-1/findings.md)
-is in preparation: one unchanged-skill agent turn and one relevant browser
+is prepared and locally verified: one unchanged-skill agent turn and one relevant browser
 verification, each at most 15 minutes, no judge, retry or continuation.
 No correction or matched rerun is authorized. No new paid run has started.
+Preparation commit `bf72be9` and the study retain 132 frozen inputs, the fresh
+workspace, successful offline installation and sandbox capability proof,
+nine reviewed starter originals and a passing independent readiness gate.
 
 The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` verbatim before this checkpoint's current-state updates.

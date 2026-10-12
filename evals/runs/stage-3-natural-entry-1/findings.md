@@ -76,3 +76,42 @@ five approved meaning bodies remain unchanged. Independent static review
 found no remaining fixture or measurement blocker. The new browser helper
 has deterministic and syntax coverage, not a separate browser calibration;
 any runtime limitation will remain evidence, not trigger a retry.
+
+## Frozen baseline setup
+
+Preparation was committed on main as `bf72be9`. Its freeze contains 132
+files with a clean declared source status. One fresh workspace was
+prepared at `02:14:20.548Z`, with no model calls and no pre-existing files:
+`/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh`.
+The cohort is `codex-bench-entry-baseline-1`, input digest
+`504064164d5410a3d8cba07e7c877989924a3a4b15b67d76af92ec28e920238a`.
+Its model is the established `gpt-6.1-sol`, medium reasoning, one fixed
+ordinary prompt and a 900000-ms turn deadline. No judge is authorized.
+
+The recorded offline installation completed successfully in 11.332 seconds,
+adding 392 packages from the committed lockfile and existing cache. It used
+the exact four frozen environment values, the new TMPDIR and an explicitly
+unset telemetry flag. Npm's existing eslint deprecation warning is retained;
+no dependency update was made. The pre-capability inventory has 176 retained
+source files, no unexpected entries, and only node_modules excluded.
+
+The command-only capability probe closed successfully at `02:16:35.009Z`,
+after 42.481 seconds: local HTTP works, external HTTPS receives the expected
+proxy 403, production build exits 0 and the unchanged starter light-wide
+browser check exits 0. All nine original 1440-by-900 images were individually
+viewed at original detail and inventoried, not treated as a portfolio result.
+The 176-file retained source is unchanged before and after the probe.
+The neutral factual setup file brings the actor-visible source count to 177.
+
+Finalization closed 0 at `02:17:56.492Z`, binding 26 setup evidence files.
+The separate read-only readiness gate closed 0 at `02:18:11.615Z`, including
+a fresh runner dry check with identical inputs, runtime and capabilities,
+all source/image bindings and no actor or judge artifacts. Its full output
+and terminal tool result are retained. Configuration isolation still is
+not a filesystem read jail; the probe's retained error stack discloses the
+implementation path. Actual actor access must be audited after the turn.
+An independent read-only audit at `02:21:03.663Z` rechecked all 132 frozen
+inputs, 26 setup evidence files, three helpers, nine archive/runtime image
+pairs and the 177-file current source, and passed. The image review itself
+is attributed to root, not inferred from those hash checks. All prelaunch
+gates are now satisfied; the next action is the single approved actor turn.
