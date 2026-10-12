@@ -84,6 +84,21 @@ is still incomplete; the missing gate is not silently passed.
 All 351 repository tests plus skill/people and auditor syntax checks pass
 in `local-tests-21` after the interruption. No new skill change was made.
 
+The author subsequently answered "Approve one browser-only replacement".
+The [exact approval](history/2026-10-12-stage-3-browser-replacement-approval.md)
+permits one separately labelled short-batch verification with a 15-minute
+total execution cap, no model calls and no further retry. Root is preparing
+the narrow batch/counting adapter; old helpers, source, criteria and failed
+capture remain immutable. Do not ask for this same approval again.
+The [replacement launch disposition](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-launch-disposition.md)
+now binds nine additive helpers and the unchanged twelve targets. All 16
+focused tests and all 351 repository tests pass on the final source in
+`local-tests-23`, with skill/people checks. Actual-data preflight passes.
+Setup and all twelve individually reviewed batches share 900000 ms of
+whole-invocation execution, including coordinator overhead. No browser or
+paid model has launched at this preparation checkpoint; any interrupted
+batch stops the replacement without retry.
+
 Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed
 normally, not by timeout/interruption, with usage unavailable. All 149
