@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-12T00:45:53.163Z",
+  "method": "Same-user /proc stat, comm and cwd metadata; /proc/net TCP listener metadata only",
+  "inspected": 87,
+  "unavailable": [
+    {
+      "pid": 372,
+      "code": "EACCES"
+    },
+    {
+      "pid": 374,
+      "code": "EACCES"
+    }
+  ],
+  "knownPids": [
+    {
+      "pid": 4191480,
+      "exists": false
+    },
+    {
+      "pid": 4191500,
+      "exists": false
+    }
+  ],
+  "workspaceCwdProcesses": [],
+  "ancestryMatches": [],
+  "listenerPort": 34395,
+  "listenerEntries": [],
+  "noObservedOwnedOrWorkspaceProcess": true,
+  "limit": "No observed surviving known PID, current ancestry, workspace-cwd process or listener is not proof that every detached/reparented descendant is absent. No historical descendant PID inventory or signal-sender record exists."
+}

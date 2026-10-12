@@ -1,0 +1,8 @@
+{
+  "command": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node --input-type=module -e 'import assert from \"node:assert/strict\"; import {readFile} from \"node:fs/promises\"; const base=\"evals/runs/stage-3-candidate-verification-1/\"; const m=JSON.parse(await readFile(base+\"acceptance/manifest.json\",\"utf8\")); const notes=await readFile(base+\"root-visual-notes.md\",\"utf8\"); const paths=[\"desktop/rest-bench.png\",\"desktop/03-evidence-mid.png\",\"mobile/rest-bench.png\",\"mobile/travel-forward-evidence-scope-0.5.jpg\",\"reduced-motion/rest-question.png\",\"reduced-motion/01-scheduling-mid.png\"]; for(const path of paths){assert.ok(notes.includes(path));assert.ok(notes.includes(m.artifacts[path]));} console.log(JSON.stringify({verified:true,selectedOriginals:paths.length,scope:\"All six preclosure root-view hashes match the settled manifest and final verified originals\",paths},null,2));'",
+  "chunk_id": "1cabad",
+  "wall_time_seconds": 0.000022091,
+  "exit_code": 0,
+  "original_token_count": 101,
+  "output": "{\n  \"verified\": true,\n  \"selectedOriginals\": 6,\n  \"scope\": \"All six preclosure root-view hashes match the settled manifest and final verified originals\",\n  \"paths\": [\n    \"desktop/rest-bench.png\",\n    \"desktop/03-evidence-mid.png\",\n    \"mobile/rest-bench.png\",\n    \"mobile/travel-forward-evidence-scope-0.5.jpg\",\n    \"reduced-motion/rest-question.png\",\n    \"reduced-motion/01-scheduling-mid.png\"\n  ]\n}\n"
+}

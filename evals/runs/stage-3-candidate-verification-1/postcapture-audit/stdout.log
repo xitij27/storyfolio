@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "scope": "Artifact, source, process and frozen technical integrity only; no original-review assertion",
+  "modelCalls": 0,
+  "writes": false,
+  "actor": {
+    "complete": false,
+    "timedOut": true,
+    "durationMs": 900055
+  },
+  "inputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "previousCapture": {
+    "manifestSha256": "b21f8baa6e9568c71e7d0cde2957c4e2405eff4018c09594de76f2fa23296572",
+    "artifacts": 134,
+    "complete": false,
+    "passed": false
+  },
+  "source": {
+    "files": 184,
+    "digest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "strictActorSnapshotIdentity": true,
+    "beforeAfterAndCurrentUnchanged": true
+  },
+  "capture": {
+    "complete": false,
+    "passed": false,
+    "started": "2026-10-12T00:33:44.522Z",
+    "finished": "2026-10-12T00:44:09.162Z",
+    "manifestSha256": "c5c4db1ad0a664a26db4e38fe83a8cd5aef67a597d0db5647c48cc59b09c897e",
+    "artifacts": 222,
+    "processExitCode": 1,
+    "timedOut": false,
+    "externalSignal": "SIGTERM",
+    "lifecycle": [
+      {
+        "at": "2026-10-12T00:33:44.479Z",
+        "elapsedMs": 3,
+        "type": "spawn-request",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+        "args": [
+          "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs",
+          "--workspace=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB",
+          "--expectations=/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/expectations.json",
+          "--out=/home/kshitij/projects/storyfolio/evals/runs/stage-3-candidate-verification-1/acceptance",
+          "--dependencies=/tmp/storyfolio-build-capability-20261011"
+        ],
+        "timeoutMs": 895000,
+        "graceMs": 5000,
+        "totalCapMs": 900000,
+        "deadline": "2026-10-12T00:48:39.476Z",
+        "hardEscalationAt": "2026-10-12T00:48:44.476Z"
+      },
+      {
+        "at": "2026-10-12T00:33:44.479Z",
+        "elapsedMs": 3,
+        "type": "spawned",
+        "wrapperPid": 4191480,
+        "childPid": 4191500
+      },
+      {
+        "at": "2026-10-12T00:44:09.109Z",
+        "elapsedMs": 624633,
+        "type": "external-signal",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "signal": "SIGTERM",
+        "sender": "unknown"
+      },
+      {
+        "at": "2026-10-12T00:44:09.109Z",
+        "elapsedMs": 624633,
+        "type": "stop-request",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "signal": "SIGTERM",
+        "reason": "external signal",
+        "action": "signal owned checker PID; checker owns orderly child shutdown"
+      },
+      {
+        "at": "2026-10-12T00:44:09.402Z",
+        "elapsedMs": 624926,
+        "type": "exit",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "code": 1,
+        "signal": null
+      },
+      {
+        "at": "2026-10-12T00:44:09.402Z",
+        "elapsedMs": 624926,
+        "type": "closed",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "code": 1,
+        "signal": null,
+        "timedOut": false,
+        "externalSignal": "SIGTERM"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "desktop",
+      "passed": true,
+      "problems": [],
+      "reportSha256": "92aa130e91bb33e8fd284adb6f1411d497ba151ba00f48effaceddf65e2dcb17",
+      "rests": 5,
+      "motionTrajectories": 8,
+      "stationary": [],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9cad870ea554ec2a",
+          "name": "The question1",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-229673414fdef73d",
+          "name": "The cycle2",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-fa5f87289d477f00",
+          "name": "The connection3",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9eb58dcb119c043b",
+          "name": "Two kinds of evidence4",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-0834ce7be807e94d",
+          "name": "The answer, bounded5",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "passed": true,
+      "problems": [],
+      "reportSha256": "fe92824e000cd18533a30a0a93d4f9589f77a3b0c62ea5c6907c8b56cb804484",
+      "rests": 5,
+      "motionTrajectories": 8,
+      "stationary": [],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "short",
+      "passed": true,
+      "problems": [],
+      "reportSha256": "58f9feaad8ba8a17475215ff0dfedfbb2f6c04ec6dfe945e8d944b07610a9ac1",
+      "rests": 5,
+      "motionTrajectories": 8,
+      "stationary": [],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9cad870ea554ec2a",
+          "name": "The question1",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-229673414fdef73d",
+          "name": "The cycle2",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-fa5f87289d477f00",
+          "name": "The connection3",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9eb58dcb119c043b",
+          "name": "Two kinds of evidence4",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-0834ce7be807e94d",
+          "name": "The answer, bounded5",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reduced-motion",
+      "passed": false,
+      "problems": [
+        "beat IDs/order differ: expected question, scheduling, bench, evidence, scope; found ",
+        "expected one h1, found undefined",
+        "document language is missing",
+        "control-fa5f87289d477f00/pointer: page.screenshot: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+        "control-fa5f87289d477f00/pointer: missing original control images",
+        "control-fa5f87289d477f00/pointer: no observable control response (requires review, not a functional pass)",
+        "control-fa5f87289d477f00/keyboard: control was not reached and activated",
+        "control-fa5f87289d477f00/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-fa5f87289d477f00/keyboard: missing original control images",
+        "control-fa5f87289d477f00/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/pointer: control was not reached and activated",
+        "control-9eb58dcb119c043b/pointer: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/pointer: missing original control images",
+        "control-9eb58dcb119c043b/pointer: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/keyboard: control was not reached and activated",
+        "control-9eb58dcb119c043b/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/keyboard: missing original control images",
+        "control-9eb58dcb119c043b/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/pointer: control was not reached and activated",
+        "control-0834ce7be807e94d/pointer: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/pointer: missing original control images",
+        "control-0834ce7be807e94d/pointer: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/keyboard: control was not reached and activated",
+        "control-0834ce7be807e94d/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/keyboard: missing original control images",
+        "control-0834ce7be807e94d/keyboard: no observable control response (requires review, not a functional pass)",
+        "page.evaluate: Target page, context or browser has been closed\n    at browserCase (/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:293:38)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:348:27"
+      ],
+      "reportSha256": "c51fb5dd2be83af5d294c697d298c4947ab3163dab9f538f46a518375b24d708",
+      "rests": 5,
+      "motionTrajectories": 0,
+      "stationary": [
+        {
+          "beat": "question",
+          "before": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+          "after": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+          "elapsedMs": 1572,
+          "files": [
+            "still-question-before.png",
+            "still-question-after.png"
+          ]
+        },
+        {
+          "beat": "scheduling",
+          "before": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+          "after": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+          "elapsedMs": 628,
+          "files": [
+            "still-scheduling-before.png",
+            "still-scheduling-after.png"
+          ]
+        },
+        {
+          "beat": "bench",
+          "before": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+          "after": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+          "elapsedMs": 616,
+          "files": [
+            "still-bench-before.png",
+            "still-bench-after.png"
+          ]
+        },
+        {
+          "beat": "evidence",
+          "before": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+          "after": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+          "elapsedMs": 629,
+          "files": [
+            "still-evidence-before.png",
+            "still-evidence-after.png"
+          ]
+        },
+        {
+          "beat": "scope",
+          "before": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+          "after": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+          "elapsedMs": 608,
+          "files": [
+            "still-scope-before.png",
+            "still-scope-after.png"
+          ]
+        }
+      ],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9cad870ea554ec2a",
+          "name": "The question1",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-229673414fdef73d",
+          "name": "The cycle2",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-fa5f87289d477f00",
+          "name": "The connection3",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "error": "page.screenshot: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+            },
+            {
+              "method": "keyboard",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            }
+          ]
+        },
+        {
+          "key": "control-9eb58dcb119c043b",
+          "name": "Two kinds of evidence4",
+          "trials": [
+            {
+              "method": "pointer",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            },
+            {
+              "method": "keyboard",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            }
+          ]
+        },
+        {
+          "key": "control-0834ce7be807e94d",
+          "name": "The answer, bounded5",
+          "trials": [
+            {
+              "method": "pointer",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            },
+            {
+              "method": "keyboard",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unobservedModes": [
+    "no-webgl",
+    "no-javascript",
+    "context-loss"
+  ],
+  "originalReview": {
+    "asserted": false,
+    "available": 203,
+    "reviewed": 0,
+    "exactAvailableCoverage": false,
+    "byMode": {
+      "desktop": 62,
+      "mobile": 42,
+      "short": 62,
+      "reduced-motion": 37,
+      "no-webgl": 0,
+      "no-javascript": 0,
+      "context-loss": 0
+    },
+    "images": []
+  },
+  "limits": [
+    "Verification does not erase the original actor timeout or complete Stage 3 by itself",
+    "Technical results do not establish visual quality, physical-phone behavior or actual author approval",
+    "Absent modes or interrupted coverage remain unobserved",
+    "No new actor, judge or retry is authorized by this result"
+  ]
+}
+

@@ -18,6 +18,7 @@ its review criteria and independent runtime observations are separate.
 
 | Study | Kind and status |
 |---|---|
+| [stage-3-candidate-verification-1](runs/stage-3-candidate-verification-1/findings.md) | Separately approved single browser verification of unchanged 184-file candidate. Desktop, phone and short pass; external SIGTERM after 624.633 seconds leaves reduced-motion partial and three failure modes absent. All 203 originals reviewed, final integrity audit passes, no actor, judge or retry. Original timeout and both captures preserved. |
 | [1](#1-original-claude-comparison-complete) | Claude comparison, complete |
 | [2](#2-deferred-claude-round-2-no-saved-runs) | Deferred rerun, no saved results |
 | [codex-1](#codex-1-astra-only-harness-trial-partial-and-superseded) | Astra-only trial, partial |

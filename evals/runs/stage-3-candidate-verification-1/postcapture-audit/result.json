@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "checkedAt": "2026-10-12T00:45:53.254Z",
+  "modelCalls": 0,
+  "browserCalls": 0,
+  "builds": 0,
+  "processMutations": 0,
+  "scope": "Interrupted verification evidence integrity and limited postclosure process observation, not complete acceptance or original-image assessment",
+  "terminalTool": {
+    "path": "capture-tool-poll-12.json",
+    "exitCode": 1,
+    "sessionClosed": true,
+    "sha256": "ca3486f9d674505c8fa45443a580804a20e4c03874096a0264a74bc8e07454c0"
+  },
+  "execution": {
+    "code": 1,
+    "signal": null,
+    "timedOut": false,
+    "externalSignal": "SIGTERM",
+    "spawnError": null,
+    "wrapperPid": 4191480,
+    "childPid": 4191500,
+    "started": "2026-10-12T00:33:44.476Z",
+    "finished": "2026-10-12T00:44:09.402Z",
+    "durationMs": 624926,
+    "timeoutMs": 895000,
+    "graceMs": 5000,
+    "totalCapMs": 900000,
+    "lifecycleSha256": "9259de71339b6cf5465a1d67bdee810ca0601967c7f8d277e7acad062c8cab72",
+    "processSha256": "156795018190cfb167429aac382d4294568dc0575e970976897d2b2300fa6ab5"
+  },
+  "interruption": {
+    "signal": "SIGTERM",
+    "sender": "unknown",
+    "at": "2026-10-12T00:44:09.109Z",
+    "elapsedMs": 624633,
+    "millisecondsBeforeWorkDeadline": 270367,
+    "millisecondsUntilCheckerClose": 293,
+    "ownDeadlineFired": false,
+    "escalationFired": false,
+    "causalAttribution": "Unknown; no inference from elapsed time or earlier interruptions"
+  },
+  "source": {
+    "files": 184,
+    "digest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "strictActorSnapshotIdentity": true,
+    "beforeAfterAndCurrentUnchanged": true
+  },
+  "inputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "frozenInputs": 124,
+  "shippedSkillFilesUnchanged": 86,
+  "shippedEngineFilesUnchanged": 79,
+  "actorArtifactsUnchanged": 367,
+  "actorComplete": false,
+  "actorTimedOut": true,
+  "actorUsage": null,
+  "oldCapture": {
+    "manifestSha256": "b21f8baa6e9568c71e7d0cde2957c4e2405eff4018c09594de76f2fa23296572",
+    "artifacts": 134,
+    "complete": false,
+    "passed": false
+  },
+  "capture": {
+    "complete": false,
+    "passed": false,
+    "manifestSha256": "c5c4db1ad0a664a26db4e38fe83a8cd5aef67a597d0db5647c48cc59b09c897e",
+    "artifacts": 222,
+    "availableOriginals": 203,
+    "originalsByMode": {
+      "desktop": 62,
+      "mobile": 42,
+      "short": 62,
+      "reduced-motion": 37,
+      "no-webgl": 0,
+      "no-javascript": 0,
+      "context-loss": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "desktop",
+      "passed": true,
+      "problems": []
+    },
+    {
+      "id": "mobile",
+      "passed": true,
+      "problems": []
+    },
+    {
+      "id": "short",
+      "passed": true,
+      "problems": []
+    },
+    {
+      "id": "reduced-motion",
+      "passed": false,
+      "problems": [
+        "beat IDs/order differ: expected question, scheduling, bench, evidence, scope; found ",
+        "expected one h1, found undefined",
+        "document language is missing",
+        "control-fa5f87289d477f00/pointer: page.screenshot: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+        "control-fa5f87289d477f00/pointer: missing original control images",
+        "control-fa5f87289d477f00/pointer: no observable control response (requires review, not a functional pass)",
+        "control-fa5f87289d477f00/keyboard: control was not reached and activated",
+        "control-fa5f87289d477f00/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-fa5f87289d477f00/keyboard: missing original control images",
+        "control-fa5f87289d477f00/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/pointer: control was not reached and activated",
+        "control-9eb58dcb119c043b/pointer: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/pointer: missing original control images",
+        "control-9eb58dcb119c043b/pointer: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/keyboard: control was not reached and activated",
+        "control-9eb58dcb119c043b/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/keyboard: missing original control images",
+        "control-9eb58dcb119c043b/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/pointer: control was not reached and activated",
+        "control-0834ce7be807e94d/pointer: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/pointer: missing original control images",
+        "control-0834ce7be807e94d/pointer: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/keyboard: control was not reached and activated",
+        "control-0834ce7be807e94d/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/keyboard: missing original control images",
+        "control-0834ce7be807e94d/keyboard: no observable control response (requires review, not a functional pass)",
+        "page.evaluate: Target page, context or browser has been closed\n    at browserCase (/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:293:38)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:348:27"
+      ]
+    }
+  ],
+  "unobservedModes": [
+    "no-webgl",
+    "no-javascript",
+    "context-loss"
+  ],
+  "processObservation": {
+    "checkedAt": "2026-10-12T00:45:53.163Z",
+    "method": "Same-user /proc stat, comm and cwd metadata; /proc/net TCP listener metadata only",
+    "inspected": 87,
+    "unavailable": [
+      {
+        "pid": 372,
+        "code": "EACCES"
+      },
+      {
+        "pid": 374,
+        "code": "EACCES"
+      }
+    ],
+    "knownPids": [
+      {
+        "pid": 4191480,
+        "exists": false
+      },
+      {
+        "pid": 4191500,
+        "exists": false
+      }
+    ],
+    "workspaceCwdProcesses": [],
+    "ancestryMatches": [],
+    "listenerPort": 34395,
+    "listenerEntries": [],
+    "noObservedOwnedOrWorkspaceProcess": true,
+    "limit": "No observed surviving known PID, current ancestry, workspace-cwd process or listener is not proof that every detached/reparented descendant is absent. No historical descendant PID inventory or signal-sender record exists."
+  },
+  "resultMeaning": "The source and all available artifacts remain assessable. Desktop/mobile/short technical passes are retained; interrupted reduced-motion fields do not establish those site defects, and three missing modes remain unobserved. No actor/judge/capture retry, cleanup or source change is authorized by this audit."
+}

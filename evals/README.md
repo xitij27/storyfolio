@@ -359,6 +359,12 @@ later received an external termination signal after desktop/phone passes.
 No candidate judge ran because the complete-packet gate failed. Preserve
 both interruptions and all partial evidence; do not resume or retry either
 actor, replace the partial capture or infer a further paid allowance.
+The later [separately approved verification-only attempt](runs/stage-3-candidate-verification-1/findings.md)
+also closed after an external SIGTERM, before its enforced deadline. It
+adds completed short-height checks and partial reduced-motion originals,
+not a full matrix pass. Its single-attempt wrapper must not be relaunched.
+No new actor or judge ran. The [ordinary-entry proposal](../docs/superpowers/plans/2026-10-12-stage-3-natural-entry-proposal.md)
+has a separate, unanswered paid-run question, not an automatic next launch.
 No model call or frozen workspace is created by its read-only verifier:
 
 ```bash

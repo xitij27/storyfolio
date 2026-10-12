@@ -44,8 +44,17 @@ with "yes let us try to complete stage 3". The new
 [verification study](../evals/runs/stage-3-candidate-verification-1/findings.md)
 keeps the candidate source unchanged, preserves the interrupted attempt,
 and enforces a 15-minute process limit with no new actor, judge or retry.
-Preparation is underway. This approval does not expand the paid allowance
-or establish Stage 3 completion.
+Preparation was committed as `f12fc9b`. The single capture subsequently
+received external SIGTERM after 624,633 ms, before its own deadline, and
+closed after 624,926 ms. The source is unchanged. Desktop, phone and
+short-height pass; reduced-motion coverage is partial, and no-WebGL,
+no-JavaScript and context-loss remain unobserved. All 203 retained originals
+are reviewed and their source/artifact integrity verifier passes. The
+unknown interruption is preserved separately from
+the first attempt. No retry or Stage 3 completion is inferred. The
+[next proposed ordinary-entry test](superpowers/plans/2026-10-12-stage-3-natural-entry-proposal.md)
+has a [separate approval question](history/2026-10-12-natural-entry-request.md),
+unanswered at this entry. No new paid run has started.
 
 The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` verbatim before this checkpoint's current-state updates.
@@ -628,7 +637,13 @@ paid allowance is inferred, and the candidate judge slot was not used.
 The subsequent [verification approval](history/2026-10-12-candidate-verification-approval.md)
 now grants that one explicitly scoped capture. Follow its separate study,
 not the old complete-only wrapper, and do not ask for the same approval
-again. No new actor or judge is permitted in this verification step.
+again. It has now closed at 624,926 ms after another external SIGTERM at
+624,633 ms, before its own deadline. Three animated modes pass; reduced-motion is
+partial and the three failure modes were not reached. Both interruptions,
+all 203 new originals and unchanged source are preserved. No new actor or
+judge ran, and the one verification allowance is spent. Use the separate
+ordinary-entry proposal and pending specific question for the next product
+test; do not relaunch either capture.
 
 Follow the baseline findings' quality attribution before choosing the next
 behavioral experiment. Source-level passes do not establish a convincing

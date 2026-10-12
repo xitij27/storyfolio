@@ -312,3 +312,7 @@ records "yes let us try to complete stage 3" after the specific offer of
 one 15-minute verification-only capture, no new actor or judge and no retry.
 It preserves the timed-out candidate and interrupted capture as historical
 results. Later Stage 3 experiments remain separate scope decisions.
+
+The [subsequent natural-entry request](2026-10-12-natural-entry-request.md)
+preserves the specific next-test question, its bounds and the distinction
+between asking and receiving approval.

@@ -1,0 +1,2464 @@
+{
+  "schemaVersion": 1,
+  "fixture": "bench-depth-2",
+  "started": "2026-10-12T00:33:44.522Z",
+  "node": "v22.22.1",
+  "workspace": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB",
+  "expectationsPath": "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/expectations.json",
+  "dependencyRoot": "/tmp/storyfolio-build-capability-20261011",
+  "nextRuntime": {
+    "passed": true,
+    "entrypoint": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+    "local": {
+      "name": "next",
+      "version": "16.3.8",
+      "entrypoint": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+      "packageJson": "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/package.json",
+      "sha256": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de"
+    },
+    "trusted": {
+      "name": "next",
+      "version": "16.3.8",
+      "entrypoint": "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/next/dist/bin/next",
+      "packageJson": "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/next/package.json",
+      "sha256": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de"
+    },
+    "problems": [],
+    "scope": "Package name/version and CLI entrypoint bytes only; transitive dependency integrity is not established."
+  },
+  "frozen": {
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0",
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/lib/build-check.mjs": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49",
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/lib/build-capture.mjs": "7472bf42a1bfc2a18c7b317e9c1b43274e431737a6ea82f9e66c927a4b39521e",
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/lib/source-scope.mjs": "63bcdb119b0fd546aa5a27144204eb6deea89167d8b81121dffde8a22865c71b",
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/expectations.json": "763c797bf82617393171e8c85fd5b64cce7337830c79ee9b0a5e342814e4405f",
+    "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de",
+    "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/package.json": "6da8fc4823b66b8f2906d150002618e3f3e0d2446ebf3823b2a2f7efe73a46a4",
+    "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/next/dist/bin/next": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de",
+    "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/next/package.json": "6da8fc4823b66b8f2906d150002618e3f3e0d2446ebf3823b2a2f7efe73a46a4",
+    "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/typescript/lib/tsc.js": "2cffde0b8c6760dfb0b5b0382bbb7e00ba6a8b2d981b9205b256a700a481d983",
+    "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/eslint/bin/eslint.js": "6280b95e2a6ab3b04be45cbd3b1627654be518e6a4da163ec0adcbba9cd5fcd8",
+    "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/playwright-core/index.js": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b"
+  },
+  "expected": {
+    "schemaVersion": 2,
+    "taskKind": "prototype-depth",
+    "id": "bench-depth-2",
+    "route": "/",
+    "beats": [
+      {
+        "id": "question",
+        "headingLevel": 1
+      },
+      {
+        "id": "scheduling",
+        "headingLevel": 2
+      },
+      {
+        "id": "bench",
+        "headingLevel": 2
+      },
+      {
+        "id": "evidence",
+        "headingLevel": 2
+      },
+      {
+        "id": "scope",
+        "headingLevel": 2
+      }
+    ],
+    "requiredText": [],
+    "links": [],
+    "assets": [
+      "public/assets/power-states.svg",
+      "public/assets/bring-up-fixture.svg"
+    ],
+    "requiredFiles": [
+      "docs/story/assets.md",
+      "docs/story/confirmations.md",
+      "docs/story/facts.md",
+      "docs/story/handover.md",
+      "docs/story/storyboard.md"
+    ],
+    "modes": {
+      "desktop": "animated",
+      "mobile": "animated",
+      "short": "animated",
+      "reducedMotion": "animated",
+      "noWebGL": "static",
+      "noJavaScript": "static"
+    },
+    "viewports": {
+      "desktop": {
+        "width": 1440,
+        "height": 900
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844
+      },
+      "short": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    "contentConstraints": {
+      "semanticReviewRequired": true,
+      "appearanceCount": 1,
+      "objectPremise": "An illustrative physical bench apparatus, not a sheet or card metaphor. Piece count, geometry, colors, composition and mechanisms are not prescribed.",
+      "beatMeanings": [
+        {
+          "id": "question",
+          "meaning": "Explain firmware and bring-up in ordinary language, introduce Ada's code-to-physical-check contribution and the question the ending will answer."
+        },
+        {
+          "id": "scheduling",
+          "meaning": "Use the explicitly illustrative Sleep, Measure, Transmit loop to explain power-state scheduling without inventing actual firmware topology, durations or measured values."
+        },
+        {
+          "id": "bench",
+          "meaning": "Connect a command, board response, fixture access and observation; keep Ada's firmware, scheduling and fixture separate from the colleague's PCB and analogue front end."
+        },
+        {
+          "id": "evidence",
+          "meaning": "Measured sleep and transmit current plus an assumed reporting interval support a two-year projection. A separate bench run supports 72 hours observed, not the projection's validation."
+        },
+        {
+          "id": "scope",
+          "meaning": "Answer the opening through firmware/scheduling and the fixture connecting code to an observable check. Bound it to six bench-tested of forty assembled engineering samples, none sent to customers, and a preliminary emissions pass with full qualification unfinished."
+        }
+      ],
+      "forbiddenClaims": [
+        "Ada designed the PCB or analogue front end.",
+        "Two years of runtime was measured or validated by the 72-hour run.",
+        "All forty samples were bench-tested, or any sample went to customers.",
+        "There was a field deployment, product launch or customer pilot.",
+        "Full qualification or certification was completed.",
+        "A debugging incident, its diagnosis, fix ownership or measured outcome is approved for publication.",
+        "Exact current values, interval, capacity, circuit detail, additional test counts or pass/fail counts were supplied.",
+        "An illustrative drawing is an actual photo, trace, circuit diagram, firmware specification or qualification report.",
+        "Scripted/browser checks establish real author approval, a physical-phone test or measured phone performance."
+      ],
+      "note": "The checker tests structure and capabilities, not these semantic meanings or pixel quality. Newly authored headings and prose are allowed. Normal desktop, phone and short modes use the engine's 3D scene; this is a diagnostic technical requirement, not a biographical fact. Static and failure modes preserve all five explanations."
+    },
+    "provenance": {
+      "fictional": true,
+      "derivativeDate": "2026-10-12",
+      "authorization": "Fictional factual and story input inherited unchanged from bench-depth-1, with neutral tooling, enabled-skill facts and fixed skip navigation for a separately labelled comparison. Not a paid-run authorization.",
+      "sourceManifest": "evals/builds/bench-depth-2/source-manifest.json",
+      "scope": "Approved-story realization, not concept discovery, automatic activation, stop 4/5/6 completion, full journey, generality or actual author approval."
+    },
+    "focusOnlyControls": [
+      {
+        "selector": "#story-skip",
+        "name": "Skip to the answer",
+        "href": "#chapter-scope",
+        "reason": "The coordinator-reviewed inherited story-skip CSS intentionally reveals this single bypass link on keyboard focus. Its exact identity and target are supplied equally in both arms; actual keyboard reachability and target response remain required."
+      }
+    ]
+  },
+  "commands": [
+    {
+      "name": "typegen",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+        "typegen"
+      ],
+      "started": "2026-10-12T00:33:44.612Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-12T00:33:45.164Z"
+    },
+    {
+      "name": "typecheck",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/typescript/lib/tsc.js",
+        "--project",
+        "/home/kshitij/projects/storyfolio/evals/runs/stage-3-candidate-verification-1/acceptance/tsconfig.acceptance.json",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "started": "2026-10-12T00:33:45.167Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-12T00:33:47.621Z"
+    },
+    {
+      "name": "lint",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/eslint/bin/eslint.js",
+        "--no-config-lookup",
+        "--config",
+        "/home/kshitij/projects/storyfolio/evals/runs/stage-3-candidate-verification-1/acceptance/eslint.acceptance.mjs",
+        "."
+      ],
+      "started": "2026-10-12T00:33:47.624Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-12T00:33:53.517Z"
+    },
+    {
+      "name": "build",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+        "build"
+      ],
+      "started": "2026-10-12T00:33:53.521Z",
+      "code": 0,
+      "signal": null,
+      "finished": "2026-10-12T00:33:57.776Z"
+    },
+    {
+      "name": "server",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "args": [
+        "/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB/node_modules/next/dist/bin/next",
+        "start",
+        "--hostname",
+        "127.0.0.1",
+        "--port",
+        "34395"
+      ],
+      "started": "2026-10-12T00:33:57.784Z",
+      "code": 143,
+      "signal": null,
+      "finished": "2026-10-12T00:44:09.127Z"
+    }
+  ],
+  "results": [
+    {
+      "id": "desktop",
+      "passed": true,
+      "problems": [],
+      "report": "desktop/report.json"
+    },
+    {
+      "id": "mobile",
+      "passed": true,
+      "problems": [],
+      "report": "mobile/report.json"
+    },
+    {
+      "id": "short",
+      "passed": true,
+      "problems": [],
+      "report": "short/report.json"
+    },
+    {
+      "id": "reduced-motion",
+      "passed": false,
+      "problems": [
+        "beat IDs/order differ: expected question, scheduling, bench, evidence, scope; found ",
+        "expected one h1, found undefined",
+        "document language is missing",
+        "control-fa5f87289d477f00/pointer: page.screenshot: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+        "control-fa5f87289d477f00/pointer: missing original control images",
+        "control-fa5f87289d477f00/pointer: no observable control response (requires review, not a functional pass)",
+        "control-fa5f87289d477f00/keyboard: control was not reached and activated",
+        "control-fa5f87289d477f00/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-fa5f87289d477f00/keyboard: missing original control images",
+        "control-fa5f87289d477f00/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/pointer: control was not reached and activated",
+        "control-9eb58dcb119c043b/pointer: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/pointer: missing original control images",
+        "control-9eb58dcb119c043b/pointer: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/keyboard: control was not reached and activated",
+        "control-9eb58dcb119c043b/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/keyboard: missing original control images",
+        "control-9eb58dcb119c043b/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/pointer: control was not reached and activated",
+        "control-0834ce7be807e94d/pointer: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/pointer: missing original control images",
+        "control-0834ce7be807e94d/pointer: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/keyboard: control was not reached and activated",
+        "control-0834ce7be807e94d/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/keyboard: missing original control images",
+        "control-0834ce7be807e94d/keyboard: no observable control response (requires review, not a functional pass)",
+        "page.evaluate: Target page, context or browser has been closed\n    at browserCase (/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:293:38)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:348:27"
+      ],
+      "report": "reduced-motion/report.json"
+    }
+  ],
+  "files": [
+    {
+      "path": "public/assets/power-states.svg",
+      "exists": true,
+      "bytes": 1657,
+      "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8"
+    },
+    {
+      "path": "public/assets/bring-up-fixture.svg",
+      "exists": true,
+      "bytes": 1822,
+      "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae"
+    },
+    {
+      "path": "docs/story/assets.md",
+      "exists": true,
+      "bytes": 2670,
+      "sha256": "7f4536e83afc260695a7d6c083c1a1f5b544c153f1f101ff59980a7d8c12b3d7"
+    },
+    {
+      "path": "docs/story/confirmations.md",
+      "exists": true,
+      "bytes": 2860,
+      "sha256": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d"
+    },
+    {
+      "path": "docs/story/facts.md",
+      "exists": true,
+      "bytes": 3558,
+      "sha256": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e"
+    },
+    {
+      "path": "docs/story/handover.md",
+      "exists": true,
+      "bytes": 6618,
+      "sha256": "b95b9e6153e40d78f712a18abdab49f046a48c0b7ff4f97c85689f49c0221361"
+    },
+    {
+      "path": "docs/story/storyboard.md",
+      "exists": true,
+      "bytes": 3766,
+      "sha256": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6"
+    },
+    {
+      "url": "/assets/power-states.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 1657
+    },
+    {
+      "url": "/assets/bring-up-fixture.svg",
+      "status": 200,
+      "exists": true,
+      "contentType": "image/svg+xml",
+      "bytes": 1822
+    }
+  ],
+  "complete": false,
+  "limits": [
+    "Coordinator source and expectations must be frozen by the run harness before the actor starts. Outside-workspace paths alone are not a sandbox write barrier.",
+    "Dependency entrypoint hashes are recorded, not full dependency integrity. The harness must audit dependency and lockfile mutation separately.",
+    "Next build executes application configuration. Fixed typecheck and lint commands use coordinator-generated configuration independently of actor scripts.",
+    "Headless Chromium viewport checks do not prove physical-phone performance, custom-object quality, truth of claims or external-link availability.",
+    "Screenshots require human visual review. Text and scene markers alone cannot establish faithful formations or visually correct 3D.",
+    "Control state/image changes and motion positions measure observable response, not whether the intended 3D component responded correctly."
+  ],
+  "taskKind": "prototype-depth",
+  "sourceBefore": {
+    "files": [
+      {
+        "path": ".agents/skills/storyfolio/engine/.gitignore",
+        "bytes": 69,
+        "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/AGENTS.md",
+        "bytes": 1055,
+        "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/globals.css",
+        "bytes": 263,
+        "sha256": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/layout.tsx",
+        "bytes": 299,
+        "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/page.tsx",
+        "bytes": 1271,
+        "sha256": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx",
+        "bytes": 446,
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/CLAUDE.md",
+        "bytes": 11,
+        "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/chapter.tsx",
+        "bytes": 1504,
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/conductor.tsx",
+        "bytes": 1479,
+        "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/controls.tsx",
+        "bytes": 882,
+        "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx",
+        "bytes": 1420,
+        "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/face-material.ts",
+        "bytes": 1714,
+        "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/faces.ts",
+        "bytes": 3025,
+        "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts",
+        "bytes": 1624,
+        "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts",
+        "bytes": 504,
+        "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/look-switch.tsx",
+        "bytes": 515,
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/meter.tsx",
+        "bytes": 731,
+        "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/overlay.tsx",
+        "bytes": 711,
+        "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/pieces.tsx",
+        "bytes": 7753,
+        "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/rail.tsx",
+        "bytes": 452,
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/scene.tsx",
+        "bytes": 4623,
+        "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/stage.tsx",
+        "bytes": 1230,
+        "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/story.css",
+        "bytes": 5859,
+        "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/story.tsx",
+        "bytes": 5735,
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/types.ts",
+        "bytes": 1324,
+        "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/use-look.ts",
+        "bytes": 897,
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts",
+        "bytes": 432,
+        "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts",
+        "bytes": 591,
+        "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/validate.test.ts",
+        "bytes": 2192,
+        "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/validate.ts",
+        "bytes": 1972,
+        "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx",
+        "bytes": 476,
+        "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/checks.json",
+        "bytes": 130,
+        "sha256": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/copy.ts",
+        "bytes": 1468,
+        "sha256": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/experience.tsx",
+        "bytes": 260,
+        "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx",
+        "bytes": 613,
+        "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/extras.ts",
+        "bytes": 91,
+        "sha256": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/faces.ts",
+        "bytes": 883,
+        "sha256": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/formations.ts",
+        "bytes": 942,
+        "sha256": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/index.ts",
+        "bytes": 427,
+        "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/links.ts",
+        "bytes": 130,
+        "sha256": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/looks.ts",
+        "bytes": 645,
+        "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/sketches/index.ts",
+        "bytes": 238,
+        "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/story.ts",
+        "bytes": 518,
+        "sha256": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/eslint.config.mjs",
+        "bytes": 309,
+        "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/camera.test.ts",
+        "bytes": 6594,
+        "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/camera.ts",
+        "bytes": 5201,
+        "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/controls.test.ts",
+        "bytes": 1608,
+        "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/controls.ts",
+        "bytes": 1054,
+        "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/formation.test.ts",
+        "bytes": 5294,
+        "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/formation.ts",
+        "bytes": 5414,
+        "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts",
+        "bytes": 2728,
+        "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/layouts.ts",
+        "bytes": 4733,
+        "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/looks.test.ts",
+        "bytes": 1238,
+        "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/looks.ts",
+        "bytes": 1262,
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts",
+        "bytes": 1844,
+        "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/overlay.ts",
+        "bytes": 3252,
+        "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/quality.test.ts",
+        "bytes": 1838,
+        "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/quality.ts",
+        "bytes": 1762,
+        "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/rand.test.ts",
+        "bytes": 567,
+        "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/rand.ts",
+        "bytes": 384,
+        "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/story.test.ts",
+        "bytes": 4065,
+        "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/story.ts",
+        "bytes": 4796,
+        "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts",
+        "bytes": 7998,
+        "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/timeline.ts",
+        "bytes": 5697,
+        "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts",
+        "bytes": 4495,
+        "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/typeset.ts",
+        "bytes": 3329,
+        "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/LICENSE",
+        "bytes": 1080,
+        "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/next.config.ts",
+        "bytes": 94,
+        "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/package-lock.json",
+        "bytes": 233717,
+        "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/package.json",
+        "bytes": 1015,
+        "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/postcss.config.mjs",
+        "bytes": 94,
+        "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/public/plain/face.svg",
+        "bytes": 309,
+        "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/public/plain/fan.svg",
+        "bytes": 775,
+        "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/README.md",
+        "bytes": 6746,
+        "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/check-lib.mjs",
+        "bytes": 4516,
+        "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs",
+        "bytes": 4110,
+        "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/check.mjs",
+        "bytes": 6374,
+        "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/shoot.mjs",
+        "bytes": 25709,
+        "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/tsconfig.json",
+        "bytes": 706,
+        "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/asking.md",
+        "bytes": 1486,
+        "sha256": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/concept.md",
+        "bytes": 7863,
+        "sha256": "ba0780577d3157824d81c36b40374141d52df5e88ef67deee175792f4793dab1"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/reading-a-profile.md",
+        "bytes": 5537,
+        "sha256": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/storyboard.md",
+        "bytes": 4016,
+        "sha256": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6"
+      },
+      {
+        "path": ".agents/skills/storyfolio/scripts/scaffold.mjs",
+        "bytes": 3566,
+        "sha256": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688"
+      },
+      {
+        "path": ".agents/skills/storyfolio/scripts/scaffold.test.mjs",
+        "bytes": 4044,
+        "sha256": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac"
+      },
+      {
+        "path": ".agents/skills/storyfolio/SKILL.md",
+        "bytes": 4790,
+        "sha256": "cea93b6a009a405d4bd0497e5a8e1bdae53901259a9a7739e334008a0274cee2"
+      },
+      {
+        "path": ".gitignore",
+        "bytes": 69,
+        "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f"
+      },
+      {
+        "path": "AGENTS.md",
+        "bytes": 1734,
+        "sha256": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8"
+      },
+      {
+        "path": "app/globals.css",
+        "bytes": 2017,
+        "sha256": "55d121f40a3f11068be3ff68e508a2a9ae59c0687c1eb684c2fd3a37132377bf"
+      },
+      {
+        "path": "app/layout.tsx",
+        "bytes": 299,
+        "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c"
+      },
+      {
+        "path": "app/page.tsx",
+        "bytes": 833,
+        "sha256": "3654c188b6939097d3478919f3ed9da0be670d8b70287aba64582f7932d2f877"
+      },
+      {
+        "path": "app/sketch/[id]/page.tsx",
+        "bytes": 446,
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+      },
+      {
+        "path": "CLAUDE.md",
+        "bytes": 11,
+        "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+      },
+      {
+        "path": "components/story/chapter.tsx",
+        "bytes": 1504,
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": "components/story/conductor.tsx",
+        "bytes": 1513,
+        "sha256": "cd46bd834c77b76e6f28a03e3a50c9de743d833c2a6143fa60a3d4e2417d33f0"
+      },
+      {
+        "path": "components/story/controls.tsx",
+        "bytes": 882,
+        "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c"
+      },
+      {
+        "path": "components/story/extra-frame.tsx",
+        "bytes": 1420,
+        "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449"
+      },
+      {
+        "path": "components/story/face-material.ts",
+        "bytes": 1725,
+        "sha256": "c7b77fded80aa552de7200a4619870b6c4918abea17e68371593a556ec36b8fc"
+      },
+      {
+        "path": "components/story/faces.ts",
+        "bytes": 3099,
+        "sha256": "32ddbf95ff8cb6d7dd6e29e22983fe25be5cd0408586bcf84eb5db7da44c1494"
+      },
+      {
+        "path": "components/story/guard-extra-callback.test.ts",
+        "bytes": 1624,
+        "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3"
+      },
+      {
+        "path": "components/story/guard-extra-callback.ts",
+        "bytes": 504,
+        "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9"
+      },
+      {
+        "path": "components/story/look-switch.tsx",
+        "bytes": 515,
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": "components/story/meter.tsx",
+        "bytes": 731,
+        "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a"
+      },
+      {
+        "path": "components/story/overlay.tsx",
+        "bytes": 711,
+        "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d"
+      },
+      {
+        "path": "components/story/pieces.tsx",
+        "bytes": 7753,
+        "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f"
+      },
+      {
+        "path": "components/story/rail.tsx",
+        "bytes": 452,
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": "components/story/scene.tsx",
+        "bytes": 4685,
+        "sha256": "9d8a3ecbef136fce47ab5c3b5eff0822613b269980603baedca8986c9aa6cacf"
+      },
+      {
+        "path": "components/story/stage.tsx",
+        "bytes": 1230,
+        "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792"
+      },
+      {
+        "path": "components/story/story.css",
+        "bytes": 5859,
+        "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23"
+      },
+      {
+        "path": "components/story/story.tsx",
+        "bytes": 5735,
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      },
+      {
+        "path": "components/story/types.ts",
+        "bytes": 1521,
+        "sha256": "6c44fdf12922926822180e6950e5084b722508648be5a97336ac257a3b6c0520"
+      },
+      {
+        "path": "components/story/use-look.ts",
+        "bytes": 897,
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+      },
+      {
+        "path": "components/story/use-reduced-motion.ts",
+        "bytes": 432,
+        "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e"
+      },
+      {
+        "path": "components/story/use-webgl-supported.ts",
+        "bytes": 591,
+        "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419"
+      },
+      {
+        "path": "components/story/validate.test.ts",
+        "bytes": 2192,
+        "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9"
+      },
+      {
+        "path": "components/story/validate.ts",
+        "bytes": 1972,
+        "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b"
+      },
+      {
+        "path": "components/story/webgl-boundary.tsx",
+        "bytes": 476,
+        "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a"
+      },
+      {
+        "path": "content/apparatus.tsx",
+        "bytes": 1281,
+        "sha256": "5df7c69c1f70527ba2191f4b995904de63ada3cd264a59fad4547bf031b4ea89"
+      },
+      {
+        "path": "content/checks.json",
+        "bytes": 3,
+        "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+      },
+      {
+        "path": "content/copy.ts",
+        "bytes": 3522,
+        "sha256": "9785d87105496461134dc24157fd143d69a861052bca67a7f5ee26bbf7cd401d"
+      },
+      {
+        "path": "content/experience.tsx",
+        "bytes": 260,
+        "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35"
+      },
+      {
+        "path": "content/extras/connections.tsx",
+        "bytes": 2140,
+        "sha256": "2fcfa7a78a48d6b12f5d6660d380f5aed4872ead4aaf9814f9e23124d4a8c80e"
+      },
+      {
+        "path": "content/extras/middle-line.tsx",
+        "bytes": 613,
+        "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c"
+      },
+      {
+        "path": "content/extras.ts",
+        "bytes": 405,
+        "sha256": "49c8512c9d6c022d329945b7b4ccfda9a9b1f2dd0f5b61212dc3fccd5b68ba80"
+      },
+      {
+        "path": "content/faces.ts",
+        "bytes": 2348,
+        "sha256": "02b5b8740d09f70575ca0df57f1f09ab909c71167c87109249eb85201dd09890"
+      },
+      {
+        "path": "content/formations.ts",
+        "bytes": 1443,
+        "sha256": "426b517a04edd9089543996cf3f6867c93c4e3543ebdf393cfaa2cde276e4899"
+      },
+      {
+        "path": "content/index.ts",
+        "bytes": 498,
+        "sha256": "23ee84fd6d49bcc4b5f19f6d64e10050aab827c8bb1d8f5075bf2c7bfe15b0df"
+      },
+      {
+        "path": "content/links.ts",
+        "bytes": 25,
+        "sha256": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb"
+      },
+      {
+        "path": "content/looks.ts",
+        "bytes": 365,
+        "sha256": "86ac6762acbe8173cab94528145b6e24e91baa918896f6c9bbe49c0185f69863"
+      },
+      {
+        "path": "content/sketches/index.ts",
+        "bytes": 238,
+        "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0"
+      },
+      {
+        "path": "content/story.ts",
+        "bytes": 814,
+        "sha256": "18a4e6c3f8a702c645c7adf674c42f744a7bb8b0b21351fed2217f4af56b54be"
+      },
+      {
+        "path": "docs/story/assets.md",
+        "bytes": 2670,
+        "sha256": "7f4536e83afc260695a7d6c083c1a1f5b544c153f1f101ff59980a7d8c12b3d7"
+      },
+      {
+        "path": "docs/story/concepts.md",
+        "bytes": 438,
+        "sha256": "e7a1a0ed4fe85cb0788a5429c6ebbb3f68d3839cef7eb1c3946e9e06df39d41c"
+      },
+      {
+        "path": "docs/story/confirmations.md",
+        "bytes": 2860,
+        "sha256": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d"
+      },
+      {
+        "path": "docs/story/decided-for-you.md",
+        "bytes": 2281,
+        "sha256": "d7591c4751a909b7b75d5373807434f974b56166d6312c3ef2a37012ad53598e"
+      },
+      {
+        "path": "docs/story/environment-setup.json",
+        "bytes": 1148,
+        "sha256": "3e69141f658b87536e43f4bfa3efce3504495f05b7526e43a6149a938b8c8c33"
+      },
+      {
+        "path": "docs/story/evaluation-environment.md",
+        "bytes": 2090,
+        "sha256": "69f8f5e245f564ae3b0de1d800fe4ca288037cfb8b2e502c9805009d0b5c7dc5"
+      },
+      {
+        "path": "docs/story/facts.md",
+        "bytes": 3558,
+        "sha256": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e"
+      },
+      {
+        "path": "docs/story/handover.md",
+        "bytes": 6618,
+        "sha256": "b95b9e6153e40d78f712a18abdab49f046a48c0b7ff4f97c85689f49c0221361"
+      },
+      {
+        "path": "docs/story/review/production-manifest.json",
+        "bytes": 10424,
+        "sha256": "275974e4fe84fc745fa4149b78b8421b2b71b0211457224b2450fa5032ba2c1e"
+      },
+      {
+        "path": "docs/story/review/supplemental-report.json",
+        "bytes": 1610,
+        "sha256": "087240594182af7b27acc6a9cd1818f1a8fcd73e28aeb17d2d49449f576ac102"
+      },
+      {
+        "path": "docs/story/storyboard.md",
+        "bytes": 3766,
+        "sha256": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6"
+      },
+      {
+        "path": "eslint.config.mjs",
+        "bytes": 309,
+        "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b"
+      },
+      {
+        "path": "lib/story/apparatus.test.ts",
+        "bytes": 1410,
+        "sha256": "881439416c2eede43ed3be9a9ee00f523fd2012842751a99bf6906f68b386e8d"
+      },
+      {
+        "path": "lib/story/camera.test.ts",
+        "bytes": 6594,
+        "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1"
+      },
+      {
+        "path": "lib/story/camera.ts",
+        "bytes": 5201,
+        "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad"
+      },
+      {
+        "path": "lib/story/controls.test.ts",
+        "bytes": 1608,
+        "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528"
+      },
+      {
+        "path": "lib/story/controls.ts",
+        "bytes": 1054,
+        "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406"
+      },
+      {
+        "path": "lib/story/formation.test.ts",
+        "bytes": 5294,
+        "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc"
+      },
+      {
+        "path": "lib/story/formation.ts",
+        "bytes": 5414,
+        "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe"
+      },
+      {
+        "path": "lib/story/layouts.test.ts",
+        "bytes": 2728,
+        "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0"
+      },
+      {
+        "path": "lib/story/layouts.ts",
+        "bytes": 4733,
+        "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5"
+      },
+      {
+        "path": "lib/story/looks.test.ts",
+        "bytes": 1238,
+        "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9"
+      },
+      {
+        "path": "lib/story/looks.ts",
+        "bytes": 1262,
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+      },
+      {
+        "path": "lib/story/overlay.test.ts",
+        "bytes": 1844,
+        "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4"
+      },
+      {
+        "path": "lib/story/overlay.ts",
+        "bytes": 3252,
+        "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce"
+      },
+      {
+        "path": "lib/story/quality.test.ts",
+        "bytes": 1838,
+        "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023"
+      },
+      {
+        "path": "lib/story/quality.ts",
+        "bytes": 1762,
+        "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc"
+      },
+      {
+        "path": "lib/story/rand.test.ts",
+        "bytes": 567,
+        "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f"
+      },
+      {
+        "path": "lib/story/rand.ts",
+        "bytes": 384,
+        "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8"
+      },
+      {
+        "path": "lib/story/story.test.ts",
+        "bytes": 4065,
+        "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563"
+      },
+      {
+        "path": "lib/story/story.ts",
+        "bytes": 4796,
+        "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d"
+      },
+      {
+        "path": "lib/story/timeline.test.ts",
+        "bytes": 7998,
+        "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859"
+      },
+      {
+        "path": "lib/story/timeline.ts",
+        "bytes": 5697,
+        "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f"
+      },
+      {
+        "path": "lib/story/typeset.test.ts",
+        "bytes": 4495,
+        "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef"
+      },
+      {
+        "path": "lib/story/typeset.ts",
+        "bytes": 3329,
+        "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 1080,
+        "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42"
+      },
+      {
+        "path": "next.config.ts",
+        "bytes": 94,
+        "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2"
+      },
+      {
+        "path": "package-lock.json",
+        "bytes": 233717,
+        "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a"
+      },
+      {
+        "path": "package.json",
+        "bytes": 1015,
+        "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574"
+      },
+      {
+        "path": "postcss.config.mjs",
+        "bytes": 94,
+        "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+      },
+      {
+        "path": "public/assets/bring-up-fixture.svg",
+        "bytes": 1822,
+        "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae"
+      },
+      {
+        "path": "public/assets/power-states.svg",
+        "bytes": 1657,
+        "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8"
+      },
+      {
+        "path": "public/plain/face.svg",
+        "bytes": 309,
+        "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603"
+      },
+      {
+        "path": "public/plain/fan.svg",
+        "bytes": 775,
+        "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2"
+      },
+      {
+        "path": "README.md",
+        "bytes": 7501,
+        "sha256": "d38c8c0d1eb9c71183af486f95a21b2ca2acbfa8ba380d56edc5d970fc39d562"
+      },
+      {
+        "path": "scripts/check-lib.mjs",
+        "bytes": 4516,
+        "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30"
+      },
+      {
+        "path": "scripts/check-lib.test.mjs",
+        "bytes": 4110,
+        "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0"
+      },
+      {
+        "path": "scripts/check.mjs",
+        "bytes": 6620,
+        "sha256": "b9aee81c76df12eb24d74f15c956b614518b7021385cff2664768743e4c83ebe"
+      },
+      {
+        "path": "scripts/diagnose-reduced.mjs",
+        "bytes": 2527,
+        "sha256": "10d02fba06f45e2e5e56d0ece42244a41c75d33d8f47d5435e5fdc00504b60e8"
+      },
+      {
+        "path": "scripts/review-prototype.mjs",
+        "bytes": 4406,
+        "sha256": "bedb51c21c378bea55b4f7d9122f23a1ac29aa70886475a9b3ccbca7e9a064b7"
+      },
+      {
+        "path": "scripts/review-sheets.mjs",
+        "bytes": 4154,
+        "sha256": "083a43dcefef6c6dec5aa20c9b3748671346898bf6122b9a9503ddfd130dcb51"
+      },
+      {
+        "path": "scripts/shoot.mjs",
+        "bytes": 25709,
+        "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278"
+      },
+      {
+        "path": "tsconfig.json",
+        "bytes": 706,
+        "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d"
+      }
+    ],
+    "digest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "exclusions": [
+      "node_modules",
+      ".next",
+      ".git",
+      ".cache",
+      ".npm",
+      ".turbo",
+      "checks",
+      "test-results",
+      "playwright-report",
+      "browser-cache",
+      "*.tsbuildinfo",
+      "next-env.d.ts (Next-generated)",
+      "verified top-level hidden bare Git metadata trees (bounded layout and marker validation)"
+    ]
+  },
+  "visualReview": "unobserved: original pixels and semantic scene/control targets require separate review",
+  "error": "Error: Acceptance check interrupted\n    at file:///home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:346:28",
+  "finished": "2026-10-12T00:44:09.162Z",
+  "sourceAfter": {
+    "files": [
+      {
+        "path": ".agents/skills/storyfolio/engine/.gitignore",
+        "bytes": 69,
+        "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/AGENTS.md",
+        "bytes": 1055,
+        "sha256": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/globals.css",
+        "bytes": 263,
+        "sha256": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/layout.tsx",
+        "bytes": 299,
+        "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/page.tsx",
+        "bytes": 1271,
+        "sha256": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx",
+        "bytes": 446,
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/CLAUDE.md",
+        "bytes": 11,
+        "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/chapter.tsx",
+        "bytes": 1504,
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/conductor.tsx",
+        "bytes": 1479,
+        "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/controls.tsx",
+        "bytes": 882,
+        "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx",
+        "bytes": 1420,
+        "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/face-material.ts",
+        "bytes": 1714,
+        "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/faces.ts",
+        "bytes": 3025,
+        "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts",
+        "bytes": 1624,
+        "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts",
+        "bytes": 504,
+        "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/look-switch.tsx",
+        "bytes": 515,
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/meter.tsx",
+        "bytes": 731,
+        "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/overlay.tsx",
+        "bytes": 711,
+        "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/pieces.tsx",
+        "bytes": 7753,
+        "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/rail.tsx",
+        "bytes": 452,
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/scene.tsx",
+        "bytes": 4623,
+        "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/stage.tsx",
+        "bytes": 1230,
+        "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/story.css",
+        "bytes": 5859,
+        "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/story.tsx",
+        "bytes": 5735,
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/types.ts",
+        "bytes": 1324,
+        "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/use-look.ts",
+        "bytes": 897,
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts",
+        "bytes": 432,
+        "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts",
+        "bytes": 591,
+        "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/validate.test.ts",
+        "bytes": 2192,
+        "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/validate.ts",
+        "bytes": 1972,
+        "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx",
+        "bytes": 476,
+        "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/checks.json",
+        "bytes": 130,
+        "sha256": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/copy.ts",
+        "bytes": 1468,
+        "sha256": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/experience.tsx",
+        "bytes": 260,
+        "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx",
+        "bytes": 613,
+        "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/extras.ts",
+        "bytes": 91,
+        "sha256": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/faces.ts",
+        "bytes": 883,
+        "sha256": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/formations.ts",
+        "bytes": 942,
+        "sha256": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/index.ts",
+        "bytes": 427,
+        "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/links.ts",
+        "bytes": 130,
+        "sha256": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/looks.ts",
+        "bytes": 645,
+        "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/sketches/index.ts",
+        "bytes": 238,
+        "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/content/story.ts",
+        "bytes": 518,
+        "sha256": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/eslint.config.mjs",
+        "bytes": 309,
+        "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/camera.test.ts",
+        "bytes": 6594,
+        "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/camera.ts",
+        "bytes": 5201,
+        "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/controls.test.ts",
+        "bytes": 1608,
+        "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/controls.ts",
+        "bytes": 1054,
+        "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/formation.test.ts",
+        "bytes": 5294,
+        "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/formation.ts",
+        "bytes": 5414,
+        "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts",
+        "bytes": 2728,
+        "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/layouts.ts",
+        "bytes": 4733,
+        "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/looks.test.ts",
+        "bytes": 1238,
+        "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/looks.ts",
+        "bytes": 1262,
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts",
+        "bytes": 1844,
+        "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/overlay.ts",
+        "bytes": 3252,
+        "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/quality.test.ts",
+        "bytes": 1838,
+        "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/quality.ts",
+        "bytes": 1762,
+        "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/rand.test.ts",
+        "bytes": 567,
+        "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/rand.ts",
+        "bytes": 384,
+        "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/story.test.ts",
+        "bytes": 4065,
+        "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/story.ts",
+        "bytes": 4796,
+        "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts",
+        "bytes": 7998,
+        "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/timeline.ts",
+        "bytes": 5697,
+        "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts",
+        "bytes": 4495,
+        "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/lib/story/typeset.ts",
+        "bytes": 3329,
+        "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/LICENSE",
+        "bytes": 1080,
+        "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/next.config.ts",
+        "bytes": 94,
+        "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/package-lock.json",
+        "bytes": 233717,
+        "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/package.json",
+        "bytes": 1015,
+        "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/postcss.config.mjs",
+        "bytes": 94,
+        "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/public/plain/face.svg",
+        "bytes": 309,
+        "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/public/plain/fan.svg",
+        "bytes": 775,
+        "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/README.md",
+        "bytes": 6746,
+        "sha256": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/check-lib.mjs",
+        "bytes": 4516,
+        "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs",
+        "bytes": 4110,
+        "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/check.mjs",
+        "bytes": 6374,
+        "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/scripts/shoot.mjs",
+        "bytes": 25709,
+        "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278"
+      },
+      {
+        "path": ".agents/skills/storyfolio/engine/tsconfig.json",
+        "bytes": 706,
+        "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/asking.md",
+        "bytes": 1486,
+        "sha256": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/concept.md",
+        "bytes": 7863,
+        "sha256": "ba0780577d3157824d81c36b40374141d52df5e88ef67deee175792f4793dab1"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/reading-a-profile.md",
+        "bytes": 5537,
+        "sha256": "4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca"
+      },
+      {
+        "path": ".agents/skills/storyfolio/references/storyboard.md",
+        "bytes": 4016,
+        "sha256": "e3d7cdf941359b01863c8196a793ede1c1bb70522a934fbe9c4f5f3dd20c97d6"
+      },
+      {
+        "path": ".agents/skills/storyfolio/scripts/scaffold.mjs",
+        "bytes": 3566,
+        "sha256": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688"
+      },
+      {
+        "path": ".agents/skills/storyfolio/scripts/scaffold.test.mjs",
+        "bytes": 4044,
+        "sha256": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac"
+      },
+      {
+        "path": ".agents/skills/storyfolio/SKILL.md",
+        "bytes": 4790,
+        "sha256": "cea93b6a009a405d4bd0497e5a8e1bdae53901259a9a7739e334008a0274cee2"
+      },
+      {
+        "path": ".gitignore",
+        "bytes": 69,
+        "sha256": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f"
+      },
+      {
+        "path": "AGENTS.md",
+        "bytes": 1734,
+        "sha256": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8"
+      },
+      {
+        "path": "app/globals.css",
+        "bytes": 2017,
+        "sha256": "55d121f40a3f11068be3ff68e508a2a9ae59c0687c1eb684c2fd3a37132377bf"
+      },
+      {
+        "path": "app/layout.tsx",
+        "bytes": 299,
+        "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c"
+      },
+      {
+        "path": "app/page.tsx",
+        "bytes": 833,
+        "sha256": "3654c188b6939097d3478919f3ed9da0be670d8b70287aba64582f7932d2f877"
+      },
+      {
+        "path": "app/sketch/[id]/page.tsx",
+        "bytes": 446,
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+      },
+      {
+        "path": "CLAUDE.md",
+        "bytes": 11,
+        "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+      },
+      {
+        "path": "components/story/chapter.tsx",
+        "bytes": 1504,
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": "components/story/conductor.tsx",
+        "bytes": 1513,
+        "sha256": "cd46bd834c77b76e6f28a03e3a50c9de743d833c2a6143fa60a3d4e2417d33f0"
+      },
+      {
+        "path": "components/story/controls.tsx",
+        "bytes": 882,
+        "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c"
+      },
+      {
+        "path": "components/story/extra-frame.tsx",
+        "bytes": 1420,
+        "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449"
+      },
+      {
+        "path": "components/story/face-material.ts",
+        "bytes": 1725,
+        "sha256": "c7b77fded80aa552de7200a4619870b6c4918abea17e68371593a556ec36b8fc"
+      },
+      {
+        "path": "components/story/faces.ts",
+        "bytes": 3099,
+        "sha256": "32ddbf95ff8cb6d7dd6e29e22983fe25be5cd0408586bcf84eb5db7da44c1494"
+      },
+      {
+        "path": "components/story/guard-extra-callback.test.ts",
+        "bytes": 1624,
+        "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3"
+      },
+      {
+        "path": "components/story/guard-extra-callback.ts",
+        "bytes": 504,
+        "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9"
+      },
+      {
+        "path": "components/story/look-switch.tsx",
+        "bytes": 515,
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": "components/story/meter.tsx",
+        "bytes": 731,
+        "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a"
+      },
+      {
+        "path": "components/story/overlay.tsx",
+        "bytes": 711,
+        "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d"
+      },
+      {
+        "path": "components/story/pieces.tsx",
+        "bytes": 7753,
+        "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f"
+      },
+      {
+        "path": "components/story/rail.tsx",
+        "bytes": 452,
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": "components/story/scene.tsx",
+        "bytes": 4685,
+        "sha256": "9d8a3ecbef136fce47ab5c3b5eff0822613b269980603baedca8986c9aa6cacf"
+      },
+      {
+        "path": "components/story/stage.tsx",
+        "bytes": 1230,
+        "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792"
+      },
+      {
+        "path": "components/story/story.css",
+        "bytes": 5859,
+        "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23"
+      },
+      {
+        "path": "components/story/story.tsx",
+        "bytes": 5735,
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      },
+      {
+        "path": "components/story/types.ts",
+        "bytes": 1521,
+        "sha256": "6c44fdf12922926822180e6950e5084b722508648be5a97336ac257a3b6c0520"
+      },
+      {
+        "path": "components/story/use-look.ts",
+        "bytes": 897,
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+      },
+      {
+        "path": "components/story/use-reduced-motion.ts",
+        "bytes": 432,
+        "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e"
+      },
+      {
+        "path": "components/story/use-webgl-supported.ts",
+        "bytes": 591,
+        "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419"
+      },
+      {
+        "path": "components/story/validate.test.ts",
+        "bytes": 2192,
+        "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9"
+      },
+      {
+        "path": "components/story/validate.ts",
+        "bytes": 1972,
+        "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b"
+      },
+      {
+        "path": "components/story/webgl-boundary.tsx",
+        "bytes": 476,
+        "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a"
+      },
+      {
+        "path": "content/apparatus.tsx",
+        "bytes": 1281,
+        "sha256": "5df7c69c1f70527ba2191f4b995904de63ada3cd264a59fad4547bf031b4ea89"
+      },
+      {
+        "path": "content/checks.json",
+        "bytes": 3,
+        "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+      },
+      {
+        "path": "content/copy.ts",
+        "bytes": 3522,
+        "sha256": "9785d87105496461134dc24157fd143d69a861052bca67a7f5ee26bbf7cd401d"
+      },
+      {
+        "path": "content/experience.tsx",
+        "bytes": 260,
+        "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35"
+      },
+      {
+        "path": "content/extras/connections.tsx",
+        "bytes": 2140,
+        "sha256": "2fcfa7a78a48d6b12f5d6660d380f5aed4872ead4aaf9814f9e23124d4a8c80e"
+      },
+      {
+        "path": "content/extras/middle-line.tsx",
+        "bytes": 613,
+        "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c"
+      },
+      {
+        "path": "content/extras.ts",
+        "bytes": 405,
+        "sha256": "49c8512c9d6c022d329945b7b4ccfda9a9b1f2dd0f5b61212dc3fccd5b68ba80"
+      },
+      {
+        "path": "content/faces.ts",
+        "bytes": 2348,
+        "sha256": "02b5b8740d09f70575ca0df57f1f09ab909c71167c87109249eb85201dd09890"
+      },
+      {
+        "path": "content/formations.ts",
+        "bytes": 1443,
+        "sha256": "426b517a04edd9089543996cf3f6867c93c4e3543ebdf393cfaa2cde276e4899"
+      },
+      {
+        "path": "content/index.ts",
+        "bytes": 498,
+        "sha256": "23ee84fd6d49bcc4b5f19f6d64e10050aab827c8bb1d8f5075bf2c7bfe15b0df"
+      },
+      {
+        "path": "content/links.ts",
+        "bytes": 25,
+        "sha256": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb"
+      },
+      {
+        "path": "content/looks.ts",
+        "bytes": 365,
+        "sha256": "86ac6762acbe8173cab94528145b6e24e91baa918896f6c9bbe49c0185f69863"
+      },
+      {
+        "path": "content/sketches/index.ts",
+        "bytes": 238,
+        "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0"
+      },
+      {
+        "path": "content/story.ts",
+        "bytes": 814,
+        "sha256": "18a4e6c3f8a702c645c7adf674c42f744a7bb8b0b21351fed2217f4af56b54be"
+      },
+      {
+        "path": "docs/story/assets.md",
+        "bytes": 2670,
+        "sha256": "7f4536e83afc260695a7d6c083c1a1f5b544c153f1f101ff59980a7d8c12b3d7"
+      },
+      {
+        "path": "docs/story/concepts.md",
+        "bytes": 438,
+        "sha256": "e7a1a0ed4fe85cb0788a5429c6ebbb3f68d3839cef7eb1c3946e9e06df39d41c"
+      },
+      {
+        "path": "docs/story/confirmations.md",
+        "bytes": 2860,
+        "sha256": "6ff8a114771b9a011db3d4b392168e61a96cc557f58e1b5b21026b9cfa2a723d"
+      },
+      {
+        "path": "docs/story/decided-for-you.md",
+        "bytes": 2281,
+        "sha256": "d7591c4751a909b7b75d5373807434f974b56166d6312c3ef2a37012ad53598e"
+      },
+      {
+        "path": "docs/story/environment-setup.json",
+        "bytes": 1148,
+        "sha256": "3e69141f658b87536e43f4bfa3efce3504495f05b7526e43a6149a938b8c8c33"
+      },
+      {
+        "path": "docs/story/evaluation-environment.md",
+        "bytes": 2090,
+        "sha256": "69f8f5e245f564ae3b0de1d800fe4ca288037cfb8b2e502c9805009d0b5c7dc5"
+      },
+      {
+        "path": "docs/story/facts.md",
+        "bytes": 3558,
+        "sha256": "875d120eaa2066e2d4925a436744fe61e3a86b73c86be2dfc5c9503d3a0fde3e"
+      },
+      {
+        "path": "docs/story/handover.md",
+        "bytes": 6618,
+        "sha256": "b95b9e6153e40d78f712a18abdab49f046a48c0b7ff4f97c85689f49c0221361"
+      },
+      {
+        "path": "docs/story/review/production-manifest.json",
+        "bytes": 10424,
+        "sha256": "275974e4fe84fc745fa4149b78b8421b2b71b0211457224b2450fa5032ba2c1e"
+      },
+      {
+        "path": "docs/story/review/supplemental-report.json",
+        "bytes": 1610,
+        "sha256": "087240594182af7b27acc6a9cd1818f1a8fcd73e28aeb17d2d49449f576ac102"
+      },
+      {
+        "path": "docs/story/storyboard.md",
+        "bytes": 3766,
+        "sha256": "1c6f4aca73dea7edb93f927635204934292359f8050e384cf35fbb69a8ec59e6"
+      },
+      {
+        "path": "eslint.config.mjs",
+        "bytes": 309,
+        "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b"
+      },
+      {
+        "path": "lib/story/apparatus.test.ts",
+        "bytes": 1410,
+        "sha256": "881439416c2eede43ed3be9a9ee00f523fd2012842751a99bf6906f68b386e8d"
+      },
+      {
+        "path": "lib/story/camera.test.ts",
+        "bytes": 6594,
+        "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1"
+      },
+      {
+        "path": "lib/story/camera.ts",
+        "bytes": 5201,
+        "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad"
+      },
+      {
+        "path": "lib/story/controls.test.ts",
+        "bytes": 1608,
+        "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528"
+      },
+      {
+        "path": "lib/story/controls.ts",
+        "bytes": 1054,
+        "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406"
+      },
+      {
+        "path": "lib/story/formation.test.ts",
+        "bytes": 5294,
+        "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc"
+      },
+      {
+        "path": "lib/story/formation.ts",
+        "bytes": 5414,
+        "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe"
+      },
+      {
+        "path": "lib/story/layouts.test.ts",
+        "bytes": 2728,
+        "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0"
+      },
+      {
+        "path": "lib/story/layouts.ts",
+        "bytes": 4733,
+        "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5"
+      },
+      {
+        "path": "lib/story/looks.test.ts",
+        "bytes": 1238,
+        "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9"
+      },
+      {
+        "path": "lib/story/looks.ts",
+        "bytes": 1262,
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+      },
+      {
+        "path": "lib/story/overlay.test.ts",
+        "bytes": 1844,
+        "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4"
+      },
+      {
+        "path": "lib/story/overlay.ts",
+        "bytes": 3252,
+        "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce"
+      },
+      {
+        "path": "lib/story/quality.test.ts",
+        "bytes": 1838,
+        "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023"
+      },
+      {
+        "path": "lib/story/quality.ts",
+        "bytes": 1762,
+        "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc"
+      },
+      {
+        "path": "lib/story/rand.test.ts",
+        "bytes": 567,
+        "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f"
+      },
+      {
+        "path": "lib/story/rand.ts",
+        "bytes": 384,
+        "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8"
+      },
+      {
+        "path": "lib/story/story.test.ts",
+        "bytes": 4065,
+        "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563"
+      },
+      {
+        "path": "lib/story/story.ts",
+        "bytes": 4796,
+        "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d"
+      },
+      {
+        "path": "lib/story/timeline.test.ts",
+        "bytes": 7998,
+        "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859"
+      },
+      {
+        "path": "lib/story/timeline.ts",
+        "bytes": 5697,
+        "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f"
+      },
+      {
+        "path": "lib/story/typeset.test.ts",
+        "bytes": 4495,
+        "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef"
+      },
+      {
+        "path": "lib/story/typeset.ts",
+        "bytes": 3329,
+        "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 1080,
+        "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42"
+      },
+      {
+        "path": "next.config.ts",
+        "bytes": 94,
+        "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2"
+      },
+      {
+        "path": "package-lock.json",
+        "bytes": 233717,
+        "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a"
+      },
+      {
+        "path": "package.json",
+        "bytes": 1015,
+        "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574"
+      },
+      {
+        "path": "postcss.config.mjs",
+        "bytes": 94,
+        "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+      },
+      {
+        "path": "public/assets/bring-up-fixture.svg",
+        "bytes": 1822,
+        "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae"
+      },
+      {
+        "path": "public/assets/power-states.svg",
+        "bytes": 1657,
+        "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8"
+      },
+      {
+        "path": "public/plain/face.svg",
+        "bytes": 309,
+        "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603"
+      },
+      {
+        "path": "public/plain/fan.svg",
+        "bytes": 775,
+        "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2"
+      },
+      {
+        "path": "README.md",
+        "bytes": 7501,
+        "sha256": "d38c8c0d1eb9c71183af486f95a21b2ca2acbfa8ba380d56edc5d970fc39d562"
+      },
+      {
+        "path": "scripts/check-lib.mjs",
+        "bytes": 4516,
+        "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30"
+      },
+      {
+        "path": "scripts/check-lib.test.mjs",
+        "bytes": 4110,
+        "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0"
+      },
+      {
+        "path": "scripts/check.mjs",
+        "bytes": 6620,
+        "sha256": "b9aee81c76df12eb24d74f15c956b614518b7021385cff2664768743e4c83ebe"
+      },
+      {
+        "path": "scripts/diagnose-reduced.mjs",
+        "bytes": 2527,
+        "sha256": "10d02fba06f45e2e5e56d0ece42244a41c75d33d8f47d5435e5fdc00504b60e8"
+      },
+      {
+        "path": "scripts/review-prototype.mjs",
+        "bytes": 4406,
+        "sha256": "bedb51c21c378bea55b4f7d9122f23a1ac29aa70886475a9b3ccbca7e9a064b7"
+      },
+      {
+        "path": "scripts/review-sheets.mjs",
+        "bytes": 4154,
+        "sha256": "083a43dcefef6c6dec5aa20c9b3748671346898bf6122b9a9503ddfd130dcb51"
+      },
+      {
+        "path": "scripts/shoot.mjs",
+        "bytes": 25709,
+        "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278"
+      },
+      {
+        "path": "tsconfig.json",
+        "bytes": 706,
+        "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d"
+      }
+    ],
+    "digest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "exclusions": [
+      "node_modules",
+      ".next",
+      ".git",
+      ".cache",
+      ".npm",
+      ".turbo",
+      "checks",
+      "test-results",
+      "playwright-report",
+      "browser-cache",
+      "*.tsbuildinfo",
+      "next-env.d.ts (Next-generated)",
+      "verified top-level hidden bare Git metadata trees (bounded layout and marker validation)"
+    ]
+  },
+  "sourceUnchanged": true,
+  "passed": false,
+  "artifacts": {
+    "build.log": "87d75e7af85ebb16b2db5c418de43944f1723580cb099375a3e8878e7705999c",
+    "desktop/00-question-end.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "desktop/00-question-mid.png": "afe7b60d13cdef2901d87a776305ec30500c672b97849f7ec0a89828f08f272e",
+    "desktop/01-scheduling-end.png": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+    "desktop/01-scheduling-mid.png": "b81959470359e481745a750718c329de3cbf5e7d4d12752640edc7024af9eb05",
+    "desktop/02-bench-end.png": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+    "desktop/02-bench-mid.png": "b41523b47b6b92117bc5dfd429e87f91c89d7e9e83a92f4e832d523054963a3c",
+    "desktop/03-evidence-end.png": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+    "desktop/03-evidence-mid.png": "2826e1068f9bfaed556871273542e6a82640d76424b28318860dd6afd4308739",
+    "desktop/04-scope-end.png": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+    "desktop/04-scope-mid.png": "9cda00a4b69f31f3dec161becb1d2c3aa8e08db64992e58227d844645561c8b9",
+    "desktop/control-0834ce7be807e94d-keyboard-after.png": "ec9913bb35c376c43424bebdf3df3025cbdd52d8468ce128036168eb70d409e8",
+    "desktop/control-0834ce7be807e94d-keyboard-before.png": "00c9141b09dd46efe9733d35d70709e75b0ec3bdcd8a9eb1ad239ccdcbb02d30",
+    "desktop/control-0834ce7be807e94d-pointer-after.png": "245fb5343ac42cbab7eb6b25071d80f2633962ddca4beb802c1a06efa5b8de4f",
+    "desktop/control-0834ce7be807e94d-pointer-before.png": "6039eac552d0e5e0545282982df86330a955e7d45ae974c139c6bda830f0f51a",
+    "desktop/control-229673414fdef73d-keyboard-after.png": "458c2e85fe89abf560c2f2d470742013ee2e191ca423f3b1c4291d7d0f4605e9",
+    "desktop/control-229673414fdef73d-keyboard-before.png": "4acb064600164e8b7219e19280e558edcf4ab3153f1bbaa256fe49c7d20e58bc",
+    "desktop/control-229673414fdef73d-pointer-after.png": "24defb0589b8baf55df29d577d9d93cb8eb22e1f77e613a09b7a42a7bf268277",
+    "desktop/control-229673414fdef73d-pointer-before.png": "32970a6f92d6d9dc9c53a2c30ca1d1b786884481c83e9404cfd6d1a7a3ab3cb3",
+    "desktop/control-57ef510c22f051aa-keyboard-after.png": "06485af13e41de368caed9cc62287108469e63ad1619dc90cf028f3fef841921",
+    "desktop/control-57ef510c22f051aa-keyboard-before.png": "21bb80b128e0e1af077cd21c3d1feebe02b1ca4989fb9d9c889bccc5f2a7183c",
+    "desktop/control-57ef510c22f051aa-pointer-unfocused.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "desktop/control-9cad870ea554ec2a-keyboard-after.png": "afe7b60d13cdef2901d87a776305ec30500c672b97849f7ec0a89828f08f272e",
+    "desktop/control-9cad870ea554ec2a-keyboard-before.png": "913473661b097de5a7aaa09b4af8774152ac8c89688c768b1b4e5bf23320ef06",
+    "desktop/control-9cad870ea554ec2a-pointer-after.png": "9a23de3acabbc1259887bd9e3e7aa478b9e53ebc7f6c3816b7997018821b909c",
+    "desktop/control-9cad870ea554ec2a-pointer-before.png": "3bd01dd0dbb8e0ea48b394ec82e7b0c563998abaf0878c321360cd8a61a64cc3",
+    "desktop/control-9eb58dcb119c043b-keyboard-after.png": "3262640a1b1e71dba505b1ac2a237e85c41dc287e38b39d9a7abf9fcff09b7b9",
+    "desktop/control-9eb58dcb119c043b-keyboard-before.png": "9a1989ba03f0d5e2a0fe31e2c6e5eff6e0bc7f18bc5345395739ce446a41df97",
+    "desktop/control-9eb58dcb119c043b-pointer-after.png": "9561860fdf87f920c001ddb734c9401a3e53503b4f1661a517ba66a73a773487",
+    "desktop/control-9eb58dcb119c043b-pointer-before.png": "5fa69b72a08aaef4decd72c9ec99aa5a1860f72e482a96b7519116040d91b6a9",
+    "desktop/control-fa5f87289d477f00-keyboard-after.png": "bfd82b759973489346c8fa1f2ceded5953357644e288be44dbb280e6bc1e0137",
+    "desktop/control-fa5f87289d477f00-keyboard-before.png": "f5c9c7772877ce5893674796015fc6f3f19a455aba895244f59b9cfd493505bf",
+    "desktop/control-fa5f87289d477f00-pointer-after.png": "186e6920d136d28e14f432ef841b477775cb863e1dbdddf3a935080f7ea9e3d6",
+    "desktop/control-fa5f87289d477f00-pointer-before.png": "c1232c5ebdb25c4cccb34ca45881f8abbec38b19b35d12d33cc80c38a4247ae8",
+    "desktop/rendered.html": "d3f3f6fb6126af1c3aa89b38cdd15d1bee15cb7af57a504980fc8cdf3f7bdc0f",
+    "desktop/report.json": "92aa130e91bb33e8fd284adb6f1411d497ba151ba00f48effaceddf65e2dcb17",
+    "desktop/response.html": "f80a2b24fabe02aa03f500853ef504b61159a0d4b9d6544a67807c8423de4678",
+    "desktop/rest-bench.png": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+    "desktop/rest-evidence.png": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+    "desktop/rest-question.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "desktop/rest-scheduling.png": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+    "desktop/rest-scope.png": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+    "desktop/travel-forward-bench-evidence-0.2.jpg": "4f6fa578695948a18a13f603c7af9123dbdd4a60db1b344741ef7416484576ef",
+    "desktop/travel-forward-bench-evidence-0.5.jpg": "9cc3d8f2050b2cb76bb57bbe6a17cb5f28cf38bc659782aef85ad0e165b9a3c9",
+    "desktop/travel-forward-bench-evidence-0.8.jpg": "2a9ebafc4baec13a13fb15706ab085b1a21845a53cd4ac010e6463e27c6480cf",
+    "desktop/travel-forward-evidence-scope-0.2.jpg": "43687b167490a751b19f7d278fc704698eb6258f9a45eb2f5f16d40360379331",
+    "desktop/travel-forward-evidence-scope-0.5.jpg": "e286418c57b7ea2068cae3bacbbe6aa8fda4e30705fd648f3a5ade9d1a32a436",
+    "desktop/travel-forward-evidence-scope-0.8.jpg": "3103d240c2486bb8b273602f4ddcd9c895edb2af256fa5fe9d51f8ce9c1fccf6",
+    "desktop/travel-forward-question-scheduling-0.2.jpg": "fba02635320470421a7de71bb3c9f782beabb5ab8376857f4ea9cfb01a4bb8b2",
+    "desktop/travel-forward-question-scheduling-0.5.jpg": "b7dd9b8c7b2f7a8493258e637452b853800cfbdf5fcf070998538f7d4a17364d",
+    "desktop/travel-forward-question-scheduling-0.8.jpg": "cef1e60144ec778997b09d3416dcc10e063e7ff5455341beccfb05f1a7ac99d4",
+    "desktop/travel-forward-scheduling-bench-0.2.jpg": "462b58d4b5e404442644dd3c972136eda6681fc72975702be7cbdbf57fe1cfe3",
+    "desktop/travel-forward-scheduling-bench-0.5.jpg": "7a9fc891d0b2b3f97ff9be91b21cdc0b4a188ba0db2a4eeb4349b3257552d6c0",
+    "desktop/travel-forward-scheduling-bench-0.8.jpg": "137ab24e1fe82e79e0e5150b26bc6f5878626718c9baeb5e432bc1ade0bab5e9",
+    "desktop/travel-reverse-bench-scheduling-0.2.jpg": "0ca32e29e0eec5b40601437b54db6f7b05301bf2bb917c6b95810751f0ad3b28",
+    "desktop/travel-reverse-bench-scheduling-0.5.jpg": "77ac7dfd7e9a3d11e2322b14ca32bc8f5d0a13d910c696b12c8989570bb8c6fc",
+    "desktop/travel-reverse-bench-scheduling-0.8.jpg": "262fd2fab5786d19fb10f29cb1dc109bd47e602d0ec25c2bac847d3df282c207",
+    "desktop/travel-reverse-evidence-bench-0.2.jpg": "9a059c40a5613f69d4412f050ca8035707e21501fe1ad3351d8c44170b1f6295",
+    "desktop/travel-reverse-evidence-bench-0.5.jpg": "90450e20a368324f81cc440b0d93c4d1621bd98272c1f947844ded25353fc1e7",
+    "desktop/travel-reverse-evidence-bench-0.8.jpg": "503f372a8ea3c306525e540e94993ca8c6cf5e8202dfa20b93fedb4377775763",
+    "desktop/travel-reverse-scheduling-question-0.2.jpg": "a56a2355fedc13b4dc81707985c9c57cc75fd1aa2d7cca803541bc5b79fa924a",
+    "desktop/travel-reverse-scheduling-question-0.5.jpg": "28a88d73c3f3ab59e9c593314b1c95416695bce19a4dc7c847cbb31c75853199",
+    "desktop/travel-reverse-scheduling-question-0.8.jpg": "7fef64e0123a3cfa894b3ad58d25d222c726c0b5f7c276d00c2106cd1bac301c",
+    "desktop/travel-reverse-scope-evidence-0.2.jpg": "f4e730117fd5422dac4e3cee23c9451a8b9d193b57ff2f3dd113f99870c9ff4c",
+    "desktop/travel-reverse-scope-evidence-0.5.jpg": "b7b99f738051d781160c969d5cd726dc160b27f8900c7316798d5ebd60f97c65",
+    "desktop/travel-reverse-scope-evidence-0.8.jpg": "e08d159de30b725443343a6a6c767c3e37ea4ba756d04f67eddc8172991128bc",
+    "eslint.acceptance.mjs": "ba357bb599b1625c7df4319d014b1012cb21afa1dd5884fcae2f953c0decbf9d",
+    "expectations.json": "763c797bf82617393171e8c85fd5b64cce7337830c79ee9b0a5e342814e4405f",
+    "lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mobile/00-question-end.png": "3e66ee2680e714ac25d86f99f9faacaf1062744cc29d7977d13b58838b32d71d",
+    "mobile/00-question-mid.png": "fff7b87eb44e051120c53701c3bf1ba0e354d17399907c86ac3d8a222dbcafa5",
+    "mobile/01-scheduling-end.png": "21f16490c5b98d2255f8794a8e5eb5342c2e56e6f9831abee3b71fa5d061fb03",
+    "mobile/01-scheduling-mid.png": "35cf0397ddda1334d71f5e6959f728bf618a59e7ce3d428ef7d9e94cf15f5a69",
+    "mobile/02-bench-end.png": "8f6b11eb1cd2f0d9ca99c5fede62a2c1411db9bfb9f749db773a4638494732c6",
+    "mobile/02-bench-mid.png": "835c5f22615553107147dfb71df20a42016201c27d53a87ad85ff1c3c3144077",
+    "mobile/03-evidence-end.png": "5e526669886820d5cf3f4144fc93002e03fc8f7fd216624fbfdfbfe28dda4af1",
+    "mobile/03-evidence-mid.png": "bdc627bd263af0fc82637032f8c893951a3b244a8ca170b3240ccdcbb0c7b535",
+    "mobile/04-scope-end.png": "cd52d5ea18a007e8e3362b20a23b42eef7aae391863f853a4e914f714239af99",
+    "mobile/04-scope-mid.png": "ad3c1082c2658d391020499d09ed6b62a064a7b2cdcd16992a78b2001138f036",
+    "mobile/control-57ef510c22f051aa-keyboard-after.png": "c552d711702a725bf0afc52095a6b0e3306c68c0de802cbb78493fceda92c030",
+    "mobile/control-57ef510c22f051aa-keyboard-before.png": "2d12d5e0163b18238aa22afd28b9333597d454db642af008dd3e4367d2fcdc5d",
+    "mobile/control-57ef510c22f051aa-pointer-unfocused.png": "3e66ee2680e714ac25d86f99f9faacaf1062744cc29d7977d13b58838b32d71d",
+    "mobile/rendered.html": "b719755c4967b86dd9091a19541b9ad1e8236a6ff3f09f76860a40d573fa69cc",
+    "mobile/report.json": "fe92824e000cd18533a30a0a93d4f9589f77a3b0c62ea5c6907c8b56cb804484",
+    "mobile/response.html": "f80a2b24fabe02aa03f500853ef504b61159a0d4b9d6544a67807c8423de4678",
+    "mobile/rest-bench.png": "8f6b11eb1cd2f0d9ca99c5fede62a2c1411db9bfb9f749db773a4638494732c6",
+    "mobile/rest-evidence.png": "5e526669886820d5cf3f4144fc93002e03fc8f7fd216624fbfdfbfe28dda4af1",
+    "mobile/rest-question.png": "3e66ee2680e714ac25d86f99f9faacaf1062744cc29d7977d13b58838b32d71d",
+    "mobile/rest-scheduling.png": "21f16490c5b98d2255f8794a8e5eb5342c2e56e6f9831abee3b71fa5d061fb03",
+    "mobile/rest-scope.png": "cd52d5ea18a007e8e3362b20a23b42eef7aae391863f853a4e914f714239af99",
+    "mobile/travel-forward-bench-evidence-0.2.jpg": "edca546d8a0c6ffa0851ae52680b3070e07d5be6d944a729ba77894c638019ea",
+    "mobile/travel-forward-bench-evidence-0.5.jpg": "2a50fd09dfaf8402f992fe6ee8eee2425faa46f0018c26ea9c1e8fce7c89b2b5",
+    "mobile/travel-forward-bench-evidence-0.8.jpg": "1a87d99e756c5054ef3c66da78e8a6e7616378e51c315a6c71fc4570fc93b570",
+    "mobile/travel-forward-evidence-scope-0.2.jpg": "4c5ef6442aadd6c3ccc27d31b8bb409bcc149b67ce42cd056fbce1ac18a97a47",
+    "mobile/travel-forward-evidence-scope-0.5.jpg": "99d51300328b9651d55de883f410c60c576bbca82fdc1eaad05dcc35c3f9e495",
+    "mobile/travel-forward-evidence-scope-0.8.jpg": "1748dea2b291f439227c6fd5db20b4a19cd4900f1af4a5cb6f9abd246837516b",
+    "mobile/travel-forward-question-scheduling-0.2.jpg": "93cfafa24ba8e95697c59ed710950b934eb100de0bf53a78e0f621a29b295acc",
+    "mobile/travel-forward-question-scheduling-0.5.jpg": "69f980ff4c6ebfbd86c969ab6becead8f03ff52160a9877169989d8554156ecf",
+    "mobile/travel-forward-question-scheduling-0.8.jpg": "a2955322e8377d106a0797d119485d42ada0273e247524330830293811fdfb19",
+    "mobile/travel-forward-scheduling-bench-0.2.jpg": "5c72b689aa7896a38b27b6a99771897109ec676a786e8aa1fc640a651cb39c43",
+    "mobile/travel-forward-scheduling-bench-0.5.jpg": "8ba642d32b37d4f1ca4a6e1463dd4c5efab3280ec6f8bb9307e355de6d890fd0",
+    "mobile/travel-forward-scheduling-bench-0.8.jpg": "c5f611d6b323c6c155e01ba4d9a49845c9e90b5f066ba0dea5000740970916e5",
+    "mobile/travel-reverse-bench-scheduling-0.2.jpg": "14ce1a4cd0459bd85f39ee250bef1e6105a79baa98c380146163659e11153a58",
+    "mobile/travel-reverse-bench-scheduling-0.5.jpg": "dd9f7d34d7dee41b33e5d67ec1bc49bd57f4c59727e94f6942293307cea6f1f8",
+    "mobile/travel-reverse-bench-scheduling-0.8.jpg": "718a465047dbf11918a5f270ac1661d18d8c9bac6402d295f91347d15449da04",
+    "mobile/travel-reverse-evidence-bench-0.2.jpg": "789fe744ac35de395fc68f679403eaa5a64fff140e78161e5f788a9176cca7f6",
+    "mobile/travel-reverse-evidence-bench-0.5.jpg": "cf37f39cc5c3235d63e2d69b2ad831409bed51bf44a2c32418c37660b86aa03d",
+    "mobile/travel-reverse-evidence-bench-0.8.jpg": "95cc73bdd39078b01aa9212fd8e6b52965067ebd18be3ef34b787a5693c9ed6f",
+    "mobile/travel-reverse-scheduling-question-0.2.jpg": "7c61e9363130277a9b22fe5af3e9557e1cbbe4ddf243f18b32d5b41727db3124",
+    "mobile/travel-reverse-scheduling-question-0.5.jpg": "41475b2f057df84d2d6ecbda8b55b5aeb189dae440cf03fb74e32ad0b017cf54",
+    "mobile/travel-reverse-scheduling-question-0.8.jpg": "47e18e6e2156b920e636e893f17f6bf667c7f7ff206c115c172bf69c56020871",
+    "mobile/travel-reverse-scope-evidence-0.2.jpg": "7c164dcbc32c543e7245df9343d0fa897272da922e772455ee07a3604bd3e890",
+    "mobile/travel-reverse-scope-evidence-0.5.jpg": "186f706221fd66713552f6c61412f6cca0535b4b6acfa7d7b72da1ecfa5d6e41",
+    "mobile/travel-reverse-scope-evidence-0.8.jpg": "45d7796f327d06db9ca5895f7c46ae9f30753970d8c98a59a02fa6528779686e",
+    "reduced-motion/00-question-end.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/00-question-mid.png": "afe7b60d13cdef2901d87a776305ec30500c672b97849f7ec0a89828f08f272e",
+    "reduced-motion/01-scheduling-end.png": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+    "reduced-motion/01-scheduling-mid.png": "b81959470359e481745a750718c329de3cbf5e7d4d12752640edc7024af9eb05",
+    "reduced-motion/02-bench-end.png": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+    "reduced-motion/02-bench-mid.png": "b41523b47b6b92117bc5dfd429e87f91c89d7e9e83a92f4e832d523054963a3c",
+    "reduced-motion/03-evidence-end.png": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+    "reduced-motion/03-evidence-mid.png": "2826e1068f9bfaed556871273542e6a82640d76424b28318860dd6afd4308739",
+    "reduced-motion/04-scope-end.png": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+    "reduced-motion/04-scope-mid.png": "9cda00a4b69f31f3dec161becb1d2c3aa8e08db64992e58227d844645561c8b9",
+    "reduced-motion/control-229673414fdef73d-keyboard-after.png": "ef7d79b907e9171e9d9886db0eb5b345b0451276fac68ac1cf73fe712ae4207f",
+    "reduced-motion/control-229673414fdef73d-keyboard-before.png": "23aac36fd215957ea5ff0a9a52d30e81a0e7e67360c969e2722cfe8ba0146894",
+    "reduced-motion/control-229673414fdef73d-pointer-after.png": "458c2e85fe89abf560c2f2d470742013ee2e191ca423f3b1c4291d7d0f4605e9",
+    "reduced-motion/control-229673414fdef73d-pointer-before.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/control-57ef510c22f051aa-keyboard-after.png": "36dc6dedf2a3091f25f59c9b500191dccea4a0ce5aee78d3aecd57e36a44a23f",
+    "reduced-motion/control-57ef510c22f051aa-keyboard-before.png": "21bb80b128e0e1af077cd21c3d1feebe02b1ca4989fb9d9c889bccc5f2a7183c",
+    "reduced-motion/control-57ef510c22f051aa-pointer-unfocused.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/control-9cad870ea554ec2a-keyboard-after.png": "959fdd7ad999671463e8d2c6bdfc518f929ba255346e2bbe45262ce13e0bc55b",
+    "reduced-motion/control-9cad870ea554ec2a-keyboard-before.png": "913473661b097de5a7aaa09b4af8774152ac8c89688c768b1b4e5bf23320ef06",
+    "reduced-motion/control-9cad870ea554ec2a-pointer-after.png": "959fdd7ad999671463e8d2c6bdfc518f929ba255346e2bbe45262ce13e0bc55b",
+    "reduced-motion/control-9cad870ea554ec2a-pointer-before.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/control-fa5f87289d477f00-pointer-before.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/report.json": "c51fb5dd2be83af5d294c697d298c4947ab3163dab9f538f46a518375b24d708",
+    "reduced-motion/response.html": "f80a2b24fabe02aa03f500853ef504b61159a0d4b9d6544a67807c8423de4678",
+    "reduced-motion/rest-bench.png": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+    "reduced-motion/rest-evidence.png": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+    "reduced-motion/rest-question.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/rest-scheduling.png": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+    "reduced-motion/rest-scope.png": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+    "reduced-motion/still-bench-after.png": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+    "reduced-motion/still-bench-before.png": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+    "reduced-motion/still-evidence-after.png": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+    "reduced-motion/still-evidence-before.png": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+    "reduced-motion/still-question-after.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/still-question-before.png": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+    "reduced-motion/still-scheduling-after.png": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+    "reduced-motion/still-scheduling-before.png": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+    "reduced-motion/still-scope-after.png": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+    "reduced-motion/still-scope-before.png": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+    "server.log": "29df0157965258cedd54e6381c53bb0860f49fb6e8fa2cc730c5c39590015cca",
+    "short/00-question-end.png": "d2545148d11893a35dc4dfe31a981fac46d93a54ce4fde907b7b84ae1a6eae4b",
+    "short/00-question-mid.png": "a53ade161fff86af74fe65e8123cb31961b263469a52609d14230888ef4e52b4",
+    "short/01-scheduling-end.png": "a7cd26d274b5466493826c73232be1569e37cd45fbe553e9b9543da85d81ca46",
+    "short/01-scheduling-mid.png": "933cdb20a9c1e189d09823e1ed1862d66dd8c5452e945f7352e37c94c92ad7fa",
+    "short/02-bench-end.png": "72d46664e143f85725b116e2d6f34652f91c298238265ff1a7a027501d82eba7",
+    "short/02-bench-mid.png": "f5680ab0f337103d721fcb029cde61ae2a4b8885e22f61a672d4c63b2e9b66f8",
+    "short/03-evidence-end.png": "f94da2b343252b0b667e6b44d415baa182f9b4ff457d02bbb07fe3c068b1f104",
+    "short/03-evidence-mid.png": "3ec50b5a7a33f7859c841d2b13a94de83b1774e1846cd496f0758495fd4f6bfb",
+    "short/04-scope-end.png": "8bad18646b89706dd1bbe419f4464c5847da7792fd9324919d42f7cde37392fe",
+    "short/04-scope-mid.png": "aaf606ac9dd8f5de5e96a32f0503c3e7a60c2266c10a68fbc784f4ff075e03de",
+    "short/control-0834ce7be807e94d-keyboard-after.png": "036370a3ce7ac18a739d37986d4d4d79eeb8dbf32c695193e4f3e6e5daa202f1",
+    "short/control-0834ce7be807e94d-keyboard-before.png": "e1e9c4bfd775ddf39ade5d2cc266eaed4bd2771d83122737efe275217cb16629",
+    "short/control-0834ce7be807e94d-pointer-after.png": "ccd95466976dafce58bce7ab7de73e8acf0a2863595eee307b9003eb87f20826",
+    "short/control-0834ce7be807e94d-pointer-before.png": "7ffab1780c06beac774e53c1b7a7a1a9b9df0268d5542c1136660ee09a9cd88e",
+    "short/control-229673414fdef73d-keyboard-after.png": "3930feb9eaedb51bbab8b0ac34b99d91f6248dfd90bae8637769e3e7254cbe69",
+    "short/control-229673414fdef73d-keyboard-before.png": "9cf832b44364a09bbc029111aee3464d54ece703d5a04d6d26555c29f3b50a2c",
+    "short/control-229673414fdef73d-pointer-after.png": "4346f6aed23e15ab315383ff408067b61ea9adb96c5e46ec97139f82b9a90a5f",
+    "short/control-229673414fdef73d-pointer-before.png": "6ef605deb65587d29ea2578d4ccbdfc9a70e7f743abea5a31df9e43182767de1",
+    "short/control-57ef510c22f051aa-keyboard-after.png": "752cfa0d643f23bb8534656ae802512685e97572c1561686c8dcca4240f282a3",
+    "short/control-57ef510c22f051aa-keyboard-before.png": "3ab599499df5aa2f3711525cefb1c74bae470ff8fbc84b4a9e2d8d66ff50f3d3",
+    "short/control-57ef510c22f051aa-pointer-unfocused.png": "d2545148d11893a35dc4dfe31a981fac46d93a54ce4fde907b7b84ae1a6eae4b",
+    "short/control-9cad870ea554ec2a-keyboard-after.png": "a53ade161fff86af74fe65e8123cb31961b263469a52609d14230888ef4e52b4",
+    "short/control-9cad870ea554ec2a-keyboard-before.png": "ea9a77d397c5a53cdf827aaee6d9d7b3c946485a437585b14e177941b118e891",
+    "short/control-9cad870ea554ec2a-pointer-after.png": "cab34da8a30b97d4787dc24ebb83778464bbe0c0cf5f7292c107ece139caeaba",
+    "short/control-9cad870ea554ec2a-pointer-before.png": "869c7d85dd0b87ac7abcd6b3c87ac503bb0e0a94082c1730c9a93ca69ec107fa",
+    "short/control-9eb58dcb119c043b-keyboard-after.png": "dcf45f30624e77e27fdc3e7eaa6254d5a790c00c89b96a39f768edd2e0a5df1d",
+    "short/control-9eb58dcb119c043b-keyboard-before.png": "77559ab492cdb1411ac95fe43749561b89d59184d0c370d584c9bfd7f1ce9d40",
+    "short/control-9eb58dcb119c043b-pointer-after.png": "a5d3d82caceef36c7147b811694074df310096da3564b62a8eefd4cba10bea73",
+    "short/control-9eb58dcb119c043b-pointer-before.png": "1e90387f39f28920522734021b2636b919629a36bc988f02f21a91235c9fa14e",
+    "short/control-fa5f87289d477f00-keyboard-after.png": "c453b88373245aa802e1a8f36ec931a32a4bedc1120bbb9a0e98fb6092444c53",
+    "short/control-fa5f87289d477f00-keyboard-before.png": "4f57eead226d3624c745d7c08826d3800345dd9ffaadf1c17b8bbc03b1ba77ad",
+    "short/control-fa5f87289d477f00-pointer-after.png": "2fd2089b353654fc2e247004013274ddb9ff527c1d51ff056143d865bf102fd9",
+    "short/control-fa5f87289d477f00-pointer-before.png": "e0f9610b82491642c3d05cfdbcb21600f121b68e71cf7446e56dbd6a120a84b2",
+    "short/rendered.html": "ddd7eb8f229856a6e185e5b7344f42841df5b3382044e3246b9f7c2d8ddef857",
+    "short/report.json": "58f9feaad8ba8a17475215ff0dfedfbb2f6c04ec6dfe945e8d944b07610a9ac1",
+    "short/response.html": "f80a2b24fabe02aa03f500853ef504b61159a0d4b9d6544a67807c8423de4678",
+    "short/rest-bench.png": "72d46664e143f85725b116e2d6f34652f91c298238265ff1a7a027501d82eba7",
+    "short/rest-evidence.png": "f94da2b343252b0b667e6b44d415baa182f9b4ff457d02bbb07fe3c068b1f104",
+    "short/rest-question.png": "d2545148d11893a35dc4dfe31a981fac46d93a54ce4fde907b7b84ae1a6eae4b",
+    "short/rest-scheduling.png": "a7cd26d274b5466493826c73232be1569e37cd45fbe553e9b9543da85d81ca46",
+    "short/rest-scope.png": "8bad18646b89706dd1bbe419f4464c5847da7792fd9324919d42f7cde37392fe",
+    "short/travel-forward-bench-evidence-0.2.jpg": "15eb330de6349d9592b91fa6f32a0c4fd4d3b0a48d6f6baad36a99ac0de3a4b5",
+    "short/travel-forward-bench-evidence-0.5.jpg": "5e8914ec5ff2e532d6a71bbdb1e34801ed21f8a76956d94d0ee55dc433fa9b46",
+    "short/travel-forward-bench-evidence-0.8.jpg": "e18ba1f95a360c1cb355fbf0ef710595188f9e5b5247a9ccf1815f7450ef9bf1",
+    "short/travel-forward-evidence-scope-0.2.jpg": "428cac12034421125733d371967766be1b226ccdc58f82ab061b81439cba9d3e",
+    "short/travel-forward-evidence-scope-0.5.jpg": "dfda17ff47b3815879f16de38ded59f500bd0575620cfc6573df125245e92e85",
+    "short/travel-forward-evidence-scope-0.8.jpg": "425dde3e0d99374ddeba47c1bc8a8b5310c8a26870035c96298f03fa8359c5df",
+    "short/travel-forward-question-scheduling-0.2.jpg": "6e5962e437629d223934c4a3fc13f93841e54b34d60922c681c25c194c0da4d9",
+    "short/travel-forward-question-scheduling-0.5.jpg": "54eeb287959c7889d74d93f3ed999a277cc47e2266ca8d87c0de09fd0e3e1296",
+    "short/travel-forward-question-scheduling-0.8.jpg": "6b26918df87da51201551118ba7e9de84f3bb746f92c9af730a25602cbad844e",
+    "short/travel-forward-scheduling-bench-0.2.jpg": "0af0ca34734600fc1ef20f928e738239e9a071c9bf3ae4563b1cedc6afe10aab",
+    "short/travel-forward-scheduling-bench-0.5.jpg": "1b4175a8e2301eb09755388d59fd5754a734fafb9c05ff94ca35508e2b34e510",
+    "short/travel-forward-scheduling-bench-0.8.jpg": "4d8ac7004af7f32816a2a9315ea13dc6535fd60025d2a772a7a175d5a5ffb343",
+    "short/travel-reverse-bench-scheduling-0.2.jpg": "20a20090aa71e9e6da4ef8bd46cb4e4975260a5104388ce05590edb0b097699f",
+    "short/travel-reverse-bench-scheduling-0.5.jpg": "57145d232dd1cded6d4f74cdb143434580605febb1c7ab411736783f6727b9f5",
+    "short/travel-reverse-bench-scheduling-0.8.jpg": "263c1e6421344839c4ff85866e8bc6e5ac0a4616ab9d19f78602aa05516f4a68",
+    "short/travel-reverse-evidence-bench-0.2.jpg": "670151f0a3a7295dbcb623b796f36405d815ccff42b0864af312dbbd1657cc29",
+    "short/travel-reverse-evidence-bench-0.5.jpg": "bff21c1e305789b439390bcb43f3d8714fa7f7192a3e8024eff0f425f7bdb72e",
+    "short/travel-reverse-evidence-bench-0.8.jpg": "1885fc34c4d7ee54cdda4cdde23e7d2c816af220c000355133ee7d3b0a1e06fb",
+    "short/travel-reverse-scheduling-question-0.2.jpg": "7aafa65d6575cdbb2473667d0ae92999a42f958eec343d165f8d1ee293d94165",
+    "short/travel-reverse-scheduling-question-0.5.jpg": "4c2ce5149af50a61d2505d21df22468499bc9d0ceca333cb5447daf2ead83bbe",
+    "short/travel-reverse-scheduling-question-0.8.jpg": "9f03a369d426f0ece02f3fd4cfd80a1533d1035a57be40b0eeb3ffd11c57a5f4",
+    "short/travel-reverse-scope-evidence-0.2.jpg": "65cc2ca9ae979dc6a6cc8ec5f2adc7606392cad0dc475f3083ebc94cb96e4d93",
+    "short/travel-reverse-scope-evidence-0.5.jpg": "0577915a7dcbd628b8f1451a17a03d56e04deba74d4b12c9880563a57331a826",
+    "short/travel-reverse-scope-evidence-0.8.jpg": "d842a9b4e1e0969cfb134bda3b46e3a9a4051aadddbe3223ca8a28e6dc7684dd",
+    "tsconfig.acceptance.json": "3daa4dd5d657a24cb1fa3e3eba3655b4dadfc5bd2ee35ebd1ec9c20163ee88c7",
+    "typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "typegen.log": "adba4af9194e10e47dda75ff0fd0f8c2b756474896d0eba5612799c527ff372a"
+  }
+}

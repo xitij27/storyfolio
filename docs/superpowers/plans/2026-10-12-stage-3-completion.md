@@ -11,7 +11,7 @@ It does not replace their requirements with evaluation-tool work.
 
 | Milestone | Required result | Current work |
 |---|---|---|
-| Reproduce explanatory visual quality | An independently built scene that explains approved work relationships and remains readable during movement | Baseline: seven technical modes pass, 253 originals reviewed, both visual targets fail. Candidate: actor timed out; independent desktop/phone pass, then capture interrupted. All 118 retained originals reviewed, target-specific improvements observed but required coverage incomplete. Two paragraphs retained provisionally; no candidate judge or retry. 342 local tests pass. |
+| Reproduce explanatory visual quality | An independently built scene that explains approved work relationships and remains readable during movement | Baseline: seven technical modes pass, 253 originals reviewed, both visual targets fail. Candidate actor timed out and first capture was interrupted. Separately approved unchanged-source verification adds a short-height pass, then another external interruption leaves reduced-motion partial and three failure modes absent. New 203-original review is separate from the first 118. Two paragraphs remain provisional; no candidate judge. 342 local tests pass. |
 | Supported build entry | The shipped skill continues from an approved storyboard through spine, chapters and finish at the intended approval points | Still planning-only. Obtain ordinary continuation evidence before changing the endpoint; existing external overrides do not establish activation. |
 | Earlier journey and real choices | Before-stop-1 capability check, three runnable concepts, two or three looks, three complete wording versions, relevant optional-skill recommendation/refusal | Preserve successful existing behavior. Test unvisited requirements and add only instructions needed by saved failures. Do not write six reference files merely because the old plan listed them. |
 | Regression and complete-site proof | Planning remains correct; a fresh agent completes all six stops using a non-sheet object; technical and visual review pass; the author approves desktop and phone | Open. The manual prototype and five-beat diagnostic are not this proof. |
@@ -90,3 +90,23 @@ build-entry, planning regression and full-site experiments need their own
 question, bounds and authorization. No endpoint instruction, shared engine
 change or additional skill sentence is justified solely by these process
 failures. The shipped build workflow and whole-site proof remain open.
+
+## Separately approved saved-source verification
+
+The author [approved one new capture](../../history/2026-10-12-candidate-verification-approval.md),
+not another actor or judge. Its [new evidence](../../../evals/runs/stage-3-candidate-verification-1/findings.md)
+preserves both earlier incomplete results and the exact 184-file source.
+It passed desktop, phone and short-height technical checks, then received
+external SIGTERM at 624.633 seconds and closed at 624.926 seconds, before
+its own 895-second work deadline. Source and historical evidence verify
+unchanged. The sender is unknown. This capture is also incomplete; its
+reduced-motion partial report and three absent failure modes cannot pass
+the full acceptance gate. No retry follows automatically.
+
+The [next product experiment](2026-10-12-stage-3-natural-entry-proposal.md)
+tests ordinary approved-storyboard continuation and a real look choice.
+It uses the existing one-turn stop-4 path, without changing the runner or
+adding endpoint instructions before a baseline. The
+[specific approval question](../../history/2026-10-12-natural-entry-request.md)
+is pending. No paid entry, planning regression or whole-site proof has
+started under the verification-only approval.

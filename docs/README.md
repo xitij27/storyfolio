@@ -94,6 +94,12 @@ pass, with visible improvements, but later browser capture was interrupted.
 There is no complete candidate acceptance or candidate judge score. Stage 3
 remains open, with no retry or new paid allowance inferred.
 
+The author subsequently [approved one verification-only capture](history/2026-10-12-candidate-verification-approval.md).
+The [new evidence](../evals/runs/stage-3-candidate-verification-1/findings.md)
+preserves the earlier attempt and uses unchanged source and measurement.
+The [ordinary build-entry proposal](superpowers/plans/2026-10-12-stage-3-natural-entry-proposal.md)
+is a separate next question, with no paid allowance inferred.
+
 For a new session, read:
 
 1. [Repository rules](../AGENTS.md), then [current handover](handover.md).

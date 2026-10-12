@@ -74,10 +74,10 @@ Omit `taskKind`. Do not inherit the `prototype-depth` prompt or its fixed
 five-beat/one-appearance completion contract.
 
 Read-only source review confirms this is already supported:
-[`validateCase`](../../../evals/lib/build.mjs:44) accepts an ordered stop
-subset matching the prompt count, [`planTurn`](../../../evals/lib/build.mjs:235)
+[`validateCase`](../../../evals/lib/build.mjs#L44) accepts an ordered stop
+subset matching the prompt count, [`planTurn`](../../../evals/lib/build.mjs#L235)
 does not require an advance gate for turn 1, and
-[`executeBuildTurn`](../../../evals/lib/build.mjs:325) sends the frozen prompt
+[`executeBuildTurn`](../../../evals/lib/build.mjs#L325) sends the frozen prompt
 bytes without adding a stop-specific instruction. `requestedStop` is saved
 metadata, not extra actor guidance. No new runner/schema work is proposed;
 prepare only the new fixture and its prospective measurement if approved.

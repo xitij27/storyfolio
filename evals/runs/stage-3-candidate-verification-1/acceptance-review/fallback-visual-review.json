@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "acceptance",
+  "scope": "Exhaustive available-original reduced-motion/fallback review, not completed four-mode acceptance",
+  "captureComplete": false,
+  "actorComplete": false,
+  "manifestSha256": "c5c4db1ad0a664a26db4e38fe83a8cd5aef67a597d0db5647c48cc59b09c897e",
+  "sourceDigest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+  "sourceFiles": 184,
+  "originals": {
+    "reviewed": 37,
+    "byMode": {
+      "reduced-motion": 37,
+      "no-webgl": 0,
+      "no-javascript": 0,
+      "context-loss": 0
+    },
+    "inventory": "fallback-review/viewed-images.json",
+    "sha256": "ff7165eab382906987e9c202d58c61ce38b1701f86e68bc6b2acd8b1abaabcb5"
+  },
+  "targetedObservations": [
+    {
+      "id": "inspectable-settled-relationships",
+      "result": "pass",
+      "scope": "Five captured desktop reduced-motion rests only",
+      "evidence": [
+        "reduced-motion/rest-bench.png",
+        "reduced-motion/rest-evidence.png"
+      ],
+      "observation": "Command panel, board response, fixture contacts/access and observation panel are connected spatially; separate evidence panels distinguish measured-current plus assumed-interval projection from the observed bench run."
+    },
+    {
+      "id": "changing-word-legibility-during-travel",
+      "result": "unobserved",
+      "scope": "Reduced motion has no sampled animated travel. This review cannot establish continuous-motion label behavior."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "backdrop",
+      "result": "pass",
+      "scope": "Observed still rests",
+      "note": "Connected apparatus and separate evidence exhibits contribute inspectable relationships."
+    },
+    {
+      "id": "depth",
+      "result": "pass",
+      "scope": "Observed five explanations",
+      "note": "Opening, scheduling, ownership, evidence and bounded ending remain readable."
+    },
+    {
+      "id": "swap",
+      "result": "pass",
+      "scope": "Observed still apparatus",
+      "note": "Firmware command, board response, fixture contacts and bench observation are specific to approved work."
+    },
+    {
+      "id": "detail-and-hierarchy",
+      "result": "pass",
+      "scope": "Important information in observed desktop stills",
+      "note": "Scheduling and evidence exhibits enlarge at relevant beats; some secondary small-face text is soft, but primary artifacts and HTML remain inspectable."
+    },
+    {
+      "id": "spatial-quality",
+      "result": "pass",
+      "scope": "Observed static compositions only",
+      "note": "One recognizable apparatus persists, with useful enlargement and separate evidence groups; continuous motion is unobserved here."
+    },
+    {
+      "id": "phone-and-still-modes",
+      "result": "unobserved",
+      "scope": "Complete criterion across required conditions",
+      "note": "Five desktop reduced-motion still explanations are supported; complete control coverage and all three failure conditions are missing. Phone is owned by animated reviewer."
+    }
+  ],
+  "stationary": [
+    {
+      "beat": "question",
+      "before": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+      "after": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+      "elapsedMs": 1572,
+      "files": [
+        "still-question-before.png",
+        "still-question-after.png"
+      ]
+    },
+    {
+      "beat": "scheduling",
+      "before": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+      "after": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+      "elapsedMs": 628,
+      "files": [
+        "still-scheduling-before.png",
+        "still-scheduling-after.png"
+      ]
+    },
+    {
+      "beat": "bench",
+      "before": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+      "after": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+      "elapsedMs": 616,
+      "files": [
+        "still-bench-before.png",
+        "still-bench-after.png"
+      ]
+    },
+    {
+      "beat": "evidence",
+      "before": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+      "after": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+      "elapsedMs": 629,
+      "files": [
+        "still-evidence-before.png",
+        "still-evidence-after.png"
+      ]
+    },
+    {
+      "beat": "scope",
+      "before": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+      "after": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+      "elapsedMs": 608,
+      "files": [
+        "still-scope-before.png",
+        "still-scope-after.png"
+      ]
+    }
+  ],
+  "controlCoverage": {
+    "completed": [
+      "focus-only skip keyboard with unfocused pointer not applicable",
+      "question rail pointer and keyboard",
+      "scheduling rail pointer and keyboard"
+    ],
+    "interrupted": [
+      "bench rail pointer after-image/target result and keyboard",
+      "evidence rail pointer and keyboard",
+      "scope rail pointer and keyboard"
+    ],
+    "note": "Do not relabel missing images caused by interruption as proven application defects or passes."
+  },
+  "unobservedModes": [
+    "no-webgl",
+    "no-javascript",
+    "context-loss"
+  ],
+  "provenance": {
+    "liveCaptureActions": "Read-only file listings/date/command-record reads, collaboration messages and waits. No test, build, browser, cleanup, signal or stop command by this reviewer.",
+    "imageViewing": "All original viewing began after root confirmed closed capture; no source or hashed acceptance output changed.",
+    "signalSender": "unknown"
+  },
+  "limits": [
+    "Actor timeout unchanged; capture incomplete and failed",
+    "Still hash equality covers recorded608-1572ms intervals only",
+    "No all-frame, physical-phone, absent-fallback or author-approval claim",
+    "Every available assigned original was opened individually including duplicate hashes; no old inventory reused"
+  ]
+}

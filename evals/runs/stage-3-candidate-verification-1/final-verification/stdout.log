@@ -1,0 +1,2289 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "scope": "Evidence integrity and exact available-original review, separate from visual judgment and completed actor delivery",
+  "modelCalls": 0,
+  "writes": false,
+  "actor": {
+    "complete": false,
+    "timedOut": true,
+    "durationMs": 900055
+  },
+  "inputDigest": "a127640464a9ba08a2beb62cdfa65941b2692c4d183ed71e9c397b7e34445353",
+  "previousCapture": {
+    "manifestSha256": "b21f8baa6e9568c71e7d0cde2957c4e2405eff4018c09594de76f2fa23296572",
+    "artifacts": 134,
+    "complete": false,
+    "passed": false
+  },
+  "source": {
+    "files": 184,
+    "digest": "830d73920983268e04480dee830a5172a69a4077de80512a3d6e414d3439ecb7",
+    "strictActorSnapshotIdentity": true,
+    "beforeAfterAndCurrentUnchanged": true
+  },
+  "capture": {
+    "complete": false,
+    "passed": false,
+    "started": "2026-10-12T00:33:44.522Z",
+    "finished": "2026-10-12T00:44:09.162Z",
+    "manifestSha256": "c5c4db1ad0a664a26db4e38fe83a8cd5aef67a597d0db5647c48cc59b09c897e",
+    "artifacts": 222,
+    "processExitCode": 1,
+    "timedOut": false,
+    "externalSignal": "SIGTERM",
+    "lifecycle": [
+      {
+        "at": "2026-10-12T00:33:44.479Z",
+        "elapsedMs": 3,
+        "type": "spawn-request",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+        "args": [
+          "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs",
+          "--workspace=/var/tmp/storyfolio-comparison-runtime-20261012/storyfolio-evals/build-bench-depth-2-r5MXXB",
+          "--expectations=/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/expectations.json",
+          "--out=/home/kshitij/projects/storyfolio/evals/runs/stage-3-candidate-verification-1/acceptance",
+          "--dependencies=/tmp/storyfolio-build-capability-20261011"
+        ],
+        "timeoutMs": 895000,
+        "graceMs": 5000,
+        "totalCapMs": 900000,
+        "deadline": "2026-10-12T00:48:39.476Z",
+        "hardEscalationAt": "2026-10-12T00:48:44.476Z"
+      },
+      {
+        "at": "2026-10-12T00:33:44.479Z",
+        "elapsedMs": 3,
+        "type": "spawned",
+        "wrapperPid": 4191480,
+        "childPid": 4191500
+      },
+      {
+        "at": "2026-10-12T00:44:09.109Z",
+        "elapsedMs": 624633,
+        "type": "external-signal",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "signal": "SIGTERM",
+        "sender": "unknown"
+      },
+      {
+        "at": "2026-10-12T00:44:09.109Z",
+        "elapsedMs": 624633,
+        "type": "stop-request",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "signal": "SIGTERM",
+        "reason": "external signal",
+        "action": "signal owned checker PID; checker owns orderly child shutdown"
+      },
+      {
+        "at": "2026-10-12T00:44:09.402Z",
+        "elapsedMs": 624926,
+        "type": "exit",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "code": 1,
+        "signal": null
+      },
+      {
+        "at": "2026-10-12T00:44:09.402Z",
+        "elapsedMs": 624926,
+        "type": "closed",
+        "wrapperPid": 4191480,
+        "childPid": 4191500,
+        "code": 1,
+        "signal": null,
+        "timedOut": false,
+        "externalSignal": "SIGTERM"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "desktop",
+      "passed": true,
+      "problems": [],
+      "reportSha256": "92aa130e91bb33e8fd284adb6f1411d497ba151ba00f48effaceddf65e2dcb17",
+      "rests": 5,
+      "motionTrajectories": 8,
+      "stationary": [],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9cad870ea554ec2a",
+          "name": "The question1",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-229673414fdef73d",
+          "name": "The cycle2",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-fa5f87289d477f00",
+          "name": "The connection3",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9eb58dcb119c043b",
+          "name": "Two kinds of evidence4",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-0834ce7be807e94d",
+          "name": "The answer, bounded5",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "passed": true,
+      "problems": [],
+      "reportSha256": "fe92824e000cd18533a30a0a93d4f9589f77a3b0c62ea5c6907c8b56cb804484",
+      "rests": 5,
+      "motionTrajectories": 8,
+      "stationary": [],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "short",
+      "passed": true,
+      "problems": [],
+      "reportSha256": "58f9feaad8ba8a17475215ff0dfedfbb2f6c04ec6dfe945e8d944b07610a9ac1",
+      "rests": 5,
+      "motionTrajectories": 8,
+      "stationary": [],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9cad870ea554ec2a",
+          "name": "The question1",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-229673414fdef73d",
+          "name": "The cycle2",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-fa5f87289d477f00",
+          "name": "The connection3",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9eb58dcb119c043b",
+          "name": "Two kinds of evidence4",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-0834ce7be807e94d",
+          "name": "The answer, bounded5",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reduced-motion",
+      "passed": false,
+      "problems": [
+        "beat IDs/order differ: expected question, scheduling, bench, evidence, scope; found ",
+        "expected one h1, found undefined",
+        "document language is missing",
+        "control-fa5f87289d477f00/pointer: page.screenshot: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+        "control-fa5f87289d477f00/pointer: missing original control images",
+        "control-fa5f87289d477f00/pointer: no observable control response (requires review, not a functional pass)",
+        "control-fa5f87289d477f00/keyboard: control was not reached and activated",
+        "control-fa5f87289d477f00/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-fa5f87289d477f00/keyboard: missing original control images",
+        "control-fa5f87289d477f00/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/pointer: control was not reached and activated",
+        "control-9eb58dcb119c043b/pointer: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/pointer: missing original control images",
+        "control-9eb58dcb119c043b/pointer: no observable control response (requires review, not a functional pass)",
+        "control-9eb58dcb119c043b/keyboard: control was not reached and activated",
+        "control-9eb58dcb119c043b/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-9eb58dcb119c043b/keyboard: missing original control images",
+        "control-9eb58dcb119c043b/keyboard: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/pointer: control was not reached and activated",
+        "control-0834ce7be807e94d/pointer: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/pointer: missing original control images",
+        "control-0834ce7be807e94d/pointer: no observable control response (requires review, not a functional pass)",
+        "control-0834ce7be807e94d/keyboard: control was not reached and activated",
+        "control-0834ce7be807e94d/keyboard: page.goto: Target page, context or browser has been closed",
+        "control-0834ce7be807e94d/keyboard: missing original control images",
+        "control-0834ce7be807e94d/keyboard: no observable control response (requires review, not a functional pass)",
+        "page.evaluate: Target page, context or browser has been closed\n    at browserCase (/home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:293:38)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/codex-bench-depth-candidate-1/inputs/implementation/evals/check-build.mjs:348:27"
+      ],
+      "reportSha256": "c51fb5dd2be83af5d294c697d298c4947ab3163dab9f538f46a518375b24d708",
+      "rests": 5,
+      "motionTrajectories": 0,
+      "stationary": [
+        {
+          "beat": "question",
+          "before": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+          "after": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+          "elapsedMs": 1572,
+          "files": [
+            "still-question-before.png",
+            "still-question-after.png"
+          ]
+        },
+        {
+          "beat": "scheduling",
+          "before": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+          "after": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+          "elapsedMs": 628,
+          "files": [
+            "still-scheduling-before.png",
+            "still-scheduling-after.png"
+          ]
+        },
+        {
+          "beat": "bench",
+          "before": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+          "after": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+          "elapsedMs": 616,
+          "files": [
+            "still-bench-before.png",
+            "still-bench-after.png"
+          ]
+        },
+        {
+          "beat": "evidence",
+          "before": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+          "after": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+          "elapsedMs": 629,
+          "files": [
+            "still-evidence-before.png",
+            "still-evidence-after.png"
+          ]
+        },
+        {
+          "beat": "scope",
+          "before": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+          "after": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+          "elapsedMs": 608,
+          "files": [
+            "still-scope-before.png",
+            "still-scope-after.png"
+          ]
+        }
+      ],
+      "contextLoss": null,
+      "controls": [
+        {
+          "key": "control-57ef510c22f051aa",
+          "name": "Skip to the answer",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "not-applicable",
+              "reached": false,
+              "hitTarget": false,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-9cad870ea554ec2a",
+          "name": "The question1",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-229673414fdef73d",
+          "name": "The cycle2",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            },
+            {
+              "method": "keyboard",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "changed": true,
+              "error": null
+            }
+          ]
+        },
+        {
+          "key": "control-fa5f87289d477f00",
+          "name": "The connection3",
+          "trials": [
+            {
+              "method": "pointer",
+              "applicability": "applicable",
+              "reached": true,
+              "hitTarget": true,
+              "error": "page.screenshot: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+            },
+            {
+              "method": "keyboard",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            }
+          ]
+        },
+        {
+          "key": "control-9eb58dcb119c043b",
+          "name": "Two kinds of evidence4",
+          "trials": [
+            {
+              "method": "pointer",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            },
+            {
+              "method": "keyboard",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            }
+          ]
+        },
+        {
+          "key": "control-0834ce7be807e94d",
+          "name": "The answer, bounded5",
+          "trials": [
+            {
+              "method": "pointer",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            },
+            {
+              "method": "keyboard",
+              "reached": false,
+              "hitTarget": false,
+              "error": "page.goto: Target page, context or browser has been closed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unobservedModes": [
+    "no-webgl",
+    "no-javascript",
+    "context-loss"
+  ],
+  "originalReview": {
+    "asserted": true,
+    "available": 203,
+    "reviewed": 203,
+    "exactAvailableCoverage": true,
+    "byMode": {
+      "desktop": 62,
+      "mobile": 42,
+      "short": 62,
+      "reduced-motion": 37,
+      "no-webgl": 0,
+      "no-javascript": 0,
+      "context-loss": 0
+    },
+    "images": [
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/00-question-end.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/00-question-mid.png",
+        "bytes": 224206,
+        "sha256": "afe7b60d13cdef2901d87a776305ec30500c672b97849f7ec0a89828f08f272e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/01-scheduling-end.png",
+        "bytes": 225606,
+        "sha256": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/01-scheduling-mid.png",
+        "bytes": 224403,
+        "sha256": "b81959470359e481745a750718c329de3cbf5e7d4d12752640edc7024af9eb05",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/02-bench-end.png",
+        "bytes": 229075,
+        "sha256": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/02-bench-mid.png",
+        "bytes": 227356,
+        "sha256": "b41523b47b6b92117bc5dfd429e87f91c89d7e9e83a92f4e832d523054963a3c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/03-evidence-end.png",
+        "bytes": 232609,
+        "sha256": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/03-evidence-mid.png",
+        "bytes": 229471,
+        "sha256": "2826e1068f9bfaed556871273542e6a82640d76424b28318860dd6afd4308739",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/04-scope-end.png",
+        "bytes": 258135,
+        "sha256": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/04-scope-mid.png",
+        "bytes": 259674,
+        "sha256": "9cda00a4b69f31f3dec161becb1d2c3aa8e08db64992e58227d844645561c8b9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-0834ce7be807e94d-keyboard-after.png",
+        "bytes": 234090,
+        "sha256": "ec9913bb35c376c43424bebdf3df3025cbdd52d8468ce128036168eb70d409e8",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-0834ce7be807e94d-keyboard-before.png",
+        "bytes": 227520,
+        "sha256": "00c9141b09dd46efe9733d35d70709e75b0ec3bdcd8a9eb1ad239ccdcbb02d30",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-0834ce7be807e94d-pointer-after.png",
+        "bytes": 237104,
+        "sha256": "245fb5343ac42cbab7eb6b25071d80f2633962ddca4beb802c1a06efa5b8de4f",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-0834ce7be807e94d-pointer-before.png",
+        "bytes": 228788,
+        "sha256": "6039eac552d0e5e0545282982df86330a955e7d45ae974c139c6bda830f0f51a",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-229673414fdef73d-keyboard-after.png",
+        "bytes": 213183,
+        "sha256": "458c2e85fe89abf560c2f2d470742013ee2e191ca423f3b1c4291d7d0f4605e9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-229673414fdef73d-keyboard-before.png",
+        "bytes": 227521,
+        "sha256": "4acb064600164e8b7219e19280e558edcf4ab3153f1bbaa256fe49c7d20e58bc",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-229673414fdef73d-pointer-after.png",
+        "bytes": 231896,
+        "sha256": "24defb0589b8baf55df29d577d9d93cb8eb22e1f77e613a09b7a42a7bf268277",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-229673414fdef73d-pointer-before.png",
+        "bytes": 228904,
+        "sha256": "32970a6f92d6d9dc9c53a2c30ca1d1b786884481c83e9404cfd6d1a7a3ab3cb3",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-57ef510c22f051aa-keyboard-after.png",
+        "bytes": 252393,
+        "sha256": "06485af13e41de368caed9cc62287108469e63ad1619dc90cf028f3fef841921",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-57ef510c22f051aa-keyboard-before.png",
+        "bytes": 231272,
+        "sha256": "21bb80b128e0e1af077cd21c3d1feebe02b1ca4989fb9d9c889bccc5f2a7183c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-57ef510c22f051aa-pointer-unfocused.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9cad870ea554ec2a-keyboard-after.png",
+        "bytes": 224206,
+        "sha256": "afe7b60d13cdef2901d87a776305ec30500c672b97849f7ec0a89828f08f272e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9cad870ea554ec2a-keyboard-before.png",
+        "bytes": 227522,
+        "sha256": "913473661b097de5a7aaa09b4af8774152ac8c89688c768b1b4e5bf23320ef06",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9cad870ea554ec2a-pointer-after.png",
+        "bytes": 225054,
+        "sha256": "9a23de3acabbc1259887bd9e3e7aa478b9e53ebc7f6c3816b7997018821b909c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9cad870ea554ec2a-pointer-before.png",
+        "bytes": 228322,
+        "sha256": "3bd01dd0dbb8e0ea48b394ec82e7b0c563998abaf0878c321360cd8a61a64cc3",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9eb58dcb119c043b-keyboard-after.png",
+        "bytes": 217450,
+        "sha256": "3262640a1b1e71dba505b1ac2a237e85c41dc287e38b39d9a7abf9fcff09b7b9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9eb58dcb119c043b-keyboard-before.png",
+        "bytes": 227521,
+        "sha256": "9a1989ba03f0d5e2a0fe31e2c6e5eff6e0bc7f18bc5345395739ce446a41df97",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9eb58dcb119c043b-pointer-after.png",
+        "bytes": 232388,
+        "sha256": "9561860fdf87f920c001ddb734c9401a3e53503b4f1661a517ba66a73a773487",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-9eb58dcb119c043b-pointer-before.png",
+        "bytes": 228708,
+        "sha256": "5fa69b72a08aaef4decd72c9ec99aa5a1860f72e482a96b7519116040d91b6a9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-fa5f87289d477f00-keyboard-after.png",
+        "bytes": 215641,
+        "sha256": "bfd82b759973489346c8fa1f2ceded5953357644e288be44dbb280e6bc1e0137",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-fa5f87289d477f00-keyboard-before.png",
+        "bytes": 227521,
+        "sha256": "f5c9c7772877ce5893674796015fc6f3f19a455aba895244f59b9cfd493505bf",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-fa5f87289d477f00-pointer-after.png",
+        "bytes": 229126,
+        "sha256": "186e6920d136d28e14f432ef841b477775cb863e1dbdddf3a935080f7ea9e3d6",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/control-fa5f87289d477f00-pointer-before.png",
+        "bytes": 228929,
+        "sha256": "c1232c5ebdb25c4cccb34ca45881f8abbec38b19b35d12d33cc80c38a4247ae8",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/rest-bench.png",
+        "bytes": 229075,
+        "sha256": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/rest-evidence.png",
+        "bytes": 232609,
+        "sha256": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/rest-question.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/rest-scheduling.png",
+        "bytes": 225606,
+        "sha256": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/rest-scope.png",
+        "bytes": 258135,
+        "sha256": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-bench-evidence-0.2.jpg",
+        "bytes": 102891,
+        "sha256": "4f6fa578695948a18a13f603c7af9123dbdd4a60db1b344741ef7416484576ef",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-bench-evidence-0.5.jpg",
+        "bytes": 116078,
+        "sha256": "9cc3d8f2050b2cb76bb57bbe6a17cb5f28cf38bc659782aef85ad0e165b9a3c9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-bench-evidence-0.8.jpg",
+        "bytes": 125847,
+        "sha256": "2a9ebafc4baec13a13fb15706ab085b1a21845a53cd4ac010e6463e27c6480cf",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-evidence-scope-0.2.jpg",
+        "bytes": 104974,
+        "sha256": "43687b167490a751b19f7d278fc704698eb6258f9a45eb2f5f16d40360379331",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-evidence-scope-0.5.jpg",
+        "bytes": 117163,
+        "sha256": "e286418c57b7ea2068cae3bacbbe6aa8fda4e30705fd648f3a5ade9d1a32a436",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-evidence-scope-0.8.jpg",
+        "bytes": 132458,
+        "sha256": "3103d240c2486bb8b273602f4ddcd9c895edb2af256fa5fe9d51f8ce9c1fccf6",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-question-scheduling-0.2.jpg",
+        "bytes": 102982,
+        "sha256": "fba02635320470421a7de71bb3c9f782beabb5ab8376857f4ea9cfb01a4bb8b2",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-question-scheduling-0.5.jpg",
+        "bytes": 112295,
+        "sha256": "b7dd9b8c7b2f7a8493258e637452b853800cfbdf5fcf070998538f7d4a17364d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-question-scheduling-0.8.jpg",
+        "bytes": 121488,
+        "sha256": "cef1e60144ec778997b09d3416dcc10e063e7ff5455341beccfb05f1a7ac99d4",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-scheduling-bench-0.2.jpg",
+        "bytes": 97014,
+        "sha256": "462b58d4b5e404442644dd3c972136eda6681fc72975702be7cbdbf57fe1cfe3",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-scheduling-bench-0.5.jpg",
+        "bytes": 113048,
+        "sha256": "7a9fc891d0b2b3f97ff9be91b21cdc0b4a188ba0db2a4eeb4349b3257552d6c0",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-forward-scheduling-bench-0.8.jpg",
+        "bytes": 125913,
+        "sha256": "137ab24e1fe82e79e0e5150b26bc6f5878626718c9baeb5e432bc1ade0bab5e9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-bench-scheduling-0.2.jpg",
+        "bytes": 125695,
+        "sha256": "0ca32e29e0eec5b40601437b54db6f7b05301bf2bb917c6b95810751f0ad3b28",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-bench-scheduling-0.5.jpg",
+        "bytes": 111728,
+        "sha256": "77ac7dfd7e9a3d11e2322b14ca32bc8f5d0a13d910c696b12c8989570bb8c6fc",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-bench-scheduling-0.8.jpg",
+        "bytes": 98710,
+        "sha256": "262fd2fab5786d19fb10f29cb1dc109bd47e602d0ec25c2bac847d3df282c207",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-evidence-bench-0.2.jpg",
+        "bytes": 125562,
+        "sha256": "9a059c40a5613f69d4412f050ca8035707e21501fe1ad3351d8c44170b1f6295",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-evidence-bench-0.5.jpg",
+        "bytes": 112841,
+        "sha256": "90450e20a368324f81cc440b0d93c4d1621bd98272c1f947844ded25353fc1e7",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-evidence-bench-0.8.jpg",
+        "bytes": 101875,
+        "sha256": "503f372a8ea3c306525e540e94993ca8c6cf5e8202dfa20b93fedb4377775763",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-scheduling-question-0.2.jpg",
+        "bytes": 120477,
+        "sha256": "a56a2355fedc13b4dc81707985c9c57cc75fd1aa2d7cca803541bc5b79fa924a",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-scheduling-question-0.5.jpg",
+        "bytes": 109444,
+        "sha256": "28a88d73c3f3ab59e9c593314b1c95416695bce19a4dc7c847cbb31c75853199",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-scheduling-question-0.8.jpg",
+        "bytes": 101679,
+        "sha256": "7fef64e0123a3cfa894b3ad58d25d222c726c0b5f7c276d00c2106cd1bac301c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-scope-evidence-0.2.jpg",
+        "bytes": 130709,
+        "sha256": "f4e730117fd5422dac4e3cee23c9451a8b9d193b57ff2f3dd113f99870c9ff4c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-scope-evidence-0.5.jpg",
+        "bytes": 118270,
+        "sha256": "b7b99f738051d781160c969d5cd726dc160b27f8900c7316798d5ebd60f97c65",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/desktop/travel-reverse-scope-evidence-0.8.jpg",
+        "bytes": 104478,
+        "sha256": "e08d159de30b725443343a6a6c767c3e37ea4ba756d04f67eddc8172991128bc",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "desktop"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/00-question-end.png",
+        "bytes": 109679,
+        "sha256": "3e66ee2680e714ac25d86f99f9faacaf1062744cc29d7977d13b58838b32d71d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/00-question-mid.png",
+        "bytes": 106283,
+        "sha256": "fff7b87eb44e051120c53701c3bf1ba0e354d17399907c86ac3d8a222dbcafa5",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/01-scheduling-end.png",
+        "bytes": 108863,
+        "sha256": "21f16490c5b98d2255f8794a8e5eb5342c2e56e6f9831abee3b71fa5d061fb03",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/01-scheduling-mid.png",
+        "bytes": 107837,
+        "sha256": "35cf0397ddda1334d71f5e6959f728bf618a59e7ce3d428ef7d9e94cf15f5a69",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/02-bench-end.png",
+        "bytes": 109406,
+        "sha256": "8f6b11eb1cd2f0d9ca99c5fede62a2c1411db9bfb9f749db773a4638494732c6",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/02-bench-mid.png",
+        "bytes": 107667,
+        "sha256": "835c5f22615553107147dfb71df20a42016201c27d53a87ad85ff1c3c3144077",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/03-evidence-end.png",
+        "bytes": 112883,
+        "sha256": "5e526669886820d5cf3f4144fc93002e03fc8f7fd216624fbfdfbfe28dda4af1",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/03-evidence-mid.png",
+        "bytes": 109217,
+        "sha256": "bdc627bd263af0fc82637032f8c893951a3b244a8ca170b3240ccdcbb0c7b535",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/04-scope-end.png",
+        "bytes": 115547,
+        "sha256": "cd52d5ea18a007e8e3362b20a23b42eef7aae391863f853a4e914f714239af99",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/04-scope-mid.png",
+        "bytes": 118240,
+        "sha256": "ad3c1082c2658d391020499d09ed6b62a064a7b2cdcd16992a78b2001138f036",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/control-57ef510c22f051aa-keyboard-after.png",
+        "bytes": 120353,
+        "sha256": "c552d711702a725bf0afc52095a6b0e3306c68c0de802cbb78493fceda92c030",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/control-57ef510c22f051aa-keyboard-before.png",
+        "bytes": 113467,
+        "sha256": "2d12d5e0163b18238aa22afd28b9333597d454db642af008dd3e4367d2fcdc5d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/control-57ef510c22f051aa-pointer-unfocused.png",
+        "bytes": 109679,
+        "sha256": "3e66ee2680e714ac25d86f99f9faacaf1062744cc29d7977d13b58838b32d71d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/rest-bench.png",
+        "bytes": 109406,
+        "sha256": "8f6b11eb1cd2f0d9ca99c5fede62a2c1411db9bfb9f749db773a4638494732c6",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/rest-evidence.png",
+        "bytes": 112883,
+        "sha256": "5e526669886820d5cf3f4144fc93002e03fc8f7fd216624fbfdfbfe28dda4af1",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/rest-question.png",
+        "bytes": 109679,
+        "sha256": "3e66ee2680e714ac25d86f99f9faacaf1062744cc29d7977d13b58838b32d71d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/rest-scheduling.png",
+        "bytes": 108863,
+        "sha256": "21f16490c5b98d2255f8794a8e5eb5342c2e56e6f9831abee3b71fa5d061fb03",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/rest-scope.png",
+        "bytes": 115547,
+        "sha256": "cd52d5ea18a007e8e3362b20a23b42eef7aae391863f853a4e914f714239af99",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-bench-evidence-0.2.jpg",
+        "bytes": 58341,
+        "sha256": "edca546d8a0c6ffa0851ae52680b3070e07d5be6d944a729ba77894c638019ea",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-bench-evidence-0.5.jpg",
+        "bytes": 67176,
+        "sha256": "2a50fd09dfaf8402f992fe6ee8eee2425faa46f0018c26ea9c1e8fce7c89b2b5",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-bench-evidence-0.8.jpg",
+        "bytes": 75327,
+        "sha256": "1a87d99e756c5054ef3c66da78e8a6e7616378e51c315a6c71fc4570fc93b570",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-evidence-scope-0.2.jpg",
+        "bytes": 60925,
+        "sha256": "4c5ef6442aadd6c3ccc27d31b8bb409bcc149b67ce42cd056fbce1ac18a97a47",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-evidence-scope-0.5.jpg",
+        "bytes": 72853,
+        "sha256": "99d51300328b9651d55de883f410c60c576bbca82fdc1eaad05dcc35c3f9e495",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-evidence-scope-0.8.jpg",
+        "bytes": 79847,
+        "sha256": "1748dea2b291f439227c6fd5db20b4a19cd4900f1af4a5cb6f9abd246837516b",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-question-scheduling-0.2.jpg",
+        "bytes": 58159,
+        "sha256": "93cfafa24ba8e95697c59ed710950b934eb100de0bf53a78e0f621a29b295acc",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-question-scheduling-0.5.jpg",
+        "bytes": 64382,
+        "sha256": "69f980ff4c6ebfbd86c969ab6becead8f03ff52160a9877169989d8554156ecf",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-question-scheduling-0.8.jpg",
+        "bytes": 66345,
+        "sha256": "a2955322e8377d106a0797d119485d42ada0273e247524330830293811fdfb19",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-scheduling-bench-0.2.jpg",
+        "bytes": 55442,
+        "sha256": "5c72b689aa7896a38b27b6a99771897109ec676a786e8aa1fc640a651cb39c43",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-scheduling-bench-0.5.jpg",
+        "bytes": 66571,
+        "sha256": "8ba642d32b37d4f1ca4a6e1463dd4c5efab3280ec6f8bb9307e355de6d890fd0",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-forward-scheduling-bench-0.8.jpg",
+        "bytes": 72113,
+        "sha256": "c5f611d6b323c6c155e01ba4d9a49845c9e90b5f066ba0dea5000740970916e5",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-bench-scheduling-0.2.jpg",
+        "bytes": 72131,
+        "sha256": "14ce1a4cd0459bd85f39ee250bef1e6105a79baa98c380146163659e11153a58",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-bench-scheduling-0.5.jpg",
+        "bytes": 65879,
+        "sha256": "dd9f7d34d7dee41b33e5d67ec1bc49bd57f4c59727e94f6942293307cea6f1f8",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-bench-scheduling-0.8.jpg",
+        "bytes": 56314,
+        "sha256": "718a465047dbf11918a5f270ac1661d18d8c9bac6402d295f91347d15449da04",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-evidence-bench-0.2.jpg",
+        "bytes": 74742,
+        "sha256": "789fe744ac35de395fc68f679403eaa5a64fff140e78161e5f788a9176cca7f6",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-evidence-bench-0.5.jpg",
+        "bytes": 66095,
+        "sha256": "cf37f39cc5c3235d63e2d69b2ad831409bed51bf44a2c32418c37660b86aa03d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-evidence-bench-0.8.jpg",
+        "bytes": 59452,
+        "sha256": "95cc73bdd39078b01aa9212fd8e6b52965067ebd18be3ef34b787a5693c9ed6f",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-scheduling-question-0.2.jpg",
+        "bytes": 69158,
+        "sha256": "7c61e9363130277a9b22fe5af3e9557e1cbbe4ddf243f18b32d5b41727db3124",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-scheduling-question-0.5.jpg",
+        "bytes": 65323,
+        "sha256": "41475b2f057df84d2d6ecbda8b55b5aeb189dae440cf03fb74e32ad0b017cf54",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-scheduling-question-0.8.jpg",
+        "bytes": 57222,
+        "sha256": "47e18e6e2156b920e636e893f17f6bf667c7f7ff206c115c172bf69c56020871",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-scope-evidence-0.2.jpg",
+        "bytes": 77128,
+        "sha256": "7c164dcbc32c543e7245df9343d0fa897272da922e772455ee07a3604bd3e890",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-scope-evidence-0.5.jpg",
+        "bytes": 72673,
+        "sha256": "186f706221fd66713552f6c61412f6cca0535b4b6acfa7d7b72da1ecfa5d6e41",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/mobile/travel-reverse-scope-evidence-0.8.jpg",
+        "bytes": 60589,
+        "sha256": "45d7796f327d06db9ca5895f7c46ae9f30753970d8c98a59a02fa6528779686e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "mobile"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/00-question-end.png",
+        "bytes": 205949,
+        "sha256": "d2545148d11893a35dc4dfe31a981fac46d93a54ce4fde907b7b84ae1a6eae4b",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/00-question-mid.png",
+        "bytes": 202974,
+        "sha256": "a53ade161fff86af74fe65e8123cb31961b263469a52609d14230888ef4e52b4",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/01-scheduling-end.png",
+        "bytes": 191413,
+        "sha256": "a7cd26d274b5466493826c73232be1569e37cd45fbe553e9b9543da85d81ca46",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/01-scheduling-mid.png",
+        "bytes": 191123,
+        "sha256": "933cdb20a9c1e189d09823e1ed1862d66dd8c5452e945f7352e37c94c92ad7fa",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/02-bench-end.png",
+        "bytes": 192158,
+        "sha256": "72d46664e143f85725b116e2d6f34652f91c298238265ff1a7a027501d82eba7",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/02-bench-mid.png",
+        "bytes": 191534,
+        "sha256": "f5680ab0f337103d721fcb029cde61ae2a4b8885e22f61a672d4c63b2e9b66f8",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/03-evidence-end.png",
+        "bytes": 199576,
+        "sha256": "f94da2b343252b0b667e6b44d415baa182f9b4ff457d02bbb07fe3c068b1f104",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/03-evidence-mid.png",
+        "bytes": 196332,
+        "sha256": "3ec50b5a7a33f7859c841d2b13a94de83b1774e1846cd496f0758495fd4f6bfb",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/04-scope-end.png",
+        "bytes": 213555,
+        "sha256": "8bad18646b89706dd1bbe419f4464c5847da7792fd9324919d42f7cde37392fe",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/04-scope-mid.png",
+        "bytes": 215947,
+        "sha256": "aaf606ac9dd8f5de5e96a32f0503c3e7a60c2266c10a68fbc784f4ff075e03de",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-0834ce7be807e94d-keyboard-after.png",
+        "bytes": 215126,
+        "sha256": "036370a3ce7ac18a739d37986d4d4d79eeb8dbf32c695193e4f3e6e5daa202f1",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-0834ce7be807e94d-keyboard-before.png",
+        "bytes": 205996,
+        "sha256": "e1e9c4bfd775ddf39ade5d2cc266eaed4bd2771d83122737efe275217cb16629",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-0834ce7be807e94d-pointer-after.png",
+        "bytes": 216189,
+        "sha256": "ccd95466976dafce58bce7ab7de73e8acf0a2863595eee307b9003eb87f20826",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-0834ce7be807e94d-pointer-before.png",
+        "bytes": 206911,
+        "sha256": "7ffab1780c06beac774e53c1b7a7a1a9b9df0268d5542c1136660ee09a9cd88e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-229673414fdef73d-keyboard-after.png",
+        "bytes": 197415,
+        "sha256": "3930feb9eaedb51bbab8b0ac34b99d91f6248dfd90bae8637769e3e7254cbe69",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-229673414fdef73d-keyboard-before.png",
+        "bytes": 205997,
+        "sha256": "9cf832b44364a09bbc029111aee3464d54ece703d5a04d6d26555c29f3b50a2c",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-229673414fdef73d-pointer-after.png",
+        "bytes": 198220,
+        "sha256": "4346f6aed23e15ab315383ff408067b61ea9adb96c5e46ec97139f82b9a90a5f",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-229673414fdef73d-pointer-before.png",
+        "bytes": 207317,
+        "sha256": "6ef605deb65587d29ea2578d4ccbdfc9a70e7f743abea5a31df9e43182767de1",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-57ef510c22f051aa-keyboard-after.png",
+        "bytes": 215646,
+        "sha256": "752cfa0d643f23bb8534656ae802512685e97572c1561686c8dcca4240f282a3",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-57ef510c22f051aa-keyboard-before.png",
+        "bytes": 209611,
+        "sha256": "3ab599499df5aa2f3711525cefb1c74bae470ff8fbc84b4a9e2d8d66ff50f3d3",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-57ef510c22f051aa-pointer-unfocused.png",
+        "bytes": 205949,
+        "sha256": "d2545148d11893a35dc4dfe31a981fac46d93a54ce4fde907b7b84ae1a6eae4b",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9cad870ea554ec2a-keyboard-after.png",
+        "bytes": 202974,
+        "sha256": "a53ade161fff86af74fe65e8123cb31961b263469a52609d14230888ef4e52b4",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9cad870ea554ec2a-keyboard-before.png",
+        "bytes": 205997,
+        "sha256": "ea9a77d397c5a53cdf827aaee6d9d7b3c946485a437585b14e177941b118e891",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9cad870ea554ec2a-pointer-after.png",
+        "bytes": 204565,
+        "sha256": "cab34da8a30b97d4787dc24ebb83778464bbe0c0cf5f7292c107ece139caeaba",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9cad870ea554ec2a-pointer-before.png",
+        "bytes": 207541,
+        "sha256": "869c7d85dd0b87ac7abcd6b3c87ac503bb0e0a94082c1730c9a93ca69ec107fa",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9eb58dcb119c043b-keyboard-after.png",
+        "bytes": 202929,
+        "sha256": "dcf45f30624e77e27fdc3e7eaa6254d5a790c00c89b96a39f768edd2e0a5df1d",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9eb58dcb119c043b-keyboard-before.png",
+        "bytes": 205994,
+        "sha256": "77559ab492cdb1411ac95fe43749561b89d59184d0c370d584c9bfd7f1ce9d40",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9eb58dcb119c043b-pointer-after.png",
+        "bytes": 203390,
+        "sha256": "a5d3d82caceef36c7147b811694074df310096da3564b62a8eefd4cba10bea73",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-9eb58dcb119c043b-pointer-before.png",
+        "bytes": 207106,
+        "sha256": "1e90387f39f28920522734021b2636b919629a36bc988f02f21a91235c9fa14e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-fa5f87289d477f00-keyboard-after.png",
+        "bytes": 196710,
+        "sha256": "c453b88373245aa802e1a8f36ec931a32a4bedc1120bbb9a0e98fb6092444c53",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-fa5f87289d477f00-keyboard-before.png",
+        "bytes": 205996,
+        "sha256": "4f57eead226d3624c745d7c08826d3800345dd9ffaadf1c17b8bbc03b1ba77ad",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-fa5f87289d477f00-pointer-after.png",
+        "bytes": 197564,
+        "sha256": "2fd2089b353654fc2e247004013274ddb9ff527c1d51ff056143d865bf102fd9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/control-fa5f87289d477f00-pointer-before.png",
+        "bytes": 207313,
+        "sha256": "e0f9610b82491642c3d05cfdbcb21600f121b68e71cf7446e56dbd6a120a84b2",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/rest-bench.png",
+        "bytes": 192158,
+        "sha256": "72d46664e143f85725b116e2d6f34652f91c298238265ff1a7a027501d82eba7",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/rest-evidence.png",
+        "bytes": 199576,
+        "sha256": "f94da2b343252b0b667e6b44d415baa182f9b4ff457d02bbb07fe3c068b1f104",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/rest-question.png",
+        "bytes": 205949,
+        "sha256": "d2545148d11893a35dc4dfe31a981fac46d93a54ce4fde907b7b84ae1a6eae4b",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/rest-scheduling.png",
+        "bytes": 191413,
+        "sha256": "a7cd26d274b5466493826c73232be1569e37cd45fbe553e9b9543da85d81ca46",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/rest-scope.png",
+        "bytes": 213555,
+        "sha256": "8bad18646b89706dd1bbe419f4464c5847da7792fd9324919d42f7cde37392fe",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-bench-evidence-0.2.jpg",
+        "bytes": 95964,
+        "sha256": "15eb330de6349d9592b91fa6f32a0c4fd4d3b0a48d6f6baad36a99ac0de3a4b5",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-bench-evidence-0.5.jpg",
+        "bytes": 104773,
+        "sha256": "5e8914ec5ff2e532d6a71bbdb1e34801ed21f8a76956d94d0ee55dc433fa9b46",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-bench-evidence-0.8.jpg",
+        "bytes": 111638,
+        "sha256": "e18ba1f95a360c1cb355fbf0ef710595188f9e5b5247a9ccf1815f7450ef9bf1",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-evidence-scope-0.2.jpg",
+        "bytes": 99050,
+        "sha256": "428cac12034421125733d371967766be1b226ccdc58f82ab061b81439cba9d3e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-evidence-scope-0.5.jpg",
+        "bytes": 107008,
+        "sha256": "dfda17ff47b3815879f16de38ded59f500bd0575620cfc6573df125245e92e85",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-evidence-scope-0.8.jpg",
+        "bytes": 116708,
+        "sha256": "425dde3e0d99374ddeba47c1bc8a8b5310c8a26870035c96298f03fa8359c5df",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-question-scheduling-0.2.jpg",
+        "bytes": 97560,
+        "sha256": "6e5962e437629d223934c4a3fc13f93841e54b34d60922c681c25c194c0da4d9",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-question-scheduling-0.5.jpg",
+        "bytes": 102523,
+        "sha256": "54eeb287959c7889d74d93f3ed999a277cc47e2266ca8d87c0de09fd0e3e1296",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-question-scheduling-0.8.jpg",
+        "bytes": 106215,
+        "sha256": "6b26918df87da51201551118ba7e9de84f3bb746f92c9af730a25602cbad844e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-scheduling-bench-0.2.jpg",
+        "bytes": 91253,
+        "sha256": "0af0ca34734600fc1ef20f928e738239e9a071c9bf3ae4563b1cedc6afe10aab",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-scheduling-bench-0.5.jpg",
+        "bytes": 101458,
+        "sha256": "1b4175a8e2301eb09755388d59fd5754a734fafb9c05ff94ca35508e2b34e510",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-forward-scheduling-bench-0.8.jpg",
+        "bytes": 110012,
+        "sha256": "4d8ac7004af7f32816a2a9315ea13dc6535fd60025d2a772a7a175d5a5ffb343",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-bench-scheduling-0.2.jpg",
+        "bytes": 108788,
+        "sha256": "20a20090aa71e9e6da4ef8bd46cb4e4975260a5104388ce05590edb0b097699f",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-bench-scheduling-0.5.jpg",
+        "bytes": 99261,
+        "sha256": "57145d232dd1cded6d4f74cdb143434580605febb1c7ab411736783f6727b9f5",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-bench-scheduling-0.8.jpg",
+        "bytes": 92280,
+        "sha256": "263c1e6421344839c4ff85866e8bc6e5ac0a4616ab9d19f78602aa05516f4a68",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-evidence-bench-0.2.jpg",
+        "bytes": 109192,
+        "sha256": "670151f0a3a7295dbcb623b796f36405d815ccff42b0864af312dbbd1657cc29",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-evidence-bench-0.5.jpg",
+        "bytes": 100833,
+        "sha256": "bff21c1e305789b439390bcb43f3d8714fa7f7192a3e8024eff0f425f7bdb72e",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-evidence-bench-0.8.jpg",
+        "bytes": 96457,
+        "sha256": "1885fc34c4d7ee54cdda4cdde23e7d2c816af220c000355133ee7d3b0a1e06fb",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-scheduling-question-0.2.jpg",
+        "bytes": 106558,
+        "sha256": "7aafa65d6575cdbb2473667d0ae92999a42f958eec343d165f8d1ee293d94165",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-scheduling-question-0.5.jpg",
+        "bytes": 99063,
+        "sha256": "4c2ce5149af50a61d2505d21df22468499bc9d0ceca333cb5447daf2ead83bbe",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-scheduling-question-0.8.jpg",
+        "bytes": 97794,
+        "sha256": "9f03a369d426f0ece02f3fd4cfd80a1533d1035a57be40b0eeb3ffd11c57a5f4",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-scope-evidence-0.2.jpg",
+        "bytes": 117891,
+        "sha256": "65cc2ca9ae979dc6a6cc8ec5f2adc7606392cad0dc475f3083ebc94cb96e4d93",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-scope-evidence-0.5.jpg",
+        "bytes": 107804,
+        "sha256": "0577915a7dcbd628b8f1451a17a03d56e04deba74d4b12c9880563a57331a826",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/short/travel-reverse-scope-evidence-0.8.jpg",
+        "bytes": 98925,
+        "sha256": "d842a9b4e1e0969cfb134bda3b46e3a9a4051aadddbe3223ca8a28e6dc7684dd",
+        "viewMethod": "view_image original",
+        "reviewer": "next_plan",
+        "mode": "short"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/00-question-end.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/00-question-mid.png",
+        "bytes": 224206,
+        "sha256": "afe7b60d13cdef2901d87a776305ec30500c672b97849f7ec0a89828f08f272e",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/01-scheduling-end.png",
+        "bytes": 225606,
+        "sha256": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/01-scheduling-mid.png",
+        "bytes": 224403,
+        "sha256": "b81959470359e481745a750718c329de3cbf5e7d4d12752640edc7024af9eb05",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/02-bench-end.png",
+        "bytes": 229075,
+        "sha256": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/02-bench-mid.png",
+        "bytes": 227356,
+        "sha256": "b41523b47b6b92117bc5dfd429e87f91c89d7e9e83a92f4e832d523054963a3c",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/03-evidence-end.png",
+        "bytes": 232609,
+        "sha256": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/03-evidence-mid.png",
+        "bytes": 229471,
+        "sha256": "2826e1068f9bfaed556871273542e6a82640d76424b28318860dd6afd4308739",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/04-scope-end.png",
+        "bytes": 258135,
+        "sha256": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/04-scope-mid.png",
+        "bytes": 259674,
+        "sha256": "9cda00a4b69f31f3dec161becb1d2c3aa8e08db64992e58227d844645561c8b9",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-229673414fdef73d-keyboard-after.png",
+        "bytes": 232159,
+        "sha256": "ef7d79b907e9171e9d9886db0eb5b345b0451276fac68ac1cf73fe712ae4207f",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-229673414fdef73d-keyboard-before.png",
+        "bytes": 257715,
+        "sha256": "23aac36fd215957ea5ff0a9a52d30e81a0e7e67360c969e2722cfe8ba0146894",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-229673414fdef73d-pointer-after.png",
+        "bytes": 213183,
+        "sha256": "458c2e85fe89abf560c2f2d470742013ee2e191ca423f3b1c4291d7d0f4605e9",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-229673414fdef73d-pointer-before.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-57ef510c22f051aa-keyboard-after.png",
+        "bytes": 267141,
+        "sha256": "36dc6dedf2a3091f25f59c9b500191dccea4a0ce5aee78d3aecd57e36a44a23f",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-57ef510c22f051aa-keyboard-before.png",
+        "bytes": 231272,
+        "sha256": "21bb80b128e0e1af077cd21c3d1feebe02b1ca4989fb9d9c889bccc5f2a7183c",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-57ef510c22f051aa-pointer-unfocused.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-9cad870ea554ec2a-keyboard-after.png",
+        "bytes": 254464,
+        "sha256": "959fdd7ad999671463e8d2c6bdfc518f929ba255346e2bbe45262ce13e0bc55b",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-9cad870ea554ec2a-keyboard-before.png",
+        "bytes": 227522,
+        "sha256": "913473661b097de5a7aaa09b4af8774152ac8c89688c768b1b4e5bf23320ef06",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-9cad870ea554ec2a-pointer-after.png",
+        "bytes": 254464,
+        "sha256": "959fdd7ad999671463e8d2c6bdfc518f929ba255346e2bbe45262ce13e0bc55b",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-9cad870ea554ec2a-pointer-before.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/control-fa5f87289d477f00-pointer-before.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/rest-bench.png",
+        "bytes": 229075,
+        "sha256": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/rest-evidence.png",
+        "bytes": 232609,
+        "sha256": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/rest-question.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/rest-scheduling.png",
+        "bytes": 225606,
+        "sha256": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/rest-scope.png",
+        "bytes": 258135,
+        "sha256": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-bench-after.png",
+        "bytes": 229075,
+        "sha256": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-bench-before.png",
+        "bytes": 229075,
+        "sha256": "eb0564f9f91a5d340fda8de79c3222423141f6dfa8e47128b8a7313bed6c4356",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-evidence-after.png",
+        "bytes": 232609,
+        "sha256": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-evidence-before.png",
+        "bytes": 232609,
+        "sha256": "5af12e3bc9f22eb916a7b491539152de89f899f3e28f39c4261c25c381efb470",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-question-after.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-question-before.png",
+        "bytes": 227479,
+        "sha256": "98cd86a4c62aaf13c4d525cb71d7058f491d0a175ee8185977a15fb72ae4b0b0",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-scheduling-after.png",
+        "bytes": 225606,
+        "sha256": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-scheduling-before.png",
+        "bytes": 225606,
+        "sha256": "8c56ee3fb08ab1110bb4b39429fd6c76c2e6f0e3f1ae0f1035b33ad97aebb31d",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-scope-after.png",
+        "bytes": 258135,
+        "sha256": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      },
+      {
+        "path": "evals/runs/stage-3-candidate-verification-1/acceptance/reduced-motion/still-scope-before.png",
+        "bytes": 258135,
+        "sha256": "c12135338925420c527e4d2fe4d6f83b60f55a54f98d6277cf41b9fe2482059c",
+        "viewMethod": "view_image original",
+        "reviewer": "acceptance",
+        "mode": "reduced-motion"
+      }
+    ]
+  },
+  "limits": [
+    "Verification does not erase the original actor timeout or complete Stage 3 by itself",
+    "Technical results do not establish visual quality, physical-phone behavior or actual author approval",
+    "Absent modes or interrupted coverage remain unobserved",
+    "No new actor, judge or retry is authorized by this result"
+  ]
+}
+

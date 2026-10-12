@@ -1,0 +1,8 @@
+{
+  "command": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node --input-type=module -e 'import {readFile} from \"node:fs/promises\"; import {spawnSync} from \"node:child_process\"; const prior=JSON.parse(await readFile(\"evals/runs/stage-3-candidate-verification-1/documentation-check.json\",\"utf8\")); const r=spawnSync(\"bash\",[\"-c\",prior.command],{stdio:\"inherit\"}); process.exit(r.status??1);'",
+  "chunk_id": "7157fa",
+  "wall_time_seconds": 0.000029866,
+  "exit_code": 0,
+  "original_token_count": 202,
+  "output": "{\n  \"files\": 14,\n  \"localLinksChecked\": 627,\n  \"broken\": [],\n  \"emDashes\": [],\n  \"paths\": [\n    \"docs/README.md\",\n    \"docs/handover.md\",\n    \"docs/history/README.md\",\n    \"docs/history/2026-10-12-candidate-verification-approval.md\",\n    \"docs/history/2026-10-12-natural-entry-request.md\",\n    \"docs/superpowers/plans/README.md\",\n    \"docs/superpowers/plans/2026-10-12-stage-3-completion.md\",\n    \"docs/superpowers/plans/2026-10-12-stage-3-natural-entry-proposal.md\",\n    \"evals/README.md\",\n    \"evals/studies.md\",\n    \"evals/runs/stage-3-candidate-verification-1/findings.md\",\n    \"evals/runs/stage-3-candidate-verification-1/interruption-disposition.md\",\n    \"evals/runs/stage-3-candidate-verification-1/root-visual-notes.md\",\n    \"evals/runs/stage-3-candidate-verification-1/postcapture-audit.md\"\n  ]\n}\n"
+}
