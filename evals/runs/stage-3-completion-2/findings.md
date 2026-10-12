@@ -41,3 +41,28 @@ the fictional-person check passes, and all 342 repository tests pass. Full
 command/streams/closure are in `candidate-tests/` and its outer tool records.
 The candidate setup helper derivative changes coordinator identity paths
 only; it does not change the eleven actor fixture files or ordinary prompt.
+
+Prospective full-journey gate clarification, before launch: a completed
+baseline factual handoff can receive the unchanged truth reply while a
+missing preflight/recommendation is explicitly failed. This observes the
+concept handoff in that same discovery conversation without coaching or
+false completion. It never permits a fictional approval of missing runnable
+concepts, an incomplete actor continuation, or a whole-proof pass with an
+earlier failure. The candidate whole proof must satisfy every criterion.
+
+## Fresh ordinary-entry candidate readiness
+
+Prepared from `692b11b` with 133 frozen inputs, digest
+`5cb0491da31d429b09082c298f475546c1ec10ccc003cafa1bb037aea5e309e9`.
+The eleven fixture files, prompt, engine, shared runner, criteria and worker
+are unchanged. Coordinator helper identity paths, supported skill changes
+and one additional disabled unrelated skill are the explicit differences.
+The pre-freeze strict capability-equality failure and root's qualified
+disposition remain saved; no historical capability record was edited.
+
+The fresh workspace's single offline install and actual command-only probe
+passed. Initial 177 source files are unchanged; finalization adds only the
+neutral environment record. Root opened all nine new starter originals.
+The strict readiness gate passes with hash-bound evidence and a fresh dry
+check. Setup tests again pass all 342 tests, skill and fictional-person
+checks. Actor launch is still pending at this checkpoint.

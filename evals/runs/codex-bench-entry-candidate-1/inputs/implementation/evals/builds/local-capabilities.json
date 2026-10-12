@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "model": "gpt-6.1-sol",
+  "permissionProfile": "storyfolio-build",
+  "removeConfig": [
+    "sandbox_mode",
+    "sandbox_workspace_write.network_access"
+  ],
+  "config": {
+    "features.network_proxy": true,
+    "permissions.storyfolio-build.filesystem": {
+      ":root": "read",
+      ":workspace_roots": "write",
+      ":slash_tmp": "write",
+      ":tmpdir": "write"
+    },
+    "permissions.storyfolio-build.network": {
+      "enabled": true,
+      "mode": "limited",
+      "allow_local_binding": true,
+      "domains": {
+        "localhost": "allow",
+        "127.0.0.1": "allow",
+        "[::1]": "allow"
+      }
+    }
+  },
+  "scope": "Local build and browser inspection through a proxy restricted to loopback destinations. No general external network, apps, plugins or other skills. Engine AGENTS supplied deliberately. This is not a filesystem read jail."
+}

@@ -24,6 +24,14 @@ stops, with [line-level reasons](../evals/runs/stage-3-completion-2/written-agai
 These changes are pending fresh matched tests, full-journey proof and final
 planning regression. No new paid actor has run at this checkpoint.
 
+Candidate entry setup is ready: skill commit `692b11b`, 133 frozen inputs,
+177 initial source files plus one neutral environment record, a successful
+offline install and actual capability probe, nine reviewed starter originals
+and passing strict readiness. The sole capability difference from baseline
+is an additional unrelated skill being disabled, explicitly recorded before
+freeze. The fresh ordinary-entry actor is next, one 15-minute turn with no
+retry, continuation or judge. The matched wording and full journey follow.
+
 Stage-level position: **Stage 3, the build, is active and incomplete.**
 Stage 1's planning method is implemented with closing review decisions open;
 Stage 2's engine is complete and approved. The candidate skill now routes
