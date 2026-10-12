@@ -1,5 +1,12 @@
 # Documentation map
 
+Latest checkpoint: [candidate-3 concept measurement stopped](../evals/runs/stage-3-storyboard-length-1/concept-failure-disposition.md)
+on a likely wrapped-inline hit-test false negative. The actual phone link
+was visible/focused and initially clicked successfully, but required trial
+responses and later batches are missing. No retry or turn 3 occurred.
+The [browser-only replacement request](history/2026-10-12-stage-3-wrapped-link-verifier-request.md)
+needs a new answer; no new paid attempt is requested. Stage 3 remains open.
+
 Current work: [finish Stage 3](superpowers/plans/2026-10-12-stage-3-completion-execution.md),
 with [necessary paid work authorized](history/2026-10-12-stage-3-completion-authority.md)
 and [evidence here](../evals/runs/stage-3-completion-2/findings.md).

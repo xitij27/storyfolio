@@ -1,0 +1,13 @@
+{
+  "tool": "exec_command",
+  "chunk_id": "8a8081",
+  "exit_code": 0,
+  "wall_time_seconds": 0.975758638,
+  "session_id_present": false,
+  "outputOmittedHere": true,
+  "commandAndFullAuditOutput": "evals/runs/stage-3-storyboard-length-1/concept-failure-audit-command",
+  "observedRecorderFinished": "2026-10-12T19:55:59.191Z",
+  "observedRecorderDurationMs": 1085,
+  "observedStdoutSha256": "951a0fd709d38c4ba60594f8fd76cd0ab5afcdcd49edbb8bbb9e801534d7ce69",
+  "coordinatorNote": "The command completed normally. After displaying its real terminal result, the orchestration cell tried to store an absent session ID and rejected undefined as nonserializable. That post-command bookkeeping error prevented the intended tool-envelope write. This record explicitly preserves the actual observed terminal fields, not a fabricated full tool envelope. No command was repeated."
+}

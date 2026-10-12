@@ -4,6 +4,22 @@ Current state as of 12 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest checkpoint: candidate-3 concept measurement stopped at operation 02,
+normal exit 1 at 19:53:10.264 UTC, with unchanged 185-file source. The
+[failure disposition](../evals/runs/stage-3-storyboard-length-1/concept-failure-disposition.md)
+retains four reports and all 30 reviewed originals. The phone enclosure
+link was visible, focused and initially clicked successfully; the formal
+trials failed a union-center hit test on its wrapped inline text. A checker
+false negative is strongly supported, not a proven new skill defect.
+Missing formal responses and seven remaining batches do not pass. No
+turn 3 or retry occurred. All 351 repository tests and 24 focused tests
+pass in `local-tests-5`. Root [asks for one browser-only replacement](history/2026-10-12-stage-3-wrapped-link-verifier-request.md),
+same 15-minute summed execution limit, no model calls or further retry.
+No answer is recorded yet. Existing no-retry authority is exhausted for
+this measurement. The paid conversation remains intact with four gated
+turns remaining; Stage 3 and the length correction remain unproved.
+The chronology below preserves the preceding checkpoints.
+
 Newest direction: the author [approved the storyboard correction and one
 fresh matched journey](history/2026-10-12-stage-3-storyboard-correction-approval.md).
 The [new study](../evals/runs/stage-3-storyboard-length-1/README.md) records the

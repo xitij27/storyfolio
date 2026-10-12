@@ -1,0 +1,393 @@
+{
+  "observedAt": "2026-10-12T19:55:59.182Z",
+  "integrityVerified": true,
+  "measurementComplete": false,
+  "technicalPassed": false,
+  "behavioralGate": "blocked at concept measurement, no turn3",
+  "sourceFiles": 185,
+  "sourceDigest": "7104be428d5e26c867e8dbcc3f650a467931135346a54209ec8f3e137a45ceb9",
+  "inputDigest": "68c2bfd15305eb9b9fcb8114dbe64dd511d9a227627c8865833aad281f95ebeb",
+  "operations": [
+    {
+      "id": 0,
+      "started": "2026-10-12T19:49:48.177Z",
+      "finished": "2026-10-12T19:50:04.381Z",
+      "outerDurationMs": 16204,
+      "childDurationMs": 14562,
+      "code": 0,
+      "closureComplete": true,
+      "errors": [],
+      "outerResultSha256": "8c0969c7eb4da97befe5dd3fdf4b8875307aa6d2a0027b01e7d8b27b8214934c"
+    },
+    {
+      "id": 1,
+      "started": "2026-10-12T19:50:43.626Z",
+      "finished": "2026-10-12T19:51:42.340Z",
+      "outerDurationMs": 58714,
+      "childDurationMs": 57041,
+      "code": 0,
+      "closureComplete": true,
+      "errors": [],
+      "outerResultSha256": "c787647c90682a164875efbda50a8688a5f93762cf6785b6417696f77b34e71d"
+    },
+    {
+      "id": 2,
+      "started": "2026-10-12T19:52:18.648Z",
+      "finished": "2026-10-12T19:53:10.264Z",
+      "outerDurationMs": 51616,
+      "childDurationMs": 49898,
+      "code": 1,
+      "closureComplete": false,
+      "errors": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n"
+      ],
+      "outerResultSha256": "0184e43114c333895b5ba0f6a695b5e62203b7e782bb6adb127496d685d9e17c"
+    }
+  ],
+  "outerExecutionMs": 126534,
+  "unspentExecutionMs": 773466,
+  "budgetRemainingIsNotRetryPermission": true,
+  "historyRefusal": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n",
+  "reports": [
+    {
+      "batch": 1,
+      "mode": "desktop",
+      "complete": true,
+      "problems": [],
+      "images": 8,
+      "initialActivationUrl": "http://127.0.0.1:34959/sketch/fixture",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 135.984375,
+            "y": 432.5625,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": false,
+            "disabled": false
+          },
+          "activated": true,
+          "identityChanged": true
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 135.984375,
+            "y": 432.5625,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": true,
+            "disabled": false
+          },
+          "activated": true,
+          "identityChanged": true,
+          "tabPresses": 1
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "mode": "phone",
+      "complete": true,
+      "problems": [],
+      "images": 8,
+      "initialActivationUrl": "http://127.0.0.1:34959/sketch/fixture",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 52.796875,
+            "y": 363.5,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": false,
+            "disabled": false
+          },
+          "activated": true,
+          "identityChanged": true
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 52.796875,
+            "y": 363.5,
+            "width": 300.46875,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": true,
+            "disabled": false
+          },
+          "activated": true,
+          "identityChanged": true,
+          "tabPresses": 1
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "mode": "desktop",
+      "complete": true,
+      "problems": [],
+      "images": 8,
+      "initialActivationUrl": "http://127.0.0.1:46667/sketch/enclosure",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 135.984375,
+            "y": 524.75,
+            "width": 332.9375,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": false,
+            "disabled": false
+          },
+          "activated": true,
+          "identityChanged": true
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 135.984375,
+            "y": 524.75,
+            "width": 332.9375,
+            "height": 31,
+            "inView": true,
+            "visible": true,
+            "hitTarget": true,
+            "focused": true,
+            "disabled": false
+          },
+          "activated": true,
+          "identityChanged": true,
+          "tabPresses": 2
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "mode": "phone",
+      "complete": true,
+      "problems": [
+        "pointer: switch not exercised: AssertionError [ERR_ASSERTION]: Switch is hidden, covered, out of view or disabled",
+        "pointer: alternative response unobserved, unchanged/idempotent trial is not a pass",
+        "keyboard: switch not exercised: AssertionError [ERR_ASSERTION]: Switch is hidden, covered, out of view or disabled",
+        "keyboard: alternative response unobserved, unchanged/idempotent trial is not a pass"
+      ],
+      "images": 6,
+      "initialActivationUrl": "http://127.0.0.1:46667/sketch/enclosure",
+      "controls": [
+        {
+          "method": "pointer",
+          "geometry": {
+            "x": 52.796875,
+            "y": 482.875,
+            "width": 302.4375,
+            "height": 63,
+            "inView": true,
+            "visible": true,
+            "hitTarget": false,
+            "focused": false,
+            "disabled": false
+          },
+          "activated": false,
+          "error": "AssertionError [ERR_ASSERTION]: Switch is hidden, covered, out of view or disabled"
+        },
+        {
+          "method": "keyboard",
+          "geometry": {
+            "x": 52.796875,
+            "y": 482.875,
+            "width": 302.4375,
+            "height": 63,
+            "inView": true,
+            "visible": true,
+            "hitTarget": false,
+            "focused": true,
+            "disabled": false
+          },
+          "activated": false,
+          "error": "AssertionError [ERR_ASSERTION]: Switch is hidden, covered, out of view or disabled",
+          "tabPresses": 2
+        }
+      ]
+    }
+  ],
+  "originals": [
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/ending.png",
+      "sha256": "30e3ff70ff3bd190a1ee3c45c10d40d7aec4130d86814d5bbbd018d5657f25b4",
+      "bytes": 189710
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/entry.png",
+      "sha256": "5b59304b4e0e83708e82926de69f798654941d9ff740c265a1a2503361476dc2",
+      "bytes": 192639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/keyboard-after.png",
+      "sha256": "5b59304b4e0e83708e82926de69f798654941d9ff740c265a1a2503361476dc2",
+      "bytes": 192639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/keyboard-before.png",
+      "sha256": "72acb2de43ebedad820a92cc2662d4d17238399fd33aa7c05932356bc388946b",
+      "bytes": 106119
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/middle.png",
+      "sha256": "47109f2ac209d7d7cfe2259953a22c1317ab054d5436f4cc69a1d7c91d03cda1",
+      "bytes": 206420
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/opening.png",
+      "sha256": "6a486d8f8e48a146e242462833557a8f25d4e82fa159c7e2e7bae46d2a8ff38d",
+      "bytes": 200486
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/pointer-after.png",
+      "sha256": "5b59304b4e0e83708e82926de69f798654941d9ff740c265a1a2503361476dc2",
+      "bytes": 192639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-desktop/pointer-before.png",
+      "sha256": "9195102e69240fde26ebf08cceacff5ad27341bc2b004b7818a1e4e81a6387f8",
+      "bytes": 105981
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/ending.png",
+      "sha256": "2f4e768643e15c3bd4f0cb2e20744f174d7452dd86ae08320ccf41ae8bc26b75",
+      "bytes": 90256
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/entry.png",
+      "sha256": "94cc045b7e601122fa60450a52e2a380568ab9986259e21ad11288ce633ca3fa",
+      "bytes": 96639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/keyboard-after.png",
+      "sha256": "94cc045b7e601122fa60450a52e2a380568ab9986259e21ad11288ce633ca3fa",
+      "bytes": 96639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/keyboard-before.png",
+      "sha256": "bb1c0584b9a2982c0e96c3831904d2ab332542b0f75fe7867f56503c58ced56c",
+      "bytes": 70734
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/middle.png",
+      "sha256": "dec0cb97f7d9991973aa1885a7183e2d535362d6552d79224752c151059ad77b",
+      "bytes": 92369
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/opening.png",
+      "sha256": "34cdc63080ebb5f9a9008b418234fcb585c2c80f3b13327c22d7c97d060850a7",
+      "bytes": 95756
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/pointer-after.png",
+      "sha256": "94cc045b7e601122fa60450a52e2a380568ab9986259e21ad11288ce633ca3fa",
+      "bytes": 96639
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/01/artifacts/01-phone/pointer-before.png",
+      "sha256": "64007eb1db7e48cf86de3ab24661fea79bf2c8e1d173863a3c630e674caba5c3",
+      "bytes": 70659
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/ending.png",
+      "sha256": "f687bd01ce95ababf2c51d7c45dc25ab75f4ce4f2feef4cd9a780246f921812f",
+      "bytes": 192606
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/entry.png",
+      "sha256": "cf35b7d05a41c08489a5c9e10ce1c374861e2e91a9ccb937171cff85283c389b",
+      "bytes": 184380
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/keyboard-after.png",
+      "sha256": "cf35b7d05a41c08489a5c9e10ce1c374861e2e91a9ccb937171cff85283c389b",
+      "bytes": 184380
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/keyboard-before.png",
+      "sha256": "078baf2e0232a2280d6a4d0e9701bb71b4da691fadf2e3b5d24b6a5f6f216c82",
+      "bytes": 106438
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/middle.png",
+      "sha256": "1b1a74379c61695df30173f7d82e3dea3fcc7eb862b215d1157eda57f34673e6",
+      "bytes": 247080
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/opening.png",
+      "sha256": "2ad13b32db6f4e60bceccbf79bd20bb3d4719349ff83d476f3e277f776bcb647",
+      "bytes": 193832
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/pointer-after.png",
+      "sha256": "cf35b7d05a41c08489a5c9e10ce1c374861e2e91a9ccb937171cff85283c389b",
+      "bytes": 184380
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-desktop/pointer-before.png",
+      "sha256": "9195102e69240fde26ebf08cceacff5ad27341bc2b004b7818a1e4e81a6387f8",
+      "bytes": 105981
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-phone/ending.png",
+      "sha256": "5e57bf120aa63ea078239d4a579b5089125f1810fe0f013e159a012b2eb9fd03",
+      "bytes": 90259
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-phone/entry.png",
+      "sha256": "0196c646e81fc80b9f4f7ac4f49bbba01fea157c24b3e6ea6c4ba317fce300c1",
+      "bytes": 92928
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-phone/keyboard-before.png",
+      "sha256": "89abdd00bcb48dfa5841c32bf33dfa72dd0871d4ab3403832dd664da00beb9ae",
+      "bytes": 71099
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-phone/middle.png",
+      "sha256": "b537582e033b6071fbd83ebf0866612c155b451bcf26f466ea6b0e9c67aadb01",
+      "bytes": 106981
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-phone/opening.png",
+      "sha256": "c261890e6b987d7e13cc61881133ffadbb6168fd9bd48e47d85ec4d86f328529",
+      "bytes": 92006
+    },
+    {
+      "path": "evals/runs/stage-3-storyboard-length-1/concepts-1/batches/02/artifacts/02-phone/pointer-before.png",
+      "sha256": "64007eb1db7e48cf86de3ab24661fea79bf2c8e1d173863a3c630e674caba5c3",
+      "bytes": 70659
+    }
+  ],
+  "processObservation": {
+    "workspaceRoots": [
+      "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-measure-2-l65QnH",
+      "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9"
+    ],
+    "matches": [],
+    "limitation": "cwd-scoped observation only, not universal descendant-exit proof"
+  },
+  "modelCalls": 0,
+  "browserCalls": 0,
+  "sourceWrites": false
+}

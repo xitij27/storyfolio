@@ -137,3 +137,26 @@ in that freeze. No browser or paid turn 3 started during preparation.
 This checkpoint preserves ten EOF blank-line findings in frozen source
 copies and the raw turn-2 recorder stdout. Authored preparation files pass
 whitespace checking; evidence bytes are not reformatted.
+
+## Concept measurement stopped, no retry
+
+The [root failure disposition](concept-failure-disposition.md) closes the
+single measurement after operation 02, normal exit 1 without timeout or
+external signal. Setup and fixture passed; the phone enclosure interaction
+check failed before activation. All 185 source files remain unchanged.
+Four reports and all 30 emitted originals are preserved and reviewed;
+seven later batches remain unmeasured. The likely cause is the checker's
+union-center hit test on a wrapped inline link, not an observed offscreen
+or disabled control. The exact fragment-gap cause remains an inference.
+No failed result is rescored and no turn 3 is launched.
+
+The existing history checker correctly rejects continuation. All 24
+focused tests and 351 repository tests pass in `local-tests-5`, with skill
+and people checks. Root asks for a separately bounded browser-only
+replacement, not another paid attempt. The current no-retry allowance
+does not permit that launch. Stage 3 and the corrected length behavior
+remain unproved.
+
+This failure checkpoint preserves six EOF blank-line findings in raw outer
+and inner operation stdout logs. Their exact bytes and hashes are evidence;
+they are not reformatted. Authored documents pass whitespace checking.
