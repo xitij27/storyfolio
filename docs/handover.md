@@ -13,7 +13,17 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: the demonstrated early-workflow correction is now
+Newest checkpoint: the fresh matched candidate is ready for its first paid
+turn. Exactly three skill files differ from baseline-2 among 149 inputs;
+all other input/capability/measurement bytes match. Its own neutral proof,
+original review and independent readiness audit pass, with 94 unchanged
+unscaffolded source files. The
+[launch disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-launch-disposition.md)
+keeps the original finite bounds and requires every real gate, without the
+baseline-only exception. All 351 tests pass in `local-tests-14`. No paid
+candidate result or Stage 3 completion is claimed yet.
+
+Earlier checkpoint: the demonstrated early-workflow correction is now
 implemented in three skill files, with independent source review and all
 351 repository tests passing in `local-tests-13`. It adds build-only
 preflight/helper advice and three runnable concept sketches while preserving

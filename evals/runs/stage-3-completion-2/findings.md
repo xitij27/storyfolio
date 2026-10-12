@@ -304,3 +304,18 @@ all 351 repository tests at 06:34:35.134 UTC after 14,039 ms. Main-body
 count is 765; the concept reference is 1499 words. Source validation is not
 behavioral proof. The fresh matched candidate still needs its own freeze,
 neutral readiness and actual gates, with no baseline-only exception.
+
+## Matched full-journey candidate ready
+
+Skill correction commit `fbc8226` is now frozen in
+`codex-full-journey-candidate-1`: 149 inputs, digest
+`e6ca5f6bf8e24a9e176a03a1289c56245d27353342fc43896a7b0c4063ade71d`.
+Exactly three skill files differ from baseline-2, every other byte matches.
+The candidate's own neutral proof completed normally after 1,450 ms at
+06:37:23.917 UTC. Root viewed its new original individually. Fresh dry,
+finalizer and independent readiness audit passed, verifying 94 source
+files and all 18 evidence bindings. The
+[launch disposition](full-journey/preparation/candidate-launch-disposition.md)
+permits only the predeclared fresh matched conversation after commit.
+All 351 tests and skill/people checks pass in `local-tests-14`, closed zero
+at 06:39:25.702 UTC after 13,628 ms. This is setup, not improved behavior.

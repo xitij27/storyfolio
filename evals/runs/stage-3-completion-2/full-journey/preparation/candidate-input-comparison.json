@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-12T06:37:07.755Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "-e",
+      "const fs=require('node:fs'),assert=require('node:assert/strict');const a=JSON.parse(fs.readFileSync('evals/runs/codex-full-journey-baseline-2/inputs/manifest.json')),b=JSON.parse(fs.readFileSync('evals/runs/codex-full-journey-candidate-1/inputs/manifest.json'));assert.deepEqual(Object.keys(a.hashes),Object.keys(b.hashes));const changed=Object.keys(a.hashes).filter(k=>a.hashes[k]!==b.hashes[k]);assert.deepEqual(changed,['skill/SKILL.md','skill/references/concept.md','skill/references/reading-a-profile.md']);console.log(JSON.stringify({baselineDigest:a.digest,candidateDigest:b.digest,count:Object.keys(b.hashes).length,changed:changed.map(path=>({path,before:a.hashes[path],after:b.hashes[path]})),allOtherInputsIdentical:true},null,2));"
+    ]
+  },
+  "result": {
+    "chunk_id": "4afe4b",
+    "wall_time_seconds": 0.000021149,
+    "exit_code": 0,
+    "original_token_count": 230,
+    "output": "{\n  \"baselineDigest\": \"899898fc055c96452a77c03ff9d815782367d2634b10bcbdd5ab322857d8ab82\",\n  \"candidateDigest\": \"e6ca5f6bf8e24a9e176a03a1289c56245d27353342fc43896a7b0c4063ade71d\",\n  \"count\": 149,\n  \"changed\": [\n    {\n      \"path\": \"skill/SKILL.md\",\n      \"before\": \"2dded80561342fa6945eb54c118c22c7b5067b3e0346ba57687671b20682f9a9\",\n      \"after\": \"f71c179d24a5da42fc25b20bc924db63c4bf7b603f86b3f25349afca683b135c\"\n    },\n    {\n      \"path\": \"skill/references/concept.md\",\n      \"before\": \"11f1285c3b2380d17ab320377120b78a448aba1b52f5b9ffabdd787618719e18\",\n      \"after\": \"657bf63d38eb587229412775de5c867f5cbed9989e02e30af2e9cd746f4e3f1a\"\n    },\n    {\n      \"path\": \"skill/references/reading-a-profile.md\",\n      \"before\": \"4137d7b9271d4b9d57be9108c6cb89f7e79649fd745b9e9aa8b3e32f08373eca\",\n      \"after\": \"602ab27f0717880fc59628441c756d47b5e2bc07f503b7430e52d90e561671fe\"\n    }\n  ],\n  \"allOtherInputsIdentical\": true\n}\n"
+  }
+}

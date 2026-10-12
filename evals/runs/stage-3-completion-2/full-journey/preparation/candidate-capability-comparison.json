@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-12T06:36:51.711Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "-e",
+      "const fs=require('node:fs'),assert=require('node:assert/strict');const a=JSON.parse(fs.readFileSync('evals/runs/codex-full-journey-baseline-2/inputs/capabilities.json')),b=JSON.parse(fs.readFileSync('evals/runs/stage-3-completion-2/full-journey/preparation/candidate-initial-dry/stdout.log'));assert.deepEqual(a,b.capabilities);console.log('Exact baseline capability equality;149 frozen prospective files;digest '+b.digest);"
+    ]
+  },
+  "result": {
+    "chunk_id": "e9e360",
+    "wall_time_seconds": 0.000019777,
+    "exit_code": 0,
+    "original_token_count": 34,
+    "output": "Exact baseline capability equality;149 frozen prospective files;digest e6ca5f6bf8e24a9e176a03a1289c56245d27353342fc43896a7b0c4063ade71d\n"
+  }
+}
