@@ -59,3 +59,29 @@ validation, skill/people checks and all 351 repository tests pass. Stdout
 SHA-256: `246e1c07495c60875d2b32da3674327dce6d948a669b92b5a1943b52cbeb5ad0`.
 This verifies structure/regressions, not the new behavioral outcome. Fresh
 candidate-3 preparation is separate; no paid actor has started yet.
+
+## Preparation checkpoint
+
+Skill correction commit: `7ab7a6a`. The [new case](case.json) retains the
+original fixture, prompts, protocol, criteria and bounds. Its only deltas
+are default snapshot roots plus `site` and five study-local setup helper
+paths. The [preparation derivatives](../stage-3-completion-2/full-journey/candidate-3-preparation/README.md)
+change only the exact cohort identity and embedded new helper paths, with
+matching pure guard tests. No shared runner or older helper was edited.
+Root reviewed every code diff and the explicit root-plus-site limitation.
+Unknown omitted payload still blocks the complete-source audit/next turn.
+
+The [readiness auditor](readiness-audit.mjs) preserves the earlier actual
+environment, image, process and source checks and adds an exact old/new
+149-input comparison. Only the paragraph, case policy and five helper
+replacements are allowed to differ; prompts/material/capabilities/criteria
+and all other skill bytes must match. Its prepared SHA-256 is
+`7c47bf52dbd557cea15c67aab868598cc0a2728bb6742521e2b3ce18557b5266`.
+
+`local-tests-2` passed helper/auditor syntax, all twelve pure environment
+guard tests, skill/people checks and all 351 repository tests. It closed
+zero at 19:07:20.019 UTC after 14831 ms, stdout SHA-256
+`adf803fedf605a4fe6c6ff3bee3f0d845f81372922949f4658371ee8a6968d85`.
+This permits fresh preparation and its one neutral environment proof after
+commit, not a paid start. Root still reviews the fresh original, complete
+input delta and normal readiness closure, then commits before launch.
