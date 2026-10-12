@@ -22,6 +22,11 @@ preparation, not a concept pass or Stage 3 completion.
 The [separately bound concept capture](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/concepts-launch-disposition.md)
 now has passing actual-data and focused apparatus checks. Its browser and
 semantic results remain required before same-session continuation.
+That single capture was subsequently interrupted externally. The
+[preserved partial review](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/concepts-1/visual-review.md)
+covers all 53 originals without passing the missing controls. A
+[browser-only replacement request](history/2026-10-12-stage-3-browser-replacement-request.md)
+is awaiting the author's answer, not a new paid attempt.
 
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what

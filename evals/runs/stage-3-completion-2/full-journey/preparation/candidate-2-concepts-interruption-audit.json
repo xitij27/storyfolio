@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "verifiedPreservedData": true,
+  "observedAt": "2026-10-12T16:25:58.932Z",
+  "frozenInputs": 149,
+  "helperFiles": 42,
+  "originalArtifacts": 403,
+  "sourceRows": 182,
+  "declaredSourceRowsMatchArchiveOriginalAndReconstruction": true,
+  "artifactFiles": 61,
+  "originalImages": 53,
+  "reportCount": 7,
+  "declaredAlternativeViewportCases": 24,
+  "reports": [
+    {
+      "directory": "01-desktop",
+      "completeFlag": true,
+      "problems": [],
+      "images": 8
+    },
+    {
+      "directory": "01-phone",
+      "completeFlag": true,
+      "problems": [],
+      "images": 8
+    },
+    {
+      "directory": "02-desktop",
+      "completeFlag": true,
+      "problems": [],
+      "images": 8
+    },
+    {
+      "directory": "02-phone",
+      "completeFlag": true,
+      "problems": [],
+      "images": 8
+    },
+    {
+      "directory": "03-desktop",
+      "completeFlag": true,
+      "problems": [],
+      "images": 8
+    },
+    {
+      "directory": "03-phone",
+      "completeFlag": true,
+      "problems": [],
+      "images": 8
+    },
+    {
+      "directory": "04-desktop",
+      "completeFlag": true,
+      "problems": [
+        "pointer: switch not exercised: Error: page.screenshot: Target page, context or browser has been closed",
+        "pointer: alternative response unobserved, unchanged/idempotent trial is not a pass",
+        "keyboard: switch not exercised: Error: page.goto: Target page, context or browser has been closed",
+        "keyboard: alternative response unobserved, unchanged/idempotent trial is not a pass"
+      ],
+      "images": 5
+    }
+  ],
+  "firstRecorderSignal": {
+    "sequence": 3,
+    "at": "2026-10-12T16:23:31.845Z",
+    "elapsedMs": 172934,
+    "type": "external_signal",
+    "signal": "SIGTERM",
+    "first": true,
+    "childPid": 661363,
+    "sender": "unknown"
+  },
+  "outerFinished": "2026-10-12T16:23:33.934Z",
+  "outerDurationMs": 175023,
+  "innerFinished": "2026-10-12T16:23:32.218Z",
+  "innerDurationMs": 171657,
+  "timedOut": false,
+  "unknownSender": true,
+  "commands": [
+    {
+      "pid": 661551,
+      "started": "2026-10-12T16:20:40.752Z",
+      "finished": "2026-10-12T16:20:47.516Z",
+      "code": 0,
+      "signal": null
+    },
+    {
+      "pid": 661937,
+      "started": "2026-10-12T16:20:47.524Z",
+      "finished": "2026-10-12T16:23:31.866Z",
+      "code": 143,
+      "signal": null
+    }
+  ],
+  "knownPidObservations": [
+    {
+      "pid": 661352,
+      "present": false
+    },
+    {
+      "pid": 661363,
+      "present": false
+    },
+    {
+      "pid": 661540,
+      "present": false
+    },
+    {
+      "pid": 661551,
+      "present": false
+    },
+    {
+      "pid": 661937,
+      "present": false
+    },
+    {
+      "pid": 661972,
+      "present": false
+    }
+  ],
+  "bindingSha256": "088469b9438b0649a106bae89feb88dd8aa4b7045041cf9a1a079aaa9ad090b8",
+  "amendmentSha256": "17ec3ed49281be699d525513d075c46ebc37706bf020281ca528e23f4e4f8180",
+  "manifestSha256": "fb6ed61837ea185527edcce7917d7cf6c4130fe8969914b2791da02ca77bdc57",
+  "auditSourceSha256": "10a61bc80b7c66b7c1186ac102383ce8cb52878dc12d6b752c95fca02447cbd3",
+  "limits": "Preserved-data integrity, not a successful capture verifier or semantic gate. Declared source rows were read; saved before/after inventories were compared, without a fresh generated-tree enumeration. Known PID absence is observation-time metadata only, not a whole-host, descendant or historical writer-closure proof. Original app identity remains a post-closure recovery. No visual review, source repair, signal, runtime, browser, test, model or retry was performed."
+}

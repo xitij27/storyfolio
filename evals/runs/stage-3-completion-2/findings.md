@@ -486,3 +486,45 @@ checking reports only a terminal blank line in the byte-preserved preflight
 stdout; authored documentation passes. The separate later-measurement note
 records prospective stop-4/6 nested-app seams only, not implementation or
 permission to skip the current gate.
+
+## Recovered concept capture interrupted, partial evidence preserved
+
+After commit `f12618f`, source reconstruction and offline installation
+completed normally. The production build passed at 16:20:47.516 UTC.
+The browser capture's outer recorder received external SIGTERM at
+16:23:31.845 UTC and closed code 1 at 16:23:33.934 UTC after 175023 ms.
+Inner duration was 171657 ms, `timedOut:false`, against 895000 ms work
+plus 5000 ms grace. The sender and cause are unknown. No root termination,
+automatic retry, paid continuation or deadline extension occurred.
+
+Closure and independent audit preserve unchanged source/original evidence:
+149 inputs, 42 helper identities, 403 original actor artifacts and all
+61 partial capture artifacts match. The first six reports cover all three
+primary concepts on desktop and phone without recorded problems. The
+seventh report has interrupted pointer/keyboard checks; 17 cases are absent.
+Root inspected all 53 available originals at original resolution and bound
+their exact bytes in `concepts-1/original-images.json`. The
+[visual review](full-journey-recovery/candidate-2/concepts-1/visual-review.md)
+retains readable captions, real distinct sketches and primary index
+selection, plus small/rotated/blurred object labels and weak spatial
+explanation. No complete concept, later look, final visual or author pass
+is inferred. The strict verifier closed code 1 at 16:29:21.543 UTC after
+1615 ms with `Interrupted or unrecorded stage is incomplete`, as required.
+
+Scoped root and independent known-PID checks found no surviving matches;
+no process was signalled and no file deleted. The
+[root disposition](full-journey-recovery/candidate-2/concepts-interruption-disposition.md)
+keeps turn 3 blocked. Root asked for one separately labelled browser-only
+replacement, short batches, 15-minute total execution cap, no model calls
+or further retry. The exact request is retained in `docs/history/`; no
+answer or replacement launch is recorded yet. This measurement interruption
+does not justify a new skill instruction or restarting the healthy paid
+conversation. Stage 3 remains incomplete.
+
+Before preserving this checkpoint, `local-tests-21` closed zero at
+16:31:58.176 UTC after 13937 ms. All 351 repository tests, skill/people
+checks and interruption-auditor syntax passed. No frozen helper, skill or
+application change followed the passing focused tests in `local-tests-20`.
+Staged whitespace checking reports only final blank lines in three retained
+raw stdout logs (reconstruction, inner capture and outer capture). Their
+hashed bytes are intentionally preserved; authored documentation passes.

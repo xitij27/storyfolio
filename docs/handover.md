@@ -66,6 +66,24 @@ permits one recovered-source concept measurement after commit and final
 concrete-binding review. It does not pass the concepts or authorize turn 3.
 No new paid attempt or budget reset is allowed.
 
+The single amended browser capture then received external SIGTERM before
+its deadline. First signal: 16:23:31.845 UTC; outer closure: 16:23:33.934,
+code 1 after 175023 ms. The sender remains unknown. Source, original
+artifacts and all 61 partial capture artifacts verify. Root reviewed all
+53 originals: six primary concept/viewport reports have no technical
+problems, but navigation/appearance coverage is interrupted or absent and
+visual limitations remain. The strict verifier rejects the incomplete
+capture. No owned process match was found in scoped checks; no cleanup,
+paid turn 3 or retry occurred. Read the
+[interruption disposition](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/concepts-interruption-disposition.md).
+Root has [asked for one browser-only replacement](history/2026-10-12-stage-3-browser-replacement-request.md),
+split into short batches with a 15-minute total execution cap, no model calls
+and no further retry. No answer is recorded at this checkpoint. The paid
+conversation itself is intact, with four gated turns remaining. Stage 3
+is still incomplete; the missing gate is not silently passed.
+All 351 repository tests plus skill/people and auditor syntax checks pass
+in `local-tests-21` after the interruption. No new skill change was made.
+
 Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed
 normally, not by timeout/interruption, with usage unavailable. All 149

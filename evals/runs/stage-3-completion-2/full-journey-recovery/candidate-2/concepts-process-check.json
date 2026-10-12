@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-12T16:24:23.785Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "-e",
+      "const fs=require('node:fs');const wanted=new Set([\"/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-2-TeomCV\",\"/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-2-TeomCV/site\"]);const exact=new Set([661352,661363,661540]);const matches=[];for(const name of fs.readdirSync('/proc')){if(!/^\\d+$/.test(name))continue;try{const cwd=fs.readlinkSync('/proc/'+name+'/cwd');if(!wanted.has(cwd)&&!exact.has(Number(name)))continue;const stat=fs.readFileSync('/proc/'+name+'/stat','utf8'),tail=stat.slice(stat.lastIndexOf(')')+2).split(' ');matches.push({pid:Number(name),cwd,executable:fs.readlinkSync('/proc/'+name+'/exe'),argv:fs.readFileSync('/proc/'+name+'/cmdline','utf8').split('\\0').filter(Boolean),state:tail[0],ppid:Number(tail[1]),startTicks:tail[19]});}catch{}}console.log(JSON.stringify({observedAt:new Date().toISOString(),scope:'Only exact recorded recorder/runner/worker PIDs and cwd equal to recovered workspace/application; not host-wide absence',matches},null,2));"
+    ]
+  },
+  "result": {
+    "chunk_id": "059907",
+    "wall_time_seconds": 0.000016109,
+    "exit_code": 0,
+    "original_token_count": 50,
+    "output": "{\n  \"observedAt\": \"2026-10-12T16:24:23.757Z\",\n  \"scope\": \"Only exact recorded recorder/runner/worker PIDs and cwd equal to recovered workspace/application; not host-wide absence\",\n  \"matches\": []\n}\n"
+  }
+}
