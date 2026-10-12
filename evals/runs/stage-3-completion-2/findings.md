@@ -353,3 +353,14 @@ Only the neutral helper's exact cohort allowlist and associated pure test
 and documentation may change before a new freeze. The
 [prospective decision](full-journey/preparation/candidate-2-preparation-decision.md)
 records this measurement-only variation and unchanged remaining proof.
+
+Candidate-2 readiness is now verified. The 149-input digest is
+`01b8086923dcb9f03102c84bcec346e29037b469fb4c760334f17a5057185566`.
+Only the three declared helper/test/document files differ from candidate 1.
+The single neutral proof closed normally at 15:04:51.353 UTC after
+2,287 ms; root viewed its new original. Fresh dry, finalizer and the
+independent readiness audit pass with 94 unchanged source files and all
+18 evidence bindings. All 351 tests plus skill/people checks pass in
+`local-tests-17`, closed zero at 15:06:40.762 UTC after 13,860 ms. The
+[launch disposition](full-journey/preparation/candidate-2-launch-disposition.md)
+allows turn 1 after commit, not a behavior pass or Stage 3 completion.

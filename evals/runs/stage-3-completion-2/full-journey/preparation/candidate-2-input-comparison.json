@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-12T15:04:45.260Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "-e",
+      "const fs=require('node:fs'),assert=require('node:assert/strict');const read=c=>JSON.parse(fs.readFileSync('evals/runs/'+c+'/inputs/manifest.json'));const old=read('codex-full-journey-candidate-1'),current=read('codex-full-journey-candidate-2'),baseline=read('codex-full-journey-baseline-2');const prefix='implementation/evals/runs/stage-3-completion-2/full-journey/preparation/';const expected=['README.md','probe-environment.mjs','probe-environment.test.mjs'].map(p=>prefix+p).sort();for(const m of [old,baseline])assert.deepEqual(Object.keys(m.hashes),Object.keys(current.hashes));const delta=m=>Object.keys(current.hashes).filter(k=>m.hashes[k]!==current.hashes[k]).sort();assert.deepEqual(delta(old),expected);assert.deepEqual(delta(baseline),[...expected,'skill/SKILL.md','skill/references/concept.md','skill/references/reading-a-profile.md'].sort());console.log(JSON.stringify({count:Object.keys(current.hashes).length,candidateDigest:current.digest,previousCandidateDigest:old.digest,baselineDigest:baseline.digest,candidateDelta:delta(old).map(path=>({path,before:old.hashes[path],after:current.hashes[path]})),baselineDelta:delta(baseline),allOtherInputsIdentical:true,skillPromptsModelCapabilitiesEngineUnchangedFromCandidate1:true},null,2));"
+    ]
+  },
+  "result": {
+    "chunk_id": "d94aed",
+    "wall_time_seconds": 0.000022913,
+    "exit_code": 0,
+    "original_token_count": 428,
+    "output": "{\n  \"count\": 149,\n  \"candidateDigest\": \"01b8086923dcb9f03102c84bcec346e29037b469fb4c760334f17a5057185566\",\n  \"previousCandidateDigest\": \"e6ca5f6bf8e24a9e176a03a1289c56245d27353342fc43896a7b0c4063ade71d\",\n  \"baselineDigest\": \"899898fc055c96452a77c03ff9d815782367d2634b10bcbdd5ab322857d8ab82\",\n  \"candidateDelta\": [\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/README.md\",\n      \"before\": \"4df0c79914eb7681668c08b39db35da4d07fa52d4b6511d82d8eaa39facdfb68\",\n      \"after\": \"c842c032cc371b469b7002a060ee552a5c8903cf1b06aa70b51d025adcaf440f\"\n    },\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs\",\n      \"before\": \"ee76125328f7e9613e6b6eefb100db34304bb12a03bf3bcb4837225320129ef8\",\n      \"after\": \"85a9cd19de6929d07e91b67a4097e6258816b8f8612fad36d20e07196ea6e3af\"\n    },\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.test.mjs\",\n      \"before\": \"61569a71899cfc4d26fdbd7d53f79c799a4f7e881316c289ad21e5168437f187\",\n      \"after\": \"e5819f8a74bd302eb5443520141e122309c5ff2ec692a3d89d4312bf43a42e49\"\n    }\n  ],\n  \"baselineDelta\": [\n    \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/README.md\",\n    \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs\",\n    \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.test.mjs\",\n    \"skill/SKILL.md\",\n    \"skill/references/concept.md\",\n    \"skill/references/reading-a-profile.md\"\n  ],\n  \"allOtherInputsIdentical\": true,\n  \"skillPromptsModelCapabilitiesEngineUnchangedFromCandidate1\": true\n}\n"
+  }
+}

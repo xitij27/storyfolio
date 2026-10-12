@@ -19,7 +19,13 @@ permits a separately labelled `codex-full-journey-candidate-2`, with the
 same skill/model/prompts and up to six gated 15-minute turns, no judge or
 further retry. Root is preparing its own readiness under the
 [prospective decision](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-preparation-decision.md).
-Candidate 1 remains immutable; no new paid invocation has launched yet.
+Candidate 1 remains immutable. Candidate 2 now has passing fresh readiness:
+149 frozen inputs, 94 unchanged source files, one reviewed neutral original
+and an independent audit of all 18 proof bindings. Only the three declared
+helper/test/document bytes differ from candidate 1; skill/model/prompts
+remain exact. All 351 tests pass. The
+[launch disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-launch-disposition.md)
+permits its one paid attempt after commit; none has launched yet.
 
 Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed
