@@ -40,3 +40,55 @@ The look comparison reuses `bench-entry-1`; the wording comparison reuses
 differences are disclosed in [wording/protocol.md](wording/protocol.md).
 Neither comparison replaces the still-required full journey or six-case
 planning regression after the final behavioral change.
+
+## Fresh journey baseline, early-workflow correction
+
+The earlier text above records the look/wording revision. The newly closed
+[baseline-2](full-journey/preparation/baseline-2-disposition.md), committed
+as `9554db4`, now provides the previously missing early-workflow evidence.
+Two normally completed turns and their exact source/artifact audits precede
+the following three-file skill correction:
+
+- `references/reading-a-profile.md`: a build-only section requires actual
+  Node/native-TypeScript, Git and neutral browser observations plus installed
+  versus available skill assessment. The first actor performed none of
+  the first three checks and only partial skill discovery. Supplied paths
+  and the coordinator proof did not establish actor checks. The same
+  section asks for relevant, source-supported optional-helper advice; the
+  actor read the dated catalog but recommended nothing despite relevant
+  3D/browser helpers. Person-controlled installation and honest source
+  limits constrain that new advice, without a fixed helper quota.
+- `references/concept.md`: the build-only addition requires three actual
+  local sketches, each with opening/middle/ending, desktop/phone inspection
+  and working addresses. Turn 2 offered only Markdown and explicitly said
+  no app was built. Remove its contradictory text-only closing instruction;
+  retain written concepts for planning-only work and all existing concept
+  reasoning/tests/examples. The 44-word addition fits the reference ceiling.
+- `SKILL.md` and the first-handoff line in `reading-a-profile.md`: permit
+  brief setup notes without concept/design advancement, route requested
+  builds to runnable stop-2 output, and distinguish those sketches from
+  building the chosen site after storyboard approval. These are necessary
+  compatibility edits for the two supported changes, not new factual or
+  choice rules. Description, answers-before-design, permission and actual
+  approval requirements remain unchanged.
+
+No new reference/catalog, command recipe, geometry prescription, engine,
+shared checker, time allowance or hidden prompt is added. The demonstrated
+truthfulness, four fact distinctions, recommendation among written concepts
+and actual waiting already work and receive no extra instructions. Later
+optional-helper/refusal branches are still unobserved, not invented misses.
+
+The first local validation (`local-tests-12`) passed the skill-creator
+frontmatter check but caught an overlong 1567-word concept reference. Its
+failure is retained; repository tests did not run in that command. Root
+shortened only the new paragraph, preserving existing guidance, to bring
+the reference to 1499 words. Fresh combined results follow in
+`full-journey/preparation/local-tests-13/`.
+
+This correction is pending the already planned one fresh matched journey
+with identical prompts, facts, assets, engine, settings and measurement.
+Only the three skill files differ. That run must satisfy the early gates
+without the baseline-only exception. Local validators and source review
+do not establish improved behavior or Stage 3 completion. Renewed matched
+entry/wording tests and final planning regression still follow the last
+behavioral change as recorded in the remaining-proof sequence.

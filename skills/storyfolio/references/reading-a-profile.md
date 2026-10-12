@@ -2,6 +2,12 @@
 
 The first stop. You read the profile material, write down what you found, and ask. You do not plan yet.
 
+## Before a requested build
+
+Before the first factual handoff, verify Node against `engine/README.md`, including native TypeScript execution; check Git; and actually open and inspect a neutral local page with an available browser. Distinguish installed skills from those enabled for this session, using the advertised skill list and relevant local metadata. Record what you ran, what worked and any limits in the handover. Supplied tool paths or another agent's setup are not your checks.
+
+Consider whether a missing skill would materially help this build. If so, give its purpose, source and a source-verified installation route for this agent, noting the evidence's date and limits. Do not guess a route you cannot verify. The person installs or declines; you neither install nor enable it, and carry on with available tools. Recommend nothing when nothing useful is missing.
+
 ## What to read
 
 **A folder is not permission to read every file in it.** List filenames first and read the accompanying source notes. Leave private correspondence, contact exports and participant records unopened, even when they are beside profile material. Do not sample their contents to decide whether they belong. Tell the person which files you left. If a file's purpose is unclear, ask what it contains before opening it.
@@ -71,7 +77,7 @@ One message, which is the whole of your reply:
    - What do you work from, day to day? The documents, lists and rituals of your trade, by the names you call them.
    - What did you learn from?
    - If they have a site already: what becomes of it?
-4. Nothing else. No concept, no outline, no look.
+4. No concept, outline or look. For a requested build, a brief setup limit or optional-tooling note may accompany the fact questions.
 
 When they answer, write each answer into the fact sheet beside its fact, before you do anything else.
 

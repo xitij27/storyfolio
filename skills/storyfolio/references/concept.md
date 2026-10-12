@@ -64,6 +64,8 @@ Make three that differ in kind: in their form or their object, and not in their 
 
 Then say which you would choose, and why.
 
+For a requested build, open `engine/README.md` and implement all three concepts as local sketches, each with opening, middle and ending. Inspect each at desktop and phone sizes. Give their working addresses with your recommendation. Planning-only concepts stay in words.
+
 ## Test each one before you show it
 
 Rework or drop one that fails.
@@ -88,5 +90,3 @@ How each was reasoned, and not only where it ended.
 **An incident review.** Jun is a reliability engineer, also made up. Seven years on call, at a payments company and then at one that books hospital appointments. He wrote his team's incident review template, and gives talks on reviews without blame. His trade's forms: the runbook, the incident review, the on-call handover, the status page, the dashboard. His work is what happens after something breaks, so the form is an incident review: summary, timeline, root cause, action items. A status page is made of tiles, one to a service, so the object is those tiles. The question: "What keeps a system up at 3 a.m.?" Turned down first: a server rack turning, which is the emblem, and a globe of pings behind the text, which is a backdrop.
 
 **An example shows how to reason. Its concept is not taken.** Camille's menu was reasoned from how Camille serves. A chef who sells one loaf a day from a hatch is not a tasting menu. If you find one of these three concepts in your hand for someone else, it has already failed the swap test: it was made for a person who is not in front of you.
-
-In this version a concept is shown in words.

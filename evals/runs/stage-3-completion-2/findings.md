@@ -285,3 +285,22 @@ blocked-unobserved for absent authored implementation. Facts and honest
 choice-wait pass and do not justify added rules. All 351 tests and
 skill/people checks pass in `local-tests-11`, closed zero at
 06:30:32.187 UTC after 13,832 ms. No skill edit or publication yet.
+
+## Failure-backed early-workflow candidate
+
+Root applied only three skill-file changes, mapped to the baseline in
+[written-against.md](written-against.md). Build requests now get real
+preflight observations and relevant optional-helper advice before the
+factual handoff, then three runnable opening/middle/ending concept sketches
+at stop 2. Main routing distinguishes those sketches from building the
+chosen site after storyboard approval. Planning-only behavior, facts,
+permission/choice gates, engine, prompts and measurement are unchanged.
+Independent source review found no remaining blocker.
+
+`local-tests-12` retained a concept-reference word-limit failure after the
+skill-creator validator passed. Root shortened only the new paragraph.
+`local-tests-13` then passed the creator validator, skill/people checks and
+all 351 repository tests at 06:34:35.134 UTC after 14,039 ms. Main-body
+count is 765; the concept reference is 1499 words. Source validation is not
+behavioral proof. The fresh matched candidate still needs its own freeze,
+neutral readiness and actual gates, with no baseline-only exception.

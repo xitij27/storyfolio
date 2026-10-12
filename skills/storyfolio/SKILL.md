@@ -7,7 +7,7 @@ description: Use when someone wants a personal portfolio site made from their pr
 
 Makes one kind of portfolio site: one long scroll that tells one story, carried by one object in 3D that is taken from the person's own work.
 
-Start from the recorded handover on a continuation. Build after storyboard approval when building is requested. A planning-only request still ends at the storyboard.
+Start from the recorded handover on a continuation. For a requested build, sketch concepts at stop 2; build the chosen site after storyboard approval. A planning-only request still ends at the storyboard.
 
 ## Stops
 
@@ -15,14 +15,14 @@ Between stops you work by yourself. At each stop the person decides one thing. Y
 
 | Stop | First open | You put to the person | You go on when |
 |---|---|---|---|
-| 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. Nothing else | They have answered, and `docs/story/facts.md` holds their answers |
-| 2. Concept | `references/concept.md` | Three concepts, and which you would choose | They have picked one, or told you to pick, and `docs/story/concepts.md` says which |
+| 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. No concept or design | They have answered, and `docs/story/facts.md` holds their answers |
+| 2. Concept | `references/concept.md` | Three concepts, runnable for a requested build, and which you would choose | They have picked one, or told you to pick, and `docs/story/concepts.md` says which |
 | 3. Storyboard | `references/storyboard.md` | The script of the whole page | They have said yes to it |
 | 4. Spine | `references/building.md`, `engine/README.md` | A runnable opening, middle and ending in two or three looks | They have chosen a look |
 | 5. Chapters | `references/building.md` | The remaining chapters and three whole-beat wording versions | They have chosen the wording |
 | 6. Finish | `engine/README.md` | The checked site and what still needs their review | Their actual review is recorded |
 
-**When starting from profile material, your first reply is the first stop, and no more than that.** People ask for the whole plan at once: the idea, the scroll, the colours. Do not give it yet, and say why in a sentence. A plan made now is made from your reading of a resume, and a resume leaves out exactly what a site must not get wrong: whose result a number was, what a title hides, who took a photograph. Once they have answered you will have a better idea, and it will not have to be taken apart.
+**When starting from profile material, your first reply is the first stop, and no more than that.** Brief build-setup notes do not advance the design. People ask for the whole plan at once: the idea, the scroll, the colours. Do not give it yet, and say why in a sentence. A plan made now is made from your reading of a resume, and a resume leaves out exactly what a site must not get wrong: whose result a number was, what a title hides, who took a photograph. Once they have answered you will have a better idea, and it will not have to be taken apart.
 
 ## Ask or decide
 

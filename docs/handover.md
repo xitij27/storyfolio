@@ -13,7 +13,17 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: baseline-2 is closed after two normally completed turns.
+Newest checkpoint: the demonstrated early-workflow correction is now
+implemented in three skill files, with independent source review and all
+351 repository tests passing in `local-tests-13`. It adds build-only
+preflight/helper advice and three runnable concept sketches while preserving
+planning-only work and the successful factual/choice gates. The entrypoint
+is 765 words; the concept reference is 1499. The
+[instruction binding](../evals/runs/stage-3-completion-2/written-against.md)
+links each change to the closed baseline. Behavior remains unproved until
+the one fresh matched candidate journey; its setup is next.
+
+Earlier checkpoint: baseline-2 is closed after two normally completed turns.
 It preserved facts and offered three written concepts with a real choice
 handoff, but built no runnable concept previews. The
 [baseline disposition](../evals/runs/stage-3-completion-2/full-journey/preparation/baseline-2-disposition.md)
