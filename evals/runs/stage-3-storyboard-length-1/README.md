@@ -93,3 +93,20 @@ whitespace checking reports twelve EOF blank-line locations, all in raw
 logs or frozen source copies; their exact evidence bytes are preserved.
 Authored preparation documents pass. No frozen code changed after the
 passing `local-tests-2` checks.
+
+## First factual stop
+
+The single matched journey has started and turn 1 completed normally.
+Its [root disposition](turn-1-disposition.md), [semantic review](turn-1-semantic-review.md),
+[access review](turn-1-access-review.md) and [integrity audit](turn-1-audit-command/stdout.log)
+permit the fixed truth reply after commit. All four factual traps and actor
+preflight pass without a baseline exception. Optional recommendation/refusal
+is unobserved, not passed. The full source is 97 files, all 149 inputs verify,
+and all 351 tests pass in `local-tests-3`. Earlier setup and failed-candidate
+records remain unchanged. No storyboard improvement has yet been observed.
+
+The first-stop commit preserves seven reported EOF blank-line locations in
+frozen source copies and the raw actor recorder stdout. These are evidence
+bytes, not authored whitespace corrections. Root independently rechecked the
+native call/output line hashes and delivered image bytes against the exact
+session before creating `gate-after-1.json`.

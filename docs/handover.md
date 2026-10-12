@@ -23,6 +23,16 @@ repository tests pass. After committing readiness, root may launch its
 single paid turn 1 under the approved finite bounds. No behavior pass or
 Stage 3 completion is inferred from setup.
 
+Candidate 3 turn 1 has now closed normally at 19:16:35.596 UTC. Its
+[factual-stop decision](../evals/runs/stage-3-storyboard-length-1/turn-1-disposition.md)
+passes fact questions and actual actor preflight without a baseline exception.
+The audit verifies 149 inputs, 199 artifacts and 97 complete saved/live files;
+native-session evidence corroborates screenshot viewing. No-current-helper
+is accepted conditionally, not as observed recommendation/refusal success.
+All 351 tests and skill/people checks pass in `local-tests-3`. After this
+checkpoint is committed, root may send the unchanged fixed turn-2 truth
+reply. No concept, storyboard improvement or Stage 3 completion is claimed.
+
 Latest completed checkpoint: the browser replacement passed and original
 candidate-2 turn 3 then completed normally at 18:15:06.499 UTC. Its
 storyboard fails the fixed scope: eight beats, nine screens calculated in
