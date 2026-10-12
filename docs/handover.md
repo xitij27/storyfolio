@@ -4,6 +4,20 @@ Current state as of 12 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Newest direction: the author answered, "you can retry", approving the
+[single browser-only replacement](history/2026-10-12-stage-3-wrapped-link-verifier-approval.md).
+Root is correcting only the wrapped-inline hit-test apparatus, with new
+separately labelled helpers/evidence and the same 15-minute summed execution
+cap, no model calls and no further retry. Do not ask for this approval again.
+Old failure and skill bytes remain unchanged. No concept pass is implied.
+
+The replacement [launch disposition](../evals/runs/stage-3-storyboard-length-1/concept-replacement-launch-disposition.md)
+now has passing independent source review, 37 focused checks, all 351 tests
+and concrete binding preflight. The new helper records actual link-fragment
+hit points and activates the selected real point without force. Original
+coverage/visibility/focus requirements remain. All old inputs/evidence verify.
+After this readiness is committed, root may run the single bounded replacement.
+
 Latest checkpoint: candidate-3 concept measurement stopped at operation 02,
 normal exit 1 at 19:53:10.264 UTC, with unchanged 185-file source. The
 [failure disposition](../evals/runs/stage-3-storyboard-length-1/concept-failure-disposition.md)

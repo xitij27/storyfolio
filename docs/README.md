@@ -1,5 +1,10 @@
 # Documentation map
 
+The author has [approved one browser-only replacement](history/2026-10-12-stage-3-wrapped-link-verifier-approval.md)
+and the wrapped-link verifier correction. Same execution bounds, no model
+calls or further retry. Preparation is in the existing storyboard-length
+study; the prior failure remains preserved.
+
 Latest checkpoint: [candidate-3 concept measurement stopped](../evals/runs/stage-3-storyboard-length-1/concept-failure-disposition.md)
 on a likely wrapped-inline hit-test false negative. The actual phone link
 was visible/focused and initially clicked successfully, but required trial

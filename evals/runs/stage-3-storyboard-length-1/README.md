@@ -160,3 +160,19 @@ remain unproved.
 This failure checkpoint preserves six EOF blank-line findings in raw outer
 and inner operation stdout logs. Their exact bytes and hashes are evidence;
 they are not reformatted. Authored documents pass whitespace checking.
+
+## Approved browser replacement
+
+The author answered "you can retry", approving the requested single
+browser-only replacement. The [new launch disposition](concept-replacement-launch-disposition.md)
+and [adapter](measurement-2/README.md) retain the same source/targets/caps,
+with an observed-failure-backed fragment hit-test correction. No skill edit,
+new paid attempt or further retry. All 37 focused tests, skill/people checks
+and 351 repository tests pass in `local-tests-6`.
+
+Actual-data preflight passed at 21:12:47.821 UTC, normal zero after 1624 ms.
+It verifies 149 inputs, 185 source files, fourteen new helper bindings and
+the prior failed evidence. Replacement SHA-256:
+`148b837d090f105d3e06804e7318dc03249ccdfb267b2ec0b1c87182290e5577`.
+Root may begin the exclusive setup after committing this preparation.
+No browser replacement or paid turn 3 has run at this checkpoint.
