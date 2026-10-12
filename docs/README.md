@@ -30,6 +30,12 @@ was awaiting the author's answer, not a new paid attempt. The author has
 now [approved that single replacement](history/2026-10-12-stage-3-browser-replacement-approval.md).
 The [short-batch launch disposition](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-launch-disposition.md)
 records the additive apparatus, passing local tests and shared execution cap.
+The replacement has now [completed and passed its narrow selection gate](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-concepts-disposition.md):
+24 desktop/phone cases, 192 reviewed originals and unchanged source, within
+the shared 15-minute execution allowance. The [visual review](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/concepts-2/visual-review.md)
+retains unresolved visual limitations. Only original same-session story
+planning may advance after readiness; final visual/author acceptance and
+Stage 3 completion are not established.
 
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what

@@ -99,6 +99,21 @@ whole-invocation execution, including coordinator overhead. No browser or
 paid model has launched at this preparation checkpoint; any interrupted
 batch stops the replacement without retry.
 
+The approved replacement has now completed with no model calls or retries:
+all 24 desktop/phone cases and all 192 individually reviewed originals are
+accounted for, with unchanged source and preserved original evidence.
+Whole execution was 710524 ms of the shared 900000 ms cap. The strict
+verifier passed at 18:00:48.077 UTC; scoped checks found no remaining capture
+process match. The [root concept disposition](../evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-concepts-disposition.md)
+passes only the provisional concept-selection gate. Small surface labels,
+weak Light contrast and weak spatial explanation remain, not final visual
+passes. All 351 repository tests and 16 focused tests pass in
+`local-tests-24`, with skill/people checks. After commit and read-only
+readiness, the original same-session turn 3 may proceed under the existing
+six-turn approval, with no new attempt, retry, judge or prompt change.
+The replacement allowance is consumed. No paid continuation has launched
+at this checkpoint. Stage 3 and actual author acceptance remain open.
+
 Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed
 normally, not by timeout/interruption, with usage unavailable. All 149

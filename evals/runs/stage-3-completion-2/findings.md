@@ -528,3 +528,38 @@ application change followed the passing focused tests in `local-tests-20`.
 Staged whitespace checking reports only final blank lines in three retained
 raw stdout logs (reconstruction, inner capture and outer capture). Their
 hashed bytes are intentionally preserved; authored documentation passes.
+
+## Authorized replacement completed, provisional concept selection passes
+
+The author approved the single browser-only replacement. After preparation
+commit `0a4f5db`, setup plus twelve short batches closed normally, without
+retry or model calls. Whole outer execution was 710524 ms, below the shared
+900000 ms cap. All 24 reports and 192 original screenshots are present and
+individually reviewed. The final strict verifier closed zero at
+18:00:48.077 UTC, checking complete coverage, unchanged recovered source,
+normal inner/outer lifecycle and preservation of both original turns and
+the interrupted first capture. Scoped checks found all 63 known PIDs absent
+and no exact reconstructed-workspace cwd match. Nothing was killed/deleted.
+
+The [root disposition](full-journey-recovery/candidate-2/batched-concepts-disposition.md)
+and [visual review](full-journey-recovery/candidate-2/concepts-2/visual-review.md)
+pass the narrow stop-2 selection requirement, not final visual acceptance.
+Three distinct non-sheet sketches and readable explanations make a real
+choice possible; the actor genuinely recommends A and waits. Small/soft
+surface labels, weak Light contrast and weak spatial explanations remain
+substantive limitations. The 182-file source is the explicitly amended
+later checkpoint, not invented closure-time proof. Unknown prior SIGTERM
+causation remains unresolved; that failed capture is not overwritten.
+
+`local-tests-24` closed zero at 18:03:57.157 UTC after 14423 ms: 16 focused
+batch tests, all 351 repository tests and skill/people checks. No skill,
+engine, evaluated source, prompt or frozen helper changed in this piece.
+After committing evidence, a passing read-only readiness check may allow
+original same-session turn 3 under the existing six-turn approval. No paid
+continuation is claimed yet. No new attempt, retry, judge, push or actual
+author desktop/phone acceptance is authorized or inferred. Stage 3 remains
+incomplete.
+
+Staged whitespace checking reports only terminal blank lines in 27 raw
+stdout logs (13 outer commands, 13 inner operations and the verifier).
+Their hashed bytes are preserved; authored documents pass whitespace checks.

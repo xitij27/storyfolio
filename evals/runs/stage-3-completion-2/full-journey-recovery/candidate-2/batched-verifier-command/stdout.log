@@ -1,0 +1,365 @@
+{
+  "integrityVerified": true,
+  "measurementBaseline": "one browser-only batched replacement of post-closure recovered source; not original closure identity or an unmodified frozen comparison",
+  "replacementSha256": "2542f4d9202ce9f9cc2875e57d20821d534a3ebfd3dd27d443db019c25270dc0",
+  "bindingSha256": "2147796247dacc3596ed32e557af258ff4c05bf2aebd1426529f482eab9e3fb3",
+  "amendmentSha256": "17ec3ed49281be699d525513d075c46ebc37706bf020281ca528e23f4e4f8180",
+  "sourceBasis": {
+    "label": "post-closure recovery, not original actor snapshot",
+    "observedAt": "2026-10-12T15:33:54.304Z",
+    "limitation": "The complete application identity at original turn-2 closure is not established. This separately preserved later checkpoint supports prospective measurement and conditional same-session continuation only."
+  },
+  "inputDigest": "01b8086923dcb9f03102c84bcec346e29037b469fb4c760334f17a5057185566",
+  "actorResultSha256": "59067a559ac604d2e70ddafedbc7b592dc63d7ba30d4b97085e246511b9ff3a2",
+  "sourceDigest": "70a581fce400ea0edb47d5b95bf5a290614d1b5edbcf121952dd04357a733a10",
+  "sourceFiles": 182,
+  "complete": true,
+  "stage": 2,
+  "batches": 12,
+  "reports": 24,
+  "originalsReviewed": 192,
+  "originalsReviewSha256": "be0866099e3f5eebaca62724c5b1f915c3928a662237dfa7e8b080aa73acf20f",
+  "budget": {
+    "operations": 13,
+    "batchesCompleted": 12,
+    "elapsedMs": 663264,
+    "remainingMs": 236736,
+    "complete": true
+  },
+  "outerExecutionMs": 710524,
+  "remainingOuterExecutionMs": 189476,
+  "budgetScope": "Sum of all thirteen recorded outer coordinator lifetimes, containing every setup/build/browser/shutdown child; inter-invocation manual review and final read-only audit excluded",
+  "manifestHashes": {
+    "10": "045f61a216835a6718ef1649ceccad5b944e2000aa5ac9a4b9d60f13e381be31",
+    "11": "a68132ef59b1820dc39922d35acda836aae4444d51bafdf3e0a31401f1f4629a",
+    "12": "442e508d57345f2498e422c77ca15c0728fdd6b268cbfa8193f97753ee9f887e",
+    "01": "94635a8e75e9271477795dc4d2b455f03c270ccc0188ada1cee04c09ad08ba06",
+    "02": "a6c3ea683e6371c91dfad5c95cfe0b7333eba480e6fd24601206d6ab25e16fb2",
+    "03": "60f3d21276c55f9e6ee31aef57afa2a834d805f30d8b8f80fcb955fbe02e428f",
+    "04": "c81651d10fb973025fe2f50e0e1c1b630cdb8b40db0f65e9cfc13ec09c734531",
+    "05": "4041260557256db142178291cbc0f14548351b0429b7d1ce593457c7bf84197e",
+    "06": "bbb7393376e78aaf81e21dd9469e89d5ba02ed2670828eb23d00611857b76496",
+    "07": "27b69315ab9b13051e1c17279df96de999141a1eaaea806caff2eee628e85c3d",
+    "08": "edab6ce858ea5e576eb9f0191c802340c21dcc977f5f5b611318e0f4b2467a73",
+    "09": "09a9c5d6c4cd5098ea40e0688d8f9fb82ed2389f198557e206b57f100f205196"
+  },
+  "operationHashes": {
+    "10": {
+      "attempt.json": "946c283f194bc94c2825b6c469b88a0d7bf7e1bd861f5fab963ba4e71a020f04",
+      "command.json": "358ef43ce07f05f38eb3f0cec341481e02af9a06da551009deb43a013e046cdc",
+      "process.json": "65b8fc862d5fafa4c960b5f53e27306248e771143e78d26a971679067dea031e",
+      "closure.json": "b12b444241fba57107730b54773b33731c86f9bff4cc28221dd8335e30a54789",
+      "supervision.json": "70c84a695a42f1632121cfd50af042fbf984c3e242b4b9cbbd66b307de830377",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-10/result.json",
+        "sha256": "8313c3bc4b2c693370003de538896cdd3fa2d38db9d0f6dba97a878cfaee19c2"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-10-tool-poll-2.json",
+        "sha256": "eda7aa568935305fea6659e6b6f2816a786e319438f72a8a4b1adf9e7b84611c"
+      }
+    },
+    "11": {
+      "attempt.json": "885c3482cb75f4da1f3ce837f5aa01ab6c3a894a210ec58c1143b34d0c86b843",
+      "command.json": "a79e9c319a192e101a9c40515c16035fd6dfc7aabf57b0860447edf938e9ad97",
+      "process.json": "9287654dfa1f707afc9765208371d9e37e55d9711acde39fcdc883138f959e96",
+      "closure.json": "6d9510181361492d2f0ba9d936215d10730ba0f47ada535100b7adbf9b838b02",
+      "supervision.json": "d625d53e662bb97ca70b582538338e8ce580914c4e4dcf4b06745b8405a113f8",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-11/result.json",
+        "sha256": "d3da487d185f7b1bc998d746e12a3391970fda4171ce773f64c5e314086c9d45"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-11-tool-poll-1.json",
+        "sha256": "07a18dab74bcd20e2f7882b8d2b2d3a635e7bc01ca04ddce23d4374915b5bd01"
+      }
+    },
+    "12": {
+      "attempt.json": "ee2bdd9533631f71c4b33877964133db9f6a3cea7c4f025d7e3d4b08671f4260",
+      "command.json": "55d33d466ca0815b80e67f5cf4f0b16af1b5b59a5d078d010449332fd9fc8165",
+      "process.json": "c530d12362aabaa68f4c77a5dcf50dbe36913ba269b7bd1f1a75cb97a729bf70",
+      "closure.json": "eed0a59813f2b2ca9ef9782843462498b7147c4df19eef88783690fe1ce2deed",
+      "supervision.json": "37cc6b0b664890f359c6c889375366d59ed91211b6358f41dd71ee170e0b818b",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-12/result.json",
+        "sha256": "85732387572628794eef5e9544a3f2896463152bcfc42dff0490d07b57685f94"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-12-tool-poll-1.json",
+        "sha256": "c2c54674ec02244bb2b8658c108173232f58b46747cee3ede9d3846254c7eaa2"
+      }
+    },
+    "00": {
+      "attempt.json": "050821682773d840b536f99eb7154bf121c4263c93834687f8df777149a7f014",
+      "command.json": "63fa06a14536f653a1e120368186fd1248791c196f29f4f4cdd58e1e3758bac0",
+      "process.json": "b8dadd0483cf5ec52425da31000ab44c4f11b1594c7cd2a4a7e3482d524d6dbd",
+      "closure.json": "2b75cab08cebeee7e4acee4f41954d6c596c31e7736d1241017ab530ad846662",
+      "supervision.json": "1c4b183490c4f59918b71f9e09a4305a8c5f08f416c66174976b2f16754da75d",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-00/result.json",
+        "sha256": "a17c588e24a4bc67347072380a4618dbc8c4d2f6b75052bc1447db57e1ea3dff"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-00-tool-poll-1.json",
+        "sha256": "5f0d7e291755027a44d4440e3c80e253aa502510794956f0132739db90ea817a"
+      }
+    },
+    "01": {
+      "attempt.json": "110a1f97b4f40abb5a21ea8fc98dea54d0c493c76466c63ff1ec4988f2a37dd9",
+      "command.json": "507d15073a830c79518426223cc139f5723848b6d23d00bdb232ed2e86b04d66",
+      "process.json": "c764522e530c5d8f023229fa01a7cff3efca86d08832e53e4eebebfe35b96ea2",
+      "closure.json": "c6704bcd92afe1ad151015424ba26de5698a47f0d034b1499e761fdd58b0044c",
+      "supervision.json": "96778eadfe9e9286eb2d75926e5405e4a4ff71fab9a564f8df2c4688880a73f6",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-01/result.json",
+        "sha256": "0e420e0a60681a5ea27e473a8a5ee9e2a3200cff276ab9934616de823a975232"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-01-tool-poll-2.json",
+        "sha256": "8e08fe6905cad6699b35c8c12d58769e8fe313f317c36fe40ef1d75d5c9d67e0"
+      }
+    },
+    "02": {
+      "attempt.json": "4976ff51a9e4098acca8b9bab66174ae3c21e5847261195a2066e6002f074b7c",
+      "command.json": "c4ff70fe558d577f1011d333cd6027c84174aeb51502b00945889cecf3ad99b3",
+      "process.json": "35031919d8a7fa4fb41c9822d9c304b0faf1f920c6da98f5e2f91bbf503b931f",
+      "closure.json": "cd6b8f56957933fff5b6aa7d356dc3eab7f81dc193e1682d0511a14933e6752b",
+      "supervision.json": "f5d4aa912d4e1631681e3edab511a821e6a74d8c4b7fc02bc212cf33f7362c18",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-02/result.json",
+        "sha256": "b527e478f31c3eae728195f9e08c1171311bad50d90727d41b83810597a69b7e"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-02-tool-poll-1.json",
+        "sha256": "c36287b4056614991ae359576aa9997b5b4a434f2879d84747e78069721ad310"
+      }
+    },
+    "03": {
+      "attempt.json": "c9a4f72dab0093e9cf3572dfa708bea6b338ded369f048b69bc177d4c358b559",
+      "command.json": "efc3530dbe49e16a6dca71c2812a1b48888e2be400cd460222da9b7db6184a5f",
+      "process.json": "46e1eaeb01b4394c6e20c6c30b84135ab52b35306e46f94d89fb2a895b89287c",
+      "closure.json": "bd290aa667997cee5b8de99a066468b7ae85c639849bb1f29ccbaab52c54c25f",
+      "supervision.json": "b25e4411bdd0ef5c5aceb44d58bd76b176a06648330ad15499d64d67a02623ae",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-03/result.json",
+        "sha256": "7abd43b94edfb7833e245762a07019bfd076d480aebe1f4a1ffb036cf65b5535"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-03-tool-poll-2.json",
+        "sha256": "671414794b3e90b93e48f098c9c1624e85ddc198cdfb578db2f82276ac010cd5"
+      }
+    },
+    "04": {
+      "attempt.json": "c249bb106af955d0734a98ac62ea2bc405823e9d23628a3ee4de76661a65fe67",
+      "command.json": "e638b7693687d96adf98101d8d39fd38b6575f719e8436b38ca9e09f73ad3ffc",
+      "process.json": "e373a6dd80040d2437e35348a2703edd12e24a11a1ddf48997a10433ffc98d1b",
+      "closure.json": "5bd9b28c5e6f09cb751575dd02fb958b391e4f1130363885d1dbca2bac058ae9",
+      "supervision.json": "874475b037c84ddfd214abc1b1a519d5a0c761899258790e08807c6e3f5b66fa",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-04/result.json",
+        "sha256": "f12974fe6b92fd9663f50b51bcbe8d1bd4e19565118049fe581dc6619cce66c8"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-04-tool-poll-1.json",
+        "sha256": "bbfcc32d0feff3cdc4abf23a11c53e5fa13aceee4fc6c98badb44d3590c3143b"
+      }
+    },
+    "05": {
+      "attempt.json": "4fdcd563c8daecdc36e32b16effeeca2728f14c8e7aaacf679ea63cb17c84787",
+      "command.json": "2c8b7fc6961fad3f3f13f300501e512519dc0382368a4d3f1aee5dbd51240131",
+      "process.json": "a2377d679a2990597d978901dd5874fba1c1074c22a47f2b18b58b9b2cc32987",
+      "closure.json": "487f7358a80ee04bfdaf2420793b3ee30ea77813d1fc03a86a221e8caae1d716",
+      "supervision.json": "f0b23074ea4ff7635be208aef9f251d3685c9934ebae7982c2bf2e06c4f6ef50",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-05/result.json",
+        "sha256": "192a36d911b8a19b962ee842345637001265c7f26927030d6fa45981eec5968f"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-05-tool-poll-2.json",
+        "sha256": "4c12adb35d554e2d8f058c67aeade32541475767fcb353d4db8b5f9676323fa2"
+      }
+    },
+    "06": {
+      "attempt.json": "c4cc67db6183efb9dc6f878c887cfe1d2c04897d6facceb2b928760f769ead4e",
+      "command.json": "9edf6f14d17ad8d3fa54b2ff448fc3cbf6294882d280307dad43d458767424f6",
+      "process.json": "78a165d18742171a37e777c9e1af5f7d580056acc33cbb128ca2b045b54b3f31",
+      "closure.json": "6c7d640bce1f4d482fd6445c490d41bf5b78665db8539bfe4e41e29bf5d1369a",
+      "supervision.json": "7bc222ac4ee5a9605bf77abcf13b9b32b3b6b1cd943ea00a26566443dfd767ff",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-06/result.json",
+        "sha256": "cd1dd85b4f04cab7698e5d9997175d33aac0dfca81f8b417d3a09d8a4c9eee80"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-06-tool-poll-2.json",
+        "sha256": "3a700f3f35c721f21a24341a681f5d317fdb79ce4eb48209e0a52ad89aa7e83c"
+      }
+    },
+    "07": {
+      "attempt.json": "4fff7714c0057216dc6cd81c107c24cb9f3c7853a98652174a26969b2ce49d8a",
+      "command.json": "142f5100df45a6ec2a6559265bf4430ce62b9032bc93afa92c8b3e41bd642a20",
+      "process.json": "5b2a04679a3ead3492eb26a1a3a93c759cbad844b116842612d3687dd3cf928c",
+      "closure.json": "cd3a776549d9635fc1a399b74fbe60f4ad31fa2699851a79aebf7eada5ee0225",
+      "supervision.json": "01c126868dec8506b849d4d262c82969bc0883688a7a2a8ebbfcbc6723f81f3f",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-07/result.json",
+        "sha256": "244efb59345a1ebdda4e0769ad14c88ae405cea2c885c3c4a66da7956be0a58e"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-07-tool-poll-1.json",
+        "sha256": "e9ff307259a88df9a056cfe3b76186c33c0bc6ac1e57afa7fc73c21f9253ed37"
+      }
+    },
+    "08": {
+      "attempt.json": "4af23266a9fbed046929bcf3247e2f5d494e76dfcd959192c1b74a7037f40b57",
+      "command.json": "5297833a3da60f8ed64bd89fd051878d11ca3003459831fb8ae2bef35a22d3b8",
+      "process.json": "33c417d11bf110e28458a22d0a69a3b59dec8f33a547fc2289afd55f72d788bf",
+      "closure.json": "82e8614ac36e8c62c11d1366a287caa6f3ce2f5ad5ebb4749ae60638177f0e1c",
+      "supervision.json": "9dafa711dfefa3c8983730c478dcc8bf242e9b6a97cd3b8e0d3260fb8ee35727",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-08/result.json",
+        "sha256": "f7af64123251532e3ebe38637eb883b30f4c95ed8566aa1b6bbe66e26417aeca"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-08-tool-poll-2.json",
+        "sha256": "5f0174d38f8319dc31e51157be94896b755370b3138b364f57ae5c7705e7575b"
+      }
+    },
+    "09": {
+      "attempt.json": "6b6e7122dc3c418e70a0478cb685817c66400f66a56a460b440e229ca2912395",
+      "command.json": "4fc4808f785fe7900e656907eac6e698d042274b4e1da8b2b4cf367ca8e0a579",
+      "process.json": "0a0601d0620d68940a62fe1bde3e2511b2319be372d4f1ed32991d6092e8eded",
+      "closure.json": "7bac3747d738417d98d930eb0117cd44f978460901d92a7b9dc0faddd9afc3ee",
+      "supervision.json": "472b4b31f462e69fcd0a6a189c17cde3e8c1026521010719c704a75579fff52e",
+      "source-before.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "source-after.json": "db72f877d970f41891ac60074d5ecedbe93e8388a54aeb42382d233d29cf9c24",
+      "outerResult": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-09/result.json",
+        "sha256": "f456dd044aa3cd58191bfa72cfbc36d196c641a1485b848409fcda15deda26d9"
+      },
+      "terminalTool": {
+        "path": "evals/runs/stage-3-completion-2/full-journey-recovery/candidate-2/batched-command-09-tool-poll-2.json",
+        "sha256": "7dd9959648bed433513a6d9e5d89c034a874fce31b8122ab11df9e2495bd8eaa"
+      }
+    }
+  },
+  "previousCapturePreserved": true,
+  "previousCaptureComplete": false,
+  "technical": [
+    {
+      "batch": 1,
+      "alternativeId": "fixture",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 2,
+      "alternativeId": "states",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 3,
+      "alternativeId": "lead",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 4,
+      "alternativeId": "fixture-nav-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 5,
+      "alternativeId": "states-nav-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 6,
+      "alternativeId": "lead-nav-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 7,
+      "alternativeId": "fixture-light-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 8,
+      "alternativeId": "fixture-dark-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 9,
+      "alternativeId": "states-light-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 10,
+      "alternativeId": "states-dark-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 11,
+      "alternativeId": "lead-light-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    },
+    {
+      "batch": 12,
+      "alternativeId": "lead-dark-alias",
+      "exitCode": 0,
+      "passed": true,
+      "problems": []
+    }
+  ],
+  "observedScopeProblems": [],
+  "technicalPassed": true,
+  "semanticVisualAndWorkflowAcceptance": "unobserved by this verifier; independent original/source/conversation assessment and real gates remain required",
+  "physicalPhoneAndAuthorAcceptance": "unobserved",
+  "modelCalls": 0,
+  "retries": 0,
+  "writes": false
+}
+
