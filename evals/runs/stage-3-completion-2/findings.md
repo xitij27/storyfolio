@@ -341,3 +341,15 @@ All 351 tests plus skill/people checks pass in `local-tests-15`, closed
 zero at 06:43:54.956 UTC after 13,789 ms. Stage 3 remains incomplete and
 its remaining proof sequence is unchanged. Everything from this attempted
 comparison is retained locally; no push or publication is authorized.
+
+## Fresh same-model attempt authorized
+
+The author answered "Approve one fresh same-model attempt" to the exact
+capacity retry question. The complete answer is saved in project history.
+Root is preparing `codex-full-journey-candidate-2`, preserving candidate 1
+and all skill/model/prompt/capability settings. The original six gated
+15-minute turn bounds apply, with no judge, further retry or coaching.
+Only the neutral helper's exact cohort allowlist and associated pure test
+and documentation may change before a new freeze. The
+[prospective decision](full-journey/preparation/candidate-2-preparation-decision.md)
+records this measurement-only variation and unchanged remaining proof.

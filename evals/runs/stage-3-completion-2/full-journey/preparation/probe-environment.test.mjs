@@ -44,6 +44,8 @@ const measurement = () => ({
 test("only declared unscaffolded full-journey cohorts and frozen identities are accepted", () => {
   assert.doesNotThrow(() => assertContract(contract()));
   const candidate = contract(); candidate.cohort = candidate.meta.cohort = "codex-full-journey-candidate-1"; assertContract(candidate);
+  const capacityAttempt = contract(); capacityAttempt.cohort = capacityAttempt.meta.cohort = "codex-full-journey-candidate-2"; assertContract(capacityAttempt);
+  const unapproved = contract(); unapproved.cohort = unapproved.meta.cohort = "codex-full-journey-candidate-3"; assert.throws(() => assertContract(unapproved));
   const corrected = contract(); corrected.cohort = corrected.meta.cohort = "codex-full-journey-baseline-2"; assertContract(corrected);
   for (const update of [{ cohort: "extra-retry" }, { schemaVersion: 1 }, { taskKind: "prototype-depth" }, { setupMode: "existing-site" }, { requestedStops: [4] }, { files: [] }]) {
     const value = contract();

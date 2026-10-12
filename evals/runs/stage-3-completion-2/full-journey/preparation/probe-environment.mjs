@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 import { inspect, parseArgs } from "node:util";
 
 export const PROOF = Object.freeze({
-  cohorts: ["codex-full-journey-baseline-1", "codex-full-journey-baseline-2", "codex-full-journey-candidate-1"],
+  cohorts: ["codex-full-journey-baseline-1", "codex-full-journey-baseline-2", "codex-full-journey-candidate-1", "codex-full-journey-candidate-2"],
   temporaryRoot: "/var/tmp/storyfolio-entry-runtime-20261012",
   dependencies: "/tmp/storyfolio-build-capability-20261011",
   playwrightSha256: "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b",

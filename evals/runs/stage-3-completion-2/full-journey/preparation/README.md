@@ -3,12 +3,23 @@
 Source-only preparation, 12 October 2026. Root approved one neutral
 environment proof per newly prepared full-journey arm. Allowed cohort
 identities are `codex-full-journey-baseline-1`,
-`codex-full-journey-baseline-2` and `codex-full-journey-candidate-1`.
+`codex-full-journey-baseline-2`, `codex-full-journey-candidate-1` and
+`codex-full-journey-candidate-2`.
 The first baseline identity retains its failed neutral proof with no model
 call. The separately authorized corrected proof uses baseline 2, the first
 prospective paid baseline, not a retry inside the old freeze. No full-journey case or cohort is created
 by these helpers. Root owns execution and commits. No proof, test, model,
 build, installation or browser was launched by this preparer.
+
+After candidate 1's model-service capacity rejection, the author approved
+exactly one fresh same-model attempt. Root records that approval and owns
+execution. Candidate 2 is a new cohort with its own freeze and readiness,
+not a reopened candidate 1. The earlier rejection and all old evidence
+remain preserved. This allowlist addition changes no skill, engine, prompt,
+capability, model or limit; it permits no automatic retry or model switch.
+The helper, pure-test and README byte differences must be recorded in the
+new input comparison. No successful setup or paid result is implied by
+adding the identity.
 
 The [independent runner review](runner-review.md) precedes these helpers.
 The full-journey fixture stays nonlaunchable until the final measurement,

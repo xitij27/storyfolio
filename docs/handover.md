@@ -13,7 +13,15 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: the matched candidate invocation was rejected by the
+Newest direction: the author answered "Approve one fresh same-model attempt".
+The [exact approval](history/2026-10-12-stage-3-capacity-retry-approval.md)
+permits a separately labelled `codex-full-journey-candidate-2`, with the
+same skill/model/prompts and up to six gated 15-minute turns, no judge or
+further retry. Root is preparing its own readiness under the
+[prospective decision](../evals/runs/stage-3-completion-2/full-journey/preparation/candidate-2-preparation-decision.md).
+Candidate 1 remains immutable; no new paid invocation has launched yet.
+
+Earlier checkpoint: the matched candidate invocation was rejected by the
 model service for capacity before any agent reply or command. It closed
 normally, not by timeout/interruption, with usage unavailable. All 149
 inputs, 196 artifacts and 94 unchanged source files verify. The
