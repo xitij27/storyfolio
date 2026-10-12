@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+.identity { position: absolute; z-index: 5; top: 1.5rem; left: clamp(1.25rem,5vw,5rem); display: flex; flex-direction: column; gap: .3rem; pointer-events: none; }
+.identity span:first-child { font: 600 1rem system-ui; letter-spacing: -.02em; }
+.identity span:last-child { font: .65rem ui-monospace,monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--story-faint); }
+.story-title { font-size: clamp(2rem,3.6vw,4.05rem); line-height: 1.06; }
+.story-caption-text { max-width: 30rem; }
+.story-caption { padding-block: 3rem; }
+.story-body { font-size: 1rem; line-height: 1.6; }
+.story-note { font-size: .8rem; line-height: 1.55; border-left: 2px solid var(--story-accent); padding-left: .85rem; }
+.story-kicker { text-transform: uppercase; font-size: .68rem; letter-spacing: .075em; }
+.return-link { display: inline-block; margin-top: .5rem; font: .75rem ui-monospace,monospace; text-underline-offset: .3rem; }
+.colophon { padding: 1.5rem clamp(1.25rem,5vw,5rem); border-top: 1px solid color-mix(in srgb,var(--story-faint),transparent 75%); font: .65rem ui-monospace,monospace; color: var(--story-faint); pointer-events: auto; }
+@media(max-width: 47.99rem) {
+  .identity { top: 1rem; }
+  .identity span:last-child { font-size: .55rem; }
+  .story-caption { padding: 1.3rem 1.25rem; }
+  .story-title { font-size: 2rem; }
+  .story-body { font-size: .9rem; line-height: 1.5; margin-top: .8rem; }
+  .story-note { font-size: .73rem; line-height: 1.45; margin-top: .75rem; }
+  .story-look-switch button { padding-inline: .65rem; }
+}
+@media(max-height: 34rem) and (min-width:48rem) {
+  .story-title { font-size: 2.3rem; }
+  .story-caption { padding-block: 1.5rem; }
+  .story-caption-text { max-width: 27rem; }
+  .story-body { font-size: .9rem; margin-top: .8rem; }
+  .story-note { font-size: .73rem; margin-top: .7rem; }
+}
+.story-rail { top: auto; bottom: 1rem; transform: none; }
+.story-rail ol { display: flex; gap: .2rem; }
+.story-rail a { position: relative; min-width: 2.75rem; min-height: 2.75rem; justify-content: center; align-items: center; border-bottom: 1px solid transparent; }
+.story-rail a span:first-child { position: absolute; right: 0; bottom: 3rem; white-space: nowrap; padding: .5rem; background: var(--story-ground); }
+.story-rail a[aria-current] { border-bottom-color: var(--story-accent); }

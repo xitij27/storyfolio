@@ -1,0 +1,94 @@
+(node:1405) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1405) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/lib/story/timeline.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/package.json.
+{
+  "h1": 1,
+  "beats": 5,
+  "beatIds": [
+    "question.inspect",
+    "scheduling.loop",
+    "bench.connect",
+    "evidence.paths",
+    "scope.answer"
+  ],
+  "scene": "off",
+  "look": "light",
+  "canvases": 0,
+  "overflowX": false,
+  "duplicateIds": [],
+  "pageHeight": 2377,
+  "lang": "en",
+  "selectorFound": null,
+  "displayed": 0,
+  "shots": [
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/context-loss/00-question.inspect.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/context-loss/01-scheduling.loop.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/context-loss/02-bench.connect.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/context-loss/03-evidence.paths.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/context-loss/04-scope.answer.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/context-loss/context-lost.png"
+  ],
+  "samples": [
+    {
+      "beat": "question.inspect",
+      "position": "end",
+      "requestedScroll": 27,
+      "actualScroll": 27
+    },
+    {
+      "beat": "scheduling.loop",
+      "position": "end",
+      "requestedScroll": 387,
+      "actualScroll": 387
+    },
+    {
+      "beat": "bench.connect",
+      "position": "end",
+      "requestedScroll": 1025.5,
+      "actualScroll": 1026
+    },
+    {
+      "beat": "evidence.paths",
+      "position": "end",
+      "requestedScroll": 1385.5,
+      "actualScroll": 1386
+    },
+    {
+      "beat": "scope.answer",
+      "position": "end",
+      "requestedScroll": 1745.5,
+      "actualScroll": 1477
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:41899/_next/static/chunks/1awsf3uij3yyf.css",
+      "resourceType": "stylesheet",
+      "failure": "net::ERR_ABORTED",
+      "reason": null,
+      "expected": false
+    },
+    {
+      "url": "http://127.0.0.1:41899/_next/static/chunks/1suqjp3km9qsr.js",
+      "resourceType": "script",
+      "failure": "net::ERR_ABORTED",
+      "reason": null,
+      "expected": false
+    }
+  ],
+  "contextLoss": {
+    "supported": false,
+    "scene": "off"
+  },
+  "warnings": [],
+  "problems": [
+    "HTTP 500: http://127.0.0.1:41899/_next/static/chunks/1awsf3uij3yyf.css",
+    "request failed (net::ERR_ABORTED): http://127.0.0.1:41899/_next/static/chunks/1awsf3uij3yyf.css",
+    "HTTP 500: http://127.0.0.1:41899/_next/static/chunks/1suqjp3km9qsr.js",
+    "request failed (net::ERR_ABORTED): http://127.0.0.1:41899/_next/static/chunks/1suqjp3km9qsr.js",
+    "WebGL context loss did not leave the scene-off fallback"
+  ]
+}
+

@@ -46,6 +46,13 @@ browser verification, each at most 15 minutes. It uses the existing
 schema-1 stop-4 runner with a fresh fictional fixture. It has no paid judge,
 retry or continuation allowance; a correction and matched rerun require a
 new decision. Its narrow protocol does not replace full-site acceptance.
+That sole actor has now timed out after 900,071 ms. Ordinary entry occurred,
+but the look decision was bypassed. The browser allowance has not been used:
+the frozen exact-inventory guard finds 18 extra Git metadata files beside
+180 matching saved source files. No guard change, cleanup or alternate
+workspace replay is authorized by treating that mismatch as a pass. A
+measurement repair needs a separate decision and new measurement-baseline
+label; it is not a skill improvement or another paid-run allowance.
 
 Record the question, selected cases, repetitions, comparison group and
 stopping rule in a plan. A skill change must link to a saved run that needed

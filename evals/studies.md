@@ -18,7 +18,7 @@ its review criteria and independent runtime observations are separate.
 
 | Study | Kind and status |
 |---|---|
-| [stage-3-natural-entry-1](runs/stage-3-natural-entry-1/findings.md) | Approved ordinary storyboard-to-build baseline, in preparation. One unchanged-skill actor turn and one relevant browser verification, each at most 15 minutes. No paid judge, retry, continuation or skill correction. |
+| [stage-3-natural-entry-1](runs/stage-3-natural-entry-1/findings.md) | Sole actor entered the build, bypassed the unanswered look choice, and timed out at 900.071 seconds. Two source looks exist, not independently visually verified. Browser launch blocked by 18 extra Git metadata files despite 180 matching saved source files. No judge, retry, continuation or skill correction. Measurement repair needs a separate decision. |
 | [stage-3-candidate-verification-1](runs/stage-3-candidate-verification-1/findings.md) | Separately approved single browser verification of unchanged 184-file candidate. Desktop, phone and short pass; external SIGTERM after 624.633 seconds leaves reduced-motion partial and three failure modes absent. All 203 originals reviewed, final integrity audit passes, no actor, judge or retry. Original timeout and both captures preserved. |
 | [1](#1-original-claude-comparison-complete) | Claude comparison, complete |
 | [2](#2-deferred-claude-round-2-no-saved-runs) | Deferred rerun, no saved results |

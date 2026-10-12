@@ -1,0 +1,24 @@
+(node:33) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.ts took 21ms
+
+  Creating an optimized production build ...
+(node:33) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ Compiled successfully in 1187ms
+  Running TypeScript ...
+content/extras/relationships.tsx(13,41): error TS2322: Type 'readonly [{ readonly id: "question.inspect"; readonly height: 1.5; }] | readonly [{ readonly id: "scheduling.loop"; readonly height: 1.5; }] | readonly [{ readonly id: "bench.connect"; readonly height: 1.5; }] | readonly [...] | readonly [...]' is not assignable to type '{ readonly id: "question.inspect"; readonly height: 1.5; } | readonly { readonly id: "question.inspect"; readonly height: 1.5; }[]'.
+  Type 'readonly [{ readonly id: "scheduling.loop"; readonly height: 1.5; }]' is not assignable to type '{ readonly id: "question.inspect"; readonly height: 1.5; } | readonly { readonly id: "question.inspect"; readonly height: 1.5; }[]'.
+    Type 'readonly [{ readonly id: "scheduling.loop"; readonly height: 1.5; }]' is not assignable to type 'readonly { readonly id: "question.inspect"; readonly height: 1.5; }[]'.
+      Type '{ readonly id: "scheduling.loop"; readonly height: 1.5; }' is not assignable to type '{ readonly id: "question.inspect"; readonly height: 1.5; }'.
+        Types of property 'id' are incompatible.
+          Type '"scheduling.loop"' is not assignable to type '"question.inspect"'.
+content/extras/relationships.tsx(19,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ "question.inspect": { rest: Formation; }; "scheduling.loop": { rest: Formation; }; "bench.connect": { rest: Formation; }; "evidence.paths": { rest: Formation; }; "scope.answer": { ...; }; }'.
+content/extras/relationships.tsx(19,33): error TS2571: Object is of type 'unknown'.
+content/extras/relationships.tsx(20,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ "question.inspect": { rest: Formation; }; "scheduling.loop": { rest: Formation; }; "bench.connect": { rest: Formation; }; "evidence.paths": { rest: Formation; }; "scope.answer": { ...; }; }'.
+content/extras/relationships.tsx(20,33): error TS2571: Object is of type 'unknown'.
+Failed to type check.
+

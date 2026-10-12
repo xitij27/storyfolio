@@ -115,3 +115,129 @@ inputs, 26 setup evidence files, three helpers, nine archive/runtime image
 pairs and the 177-file current source, and passed. The image review itself
 is attributed to root, not inferred from those hash checks. All prelaunch
 gates are now satisfied; the next action is the single approved actor turn.
+
+## Single actor launch
+
+Setup evidence was committed as `066d283`. The root-owned recorder launched
+the sole `--turn 1` command at `2026-10-12T02:22:07.048Z`, with the exact
+frozen environment and explicitly unset telemetry flag. All coordinator
+tests, builds, browser launches and process cleanup are withheld while the
+actor is live. Root retains each outer tool response and waits for actual
+terminal closure. No retry, continuation or paid judge is permitted.
+
+## Closed actor outcome
+
+The outer command closed with exit 1 at `2026-10-12T02:37:09.098Z`, after
+902,051 ms including wrapper overhead. The actor's own deadline fired at
+900,071 ms: `complete:false`, `timedOut:true`, `interruptedBy:null`, no
+`turn.completed` event and no final reply. Usage is null, so token cost is
+unknown, not zero. This is a deadline outcome, distinct from the older
+candidate capture's external SIGTERM. The complete raw stream, aggregate
+progress reply, before/final snapshots, process/result records and all
+13 outer polling records are preserved. The aggregate reply is not a
+terminal handoff.
+
+The [source observation](source-observation.md) and
+[public discovery](public-source-discovery.md) establish:
+
+- Ordinary entry worked. The actor read the selected skill and began the
+  approved build without refusing at its planning-only endpoint.
+- It asked an early text-only appearance question, received no answer,
+  then explicitly continued with Warm and implemented all five chapters.
+  This is the observed sequencing miss. Five chapters are not inherently
+  wrong, and a provisional default is not fabricated approval, but neither
+  supplies the missing real look decision before expansion.
+- Warm and Night are two source-defined looks with ordinary buttons.
+  Their material appearance and actual browser interaction are not
+  independently verified. Source tokens, labels and actor claims are not
+  a visual pass.
+- The saved handover admits the provisional, unapproved look and corrects
+  earlier check claims: overlapping builds invalidated those browser runs.
+  Its final review remained unfinished. The coordinator did not treat
+  directories named `accepted`, `release` or `verified` as approval.
+
+The 180-file final source matches the live application byte for byte.
+Compared with the actual 177-file turn-before snapshot, 18 files changed
+and three were added. The neutral environment-setup file was supplied before
+the actor, not authored by it. Actor-local engine modifications are partial
+test output, not changes to the shipped engine. Timeout alone supports no
+new behavioral sentence; there is no endpoint-refusal failure to correct.
+No skill change or matched rerun was made.
+
+The [actor audit](actor-audit-result.json) verifies 365 result-bound artifacts,
+all 180 current/saved source pairs and the exact turn-before comparison.
+Its [access and lifecycle review](../codex-bench-entry-baseline-1/actor-audit.md)
+confirms a recorded read of the complete selected skill and engine README.
+No saved command opens the accepted prototype or held-out study content.
+Directory listings expose other temporary path names, so this is an audit
+of recorded access, not a filesystem read-jail claim.
+The complete stream has 108 records, 50 command starts and 47 matching
+completions. Three unfinished command items remain unfinished in the record.
+Read-only same-UID process checks found no accessible workspace cwd or file
+descriptor, with two inaccessible `/proc` entries explicitly disclosed.
+This limited observation is not proof about every detached or inaccessible
+process. No cleanup signal was sent by the coordinator.
+
+Existing actor diagnostics are preserved under the cohort's
+[actor-checks manifest](../codex-bench-entry-baseline-1/actor-checks/manifest.json):
+596 files, 65,963,068 bytes, including 477 original PNGs and seven derivative
+contact sheets. Exclusive copies and before/after inventories agree. These
+are surviving actor-owned checks from differing source revisions, not the
+independent browser allowance. Their images remain unreviewed by the
+coordinator audit, and their directory names or reports confer no acceptance.
+The inherited setup-capability packet stays separate. Credential contents,
+Git metadata, dependencies and build trees were not copied into that archive.
+Raw actor output and copied source remain byte-exact, including inherited
+EOF blank lines and actor-authored punctuation. Full staged whitespace
+checking reports those retained bytes; they are not reformatted as new
+coordinator instructions or treated as a clean global whitespace result.
+
+## Independent browser verification blocked before launch
+
+The [binding blocker](source-binding-blocker.md), its complete
+[machine-readable record](source-binding-blocker.json) and
+[source inventory](source-discovery.json) preserve the exact distinction:
+all 180 retained files match, but the frozen capture inventory additionally
+includes 18 ordinary nonbare Git metadata files under `.git-local`, created
+by the actor. The runner snapshot lists that directory as unexpected and
+does not retain its contents. Its bare-Git exclusion does not cover this
+directory. Empty `.aws` and `.codex` directories contribute no captured files.
+
+The application exists and remains eligible in principle. This is not a
+no-output skip, a failed browser result or proof of a broken application.
+The exact-set guard blocks the frozen launch before the build/browser
+attempt, so neither was started. No metadata was deleted, exclusion changed,
+actor result rewritten or alternate workspace substituted. The original
+independent browser allowance remains unspent, but a different source-binding
+method needs a separate decision under the frozen protocol.
+
+The saved [observed targets](observed-targets.json) include both public looks
+and actual opening `question.inspect`, middle `bench.connect` and ending
+`scope.answer`. Scheduling and evidence are implemented but explicitly
+unsampled, not filtered by image quality. The full five-beat and seven-mode
+completion requirements remain outside this narrow probe.
+
+## Local checks and next decision
+
+After the actor's outer terminal closure and the limited process audit,
+root ran `final-local-tests/`. It closed 0 at `2026-10-12T02:44:20.476Z`:
+skill and people checks, fixture identity, 18 focused measurement/lifecycle
+tests and all 342 repository tests pass. The shipped skill remains 799 words
+with four references. These are repository tests, not independent runtime
+verification of the saved portfolio.
+
+The next [requested decision](../../../docs/history/2026-10-12-entry-verification-request.md)
+is a measurement-only verification of a clean reconstruction of the saved
+180-file application, with exact before/after bindings, one browser run of
+at most 15 minutes, no paid actor or judge, no continuation and no retry.
+Keep the original workspace, blocker and frozen launcher unchanged. Reuse
+the frozen worker and observations with an explicitly new source-binding
+record, labelled a new measurement baseline, not a successful skill rerun.
+No such reconstruction or capture is authorized or performed yet.
+
+Stage 3 remains incomplete. The source sequencing miss may support a small
+later look-gate correction, but that correction and a matched paid rerun
+require their separate approval. Neither this probe nor a saved-source
+verification replaces planning regression, the complete six-stop journey,
+complete technical/original-image review or actual author desktop/phone
+approval. There was no push.

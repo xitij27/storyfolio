@@ -1,0 +1,802 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-12T02:43:24.435Z",
+  "command": "node evals/runs/stage-3-natural-entry-1/audit-actor.mjs",
+  "modelCalls": 0,
+  "work": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh",
+  "resultSha256": "d758c277d2af1700d5a3c62913501917bee457f4df9da3b13d32266f9de6a291",
+  "streamSha256": "88ec8ac7f6bdaa0318dccb451404047d2086a98472d60168b8923bfc45fbf4b2",
+  "complete": false,
+  "timedOut": true,
+  "durationMs": 900071,
+  "usage": null,
+  "interruptedBy": null,
+  "processCode": -1,
+  "outer": {
+    "code": 1,
+    "signal": null,
+    "finished": "2026-10-12T02:37:09.098Z",
+    "durationMs": 902051,
+    "stdoutSha256": "60a3c3b2ea25162c8745bd9cbecfc87aacf1352b80ffe2b8ff0b5e533cd213d2",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "terminalToolExit": 1,
+  "eventCount": 108,
+  "eventTypes": {
+    "thread.started": 1,
+    "turn.started": 1,
+    "item.completed": 56,
+    "item.started": 50
+  },
+  "itemTypes": [
+    "agent_message",
+    "command_execution"
+  ],
+  "turnCompletedEvents": 0,
+  "completedCommandCount": 47,
+  "commands": [
+    {
+      "id": "item_1",
+      "startLine": 4,
+      "command": "/bin/bash -lc 'cat docs/story/handover.md; cat /var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/.agents/skills/storyfolio/SKILL.md'",
+      "completedLine": 5,
+      "exitCode": 0
+    },
+    {
+      "id": "item_2",
+      "startLine": 6,
+      "command": "/bin/bash -lc \"cat docs/story/storyboard.md docs/story/evaluation-environment.md README.md docs/story/facts.md docs/story/confirmations.md docs/story/assets.md docs/story/decided-for-you.md; rg --files -g '\"'!package-lock.json'\"' -g '\"'!node_modules'\"' -g '\"'! .git'\"' | head -80\"",
+      "completedLine": 7,
+      "exitCode": 0
+    },
+    {
+      "id": "item_4",
+      "startLine": 9,
+      "command": "/bin/bash -lc 'cat content/{story,formations,faces,copy,looks,index,experience,checks.json}.ts 2>/dev/null; cat content/experience.tsx content/checks.json app/page.tsx app/globals.css components/story/{types,pieces,scene,chapter}.tsx components/story/types.ts components/story/story.css'",
+      "completedLine": 10,
+      "exitCode": 1
+    },
+    {
+      "id": "item_5",
+      "startLine": 11,
+      "command": "/bin/bash -lc 'npm ci && npm run browsers'",
+      "completedLine": 12,
+      "exitCode": -1
+    },
+    {
+      "id": "item_6",
+      "startLine": 13,
+      "command": "/bin/bash -lc 'cat lib/story/{formation,camera,story}.ts content/extras.ts content/links.ts scripts/check.mjs package.json app/layout.tsx components/story/face-material.ts components/story/rail.tsx; rg --files node_modules/next/dist/docs | head'",
+      "completedLine": 14,
+      "exitCode": 0
+    },
+    {
+      "id": "item_8",
+      "startLine": 16,
+      "command": "/bin/bash -lc \"cat > content/story.ts <<'EOF'\nimport type { StoryDef, BeatIdOf } from \\\"../lib/story/story.ts\\\";\nexport const story = {\n  pieces: 5,\n  chapters: [\n    { id: \\\"chapter-question\\\", number: 1, name: \\\"Code → physical check\\\", role: \\\"opening\\\", beats: [{ id: \\\"question.inspect\\\", height: 1.5 }] },\n    { id: \\\"chapter-scheduling\\\", number: 2, name: \\\"Organize the cycle\\\", role: \\\"how\\\", beats: [{ id: \\\"scheduling.loop\\\", height: 1.5 }] },\n    { id: \\\"chapter-bench\\\", number: 3, name: \\\"Make it observable\\\", role: \\\"how\\\", beats: [{ id: \\\"bench.connect\\\", height: 1.5 }] },\n    { id: \\\"chapter-evidence\\\", number: 4, name: \\\"Read the evidence\\\", role: \\\"outcomes\\\", beats: [{ id: \\\"evidence.paths\\\", height: 1.5 }] },\n    { id: \\\"chapter-scope\\\", number: 5, name: \\\"The answer & its limits\\\", role: \\\"close\\\", beats: [{ id: \\\"scope.answer\\\", height: 1.5 }] },\n  ],\n} as const satisfies StoryDef;\nexport type BeatId = BeatIdOf<typeof story>;\nEOF\ncat > content/copy.ts <<'EOF'\nexport const copy = {\n  lang: \\\"en\\\",\n  metadata: { title: \\\"Ada Mensah — Code to a physical check\\\", description: \\\"Ada's firmware, power-state scheduling and bring-up fixture for Mosslink, an environmental sensor. An illustrative bench story with explicit evidence limits.\\\" },\n  railLabel: \\\"Story chapters\\\", lookLabel: \\\"Appearance\\\", fpsLabel: \\\"Frames per second\\\",\n  skipLabel: \\\"Skip to the answer\\\", backLabel: \\\"Return to the question\\\",\n  beats: {\n    \\\"question.inspect\\\": {\n      title: \\\"How do you check a decision made in code?\\\",\n      body: \\\"Ada Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\\\",\n      note: \\\"Bring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\\\",\n    },\n    \\\"scheduling.loop\\\": {\n      title: \\\"Give each activity its place.\\\",\n      body: \\\"Sleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\\\",\n      note: \\\"The loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\\\",\n    },\n    \\\"bench.connect\\\": {\n      title: \\\"A command needs a physical answer.\\\",\n      body: \\\"A firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\\\",\n      note: \\\"Ada: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\\\",\n    },\n    \\\"evidence.paths\\\": {\n      title: \\\"Two claims. Two kinds of support.\\\",\n      body: \\\"Measured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\\\",\n      note: \\\"Neither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\\\",\n    },\n    \\\"scope.answer\\\": {\n      title: \\\"Code, connected to a bench check.\\\",\n      body: \\\"Ada’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\\\",\n      note: \\\"Six of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\\\",\n    },\n  },\n};\nEOF\ncat > content/formations.ts <<'EOF'\nimport { blankFormation, type BeatFormation, type Formation, type Pose } from \\\"../lib/story/formation.ts\\\";\nimport { measure } from \\\"../lib/story/layouts.ts\\\";\nimport { story, type BeatId } from \\\"./story.ts\\\";\nconst pose = (x: number, y: number, z: number, w: number, h: number): Pose => ({ position: [x,y,z], rotation: [0,0,0], size: [w,h] });\nfunction form(pieces: Pose[], turn: [number, number] = [-0.16,-0.18]): Formation {\n  const bounds = measure(pieces);\n  return { ...blankFormation(story.pieces), pieces, span: bounds.span * 1.08, rise: bounds.rise * 1.12, anchor: [0.46,0.12], turn, near: 4, floor: -4 };\n}\nconst assembled = form([\n  pose(0,-1.2,-0.35,4.2,0.9), pose(0,0,0,2.6,1.5), pose(-2.05,0,0,1.15,1.5),\n  pose(1.95,0.68,0,1.25,1.15), pose(1.95,-0.75,0,1.25,1.15),\n]);\nexport const formations = {\n  \\\"question.inspect\\\": { rest: assembled },\n  \\\"scheduling.loop\\\": { rest: form([\n    pose(0,-1.45,-0.4,4.2,0.8), pose(0,0.1,0.65,3.7,2.1), pose(-2.55,0,0,0.85,1.2),\n    pose(2.55,0.8,0,0.9,0.9), pose(2.55,-0.7,0,0.9,0.9),\n  ],[-0.08,-0.08]) },\n  \\\"bench.connect\\\": { rest: form([\n    pose(0,-1.65,-0.1,3.4,0.9), pose(0,0,0.35,2.4,1.45), pose(-2.5,0,0,1.4,1.8),\n    pose(2.55,0.95,0,1.55,1.4), pose(2.55,-0.95,0,1.55,1.4),\n  ]) },\n  \\\"evidence.paths\\\": { rest: form([\n    pose(-1.45,-1.8,-0.2,2.6,0.7), pose(-1.45,-0.15,0,2.2,1.4), pose(-1.45,1.5,0,1.5,1.2),\n    pose(1.75,1.0,0.2,2.5,1.8), pose(1.75,-1.1,0.2,2.5,1.8),\n  ],[-0.06,-0.08]) },\n  \\\"scope.answer\\\": { rest: assembled },\n} satisfies Record<BeatId, BeatFormation>;\nEOF\ncat > content/links.ts <<'EOF'\nexport const links = [];\nEOF\ncat > content/extras.ts <<'EOF'\nexport const extras = [];\nEOF\nprintf '{}\\\\n' > content/checks.json\ncat > app/page.tsx <<'EOF'\nimport { Chapter, Beat, Kicker, Title, Body, Note } from \\\"@/components/story/chapter\\\";\nimport { Experience } from \\\"@/content/experience\\\";\nimport { story } from \\\"@/content/story\\\";\nimport { copy } from \\\"@/content/copy\\\";\nexport default function Home() {\n  return <main><a id=\\\"story-skip\\\" className=\\\"story-skip\\\" href=\\\"#chapter-scope\\\">Skip to the answer</a><Experience>\n    <header className=\\\"identity\\\"><span>Ada Mensah</span><span>Firmware / Mosslink</span></header>\n    {story.chapters.map((chapter, index) => <Chapter key={chapter.id} id={chapter.id}>\n      {chapter.beats.map(beat => {\n        const words = copy.beats[beat.id];\n        const diagram = index === 1 ? \\\"/assets/power-states.svg\\\" : index === 2 ? \\\"/assets/bring-up-fixture.svg\\\" : null;\n        return <Beat key={beat.id} story={story} id={beat.id} fallback={diagram ?\n          // Local explanatory SVG, not a recovered implementation.\n          // eslint-disable-next-line @next/next/no-img-element\n          <img src={diagram} width=\\\"720\\\" height=\\\"620\\\" alt={index === 1 ? \\\"Illustrative Sleep, Measure, Transmit loop, returning to Sleep.\\\" : \\\"Illustrative firmware command, board response, fixture access and bench observation relationship.\\\"} /> : undefined}>\n          <Kicker number={chapter.number}>{chapter.name}</Kicker>\n          <Title id={\"'`${chapter.id}-title`} as={index === 0 ? \"h1\" : \"h2\"}>{words.title}</Title>\n          <Body>{words.body}</Body><Note>{words.note}</Note>\n          {index === 4 && <a className=\"return-link\" href=\"#chapter-question\">{copy.backLabel} ↑</a>}\n        </Beat>;\n      })}\n    </Chapter>)}\n    <footer className=\"colophon\">Illustrative portfolio · fictional evaluation subject · local prototype</footer>\n  </Experience></main>;\n}\nEOF'",
+      "completedLine": 17,
+      "exitCode": 0
+    },
+    {
+      "id": "item_9",
+      "startLine": 18,
+      "command": "/bin/bash -lc \"ls node_modules/next/package.json; ls /tmp; git status --short; rg --files /var/tmp/storyfolio-entry-runtime-20261012 | rg 'next/package.json|chromium|node_modules' | head\"",
+      "completedLine": 19,
+      "exitCode": 0
+    },
+    {
+      "id": "item_10",
+      "startLine": 20,
+      "command": "/bin/bash -lc 'cat docs/story/environment-setup.json; npm ci --offline --cache /tmp/storyfolio-npm-cache'",
+      "completedLine": 21,
+      "exitCode": 0
+    },
+    {
+      "id": "item_11",
+      "startLine": 22,
+      "command": "/bin/bash -lc \"cat > content/apparatus.tsx <<'EOF'\n\\\"use client\\\";\nimport type { PieceProps } from \\\"@/components/story/types\\\";\nfunction Box({ color, size, position = [0,0,0] }: { color: string; size: [number,number,number]; position?: [number,number,number] }) {\n  return <mesh position={position} castShadow receiveShadow><boxGeometry args={size}/><meshStandardMaterial color={color} roughness={0.72} metalness={0.25}/></mesh>;\n}\nexport function Apparatus({ index, material, look }: PieceProps) {\n  const board = index === 1;\n  const color = board ? \\\"#28574c\\\" : index === 0 ? \\\"#786754\\\" : look.surface.color;\n  const depth = board ? 0.12 : index === 0 ? 0.32 : 0.3;\n  return <group>\n    <Box color={color} size={[1,1,depth]}/>\n    <mesh position={[0,0,depth/2 + 0.006]} material={material}><planeGeometry args={[0.91,0.84]}/></mesh>\n    {[-1,1].flatMap(x => [-1,1].map(y => <mesh key={\"'`${x}-${y}`} position={[x*0.455,y*0.445,depth/2+0.01]} rotation={[Math.PI/2,0,0]}><cylinderGeometry args={[0.018,0.018,0.018,12]}/><meshStandardMaterial color=\"#bca987\" metalness={0.75} roughness={0.4}/></mesh>))}\n    {board && <>\n      <Box color=\"#1c2427\" size={[0.22,0.11,0.06]} position={[0,-0.38,0.12]}/>\n      {Array.from({length:8},(_,i)=><Box key={i} color=\"#ccac6c\" size={[0.027,0.07,0.025]} position={[-0.31+i*0.088,-0.49,0.075]}/>)}\n    </>}\n    {index === 0 && [-0.36,0.36].map(x=><group key={x}>\n      <Box color=\"#c8ad77\" size={[0.045,0.045,0.6]} position={[x,0.22,0.3]}/>\n      <Box color=\"#332e28\" size={[0.18,0.16,0.2]} position={[x,-0.5,-0.05]}/>\n    </group>)}\n    {index >= 2 && <>\n      <mesh position={[-0.3,-0.38,0.22]} rotation={[Math.PI/2,0,0]}><cylinderGeometry args={[0.06,0.06,0.13,24]}/><meshStandardMaterial color=\"#434a47\" metalness={0.35} roughness={0.55}/></mesh>\n      <Box color=\"#bd8658\" size={[0.13,0.025,0.045]} position={[0.3,-0.39,0.18]}/>\n      <Box color=\"#454541\" size={[0.8,0.11,0.3]} position={[0,-0.54,-0.01]}/>\n    </>}\n  </group>;\n}\nEOF\ncat > content/faces.ts <<'\"'EOF'\nimport type { FaceDef } from \\\"@/components/story/types\\\";\nimport { story } from \\\"./story\\\";\n// Fixed inscriptions keep the physical parts recognizable and avoid crossfading words.\nexport const faces: FaceDef[] = story.chapters.flatMap(chapter => chapter.beats.flatMap(beat => Array.from({length:story.pieces},(_,piece): FaceDef => ({\n  id:\"'`${beat.id}-${piece}`, beat:beat.id, piece,\n  draw(ctx,w,h,look) {\n    const board = piece === 1;\n    const bg = board ? \"#244d42\" : look.surface.color;\n    const ink = board ? \"#fff8dd\" : look.ink;\n    ctx.fillStyle=bg; ctx.fillRect(0,0,w,h);\n    ctx.fillStyle=ink; ctx.textAlign=\"center\";\n    const text=(s:string,y:number,size:number,mono=false)=>{ctx.font=`${size*w}px ${mono ? '\"'monospace' : 'system-ui'}\"'`;ctx.fillText(s,w/2,h*y,w*0.94);};\n    if(piece===0) {text(\"BRING-UP FIXTURE\",0.4,0.072,true);text(\"Ada · physical board access\",0.73,0.06);}\n    if(board) {\n      text(\"BOARD / CIRCUITRY: COLLEAGUE\",0.14,0.048,true);\n      const xs=[0.18,0.5,0.82]; const names=[\"SLEEP\",\"MEASURE\",\"TRANSMIT\"];\n      xs.forEach((x,i)=>{\n        ctx.strokeStyle=\"#c5b681\";ctx.lineWidth=w*0.005;ctx.strokeRect(w*(x-0.135),h*0.34,w*0.27,h*0.26);\n        ctx.fillStyle=ink;ctx.font=`bold ${w*0.05}px monospace`;ctx.fillText(names[i],w*x,h*0.51);\n      });\n      ctx.strokeStyle=\"#d7b876\";ctx.lineWidth=w*0.009;\n      ctx.beginPath();ctx.moveTo(w*.32,h*.47);ctx.lineTo(w*.365,h*.47);ctx.moveTo(w*.64,h*.47);ctx.lineTo(w*.685,h*.47);\n      ctx.moveTo(w*.82,h*.63);ctx.lineTo(w*.82,h*.74);ctx.lineTo(w*.18,h*.74);ctx.lineTo(w*.18,h*.63);ctx.stroke();\n      text(\"→\",.5,.052);text(\"ILLUSTRATIVE CYCLE · NOT TIMING\",.93,.043,true);\n    }\n    if(piece===2) {text(\"ADA / FIRMWARE\",.17,.067,true);text(\"COMMAND\",.46,.105,true);text(\"power-state\",.65,.072);text(\"scheduling\",.79,.072);}\n    if(piece===3) {text(\"MEASURED CURRENT\",.15,.06,true);text(\"sleep + transmit\",.30,.059);text(\"+ assumed interval\",.44,.059);text(\"2 years\",.65,.13);text(\"PROJECTED\",.82,.075,true);}\n    if(piece===4) {text(\"CONTINUOUS BENCH RUN\",.17,.058,true);text(\"72 hours\",.53,.13);text(\"OBSERVED\",.76,.075,true);}\n  },\n}))));\nEOF\npython3 - <<'\"'PY'\np='content/index.ts'\ns=open(p).read().replace('import { links } from \\\"./links\\\";','import { links } from \\\"./links\\\";\\\\nimport { Apparatus } from \\\"./apparatus\\\";').replace('defaultLook: \\\"light\\\"','Piece: Apparatus, defaultLook: \\\"light\\\"')\nopen(p,'w').write(s)\nPY\ncat > content/extras/relationships.tsx <<'EOF'\n\\\"use client\\\";\nimport { useMemo, useRef } from \\\"react\\\";\nimport * as THREE from \\\"three\\\";\nimport { useExtraFrame } from \\\"@/components/story/extra-frame\\\";\nimport type { ExtraProps } from \\\"@/components/story/types\\\";\nimport { atRest, blankFormation, mixFormation } from \\\"@/lib/story/formation\\\";\nimport { formations } from \\\"../formations\\\";\nimport { story } from \\\"../story\\\";\nexport default function Relationships({frameRef, look}: ExtraProps) {\n  const lines=useRef<(THREE.Mesh|null)[]>([]);\n  const tips=useRef<(THREE.Mesh|null)[]>([]);\n  const frames=useMemo(()=>[blankFormation(5),blankFormation(5),blankFormation(5)],[]);\n  const beats=story.chapters.flatMap(c=>c.beats);\n  const a=useMemo(()=>new THREE.Vector3(),[]), b=useMemo(()=>new THREE.Vector3(),[]), d=useMemo(()=>new THREE.Vector3(),[]);\n  const up=useMemo(()=>new THREE.Vector3(0,1,0),[]);\n  const edges=[[2,1],[0,1],[1,3],[1,4]];\n  useExtraFrame(()=>{\n    const f=frameRef.current;\n    atRest(frames[0],formations[beats[f.from].id],f.dwell);\n    atRest(frames[1],formations[beats[f.to].id],0);\n    const now=mixFormation(frames[2],frames[0],frames[1],f.t,f.each);\n    edges.forEach(([src,dst],i)=>{\n      const p=now.pieces[src],q=now.pieces[dst];\n      a.set(...p.position); b.set(...q.position);\n      const horizontal=Math.abs(b.x-a.x)>Math.abs(b.y-a.y);\n      const sign=horizontal ? Math.sign(b.x-a.x) : Math.sign(b.y-a.y);\n      if(horizontal) {a.x+=sign*p.size[0]*.52;b.x-=sign*q.size[0]*.52;}\n      else {a.y+=sign*p.size[1]*.52;b.y-=sign*q.size[1]*.52;}\n      a.z+=.08;b.z+=.08;d.subVectors(b,a);\n      const line=lines.current[i],tip=tips.current[i];\n      if(line&&tip) {\n        const visible=d.length()>.05;\n        line.visible=tip.visible=visible;\n        line.position.copy(a).add(b).multiplyScalar(.5);line.scale.set(1,d.length(),1);line.quaternion.setFromUnitVectors(up,d.normalize());\n        tip.position.copy(b);tip.quaternion.copy(line.quaternion);\n      }\n    });\n  });\n  return <group>{edges.map((_,i)=><group key={i}>\n    <mesh ref={n=>{lines.current[i]=n;}}><cylinderGeometry args={[.025,.025,1,8]}/><meshStandardMaterial color={i===3 ? look.ink : look.accent} roughness={.65}/></mesh>\n    <mesh ref={n=>{tips.current[i]=n;}}><coneGeometry args={[.085,.16,12]}/><meshStandardMaterial color={i===3 ? look.ink : look.accent}/></mesh>\n  </group>)}</group>;\n}\nEOF\ncat > content/extras.ts <<'EOF'\nexport const extras = [{ chapter: \\\"chapter-bench\\\", load: () => import(\\\"./extras/relationships\\\") }];\nEOF\"",
+      "completedLine": 23,
+      "exitCode": 0
+    },
+    {
+      "id": "item_13",
+      "startLine": 25,
+      "command": "/bin/bash -lc \"cat >> app/globals.css <<'EOF'\n.identity { position: absolute; z-index: 5; top: 1.5rem; left: clamp(1.25rem,5vw,5rem); display: flex; flex-direction: column; gap: .3rem; pointer-events: none; }\n.identity span:first-child { font: 600 1rem system-ui; letter-spacing: -.02em; }\n.identity span:last-child { font: .65rem ui-monospace,monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--story-faint); }\n.story-title { font-size: clamp(2rem,3.6vw,4.05rem); line-height: 1.06; }\n.story-caption-text { max-width: 30rem; }\n.story-caption { padding-block: 3rem; }\n.story-body { font-size: 1rem; line-height: 1.6; }\n.story-note { font-size: .8rem; line-height: 1.55; border-left: 2px solid var(--story-accent); padding-left: .85rem; }\n.story-kicker { text-transform: uppercase; font-size: .68rem; letter-spacing: .075em; }\n.return-link { display: inline-block; margin-top: .5rem; font: .75rem ui-monospace,monospace; text-underline-offset: .3rem; }\n.colophon { padding: 1.5rem clamp(1.25rem,5vw,5rem); border-top: 1px solid color-mix(in srgb,var(--story-faint),transparent 75%); font: .65rem ui-monospace,monospace; color: var(--story-faint); pointer-events: auto; }\n@media(max-width: 47.99rem) {\n  .identity { top: 1rem; }\n  .identity span:last-child { font-size: .55rem; }\n  .story-caption { padding: 1.3rem 1.25rem; }\n  .story-title { font-size: 2rem; }\n  .story-body { font-size: .9rem; line-height: 1.5; margin-top: .8rem; }\n  .story-note { font-size: .73rem; line-height: 1.45; margin-top: .75rem; }\n  .story-look-switch button { padding-inline: .65rem; }\n}\n@media(max-height: 34rem) and (min-width:48rem) {\n  .story-title { font-size: 2.3rem; }\n  .story-caption { padding-block: 1.5rem; }\n  .story-caption-text { max-width: 27rem; }\n  .story-body { font-size: .9rem; margin-top: .8rem; }\n  .story-note { font-size: .73rem; margin-top: .7rem; }\n}\nEOF\nnpm run browsers\"",
+      "completedLine": 26,
+      "exitCode": 0
+    },
+    {
+      "id": "item_14",
+      "startLine": 27,
+      "command": "/bin/bash -lc 'npm test && npm run typecheck && npm run lint'",
+      "completedLine": 28,
+      "exitCode": 2
+    },
+    {
+      "id": "item_15",
+      "startLine": 29,
+      "command": "/bin/bash -lc 'npm run check'",
+      "completedLine": 30,
+      "exitCode": 1
+    },
+    {
+      "id": "item_16",
+      "startLine": 31,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='content/extras/relationships.tsx';s=open(p).read().replace('story.chapters.flatMap(c=>c.beats)','story.chapters.map(c=>c.beats[0])');open(p,'w').write(s)\nPY\nnpm run typecheck && npm run lint\"",
+      "completedLine": 34,
+      "exitCode": 0
+    },
+    {
+      "id": "item_17",
+      "startLine": 32,
+      "command": "/bin/bash -lc \"rg 'lazyExtra|skip|middle|close|captures|transition' scripts/shoot.mjs scripts/check-lib.mjs; cat .gitignore; rg --files node_modules/next/dist/docs | head\"",
+      "completedLine": 33,
+      "exitCode": 0
+    },
+    {
+      "id": "item_18",
+      "startLine": 35,
+      "command": "/bin/bash -lc 'cat scripts/review-sheets.mjs | head -70; cat scripts/check-lib.mjs | head -90; ls checks'",
+      "completedLine": 36,
+      "exitCode": 0
+    },
+    {
+      "id": "item_19",
+      "startLine": 37,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='content/faces.ts';s=open(p).read().replace('text(\\\"→\\\",.5,.052);text', '''ctx.fillStyle=\\\"#d7b876\\\";\n      [.36,.68].forEach(x=>{ctx.beginPath();ctx.moveTo(w*x,h*.47);ctx.lineTo(w*(x-.015),h*.445);ctx.lineTo(w*(x-.015),h*.495);ctx.fill();});\n      ctx.beginPath();ctx.moveTo(w*.18,h*.63);ctx.lineTo(w*.165,h*.66);ctx.lineTo(w*.195,h*.66);ctx.fill();\n      text''');open(p,'w').write(s)\np='content/looks.ts';s=open(p).read().replace('name: \\\"Light\\\"','name: \\\"Warm\\\"').replace('name: \\\"Dark\\\"','name: \\\"Night\\\"').replace('#f2f0e9','#f3efe5').replace('#202932','#273b34').replace('#8d471e','#985533');open(p,'w').write(s)\np='content/checks.json';open(p,'w').write('{\\\"lazyExtra\\\":true}\\\\n')\nPY\nnpm run check\"",
+      "completedLine": 81,
+      "exitCode": 1
+    },
+    {
+      "id": "item_20",
+      "startLine": 38,
+      "command": "/bin/bash -lc 'cat checks/2026-10-12T02-26-04-370Z/build.log | tail -20; cat components/story/story.tsx | head -100; cat components/story/extra-frame.tsx | head -70'",
+      "completedLine": 39,
+      "exitCode": 0
+    },
+    {
+      "id": "item_21",
+      "startLine": 40,
+      "command": "/bin/bash -lc \"ls checks; rg 'port|http' checks/2026-10-12T*/server.log\"",
+      "completedLine": 41,
+      "exitCode": 0
+    },
+    {
+      "id": "item_22",
+      "startLine": 42,
+      "command": "/bin/bash -lc \"ls checks/2026-10-12T02-26-34-213Z/light-wide; rg 'screenshot' scripts/shoot.mjs\"",
+      "completedLine": 43,
+      "exitCode": 0
+    },
+    {
+      "id": "item_23",
+      "startLine": 44,
+      "command": "/bin/bash -lc 'cat components/story/faces.ts; cat components/story/stage.tsx'",
+      "completedLine": 45,
+      "exitCode": 0
+    },
+    {
+      "id": "item_25",
+      "startLine": 47,
+      "command": "/bin/bash -lc 'ls checks/2026-10-12T02-26-34-213Z/light-wide; cat lib/story/looks.ts | head -40'",
+      "completedLine": 48,
+      "exitCode": 0
+    },
+    {
+      "id": "item_26",
+      "startLine": 49,
+      "command": "/bin/bash -lc \"rg 'extra|warn|error' checks/2026-10-12T02-26-34-213Z/light-wide/report.json checks/2026-10-12T02-26-34-213Z/light-wide.log; cat components/story/conductor.tsx | head -65\"",
+      "completedLine": 50,
+      "exitCode": 0
+    },
+    {
+      "id": "item_27",
+      "startLine": 51,
+      "command": "/bin/bash -lc 'cat content/index.ts content/extras.ts; ls checks/2026-10-12T02-26-34-213Z/light-phone'",
+      "completedLine": 52,
+      "exitCode": 0
+    },
+    {
+      "id": "item_28",
+      "startLine": 53,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='components/story/types.ts';s=open(p).read().replace('chapter: string; load:', 'chapter: string; reach?: number; load:');open(p,'w').write(s)\np='components/story/scene.tsx';s=open(p).read().replace('frameRef.current.beat, 0.5)', 'frameRef.current.beat, extra.reach ?? 0.5)');open(p,'w').write(s)\np='content/extras.ts';s=open(p).read().replace('chapter: \\\"chapter-bench\\\",','chapter: \\\"chapter-bench\\\", reach: 3,');open(p,'w').write(s)\np='components/story/faces.ts';s=open(p).read().replace('texture.colorSpace = THREE.SRGBColorSpace;', 'texture.colorSpace = THREE.SRGBColorSpace;\\\\n          texture.generateMipmaps = false; texture.minFilter = THREE.LinearFilter; texture.anisotropy = 4;');open(p,'w').write(s)\np='content/looks.ts';s=open(p).read().replace('floor: \\\"matte\\\"','floor: \\\"none\\\"');open(p,'w').write(s)\nPY\ncat >> app/globals.css <<'EOF'\n.story-rail { top: auto; bottom: 1rem; transform: none; }\n.story-rail ol { display: flex; gap: .2rem; }\n.story-rail a { position: relative; min-width: 2.75rem; min-height: 2.75rem; justify-content: center; align-items: center; border-bottom: 1px solid transparent; }\n.story-rail a span:first-child { position: absolute; right: 0; bottom: 3rem; white-space: nowrap; padding: .5rem; background: var(--story-ground); }\n.story-rail a[aria-current] { border-bottom-color: var(--story-accent); }\nEOF\nnpm run typecheck && npm run lint\"",
+      "completedLine": 54,
+      "exitCode": 0
+    },
+    {
+      "id": "item_30",
+      "startLine": 56,
+      "command": "/bin/bash -lc 'npm run check -- --out=checks/final'",
+      "completedLine": 100,
+      "exitCode": 1
+    },
+    {
+      "id": "item_31",
+      "startLine": 57,
+      "command": "/bin/bash -lc \"cat > docs/story/decided-for-you.md <<'EOF'\n# Implementation decisions — 12 October 2026\n\nThe user said: “Yes to the storyboard in docs/story/storyboard.md. Please build it.” This is explicit local build authorization in addition to the supplied story approval.\n\n- **Appearance:** asked via an asynchronous choice between warm lab notebook, dark instrument bench and delegation. No answer was received during implementation, so used warm ivory, green board and copper as a provisional default under the build authorization. Night appearance remains an ordinary HTML button. This is an implementation choice, not claimed personal approval. Change \"'`content/looks.ts` and `defaultLook` in `content/index.ts`.\n- **Apparatus:** five recognizable physical parts: fixture, generic board, command unit and two bench instruments. Boxes have depth, screws, feet, board contacts, fixture access posts and instrument knobs. These are explanatory geometry, not recovered device appearance. Change `content/apparatus.tsx`.\n- **Story:** five chapters follow the approved meanings and retain complete factual explanations in server-rendered HTML. The opening asks how a code decision can be checked; the ending answers through Ada'\"'s firmware/scheduling and fixture contributions, with sample, customer and qualification limits. Change \"'`content/copy.ts`.\n- **Inspection:** enlarge the board for scheduling, separate command/board/access/observation for the bench, then split projection and observation instruments. Fixed inscriptions avoid overlapping old/new words during transitions. The loop arrows show order and return; timing is deliberately absent. Change `content/formations.ts` and `content/faces.ts`.\n- **Relationships:** directed connectors follow the interpolated physical parts. Copper supports the current/assumption/projection branch; dark ink marks the continuous-run observation branch. These are conceptual relationships, not wiring. Configurable extra loading reach keeps these paths visible in evidence. Change `content/extras/relationships.tsx` and `content/extras.ts`.\n- **Navigation:** preserve the exact focus-only `story-skip` anchor to the final chapter. Chapter rail and appearance buttons are ordinary HTML; final return link supplies a pointer/keyboard route to the opening. No apparatus controls are suggested by the decorative knobs.\n- **Accessibility:** keep complete HTML in reduced-motion, no-WebGL, lost-context, no-JavaScript and failed-extra modes. The supplied SVGs remain unchanged and appear as fallback teaching illustrations for scheduling and bring-up.\n- **Assets:** all apparatus geometry and printed faces are authored locally in source. No outside assets, fonts, additional projects or contact information are added. The model and its disclaimers are visible in the HTML.\n- **Visual corrections:** remove the large floor plane, move the rail below instruments, disable texture mipmaps to improve small inscriptions, and extend connectors through the evidence chapter. Phone viewport review is software rendering, not a physical-phone performance review.\nEOF\ncat >> docs/story/assets.md <<'\"'EOF'\n\n## Build additions — 12 October 2026\n\n\"'`content/apparatus.tsx`, `content/faces.ts` and\n`content/extras/relationships.tsx` contain original local illustrative\ngeometry, canvas inscriptions and relationship connectors, under the\nrepository MIT license. No actual device, circuit, wiring, trace or report\nis depicted. HTML explains every claim and explicitly labels the loop,\napparatus and instrument displays as explanatory. Supplied SVGs are\nunchanged and used as scene-failure fallbacks. No external assets fetched.\nEOF\ncat > docs/story/handover.md <<'\"'EOF'\n# Portfolio handover — 12 October 2026\n\n## Authorization and facts\n\nThe user's words: “Yes to the storyboard in docs/story/storyboard.md.\nPlease build it.” The approved order is question, scheduling, bench,\nevidence, scope. The corrected claims in \"'`facts.md` remain the boundary.\nAda and Mosslink are fictional evaluation subjects, not real-person\nbiographical testimony. No publication, mail or external assets authorized.\n\n## Implementation\n\nThe starter has been replaced with five complete HTML chapters and a\nfive-part physical bench apparatus, built from local geometry and canvas\nlabels. The green generic board carries a visibly illustrative three-state\nloop. Ada'\"'s command/fixture contributions and the colleague's circuitry\nare separately attributed. Two instruments explain measured-current plus\nassumed-interval projection versus a separate observed continuous run.\nThe ending resolves the code-to-check question and records six of forty\nbench-tested samples, no customers, preliminary emissions pass and\nunfinished qualification.\n\nWarm and Night looks use system fonts. An appearance question was asked;\nno response has arrived, and Warm is a provisional implementation default,\nnot a claim of visual approval. Source choices are recorded in\n\"'`decided-for-you.md`. Supplied diagrams remain unchanged; additional asset\nprovenance is in `assets.md`. The focus-only skip link retains its exact\nrequired identity and targets `chapter-scope`.\n\n## Checks so far\n\n- Network `npm ci` was blocked by the evaluation network. Repeated with\n  `npm ci --offline --cache /tmp/storyfolio-npm-cache`: successful, 392 packages,\n  no reported vulnerabilities. `npm run browsers`: successful with the\n  existing local browser resources.\n- `npm test`: 129 tests passed. Initial typecheck/build found a tuple-union\n  inference error in the relationship extra. Fixed by mapping each chapter'\"'s\n  first beat. Subsequent typecheck and lint passed.\n- Initial production run at \"'`checks/2026-10-12T02-26-04-370Z` failed at that\n  type error. Do not treat it as an acceptance pass.\n- The next production build succeeded. Reviewed original desktop opening,\n  scheduling and evidence captures and a phone bench capture. Found the\n  connector loading range ended before evidence; extended its range.\n  Moved navigation out of the instrument area and sharpened textures.\n- A fresh final full browser matrix is running at `checks/final` after those\n  source corrections. Its results and visual review will be recorded here.\n\n## Remaining\n\nComplete final production matrix, open its screenshots, inspect transitions\nin both directions and ordinary control pointer/keyboard behavior, then\ncommit lasting source and story records. No real-person visual approval or\nphysical phone review is claimed.\nEOF'",
+      "completedLine": 58,
+      "exitCode": 0
+    },
+    {
+      "id": "item_32",
+      "startLine": 59,
+      "command": "/bin/bash -lc 'cat checks/final/server.log; ls checks/final/light-wide; cat checks/2026-10-12T02-26-34-213Z/light-phone/report.json | head -25'",
+      "completedLine": 60,
+      "exitCode": 0
+    },
+    {
+      "id": "item_33",
+      "startLine": 61,
+      "command": "/bin/bash -lc \"cat > scripts/review-story.mjs <<'EOF'\n// Focused browser review: real controls and intermediate poses in both directions.\nimport { chromium } from 'playwright-core';\nimport { mkdir, writeFile } from 'node:fs/promises';\nimport { beatRestSamples } from './check-lib.mjs';\nconst [url,out='checks/interaction-review']=process.argv.slice(2);\nawait mkdir(out,{recursive:true});\nconst browser=await chromium.launch({args:['--no-sandbox']});\nconst results=[];\ntry {\n  const page=await browser.newPage({viewport:{width:1440,height:900}});\n  await page.goto(url);await page.waitForSelector('.story[data-scene=\\\"on\\\"] canvas');await page.waitForTimeout(1500);\n  await page.keyboard.press('Tab');\n  if(await page.locator('#story-skip').evaluate(n=>n\"'!==document.activeElement))throw Error('\"'Skip link not first keyboard target');\n  await page.keyboard.press('Enter');await page.waitForTimeout(700);\n  if(\"'!page.url().endsWith('\"'#chapter-scope'))throw Error('Skip target failed');\n  results.push('Keyboard skip reaches the actual final chapter');\n  await page.locator('.return-link').click();await page.waitForTimeout(700);\n  if(\"'!page.url().endsWith('\"'#chapter-question'))throw Error('Return pointer route failed');\n  const buttons=page.locator('.story-look-switch button');\n  await buttons.nth(1).click();await page.waitForTimeout(500);\n  if(await page.locator('.story').getAttribute('data-look')\"'!=='\"'dark')throw Error('Pointer appearance switch failed');\n  await buttons.nth(0).focus();await page.keyboard.press('Enter');await page.waitForTimeout(500);\n  if(await page.locator('.story').getAttribute('data-look')\"'!=='\"'light')throw Error('Keyboard appearance switch failed');\n  results.push('Appearance switch responds to pointer and keyboard');\n  const rail=page.locator('.story-rail a');\n  await rail.nth(2).click();await page.waitForTimeout(500);\n  if(\"'!page.url().endsWith('\"'#chapter-bench'))throw Error('Pointer rail failed');\n  await rail.nth(1).focus();await page.keyboard.press('Enter');await page.waitForTimeout(500);\n  if(\"'!page.url().endsWith('\"'#chapter-scheduling'))throw Error('Keyboard rail failed');\n  results.push('Chapter navigation responds to pointer and keyboard');\n  for(const [label,width,height] of [['wide',1440,900],['phone',390,844],['short-height',1280,500]]) {\n    await page.setViewportSize({width,height});await page.evaluate(()=>window.scrollTo(0,0));await page.waitForTimeout(500);\n    const boxes=await page.locator('[data-beat]').evaluateAll(nodes=>nodes.map(n=>({top:n.getBoundingClientRect().top+scrollY,height:n.getBoundingClientRect().height})));\n    const rests=beatRestSamples(boxes,height,['start','end']);\n    const positions=[];\n    for(let i=0;i<rests.length-1;i++) {\n      const a=rests[i].samples[1].top,b=rests[i+1].samples[0].top;\n      for(const fraction of [.25,.5,.75])positions.push({top:a+(b-a)*fraction,name:\"'`${i}-${fraction}`});\n    }\n    for(const [direction,items] of [['\"'forward',positions],['reverse',[...positions].reverse()]]) {\n      for(const {top,name} of items) {\n        await page.evaluate(y=>window.scrollTo(0,y),top);await page.waitForTimeout(450);\n        await page.screenshot({path:\"'`${out}/${label}-${direction}-${name}.png`});\n      }\n    }\n    results.push(`${label}: captured 3 intermediate positions per transition in both scroll directions`);\n  }\n  await writeFile(`${out}/report.json`,JSON.stringify({passed:true,results,limitations:['\"'Software viewports, not physical phone testing. Screenshots require visual inspection.']},null,2));\n} finally {await browser.close();}\nEOF\nnode scripts/review-story.mjs http://127.0.0.1:41899\"",
+      "completedLine": 62,
+      "exitCode": 1
+    },
+    {
+      "id": "item_34",
+      "startLine": 63,
+      "command": "/bin/bash -lc 'npm test > checks/final-tests.log'",
+      "completedLine": 64,
+      "exitCode": 0
+    },
+    {
+      "id": "item_35",
+      "startLine": 65,
+      "command": "/bin/bash -lc 'npm run start -- --hostname 127.0.0.1 --port 41900 > checks/review-server.log 2>&1 &\nreview_server_pid=$!\ntrap '\"'kill \\\"\"'$review_server_pid\" 2>/dev/null || true'\"' EXIT\nnode scripts/review-story.mjs http://127.0.0.1:41900\"",
+      "completedLine": 66,
+      "exitCode": 1
+    },
+    {
+      "id": "item_36",
+      "startLine": 67,
+      "command": "/bin/bash -lc 'ls checks/interaction-review | tail -5; cat checks/final/light-wide/report.json | tail -12'",
+      "completedLine": 68,
+      "exitCode": 0
+    },
+    {
+      "id": "item_37",
+      "startLine": 69,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='content/faces.ts';s=open(p).read().replace('ctx.font=\"'`${size*w}px ${mono ? '\"\\\\'monospace\\\\' : \\\\'system-ui\\\\'}\"'`;ctx.fillText(s,w/2,h*y,w*0.94);'\"','ctx.save();ctx.translate(w/2,h*y);ctx.scale(1,h/w*[4.5,1.65,.78,1.3,1.3][piece]);ctx.font=\"'`${size*w}px ${mono ? '\"\\\\'monospace\\\\' : \\\\'system-ui\\\\'}\"'`;ctx.fillText(s,0,0,w*0.94);ctx.restore();'\"').replace('ctx.fillText(names[i],w*x,h*0.51);','ctx.save();ctx.translate(w*x,h*.51);ctx.scale(1,h/w*1.65);ctx.fillText(names[i],0,0);ctx.restore();');open(p,'w').write(s)\np='components/story/faces.ts';s=open(p).read().replace('texture.generateMipmaps = false; texture.minFilter = THREE.LinearFilter; texture.anisotropy = 4;','texture.anisotropy = 8;');open(p,'w').write(s)\nPY\nnpm run typecheck && npm run lint && npm run check -- --out=checks/accepted\"",
+      "completedLine": null,
+      "exitCode": null
+    },
+    {
+      "id": "item_38",
+      "startLine": 70,
+      "command": "/bin/bash -lc 'tail -20 scripts/check-lib.mjs'",
+      "completedLine": 71,
+      "exitCode": 0
+    },
+    {
+      "id": "item_40",
+      "startLine": 73,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='scripts/review-story.mjs';s=open(p).read().replace('rests[i].samples[1].top','rests[i][1].top').replace('rests[i+1].samples[0].top','rests[i+1][0].top');open(p,'w').write(s)\nPY\nls checks/accepted\"",
+      "completedLine": 74,
+      "exitCode": 0
+    },
+    {
+      "id": "item_41",
+      "startLine": 75,
+      "command": "/bin/bash -lc 'npm run start -- --hostname 127.0.0.1 --port 41900 > checks/review-server.log 2>&1 &\nreview_server_pid=$!\ntrap '\"'kill \\\"\"'$review_server_pid\" 2>/dev/null || true'\"' EXIT\nnode scripts/review-story.mjs http://127.0.0.1:41900\"",
+      "completedLine": 84,
+      "exitCode": 0
+    },
+    {
+      "id": "item_42",
+      "startLine": 76,
+      "command": "/bin/bash -lc 'git init; git status --short | head -30'",
+      "completedLine": 77,
+      "exitCode": 0
+    },
+    {
+      "id": "item_43",
+      "startLine": 78,
+      "command": "/bin/bash -lc 'ls -ld .git .git/info; ls -la .git; ls checks/accepted/light-wide'",
+      "completedLine": 79,
+      "exitCode": 0
+    },
+    {
+      "id": "item_44",
+      "startLine": 80,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='content/apparatus.tsx';s=open(p).read().replace('position={[0,-0.38,0.12]}','position={[0,0,-0.1]}');open(p,'w').write(s)\np='content/formations.ts';s=open(p).read().replace('pose(0,-1.2,-0.35,4.2,0.9)','pose(0,-1.8,-0.35,4.2,0.9)');open(p,'w').write(s)\np='docs/story/decided-for-you.md';s=open(p).read().replace('disable texture mipmaps to improve small inscriptions','correct canvas lettering proportions and add anisotropic filtering for small inscriptions');open(p,'w').write(s)\nPY\nnpm run typecheck && npm run lint && npm run check -- --out=checks/release\"",
+      "completedLine": 92,
+      "exitCode": 143
+    },
+    {
+      "id": "item_45",
+      "startLine": 82,
+      "command": "/bin/bash -lc 'node scripts/review-sheets.mjs checks/interaction-review checks/interaction-sheets'",
+      "completedLine": 83,
+      "exitCode": 0
+    },
+    {
+      "id": "item_47",
+      "startLine": 86,
+      "command": "/bin/bash -lc \"git --git-dir=.git-local --work-tree=. init; printf '\\\\n.git-local/\\\\n' >> .gitignore\nnode scripts/review-sheets.mjs checks/accepted checks/accepted-sheets\"",
+      "completedLine": 87,
+      "exitCode": 0
+    },
+    {
+      "id": "item_48",
+      "startLine": 88,
+      "command": "/bin/bash -lc \"node -e \\\"const m=require('./checks/2026-10-12T02-26-34-213Z/manifest.json'); console.log(m.results.filter(r=>r.problems.length).map(r=>[r.name,r.problems]));\\\"; cat checks/interaction-review/report.json\"",
+      "completedLine": 89,
+      "exitCode": 0
+    },
+    {
+      "id": "item_49",
+      "startLine": 90,
+      "command": "/bin/bash -lc \"rg -n 'block-late|lazy-extra|large shader' scripts/shoot.mjs; cat checks/release/light-wide/report.json | tail -8; ls checks/interaction-sheets\"",
+      "completedLine": 91,
+      "exitCode": 0
+    },
+    {
+      "id": "item_50",
+      "startLine": 93,
+      "command": "/bin/bash -lc \"sed -n '130,215p' scripts/shoot.mjs; rg -n 'lateChunks|expected' scripts/shoot.mjs | head -18; ls checks/release/light-wide\"",
+      "completedLine": 94,
+      "exitCode": 0
+    },
+    {
+      "id": "item_51",
+      "startLine": 95,
+      "command": "/bin/bash -lc \"python3 - <<'PY'\np='content/extras.ts';s=open(p).read().replace('reach: 3','reach: 1.5');open(p,'w').write(s)\nPY\ncat checks/release/light-wide/report.json | tail -10; cat checks/final/manifest.json | tail -12; ls checks/accepted-sheets\"",
+      "completedLine": 96,
+      "exitCode": 0
+    },
+    {
+      "id": "item_53",
+      "startLine": 98,
+      "command": "/bin/bash -lc \"rg -n 'options.wait|waitForTimeout|late-shaders' scripts/shoot.mjs\"",
+      "completedLine": 99,
+      "exitCode": 0
+    },
+    {
+      "id": "item_54",
+      "startLine": 101,
+      "command": "/bin/bash -lc 'npm run typecheck && npm run lint && npm run check -- --out=checks/verified'",
+      "completedLine": null,
+      "exitCode": null
+    },
+    {
+      "id": "item_55",
+      "startLine": 102,
+      "command": "/bin/bash -lc \"cat >> docs/story/handover.md <<'EOF'\n\n## Review corrections and repository limitation\n\nFurther review corrected the card-aspect texture typography to suit the\nphysical apparatus, moved the assembled fixture clear of the lower\ninstrument, and moved its decorative chip behind the printed board face.\nThe relationship extra now loads over beats 0.5–3.5 (scheduling, bench and\nevidence); this keeps evidence visible while preserving late-load failure\ntesting. The recognizable physical parts persist in opening and ending.\n\nThe standalone \"'`scripts/review-story.mjs` confirmed keyboard skip,\npointer/keyboard appearance and chapter navigation, and captured transition\nquarters in both directions at 1440×900, 390×844 and 1280×500. Contact sheets\nand originals were opened; the final resting formations still need their\nfresh review. Its first attempt hit the separate command'\"'s loopback boundary;\nreran server and browser in the same command. A samples-array bug in the\nreview utility was corrected before its successful run.\n\nEarlier production runs were mistakenly left active during subsequent\nbuilds; their old asset paths then produced HTTP failures. They are invalid\nacceptance evidence, regardless of any individual passes. The last full\nacceptance run will be \"'`checks/verified`, with no rebuild during that run.\nA prior release command was terminated with exit 143; its incomplete\nmanifest is not a pass.\n\nThe supplied `.git` directory is empty and read-only. Normal `git init`\nfailed. A writable repository was initialized in `.git-local`, ignored by\nits own worktree. Use `git --git-dir=.git-local --work-tree=. log` (or set\n`GIT_DIR=.git-local`) to inspect the eventual source/context commit.\nEOF'",
+      "completedLine": 103,
+      "exitCode": 0
+    },
+    {
+      "id": "item_56",
+      "startLine": 104,
+      "command": "/bin/bash -lc 'du -sh .agents; cat checks/verified/build.log | tail -10; git --git-dir=.git-local --work-tree=. status --short | head -25; cat checks/accepted/manifest.json | tail -10'",
+      "completedLine": 105,
+      "exitCode": 0
+    },
+    {
+      "id": "item_57",
+      "startLine": 106,
+      "command": "/bin/bash -lc 'npm run start -- --hostname 127.0.0.1 --port 41900 > checks/review-final-server.log 2>&1 &\nreview_server_pid=$!\ntrap '\"'kill \\\"\"'$review_server_pid\" 2>/dev/null || true'\"' EXIT\nnode scripts/review-story.mjs http://127.0.0.1:41900 checks/verified-interactions\"",
+      "completedLine": null,
+      "exitCode": null
+    },
+    {
+      "id": "item_58",
+      "startLine": 107,
+      "command": "/bin/bash -lc 'ls checks/verified/light-wide'",
+      "completedLine": 108,
+      "exitCode": 0
+    }
+  ],
+  "agentMessages": [
+    {
+      "line": 3,
+      "id": "item_0",
+      "text": "I’m using the storyfolio skill to build the approved storyboard. I’ll read the handover and content requirements, implement the site, and run the required checks and visual review.\n"
+    },
+    {
+      "line": 8,
+      "id": "item_3",
+      "text": "The storyboard leaves the visual look open. Which direction would you like for the bench apparatus?\n- Warm lab notebook: ivory, dark ink, copper and green\n- Dark instrument bench: charcoal, pale labels and amber\n- Choose the visual look for me"
+    },
+    {
+      "line": 15,
+      "id": "item_7",
+      "text": "The scene will keep one recognizable bench apparatus through all five chapters. I’m separating the code-to-board check from the two evidence paths, so visitors can see why the two-year projection and the 72-hour run support different claims.\n"
+    },
+    {
+      "line": 24,
+      "id": "item_12",
+      "text": "I’m proceeding with the warm lab-notebook look: ivory, dark ink, copper connections and a green board. Dependencies installed successfully from the supplied offline cache after the network install was blocked. The story now includes complete HTML explanations, attribution and evidence limits; I’m checking the apparatus on desktop and phone layouts next.\n"
+    },
+    {
+      "line": 46,
+      "id": "item_24",
+      "text": "The first visual review shows the apparatus staying beside the desktop text, with the instruments and green board recognizable across chapters. I found a type error in the relationship extra and fixed it; typecheck and lint now pass. I’m reviewing the phone framing and scroll transitions as the production browser checks run.\n"
+    },
+    {
+      "line": 55,
+      "id": "item_29",
+      "text": "The phone review shows the scene fitting above the complete explanation. I also found that the connectors disappeared before the evidence chapter; I’ve extended their visibility so both evidence paths remain inspectable. I’m sharpening the printed labels and moving chapter navigation away from the instruments before the final check.\n"
+    },
+    {
+      "line": 72,
+      "id": "item_39",
+      "text": "The evidence chapter now visibly separates the projection and observed-run branches. Small face labels were being compressed by the starter’s card-shaped textures; I’ve corrected the lettering proportions for the board and instruments. The final production checks are running again with that correction.\n"
+    },
+    {
+      "line": 85,
+      "id": "item_46",
+      "text": "The corrected labels are now readable. I spotted one remaining overlap between the lower instrument and the fixture inscription and moved the fixture down to clear it. Pointer and keyboard navigation checks have passed so far; the transition review covers both directions on desktop, phone and a 500px-high viewport.\n\nThe supplied `.git` directory is read-only and empty, so a normal commit is blocked. I’ll preserve the work with Git metadata in a writable local directory and document how to access it.\n"
+    },
+    {
+      "line": 97,
+      "id": "item_52",
+      "text": "The control and transition review passed, including the short-height viewport. I also need to correct the check record: rebuilding while earlier browser runs were still active invalidated their asset paths. Those runs aren’t valid acceptance evidence. I’m letting them finish, then running one fresh, sequential production check against the final source.\n"
+    }
+  ],
+  "artifactsVerified": 365,
+  "liveSnapshotFilesVerified": 180,
+  "changesAgainstTurnBefore": [
+    {
+      "path": ".gitignore",
+      "change": "modified",
+      "before": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "after": "720ebc7a9b3229e8669d29e717e5383220b5ae4b424c306c7228cc1269a95fdc"
+    },
+    {
+      "path": "app/globals.css",
+      "change": "modified",
+      "before": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "after": "6459f060fe090826e248b75ec31c631349fb926dc5792bc641ab0ffaf1de8ff9"
+    },
+    {
+      "path": "app/page.tsx",
+      "change": "modified",
+      "before": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+      "after": "d08f4172bc8f701870be1cb28b6668fab3589180f76a329397b53660c451bdad"
+    },
+    {
+      "path": "components/story/faces.ts",
+      "change": "modified",
+      "before": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "after": "a4507ca9aa060afe6a9bc4ea7a4b12c4d6e149c66293c241dc53f37c5c78c93e"
+    },
+    {
+      "path": "components/story/scene.tsx",
+      "change": "modified",
+      "before": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "after": "0350d328b21308151d2b5bcdaf059fb44503486324624ffd4521c6dad8f326a0"
+    },
+    {
+      "path": "components/story/types.ts",
+      "change": "modified",
+      "before": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "after": "3357a2671aa915bb94b40dcfc34f47e5fe2ec6f1fb603a1da2aeabc3e46d7e71"
+    },
+    {
+      "path": "content/apparatus.tsx",
+      "change": "added",
+      "before": null,
+      "after": "79236868476074d02f8f0a47cec773f9ad0d193ee7f65da71ebd5f5fc92c3f00"
+    },
+    {
+      "path": "content/checks.json",
+      "change": "modified",
+      "before": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+      "after": "5747624ee0875f45922f30e32a4c8df64dc58d19d841ec9dcec72fc18f73c322"
+    },
+    {
+      "path": "content/copy.ts",
+      "change": "modified",
+      "before": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+      "after": "cccf3b186f7c55ae80ca6c4315a06594b945cee536c7a11dfbf12ec5fecd581c"
+    },
+    {
+      "path": "content/extras/relationships.tsx",
+      "change": "added",
+      "before": null,
+      "after": "156e50c81638181162ea3b92b6597bf3383d7137cd80b45b09ebbfcb060ec554"
+    },
+    {
+      "path": "content/extras.ts",
+      "change": "modified",
+      "before": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "after": "c2dc76fda0dd190ff4bc37357b77259a30a1859709f19a937d09a3200e3f93b1"
+    },
+    {
+      "path": "content/faces.ts",
+      "change": "modified",
+      "before": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+      "after": "1bdffe8a11ba56519686c1a69aa936aef3d12a10f908ed7ef76c23ac14ce1ea0"
+    },
+    {
+      "path": "content/formations.ts",
+      "change": "modified",
+      "before": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+      "after": "9f4ccf065cd88ac161643ffa13b07a189d2a5747896bc2e3dc8f6d1f713a2c05"
+    },
+    {
+      "path": "content/index.ts",
+      "change": "modified",
+      "before": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "after": "0541eaa47dd833971433ff5328645735dc50b7c6e15f7e121df2a26b3a771898"
+    },
+    {
+      "path": "content/links.ts",
+      "change": "modified",
+      "before": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+      "after": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb"
+    },
+    {
+      "path": "content/looks.ts",
+      "change": "modified",
+      "before": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "after": "58d1b4c00027e7abe550d6669bf47e7c4b60ca62a61288f2e7d7612dfd1af362"
+    },
+    {
+      "path": "content/story.ts",
+      "change": "modified",
+      "before": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+      "after": "49a6f114fdf689e14988fba32e83b19864ca9d77971f892eef0622d51cc95654"
+    },
+    {
+      "path": "docs/story/assets.md",
+      "change": "modified",
+      "before": "0f0ae7207472660c54b1505d11b095bd19d525e472293774d680876ab459f67e",
+      "after": "760f853aa5340dd157f8c6cc12e46c3c2a15d5e2a147da5cd8badcb6c4a0582c"
+    },
+    {
+      "path": "docs/story/decided-for-you.md",
+      "change": "modified",
+      "before": "bd286f5f1889e400e4e4e3bd8548a17bcdd9eef73e9249886f537062fff17528",
+      "after": "02abd49c3b726a2130e2376bf2e6d92ecfb24b26fb6279f70e06139b3dd73961"
+    },
+    {
+      "path": "docs/story/handover.md",
+      "change": "modified",
+      "before": "73d35fcf23fe56dfbbc742d269d0cd87705742a8e5bbda20d5a7cb5fb4ff911a",
+      "after": "714a152b15e9cf9dfcb540e1bfe146c5558239fc55873bc44340fc820d5fcaa0"
+    },
+    {
+      "path": "scripts/review-story.mjs",
+      "change": "added",
+      "before": null,
+      "after": "01c2a661938ebb72fd01066e68769d12e4b9e7cca77199ef6391b322bcffd8ee"
+    }
+  ],
+  "unexpected": [
+    {
+      "path": ".aws",
+      "type": "directory"
+    },
+    {
+      "path": ".codex",
+      "type": "directory"
+    },
+    {
+      "path": ".git-local",
+      "type": "directory"
+    }
+  ],
+  "safeDirectoryMetadata": [
+    {
+      "path": ".aws",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:22:37.851Z",
+      "entryCount": 0
+    },
+    {
+      "path": ".codex",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:22:37.850Z",
+      "entryCount": 0
+    },
+    {
+      "path": ".git-local",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:36:17.917Z",
+      "entryCount": 7
+    },
+    {
+      "path": ".git-local/HEAD",
+      "type": "file",
+      "bytes": 23,
+      "mtime": "2026-10-12T02:33:14.102Z"
+    },
+    {
+      "path": ".git-local/config",
+      "type": "file",
+      "bytes": 191,
+      "mtime": "2026-10-12T02:33:14.100Z"
+    },
+    {
+      "path": ".git-local/description",
+      "type": "file",
+      "bytes": 73,
+      "mtime": "2026-10-12T02:33:14.097Z"
+    },
+    {
+      "path": ".git-local/hooks",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.093Z",
+      "entryCount": 14
+    },
+    {
+      "path": ".git-local/hooks/applypatch-msg.sample",
+      "type": "file",
+      "bytes": 478,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/commit-msg.sample",
+      "type": "file",
+      "bytes": 896,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/fsmonitor-watchman.sample",
+      "type": "file",
+      "bytes": 4726,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/post-update.sample",
+      "type": "file",
+      "bytes": 189,
+      "mtime": "2026-10-12T02:33:14.097Z"
+    },
+    {
+      "path": ".git-local/hooks/pre-applypatch.sample",
+      "type": "file",
+      "bytes": 424,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/pre-commit.sample",
+      "type": "file",
+      "bytes": 1649,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/pre-merge-commit.sample",
+      "type": "file",
+      "bytes": 416,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/pre-push.sample",
+      "type": "file",
+      "bytes": 1374,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/pre-rebase.sample",
+      "type": "file",
+      "bytes": 4898,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/pre-receive.sample",
+      "type": "file",
+      "bytes": 544,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/prepare-commit-msg.sample",
+      "type": "file",
+      "bytes": 1492,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/push-to-checkout.sample",
+      "type": "file",
+      "bytes": 2783,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/sendemail-validate.sample",
+      "type": "file",
+      "bytes": 2308,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/hooks/update.sample",
+      "type": "file",
+      "bytes": 3650,
+      "mtime": "2026-10-12T02:33:14.093Z"
+    },
+    {
+      "path": ".git-local/info",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.089Z",
+      "entryCount": 1
+    },
+    {
+      "path": ".git-local/info/exclude",
+      "type": "file",
+      "bytes": 240,
+      "mtime": "2026-10-12T02:33:14.089Z"
+    },
+    {
+      "path": ".git-local/objects",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.102Z",
+      "entryCount": 2
+    },
+    {
+      "path": ".git-local/objects/info",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.102Z",
+      "entryCount": 0
+    },
+    {
+      "path": ".git-local/objects/pack",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.102Z",
+      "entryCount": 0
+    },
+    {
+      "path": ".git-local/refs",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.100Z",
+      "entryCount": 2
+    },
+    {
+      "path": ".git-local/refs/heads",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.100Z",
+      "entryCount": 0
+    },
+    {
+      "path": ".git-local/refs/tags",
+      "type": "directory",
+      "bytes": 4096,
+      "mtime": "2026-10-12T02:33:14.100Z",
+      "entryCount": 0
+    }
+  ],
+  "generatedGitCoreBare": "false",
+  "processAudit": {
+    "uid": 1000,
+    "matches": [],
+    "unavailable": [
+      {
+        "pid": 372,
+        "operation": "cwd",
+        "code": "EACCES"
+      },
+      {
+        "pid": 372,
+        "operation": "fd",
+        "code": "EACCES"
+      },
+      {
+        "pid": 374,
+        "operation": "cwd",
+        "code": "EACCES"
+      },
+      {
+        "pid": 374,
+        "operation": "fd",
+        "code": "EACCES"
+      }
+    ],
+    "method": "Same-UID /proc cwd and file-descriptor symlink targets only. No argv, environment, credential contents or signals.",
+    "limitation": "Point-in-time limited visibility, not proof that an inaccessible or detached process can never write later."
+  },
+  "limitations": [
+    "Null usage means unknown token cost, not zero.",
+    "The stream contains only command_execution and agent_message items. Image-view tool visibility is not established by this stream.",
+    "The 180-file actor snapshot omits 18 generated nonbare .git-local files, which remain inside the frozen capture source boundary. This audit does not relax equality.",
+    "Empty credential directories were inspected by metadata and entry count only."
+  ]
+}

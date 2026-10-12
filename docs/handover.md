@@ -58,12 +58,27 @@ unanswered at that checkpoint. The author has now
 [approved that single build-entry test](history/2026-10-12-natural-entry-approval.md)
 with "Approve this single build-entry test". The
 [new baseline work](../evals/runs/stage-3-natural-entry-1/findings.md)
-is prepared and locally verified: one unchanged-skill agent turn and one relevant browser
+was prepared and locally verified: one unchanged-skill agent turn and one relevant browser
 verification, each at most 15 minutes, no judge, retry or continuation.
-No correction or matched rerun is authorized. No new paid run has started.
+No correction or matched rerun is authorized.
 Preparation commit `bf72be9` and the study retain 132 frozen inputs, the fresh
 workspace, successful offline installation and sandbox capability proof,
 nine reviewed starter originals and a passing independent readiness gate.
+Setup was committed as `066d283`. The sole actor then timed out after
+900,071 ms with no terminal reply and unavailable usage. Ordinary build
+entry worked: it implemented the five story chapters, but proceeded after
+an unanswered look question. Two source-defined looks exist; their rendered
+reviewability is not independently verified. The saved handover honestly
+records a provisional, unapproved default and invalidated check attempts.
+The frozen browser launcher was not started: all 180 saved source files
+match, but 18 extra `.git-local` metadata files fail its exact-inventory
+precondition. No metadata was removed or exclusion weakened. The
+[source observation](../evals/runs/stage-3-natural-entry-1/source-observation.md)
+and [binding blocker](../evals/runs/stage-3-natural-entry-1/source-binding-blocker.md)
+separate actor behavior from measurement failure. A measurement-only repair
+and unchanged-source verification need a separate decision and new
+measurement-baseline label. No extra actor, judge, skill edit or push was made.
+Stage 3 remains incomplete.
 
 The [pre-development handover](history/2026-10-12-before-stage-3-development-handover.md)
 preserves `784eb1e` verbatim before this checkpoint's current-state updates.

@@ -320,3 +320,9 @@ between asking and receiving approval.
 The [single-entry-test approval](2026-10-12-natural-entry-approval.md)
 records the later answer, "Approve this single build-entry test". It grants
 one baseline turn and one relevant verification, not a correction or rerun.
+
+The [saved-entry verification request](2026-10-12-entry-verification-request.md)
+records the proposed measurement-only next step after the actor timed out
+and the frozen inventory gate blocked browser launch. It is not approval.
+It proposes one bounded verification from unchanged saved source, no new
+paid actor or judge, no continuation, retry, skill change or push.

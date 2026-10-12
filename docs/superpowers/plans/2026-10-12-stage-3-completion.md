@@ -12,7 +12,7 @@ It does not replace their requirements with evaluation-tool work.
 | Milestone | Required result | Current work |
 |---|---|---|
 | Reproduce explanatory visual quality | An independently built scene that explains approved work relationships and remains readable during movement | Baseline: seven technical modes pass, 253 originals reviewed, both visual targets fail. Candidate actor timed out and first capture was interrupted. Separately approved unchanged-source verification adds a short-height pass, then another external interruption leaves reduced-motion partial and three failure modes absent. New 203-original review is separate from the first 118. Two paragraphs remain provisional; no candidate judge. 342 local tests pass. |
-| Supported build entry | The shipped skill continues from an approved storyboard through spine, chapters and finish at the intended approval points | Still planning-only. Obtain ordinary continuation evidence before changing the endpoint; existing external overrides do not establish activation. |
+| Supported build entry | The shipped skill continues from an approved storyboard through spine, chapters and finish at the intended approval points | Ordinary entry now demonstrated in the single baseline despite the retained planning-only wording. The actor continued beyond an unanswered look question and timed out; two source looks are not independently browser-verified. Frozen inventory mismatch blocks capture. No endpoint refusal or full workflow success is inferred. |
 | Earlier journey and real choices | Before-stop-1 capability check, three runnable concepts, two or three looks, three complete wording versions, relevant optional-skill recommendation/refusal | Preserve successful existing behavior. Test unvisited requirements and add only instructions needed by saved failures. Do not write six reference files merely because the old plan listed them. |
 | Regression and complete-site proof | Planning remains correct; a fresh agent completes all six stops using a non-sheet object; technical and visual review pass; the author approves desktop and phone | Open. The manual prototype and five-beat diagnostic are not this proof. |
 
@@ -108,5 +108,27 @@ tests ordinary approved-storyboard continuation and a real look choice.
 It uses the existing one-turn stop-4 path, without changing the runner or
 adding endpoint instructions before a baseline. The
 [specific approval question](../../history/2026-10-12-natural-entry-request.md)
-is pending. No paid entry, planning regression or whole-site proof has
-started under the verification-only approval.
+was pending at that checkpoint. No paid entry, planning regression or
+whole-site proof was authorized by the verification-only approval.
+
+## Separately approved ordinary-entry baseline
+
+The author then [approved the single entry test](../../history/2026-10-12-natural-entry-approval.md).
+Its [saved outcome](../../../evals/runs/stage-3-natural-entry-1/findings.md)
+shows ordinary implementation entry, not a planning-endpoint refusal. The
+actor asked a text-only look question, continued without an answer and
+implemented all five chapters. Its handover accurately records a provisional,
+unapproved default. Two implemented source looks exist, but no terminal
+runnable-choice handoff was delivered before the 900,071-ms timeout.
+Usage is unavailable; neither timeout nor source palettes establish visual
+failure or justify a broad build-instruction bundle.
+
+The one independent browser verification has not launched. The frozen
+exact-source guard sees 198 files against the final runner's 180-file
+snapshot: all 180 match, with 18 extra ordinary nonbare Git metadata files
+under `.git-local`. The mismatch is retained without weakening exclusions,
+removing files or substituting a workspace. A separate measurement-only
+repair decision is needed before unchanged-source verification, labelled
+as a new measurement baseline under the approved proposal. No new paid
+actor is needed merely to inspect this saved implementation. Any behavioral
+correction and matched actor rerun still require their own approval.

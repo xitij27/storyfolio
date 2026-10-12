@@ -14,6 +14,16 @@ each at most 15 minutes, no judge, retry or continuation. Correction and
 matched rerun remain separate decisions. Actual preparation and outcomes
 are retained in the [new study](../../../evals/runs/stage-3-natural-entry-1/findings.md).
 
+The single actor has now entered implementation but timed out before a
+terminal handoff, after proceeding beyond an unanswered look question.
+Independent browser verification remains unlaunched because the frozen
+source inventory rejects 18 extra Git metadata files. All 180 saved source
+files match. This does not establish runtime or material-look quality.
+No frozen measurement or skill correction was made. A measurement-only
+repair and saved-source verification require a separate decision and the
+new measurement-baseline label specified below, not another paid actor
+or a claimed successful skill rerun.
+
 ## One question and one case
 
 **Given an approved storyboard and an ordinary request to build it, does

@@ -104,7 +104,11 @@ unchanged-skill turn and one relevant browser verification, each at most
 15 minutes, with no judge, retry or continuation. Its
 [preparation and findings](../evals/runs/stage-3-natural-entry-1/findings.md)
 are separate from the interrupted candidate verification. A skill correction
-and matched rerun require a new decision.
+and matched rerun require a new decision. The sole actor started building,
+but bypassed the unanswered look decision and timed out. Browser verification
+has not launched: 18 extra Git metadata files fail the frozen source-binding
+guard, although all 180 saved source files match. Read the study's separate
+source observation and measurement blocker before proposing the next change.
 
 For a new session, read:
 

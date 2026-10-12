@@ -1,0 +1,80 @@
+{
+  "h1": 1,
+  "beats": 5,
+  "beatIds": [
+    "question.inspect",
+    "scheduling.loop",
+    "bench.connect",
+    "evidence.paths",
+    "scope.answer"
+  ],
+  "scene": "off",
+  "look": "light",
+  "canvases": 0,
+  "overflowX": false,
+  "duplicateIds": [],
+  "pageHeight": 2356,
+  "lang": "en",
+  "selectorFound": true,
+  "displayed": 0,
+  "shots": [
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/no-js/00-question.inspect.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/no-js/01-scheduling.loop.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/no-js/02-bench.connect.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/no-js/03-evidence.paths.png",
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/checks/final/no-js/04-scope.answer.png"
+  ],
+  "samples": [
+    {
+      "beat": "question.inspect",
+      "position": "end",
+      "requestedScroll": 27,
+      "actualScroll": 27
+    },
+    {
+      "beat": "scheduling.loop",
+      "position": "end",
+      "requestedScroll": 387,
+      "actualScroll": 387
+    },
+    {
+      "beat": "bench.connect",
+      "position": "end",
+      "requestedScroll": 1004.5,
+      "actualScroll": 1005
+    },
+    {
+      "beat": "evidence.paths",
+      "position": "end",
+      "requestedScroll": 1364.5,
+      "actualScroll": 1365
+    },
+    {
+      "beat": "scope.answer",
+      "position": "end",
+      "requestedScroll": 1724.5,
+      "actualScroll": 1456
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:41899/_next/static/chunks/09lgyggnhjlha.js",
+      "resourceType": "script",
+      "failure": "csp",
+      "reason": "JavaScript-disabled CSP rejection of a same-origin Next.js script preload",
+      "expected": true
+    },
+    {
+      "url": "http://127.0.0.1:41899/_next/static/chunks/1awsf3uij3yyf.css",
+      "resourceType": "stylesheet",
+      "failure": "net::ERR_ABORTED",
+      "reason": null,
+      "expected": false
+    }
+  ],
+  "warnings": [],
+  "problems": [
+    "HTTP 500: http://127.0.0.1:41899/_next/static/chunks/1awsf3uij3yyf.css",
+    "request failed (net::ERR_ABORTED): http://127.0.0.1:41899/_next/static/chunks/1awsf3uij3yyf.css"
+  ]
+}
