@@ -102,3 +102,20 @@ legacy case semantics are retained. Its focused test first encountered an
 existing process-disappearance ESRCH race, now handled like ENOENT in that
 test only, with the failed attempt preserved. No production termination
 behavior was changed for that race.
+
+## Wording candidate ready
+
+The fresh matched wording setup is complete with 216 frozen inputs and
+the unchanged 97-file site and two original prompts. Its offline install,
+actual capability proof, nine newly reviewed originals and strict readiness
+pass. There are 184 original source files plus one neutral setup record.
+The [launch disposition](wording/preparation/launch-disposition.md) records
+all qualifications and bounds. A new process recorder has seven passing
+no-model tests and preserves PIDs/signals; it does not identify or claim to
+fix the prior interruption. No wording actor has launched at this checkpoint.
+
+Before that launch the fresh setup checks closed zero at 04:09:53.543 UTC:
+351 repository tests, skill size/reference checks and fictional-person
+checks. The tested new recorder stays separate from the frozen actor
+inputs, with its exact code hash retained in the launch disposition and
+each command record. It changes coordinator observability, not the prompt.

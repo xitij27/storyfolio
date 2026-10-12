@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "recorded": "2026-10-12T04:04:12.914Z",
+  "baseline": "d0e14ef568c0d136796be8434b86ae65c884ced13102d8cb83950cef13a0f824",
+  "candidate": "f769a7bc93d45c1a2e17394809d43e2cd36c21c0992a2ffe3af31bb31c9facb0",
+  "candidateCommit": "b946d8d4f1c119284f28376fa389197ce87f8acd",
+  "files": 216,
+  "changed": [
+    {
+      "path": "capabilities.json",
+      "before": "3b41c5b94fbd46487a8d936a4326701067cdfd5971287dde0b457b004bd33241",
+      "after": "af3ef30f0615cb9382f742240be4be51f8d5ff20a36d62d76eced3ee89e0417f"
+    },
+    {
+      "path": "case.json",
+      "before": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb",
+      "after": "c3ce9faceef8679fece7789ee8fe5d495ca1c4e3cae799ca2b207030b079e633"
+    },
+    {
+      "path": "implementation/evals/check-build.mjs",
+      "before": "35664105969557f4e913e032ebb5978a1ca5961bf0b1159f22d3aa5c7b7ad6d5",
+      "after": "6fda8d0c30b844ab001d292dde4f909e19d15d82a8b70b39e4620bcdd22574f0"
+    },
+    {
+      "path": "implementation/evals/codex-build-judge.mjs",
+      "before": "1c4f0c72549f8ec2e802e2faff47dd25a79688a87245a4216722bd3c1abd9d17",
+      "after": "19ebccf7365c1a3f09238447e25d9b751a54fb221829aa024fbaa3a1fd20413f"
+    },
+    {
+      "path": "implementation/evals/codex-build-run.mjs",
+      "before": "e7859f8f9df8a5192e4907bcd6adde1c12baa541445f7603cdf9857af64d03cc",
+      "after": "322dd3571b3f5396d48e07b340d11162900585cf5885f54f68e7271365cca5a6"
+    },
+    {
+      "path": "implementation/evals/lib/build-check.mjs",
+      "before": "1dd40b28fb66e834f91d878c8f75c6115fd83c1b50da171fefdf5560c5020002",
+      "after": "88d32a5b6c6ee041a7f58c878b54c7f94ec732e426b73ff3c8bf7d3372c9bb49"
+    },
+    {
+      "path": "implementation/evals/lib/build-score.mjs",
+      "before": "365870e167623ec96e33cf4ec04dde4868c81185360158c18614e2123e88c317",
+      "after": "672cef34b15fcc2f595299fa5f5bd9f37093dad4e0fbe9105b881741f3290c1d"
+    },
+    {
+      "path": "implementation/evals/lib/build.mjs",
+      "before": "e731931f5d6be855aeb4cd67f25778d284e85171f6e7c27eb4bf0521f2661ed1",
+      "after": "d78cce4c3914127da41154e7368f689ed1828cd0efa4a6b0959d6890d5edc731"
+    },
+    {
+      "path": "implementation/evals/lib/codex.mjs",
+      "before": "cbb1c19d5382c9012d7b6055044c240a7f78a0eb8eff6c5c9aec85ef22f48308",
+      "after": "783f863195f191129de87aaebbd5fbda7a37d9bea7d256904d5391da4c034176"
+    },
+    {
+      "path": "implementation/evals/prompts/judge-build.md",
+      "before": "1ba9ac008c54dd18000e88d1e1feeed97639938fcf8ee88c4023890142eed8cf",
+      "after": "85da2ae8d317ad888fabf7df9a3007eb9e04abf7f8b5c439202da2f108b40ec5"
+    },
+    {
+      "path": "protocol.md",
+      "before": "66f9fd88459e14b906ce24ae3dbe45ebeff66ef4e56a4402379af33fae950dfb",
+      "after": "045753f532efcb87d124c868d53769c5304544f282768ed352e7050ebecc0f71"
+    },
+    {
+      "path": "skill/SKILL.md",
+      "before": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98",
+      "after": "2dded80561342fa6945eb54c118c22c7b5067b3e0346ba57687671b20682f9a9"
+    },
+    {
+      "path": "skill/engine/components/story/story.tsx",
+      "before": "7961909ead315faf46cffdf36cdd54bc38e86dd70e0d80d19afaed050af4878f",
+      "after": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+    },
+    {
+      "path": "skill/references/concept.md",
+      "before": "ba0780577d3157824d81c36b40374141d52df5e88ef67deee175792f4793dab1",
+      "after": "11f1285c3b2380d17ab320377120b78a448aba1b52f5b9ffabdd787618719e18"
+    }
+  ],
+  "added": [
+    "implementation/evals/judge-evidence-server.mjs",
+    "implementation/evals/lib/build-capture.mjs",
+    "implementation/evals/lib/judge-transport.mjs",
+    "implementation/evals/lib/source-scope.mjs",
+    "implementation/evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs",
+    "implementation/evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs",
+    "implementation/evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs",
+    "skill/references/building.md"
+  ],
+  "removed": [],
+  "fixtureAndPromptsUnchanged": true,
+  "qualification": "Matched fixture and prompts, not single-variable whole-freeze comparison. Root reviews each runtime and capability difference before paid launch."
+}

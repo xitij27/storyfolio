@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: recorder preserves exact command, selected environment, stdout and terminal provenance
+ok 1 - recorder preserves exact command, selected environment, stdout and terminal provenance
+  ---
+  duration_ms: 39.004682
+  type: 'test'
+  ...
+# Subtest: nonzero exit and spawn failure preserve evidence without becoming timeout or successful completion
+ok 2 - nonzero exit and spawn failure preserve evidence without becoming timeout or successful completion
+  ---
+  duration_ms: 36.230822
+  type: 'test'
+  ...
+# Subtest: attempt directories are exclusive and symlinked evidence parents are rejected before spawn
+ok 3 - attempt directories are exclusive and symlinked evidence parents are rejected before spawn
+  ---
+  duration_ms: 32.83269
+  type: 'test'
+  ...
+# Subtest: first caught signal is forwarded once unchanged; repeats are logged and zero child exit remains interrupted
+ok 4 - first caught signal is forwarded once unchanged; repeats are logged and zero child exit remains interrupted
+  ---
+  duration_ms: 126.786331
+  type: 'test'
+  ...
+# Subtest: uncooperative owned runner is forced only after the declared shutdown grace
+ok 5 - uncooperative owned runner is forced only after the declared shutdown grace
+  ---
+  duration_ms: 90.978898
+  type: 'test'
+  ...
+# Subtest: actual recorder process catches SIGTERM and retains its owned runner's orderly close
+ok 6 - actual recorder process catches SIGTERM and retains its owned runner's orderly close
+  ---
+  duration_ms: 71.795845
+  type: 'test'
+  ...
+# Subtest: invalid grace and relative executables fail before creating an attempt
+ok 7 - invalid grace and relative executables fail before creating an attempt
+  ---
+  duration_ms: 1.514869
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 457.289265

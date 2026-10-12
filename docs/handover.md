@@ -39,6 +39,14 @@ unproved and strict measurement cannot proceed. See the
 The matched wording and full journey are in preparation; Stage 3 remains
 incomplete.
 
+Wording setup is now ready: 216 frozen inputs, unchanged 97-file site and
+two prompts, successful fresh install/capability proof, nine reviewed
+originals and strict readiness. A separately tested recorder retains
+future process IDs and signals without claiming the previous cause is
+fixed. See the [next launch](../evals/runs/stage-3-completion-2/wording/preparation/launch-disposition.md).
+The full-journey runner passes the now 351 repository tests; actual whole
+journey behavior and final acceptance remain unproved.
+
 Stage-level position: **Stage 3, the build, is active and incomplete.**
 Stage 1's planning method is implemented with closing review decisions open;
 Stage 2's engine is complete and approved. The candidate skill now routes
