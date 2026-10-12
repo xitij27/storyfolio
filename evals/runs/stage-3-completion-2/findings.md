@@ -66,3 +66,39 @@ neutral environment record. Root opened all nine new starter originals.
 The strict readiness gate passes with hash-bound evidence and a fresh dry
 check. Setup tests again pass all 342 tests, skill and fictional-person
 checks. Actor launch is still pending at this checkpoint.
+
+## Interrupted ordinary-entry candidate
+
+The candidate subsequently launched once. Its outer session returned 143
+before any actor or recorder closure record, with no final reply or usage.
+All 179 source files and 80 workspace-check files are preserved separately as
+coordinator recovery, with no remaining owned processes observed and source
+unchanged during copying. The actual actor result stays absent. See the
+[interruption disposition](entry-candidate-preparation/interruption-disposition.md).
+The partial source keeps a three-beat spine and two named looks; it does
+not prove the final choice stop. The matched browser loader is not launched
+because its genuine lifecycle precondition is absent. No retry is hidden.
+
+The 80 archived checks include 16 coordinator setup files and 64 actor
+spine files. Their 53 PNGs are archived, not claimed as fresh independent
+original-image review. The independent interruption audit preserves this
+provenance distinction and finds no established signal sender.
+
+Prospective full-journey measurement design is approved by root: one
+15-minute concept capture, one 15-minute look capture, then a 5-minute final
+build, seven separate 8-minute modes and a 5-minute auxiliary check. Each
+unit is single-attempt with complete raw evidence; every actual final beat
+remains required. These are unpaid process bounds, not a waiver of missing
+coverage or real author review. See the
+[measurement proposal](full-journey-measurement/proposal.md).
+
+Prospective local controls now pass: 351 repository tests, skill and
+fictional-person checks, all six candidate-measurement pure checks, wording
+helper syntax and exact derivation audit, and the seven-file full-journey
+fixture preservation check. These are deterministic/setup-source checks,
+not model or browser outcomes. The new full-journey runner has a distinct
+six-stop schema, unscaffolded setup and source-bound continuation guards;
+legacy case semantics are retained. Its focused test first encountered an
+existing process-disappearance ESRCH race, now handled like ENOENT in that
+test only, with the failed attempt preserved. No production termination
+behavior was changed for that race.

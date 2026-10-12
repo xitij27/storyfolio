@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "checked": "2026-10-12T03:59:37.082Z",
+  "baselineInputDigest": "d0e14ef568c0d136796be8434b86ae65c884ced13102d8cb83950cef13a0f824",
+  "controlsInputDigest": "5cb0491da31d429b09082c298f475546c1ec10ccc003cafa1bb037aea5e309e9",
+  "fixtureFiles": 97,
+  "fixtureBytes": 503374,
+  "sharedPromptsFixtureExpectationsRubricUnchanged": true,
+  "coordinatorProtocolDifferenceDeclared": true,
+  "mechanicalDerivatives": 4,
+  "derivationSha256": "f0a2651b43bfc7d91bd4ad7826bb19bd85e0bd9f4a3ec39e25587eb5156b3dff",
+  "verifierSha256": "db9e0b47016a1afe76423966f20457afac832d0a039d6e4a4d4dcce6d30d9241",
+  "targets": {
+    "evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs": "09970e975cfd806b37c85fbb146dec351a3aba9b2fac56dd18eaf9fd4aeb9eb2",
+    "evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs": "86fa83bdf627f0abc975e7b3f79c62cdd703ca42f4ac10ca5e2524c2ab7cbcfe",
+    "evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs": "0eebcd6bc6e790bb581adcde65ff984d7a96394d7e24a90e86f8be52473f25e5",
+    "evals/runs/stage-3-completion-2/wording/preparation/case.json": "c3ce9faceef8679fece7789ee8fe5d495ca1c4e3cae799ca2b207030b079e633"
+  },
+  "candidateFrozen": false,
+  "candidateSetupVerified": false,
+  "modelCalls": 0,
+  "subprocesses": 0,
+  "writes": false,
+  "limits": [
+    "Control derivation only, not whole-freeze equality or candidate readiness",
+    "Root must review the current skill, harness, capabilities and protocol differences before freeze and retain fresh setup/probe/source/original-image evidence"
+  ]
+}
+
+TAP version 13
+# Subtest: dynamic snapshot split preserves every retained byte and lists all extras
+ok 1 - dynamic snapshot split preserves every retained byte and lists all extras
+  ---
+  duration_ms: 1.505902
+  type: 'test'
+  ...
+# Subtest: missing, changed, duplicate retained files and incorrect digest block reconstruction
+ok 2 - missing, changed, duplicate retained files and incorrect digest block reconstruction
+  ---
+  duration_ms: 2.505982
+  type: 'test'
+  ...
+# Subtest: every extra and unexpected path needs exact root-reviewed metadata disposition
+ok 3 - every extra and unexpected path needs exact root-reviewed metadata disposition
+  ---
+  duration_ms: 4.730261
+  type: 'test'
+  ...
+# Subtest: omitted application, credentials, active hooks and traversal are not allowed metadata
+ok 4 - omitted application, credentials, active hooks and traversal are not allowed metadata
+  ---
+  duration_ms: 0.555704
+  type: 'test'
+  ...
+# Subtest: Git metadata allowlist is narrow and does not authorize source mutation
+ok 5 - Git metadata allowlist is narrow and does not authorize source mutation
+  ---
+  duration_ms: 0.125995
+  type: 'test'
+  ...
+# Subtest: target rebinding changes only sourceDigest and retains unknown actor outcome
+ok 6 - target rebinding changes only sourceDigest and retains unknown actor outcome
+  ---
+  duration_ms: 0.155008
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74.057377

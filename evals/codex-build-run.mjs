@@ -5,9 +5,9 @@ import { delimiter, join, resolve } from "node:path";
 import { parseArgs } from "node:util";
 import { EFFORT, MODEL, disabledSkills } from "./lib/codex.mjs";
 import { ROOT, RUNS, WORK } from "./lib/files.mjs";
-import { buildCodexArgs, buildTaskIdentity, captureBuildWorkspace, executeBuildTurn, hash, inspectBuildInputs, json, populateBuildWorkspace, prepareBuildInputs, regularBytes, safeId, safePath, verifyInputs, writeNew } from "./lib/build.mjs";
+import { buildCodexArgs, buildTaskIdentity, captureBuildWorkspace, executeBuildTurn, hash, inspectBuildInputs, json, populateBuildWorkspace, prepareBuildInputs, regularBytes, safeId, safePath, verifyBuildSetupProbe, verifyInputs, writeNew } from "./lib/build.mjs";
 
-const usage = "Usage: node evals/codex-build-run.mjs --case <case.json> --cohort <id> --capabilities <json> --prepare\n       node evals/codex-build-run.mjs <same arguments> --turn <1..N> [--gate <json>]\n\nPreparation freezes inputs and copies the declared fixture. Default setupMode scaffolds; existing-site skips scaffolding. Install dependencies and save setup/probe.json before turn 1.\nOne invocation executes one actor turn for the frozen task: legacy requestedStops or the one-turn prototype-depth diagnostic. Later legacy turns require a coordinator gate; no automatic advancement or retry.";
+const usage = "Usage: node evals/codex-build-run.mjs --case <case.json> --cohort <id> --capabilities <json> --prepare\n       node evals/codex-build-run.mjs <same arguments> --turn <1..N> [--gate <json>]\n\nPreparation freezes inputs and copies the declared fixture. Default setupMode scaffolds; existing-site skips scaffolding. Schema-3 full-journey requires unscaffolded setup, copying only material, assets and installed skill. Save setup/probe.json before turn 1; full-journey needs neutral environment evidence, not a prebuilt site or completed actor preflight.\nOne invocation executes one actor turn: legacy requestedStops, the one-turn prototype-depth diagnostic, or a full-journey stop 1..6. Every later turn requires a coordinator gate; full-journey also requires exact live/prior-snapshot source equality. No automatic advancement or retry.";
 const { values: args } = parseArgs({ options: {
   case: { type: "string" }, cohort: { type: "string" }, capabilities: { type: "string" },
   rep: { type: "string", default: "1" }, prepare: { type: "boolean", default: false },
@@ -76,7 +76,9 @@ if (args.prepare) {
     setup.complete = true;
   } catch (error) { setup.error = String(error); }
   await writeNew(join(out, "setup/result.json"), json(setup));
-  const next = `Workspace: ${work}\nRun dependency installation and capability probes explicitly, saving their commands, logs and results beneath ${out}/setup/.\nBefore turn 1 save setup/probe.json with schemaVersion: 1, passed: true, inputDigest: ${manifest.digest}, capabilitySha256: ${manifest.hashes["capabilities.json"]}, work: ${work}, and evidence: [relative log paths].\nSuggested commands in the workspace: npm ci; npm run typecheck; npm run lint; npm run build; npm run check.\nDo not claim a phone review from a simulated prompt.\n`;
+  const next = source.setupMode === "unscaffolded"
+    ? `Workspace: ${work}\nOnly declared material, supplied assets and the installed skill are present. No root application has been scaffolded; actor preflight has not occurred.\nRecord neutral environment availability outside this workspace beneath ${out}/setup/. Do not install a root app, build a starter or add unlisted capability facts to the frozen actor inputs before turn 1.\nSave setup/probe.json with schemaVersion: 1, passed: true, scope: "unscaffolded-environment", actorPreflight: false, modelCalls: 0, inputDigest: ${manifest.digest}, capabilitySha256: ${manifest.hashes["capabilities.json"]}, work: ${work}, evidence: [relative proof paths including "snapshot/manifest.json"], and evidenceHashes: {path: {sha256, bytes}} for exactly that evidence.\nThe initial snapshot must bind only frozen material, assets and skill. First-turn source must still equal it; later turns must equal the preceding saved actor snapshot and have an observed coordinator gate.\nEnvironment readiness does not replace actor preflight, optional-skill choices or genuine author approval.\n`
+    : `Workspace: ${work}\nRun dependency installation and capability probes explicitly, saving their commands, logs and results beneath ${out}/setup/.\nBefore turn 1 save setup/probe.json with schemaVersion: 1, passed: true, inputDigest: ${manifest.digest}, capabilitySha256: ${manifest.hashes["capabilities.json"]}, work: ${work}, and evidence: [relative log paths].\nSuggested commands in the workspace: npm ci; npm run typecheck; npm run lint; npm run build; npm run check.\nDo not claim a phone review from a simulated prompt.\n`;
   await writeNew(join(out, "setup/next-steps.txt"), next);
   console.log(`${setup.complete ? "Prepared" : "Preparation failed and preserved"}: ${out}\n${next}No model calls made.`);
   process.exit(setup.complete ? 0 : 1);
@@ -86,9 +88,7 @@ const meta = JSON.parse(await regularBytes(out, "meta.json"));
 for (const [key, value] of Object.entries(identity)) if (meta[key] !== value) throw new Error(`Run identity differs: ${key}`);
 const setup = JSON.parse(await regularBytes(out, "setup/result.json"));
 if (!setup.complete) throw new Error("Preparation failed; use a new repetition");
-const probe = JSON.parse(await regularBytes(out, "setup/probe.json"));
-if (probe.schemaVersion !== 1 || probe.passed !== true || probe.inputDigest !== manifest.digest || probe.capabilitySha256 !== manifest.hashes["capabilities.json"] || probe.work !== meta.work || !Array.isArray(probe.evidence) || !probe.evidence.length) throw new Error("A passing saved capability probe for these exact inputs and workspace is required before paid execution");
-for (const path of probe.evidence) await regularBytes(join(out, "setup"), path);
+await verifyBuildSetupProbe({ source, manifest, setup: join(out, "setup"), work: meta.work });
 const gate = args.gate ? JSON.parse(await readFile(resolve(args.gate), "utf8")) : null;
 await verifyInputs(inputs);
 const result = await executeBuildTurn({ out, work: meta.work, inputs, source, capabilities, turn: Number(args.turn), gate });

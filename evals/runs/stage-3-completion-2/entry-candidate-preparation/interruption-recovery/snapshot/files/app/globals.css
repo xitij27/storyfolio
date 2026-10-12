@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+
+.identity { position: absolute; top: 1.8rem; left: clamp(1.25rem, 5vw, 5rem); z-index: 5; display: flex; flex-direction: column; gap: .35rem; font: .72rem ui-monospace, monospace; letter-spacing: .12em; pointer-events: none; }
+.identity span:first-child { font-weight: 700; }
+.identity span:last-child { color: var(--story-faint); font-size: .63rem; }
+.preview-label { position: absolute; right: 1.6rem; top: 5.6rem; font: .55rem ui-monospace, monospace; letter-spacing: .08em; color: var(--story-faint); }
+.story-caption { padding-top: 6rem; padding-bottom: 3.3rem; }
+.story-caption-text { max-width: min(36vw, 31rem); }
+.story-title { font-size: clamp(2.1rem, 3.9vw, 4.8rem); line-height: 1.04; letter-spacing: -.055em; }
+.story-kicker { text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; }
+.story-body { font-size: 1rem; line-height: 1.6; }
+.story-note { font-size: .83rem; line-height: 1.6; }
+.model-note { font: .65rem/1.5 ui-monospace, monospace; color: var(--story-faint); border-top: 1px solid color-mix(in srgb, var(--story-faint), transparent 65%); padding-top: .8rem; margin: 1.2rem 0 0; }
+.scroll-cue { display: flex; align-items: center; gap: 2rem; margin: 2rem 0 0; font: .65rem ui-monospace, monospace; letter-spacing: .09em; }
+.scroll-cue span { font-size: 1.2rem; color: var(--story-accent); }
+.bench-path { display: flex; flex-wrap: wrap; padding: 0; list-style: none; gap: .4rem; margin: 1rem 0; font: .65rem ui-monospace, monospace; color: var(--story-accent); }
+.bench-path li:not(:last-child)::after { content: " →"; margin-left: .4rem; }
+.evidence-limit { border-left: 2px solid var(--story-accent); padding-left: 1rem; font-size: .78rem; line-height: 1.5; margin-top: 1rem; }
+.evidence-limit p { margin: .65rem 0; }
+.evidence-limit strong { font-weight: 600; }
+.back-link { display: inline-block; margin-top: 1.1rem; font: .75rem ui-monospace, monospace; text-underline-offset: .3rem; }
+.bench-diagram { margin: 1rem 0 0; }
+.bench-diagram svg { width: 100%; height: auto; color: var(--story-accent); }
+.bench-diagram text { fill: currentColor; font: 12px ui-monospace, monospace; }
+.bench-diagram figcaption { font: .7rem/1.5 ui-monospace, monospace; color: var(--story-faint); }
+@media (max-width: 63.99rem) { .story-caption-text { max-width: min(45vw, 29rem); } }
+@media (max-width: 47.99rem) {
+  .identity { top: 1.3rem; }
+  .identity span:last-child { display: none; }
+  .preview-label { top: 4.6rem; left: 1.25rem; right: auto; font-size: .5rem; }
+  .story-caption { padding-block: 1.35rem; }
+  .story-caption-text { max-width: 100%; }
+  .story-title { font-size: 2rem; }
+  .story-body { font-size: .88rem; line-height: 1.5; margin-top: .8rem; }
+  .story-note { font-size: .73rem; line-height: 1.45; margin-top: .7rem; }
+  .model-note { font-size: .58rem; margin-top: .8rem; }
+  .scroll-cue { margin-top: 1rem; }
+  .evidence-limit { font-size: .7rem; }
+  .story-look-switch button { padding-inline: .65rem; font-size: .7rem; }
+}
+@media (max-height: 34rem) and (min-width: 48rem) {
+  .story-caption { padding-block: 5rem 1.2rem; }
+  .story-title { font-size: 2.1rem; }
+  .story-body { font-size: .84rem; line-height: 1.45; margin-top: .7rem; }
+  .story-note { font-size: .71rem; line-height: 1.4; margin-top: .6rem; }
+  .model-note { margin-top: .6rem; font-size: .58rem; }
+  .evidence-limit { font-size: .66rem; margin-top: .6rem; }
+  .scroll-cue { margin-top: .6rem; }
+}
+.story[data-scene="off"] .story-caption-text { max-width: 38rem; }
+/* Keep chapter names clear of the apparatus until navigation is engaged. */
+.story-rail a[aria-current] span:first-child { opacity: 0; }
+.story-rail a:hover span:first-child, .story-rail a:focus-visible span:first-child { opacity: 1; background: var(--story-ground); padding-inline: .4rem; }

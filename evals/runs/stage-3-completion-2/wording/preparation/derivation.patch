@@ -1,0 +1,261 @@
+diff --git a/evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs b/evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs
+index 1e4f5aa..bc27961 100644
+--- a/evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs
++++ b/evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs
+@@ -1,5 +1,5 @@
+-// Unpaid command-only probe for the newly prepared entry candidate workspace.
+-// Identity-only derivative of stage-3-natural-entry-1; no historical files changed.
++// Unpaid command-only probe for the newly prepared wording candidate workspace.
++// Existing-site derivative of the entry-candidate controls; no historical files changed.
+ // Intentionally cannot prepare a workspace or invoke an actor/judge.
+ import assert from "node:assert/strict";
+ import { spawn } from "node:child_process";
+@@ -7,28 +7,30 @@ import { cp, readFile, readdir, realpath } from "node:fs/promises";
+ import { dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+ import { parseArgs } from "node:util";
+-import { hash, json, verifyInputs, writeNew } from "../../../lib/build.mjs";
++import { hash, json, verifyInputs, writeNew } from "../../../../lib/build.mjs";
+ 
+-const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-bench-entry-candidate-1" } } });
+-assert.ok(["codex-bench-entry-candidate-1"].includes(values.cohort), "Only the prospectively authorized entry candidate is supported");
+-const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../..");
+-const out = join(root, "evals/runs", values.cohort, "bench-entry-1/baseline-1"), setup = join(out, "setup");
++const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-build-wording-candidate-1" } } });
++assert.ok(["codex-build-wording-candidate-1"].includes(values.cohort), "Only the prospectively authorized wording candidate is supported");
++const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../../..");
++const out = join(root, "evals/runs", values.cohort, "embedded-completion-1/baseline-1"), setup = join(out, "setup");
+ const meta = JSON.parse(await readFile(join(out, "meta.json"), "utf8"));
+ assert.deepEqual((await readdir(out)).sort(), ["meta.json", "setup"], "Workspace is already spent or has unexpected artifacts");
+ const manifest = await verifyInputs(meta.inputs);
+ const source = JSON.parse(await readFile(join(meta.inputs, "case.json"), "utf8"));
+ const capabilities = JSON.parse(await readFile(join(meta.inputs, "capabilities.json"), "utf8"));
+ assert.equal(meta.cohort, values.cohort);
+-assert.equal(meta.caseId, "bench-entry-1");
+-assert.equal(source.id, "bench-entry-1");
++assert.equal(meta.caseId, "embedded-completion-1");
++assert.equal(source.id, "embedded-completion-1");
+ assert.equal(source.schemaVersion, 1);
+ assert.equal(source.taskKind, undefined);
+-assert.deepEqual(source.requestedStops, [4]);
+-assert.deepEqual(source.refusalTurns, []);
++assert.equal(source.setupMode, "existing-site");
++assert.equal(source.files.length, 97);
++assert.deepEqual(source.requestedStops, [5, 6]);
++assert.deepEqual(source.refusalTurns, [1, 2]);
+ assert.equal(Object.keys(manifest.hashes).filter(path => path.startsWith("fixture/")).length, source.files.length);
+ assert.equal(manifest.digest, meta.inputDigest);
+ assert.equal(await realpath(meta.work), meta.work);
+-assert.ok(meta.work.startsWith("/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-"));
++assert.ok(meta.work.startsWith("/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-embedded-completion-1-"));
+ assert.equal(hash(await readFile(capabilities.cliExecutable)), capabilities.cliSha256);
+ assert.equal(process.execPath, capabilities.node.executable);
+ assert.equal(process.version, capabilities.node.version);
+
+diff --git a/evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs b/evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs
+index 27ff0b0..7e14e53 100644
+--- a/evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs
++++ b/evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs
+@@ -4,11 +4,11 @@ import assert from "node:assert/strict";
+ import { lstat, readdir, realpath } from "node:fs/promises";
+ import { basename, dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+-import { hash, inspectWorkspace, json, regularBytes, safePath, validateCase, verifyInputs, writeNew } from "../../../lib/build.mjs";
++import { hash, inspectWorkspace, json, regularBytes, safePath, validateCase, verifyInputs, writeNew } from "../../../../lib/build.mjs";
+ 
+ assert.equal(process.argv.length, 2, "No alternative cohort, workspace or output is supported");
+-const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../..");
+-const cohort = "codex-bench-entry-candidate-1", caseId = "bench-entry-1";
++const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../../..");
++const cohort = "codex-build-wording-candidate-1", caseId = "embedded-completion-1";
+ const inputs = join(root, "evals/runs", cohort, "inputs");
+ const out = join(root, "evals/runs", cohort, caseId, "baseline-1"), setup = join(out, "setup");
+ const readJson = async (directory, path) => JSON.parse(await regularBytes(directory, path));
+@@ -23,10 +23,12 @@ assert.equal(meta.inputDigest, manifest.digest);
+ assert.equal(source.id, caseId);
+ assert.equal(source.schemaVersion, 1);
+ assert.equal(source.taskKind, undefined);
+-assert.deepEqual(source.requestedStops, [4]);
+-assert.deepEqual(source.refusalTurns, []);
++assert.equal(source.setupMode, "existing-site");
++assert.equal(source.files.length, 97);
++assert.deepEqual(source.requestedStops, [5, 6]);
++assert.deepEqual(source.refusalTurns, [1, 2]);
+ assert.equal(await realpath(meta.work), meta.work);
+-assert.ok(meta.work.startsWith("/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-"));
++assert.ok(meta.work.startsWith("/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-embedded-completion-1-"));
+ assert.deepEqual(sorted(await readdir(out)), ["meta.json", "setup"], "Actor workspace is already spent");
+ assert.equal(process.execPath, capabilities.node.executable);
+ assert.equal(process.version, capabilities.node.version);
+@@ -106,18 +108,18 @@ for (const original of originals.images) {
+ 
+ const coordinatorHelpers = {};
+ for (const name of ["check-ready.mjs", "finalize-setup.mjs", "run-capability-probe.mjs"]) {
+-  const path = `evals/runs/stage-3-completion-2/entry-candidate-preparation/${name}`, digest = hash(await regularBytes(root, path));
++  const path = `evals/runs/stage-3-completion-2/wording/preparation/${name}`, digest = hash(await regularBytes(root, path));
+   assert.equal(digest, manifest.hashes[`implementation/${path}`], `Unfrozen helper: ${path}`);
+   coordinatorHelpers[path] = digest;
+ }
+ const facts = {
+   schemaVersion: 1, role: "coordinator-setup", coordinatorSetup: true, actorPreflight: false,
+-  inputDigest: manifest.digest, node: capabilities.node,
++  inputDigest: manifest.digest, setupMode: "existing-site", node: capabilities.node,
+   dependencyInstall: { command: "npm ci --offline --cache=/tmp/storyfolio-npm-cache", offline: true, exitCode: 0 },
+   capabilities: { localHttp: true, externalHttps: "proxy-403", productionBuild: true, starterBrowser: "light-wide" },
+   limitations: [
+     "These are coordinator setup observations, not your own preflight or evidence of completing the requested site.",
+-    "The browser check covers only the supplied starter at 1440 by 900, not phone behavior or final visual acceptance.",
++    "The browser check covers only the supplied existing site at 1440 by 900, not phone behavior or final visual acceptance.",
+     "The configured proxy permits loopback destinations only. Configuration isolation is not a filesystem read jail.",
+     "Use the recorded Node executable and existing browser resources. Dependencies were installed from the supplied lockfile without external downloads."
+   ]
+@@ -142,7 +144,7 @@ await writeNew(destinations[1], factsBytes);
+ await writeNew(destinations[2], json({ schemaVersion: 1, passed: true, inputDigest: manifest.digest, capabilitySha256: manifest.hashes["capabilities.json"], work: meta.work,
+   evidence, evidenceHashes, coordinatorHelpers, modelCalls: 0,
+   limits: [
+-    "Coordinator setup, not actor preflight, ordinary build entry or visual acceptance.",
++    "Coordinator setup, not actor preflight, completed portfolio or visual acceptance.",
+     "The saved reviewer attests individual viewing of all nine starter originals; hashes are checked here, human viewing is not inferred by software.",
+     "Command-only sandbox inherits user configuration; actor exec separately ignores it. Configuration isolation is not a filesystem read jail.",
+     "The retained external-request stack may disclose the frozen implementation repository path, not held-out source or images. Audit actual actor access separately.",
+
+diff --git a/evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs b/evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs
+index 47dac72..71b60cd 100644
+--- a/evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs
++++ b/evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs
+@@ -1,17 +1,17 @@
+-// Read-only candidate entry readiness gate. Its only subprocess is runner --dry.
+-// Identity-only derivative of stage-3-natural-entry-1; not a paid launch or source mutation.
++// Read-only candidate wording readiness gate. Its only subprocess is runner --dry.
++// Existing-site derivative of the entry-candidate controls; not a paid launch or source mutation.
+ import assert from "node:assert/strict";
+ import { spawnSync } from "node:child_process";
+ import { readFile, readdir, realpath } from "node:fs/promises";
+ import { basename, dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+ import { parseArgs } from "node:util";
+-import { hash, inspectBuildInputs, inspectWorkspace, json, regularBytes, safePath, verifyInputs } from "../../../lib/build.mjs";
++import { hash, inspectBuildInputs, inspectWorkspace, json, regularBytes, safePath, verifyInputs } from "../../../../lib/build.mjs";
+ 
+-const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-bench-entry-candidate-1" } } });
+-assert.ok(["codex-bench-entry-candidate-1"].includes(values.cohort), "Only the prospectively authorized entry candidate is supported");
+-const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../..");
+-const cohort = join(root, "evals/runs", values.cohort), inputs = join(cohort, "inputs"), out = join(cohort, "bench-entry-1/baseline-1"), setup = join(out, "setup");
++const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-build-wording-candidate-1" } } });
++assert.ok(["codex-build-wording-candidate-1"].includes(values.cohort), "Only the prospectively authorized wording candidate is supported");
++const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../../..");
++const cohort = join(root, "evals/runs", values.cohort), inputs = join(cohort, "inputs"), out = join(cohort, "embedded-completion-1/baseline-1"), setup = join(out, "setup");
+ const readJson = async path => JSON.parse(await readFile(path, "utf8"));
+ const sorted = items => [...items].sort();
+ const record = bytes => ({ type: "file", hash: hash(bytes), size: bytes.length });
+@@ -31,35 +31,42 @@ async function check() {
+   assert.equal(inspected.digest, manifest.digest, "Current inputs differ from frozen inputs");
+   assert.deepEqual(inspected.hashes, manifest.hashes);
+   const source = inspected.source;
+-  assert.equal(source.id, "bench-entry-1");
++  assert.equal(source.id, "embedded-completion-1");
+   assert.equal(source.schemaVersion, 1);
+   assert.equal(source.taskKind, undefined);
+-  assert.deepEqual(source.requestedStops, [4]);
+-  assert.equal(source.setupMode, "scaffold");
++  assert.deepEqual(source.requestedStops, [5, 6]);
++  assert.equal(source.setupMode, "existing-site");
++  assert.equal(source.files.length, 97);
+   assert.equal(Object.keys(manifest.hashes).filter(path => path.startsWith("fixture/")).length, source.files.length);
+-  assert.equal(source.prompts.length, 1);
+-  assert.equal(source.bounds.maxTurns, 1);
++  assert.equal(source.prompts.length, 2);
++  assert.equal(source.bounds.maxTurns, 2);
+   assert.equal(source.bounds.turnTimeoutMs, 900000);
+-  assert.equal(source.bounds.maxWallMs, 900000);
+-  assert.deepEqual(source.refusalTurns, []);
+-  assert.equal((await regularBytes(inputs, "prompts/turn1.md")).toString("utf8"), "Yes to the storyboard in docs/story/storyboard.md. Please build it.\n");
++  assert.equal(source.bounds.maxWallMs, 1500000);
++  assert.equal(source.bounds.maxTokens, 12000000);
++  assert.equal(source.bounds.maxUncachedTokens, 350000);
++  assert.deepEqual(source.refusalTurns, [1, 2]);
++  assert.equal(hash(await regularBytes(inputs, "prompts/turn1.md")), "ca6b5952c82faca50e9f487c6493e3dfee73042f40af81d8b983c0a7e2d6113f");
++  assert.equal(hash(await regularBytes(inputs, "prompts/turn2.md")), "ea0ed159f2cc04bc0cc9a01a703d3d0065351b44eacb8625b348792dcccf0f0e");
+   assert.equal(manifest.recorded.sourceStatus, "", "Declared actor inputs were dirty at freeze");
+-  assert.deepEqual(sorted(await readdir(cohort)), ["bench-entry-1", "inputs"]);
+-  assert.deepEqual(await readdir(join(cohort, "bench-entry-1")), ["baseline-1"]);
++  assert.deepEqual(sorted(await readdir(cohort)), ["embedded-completion-1", "inputs"]);
++  assert.deepEqual(await readdir(join(cohort, "embedded-completion-1")), ["baseline-1"]);
+   assert.deepEqual(sorted(await readdir(out)), ["meta.json", "setup"], "An actor/judge artifact already exists");
+   const meta = await readJson(join(out, "meta.json"));
+   for (const [key, value] of Object.entries({ cohort: values.cohort, caseId: source.id, inputDigest: manifest.digest, inputs, rep: 1, model: capabilities.model, reasoningEffort: capabilities.reasoningEffort, setupMode: source.setupMode })) assert.equal(meta[key], value, `Identity: ${key}`);
+   assert.deepEqual(meta.bounds, source.bounds);
+   assert.equal(meta.taskKind, undefined);
+-  assert.deepEqual(meta.requestedStops, [4]);
+-  assert.deepEqual(meta.refusalTurns, []);
++  assert.deepEqual(meta.requestedStops, [5, 6]);
++  assert.deepEqual(meta.refusalTurns, [1, 2]);
+   assert.equal(await realpath(meta.work), meta.work);
+-  assert.ok(meta.work.startsWith("/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-"));
++  assert.ok(meta.work.startsWith("/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-embedded-completion-1-"));
+   const prepared = await readJson(join(setup, "result.json")), started = await readJson(join(setup, "started.json"));
+   assert.equal(prepared.complete, true);
+   assert.equal(prepared.modelCalls, 0);
+   assert.equal(prepared.networkCalls, 0);
+-  assert.equal(prepared.scaffold.scaffolded, true);
++  assert.equal(prepared.setupMode, "existing-site");
++  assert.equal(prepared.scaffold.setupMode, "existing-site");
++  assert.equal(prepared.scaffold.scaffolded, false);
++  assert.deepEqual(prepared.scaffold.copied, []);
+   assert.deepEqual(prepared.scaffold.conflicts, []);
+   assert.equal(started.work, meta.work);
+   assert.equal(started.inputDigest, manifest.digest);
+@@ -68,9 +75,9 @@ async function check() {
+   for (const [path, bytes] of Object.entries(inspected.files)) {
+     const target = path.startsWith("fixture/") ? path.slice(8) : path.startsWith("skill/") ? `.agents/skills/storyfolio/${path.slice(6)}` : null;
+     if (target) { initial[target] = record(bytes); expected[target] = record(bytes); }
+-    if (path.startsWith("skill/engine/")) { const target = path.slice(13); assert.ok(!expected[target], `Fixture/scaffold collision: ${target}`); expected[target] = record(bytes); }
+   }
+   const inventory = await readJson(join(setup, "pre-scaffold-inventory.json")), snapshot = await readJson(join(setup, "snapshot/manifest.json"));
++  assert.equal(inventory.setupMode, "existing-site");
+   assert.deepEqual(inventory.initialEntries, []);
+   assert.deepEqual(sorted(inventory.files), sorted(Object.keys(initial)));
+   assert.deepEqual(sorted(inventory.fixtureFiles), sorted(source.files));
+@@ -106,6 +113,7 @@ async function check() {
+   assert.equal(actorSetup.inputDigest, manifest.digest);
+   assert.equal(actorSetup.coordinatorSetup, true);
+   assert.equal(actorSetup.actorPreflight, false);
++  assert.equal(actorSetup.setupMode, "existing-site");
+   assert.deepEqual(actorSetup.node, capabilities.node);
+   assert.deepEqual(actorSetup.capabilities, { localHttp: true, externalHttps: "proxy-403", productionBuild: true, starterBrowser: "light-wide" });
+   assert.equal(actorSetup.dependencyInstall.exitCode, 0);
+@@ -130,7 +138,7 @@ async function check() {
+   for (const path of gate.evidence) { safePath(path); const bytes = await regularBytes(setup, path); evidence[path] = { sha256: hash(bytes), bytes: bytes.length }; }
+   assert.deepEqual(evidence, gate.evidenceHashes, "Retained setup proof bytes changed");
+   for (const path of ["dependency-install/command.json", "dependency-install/result.json", "dependency-install/stdout.log", "dependency-install/stderr.log", "runtime-environment.json", "capability-command.json", "capability-process.json", "capability/probe.json", "capability/build.log", "capability/browser.log", "capability/browser/manifest.json", "capability/browser/light-wide/report.json", "capability-visual-review.md", "original-images.json", "environment-setup.json", "source-before-capability.json", "source-after-capability.json"]) assert.ok(evidence[path], `Missing required proof: ${path}`);
+-  const helpers = ["evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs", "evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs", "evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs"];
++  const helpers = ["evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs", "evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs", "evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs"];
+   assert.deepEqual(sorted(Object.keys(gate.coordinatorHelpers)), helpers);
+   for (const path of helpers) {
+     const digest = hash(await regularBytes(root, path));
+@@ -200,7 +208,7 @@ async function check() {
+     assert.deepEqual(bytes, await readFile(join(meta.work, "checks/setup-capability/browser/light-wide", basename(original.path))), "Copied original differs from runtime original");
+   }
+   return { schemaVersion: 1, verified: true, cohort: values.cohort, caseId: source.id, inputDigest: manifest.digest, capabilitySha256: manifest.hashes["capabilities.json"], work: meta.work,
+-    frozenFiles: Object.keys(manifest.hashes).length, initialFixtureFiles: source.files.length, initialSkillFiles: Object.keys(initial).length - source.files.length, initialScaffoldFiles: Object.keys(snapshot.files).length,
++    frozenFiles: Object.keys(manifest.hashes).length, initialFixtureFiles: source.files.length, initialSkillFiles: Object.keys(initial).length - source.files.length, initialSourceFiles: Object.keys(snapshot.files).length, scaffolded: false,
+     sourceUnchanged: true, factualSetupSha256: hash(actorSetupBytes), excludedGeneratedPaths: current.excluded, sourceScope: "Shared prospective source policy; next-env.d.ts is generated, not retained actor source", evidence, coordinatorHelpers: gate.coordinatorHelpers, originalsReviewed: originals.images.length,
+     dry: { executable: capabilities.node.executable, args: dryArgs, exitCode: dry.status, stderr: dry.stderr }, TMPDIR: runtime.TMPDIR,
+     noActorOrJudgeArtifacts: true, modelCalls: 0, writes: false, limits: ["Coordinator capability proof, not actor preflight or visual acceptance", "Configuration isolation is not a filesystem read jail", "Human paid approval is recorded separately; this script cannot launch a paid turn"] };
+
+diff --git a/evals/builds/embedded-completion-1/case.json b/evals/runs/stage-3-completion-2/wording/preparation/case.json
+index fd4c041..8edd481 100644
+--- a/evals/builds/embedded-completion-1/case.json
++++ b/evals/runs/stage-3-completion-2/wording/preparation/case.json
+@@ -131,7 +131,10 @@
+     "evals/builds/embedded-completion-1/source-manifest.json",
+     "evals/builds/embedded-completion-1/verify-fixture.mjs",
+     "evals/builds/local-capabilities.json",
+-    "evals/prompts/build-criteria.md"
++    "evals/prompts/build-criteria.md",
++    "evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs",
++    "evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs",
++    "evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs"
+   ],
+   "refusalTurns": [
+     1,

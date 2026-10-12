@@ -29,8 +29,15 @@ Candidate entry setup is ready: skill commit `692b11b`, 133 frozen inputs,
 offline install and actual capability probe, nine reviewed starter originals
 and passing strict readiness. The sole capability difference from baseline
 is an additional unrelated skill being disabled, explicitly recorded before
-freeze. The fresh ordinary-entry actor is next, one 15-minute turn with no
-retry, continuation or judge. The matched wording and full journey follow.
+freeze. The fresh ordinary-entry actor subsequently launched once, then
+stopped with outer exit 143 before a final reply or normal closure record.
+Root preserved its 179 source files and 80 workspace-check files separately,
+without inventing a result. No owned processes remained at recovery checks.
+Its partial three-beat spine is positive evidence, but the choice gate is
+unproved and strict measurement cannot proceed. See the
+[interruption disposition](../evals/runs/stage-3-completion-2/entry-candidate-preparation/interruption-disposition.md).
+The matched wording and full journey are in preparation; Stage 3 remains
+incomplete.
 
 Stage-level position: **Stage 3, the build, is active and incomplete.**
 Stage 1's planning method is implemented with closing review decisions open;

@@ -5,7 +5,7 @@ import test from "node:test";
 import { mkdir, mkdtemp, readFile, rm, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { buildCodexArgs, captureBuildWorkspace, DEFAULT_SNAPSHOT, executeBuildTurn, hash, inspectBuildInputs, inspectWorkspace, invokeBuildCodex, json, planTurn, populateBuildWorkspace, prepareBuildInputs, readTurnHistory, tomlValue, validateCase, verifyInputs, writeNew } from "./build.mjs";
+import { buildCodexArgs, buildTaskIdentity, captureBuildWorkspace, DEFAULT_SNAPSHOT, executeBuildTurn, hash, inspectBuildInputs, inspectWorkspace, invokeBuildCodex, json, planTurn, populateBuildWorkspace, prepareBuildInputs, readTurnHistory, tomlValue, validateCase, verifyBuildSetupProbe, verifyInputs, writeNew } from "./build.mjs";
 
 async function fixture(t) {
   const root = await mkdtemp(join(tmpdir(), "storyfolio-build-test-"));
@@ -18,6 +18,268 @@ async function fixture(t) {
   })) await writeNew(join(root, path), bytes);
   return { root, runs: join(root, "runs"), casePath: "fixture/case.json", cohort: "build-1", source, capabilities: { model: "test-model", disabledSkills: [], config: {} }, implementationFiles: ["runner.mjs"] };
 }
+
+async function journeyFixture(t) {
+  const options = await fixture(t);
+  const source = { ...options.source, schemaVersion: 3, taskKind: "full-journey", setupMode: "unscaffolded", requestedStops: [1, 2, 3, 4, 5, 6], refusalTurns: [2, 3, 4, 5, 6],
+    files: ["material/person.md", "public/assets/diagram.bin"], prompts: Array.from({ length: 6 }, (_, index) => `turn${index + 1}.md`), bounds: { ...options.source.bounds, maxTurns: 6, maxWallMs: 5400000 } };
+  await writeNew(join(options.root, "fixture/workspace/material/person.md"), "Unconfirmed fictional profile");
+  await writeNew(join(options.root, "fixture/workspace/public/assets/diagram.bin"), Buffer.from([0, 255, 128]));
+  for (let turn = 4; turn <= 6; turn++) await writeNew(join(options.root, `turn${turn}.md`), `Fixed input ${turn}.`);
+  await writeFile(join(options.root, options.casePath), json(source));
+  return { ...options, source };
+}
+
+async function preparedJourney(t) {
+  const options = await journeyFixture(t), prepared = await prepareBuildInputs(options);
+  const work = join(options.root, "work"), out = join(options.root, "out"), setup = join(out, "setup");
+  const population = await populateBuildWorkspace(prepared.inputs, work);
+  const snapshot = await captureBuildWorkspace(work, join(setup, "snapshot"), prepared.source.snapshot);
+  return { ...options, prepared, work, out, setup, population, snapshot };
+}
+
+async function journeyProbe({ prepared, setup, work }) {
+  await writeNew(join(setup, "environment.json"), json({ role: "coordinator-environment", actorPreflight: false, modelCalls: 0 }));
+  const evidence = ["environment.json", "snapshot/manifest.json"], evidenceHashes = {};
+  for (const path of evidence) { const bytes = await readFile(join(setup, path)); evidenceHashes[path] = { sha256: hash(bytes), bytes: bytes.length }; }
+  const probe = { schemaVersion: 1, passed: true, scope: "unscaffolded-environment", actorPreflight: false, modelCalls: 0, inputDigest: prepared.manifest.digest, capabilitySha256: prepared.manifest.hashes["capabilities.json"], work, evidence, evidenceHashes };
+  await writeNew(join(setup, "probe.json"), json(probe));
+  return probe;
+}
+
+test("full-journey has an explicit six-stop schema and cannot masquerade as a seeded build or diagnostic", async t => {
+  const { source } = await journeyFixture(t), valid = validateCase(source);
+  assert.deepEqual(buildTaskIdentity(valid), { taskKind: "full-journey", requestedStops: [1, 2, 3, 4, 5, 6] });
+  assert.deepEqual(valid.refusalTurns, [2, 3, 4, 5, 6]);
+  assert.deepEqual(validateCase({ ...source, refusalTurns: [] }).refusalTurns, []);
+  for (const update of [
+    { schemaVersion: 1 }, { schemaVersion: 2 }, { schemaVersion: 4 }, { taskKind: undefined }, { taskKind: "prototype-depth" },
+    { setupMode: undefined }, { setupMode: "scaffold" }, { setupMode: "existing-site" },
+    { requestedStops: undefined }, { requestedStops: [4, 5, 6] }, { requestedStops: [1, 2, 3, 4, 6, 5] }, { requestedStops: [1, 2, 3, 4, 5, 5] }, { requestedStops: [1, 2, 3, 4, 5, "6"] },
+    { prompts: source.prompts.slice(0, 5) }, { prompts: [...source.prompts.slice(0, 5), source.prompts[0]] },
+    { bounds: { ...source.bounds, maxTurns: 5 } }, { bounds: { ...source.bounds, maxTurns: 7 } }, { bounds: { ...source.bounds, maxTokens: 0 } },
+    { refusalTurns: undefined }, { refusalTurns: [6, 5] }, { refusalTurns: [7] },
+    { snapshot: { roots: ["material", "public"] } }, { snapshot: { roots: [".agents", "material"] } },
+  ]) assert.throws(() => validateCase({ ...source, ...update }));
+  for (const path of ["app/page.tsx", "package.json", "docs/story/confirmations.md", ".agents/extra/SKILL.md", "public/app.js", "material/node_modules/runtime.js"]) assert.throws(() => validateCase({ ...source, files: [path] }));
+  const legacy = { ...source, schemaVersion: 1, taskKind: undefined, requestedStops: [4], prompts: [source.prompts[0]], bounds: { ...source.bounds, maxTurns: 1 } };
+  assert.throws(() => validateCase(legacy), /setupMode/);
+  assert.throws(() => validateCase({ ...legacy, schemaVersion: 2, taskKind: "prototype-depth" }), /setupMode/);
+});
+
+test("unscaffolded preparation copies only declared material/assets and installed skill into an empty root", async t => {
+  const state = await preparedJourney(t), { population, work, snapshot, prepared } = state;
+  assert.equal(population.setupMode, "unscaffolded");
+  assert.equal(population.scaffolded, false);
+  assert.deepEqual(population.copied, []);
+  assert.deepEqual(population.inventory.initialEntries, []);
+  assert.match(population.inventory.phase, /No root application or approval history/);
+  assert.doesNotMatch(population.inventory.phase, /Existing site/);
+  const expected = Object.keys(prepared.manifest.hashes).flatMap(path => path.startsWith("fixture/") ? [path.slice(8)] : path.startsWith("skill/") ? [`.agents/skills/storyfolio/${path.slice(6)}`] : []).sort();
+  assert.deepEqual(Object.keys(snapshot.files).sort(), expected);
+  assert.deepEqual(snapshot.unexpected, []);
+  assert.deepEqual(snapshot.excluded, []);
+  assert.deepEqual(await readFile(join(work, "public/assets/diagram.bin")), Buffer.from([0, 255, 128]));
+  for (const path of ["package.json", "content/story.ts", "app/page.tsx", "docs/story/storyboard.md", "rubric.md", "expectations.json"]) await assert.rejects(readFile(join(work, path)), { code: "ENOENT" });
+  assert.equal(await readFile(join(work, ".agents/skills/storyfolio/engine/package.json"), "utf8"), '{"name":"test-site"}');
+  const occupied = join(state.root, "occupied");
+  await writeNew(join(occupied, "package.json"), "Preserve existing source");
+  await assert.rejects(populateBuildWorkspace(prepared.inputs, occupied), /fresh empty nonsymlink/);
+  assert.equal(await readFile(join(occupied, "package.json"), "utf8"), "Preserve existing source");
+  await assert.rejects(readFile(join(occupied, "material/person.md")), { code: "ENOENT" });
+  const empty = join(state.root, "empty"), linked = join(state.root, "linked");
+  await mkdir(empty); await symlink(empty, linked);
+  await assert.rejects(populateBuildWorkspace(prepared.inputs, linked), /fresh empty nonsymlink/);
+  await assert.rejects(readFile(join(empty, "material/person.md")), { code: "ENOENT" });
+});
+
+test("legacy setup probes keep their original identity and existing-evidence requirements", async t => {
+  const options = await fixture(t), prepared = await prepareBuildInputs(options), setup = join(options.root, "setup"), work = join(options.root, "work");
+  await writeNew(join(setup, "proof.log"), "Legacy proof");
+  const probe = { schemaVersion: 1, passed: true, inputDigest: prepared.manifest.digest, capabilitySha256: prepared.manifest.hashes["capabilities.json"], work, evidence: ["proof.log"] };
+  await writeNew(join(setup, "probe.json"), json(probe));
+  const params = { source: prepared.source, manifest: prepared.manifest, setup, work };
+  assert.deepEqual(await verifyBuildSetupProbe(params), probe);
+  // Existing cohorts did not bind evidence hashes, claim an environment-only
+  // scope or require a setup snapshot here. Do not retroactively impose those.
+  await writeFile(join(setup, "proof.log"), "Still existing legacy evidence");
+  assert.deepEqual(await verifyBuildSetupProbe(params), probe);
+  const diagnostic = { ...options.source, schemaVersion: 2, taskKind: "prototype-depth", prompts: options.source.prompts.slice(0, 1), bounds: { ...options.source.bounds, maxTurns: 1 } };
+  assert.deepEqual(await verifyBuildSetupProbe({ ...params, source: diagnostic }), probe);
+  for (const update of [{ passed: false }, { inputDigest: "wrong" }, { capabilitySha256: "wrong" }, { work: "wrong" }, { evidence: [] }, { schemaVersion: 2 }]) {
+    await writeFile(join(setup, "probe.json"), json({ ...probe, ...update }));
+    await assert.rejects(verifyBuildSetupProbe(params), /passing saved capability probe/);
+  }
+  await writeFile(join(setup, "probe.json"), json({ ...probe, evidence: ["missing.log"] }));
+  await assert.rejects(verifyBuildSetupProbe(params), { code: "ENOENT" });
+});
+
+test("full-journey readiness binds neutral evidence and initial source without pretending actor preflight occurred", async t => {
+  const state = await preparedJourney(t), probe = await journeyProbe(state);
+  const { setup, work, prepared } = state, params = { source: prepared.source, manifest: prepared.manifest, setup, work };
+  assert.deepEqual(await verifyBuildSetupProbe(params), probe);
+  for (const update of [{ scope: undefined }, { scope: "existing-site" }, { actorPreflight: true }, { actorPreflight: undefined }, { modelCalls: 1 }, { modelCalls: undefined }, { evidenceHashes: undefined }, { evidenceHashes: {} }, { evidence: [...probe.evidence, probe.evidence[0]] }, { evidence: ["environment.json"] }, { evidence: ["snapshot/manifest.json"], evidenceHashes: { "snapshot/manifest.json": probe.evidenceHashes["snapshot/manifest.json"] } }]) {
+    await writeFile(join(setup, "probe.json"), json({ ...probe, ...update }));
+    await assert.rejects(verifyBuildSetupProbe(params), /full-journey requires/);
+  }
+  await writeFile(join(setup, "probe.json"), json(probe));
+  const environment = await readFile(join(setup, "environment.json"));
+  await writeFile(join(setup, "environment.json"), "Unbound replacement");
+  await assert.rejects(verifyBuildSetupProbe(params), /Setup evidence changed/);
+  await writeFile(join(setup, "environment.json"), environment);
+  const snapshotBytes = await readFile(join(setup, "snapshot/manifest.json"));
+  const altered = JSON.parse(snapshotBytes); delete altered.files["material/person.md"];
+  const changedBytes = Buffer.from(json(altered));
+  await writeFile(join(setup, "snapshot/manifest.json"), changedBytes);
+  await writeFile(join(setup, "probe.json"), json({ ...probe, evidenceHashes: { ...probe.evidenceHashes, "snapshot/manifest.json": { sha256: hash(changedBytes), bytes: changedBytes.length } } }));
+  await assert.rejects(verifyBuildSetupProbe(params), /exactly frozen material/);
+  await writeFile(join(setup, "snapshot/manifest.json"), snapshotBytes); await writeFile(join(setup, "probe.json"), json(probe));
+  const copyPath = join(setup, "snapshot/files/material/person.md"), original = await readFile(copyPath);
+  await writeFile(copyPath, "Changed saved copy");
+  await assert.rejects(verifyBuildSetupProbe(params), /snapshot copy changed/);
+  await writeFile(copyPath, original);
+  // The same immutable environment record remains usable after legitimate
+  // actor work; the per-turn source guard separately binds that later work.
+  await writeNew(join(work, "app/page.tsx"), "Later actor source");
+  assert.deepEqual(await verifyBuildSetupProbe(params), probe);
+});
+
+test("full-journey plans all six actual stops with explicit gates and one conversation", async t => {
+  const { source } = await journeyFixture(t), history = [];
+  for (let turn = 1; turn <= 6; turn++) {
+    const gate = turn === 1 ? null : { afterTurn: turn - 1, advance: true, previousTurnDigest: history.at(-1).digest, observation: `Actual handoff ${turn - 1} observed.` };
+    if (turn > 1) assert.throws(() => planTurn({ turn, source, history }), /Coordinator gate/);
+    const plan = planTurn({ turn, source, history, gate });
+    assert.equal(plan.taskKind, "full-journey"); assert.equal(plan.requestedStop, turn); assert.equal(plan.sessionId, turn === 1 ? null : "journey-thread");
+    history.push({ complete: true, taskKind: "full-journey", requestedStop: turn, sessionId: "journey-thread", durationMs: 1000, usage: { input_tokens: 10, output_tokens: 5 }, digest: `turn-${turn}` });
+  }
+  assert.throws(() => planTurn({ turn: 7, source, history }), /Turn limit/);
+  const first = history[0], gate = { afterTurn: 1, advance: true, previousTurnDigest: first.digest, observation: "Actual facts gate observed." };
+  for (const update of [{ taskKind: "prototype-depth" }, { requestedStop: 4 }]) assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, ...update }], gate }), /each actual requested stop/);
+  assert.throws(() => planTurn({ turn: 3, source, history: [first, { ...history[1], sessionId: "new-conversation" }], gate }), /one conversation/);
+  assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, complete: false }], gate }), /Failed turn/);
+  assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, usage: null }], gate }), /reliable duration or usage/);
+  assert.throws(() => planTurn({ turn: 2, source, history: [{ ...first, durationMs: source.bounds.maxWallMs }], gate }), /wall budget/);
+});
+
+test("six synthetic full-journey turns preserve exact prompts, identities, snapshots and observed gates", async t => {
+  const state = await preparedJourney(t), { work, out, prepared } = state;
+  let calls = 0;
+  const invoke = async params => {
+    const turn = ++calls;
+    assert.equal(params.sessionId, turn === 1 ? null : "journey-thread");
+    assert.equal(params.prompt, await readFile(join(prepared.inputs, `prompts/turn${turn}.md`), "utf8"));
+    const stdout = [
+      { type: "thread.started", thread_id: "journey-thread" },
+      { type: "item.completed", item: { type: "agent_message", text: `Actual handoff ${turn}` } },
+      { type: "turn.completed", usage: { input_tokens: 20, cached_input_tokens: 10, output_tokens: 5 } },
+    ].map(event => JSON.stringify(event)).join("\n") + "\n";
+    await writeNew(params.streamPath, stdout); await writeNew(params.stderrPath, "");
+    await writeNew(join(work, `docs/story/turn${turn}.md`), `Synthetic actor source for stop ${turn}`);
+    return { stdout, stderr: "", code: 0, durationMs: 50, args: [], timedOut: false };
+  };
+  const run = { out, work, inputs: prepared.inputs, source: prepared.source, capabilities: state.capabilities, invoke };
+  for (let turn = 1; turn <= 6; turn++) {
+    const history = await readTurnHistory(out), gate = turn === 1 ? null : { afterTurn: turn - 1, advance: true, previousTurnDigest: history.at(-1).digest, observation: `Reviewed actual handoff ${turn - 1}.` };
+    if (turn > 1) await assert.rejects(executeBuildTurn({ ...run, turn }), /Coordinator gate/);
+    const result = await executeBuildTurn({ ...run, turn, gate });
+    assert.equal(result.complete, true); assert.equal(result.requestedStop, turn); assert.equal(result.taskKind, "full-journey");
+    const started = JSON.parse(await readFile(join(result.location, "started.json")));
+    assert.equal(started.taskKind, "full-journey"); assert.equal(started.requestedStop, turn);
+    assert.equal(result.snapshot.files[`docs/story/turn${turn}.md`].type, "file");
+    if (gate) assert.deepEqual(JSON.parse(await readFile(join(result.location, "gate.json"))), gate);
+  }
+  assert.equal(calls, 6);
+  assert.equal((await readTurnHistory(out)).length, 6);
+  await assert.rejects(executeBuildTurn({ ...run, turn: 6 }), /never overwritten/);
+  await assert.rejects(executeBuildTurn({ ...run, turn: 7 }), /Turn limit/);
+  assert.equal(calls, 6);
+});
+
+test("full-journey initial source rejects seeded, changed, generated or unrecorded bytes before invoking", async t => {
+  const state = await preparedJourney(t), { work, out, prepared, snapshot } = state;
+  let calls = 0;
+  const run = { out, work, inputs: prepared.inputs, source: prepared.source, capabilities: state.capabilities, turn: 1, invoke: async () => { calls++; throw new Error("Must not invoke"); } };
+  for (const path of ["app/page.tsx", "unknown-dir/runtime.js", "node_modules/preseeded/index.js"]) {
+    await writeNew(join(work, path), "Not frozen initial source");
+    await assert.rejects(executeBuildTurn(run), /source inventory differs/);
+    await rm(join(work, path));
+  }
+  const person = join(work, "material/person.md"), original = await readFile(person);
+  await writeFile(person, "Changed profile");
+  await assert.rejects(executeBuildTurn(run), /source changed after/);
+  await writeFile(person, original);
+  await rm(person);
+  await assert.rejects(executeBuildTurn(run), /source inventory differs/);
+  await writeNew(person, original);
+  await symlink(person, join(work, "material/link.md"));
+  await assert.rejects(executeBuildTurn(run), /Unsupported source input/);
+  await rm(join(work, "material/link.md"));
+  const extra = { type: "file", hash: hash("Injected app"), size: 12 };
+  await writeFile(join(out, "setup/snapshot/manifest.json"), json({ ...snapshot, files: { ...snapshot.files, "app/page.tsx": extra } }));
+  await writeNew(join(work, "app/page.tsx"), "Injected app");
+  await assert.rejects(executeBuildTurn(run), /exactly frozen material/);
+  assert.equal(calls, 0);
+  await assert.rejects(readFile(join(out, "turns/01/started.json")), { code: "ENOENT" });
+});
+
+test("full-journey continuation requires live source equality and does not relax non-bare Git metadata", async t => {
+  const state = await preparedJourney(t), { work, out, prepared } = state;
+  let calls = 0;
+  const invoke = async params => {
+    calls++;
+    const stdout = [{ type: "thread.started", thread_id: "journey-thread" }, { type: "item.completed", item: { type: "agent_message", text: "Fact handoff" } }, { type: "turn.completed", usage: { input_tokens: 10, output_tokens: 5 } }].map(event => JSON.stringify(event)).join("\n") + "\n";
+    await writeNew(params.streamPath, stdout); await writeNew(params.stderrPath, "");
+    await writeNew(join(work, `docs/story/actor-${calls}.md`), "Observed actor work");
+    return { stdout, stderr: "", code: 0, durationMs: 50, args: [], timedOut: false };
+  };
+  const run = { out, work, inputs: prepared.inputs, source: prepared.source, capabilities: state.capabilities, invoke };
+  assert.equal((await executeBuildTurn({ ...run, turn: 1 })).complete, true);
+  const history = await readTurnHistory(out), gate = { afterTurn: 1, advance: true, previousTurnDigest: history[0].digest, observation: "Actual source and facts gate reviewed." }, next = { ...run, turn: 2, gate };
+  const actorFile = join(work, "docs/story/actor-1.md"), original = await readFile(actorFile);
+  await writeFile(actorFile, "Changed after gate review");
+  await assert.rejects(executeBuildTurn(next), /source changed after/);
+  await writeFile(actorFile, original);
+  for (const path of ["app/new-runtime.ts", "unknown-dir/new-runtime.ts"]) {
+    await writeNew(join(work, path), "Unrecorded code");
+    await assert.rejects(executeBuildTurn(next), /source inventory differs/);
+    await rm(join(work, path));
+  }
+  const git = join(work, ".git-local");
+  await mkdir(join(git, "objects"), { recursive: true }); await mkdir(join(git, "refs"));
+  await writeNew(join(git, "HEAD"), "ref: refs/heads/main\n");
+  await writeNew(join(git, "config"), "[core]\n\tbare = false\n");
+  await assert.rejects(executeBuildTurn(next), /source inventory differs/);
+  await rm(git, { recursive: true });
+  assert.equal(calls, 1);
+  await assert.rejects(readFile(join(out, "turns/02/started.json")), { code: "ENOENT" });
+  // Known generated trees retain the existing policy after actual actor work.
+  await writeNew(join(work, "node_modules/generated/index.js"), "Generated dependency");
+  await writeNew(join(work, ".next/generated.js"), "Generated build output");
+  assert.equal((await executeBuildTurn(next)).complete, true);
+  assert.equal(calls, 2);
+});
+
+test("incomplete full-journey turns remain preserved and cannot continue or retry", async t => {
+  const state = await preparedJourney(t), { work, out, prepared } = state;
+  let calls = 0;
+  const invoke = async params => {
+    calls++;
+    const stdout = '{"type":"thread.started","thread_id":"partial-journey"}\n';
+    await writeNew(params.streamPath, stdout); await writeNew(params.stderrPath, "Timeout");
+    await writeNew(join(work, "docs/story/partial.md"), "Incomplete actor work");
+    return { stdout, stderr: "Timeout", code: -1, durationMs: 900000, args: [], timedOut: true };
+  };
+  const run = { out, work, inputs: prepared.inputs, source: prepared.source, capabilities: state.capabilities, invoke };
+  const result = await executeBuildTurn({ ...run, turn: 1 });
+  assert.equal(result.complete, false); assert.equal(result.timedOut, true); assert.equal(result.usage, null);
+  assert.equal(result.requestedStop, 1); assert.equal(result.taskKind, "full-journey");
+  assert.ok(result.snapshot.files["docs/story/partial.md"]);
+  const history = await readTurnHistory(out);
+  await assert.rejects(executeBuildTurn({ ...run, turn: 2, gate: { afterTurn: 1, advance: true, previousTurnDigest: history[0].digest, observation: "Cannot approve an incomplete turn." } }), /Failed turn/);
+  await assert.rejects(executeBuildTurn({ ...run, turn: 1 }), /never overwritten/);
+  assert.equal(calls, 1);
+});
 
 test("build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities", async t => {
   const options = await fixture(t);
@@ -427,7 +689,9 @@ test("actor timeout kills its process group including a descendant that ignores 
   const cleanupStarted = Date.now(), deadline = cleanupStarted + 1000;
   let descendantState;
   do {
-    const stat = await readFile(`/proc/${pids.descendant}/stat`, "utf8").catch(error => { if (error.code === "ENOENT") return null; throw error; });
+    // A process can disappear after open but before read, yielding ESRCH
+    // instead of ENOENT. Both mean gone, not a running descendant.
+    const stat = await readFile(`/proc/${pids.descendant}/stat`, "utf8").catch(error => { if (["ENOENT", "ESRCH"].includes(error.code)) return null; throw error; });
     descendantState = stat?.split(") ")[1].split(" ")[0] ?? null;
     if (descendantState === null || descendantState === "Z") break;
     await new Promise(resolve => setTimeout(resolve, 10));

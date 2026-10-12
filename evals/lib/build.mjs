@@ -42,24 +42,28 @@ async function fileTree(root, prefix = "", excludeGenerated = true) {
 }
 
 export function validateCase(source) {
-  if (![1, 2].includes(source.schemaVersion)) throw new Error("Expected build case schemaVersion 1 or 2");
+  if (![1, 2, 3].includes(source.schemaVersion)) throw new Error("Expected build case schemaVersion 1, 2 or 3");
   if (source.judgeTransport !== undefined && !["inline", "paged-v1"].includes(source.judgeTransport)) throw new Error("judgeTransport must be inline or paged-v1");
-  const diagnostic = source.schemaVersion === 2;
-  if (diagnostic ? source.taskKind !== "prototype-depth" : source.taskKind !== undefined) throw new Error("Only schemaVersion 2 accepts taskKind: prototype-depth");
+  const diagnostic = source.schemaVersion === 2, journey = source.schemaVersion === 3;
+  if (source.taskKind !== (diagnostic ? "prototype-depth" : journey ? "full-journey" : undefined)) throw new Error("taskKind must match its schema: legacy absent, 2 prototype-depth, 3 full-journey");
   safeId(source.id);
   for (const key of ["workspaceRoot", "expectations", "rubric", "protocol"]) safePath(source[key]);
   if (!Array.isArray(source.files) || !source.files.length || new Set(source.files).size !== source.files.length) throw new Error("Case needs a nonempty unique fixture file allowlist");
   source.files.forEach(path => { safePath(path); if (sourcePathExcluded(path)) throw new Error(`Generated fixture path is not allowed: ${path}`); });
+  if (journey && source.files.some(path => !path.startsWith("material/") && !path.startsWith("public/assets/"))) throw new Error("full-journey fixtures contain only declared material/ and public/assets/ files, not a seeded site or approval history");
   if (!Array.isArray(source.prompts) || !source.prompts.length) throw new Error("Case needs fixed prompt paths");
   source.prompts.forEach(safePath);
   const setupMode = source.setupMode === undefined ? "scaffold" : source.setupMode;
-  if (!["scaffold", "existing-site"].includes(setupMode)) throw new Error("setupMode must be scaffold or existing-site");
-  const requestedStops = diagnostic ? undefined : source.requestedStops === undefined ? [4, 5, 6].slice(0, source.prompts.length) : source.requestedStops;
+  if (journey ? setupMode !== "unscaffolded" : !["scaffold", "existing-site"].includes(setupMode)) throw new Error("setupMode must be scaffold or existing-site for schemas 1/2, explicitly unscaffolded for full-journey");
+  const requestedStops = diagnostic ? undefined : !journey && source.requestedStops === undefined ? [4, 5, 6].slice(0, source.prompts.length) : source.requestedStops;
   if (diagnostic) {
     if (Object.hasOwn(source, "requestedStops")) throw new Error("prototype-depth does not request journey stops");
     if (source.prompts.length !== 1 || source.bounds?.maxTurns !== 1) throw new Error("prototype-depth requires exactly one fixed prompt and one allowed turn");
+  } else if (journey) {
+    if (!Array.isArray(requestedStops) || requestedStops.length !== 6 || requestedStops.some((stop, index) => stop !== index + 1)) throw new Error("full-journey requires explicit requestedStops: [1, 2, 3, 4, 5, 6]");
+    if (source.prompts.length !== 6 || new Set(source.prompts).size !== 6 || source.bounds?.maxTurns !== 6) throw new Error("full-journey requires six distinct fixed prompts and maxTurns: 6");
   } else if (!Array.isArray(requestedStops) || requestedStops.length !== source.prompts.length || requestedStops.some((stop, index) => ![4, 5, 6].includes(stop) || (index > 0 && stop <= requestedStops[index - 1]))) throw new Error("requestedStops must match the prompts as an ordered unique subset of 4, 5 and 6");
-  const refusalTurns = source.refusalTurns === undefined ? diagnostic ? [1] : [2, 3].filter(turn => turn <= source.prompts.length) : source.refusalTurns;
+  const refusalTurns = source.refusalTurns === undefined && !journey ? diagnostic ? [1] : [2, 3].filter(turn => turn <= source.prompts.length) : source.refusalTurns;
   if (!Array.isArray(refusalTurns) || refusalTurns.some((turn, index) => !Number.isSafeInteger(turn) || turn < 1 || turn > source.prompts.length || (index > 0 && turn <= refusalTurns[index - 1]))) throw new Error("refusalTurns must be ordered unique turn numbers within the prompt list");
   if (diagnostic && (refusalTurns.length !== 1 || refusalTurns[0] !== 1)) throw new Error("prototype-depth requires the fixed opening refusalTurns: [1]");
   for (const key of ["maxTurns", "turnTimeoutMs", "maxWallMs", "maxTokens"]) positive(source.bounds?.[key], key);
@@ -72,12 +76,17 @@ export function validateCase(source) {
     snapshot[key].forEach(path => { safePath(path); if (path.split("/").some(part => EXCLUDED.has(part))) throw new Error(`Excluded snapshot path: ${path}`); });
   }
   for (const key of ["maxFiles", "maxBytes", "maxFileBytes"]) positive(snapshot[key], key);
+  if (journey) {
+    const underRoot = path => snapshot.roots.some(root => path === root || path.startsWith(`${root}/`));
+    if (!underRoot(".agents/skills/storyfolio") || source.files.some(path => !underRoot(path) && !snapshot.files.includes(path))) throw new Error("full-journey snapshot must cover every fixture file and the complete installed skill tree");
+  }
   return { ...source, setupMode, ...(diagnostic ? {} : { requestedStops }), refusalTurns, snapshot };
 }
 
-/** Diagnostic identity is not a journey-stop alias. Keep legacy records unchanged. */
+/** Versioned task identity never relabels a diagnostic or an early stop as stop 4. */
 export function buildTaskIdentity(source, turn) {
-  return source.taskKind === "prototype-depth" ? { taskKind: source.taskKind } : turn === undefined ? { requestedStops: source.requestedStops } : { requestedStop: source.requestedStops[turn - 1] };
+  if (source.taskKind === "prototype-depth") return { taskKind: source.taskKind };
+  return { ...(source.taskKind === "full-journey" ? { taskKind: source.taskKind } : {}), ...(turn === undefined ? { requestedStops: source.requestedStops } : { requestedStop: source.requestedStops[turn - 1] }) };
 }
 
 export async function inspectBuildInputs({ root, casePath, capabilities, implementationFiles = IMPLEMENTATION_FILES }) {
@@ -125,20 +134,76 @@ export async function populateBuildWorkspace(inputs, work, { beforeScaffold } = 
   const source = validateCase(JSON.parse(await regularBytes(inputs, "case.json")));
   const initialEntries = (await readdir(work, { withFileTypes: true }).catch(error => { if (error.code === "ENOENT") return []; throw error; }))
     .map(entry => ({ name: entry.name, type: entry.isDirectory() ? "directory" : entry.isSymbolicLink() ? "symlink" : "file" })).sort((a, b) => a.name.localeCompare(b.name));
+  if (source.setupMode === "unscaffolded" && ((await exists(work))?.isSymbolicLink() || initialEntries.length)) throw new Error("Unscaffolded setup requires a fresh empty nonsymlink workspace; existing entries are preserved");
   for (const path of Object.keys(manifest.hashes)) {
     const destination = path.startsWith("fixture/") ? path.slice(8) : path.startsWith("skill/") ? `.agents/skills/storyfolio/${path.slice(6)}` : null;
     if (destination) await writeNew(join(work, destination), await readFile(join(inputs, path)));
   }
   const inventory = { schemaVersion: 1, setupMode: source.setupMode, initialEntries, files: await fileTree(work),
     fixtureFiles: Object.keys(manifest.hashes).filter(path => path.startsWith("fixture/")).map(path => path.slice(8)).sort(),
-    phase: source.setupMode === "existing-site"
+    phase: source.setupMode === "unscaffolded"
+      ? "Declared material, supplied assets and unchanged skill copied only. No root application or approval history is seeded; actor preflight and scaffolding have not occurred."
+      : source.setupMode === "existing-site"
       ? "Existing site fixture and unchanged skill copied; engine scaffolding is explicitly skipped."
       : "Fixture and unchanged skill copied; engine not scaffolded yet. Installed skill engine files under .agents are not an existing root-level site." };
   if (beforeScaffold) await beforeScaffold(inventory);
-  if (source.setupMode === "existing-site") return { setupMode: source.setupMode, scaffolded: false, copied: [], conflicts: [], inventory };
+  if (source.setupMode !== "scaffold") return { setupMode: source.setupMode, scaffolded: false, copied: [], conflicts: [], inventory };
   const result = await scaffold(work, { source: join(inputs, "skill/engine") });
   if (result.conflicts.length) throw new Error(`Fixture conflicts with scaffold: ${result.conflicts.join(", ")}`);
   return { ...result, setupMode: source.setupMode, scaffolded: true, inventory };
+}
+
+function initialJourneyHashes(manifest) {
+  return Object.fromEntries(Object.entries(manifest.hashes).flatMap(([path, digest]) =>
+    path.startsWith("fixture/") ? [[path.slice(8), digest]] : path.startsWith("skill/") ? [[`.agents/skills/storyfolio/${path.slice(6)}`, digest]] : []));
+}
+
+function assertInitialJourneySnapshot(snapshot, manifest) {
+  const expected = initialJourneyHashes(manifest);
+  if (snapshot.schemaVersion !== 1 || !snapshot.files || json(Object.keys(snapshot.files).sort()) !== json(Object.keys(expected).sort()) || !Array.isArray(snapshot.excluded) || snapshot.excluded.length || !Array.isArray(snapshot.unexpected) || snapshot.unexpected.length) throw new Error("Unscaffolded snapshot must contain exactly frozen material, assets and skill, with no excluded or unexpected inputs");
+  for (const [path, digest] of Object.entries(expected)) if (snapshot.files[path]?.type !== "file" || snapshot.files[path].hash !== digest) throw new Error(`Unscaffolded snapshot differs from frozen input: ${path}`);
+}
+
+/** Legacy probe semantics are unchanged. Only schema 3 claims environment readiness, not actor preflight. */
+export async function verifyBuildSetupProbe({ source, manifest, setup, work }) {
+  source = validateCase(source);
+  const probe = JSON.parse(await regularBytes(setup, "probe.json"));
+  if (probe.schemaVersion !== 1 || probe.passed !== true || probe.inputDigest !== manifest.digest || probe.capabilitySha256 !== manifest.hashes["capabilities.json"] || probe.work !== work || !Array.isArray(probe.evidence) || !probe.evidence.length) throw new Error("A passing saved capability probe for these exact inputs and workspace is required before paid execution");
+  const journey = source.schemaVersion === 3;
+  if (journey && (probe.scope !== "unscaffolded-environment" || probe.actorPreflight !== false || probe.modelCalls !== 0)) throw new Error("full-journey requires an unscaffolded-environment probe with actorPreflight: false and modelCalls: 0");
+  if (journey && (!probe.evidenceHashes || Array.isArray(probe.evidenceHashes) || probe.evidence.length < 2 || new Set(probe.evidence).size !== probe.evidence.length || json(Object.keys(probe.evidenceHashes).sort()) !== json([...probe.evidence].sort()) || !probe.evidence.includes("snapshot/manifest.json"))) throw new Error("full-journey requires an exact hashed environment evidence inventory including snapshot/manifest.json");
+  for (const path of probe.evidence) {
+    const bytes = await regularBytes(setup, path);
+    if (journey && (probe.evidenceHashes[path]?.sha256 !== hash(bytes) || probe.evidenceHashes[path]?.bytes !== bytes.length)) throw new Error(`Setup evidence changed: ${path}`);
+  }
+  if (journey) {
+    const snapshot = JSON.parse(await regularBytes(setup, "snapshot/manifest.json"));
+    assertInitialJourneySnapshot(snapshot, manifest);
+    for (const [path, record] of Object.entries(snapshot.files)) {
+      const bytes = await regularBytes(join(setup, "snapshot/files"), path);
+      if (hash(bytes) !== record.hash || bytes.length !== record.size) throw new Error(`Unscaffolded snapshot copy changed: ${path}`);
+    }
+  }
+  return probe;
+}
+
+/** Schema-3 gates bind live source. Unknown payloads are not copied; existing Git classification still reads bounded markers. */
+async function verifyJourneySource(work, snapshot, { initial = false } = {}) {
+  if (!(await lstat(work)).isDirectory()) throw new Error("full-journey workspace must be a nonsymlink directory");
+  if (snapshot.schemaVersion !== 1 || !snapshot.files || Array.isArray(snapshot.files)) throw new Error("full-journey requires a saved source snapshot");
+  const paths = Object.keys(snapshot.files).sort();
+  for (const path of paths) {
+    safePath(path);
+    const record = snapshot.files[path];
+    if (record?.type !== "file" || !/^[a-f0-9]{64}$/.test(record.hash) || !Number.isSafeInteger(record.size) || record.size < 0) throw new Error(`full-journey source binding requires regular hashed files: ${path}`);
+  }
+  // The initial root has never run an actor or scaffold. Later source uses
+  // the existing generated-tree policy, with no broader Git exclusions.
+  if (json((await fileTree(work, "", !initial)).sort()) !== json(paths)) throw new Error("Full-journey source inventory differs from approved snapshot; no turn was launched");
+  for (const path of paths) {
+    const bytes = await regularBytes(work, path), record = snapshot.files[path];
+    if (hash(bytes) !== record.hash || bytes.length !== record.size) throw new Error(`Full-journey source changed after the approved snapshot: ${path}`);
+  }
 }
 
 /** Read only allowlisted source trees. Binary bytes remain bytes; generated trees are never walked. */
@@ -239,6 +304,7 @@ export function planTurn({ turn, source, history, gate }) {
   if (turn > source.bounds.maxTurns) throw new Error("Turn limit reached");
   if (history.length !== turn - 1) throw new Error("Turns must be contiguous; existing turns are never overwritten");
   if (history.some(item => !item.complete)) throw new Error("Failed turn is preserved; choose a new repetition for an explicit retry");
+  if (source.schemaVersion === 3 && history.some((item, index) => item.taskKind !== "full-journey" || item.requestedStop !== source.requestedStops[index] || item.sessionId !== history[0].sessionId)) throw new Error("full-journey history must preserve each actual requested stop in one conversation");
   const requireCached = source.bounds.maxUncachedTokens !== undefined;
   let elapsedMs = 0, inputTokens = 0, outputTokens = 0, cachedInputTokens = 0;
   const add = (sum, value) => {
@@ -324,12 +390,19 @@ export async function readTurnHistory(out) {
 }
 
 export async function executeBuildTurn({ out, work, inputs, source, capabilities, turn, gate, invoke = invokeBuildCodex }) {
-  await verifyInputs(inputs);
+  const manifest = await verifyInputs(inputs);
   const frozenSource = validateCase(JSON.parse(await regularBytes(inputs, "case.json")));
   if (json(validateCase(source)) !== json(frozenSource)) throw new Error("Actor case differs from frozen inputs");
   source = frozenSource;
   const history = await readTurnHistory(out);
   const limits = planTurn({ turn, source, history, gate });
+  if (source.schemaVersion === 3) {
+    const path = turn === 1 ? "setup/snapshot/manifest.json" : `turns/${String(turn - 1).padStart(2, "0")}/snapshot/manifest.json`;
+    const snapshot = JSON.parse(await regularBytes(out, path));
+    if (turn === 1) assertInitialJourneySnapshot(snapshot, manifest);
+    else if (json(snapshot) !== json(history.at(-1).snapshot)) throw new Error("Previous source snapshot differs from the saved actor result");
+    await verifyJourneySource(work, snapshot, { initial: turn === 1 });
+  }
   const location = join(out, "turns", String(turn).padStart(2, "0"));
   await mkdir(join(out, "turns"), { recursive: true });
   await mkdir(location);

@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "prepared": "2026-10-12",
+  "candidateCohort": "codex-build-wording-candidate-1",
+  "baselineCohort": "codex-build-completion-1",
+  "baselineInputDigest": "d0e14ef568c0d136796be8434b86ae65c884ced13102d8cb83950cef13a0f824",
+  "controlsCohort": "codex-bench-entry-candidate-1",
+  "controlsInputDigest": "5cb0491da31d429b09082c298f475546c1ec10ccc003cafa1bb037aea5e309e9",
+  "status": "Source preparation only. Not executed, frozen, installed, probed or ready for a paid turn.",
+  "derivations": [
+    {
+      "source": "evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs",
+      "sourceSha256": "a20f112337703d85b1c04618f1a5d5d79601f7c3319641a3306fc50cbee681b4",
+      "sourceBytes": 5449,
+      "sourceFrozenCohort": "codex-bench-entry-candidate-1",
+      "sourceFrozenPath": "implementation/evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs",
+      "target": "evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs",
+      "replacements": [
+        {
+          "from": "../../../lib/build.mjs",
+          "to": "../../../../lib/build.mjs",
+          "count": 1
+        },
+        {
+          "from": "resolve(study, \"../../../..\")",
+          "to": "resolve(study, \"../../../../..\")",
+          "count": 1
+        },
+        {
+          "from": "codex-bench-entry-candidate-1",
+          "to": "codex-build-wording-candidate-1",
+          "count": 2
+        },
+        {
+          "from": "bench-entry-1",
+          "to": "embedded-completion-1",
+          "count": 4
+        },
+        {
+          "from": "entry candidate",
+          "to": "wording candidate",
+          "count": 2
+        },
+        {
+          "from": "Identity-only derivative of stage-3-natural-entry-1",
+          "to": "Existing-site derivative of the entry-candidate controls",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(source.requestedStops, [4]);",
+          "to": "assert.deepEqual(source.requestedStops, [5, 6]);",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(source.refusalTurns, []);",
+          "to": "assert.deepEqual(source.refusalTurns, [1, 2]);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(source.taskKind, undefined);",
+          "to": "assert.equal(source.taskKind, undefined);\nassert.equal(source.setupMode, \"existing-site\");\nassert.equal(source.files.length, 97);",
+          "count": 1
+        }
+      ],
+      "targetSha256": "09970e975cfd806b37c85fbb146dec351a3aba9b2fac56dd18eaf9fd4aeb9eb2",
+      "targetBytes": 5595
+    },
+    {
+      "source": "evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs",
+      "sourceSha256": "84d806872d318862a8d680fe7ff6d61e7a2774af545519087bd9bfc0db6a7221",
+      "sourceBytes": 11021,
+      "sourceFrozenCohort": "codex-bench-entry-candidate-1",
+      "sourceFrozenPath": "implementation/evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs",
+      "target": "evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs",
+      "replacements": [
+        {
+          "from": "../../../lib/build.mjs",
+          "to": "../../../../lib/build.mjs",
+          "count": 1
+        },
+        {
+          "from": "resolve(study, \"../../../..\")",
+          "to": "resolve(study, \"../../../../..\")",
+          "count": 1
+        },
+        {
+          "from": "codex-bench-entry-candidate-1",
+          "to": "codex-build-wording-candidate-1",
+          "count": 1
+        },
+        {
+          "from": "bench-entry-1",
+          "to": "embedded-completion-1",
+          "count": 2
+        },
+        {
+          "from": "evals/runs/stage-3-completion-2/entry-candidate-preparation/",
+          "to": "evals/runs/stage-3-completion-2/wording/preparation/",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(source.requestedStops, [4]);",
+          "to": "assert.deepEqual(source.requestedStops, [5, 6]);",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(source.refusalTurns, []);",
+          "to": "assert.deepEqual(source.refusalTurns, [1, 2]);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(source.taskKind, undefined);",
+          "to": "assert.equal(source.taskKind, undefined);\nassert.equal(source.setupMode, \"existing-site\");\nassert.equal(source.files.length, 97);",
+          "count": 1
+        },
+        {
+          "from": "inputDigest: manifest.digest, node: capabilities.node,",
+          "to": "inputDigest: manifest.digest, setupMode: \"existing-site\", node: capabilities.node,",
+          "count": 1
+        },
+        {
+          "from": "the supplied starter at 1440 by 900",
+          "to": "the supplied existing site at 1440 by 900",
+          "count": 1
+        },
+        {
+          "from": "ordinary build entry or visual acceptance",
+          "to": "completed portfolio or visual acceptance",
+          "count": 1
+        }
+      ],
+      "targetSha256": "86fa83bdf627f0abc975e7b3f79c62cdd703ca42f4ac10ca5e2524c2ab7cbcfe",
+      "targetBytes": 11165
+    },
+    {
+      "source": "evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs",
+      "sourceSha256": "b285f8e8c579157428dd1114ddd8ecd77ca3f0cf26f2389f5fe44ecd6de062ea",
+      "sourceBytes": 17096,
+      "sourceFrozenCohort": "codex-bench-entry-candidate-1",
+      "sourceFrozenPath": "implementation/evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs",
+      "target": "evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs",
+      "replacements": [
+        {
+          "from": "../../../lib/build.mjs",
+          "to": "../../../../lib/build.mjs",
+          "count": 1
+        },
+        {
+          "from": "resolve(study, \"../../../..\")",
+          "to": "resolve(study, \"../../../../..\")",
+          "count": 1
+        },
+        {
+          "from": "codex-bench-entry-candidate-1",
+          "to": "codex-build-wording-candidate-1",
+          "count": 2
+        },
+        {
+          "from": "bench-entry-1",
+          "to": "embedded-completion-1",
+          "count": 5
+        },
+        {
+          "from": "entry candidate",
+          "to": "wording candidate",
+          "count": 1
+        },
+        {
+          "from": "candidate entry",
+          "to": "candidate wording",
+          "count": 1
+        },
+        {
+          "from": "Identity-only derivative of stage-3-natural-entry-1",
+          "to": "Existing-site derivative of the entry-candidate controls",
+          "count": 1
+        },
+        {
+          "from": "evals/runs/stage-3-completion-2/entry-candidate-preparation/",
+          "to": "evals/runs/stage-3-completion-2/wording/preparation/",
+          "count": 3
+        },
+        {
+          "from": "assert.deepEqual(source.requestedStops, [4]);",
+          "to": "assert.deepEqual(source.requestedStops, [5, 6]);",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(source.refusalTurns, []);",
+          "to": "assert.deepEqual(source.refusalTurns, [1, 2]);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(source.setupMode, \"scaffold\");",
+          "to": "assert.equal(source.setupMode, \"existing-site\");\n  assert.equal(source.files.length, 97);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(source.prompts.length, 1);",
+          "to": "assert.equal(source.prompts.length, 2);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(source.bounds.maxTurns, 1);",
+          "to": "assert.equal(source.bounds.maxTurns, 2);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(source.bounds.maxWallMs, 900000);",
+          "to": "assert.equal(source.bounds.maxWallMs, 1500000);\n  assert.equal(source.bounds.maxTokens, 12000000);\n  assert.equal(source.bounds.maxUncachedTokens, 350000);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal((await regularBytes(inputs, \"prompts/turn1.md\")).toString(\"utf8\"), \"Yes to the storyboard in docs/story/storyboard.md. Please build it.\\n\");",
+          "to": "assert.equal(hash(await regularBytes(inputs, \"prompts/turn1.md\")), \"ca6b5952c82faca50e9f487c6493e3dfee73042f40af81d8b983c0a7e2d6113f\");\n  assert.equal(hash(await regularBytes(inputs, \"prompts/turn2.md\")), \"ea0ed159f2cc04bc0cc9a01a703d3d0065351b44eacb8625b348792dcccf0f0e\");",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(meta.requestedStops, [4]);",
+          "to": "assert.deepEqual(meta.requestedStops, [5, 6]);",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(meta.refusalTurns, []);",
+          "to": "assert.deepEqual(meta.refusalTurns, [1, 2]);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(prepared.scaffold.scaffolded, true);",
+          "to": "assert.equal(prepared.setupMode, \"existing-site\");\n  assert.equal(prepared.scaffold.setupMode, \"existing-site\");\n  assert.equal(prepared.scaffold.scaffolded, false);\n  assert.deepEqual(prepared.scaffold.copied, []);",
+          "count": 1
+        },
+        {
+          "from": "    if (path.startsWith(\"skill/engine/\")) { const target = path.slice(13); assert.ok(!expected[target], `Fixture/scaffold collision: ${target}`); expected[target] = record(bytes); }\n",
+          "to": "",
+          "count": 1
+        },
+        {
+          "from": "assert.deepEqual(inventory.initialEntries, []);",
+          "to": "assert.equal(inventory.setupMode, \"existing-site\");\n  assert.deepEqual(inventory.initialEntries, []);",
+          "count": 1
+        },
+        {
+          "from": "assert.equal(actorSetup.actorPreflight, false);",
+          "to": "assert.equal(actorSetup.actorPreflight, false);\n  assert.equal(actorSetup.setupMode, \"existing-site\");",
+          "count": 1
+        },
+        {
+          "from": "initialScaffoldFiles: Object.keys(snapshot.files).length",
+          "to": "initialSourceFiles: Object.keys(snapshot.files).length, scaffolded: false",
+          "count": 1
+        }
+      ],
+      "targetSha256": "0eebcd6bc6e790bb581adcde65ff984d7a96394d7e24a90e86f8be52473f25e5",
+      "targetBytes": 17530
+    },
+    {
+      "source": "evals/builds/embedded-completion-1/case.json",
+      "sourceSha256": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb",
+      "sourceBytes": 4167,
+      "sourceFrozenCohort": "codex-build-completion-1",
+      "sourceFrozenPath": "case.json",
+      "target": "evals/runs/stage-3-completion-2/wording/preparation/case.json",
+      "replacements": [
+        {
+          "from": "\"evals/prompts/build-criteria.md\"\n  ],\n  \"refusalTurns\"",
+          "to": "\"evals/prompts/build-criteria.md\",\n    \"evals/runs/stage-3-completion-2/wording/preparation/check-ready.mjs\",\n    \"evals/runs/stage-3-completion-2/wording/preparation/finalize-setup.mjs\",\n    \"evals/runs/stage-3-completion-2/wording/preparation/run-capability-probe.mjs\"\n  ],\n  \"refusalTurns\"",
+          "count": 1
+        }
+      ],
+      "targetSha256": "c3ce9faceef8679fece7789ee8fe5d495ca1c4e3cae799ca2b207030b079e633",
+      "targetBytes": 4404
+    }
+  ],
+  "coordinatorContractBindings": [
+    {
+      "current": "evals/builds/embedded-completion-1/case.json",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/case.json",
+      "currentRecord": {
+        "path": "evals/builds/embedded-completion-1/case.json",
+        "bytes": 4167,
+        "sha256": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/case.json",
+        "bytes": 4167,
+        "sha256": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/prompts/build-completion-turn1.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/prompts/turn1.md",
+      "currentRecord": {
+        "path": "evals/prompts/build-completion-turn1.md",
+        "bytes": 1204,
+        "sha256": "ca6b5952c82faca50e9f487c6493e3dfee73042f40af81d8b983c0a7e2d6113f"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/prompts/turn1.md",
+        "bytes": 1204,
+        "sha256": "ca6b5952c82faca50e9f487c6493e3dfee73042f40af81d8b983c0a7e2d6113f"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/prompts/build-turn3.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/prompts/turn2.md",
+      "currentRecord": {
+        "path": "evals/prompts/build-turn3.md",
+        "bytes": 396,
+        "sha256": "ea0ed159f2cc04bc0cc9a01a703d3d0065351b44eacb8625b348792dcccf0f0e"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/prompts/turn2.md",
+        "bytes": 396,
+        "sha256": "ea0ed159f2cc04bc0cc9a01a703d3d0065351b44eacb8625b348792dcccf0f0e"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/builds/embedded-completion-1/expectations.json",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/expectations.json",
+      "currentRecord": {
+        "path": "evals/builds/embedded-completion-1/expectations.json",
+        "bytes": 6095,
+        "sha256": "a75187339af15ec34dc8adf6a56989d56873cf5adb04ba1a0f2ab663b5d8d01a"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/expectations.json",
+        "bytes": 6095,
+        "sha256": "a75187339af15ec34dc8adf6a56989d56873cf5adb04ba1a0f2ab663b5d8d01a"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/prompts/build-criteria.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/rubric.md",
+      "currentRecord": {
+        "path": "evals/prompts/build-criteria.md",
+        "bytes": 11265,
+        "sha256": "14f7f2f196db33b408231a03cb594396392ca9d5baf108a60cf5c660a41add23"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/rubric.md",
+        "bytes": 11265,
+        "sha256": "14f7f2f196db33b408231a03cb594396392ca9d5baf108a60cf5c660a41add23"
+      },
+      "equal": true
+    },
+    {
+      "current": "docs/superpowers/plans/2026-10-11-build-completion-proposal.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/protocol.md",
+      "currentRecord": {
+        "path": "docs/superpowers/plans/2026-10-11-build-completion-proposal.md",
+        "bytes": 6218,
+        "sha256": "045753f532efcb87d124c868d53769c5304544f282768ed352e7050ebecc0f71"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/protocol.md",
+        "bytes": 4807,
+        "sha256": "66f9fd88459e14b906ce24ae3dbe45ebeff66ef4e56a4402379af33fae950dfb"
+      },
+      "equal": false
+    }
+  ],
+  "fixture": {
+    "workspaceRoot": "evals/builds/embedded-completion-1/workspace",
+    "files": 97,
+    "bytes": 503374,
+    "sourceManifestPath": "evals/builds/embedded-completion-1/source-manifest.json",
+    "sourceManifestSha256": "a2e2808a33e6cf38e6fa538e6b50a9fbe626f3f24020b57652c72a5364864eac"
+  },
+  "caseChange": "Only append the three new coordinator setup helpers to implementationFiles. Existing actor files, prompts, setupMode, rubric, expectations and bounds remain unchanged.",
+  "declaredDifferences": [
+    "Current shipped skill and shared harness will be freshly frozen; compare their exact changed inputs before launch.",
+    "Current entry capability PATH uses node/bin, whereas the old completion PATH used node_modules/.bin; current disabled-skill inventory also adds meeting-notes-and-actions.",
+    "Current historical coordinator protocol differs from the old completion freeze, recorded in coordinatorContractBindings. No blanket protocol equality is claimed.",
+    "The newer setup controls enforce exact fixture-plus-skill source equality, sandbox probe evidence and nine original image reviews. This is fixture/prompt matching, not a single-variable causal comparison."
+  ],
+  "executionOwner": "root",
+  "modelCalls": 0,
+  "subprocessChecksRun": 0
+}

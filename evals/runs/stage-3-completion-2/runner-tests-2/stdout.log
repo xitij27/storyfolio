@@ -1,0 +1,203 @@
+TAP version 13
+# Subtest: full-journey has an explicit six-stop schema and cannot masquerade as a seeded build or diagnostic
+ok 1 - full-journey has an explicit six-stop schema and cannot masquerade as a seeded build or diagnostic
+  ---
+  duration_ms: 26.095336
+  type: 'test'
+  ...
+# Subtest: unscaffolded preparation copies only declared material/assets and installed skill into an empty root
+ok 2 - unscaffolded preparation copies only declared material/assets and installed skill into an empty root
+  ---
+  duration_ms: 126.788217
+  type: 'test'
+  ...
+# Subtest: legacy setup probes keep their original identity and existing-evidence requirements
+ok 3 - legacy setup probes keep their original identity and existing-evidence requirements
+  ---
+  duration_ms: 55.155718
+  type: 'test'
+  ...
+# Subtest: full-journey readiness binds neutral evidence and initial source without pretending actor preflight occurred
+ok 4 - full-journey readiness binds neutral evidence and initial source without pretending actor preflight occurred
+  ---
+  duration_ms: 124.331286
+  type: 'test'
+  ...
+# Subtest: full-journey plans all six actual stops with explicit gates and one conversation
+ok 5 - full-journey plans all six actual stops with explicit gates and one conversation
+  ---
+  duration_ms: 15.975485
+  type: 'test'
+  ...
+# Subtest: six synthetic full-journey turns preserve exact prompts, identities, snapshots and observed gates
+ok 6 - six synthetic full-journey turns preserve exact prompts, identities, snapshots and observed gates
+  ---
+  duration_ms: 2088.469128
+  type: 'test'
+  ...
+# Subtest: full-journey initial source rejects seeded, changed, generated or unrecorded bytes before invoking
+ok 7 - full-journey initial source rejects seeded, changed, generated or unrecorded bytes before invoking
+  ---
+  duration_ms: 158.581526
+  type: 'test'
+  ...
+# Subtest: full-journey continuation requires live source equality and does not relax non-bare Git metadata
+ok 8 - full-journey continuation requires live source equality and does not relax non-bare Git metadata
+  ---
+  duration_ms: 409.446864
+  type: 'test'
+  ...
+# Subtest: incomplete full-journey turns remain preserved and cannot continue or retry
+ok 9 - incomplete full-journey turns remain preserved and cannot continue or retry
+  ---
+  duration_ms: 225.253404
+  type: 'test'
+  ...
+# Subtest: build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+ok 10 - build inputs freeze fixture bytes, skill, engine lock, prompts, rubric, protocol and capabilities
+  ---
+  duration_ms: 77.40547
+  type: 'test'
+  ...
+# Subtest: declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+ok 11 - declared existing-site preparation retains supplied source and lockfile bytes without scaffolding
+  ---
+  duration_ms: 73.837111
+  type: 'test'
+  ...
+# Subtest: case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+ok 12 - case validation binds prompt count, ordered stop and refusal lists, and optional uncached bounds
+  ---
+  duration_ms: 16.475926
+  type: 'test'
+  ...
+# Subtest: prototype-depth is a versioned one-turn task, never an alias for a journey stop
+ok 13 - prototype-depth is a versioned one-turn task, never an alias for a journey stop
+  ---
+  duration_ms: 10.685422
+  type: 'test'
+  ...
+# Subtest: prototype task identity is frozen and failed single attempts cannot overwrite or advance
+ok 14 - prototype task identity is frozen and failed single attempts cannot overwrite or advance
+  ---
+  duration_ms: 229.89473
+  type: 'test'
+  ...
+# Subtest: current source or frozen input drift cannot silently reuse a build cohort
+ok 15 - current source or frozen input drift cannot silently reuse a build cohort
+  ---
+  duration_ms: 188.010724
+  type: 'test'
+  ...
+# Subtest: fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+ok 16 - fresh legacy cohorts automatically freeze the checker and judge transitive capture helper
+  ---
+  duration_ms: 45.804058
+  type: 'test'
+  ...
+# Subtest: fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+ok 17 - fixture allowlists reject traversal, duplicates and symlinks; setup conflicts are preserved
+  ---
+  duration_ms: 55.836076
+  type: 'test'
+  ...
+# Subtest: snapshots preserve binary source, deletion and symlink records while excluding generated trees
+ok 18 - snapshots preserve binary source, deletion and symlink records while excluding generated trees
+  ---
+  duration_ms: 27.142955
+  type: 'test'
+  ...
+# Subtest: snapshot bounds fail before oversized source is copied
+ok 19 - snapshot bounds fail before oversized source is copied
+  ---
+  duration_ms: 12.698749
+  type: 'test'
+  ...
+# Subtest: turn planning requires observed gates and enforces turn, wall and soft token bounds
+ok 20 - turn planning requires observed gates and enforces turn, wall and soft token bounds
+  ---
+  duration_ms: 10.919549
+  type: 'test'
+  ...
+# Subtest: uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+ok 21 - uncached budget subtracts the cached subset and rejects the exact between-turn boundary
+  ---
+  duration_ms: 11.001401
+  type: 'test'
+  ...
+# Subtest: uncached and wall accounting aggregate every actor turn without double-counting output
+ok 22 - uncached and wall accounting aggregate every actor turn without double-counting output
+  ---
+  duration_ms: 10.292341
+  type: 'test'
+  ...
+# Subtest: uncached bound fails closed on missing or unreliable cached accounting
+ok 23 - uncached bound fails closed on missing or unreliable cached accounting
+  ---
+  duration_ms: 10.725575
+  type: 'test'
+  ...
+# Subtest: aggregate accounting rejects safe individual counters whose sum is unsafe
+ok 24 - aggregate accounting rejects safe individual counters whose sum is unsafe
+  ---
+  duration_ms: 13.327598
+  type: 'test'
+  ...
+# Subtest: build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+ok 25 - build arguments keep isolation and deliberately supply engine instructions with explicit capability overrides
+  ---
+  duration_ms: 0.716433
+  type: 'test'
+  ...
+# Subtest: actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+ok 26 - actual CLI parses frozen build capability arguments for fresh and resumed turns without a model call
+  ---
+  duration_ms: 34.274111
+  type: 'test'
+  ...
+# Subtest: CLI config serialization emits restricted TOML tables and rejects unsupported values
+ok 27 - CLI config serialization emits restricted TOML tables and rejects unsupported values
+  ---
+  duration_ms: 0.743614
+  type: 'test'
+  ...
+# Subtest: the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+ok 28 - the actual local capability profile becomes nested TOML CLI tables without legacy sandbox values
+  ---
+  duration_ms: 1.388934
+  type: 'test'
+  ...
+# Subtest: one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+ok 29 - one invocation preserves raw streams and source, resumes only with a reviewed gate, and refuses overwrite
+  ---
+  duration_ms: 351.157432
+  type: 'test'
+  ...
+# Subtest: failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+ok 30 - failed actor turns retain partial streams and source; incomplete turns cannot retry in place
+  ---
+  duration_ms: 163.558509
+  type: 'test'
+  ...
+# Subtest: actor timeout kills its process group including a descendant that ignores SIGTERM
+ok 31 - actor timeout kills its process group including a descendant that ignores SIGTERM
+  ---
+  duration_ms: 618.891756
+  type: 'test'
+  ...
+# Descendant cleanup observed after 1ms; final state: Z
+# Subtest: parent interruption terminates the actor and preserves partial output without retaining signal listeners
+ok 32 - parent interruption terminates the actor and preserves partial output without retaining signal listeners
+  ---
+  duration_ms: 74.941387
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5333.969634
