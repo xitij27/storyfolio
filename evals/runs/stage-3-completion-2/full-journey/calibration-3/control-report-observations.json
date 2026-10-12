@@ -1,0 +1,5648 @@
+{
+  "problems": [
+    "control-56e7c6a74afccc18/pointer: Post-activation scroll did not remain settled through the response original",
+    "control-56e7c6a74afccc18/pointer: declared control targets did not respond",
+    "control-56e7c6a74afccc18/pointer: no observable control response (requires review, not a functional pass)",
+    "control-7c30f7cd27b3b32b/keyboard: Post-activation scroll did not remain settled through the response original",
+    "control-7c30f7cd27b3b32b/keyboard: declared control targets did not respond",
+    "control-7c30f7cd27b3b32b/keyboard: no observable control response (requires review, not a functional pass)",
+    "control-584cd2843abe788e/keyboard: control was not reached and activated",
+    "control-d3d3b317ee1ad7b9/keyboard: control was not reached and activated",
+    "control-b8440473c2b2918b/keyboard: control was not reached and activated",
+    "control-3b99aa31e3e87023/keyboard: control was not reached and activated",
+    "control-6d13dcb4901deee3/keyboard: control was not reached and activated",
+    "control-e96fd7cd390c706b/keyboard: control was not reached and activated"
+  ],
+  "requests": [],
+  "warnings": [],
+  "errors": [],
+  "controls": [
+    {
+      "key": "control-4b4377bd3a0a1283",
+      "name": "Skip to the evidence",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#proof",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": false,
+          "activated": false,
+          "applicability": "not-applicable",
+          "targets": []
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 1,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "proof",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 196.140625,
+              "height": 44.59375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 12,
+              "y": 12,
+              "width": 196.140625,
+              "height": 44.59375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 12,
+              "y": -77.1875,
+              "width": 196.140625,
+              "height": 44.59375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 12,
+              "y": -77.1875,
+              "width": 196.140625,
+              "height": 44.59375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 439.8142029999872,
+            "stableForMs": 438.6329549999937,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 439.8142029999872,
+              "x": 0,
+              "y": 450
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1246.6130339999945,
+            "stableForMs": 160.41096999999718,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 24,
+            "last": {
+              "elapsedMs": 1246.6130339999945,
+              "x": 0,
+              "y": 4360
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-9dcf3c14f861d1f5",
+      "name": "amAda MensahEmbedded firmware",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > header:nth-of-type(1) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#opening",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "opening",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "after": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 435.23873399999866,
+            "stableForMs": 434.0015010000061,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 435.23873399999866,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 425.9624530000001,
+            "stableForMs": 425.09043999999994,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 425.9624530000001,
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 2,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "opening",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "after": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 32,
+              "width": 171.140625,
+              "height": 46
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 427.2762619999994,
+            "stableForMs": 422.63341200001014,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 427.2762619999994,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 424.7473100000061,
+            "stableForMs": 423.67285100001027,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 424.7473100000061,
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-02b4d792b6fce548",
+      "name": "Explore the work ↗",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > header:nth-of-type(1) > nav:nth-of-type(1) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#power",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "power",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": 33,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": 33,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": -1222,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": -1222,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 433.92847800000163,
+            "stableForMs": 432.6950439999928,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 433.92847800000163,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 821.2900400000071,
+            "stableForMs": 162.63774599999306,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 16,
+            "last": {
+              "elapsedMs": 821.2900400000071,
+              "x": 0,
+              "y": 1255
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 3,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "power",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": 33,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": 33,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": -1222,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1137.078125,
+              "y": -1222,
+              "width": 126.453125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 426.9770540000027,
+            "stableForMs": 426.0651780000044,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 426.9770540000027,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 808.8126179999963,
+            "stableForMs": 160.8255910000007,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 16,
+            "last": {
+              "elapsedMs": 808.8126179999963,
+              "x": 0,
+              "y": 1255
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-5081d714285764f9",
+      "name": "Evidence ↗",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > header:nth-of-type(1) > nav:nth-of-type(1) > a:nth-of-type(2)",
+      "tag": "a",
+      "role": null,
+      "href": "#proof",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "proof",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": 33,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": 33,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": -4327,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": -4327,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 451.5025170000008,
+            "stableForMs": 450.3472780000011,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 451.5025170000008,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1285.1908640000038,
+            "stableForMs": 157.6989590000012,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 25,
+            "last": {
+              "elapsedMs": 1285.1908640000038,
+              "x": 0,
+              "y": 4360
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 4,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "proof",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": 33,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": 33,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": -4327,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1295.53125,
+              "y": -4327,
+              "width": 79.671875,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 426.75094399999944,
+            "stableForMs": 425.7940940000117,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 426.75094399999944,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1303.9373990000167,
+            "stableForMs": 156.53650099999504,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 25,
+            "last": {
+              "elapsedMs": 1303.9373990000167,
+              "x": 0,
+              "y": 4360
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-0f8e3aaf82f087ca",
+      "name": "The question1",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > nav:nth-of-type(1) > ol:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#opening",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "opening",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "after": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 425.36502800000017,
+            "stableForMs": 424.40390999999363,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 425.36502800000017,
+              "x": 0,
+              "y": 450
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 588.9296350000077,
+            "stableForMs": 158.06969500001287,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 12,
+            "last": {
+              "elapsedMs": 588.9296350000077,
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 5,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "opening",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "after": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1135.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 588.667598,
+            "stableForMs": 158.93685699999332,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 12,
+            "last": {
+              "elapsedMs": 588.667598,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 425.1954909999913,
+            "stableForMs": 423.9124029999948,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 425.1954909999913,
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-0a853c2d30aa2f4c",
+      "name": "The schedule2",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > nav:nth-of-type(1) > ol:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#power",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "power",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 427.13122400001157,
+            "stableForMs": 426.06406899998547,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 427.13122400001157,
+              "x": 0,
+              "y": 450
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 691.0793739999935,
+            "stableForMs": 161.0234890000138,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 14,
+            "last": {
+              "elapsedMs": 691.0793739999935,
+              "x": 0,
+              "y": 1255
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 6,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "power",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1184.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 589.3797769999946,
+            "stableForMs": 158.18386400002055,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 12,
+            "last": {
+              "elapsedMs": 589.3797769999946,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 797.7070969999768,
+            "stableForMs": 162.21019199999864,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 16,
+            "last": {
+              "elapsedMs": 797.7070969999768,
+              "x": 0,
+              "y": 1255
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-bf76ca2eab6845cc",
+      "name": "The bench3",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > nav:nth-of-type(1) > ol:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#middle",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "middle",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 2740,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 2740,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 428.71522700000787,
+            "stableForMs": 427.32380799998646,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 428.71522700000787,
+              "x": 0,
+              "y": 450
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1119.691960999975,
+            "stableForMs": 251.3965409999946,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 18,
+            "last": {
+              "elapsedMs": 1119.691960999975,
+              "x": 0,
+              "y": 2740
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 7,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "middle",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 2740,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 2740,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1233.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "middle",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 605.5526079999981,
+            "stableForMs": 158.3562320000201,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 12,
+            "last": {
+              "elapsedMs": 605.5526079999981,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1124.2540650000155,
+            "stableForMs": 205.11909799999557,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 20,
+            "last": {
+              "elapsedMs": 1124.2540650000155,
+              "x": 0,
+              "y": 2740
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-56e7c6a74afccc18",
+      "name": "The evidence4",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > nav:nth-of-type(1) > ol:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#proof",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": false,
+          "error": "Post-activation scroll did not remain settled through the response original",
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "proof",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": false
+            }
+          ],
+          "responseStatus": "unobserved",
+          "before": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 425.03425699999207,
+            "stableForMs": 424.04924400002346,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 425.03425699999207,
+              "x": 0,
+              "y": 450
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1135.0187189999851,
+            "stableForMs": 160.26287999999477,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 22,
+            "last": {
+              "elapsedMs": 1135.0187189999851,
+              "x": 0,
+              "y": 4318
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 8,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "proof",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 4360,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1282.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "proof",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 530.7352379999938,
+            "stableForMs": 158.33465099998284,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 11,
+            "last": {
+              "elapsedMs": 530.7352379999938,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1303.5844700000016,
+            "stableForMs": 158.06719000000157,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 25,
+            "last": {
+              "elapsedMs": 1303.5844700000016,
+              "x": 0,
+              "y": 4360
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-7c30f7cd27b3b32b",
+      "name": "The scope5",
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > nav:nth-of-type(1) > ol:nth-of-type(1) > li:nth-of-type(5) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#close",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "close",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 5980,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 5980,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 429.8899720000045,
+            "stableForMs": 426.4262630000012,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 429.8899720000045,
+              "x": 0,
+              "y": 450
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1448.869571999996,
+            "stableForMs": 157.70252699998673,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 28,
+            "last": {
+              "elapsedMs": 1448.869571999996,
+              "x": 0,
+              "y": 5980
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 9,
+          "activated": true,
+          "changed": false,
+          "error": "Post-activation scroll did not remain settled through the response original",
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "close",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": false
+            }
+          ],
+          "responseStatus": "unobserved",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 5948,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 5980,
+            "scrollX": 0,
+            "geometry": {
+              "x": 1331.203125,
+              "y": 786.625,
+              "width": 44,
+              "height": 50.375
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "close",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 528.8110449999804,
+            "stableForMs": 157.78158199999598,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 11,
+            "last": {
+              "elapsedMs": 528.8110449999804,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1328.0648879999935,
+            "stableForMs": 156.6980479999911,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 26,
+            "last": {
+              "elapsedMs": 1328.0648879999935,
+              "x": 0,
+              "y": 5948
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-0eecc2c675ff83aa",
+      "name": "↓ Follow the work",
+      "selector": "#opening > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#power",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "power",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 751,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 450,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 751,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": -70,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": -70,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 430.17685300001176,
+            "stableForMs": 428.83546699999715,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 430.17685300001176,
+              "x": 0,
+              "y": 450
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 693.2220749999979,
+            "stableForMs": 157.6101969999727,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 14,
+            "last": {
+              "elapsedMs": 693.2220749999979,
+              "x": 0,
+              "y": 1255
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 10,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "power",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 751,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 751,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": -70,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 1255,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": -70,
+              "width": 134.015625,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "power",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 531.6171040000045,
+            "stableForMs": 158.1495579999755,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 11,
+            "last": {
+              "elapsedMs": 531.6171040000045,
+              "x": 0,
+              "y": 0
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 800.4767209999845,
+            "stableForMs": 158.49743200000376,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 16,
+            "last": {
+              "elapsedMs": 800.4767209999845,
+              "x": 0,
+              "y": 1255
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-584cd2843abe788e",
+      "name": "Back to the question ↑",
+      "selector": "#scope > div:nth-of-type(1) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#opening",
+      "observedScroll": 450,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "opening",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 7351,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 657.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 7351,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 657.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 8008.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 8008.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 425.4365519999992,
+            "stableForMs": 424.37393500003964,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 425.4365519999992,
+              "x": 0,
+              "y": 7351
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1684.4356089999783,
+            "stableForMs": 160.14169700001366,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 32,
+            "last": {
+              "elapsedMs": 1684.4356089999783,
+              "x": 0,
+              "y": 0
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 16,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "opening",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 6920,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 1088.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 6920,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 1088.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 8008.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 0,
+            "scrollX": 0,
+            "geometry": {
+              "x": 115.1875,
+              "y": 8008.3125,
+              "width": 138.03125,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": false,
+            "focused": false,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "opening",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 590.1146210000152,
+            "stableForMs": 159.67731699999422,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 12,
+            "last": {
+              "elapsedMs": 590.1146210000152,
+              "x": 0,
+              "y": 6920
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1595.2159819999943,
+            "stableForMs": 157.2640600000159,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 31,
+            "last": {
+              "elapsedMs": 1595.2159819999943,
+              "x": 0,
+              "y": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-d3d3b317ee1ad7b9",
+      "name": "01Command",
+      "selector": "#middle > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+      "tag": "button",
+      "role": null,
+      "href": null,
+      "observedScroll": 3555,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 423.5137119999854,
+            "stableForMs": 422.1495339999674,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 423.5137119999854,
+              "x": 0,
+              "y": 3555
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 434.8547350000008,
+            "stableForMs": 427.41855900001246,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 434.8547350000008,
+              "x": 0,
+              "y": 3555
+            }
+          },
+          "peerPreparation": {
+            "index": 11,
+            "attribute": "aria-pressed",
+            "relationship": "same declared pressed-button group",
+            "targetValue": "true",
+            "peerValue": "false",
+            "peerLabel": "02Board",
+            "groupRole": "group",
+            "groupLabel": "Explore the observation relationship",
+            "settlement": {
+              "settled": true,
+              "elapsedMs": 433.41184999997495,
+              "stableForMs": 432.46114099997794,
+              "policy": {
+                "maxMs": 3000,
+                "stableMs": 150,
+                "minimumMs": 400,
+                "intervalMs": 50,
+                "tolerancePx": 0.5
+              },
+              "error": null,
+              "observations": 8,
+              "last": {
+                "elapsedMs": 433.41184999997495,
+                "x": 0,
+                "y": 3555
+              }
+            },
+            "targetAfter": "false",
+            "peerAfter": "true",
+            "verified": true
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 11,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1106.9476739999955,
+            "stableForMs": 158.60415400000056,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 22,
+            "last": {
+              "elapsedMs": 1106.9476739999955,
+              "x": 0,
+              "y": 710
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 423.7077449999633,
+            "stableForMs": 422.7038080000202,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 423.7077449999633,
+              "x": 0,
+              "y": 710
+            }
+          },
+          "peerPreparation": {
+            "index": 11,
+            "attribute": "aria-pressed",
+            "relationship": "same declared pressed-button group",
+            "targetValue": "true",
+            "peerValue": "false",
+            "peerLabel": "02Board",
+            "groupRole": "group",
+            "groupLabel": "Explore the observation relationship",
+            "settlement": {
+              "settled": true,
+              "elapsedMs": 417.0069760000333,
+              "stableForMs": 415.737163999991,
+              "policy": {
+                "maxMs": 3000,
+                "stableMs": 150,
+                "minimumMs": 400,
+                "intervalMs": 50,
+                "tolerancePx": 0.5
+              },
+              "error": null,
+              "observations": 8,
+              "last": {
+                "elapsedMs": 417.0069760000333,
+                "x": 0,
+                "y": 3555
+              }
+            },
+            "targetAfter": "false",
+            "peerAfter": "true",
+            "verified": true
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-b8440473c2b2918b",
+      "name": "02Board",
+      "selector": "#middle > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)",
+      "tag": "button",
+      "role": null,
+      "href": null,
+      "observedScroll": 3555,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 424.6843629999785,
+            "stableForMs": 423.59395299997414,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 424.6843629999785,
+              "x": 0,
+              "y": 3555
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 444.36564199998975,
+            "stableForMs": 442.2964619999984,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 444.36564199998975,
+              "x": 0,
+              "y": 3555
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 12,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 174.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1153.3495319999638,
+            "stableForMs": 158.53585699998075,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 23,
+            "last": {
+              "elapsedMs": 1153.3495319999638,
+              "x": 0,
+              "y": 710
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 431.64108700002544,
+            "stableForMs": 428.82899499998894,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 8,
+            "last": {
+              "elapsedMs": 431.64108700002544,
+              "x": 0,
+              "y": 710
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-3b99aa31e3e87023",
+      "name": "03Fixture",
+      "selector": "#middle > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(3)",
+      "tag": "button",
+      "role": null,
+      "href": null,
+      "observedScroll": 3555,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 431.80651600001147,
+            "stableForMs": 429.45515100000193,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 431.80651600001147,
+              "x": 0,
+              "y": 3555
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 435.83129299996654,
+            "stableForMs": 434.7438910000492,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 435.83129299996654,
+              "x": 0,
+              "y": 3555
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 13,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 284.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1116.9255859999685,
+            "stableForMs": 157.5497140000225,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 22,
+            "last": {
+              "elapsedMs": 1116.9255859999685,
+              "x": 0,
+              "y": 710
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 403.0944629999576,
+            "stableForMs": 402.1414400000358,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 8,
+            "last": {
+              "elapsedMs": 403.0944629999576,
+              "x": 0,
+              "y": 710
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-6d13dcb4901deee3",
+      "name": "04Observe",
+      "selector": "#middle > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(4)",
+      "tag": "button",
+      "role": null,
+      "href": null,
+      "observedScroll": 3555,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 3555,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 547.8125,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": true,
+            "hitTarget": true,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 421.06979899998987,
+            "stableForMs": 420.075989999983,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 421.06979899998987,
+              "x": 0,
+              "y": 3555
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 450.670184000046,
+            "stableForMs": 449.745493000024,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 450.670184000046,
+              "x": 0,
+              "y": 3555
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 14,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "beforeImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "false",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "after": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "afterImageObservation": {
+            "scroll": 710,
+            "scrollX": 0,
+            "geometry": {
+              "x": 394.796875,
+              "y": 2407.84375,
+              "width": 110,
+              "height": 58
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": "true",
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": []
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1079.2473409999511,
+            "stableForMs": 165.20515900000464,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 21,
+            "last": {
+              "elapsedMs": 1079.2473409999511,
+              "x": 0,
+              "y": 710
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 410.8720299999695,
+            "stableForMs": 408.95940100000007,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 8,
+            "last": {
+              "elapsedMs": 410.8720299999695,
+              "x": 0,
+              "y": 710
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "control-e96fd7cd390c706b",
+      "name": "Read the source and limits ↘",
+      "selector": "#close > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "tag": "a",
+      "role": null,
+      "href": "#scope",
+      "observedScroll": 6660,
+      "trials": [
+        {
+          "method": "pointer",
+          "reached": true,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "scope",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 6660,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 751,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 6660,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 751,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": true,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 7351,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 44,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 7351,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 44,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 421.9796370000113,
+            "stableForMs": 420.46350499999244,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 9,
+            "last": {
+              "elapsedMs": 421.9796370000113,
+              "x": 0,
+              "y": 6660
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 689.8467729999684,
+            "stableForMs": 159.26976600004127,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 14,
+            "last": {
+              "elapsedMs": 689.8467729999684,
+              "x": 0,
+              "y": 7351
+            }
+          }
+        },
+        {
+          "method": "keyboard",
+          "reached": true,
+          "tabPresses": 15,
+          "activated": true,
+          "changed": true,
+          "applicability": "applicable",
+          "targets": [
+            {
+              "id": "scope",
+              "exists": true,
+              "requiresVisualReview": false,
+              "changed": true
+            }
+          ],
+          "responseStatus": "observed DOM/state response",
+          "before": {
+            "scroll": 3618,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 3057.703125,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "beforeImageObservation": {
+            "scroll": 3618,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 3057.703125,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": false,
+            "focused": true,
+            "hitTarget": false,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": false
+              }
+            ]
+          },
+          "after": {
+            "scroll": 7351,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 44,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "afterImageObservation": {
+            "scroll": 7351,
+            "scrollX": 0,
+            "geometry": {
+              "x": 64.796875,
+              "y": 44,
+              "width": 190.25,
+              "height": 44
+            },
+            "viewport": {
+              "width": 1440,
+              "height": 900
+            },
+            "visible": false,
+            "inView": true,
+            "focused": false,
+            "hitTarget": true,
+            "state": {
+              "pressed": null,
+              "selected": null,
+              "expanded": null,
+              "checked": null
+            },
+            "targets": [
+              {
+                "id": "scope",
+                "exists": true,
+                "visible": true,
+                "inView": true
+              }
+            ]
+          },
+          "preActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1188.9890800000285,
+            "stableForMs": 174.39287400001194,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 22,
+            "last": {
+              "elapsedMs": 1188.9890800000285,
+              "x": 0,
+              "y": 3618
+            }
+          },
+          "postActivationSettlement": {
+            "settled": true,
+            "elapsedMs": 1271.132508999959,
+            "stableForMs": 160.21106599998893,
+            "policy": {
+              "maxMs": 3000,
+              "stableMs": 150,
+              "minimumMs": 400,
+              "intervalMs": 50,
+              "tolerancePx": 0.5
+            },
+            "error": null,
+            "observations": 25,
+            "last": {
+              "elapsedMs": 1271.132508999959,
+              "x": 0,
+              "y": 7351
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2636 @@
+{
+  "schemaVersion": 1,
+  "integrityVerified": true,
+  "observedFrom": "2026-10-12T05:53:56.707Z",
+  "observedUntil": "2026-10-12T05:53:57.251Z",
+  "writes": false,
+  "modelCalls": 0,
+  "outcomePreserved": {
+    "complete": true,
+    "rawModePassed": false,
+    "workerCode": 1,
+    "outerCode": 1,
+    "outerComplete": false,
+    "timedOut": false,
+    "externalSignal": null,
+    "sourceUnchanged": true,
+    "buildUnchanged": true,
+    "immutableBuildUnchanged": true,
+    "scopeProblems": [
+      "final beat count 5, normal scope 12 to 22"
+    ],
+    "reportProblems": [
+      "control-56e7c6a74afccc18/pointer: Post-activation scroll did not remain settled through the response original",
+      "control-56e7c6a74afccc18/pointer: declared control targets did not respond",
+      "control-56e7c6a74afccc18/pointer: no observable control response (requires review, not a functional pass)",
+      "control-7c30f7cd27b3b32b/keyboard: Post-activation scroll did not remain settled through the response original",
+      "control-7c30f7cd27b3b32b/keyboard: declared control targets did not respond",
+      "control-7c30f7cd27b3b32b/keyboard: no observable control response (requires review, not a functional pass)",
+      "control-584cd2843abe788e/keyboard: control was not reached and activated",
+      "control-d3d3b317ee1ad7b9/keyboard: control was not reached and activated",
+      "control-b8440473c2b2918b/keyboard: control was not reached and activated",
+      "control-3b99aa31e3e87023/keyboard: control was not reached and activated",
+      "control-6d13dcb4901deee3/keyboard: control was not reached and activated",
+      "control-e96fd7cd390c706b/keyboard: control was not reached and activated"
+    ],
+    "error": null,
+    "artifactError": null,
+    "entireScopePassed": false
+  },
+  "preparation": {
+    "sha256": "5b90fe93b87401a10de98fb9058d8afb26b17f3f1457246d3cb165857a7d3c4c",
+    "implementationFiles": 23,
+    "references": 28,
+    "launchSha256": "30489c43bc3a9a36c4143e56dd2228396d9b3c557ba6ff270d8138844af1efb6"
+  },
+  "lifecycle": {
+    "inner": {
+      "code": 1,
+      "signal": null,
+      "timedOut": false,
+      "externalSignal": null,
+      "spawnError": null,
+      "wrapperPid": 300165,
+      "childPid": 300176,
+      "started": "2026-10-12T05:41:28.251Z",
+      "finished": "2026-10-12T05:49:02.126Z",
+      "durationMs": 453875,
+      "timeoutMs": 1495000,
+      "graceMs": 5000,
+      "totalCapMs": 1500000,
+      "stdout": "Acceptance: browser desktop\nAcceptance failed: /home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/calibration-3/desktop/artifacts\n",
+      "stderr": "",
+      "logError": null,
+      "sourceAfter": {
+        "files": [
+          {
+            "path": ".gitignore",
+            "bytes": 50,
+            "sha256": "9d33df4cfa004dd18dbd2dc5a09f6c6d715280ddc9b2eac4c8720bafe2db7cdc"
+          },
+          {
+            "path": "AGENTS.md",
+            "bytes": 1056,
+            "sha256": "8611e8dfdb420267731cb37d1eaa210ef0053c2470d402e2fec987fbe50157d7"
+          },
+          {
+            "path": "app/globals.css",
+            "bytes": 12967,
+            "sha256": "34936c6da9bd6b8bd58c46e111b70fcff972e56c6e172a945bfb4ffd77f0a0db"
+          },
+          {
+            "path": "app/layout.tsx",
+            "bytes": 299,
+            "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c"
+          },
+          {
+            "path": "app/page.tsx",
+            "bytes": 5738,
+            "sha256": "f08a38dd07db2d655d1f6b7abd0624d495185c322348799d2977989121bc0dad"
+          },
+          {
+            "path": "app/sketch/[id]/page.tsx",
+            "bytes": 446,
+            "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 11,
+            "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+          },
+          {
+            "path": "components/story/chapter.tsx",
+            "bytes": 1504,
+            "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+          },
+          {
+            "path": "components/story/conductor.tsx",
+            "bytes": 1479,
+            "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c"
+          },
+          {
+            "path": "components/story/controls.tsx",
+            "bytes": 882,
+            "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c"
+          },
+          {
+            "path": "components/story/extra-frame.tsx",
+            "bytes": 1420,
+            "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449"
+          },
+          {
+            "path": "components/story/face-material.ts",
+            "bytes": 1714,
+            "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c"
+          },
+          {
+            "path": "components/story/faces.ts",
+            "bytes": 3025,
+            "sha256": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e"
+          },
+          {
+            "path": "components/story/guard-extra-callback.test.ts",
+            "bytes": 1624,
+            "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3"
+          },
+          {
+            "path": "components/story/guard-extra-callback.ts",
+            "bytes": 504,
+            "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9"
+          },
+          {
+            "path": "components/story/look-switch.tsx",
+            "bytes": 515,
+            "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+          },
+          {
+            "path": "components/story/meter.tsx",
+            "bytes": 731,
+            "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a"
+          },
+          {
+            "path": "components/story/overlay.tsx",
+            "bytes": 711,
+            "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d"
+          },
+          {
+            "path": "components/story/pieces.tsx",
+            "bytes": 7753,
+            "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f"
+          },
+          {
+            "path": "components/story/rail.tsx",
+            "bytes": 452,
+            "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+          },
+          {
+            "path": "components/story/scene.tsx",
+            "bytes": 4623,
+            "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060"
+          },
+          {
+            "path": "components/story/stage.tsx",
+            "bytes": 1230,
+            "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792"
+          },
+          {
+            "path": "components/story/story.css",
+            "bytes": 5859,
+            "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23"
+          },
+          {
+            "path": "components/story/story.tsx",
+            "bytes": 5735,
+            "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+          },
+          {
+            "path": "components/story/types.ts",
+            "bytes": 1324,
+            "sha256": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b"
+          },
+          {
+            "path": "components/story/use-look.ts",
+            "bytes": 897,
+            "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+          },
+          {
+            "path": "components/story/use-reduced-motion.ts",
+            "bytes": 432,
+            "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e"
+          },
+          {
+            "path": "components/story/use-webgl-supported.ts",
+            "bytes": 591,
+            "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419"
+          },
+          {
+            "path": "components/story/validate.test.ts",
+            "bytes": 2192,
+            "sha256": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9"
+          },
+          {
+            "path": "components/story/validate.ts",
+            "bytes": 1972,
+            "sha256": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b"
+          },
+          {
+            "path": "components/story/webgl-boundary.tsx",
+            "bytes": 476,
+            "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a"
+          },
+          {
+            "path": "content/checks.json",
+            "bytes": 3,
+            "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+          },
+          {
+            "path": "content/copy.ts",
+            "bytes": 371,
+            "sha256": "342fead41cf9a5c08254cd17e56f3e730e3c79bfbac73fa215d3e20ffda6d735"
+          },
+          {
+            "path": "content/diagram.tsx",
+            "bytes": 2366,
+            "sha256": "a929b0e52e129fb65892df002cd4cee226121657a6df5e556939d0e71f751d4f"
+          },
+          {
+            "path": "content/experience.tsx",
+            "bytes": 328,
+            "sha256": "6ec85fbc9c9d557a1aa2b2dcd12273d2ad351fca8702f03b800cbeff8b833718"
+          },
+          {
+            "path": "content/extras/connections.tsx",
+            "bytes": 3496,
+            "sha256": "e35012e6e9371968cf783a3a32a995709ae78b8393b77c08c7a6875fc2c01e1b"
+          },
+          {
+            "path": "content/extras/middle-line.tsx",
+            "bytes": 613,
+            "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c"
+          },
+          {
+            "path": "content/extras.ts",
+            "bytes": 91,
+            "sha256": "e446502f23f9d626ad54cfef6bd4aab693dec00dc16a201f726fe56ad8ed8b3a"
+          },
+          {
+            "path": "content/faces.ts",
+            "bytes": 5556,
+            "sha256": "b065696177ce2d84db6f118d20fe8d0a844b6a4547336042c4e4bdf15461e365"
+          },
+          {
+            "path": "content/formations.ts",
+            "bytes": 2126,
+            "sha256": "ff1565676d15bea450355326e7a42aa96c515a4c81f114718c213f1963a6e3c5"
+          },
+          {
+            "path": "content/index.ts",
+            "bytes": 467,
+            "sha256": "758877a43ca3d99c2eac4c5b351d301661545aa7bdeb66c08cc8cda9d1aa78f9"
+          },
+          {
+            "path": "content/inspect.tsx",
+            "bytes": 1474,
+            "sha256": "3b77b6317c57f3c195fbc663db3021faaa45831facbeb9f4f1f30477fd4eb3e2"
+          },
+          {
+            "path": "content/links.ts",
+            "bytes": 25,
+            "sha256": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb"
+          },
+          {
+            "path": "content/looks.ts",
+            "bytes": 380,
+            "sha256": "8b5fec42585f3557960fecfc13e91957ee8e2b99b171bc2612d542962cd83f38"
+          },
+          {
+            "path": "content/object-design.md",
+            "bytes": 3921,
+            "sha256": "cd21fe509cf32b81944dbdccfa2cd1e2531d0143b63981eac4ffd5324aab282b"
+          },
+          {
+            "path": "content/piece.tsx",
+            "bytes": 10074,
+            "sha256": "b815e788a58de67d7f69b4fdf54ba0836039c896d0bed60935b09fdd2432f3bf"
+          },
+          {
+            "path": "content/sketches/index.ts",
+            "bytes": 238,
+            "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0"
+          },
+          {
+            "path": "content/story-depth.tsx",
+            "bytes": 5987,
+            "sha256": "19c8ec47e0631de3c05e28e52b5141525649e6fb65828a96902c212b346e4a9d"
+          },
+          {
+            "path": "content/story.ts",
+            "bytes": 784,
+            "sha256": "c71780070dbbf040e7b96e5580ba05141f87da7edab20749c115dd6ead12de5d"
+          },
+          {
+            "path": "docs/story/handover.md",
+            "bytes": 5353,
+            "sha256": "3d4c5d566ee80e4d0cfc155f8c98e4487359141c97e5ea057130b17562dca438"
+          },
+          {
+            "path": "eslint.config.mjs",
+            "bytes": 309,
+            "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b"
+          },
+          {
+            "path": "lib/story/camera.test.ts",
+            "bytes": 6594,
+            "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1"
+          },
+          {
+            "path": "lib/story/camera.ts",
+            "bytes": 5201,
+            "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad"
+          },
+          {
+            "path": "lib/story/controls.test.ts",
+            "bytes": 1608,
+            "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528"
+          },
+          {
+            "path": "lib/story/controls.ts",
+            "bytes": 1054,
+            "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406"
+          },
+          {
+            "path": "lib/story/formation.test.ts",
+            "bytes": 5294,
+            "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc"
+          },
+          {
+            "path": "lib/story/formation.ts",
+            "bytes": 5414,
+            "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe"
+          },
+          {
+            "path": "lib/story/layouts.test.ts",
+            "bytes": 2728,
+            "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0"
+          },
+          {
+            "path": "lib/story/layouts.ts",
+            "bytes": 4733,
+            "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5"
+          },
+          {
+            "path": "lib/story/looks.test.ts",
+            "bytes": 1238,
+            "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9"
+          },
+          {
+            "path": "lib/story/looks.ts",
+            "bytes": 1262,
+            "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+          },
+          {
+            "path": "lib/story/overlay.test.ts",
+            "bytes": 1844,
+            "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4"
+          },
+          {
+            "path": "lib/story/overlay.ts",
+            "bytes": 3252,
+            "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce"
+          },
+          {
+            "path": "lib/story/quality.test.ts",
+            "bytes": 1838,
+            "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023"
+          },
+          {
+            "path": "lib/story/quality.ts",
+            "bytes": 1762,
+            "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc"
+          },
+          {
+            "path": "lib/story/rand.test.ts",
+            "bytes": 567,
+            "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f"
+          },
+          {
+            "path": "lib/story/rand.ts",
+            "bytes": 384,
+            "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8"
+          },
+          {
+            "path": "lib/story/story.test.ts",
+            "bytes": 4065,
+            "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563"
+          },
+          {
+            "path": "lib/story/story.ts",
+            "bytes": 4796,
+            "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d"
+          },
+          {
+            "path": "lib/story/timeline.test.ts",
+            "bytes": 7998,
+            "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859"
+          },
+          {
+            "path": "lib/story/timeline.ts",
+            "bytes": 5697,
+            "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f"
+          },
+          {
+            "path": "lib/story/typeset.test.ts",
+            "bytes": 4495,
+            "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef"
+          },
+          {
+            "path": "lib/story/typeset.ts",
+            "bytes": 3329,
+            "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe"
+          },
+          {
+            "path": "LICENSE",
+            "bytes": 1080,
+            "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42"
+          },
+          {
+            "path": "next.config.ts",
+            "bytes": 303,
+            "sha256": "651aeaa03032435bed511d7e403c04fb1dc64adf26325827a79d193ee9802b9c"
+          },
+          {
+            "path": "package-lock.json",
+            "bytes": 233717,
+            "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a"
+          },
+          {
+            "path": "package.json",
+            "bytes": 1015,
+            "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574"
+          },
+          {
+            "path": "postcss.config.mjs",
+            "bytes": 94,
+            "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+          },
+          {
+            "path": "public/plain/face.svg",
+            "bytes": 309,
+            "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603"
+          },
+          {
+            "path": "public/plain/fan.svg",
+            "bytes": 775,
+            "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4271,
+            "sha256": "ea3a019131fc7d4ef5de440dd1eb79c56c27c35ffdfb405c018739f841b337f5"
+          },
+          {
+            "path": "scripts/check-lib.mjs",
+            "bytes": 4516,
+            "sha256": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30"
+          },
+          {
+            "path": "scripts/check-lib.test.mjs",
+            "bytes": 4110,
+            "sha256": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0"
+          },
+          {
+            "path": "scripts/check.mjs",
+            "bytes": 6374,
+            "sha256": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af"
+          },
+          {
+            "path": "scripts/shoot.mjs",
+            "bytes": 25709,
+            "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278"
+          },
+          {
+            "path": "tsconfig.json",
+            "bytes": 706,
+            "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d"
+          }
+        ],
+        "digest": "1c499ad1346aa437d5701993b7b71f1b60cc35670e9afe0b7c76d48a1c18a060",
+        "exclusions": [
+          "node_modules",
+          ".next",
+          ".git",
+          ".cache",
+          ".npm",
+          ".turbo",
+          "checks",
+          "test-results",
+          "playwright-report",
+          "browser-cache",
+          "*.tsbuildinfo",
+          "next-env.d.ts (Next-generated)",
+          "verified top-level hidden bare Git metadata trees (bounded layout and marker validation)"
+        ]
+      },
+      "sourceUnchanged": true,
+      "scope": "local no-model worker calibration only, not an actor run, journey gate or Stage 3 pass"
+    },
+    "events": [
+      {
+        "at": "2026-10-12T05:41:28.254Z",
+        "elapsedMs": 3,
+        "type": "spawn-request",
+        "wrapperPid": 300165,
+        "childPid": 300176,
+        "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+        "args": [
+          "/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey-measurement/final-worker.mjs",
+          "--workspace=/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-calibration-5yt94U",
+          "--targets=/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/calibration-1/final-targets.json",
+          "--expectations=/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey-measurement/policy.json",
+          "--out=/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/calibration-3/desktop/artifacts",
+          "--dependencies=/tmp/storyfolio-build-capability-20261011",
+          "--unit=desktop",
+          "--build-proof=/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/calibration-1/build/artifacts/manifest.json"
+        ],
+        "timeoutMs": 1495000,
+        "graceMs": 5000,
+        "totalCapMs": 1500000,
+        "deadline": "2026-10-12T06:06:23.251Z",
+        "hardEscalationAt": "2026-10-12T06:06:28.251Z"
+      },
+      {
+        "at": "2026-10-12T05:41:28.254Z",
+        "elapsedMs": 3,
+        "type": "spawned",
+        "wrapperPid": 300165,
+        "childPid": 300176
+      },
+      {
+        "at": "2026-10-12T05:49:02.125Z",
+        "elapsedMs": 453874,
+        "type": "exit",
+        "wrapperPid": 300165,
+        "childPid": 300176,
+        "code": 1,
+        "signal": null
+      },
+      {
+        "at": "2026-10-12T05:49:02.126Z",
+        "elapsedMs": 453875,
+        "type": "closed",
+        "wrapperPid": 300165,
+        "childPid": 300176,
+        "code": 1,
+        "signal": null,
+        "timedOut": false,
+        "externalSignal": null
+      }
+    ],
+    "outer": {
+      "schemaVersion": 1,
+      "code": 1,
+      "signal": null,
+      "finished": "2026-10-12T05:49:02.167Z",
+      "durationMs": 454003,
+      "recorderPid": 300154,
+      "recorderParentPid": 2843635,
+      "childPid": 300165,
+      "childSpawned": true,
+      "childExited": true,
+      "childClosed": true,
+      "interruptedBy": null,
+      "signalSender": null,
+      "signalForwarded": false,
+      "shutdownGraceMs": 5000,
+      "forceAttempted": false,
+      "childError": null,
+      "complete": false,
+      "status": "child-exited-unsuccessfully",
+      "timeoutAttribution": "This recorder has no work deadline. A child timeout is established only by that child's retained result, not inferred from external signals or exit code.",
+      "rawArtifacts": {
+        "command.json": "e1a6707efb7831f4935cb51548859f086a21a7ee37c4d9148ca5d9f7238b01f5",
+        "lifecycle.jsonl": "0cce24b5c6bdecae339cd3fb2f054892bdd23aa3fd7746137d3e19f6a6f2c133",
+        "stdout.log": "736e37f6379df71ca9e35c7f931de94b4073c4bac53b7ad27b0a6e67fe0495bf",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "outerEvents": [
+      {
+        "sequence": 1,
+        "at": "2026-10-12T05:41:28.166Z",
+        "elapsedMs": 2,
+        "type": "recorder_started",
+        "recorderPid": 300154,
+        "recorderParentPid": 2843635
+      },
+      {
+        "sequence": 2,
+        "at": "2026-10-12T05:41:28.169Z",
+        "elapsedMs": 5,
+        "type": "child_spawned",
+        "childPid": 300165
+      },
+      {
+        "sequence": 3,
+        "at": "2026-10-12T05:49:02.166Z",
+        "elapsedMs": 454002,
+        "type": "child_exit",
+        "childPid": 300165,
+        "code": 1,
+        "signal": null
+      },
+      {
+        "sequence": 4,
+        "at": "2026-10-12T05:49:02.166Z",
+        "elapsedMs": 454002,
+        "type": "child_close",
+        "childPid": 300165,
+        "code": 1,
+        "signal": null
+      }
+    ],
+    "terminalExit": 1,
+    "knownPids": [
+      300154,
+      300165,
+      300176
+    ]
+  },
+  "source": {
+    "files": 86,
+    "digest": "1c499ad1346aa437d5701993b7b71f1b60cc35670e9afe0b7c76d48a1c18a060"
+  },
+  "artifactInventory": [
+    {
+      "path": "desktop/00-opening.assembly-end.png",
+      "bytes": 266370,
+      "sha256": "709eac00fc4b2f290e4d350e09893e08972639f25871c7006b534c0b2ceea50a"
+    },
+    {
+      "path": "desktop/00-opening.assembly-mid.png",
+      "bytes": 248854,
+      "sha256": "315e83f4484aab99d09af32be4e49854bccba73baea30b40d59777e83f1d2f38"
+    },
+    {
+      "path": "desktop/01-power.cycle-end.png",
+      "bytes": 239757,
+      "sha256": "94a77f228695dc763fe1b8924b1a57e1585435d11daa7d169f063ef9bc6d1c90"
+    },
+    {
+      "path": "desktop/01-power.cycle-mid.png",
+      "bytes": 239757,
+      "sha256": "94a77f228695dc763fe1b8924b1a57e1585435d11daa7d169f063ef9bc6d1c90"
+    },
+    {
+      "path": "desktop/02-middle.relationship-end.png",
+      "bytes": 205842,
+      "sha256": "c899fdeb5fcb8c226add1619e7870d7b565f1b3cde3745285378073cfb1d7c07"
+    },
+    {
+      "path": "desktop/02-middle.relationship-mid.png",
+      "bytes": 205842,
+      "sha256": "c899fdeb5fcb8c226add1619e7870d7b565f1b3cde3745285378073cfb1d7c07"
+    },
+    {
+      "path": "desktop/03-proof.boundaries-end.png",
+      "bytes": 218664,
+      "sha256": "6e1965a7cb33ebbe9980fb21482e85278e37f2cfeacb2a46182c9eef311f7f3a"
+    },
+    {
+      "path": "desktop/03-proof.boundaries-mid.png",
+      "bytes": 218664,
+      "sha256": "6e1965a7cb33ebbe9980fb21482e85278e37f2cfeacb2a46182c9eef311f7f3a"
+    },
+    {
+      "path": "desktop/04-close.evidence-end.png",
+      "bytes": 248462,
+      "sha256": "840e9693667cf46d090f578dab52e076f1d16b4db54547b8b613c2b135373005"
+    },
+    {
+      "path": "desktop/04-close.evidence-mid.png",
+      "bytes": 248462,
+      "sha256": "840e9693667cf46d090f578dab52e076f1d16b4db54547b8b613c2b135373005"
+    },
+    {
+      "path": "desktop/control-02b4d792b6fce548-keyboard-after.png",
+      "bytes": 243846,
+      "sha256": "bdaf0f6e37e63883a6cadf2a7c0743b2699d59af78d367f7b0fafa0aa4405556"
+    },
+    {
+      "path": "desktop/control-02b4d792b6fce548-keyboard-before.png",
+      "bytes": 270378,
+      "sha256": "3fabf2ca0ffb1bc24e82a3beaed3628e06f781538dda1fe66334602581e200c6"
+    },
+    {
+      "path": "desktop/control-02b4d792b6fce548-pointer-after.png",
+      "bytes": 238508,
+      "sha256": "b27cf5704ec70a7fb9a66741a627738101f69a4e131906f4592e5236b9766f68"
+    },
+    {
+      "path": "desktop/control-02b4d792b6fce548-pointer-before.png",
+      "bytes": 266132,
+      "sha256": "b3b6b252fcede0caf4b77852e6acac91b8e9086f57d69c3f47faec6acc46f3f2"
+    },
+    {
+      "path": "desktop/control-0a853c2d30aa2f4c-keyboard-after.png",
+      "bytes": 237188,
+      "sha256": "b5b0f5b0bf4e17d328c639f90701f48bf30213ed177a7f7de29fdbd08e163919"
+    },
+    {
+      "path": "desktop/control-0a853c2d30aa2f4c-keyboard-before.png",
+      "bytes": 276830,
+      "sha256": "53654ca9681122e98e0464830477fb178276acd821284e0d00b472c5c9079d1e"
+    },
+    {
+      "path": "desktop/control-0a853c2d30aa2f4c-pointer-after.png",
+      "bytes": 247339,
+      "sha256": "3d9e074aaa34e20b440264b836225348a4054714d569c9a1658dfd9562e114e5"
+    },
+    {
+      "path": "desktop/control-0a853c2d30aa2f4c-pointer-before.png",
+      "bytes": 238365,
+      "sha256": "26c819005455ca0d434713f5e6332586168f451634127264dd51c6f0f1cda0e0"
+    },
+    {
+      "path": "desktop/control-0eecc2c675ff83aa-keyboard-after.png",
+      "bytes": 245563,
+      "sha256": "11405be7f3b1cbdc0f17cfde20eb5f242b1182c58c365da6b3beab0a29d36f99"
+    },
+    {
+      "path": "desktop/control-0eecc2c675ff83aa-keyboard-before.png",
+      "bytes": 273876,
+      "sha256": "a8f49d695c9b66a23e6f0962c22099edbf0aaeb1f86fc0bcd36085284e05f99b"
+    },
+    {
+      "path": "desktop/control-0eecc2c675ff83aa-pointer-after.png",
+      "bytes": 253235,
+      "sha256": "a4a5a162519222cf289bf4c427b2091a9b89a31f41e1b53cc9793c8b13426890"
+    },
+    {
+      "path": "desktop/control-0eecc2c675ff83aa-pointer-before.png",
+      "bytes": 244507,
+      "sha256": "f8bae10b4b9802e70f2ac33daca7ffc46ceb534b87873b2cb07eeff4828481d8"
+    },
+    {
+      "path": "desktop/control-0f8e3aaf82f087ca-keyboard-after.png",
+      "bytes": 272619,
+      "sha256": "82efa27f24dd0a23730c93762a7a3f03627c9bca2efc6c01d5002381d9cdf02b"
+    },
+    {
+      "path": "desktop/control-0f8e3aaf82f087ca-keyboard-before.png",
+      "bytes": 273243,
+      "sha256": "fe88e8e1641c1a1318336f68c2eab4506ff61dbe34b0181b786fbe6cf7d27757"
+    },
+    {
+      "path": "desktop/control-0f8e3aaf82f087ca-pointer-after.png",
+      "bytes": 274632,
+      "sha256": "71e28e8a8d401d5321c2e31c548838ef754e5d8dda3f1a5f401f8ad2ab6dc10e"
+    },
+    {
+      "path": "desktop/control-0f8e3aaf82f087ca-pointer-before.png",
+      "bytes": 268493,
+      "sha256": "fbd656e6e71f1bc0f0d5ebea47dcc8ce56156e1bcd253c54202a0e85ca89af65"
+    },
+    {
+      "path": "desktop/control-3b99aa31e3e87023-keyboard-after.png",
+      "bytes": 194437,
+      "sha256": "47a787070a5dd505438129f660841e9360acdb8ed4ef307481ab957d089ad90b"
+    },
+    {
+      "path": "desktop/control-3b99aa31e3e87023-keyboard-before.png",
+      "bytes": 198914,
+      "sha256": "aaee83be12db24591031e27aa11aa8c9c05a475db0bdf1364676f6f8a25e5d52"
+    },
+    {
+      "path": "desktop/control-3b99aa31e3e87023-pointer-after.png",
+      "bytes": 264986,
+      "sha256": "a5012f8ea106e28d75682a12c76654bca47a6c834925ac2e9b10c7e96c6fb6b7"
+    },
+    {
+      "path": "desktop/control-3b99aa31e3e87023-pointer-before.png",
+      "bytes": 264485,
+      "sha256": "71467acc5262f750f7eff6e93d8255e4182223e864f465aea3a41bbc604ec81a"
+    },
+    {
+      "path": "desktop/control-4b4377bd3a0a1283-keyboard-after.png",
+      "bytes": 202991,
+      "sha256": "962c5cdb3a97ad93da0405a4098fbda9b1b21590bce125130e67aa65c2ec1695"
+    },
+    {
+      "path": "desktop/control-4b4377bd3a0a1283-keyboard-before.png",
+      "bytes": 241345,
+      "sha256": "9677937cd14f2ce71b5b7b4a5ed105db2c10189bee4ee5751c45b27c8accfa0b"
+    },
+    {
+      "path": "desktop/control-4b4377bd3a0a1283-pointer-unfocused.png",
+      "bytes": 237420,
+      "sha256": "f35779b5c6f4f637e006e54e014605f485762562fd594ccffd09ab5c9dd74a99"
+    },
+    {
+      "path": "desktop/control-5081d714285764f9-keyboard-after.png",
+      "bytes": 215597,
+      "sha256": "070a96936a4ea985023994a4044d3178b26009c645a71d9c5ad0ef4c2aad6da8"
+    },
+    {
+      "path": "desktop/control-5081d714285764f9-keyboard-before.png",
+      "bytes": 270377,
+      "sha256": "7d08ac8b39b056bb5525f19800f975884cbb72fb803a0bfde8010fa1280e2a4e"
+    },
+    {
+      "path": "desktop/control-5081d714285764f9-pointer-after.png",
+      "bytes": 213489,
+      "sha256": "a95285771af6dc2e09f587132c87a6e2f04b19a9bbe56cb74678d4505defd92b"
+    },
+    {
+      "path": "desktop/control-5081d714285764f9-pointer-before.png",
+      "bytes": 265052,
+      "sha256": "5c421e13b753878b5448e97583e337b48430f6c464e244c915c5fa2562da6b26"
+    },
+    {
+      "path": "desktop/control-56e7c6a74afccc18-keyboard-after.png",
+      "bytes": 202991,
+      "sha256": "962c5cdb3a97ad93da0405a4098fbda9b1b21590bce125130e67aa65c2ec1695"
+    },
+    {
+      "path": "desktop/control-56e7c6a74afccc18-keyboard-before.png",
+      "bytes": 273777,
+      "sha256": "b7d9a8001e7d81b92d21b3a91dd6d237066679e8884bb8316a3cbb80f2e1941c"
+    },
+    {
+      "path": "desktop/control-56e7c6a74afccc18-pointer-after.png",
+      "bytes": 206829,
+      "sha256": "1edfbcce73a504eec809abc434aa4b98024d36e7eee4be44ae4d7cdd06cd1b44"
+    },
+    {
+      "path": "desktop/control-56e7c6a74afccc18-pointer-before.png",
+      "bytes": 236814,
+      "sha256": "ebd7a69898111009ae3409226b70502115b62a12fab36c278f6cbd358217b079"
+    },
+    {
+      "path": "desktop/control-584cd2843abe788e-keyboard-after.png",
+      "bytes": 278995,
+      "sha256": "f154fca654ccc093382240c2e9d57673200cb77df4ea51a91ceb473ee4ee9625"
+    },
+    {
+      "path": "desktop/control-584cd2843abe788e-keyboard-before.png",
+      "bytes": 199221,
+      "sha256": "86b9ec93d5cb0973f3f9d67a54304ca79df03f652d686d392363a6a69c69a04c"
+    },
+    {
+      "path": "desktop/control-584cd2843abe788e-pointer-after.png",
+      "bytes": 285652,
+      "sha256": "b38d9d63ea285c4ddc9d773b9a0abf866459b0186cbd1795a04c17bc467846f1"
+    },
+    {
+      "path": "desktop/control-584cd2843abe788e-pointer-before.png",
+      "bytes": 99083,
+      "sha256": "b06c2a97e7dbe36a7c1288002e978af70558e3e804bac0938484c0520205799f"
+    },
+    {
+      "path": "desktop/control-6d13dcb4901deee3-keyboard-after.png",
+      "bytes": 194574,
+      "sha256": "dc7be5e90b219492484b3d0d42ae0ae18beefc2c26d5896914ccb0ffc27378ff"
+    },
+    {
+      "path": "desktop/control-6d13dcb4901deee3-keyboard-before.png",
+      "bytes": 198612,
+      "sha256": "1a5a2315d86f2def090e7ad6511bae380012531d32a6c81b15b5e1c3398635e8"
+    },
+    {
+      "path": "desktop/control-6d13dcb4901deee3-pointer-after.png",
+      "bytes": 257784,
+      "sha256": "2e6dbf00e5d4693593e8e9c0fe1202a6e75a157c6f7b8c7a45ace523bc44b793"
+    },
+    {
+      "path": "desktop/control-6d13dcb4901deee3-pointer-before.png",
+      "bytes": 256677,
+      "sha256": "d4f6dd9cb25444ee8871de5b2bc6b619c1bda73a961aedc813a14815cef89589"
+    },
+    {
+      "path": "desktop/control-7c30f7cd27b3b32b-keyboard-after.png",
+      "bytes": 228198,
+      "sha256": "e702ab1cd215cf1583e523e769c13bc4dd99f3b4706d02cb70b7e9565a04196f"
+    },
+    {
+      "path": "desktop/control-7c30f7cd27b3b32b-keyboard-before.png",
+      "bytes": 275254,
+      "sha256": "5a6a192dcd306d6b517abd2cf95b78f78a68eb09ab7273e04040c97dc699c81a"
+    },
+    {
+      "path": "desktop/control-7c30f7cd27b3b32b-pointer-after.png",
+      "bytes": 233472,
+      "sha256": "088877d3c44c3338569b520e06d784874afbde841a986844e32ac0ddc28e77f6"
+    },
+    {
+      "path": "desktop/control-7c30f7cd27b3b32b-pointer-before.png",
+      "bytes": 238174,
+      "sha256": "1c08995d8fa0e4fa6ca188713f335cdeb7e40ecfc84d63f8a622af630fb2fb32"
+    },
+    {
+      "path": "desktop/control-9dcf3c14f861d1f5-keyboard-after.png",
+      "bytes": 269929,
+      "sha256": "ab7bf0d625175f1fead604e7f07a707369a6668d3b44edde4fad895a621b76b6"
+    },
+    {
+      "path": "desktop/control-9dcf3c14f861d1f5-keyboard-before.png",
+      "bytes": 270361,
+      "sha256": "2caa724de0c3a927ee4d42d0a183f1c31cfbef981b3260a9fed4a396e45c7f1d"
+    },
+    {
+      "path": "desktop/control-9dcf3c14f861d1f5-pointer-after.png",
+      "bytes": 284495,
+      "sha256": "e95aad81309e14ae999ff3c6eff380da797c4d1011d433d3bc7ca5f14f356af0"
+    },
+    {
+      "path": "desktop/control-9dcf3c14f861d1f5-pointer-before.png",
+      "bytes": 284495,
+      "sha256": "e95aad81309e14ae999ff3c6eff380da797c4d1011d433d3bc7ca5f14f356af0"
+    },
+    {
+      "path": "desktop/control-b8440473c2b2918b-keyboard-after.png",
+      "bytes": 195327,
+      "sha256": "f89f3ea3a95a88a649bfeb916f4fc94582096076eec4e5818cb87e7091eb2866"
+    },
+    {
+      "path": "desktop/control-b8440473c2b2918b-keyboard-before.png",
+      "bytes": 197849,
+      "sha256": "98a8846bdb60d5f99fb782951fc294603b8ee8d1841f91b3dfb526eb82d2b655"
+    },
+    {
+      "path": "desktop/control-b8440473c2b2918b-pointer-after.png",
+      "bytes": 263057,
+      "sha256": "7adc9ccbdedbe8017e272d6284adb28f9ae41f65a8a436d580cde1f9fdd4e968"
+    },
+    {
+      "path": "desktop/control-b8440473c2b2918b-pointer-before.png",
+      "bytes": 262100,
+      "sha256": "91df99bcbe0fa0e99575fedb1b581f28740a9eccd345188e224e0d4b2500565f"
+    },
+    {
+      "path": "desktop/control-bf76ca2eab6845cc-keyboard-after.png",
+      "bytes": 217215,
+      "sha256": "1758476d86d49f860eb699a7a392fac420ef6ffce169ba708733fdc84fe80397"
+    },
+    {
+      "path": "desktop/control-bf76ca2eab6845cc-keyboard-before.png",
+      "bytes": 273288,
+      "sha256": "37759aae3a8bec6aa927b677971088ca3603e0986b59b145615ecacd34b8c3d5"
+    },
+    {
+      "path": "desktop/control-bf76ca2eab6845cc-pointer-after.png",
+      "bytes": 216145,
+      "sha256": "3b3121fa76593294dbb92491ca1d7f1b2a20df42615e8b71db48dbb83667522a"
+    },
+    {
+      "path": "desktop/control-bf76ca2eab6845cc-pointer-before.png",
+      "bytes": 237988,
+      "sha256": "e3e3ad56f8b971fe7d20ace1da9eb08935eef574700142087d9a50af65627540"
+    },
+    {
+      "path": "desktop/control-d3d3b317ee1ad7b9-keyboard-after.png",
+      "bytes": 196750,
+      "sha256": "ed01cad658c7066c4a4b0a59566da0965840bb6eeaae9b6948232e9e7cf53cf7"
+    },
+    {
+      "path": "desktop/control-d3d3b317ee1ad7b9-keyboard-before.png",
+      "bytes": 207668,
+      "sha256": "fbe43e7545f010dd111d0e2c1855388376f4acbc5ee0766d07fd362983e4bcc6"
+    },
+    {
+      "path": "desktop/control-d3d3b317ee1ad7b9-pointer-after.png",
+      "bytes": 256151,
+      "sha256": "58443da90211227fdec3c054f771d1bb2f66e9931972d1cc092327e523302105"
+    },
+    {
+      "path": "desktop/control-d3d3b317ee1ad7b9-pointer-before.png",
+      "bytes": 256020,
+      "sha256": "2d33a590f36682b779a74eec61c2759466fa1ec8907cbea57128e307dcad80fb"
+    },
+    {
+      "path": "desktop/control-e96fd7cd390c706b-keyboard-after.png",
+      "bytes": 99083,
+      "sha256": "b06c2a97e7dbe36a7c1288002e978af70558e3e804bac0938484c0520205799f"
+    },
+    {
+      "path": "desktop/control-e96fd7cd390c706b-keyboard-before.png",
+      "bytes": 199111,
+      "sha256": "11d5c061f51fa1ee40fc3357e45ac908d7e9b8924f43298f5bd7fd47edaf93c3"
+    },
+    {
+      "path": "desktop/control-e96fd7cd390c706b-pointer-after.png",
+      "bytes": 99083,
+      "sha256": "b06c2a97e7dbe36a7c1288002e978af70558e3e804bac0938484c0520205799f"
+    },
+    {
+      "path": "desktop/control-e96fd7cd390c706b-pointer-before.png",
+      "bytes": 236787,
+      "sha256": "2955a61696c8cccc3db6c08e8c22f01286089d224904ecf1abc115afd0727338"
+    },
+    {
+      "path": "desktop/rendered.html",
+      "bytes": 65998,
+      "sha256": "cd50af13cdf034cacf5bc992d2f5987818e66206bfa5c1f936bf78d9771f0f06"
+    },
+    {
+      "path": "desktop/report.json",
+      "bytes": 893611,
+      "sha256": "e05487fb9d255987c5caa7193b4dc6da63add7f45077251743ca366f3e850537"
+    },
+    {
+      "path": "desktop/response.html",
+      "bytes": 64977,
+      "sha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f"
+    },
+    {
+      "path": "desktop/rest-close.evidence.png",
+      "bytes": 248462,
+      "sha256": "840e9693667cf46d090f578dab52e076f1d16b4db54547b8b613c2b135373005"
+    },
+    {
+      "path": "desktop/rest-middle.relationship.png",
+      "bytes": 205842,
+      "sha256": "c899fdeb5fcb8c226add1619e7870d7b565f1b3cde3745285378073cfb1d7c07"
+    },
+    {
+      "path": "desktop/rest-opening.assembly.png",
+      "bytes": 266370,
+      "sha256": "709eac00fc4b2f290e4d350e09893e08972639f25871c7006b534c0b2ceea50a"
+    },
+    {
+      "path": "desktop/rest-power.cycle.png",
+      "bytes": 239757,
+      "sha256": "94a77f228695dc763fe1b8924b1a57e1585435d11daa7d169f063ef9bc6d1c90"
+    },
+    {
+      "path": "desktop/rest-proof.boundaries.png",
+      "bytes": 218664,
+      "sha256": "6e1965a7cb33ebbe9980fb21482e85278e37f2cfeacb2a46182c9eef311f7f3a"
+    },
+    {
+      "path": "desktop/travel-forward-middle.relationship-proof.boundaries-0.2.jpg",
+      "bytes": 85821,
+      "sha256": "3d6d978fa14f9cf7923e038910ed820e193791d1c8eb2a7dc58ff70d0f41fa18"
+    },
+    {
+      "path": "desktop/travel-forward-middle.relationship-proof.boundaries-0.5.jpg",
+      "bytes": 54382,
+      "sha256": "adfcd29ac5bc726582d1f70da60900e083d91fee03ce05606f0e99c92873ffe3"
+    },
+    {
+      "path": "desktop/travel-forward-middle.relationship-proof.boundaries-0.8.jpg",
+      "bytes": 63201,
+      "sha256": "f97119af1e2a4098a09cbb8387574b08eaa8d6e80bda6b44268dc5ae870fe3cc"
+    },
+    {
+      "path": "desktop/travel-forward-opening.assembly-power.cycle-0.2.jpg",
+      "bytes": 82848,
+      "sha256": "805251d85d4cec6c4929f028acaf40f245347465e7fb3cdac982e52a2f0962b5"
+    },
+    {
+      "path": "desktop/travel-forward-opening.assembly-power.cycle-0.5.jpg",
+      "bytes": 60501,
+      "sha256": "167371aa8599121be00358229df8e1bda4a720fe29ee7ba77a76e61cadfce7c6"
+    },
+    {
+      "path": "desktop/travel-forward-opening.assembly-power.cycle-0.8.jpg",
+      "bytes": 74745,
+      "sha256": "edf480698075c69915e6aa110d5f9fd0182598c19d6d9f0f58174e0266edc090"
+    },
+    {
+      "path": "desktop/travel-forward-power.cycle-middle.relationship-0.2.jpg",
+      "bytes": 86831,
+      "sha256": "cdc94d65592cd6a801847f276315b65e9142e9381dfee2af700adc35adc168dc"
+    },
+    {
+      "path": "desktop/travel-forward-power.cycle-middle.relationship-0.5.jpg",
+      "bytes": 58020,
+      "sha256": "540c79e37a143134ffed72d4e40f8d5975734b0ad2214816cbea1c03776c1514"
+    },
+    {
+      "path": "desktop/travel-forward-power.cycle-middle.relationship-0.8.jpg",
+      "bytes": 70529,
+      "sha256": "0de5974d9d375c28dd71a73612b4a4e191f8c148a7465cc98bd3946d6b189ba3"
+    },
+    {
+      "path": "desktop/travel-forward-proof.boundaries-close.evidence-0.2.jpg",
+      "bytes": 84631,
+      "sha256": "8bbef5077daf814d7b400c6f9c6cd039f4011d1d89e2a72e781ae07c07ce34ae"
+    },
+    {
+      "path": "desktop/travel-forward-proof.boundaries-close.evidence-0.5.jpg",
+      "bytes": 61476,
+      "sha256": "ce1ecd1177fa1adb5ac8174a74a9177c26422d2fe58c3b627e415a6edcc12c4b"
+    },
+    {
+      "path": "desktop/travel-forward-proof.boundaries-close.evidence-0.8.jpg",
+      "bytes": 73894,
+      "sha256": "b5bfcec124fd1f1a4845a5181cafe197338afb37842460cbb41a513c62b1af60"
+    },
+    {
+      "path": "desktop/travel-reverse-close.evidence-proof.boundaries-0.2.jpg",
+      "bytes": 72689,
+      "sha256": "8491576c8a985c9e09438c9a8cc8b57d64240f8a842f6e973f5116b21a31b1c6"
+    },
+    {
+      "path": "desktop/travel-reverse-close.evidence-proof.boundaries-0.5.jpg",
+      "bytes": 60596,
+      "sha256": "83ad9edd8fddc2e9f8042836950eedebc1651bcf3cd1411ff84cf0b93fc6cccc"
+    },
+    {
+      "path": "desktop/travel-reverse-close.evidence-proof.boundaries-0.8.jpg",
+      "bytes": 83163,
+      "sha256": "da08c579a21a072c0215a40119466c03817c44456c3fe9f3fdb6419231a8bb1c"
+    },
+    {
+      "path": "desktop/travel-reverse-middle.relationship-power.cycle-0.2.jpg",
+      "bytes": 69834,
+      "sha256": "7a734df47b449ef51eaf2f2591d9fec358ad8bf0fec6ec18efb539f5a151f7bf"
+    },
+    {
+      "path": "desktop/travel-reverse-middle.relationship-power.cycle-0.5.jpg",
+      "bytes": 55499,
+      "sha256": "bd0b844480e369a85f872e95fb53b81e096bc582210f2619e4d1c532c81a8dc8"
+    },
+    {
+      "path": "desktop/travel-reverse-middle.relationship-power.cycle-0.8.jpg",
+      "bytes": 86559,
+      "sha256": "4b6a47c40aed449dde7fb1dfb5a0b6b3134254747a144e0a8a7def636332bc5b"
+    },
+    {
+      "path": "desktop/travel-reverse-power.cycle-opening.assembly-0.2.jpg",
+      "bytes": 74539,
+      "sha256": "cce934b622294265a5f8745b923f79b106fe2bf78833e98223c96d42e72e70ef"
+    },
+    {
+      "path": "desktop/travel-reverse-power.cycle-opening.assembly-0.5.jpg",
+      "bytes": 61627,
+      "sha256": "78579aa45a9510121b2cc531151c4e69c882a5252f32ffbe3649bfcedcac4a98"
+    },
+    {
+      "path": "desktop/travel-reverse-power.cycle-opening.assembly-0.8.jpg",
+      "bytes": 84083,
+      "sha256": "157d9a00d511e6e3f5a6525ccb702339af1523355d94da93acfa71472124f2db"
+    },
+    {
+      "path": "desktop/travel-reverse-proof.boundaries-middle.relationship-0.2.jpg",
+      "bytes": 63184,
+      "sha256": "2c5bb5a561cf18ca3b8a19c08bd7f5b0e0ea9d1104ef3cb5566cf93886bf708c"
+    },
+    {
+      "path": "desktop/travel-reverse-proof.boundaries-middle.relationship-0.5.jpg",
+      "bytes": 51694,
+      "sha256": "880e4c96d999ce9836085ef0ce3753e8ea3973c5aec3467091ad9aa2accfc85a"
+    },
+    {
+      "path": "desktop/travel-reverse-proof.boundaries-middle.relationship-0.8.jpg",
+      "bytes": 82989,
+      "sha256": "d00144f75d67c776d9b9bd7d476f95c9313a46123a2f920cb87b434435070047"
+    },
+    {
+      "path": "eslint.acceptance.mjs",
+      "bytes": 451,
+      "sha256": "ba357bb599b1625c7df4319d014b1012cb21afa1dd5884fcae2f953c0decbf9d"
+    },
+    {
+      "path": "expectations.json",
+      "bytes": 3600,
+      "sha256": "10446d35bd6576b0a14cb78536fecc217a6efffd0bacc0963b4514dc7b290347"
+    },
+    {
+      "path": "server.log",
+      "bytes": 155,
+      "sha256": "2faff02778af6cc3ed302b7e21437cb044a608dd9e5054e51e7c72d6adb4ecc8"
+    },
+    {
+      "path": "tsconfig.acceptance.json",
+      "bytes": 1511,
+      "sha256": "b44cfbb1600bd0fd8be244e0929315e30495e6d6505c49409471ed9cc031b27b"
+    }
+  ],
+  "build": {
+    "originalFiles": 167,
+    "beforeFiles": 173,
+    "afterFiles": 173,
+    "proofComparison": {
+      "schemaVersion": 1,
+      "rule": "next-app-page-build-seed-promotion-v1",
+      "fullIdentityUnchanged": false,
+      "immutableBuildUnchanged": true,
+      "beforeDigest": "5355c4e11c31b6b4778fcfa6aba9aa6e52f52a2b6d131541d355990863e597b6",
+      "afterDigest": "35f65c100277899a70aa4b0be1a0921914bbc21c6f9227f93031e3b2149dc671",
+      "immutableDigest": "5355c4e11c31b6b4778fcfa6aba9aa6e52f52a2b6d131541d355990863e597b6",
+      "addedCacheFiles": [
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.html",
+          "bytes": 64977,
+          "sha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.meta",
+          "bytes": 481,
+          "sha256": "d9b8085f7b00e9c6cd6ac21c62328db5581720ef1201229f81790a61b45a76da"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.rsc",
+          "bytes": 34143,
+          "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/__PAGE__.segment.rsc",
+          "bytes": 33628,
+          "sha256": "ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_full.segment.rsc",
+          "bytes": 34143,
+          "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_tree.segment.rsc",
+          "bytes": 249,
+          "sha256": "4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f"
+        }
+      ],
+      "cacheInventory": [
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.html",
+          "bytes": 64977,
+          "sha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.meta",
+          "bytes": 481,
+          "sha256": "d9b8085f7b00e9c6cd6ac21c62328db5581720ef1201229f81790a61b45a76da"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.rsc",
+          "bytes": 34143,
+          "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/__PAGE__.segment.rsc",
+          "bytes": 33628,
+          "sha256": "ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_full.segment.rsc",
+          "bytes": 34143,
+          "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_tree.segment.rsc",
+          "bytes": 249,
+          "sha256": "4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f"
+        }
+      ],
+      "promotions": [
+        {
+          "key": "/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index",
+          "owner": {
+            "kind": "APP_PAGE",
+            "sourceRoute": "/page"
+          },
+          "seedMetadata": {
+            "path": "server/app/index.meta",
+            "bytes": 595,
+            "sha256": "364b5f5dfdd03a659407755e2d891feb1100a3e1242d1753888957d41158c31c"
+          },
+          "cacheMetadata": {
+            "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.meta",
+            "bytes": 481,
+            "sha256": "d9b8085f7b00e9c6cd6ac21c62328db5581720ef1201229f81790a61b45a76da"
+          },
+          "routeCacheLastModified": 1791779672713,
+          "payloads": [
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.html",
+              "seedPath": "server/app/index.html",
+              "bytes": 64977,
+              "sha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.rsc",
+              "seedPath": "server/app/index.rsc",
+              "bytes": 34143,
+              "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_tree.segment.rsc",
+              "seedPath": "server/app/index.segments/_tree.segment.rsc",
+              "bytes": 249,
+              "sha256": "4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_full.segment.rsc",
+              "seedPath": "server/app/index.segments/_full.segment.rsc",
+              "bytes": 34143,
+              "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/__PAGE__.segment.rsc",
+              "seedPath": "server/app/index.segments/__PAGE__.segment.rsc",
+              "bytes": 33628,
+              "sha256": "ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a"
+            }
+          ]
+        }
+      ],
+      "limits": "Only complete immutable-seed APP_PAGE promotions are accepted. Existing cache entries cannot change or disappear. Full inventories remain authoritative; this is not a render, controls or visual pass."
+    },
+    "afterComparison": {
+      "schemaVersion": 1,
+      "rule": "next-app-page-build-seed-promotion-v1",
+      "fullIdentityUnchanged": true,
+      "immutableBuildUnchanged": true,
+      "beforeDigest": "35f65c100277899a70aa4b0be1a0921914bbc21c6f9227f93031e3b2149dc671",
+      "afterDigest": "35f65c100277899a70aa4b0be1a0921914bbc21c6f9227f93031e3b2149dc671",
+      "immutableDigest": "5355c4e11c31b6b4778fcfa6aba9aa6e52f52a2b6d131541d355990863e597b6",
+      "addedCacheFiles": [],
+      "cacheInventory": [
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.html",
+          "bytes": 64977,
+          "sha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.meta",
+          "bytes": 481,
+          "sha256": "d9b8085f7b00e9c6cd6ac21c62328db5581720ef1201229f81790a61b45a76da"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.rsc",
+          "bytes": 34143,
+          "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/__PAGE__.segment.rsc",
+          "bytes": 33628,
+          "sha256": "ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_full.segment.rsc",
+          "bytes": 34143,
+          "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+        },
+        {
+          "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_tree.segment.rsc",
+          "bytes": 249,
+          "sha256": "4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f"
+        }
+      ],
+      "promotions": [
+        {
+          "key": "/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index",
+          "owner": {
+            "kind": "APP_PAGE",
+            "sourceRoute": "/page"
+          },
+          "seedMetadata": {
+            "path": "server/app/index.meta",
+            "bytes": 595,
+            "sha256": "364b5f5dfdd03a659407755e2d891feb1100a3e1242d1753888957d41158c31c"
+          },
+          "cacheMetadata": {
+            "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.meta",
+            "bytes": 481,
+            "sha256": "d9b8085f7b00e9c6cd6ac21c62328db5581720ef1201229f81790a61b45a76da"
+          },
+          "routeCacheLastModified": 1791779672713,
+          "payloads": [
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.html",
+              "seedPath": "server/app/index.html",
+              "bytes": 64977,
+              "sha256": "4ed68adb1142da3da95d6d9d095179588cbe621413a5074c7ee4dedff890329f"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.rsc",
+              "seedPath": "server/app/index.rsc",
+              "bytes": 34143,
+              "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_tree.segment.rsc",
+              "seedPath": "server/app/index.segments/_tree.segment.rsc",
+              "bytes": 249,
+              "sha256": "4c177306ff654ad89f4f50bd00be9c3cc5b39c8e80a6797db6b299585280d59f"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/_full.segment.rsc",
+              "seedPath": "server/app/index.segments/_full.segment.rsc",
+              "bytes": 34143,
+              "sha256": "d15ec54b4f6fd0f8486b47a7281173418cbd7e24ff8dc231c9dc5f88859ceac9"
+            },
+            {
+              "path": "server/route-cache/APP_PAGE/c6377dd9ce6a1c2cd100eb4344e843eb4639b9ed26f84643f77680e9eb454c4b/$/index.segments/__PAGE__.segment.rsc",
+              "seedPath": "server/app/index.segments/__PAGE__.segment.rsc",
+              "bytes": 33628,
+              "sha256": "ce21287370f6f04c6787e8d310417a95900b8d4293f26804865f007755d43d7a"
+            }
+          ]
+        }
+      ],
+      "limits": "Only complete immutable-seed APP_PAGE promotions are accepted. Existing cache entries cannot change or disappear. Full inventories remain authoritative; this is not a render, controls or visual pass."
+    }
+  },
+  "coverage": {
+    "verified": true,
+    "error": null,
+    "originals": 102,
+    "midEndOriginals": 10,
+    "rests": 5,
+    "transitions": 8,
+    "travelFrames": 24,
+    "controls": 16,
+    "trials": 32,
+    "notApplicable": 1,
+    "controlOriginals": 63,
+    "samples": 21,
+    "wording": 4,
+    "rawControlCensuses": 5
+  },
+  "originalReview": {
+    "path": "desktop-originals-review.json",
+    "sha256": "d780fb6c75ccd7cbc7d37119c7a09c25cbaded6d83bf25c5864f373b5435aa98",
+    "exactImageSetAndHashes": true,
+    "count": 102,
+    "pixelsIndependentlyViewedByThisAuditor": false
+  },
+  "controls": [
+    {
+      "key": "control-4b4377bd3a0a1283",
+      "name": "Skip to the evidence",
+      "method": "pointer",
+      "applicability": "not-applicable",
+      "reached": false,
+      "activated": false,
+      "changed": null,
+      "error": null,
+      "responseStatus": null,
+      "pixelsChanged": null,
+      "beforeGeometry": null,
+      "afterGeometry": null,
+      "beforeFocused": null,
+      "beforeVisible": null,
+      "beforeInView": null,
+      "beforeHitTarget": null,
+      "preActivationSettled": false,
+      "postActivationSettled": false,
+      "peerPreparationVerified": null,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-4b4377bd3a0a1283",
+      "name": "Skip to the evidence",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 12,
+        "y": 12,
+        "width": 196.140625,
+        "height": 44.59375
+      },
+      "afterGeometry": {
+        "x": 12,
+        "y": -77.1875,
+        "width": 196.140625,
+        "height": 44.59375
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "proof",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-9dcf3c14f861d1f5",
+      "name": "amAda MensahEmbedded firmware",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": false,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 32,
+        "width": 171.140625,
+        "height": 46
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": 32,
+        "width": 171.140625,
+        "height": 46
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "opening",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-9dcf3c14f861d1f5",
+      "name": "amAda MensahEmbedded firmware",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 32,
+        "width": 171.140625,
+        "height": 46
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": 32,
+        "width": 171.140625,
+        "height": 46
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "opening",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-02b4d792b6fce548",
+      "name": "Explore the work ↗",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1137.078125,
+        "y": 33,
+        "width": 126.453125,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 1137.078125,
+        "y": -1222,
+        "width": 126.453125,
+        "height": 44
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "power",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-02b4d792b6fce548",
+      "name": "Explore the work ↗",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1137.078125,
+        "y": 33,
+        "width": 126.453125,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 1137.078125,
+        "y": -1222,
+        "width": 126.453125,
+        "height": 44
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "power",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-5081d714285764f9",
+      "name": "Evidence ↗",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1295.53125,
+        "y": 33,
+        "width": 79.671875,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 1295.53125,
+        "y": -4327,
+        "width": 79.671875,
+        "height": 44
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "proof",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-5081d714285764f9",
+      "name": "Evidence ↗",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1295.53125,
+        "y": 33,
+        "width": 79.671875,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 1295.53125,
+        "y": -4327,
+        "width": 79.671875,
+        "height": 44
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "proof",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-0f8e3aaf82f087ca",
+      "name": "The question1",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1135.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1135.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "opening",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-0f8e3aaf82f087ca",
+      "name": "The question1",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1135.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1135.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "opening",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-0a853c2d30aa2f4c",
+      "name": "The schedule2",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1184.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1184.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "power",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-0a853c2d30aa2f4c",
+      "name": "The schedule2",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1184.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1184.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "power",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-bf76ca2eab6845cc",
+      "name": "The bench3",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1233.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1233.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "middle",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-bf76ca2eab6845cc",
+      "name": "The bench3",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1233.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1233.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "middle",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-56e7c6a74afccc18",
+      "name": "The evidence4",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": false,
+      "error": "Post-activation scroll did not remain settled through the response original",
+      "responseStatus": "unobserved",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1282.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1282.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": false,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "proof",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": false
+        }
+      ]
+    },
+    {
+      "key": "control-56e7c6a74afccc18",
+      "name": "The evidence4",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1282.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1282.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "proof",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-7c30f7cd27b3b32b",
+      "name": "The scope5",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1331.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1331.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "close",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-7c30f7cd27b3b32b",
+      "name": "The scope5",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": false,
+      "error": "Post-activation scroll did not remain settled through the response original",
+      "responseStatus": "unobserved",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 1331.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "afterGeometry": {
+        "x": 1331.203125,
+        "y": 786.625,
+        "width": 44,
+        "height": 50.375
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": false,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "close",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": false
+        }
+      ]
+    },
+    {
+      "key": "control-0eecc2c675ff83aa",
+      "name": "↓ Follow the work",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 751,
+        "width": 134.015625,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": -70,
+        "width": 134.015625,
+        "height": 44
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "power",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-0eecc2c675ff83aa",
+      "name": "↓ Follow the work",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 751,
+        "width": 134.015625,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": -70,
+        "width": 134.015625,
+        "height": 44
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "power",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-584cd2843abe788e",
+      "name": "Back to the question ↑",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 115.1875,
+        "y": 657.3125,
+        "width": 138.03125,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 115.1875,
+        "y": 8008.3125,
+        "width": 138.03125,
+        "height": 44
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "opening",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-584cd2843abe788e",
+      "name": "Back to the question ↑",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 115.1875,
+        "y": 1088.3125,
+        "width": 138.03125,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 115.1875,
+        "y": 8008.3125,
+        "width": 138.03125,
+        "height": 44
+      },
+      "beforeFocused": true,
+      "beforeVisible": true,
+      "beforeInView": false,
+      "beforeHitTarget": false,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "opening",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-d3d3b317ee1ad7b9",
+      "name": "01Command",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": true,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-d3d3b317ee1ad7b9",
+      "name": "01Command",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": true,
+      "beforeVisible": false,
+      "beforeInView": false,
+      "beforeHitTarget": false,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": true,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-b8440473c2b2918b",
+      "name": "02Board",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 174.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 174.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-b8440473c2b2918b",
+      "name": "02Board",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 174.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 174.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": true,
+      "beforeVisible": false,
+      "beforeInView": false,
+      "beforeHitTarget": false,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-3b99aa31e3e87023",
+      "name": "03Fixture",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 284.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 284.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-3b99aa31e3e87023",
+      "name": "03Fixture",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 284.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 284.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": true,
+      "beforeVisible": false,
+      "beforeInView": false,
+      "beforeHitTarget": false,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-6d13dcb4901deee3",
+      "name": "04Observe",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 394.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 394.796875,
+        "y": 547.8125,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-6d13dcb4901deee3",
+      "name": "04Observe",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 394.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "afterGeometry": {
+        "x": 394.796875,
+        "y": 2407.84375,
+        "width": 110,
+        "height": 58
+      },
+      "beforeFocused": true,
+      "beforeVisible": false,
+      "beforeInView": false,
+      "beforeHitTarget": false,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": []
+    },
+    {
+      "key": "control-e96fd7cd390c706b",
+      "name": "Read the source and limits ↘",
+      "method": "pointer",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 751,
+        "width": 190.25,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": 44,
+        "width": 190.25,
+        "height": 44
+      },
+      "beforeFocused": false,
+      "beforeVisible": true,
+      "beforeInView": true,
+      "beforeHitTarget": true,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "scope",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    },
+    {
+      "key": "control-e96fd7cd390c706b",
+      "name": "Read the source and limits ↘",
+      "method": "keyboard",
+      "applicability": "applicable",
+      "reached": true,
+      "activated": true,
+      "changed": true,
+      "error": null,
+      "responseStatus": "observed DOM/state response",
+      "pixelsChanged": true,
+      "beforeGeometry": {
+        "x": 64.796875,
+        "y": 3057.703125,
+        "width": 190.25,
+        "height": 44
+      },
+      "afterGeometry": {
+        "x": 64.796875,
+        "y": 44,
+        "width": 190.25,
+        "height": 44
+      },
+      "beforeFocused": true,
+      "beforeVisible": false,
+      "beforeInView": false,
+      "beforeHitTarget": false,
+      "preActivationSettled": true,
+      "postActivationSettled": true,
+      "peerPreparationVerified": null,
+      "declaredTargets": [
+        {
+          "id": "scope",
+          "exists": true,
+          "requiresVisualReview": false,
+          "changed": true
+        }
+      ]
+    }
+  ],
+  "priorEvidencePreserved": {
+    "originalBuildArtifacts": 8,
+    "failedDesktopArtifacts": 109,
+    "partialArtifacts": 81,
+    "partialRawFiles": 4,
+    "partialComplete": false,
+    "partialTechnicalPass": false
+  },
+  "hashes": {
+    "desktop/artifacts/manifest.json": "807a05e34f6d882c7ab102030a2807309a530f3e8e32df7bfb7f2526f50707ca",
+    "desktop/artifacts/desktop/report.json": "e05487fb9d255987c5caa7193b4dc6da63add7f45077251743ca366f3e850537",
+    "desktop/review/command.json": "a38f93707f84484b94082994125d869c14d70b53095947f521251b10eece581c",
+    "desktop/review/result.json": "fad22015d0ce621fe156e956102e0b171856b39c0cfdfce3a6cf64f47d74268e",
+    "desktop/review/lifecycle.jsonl": "de9f52836d154034cf07bdfecb3af191a2ff3b251e7f975d29df50ed2c6c7e91",
+    "desktop-command/result.json": "a1fc752e3d882d78cc7748eb5fc82ccd0ec7c550e6dffcb4accc726a2f0a5c88",
+    "desktop-command/lifecycle.jsonl": "0cce24b5c6bdecae339cd3fb2f054892bdd23aa3fd7746137d3e19f6a6f2c133",
+    "desktop-tool-poll-7.json": "23077480f977f1e10dd0b4b25914b3a5ab80b86179eb4cec9cb6ff579bc70683",
+    "desktop-integrity.mjs": "27ef247fd26cee8be184eeb628c8b9b6d060fecfe49192a48ac16a8ea43e54f2"
+  },
+  "limitations": "Read-only source/artifact/lifecycle/coverage audit. Root owns pixel review. Completed worker/normal outer closure with a failed mode is not successful visual acceptance. Scope count remains separate from raw mode pass. A separate exact-ownership process scan is still required; this audit does not signal processes or claim descendant absence."
+}

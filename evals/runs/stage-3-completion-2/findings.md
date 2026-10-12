@@ -181,3 +181,23 @@ all 23 corrected implementation/transitive files. Its initial comparison
 correctly reports unequal full inventories and equal immutable build, with
 all six cache files validated and retained. No rebuild, installation or
 paid actor is needed for this apparatus question.
+
+## Third apparatus calibration completed
+
+The second calibration's interruption, partial evidence and scoped cleanup
+remain in its separate audit. Prospective logging/focus-reset/deadline
+changes and two completed neutral longevity probes are retained separately.
+The third calibration then completed normally at 05:49:02.167 UTC after
+454,003 ms, without timeout, signal or logging failure. All 102 originals
+were reviewed; the independent integrity verifier passed. Source and build
+are unchanged, and old failed/partial evidence is preserved.
+
+The raw mode still fails with 12 diagnostics across eight control trials,
+plus the separate five-versus-12-to-22 scope finding. Precise raw-trial
+attribution distinguishes offscreen native focus from absent key events,
+and conservative settlement failures from absent visible navigation.
+The [root disposition](full-journey/calibration-3/disposition.md) closes the
+apparatus question and proceeds to fresh journey setup, not another
+all-green calibration. All 351 repository tests pass in `local-tests-7`.
+No skill or prototype change, paid full-journey launch, push or Stage 3
+completion occurred at this checkpoint.

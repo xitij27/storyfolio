@@ -10,7 +10,11 @@ and [final planning-regression controls](../evals/runs/stage-3-completion-2/plan
 These are measurement preparation, not completed paid full-journey proof.
 The [second calibration interruption](../evals/runs/stage-3-completion-2/full-journey/calibration-2/interruption-audit.md)
 and [neutral longevity diagnostic](../evals/runs/stage-3-completion-2/process-supervision/longevity-1/launch-decision.md)
-are the latest execution checkpoint. No full-journey paid actor has run yet.
+preserve earlier execution checkpoints. The
+[third calibration disposition](../evals/runs/stage-3-completion-2/full-journey/calibration-3/disposition.md)
+now records complete audited coverage and permits fresh full-journey setup.
+It preserves prototype failures and does not complete Stage 3.
+No full-journey paid actor has run yet.
 
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what

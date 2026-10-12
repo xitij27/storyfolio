@@ -13,6 +13,16 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
+Newest checkpoint: the third desktop calibration completed normally, with
+all 102 originals reviewed and source/build/artifact/lifecycle integrity
+independently verified. Twelve technical diagnostics and the five-beat
+scope finding remain failures. The apparatus faithfully records them;
+another calibration is not needed to force the manual prototype to pass.
+The [root disposition](../evals/runs/stage-3-completion-2/full-journey/calibration-3/disposition.md)
+permits fresh full-journey setup and its own neutral environment/readiness
+proof before paid turn 1. All 351 repository tests pass. Prior interruptions
+remain unexplained, and no full-journey actor has launched at this checkpoint.
+
 Latest runtime checkpoint: the second desktop calibration stopped with
 outer exit 143 before its deadline. All 75 available originals were
 reviewed, and the unchanged source/build plus archived launch helpers
