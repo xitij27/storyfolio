@@ -1,0 +1,35 @@
+{
+  "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+  "args": [
+    "/home/kshitij/projects/storyfolio/evals/runs/codex-bench-entry-baseline-1/inputs/implementation/evals/builds/bench-entry-1/measurement.mjs",
+    "--workspace=/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/replay-bench-entry-1-Zuh5Og",
+    "--targets=/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/entry-replay/setup/observed-targets.json",
+    "--expectations=/home/kshitij/projects/storyfolio/evals/runs/codex-bench-entry-baseline-1/inputs/expectations.json",
+    "--out=/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/entry-replay/measurement/artifacts",
+    "--dependencies=/tmp/storyfolio-build-capability-20261011"
+  ],
+  "cwd": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/replay-bench-entry-1-Zuh5Og",
+  "environment": {
+    "PATH": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+    "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+    "LANG": "C.UTF-8",
+    "TMPDIR": "/var/tmp/storyfolio-entry-runtime-20261012",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  },
+  "timeoutMs": 895000,
+  "graceMs": 5000,
+  "totalCapMs": 900000,
+  "helperHashes": {
+    "bindings.mjs": "19134e5f5c48478104de13e03d03d5c675324e5cd975832fedc09a1209f73022",
+    "reconstruct.mjs": "0e30c35bc6d6a27d182bae009a19d70fab130608f55fcea9ccc321d4811c2cab",
+    "run-replay.mjs": "ea99ff405e81dd4842b10b841f162fcaf83eeabdff83a4114e3817a98424b87d",
+    "verify-replay.mjs": "1ac1c1a8171e8d678639773c6cb30d06ce918daa92280f2a06988d8e746b9ffd",
+    "bindings.test.mjs": "65fde72ab2648e7fe6f2490acd86669e183485007c41f1762f4478da27420afb",
+    "README.md": "fde90d618b1649a1fb33a56812e4e9103c519dec30a2c6bb034ebfe20f01917c"
+  },
+  "inputDigest": "504064164d5410a3d8cba07e7c877989924a3a4b15b67d76af92ec28e920238a",
+  "workerSha256": "103aed7d17370c6affbcebea2bb3f4b8ad4afb3e7de52e4399ca937922129b28",
+  "installRecordSha256": "ad0d0f055ad7a64ac15aebd4bdc50c193f59d610b4d7edf3646db94c8d64f621",
+  "limitations": "895000 ms work plus up to 5000 ms shutdown, total 900000 subject to scheduling jitter. Forced worker termination cannot prove detached-descendant cleanup. Root must inspect owned PIDs read-only after closure."
+}

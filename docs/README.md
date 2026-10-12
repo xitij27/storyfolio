@@ -6,15 +6,17 @@ and [evidence here](../evals/runs/stage-3-completion-2/findings.md).
 
 Start with [the current handover](handover.md). It says what the skill does
 today, what the author has decided, what the evidence supports and what
-remains open. The skill currently plans a portfolio through an approved
-storyboard. The reusable engine is implemented, locally verified and
+remains open. The candidate skill now routes requested builds through look
+and whole-beat wording choices, pending matched and full-journey proof.
+The reusable engine is implemented, locally verified and
 approved on desktop and a physical phone. Stage 3's fictional seven-beat
 implementation passed six technical browser conditions, but the author
 rejected its visual quality. The 49 reviewed images established readability
 and layout checks, not a convincing object-led story. Stage 3's visual proof
 has failed and remains open. The completion judge could not start because
 its packet exceeded the CLI character limit. Shipped site-building guidance
-remains future work.
+is under test. The [latest source-bound replay review](../evals/runs/stage-3-completion-2/entry-replay/visual-review.md)
+verifies the saved entry build, not completion of the workflow.
 
 The author subsequently authorized a manual three-beat recovery prototype.
 Its [source and setup](../prototypes/fixture-study/README.md),

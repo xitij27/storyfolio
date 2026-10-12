@@ -1,0 +1,961 @@
+{
+  "look": {
+    "id": "light",
+    "route": "/",
+    "advertised": true,
+    "control": {
+      "selector": ".story-look-switch[aria-label=\"Appearance\"] > button:nth-of-type(1)",
+      "name": "Warm",
+      "fromRoute": "/?look=dark"
+    }
+  },
+  "mode": "phone",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "rests": [
+    {
+      "role": "opening",
+      "id": "question.inspect",
+      "observation": {
+        "url": "http://127.0.0.1:37735/",
+        "scroll": 211,
+        "scene": "on",
+        "look": "light",
+        "palette": [
+          [
+            "--story-ground",
+            "#f3efe5"
+          ],
+          [
+            "--story-ink",
+            "#273b34"
+          ],
+          [
+            "--story-accent",
+            "#985533"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the answer",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Code → physical check1",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Organize the cycle2",
+            "href": "#chapter-scheduling",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Make it observable3",
+            "href": "#chapter-bench",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Read the evidence4",
+            "href": "#chapter-evidence",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The answer & its limits5",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Warm",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "Night",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Return to the question ↑",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "image": {
+        "path": "01-phone/opening.png",
+        "sha256": "a607fe184ac188f3204a772ec009bad55986e0063a8efb1b78ad0425a51cddcd",
+        "bytes": 108939
+      }
+    },
+    {
+      "role": "middle",
+      "id": "bench.connect",
+      "observation": {
+        "url": "http://127.0.0.1:37735/",
+        "scroll": 2743,
+        "scene": "on",
+        "look": "light",
+        "palette": [
+          [
+            "--story-ground",
+            "#f3efe5"
+          ],
+          [
+            "--story-ink",
+            "#273b34"
+          ],
+          [
+            "--story-accent",
+            "#985533"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the answer",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Code → physical check1",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Organize the cycle2",
+            "href": "#chapter-scheduling",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Make it observable3",
+            "href": "#chapter-bench",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Read the evidence4",
+            "href": "#chapter-evidence",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The answer & its limits5",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Warm",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "Night",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Return to the question ↑",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "image": {
+        "path": "01-phone/middle.png",
+        "sha256": "911b722e70817dce89b8b72fd08632af880d55450082235003a84d17761d0cd2",
+        "bytes": 104710
+      }
+    },
+    {
+      "role": "ending",
+      "id": "scope.answer",
+      "observation": {
+        "url": "http://127.0.0.1:37735/",
+        "scroll": 5275,
+        "scene": "on",
+        "look": "light",
+        "palette": [
+          [
+            "--story-ground",
+            "#f3efe5"
+          ],
+          [
+            "--story-ink",
+            "#273b34"
+          ],
+          [
+            "--story-accent",
+            "#985533"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the answer",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Code → physical check1",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Organize the cycle2",
+            "href": "#chapter-scheduling",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Make it observable3",
+            "href": "#chapter-bench",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Read the evidence4",
+            "href": "#chapter-evidence",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The answer & its limits5",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Warm",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "Night",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Return to the question ↑",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "image": {
+        "path": "01-phone/ending.png",
+        "sha256": "4b5cc22d03b70e36dc5152645dcb4747e9ba1041ec3911eacc3e8bd399216d87",
+        "bytes": 109947
+      }
+    }
+  ],
+  "controls": [
+    {
+      "method": "pointer",
+      "activated": true,
+      "geometry": {
+        "x": 249.484375,
+        "y": 20.1875,
+        "width": 57.96875,
+        "height": 44,
+        "inView": true,
+        "visible": true,
+        "hitTarget": true,
+        "focused": false,
+        "disabled": false
+      },
+      "before": {
+        "url": "http://127.0.0.1:37735/?look=dark",
+        "scroll": 0,
+        "scene": "on",
+        "look": "dark",
+        "palette": [
+          [
+            "--story-ground",
+            "#151e27"
+          ],
+          [
+            "--story-ink",
+            "#f3eee2"
+          ],
+          [
+            "--story-accent",
+            "#efb475"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the answer",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Code → physical check1",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Organize the cycle2",
+            "href": "#chapter-scheduling",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Make it observable3",
+            "href": "#chapter-bench",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Read the evidence4",
+            "href": "#chapter-evidence",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The answer & its limits5",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Warm",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Night",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "Return to the question ↑",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "beforeImage": {
+        "path": "01-phone/pointer-before.png",
+        "sha256": "01e4b6a53615ff9ceeb9db45e4c93c8ecdb14e16b3f2a1424c5dfe414e537217",
+        "bytes": 97532
+      },
+      "after": {
+        "url": "http://127.0.0.1:37735/",
+        "scroll": 0,
+        "scene": "on",
+        "look": "light",
+        "palette": [
+          [
+            "--story-ground",
+            "#f3efe5"
+          ],
+          [
+            "--story-ink",
+            "#273b34"
+          ],
+          [
+            "--story-accent",
+            "#985533"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the answer",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Code → physical check1",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Organize the cycle2",
+            "href": "#chapter-scheduling",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Make it observable3",
+            "href": "#chapter-bench",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Read the evidence4",
+            "href": "#chapter-evidence",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The answer & its limits5",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Warm",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "Night",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Return to the question ↑",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "afterImage": {
+        "path": "01-phone/pointer-after.png",
+        "sha256": "f799afeef87f37e46448fe8cde867648be332cd78ef05666ba446a73df796daf",
+        "bytes": 112240
+      },
+      "identityChanged": true,
+      "responseStatus": "observed look/route response; material appearance requires review",
+      "meaning": "Manual review required: response and pixels do not alone prove the intended material look"
+    },
+    {
+      "method": "keyboard",
+      "activated": true,
+      "tabPresses": 2,
+      "geometry": {
+        "x": 249.484375,
+        "y": 20.1875,
+        "width": 57.96875,
+        "height": 44,
+        "inView": true,
+        "visible": true,
+        "hitTarget": true,
+        "focused": true,
+        "disabled": false
+      },
+      "before": {
+        "url": "http://127.0.0.1:37735/?look=dark",
+        "scroll": 0,
+        "scene": "on",
+        "look": "dark",
+        "palette": [
+          [
+            "--story-ground",
+            "#151e27"
+          ],
+          [
+            "--story-ink",
+            "#f3eee2"
+          ],
+          [
+            "--story-accent",
+            "#efb475"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the answer",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Code → physical check1",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Organize the cycle2",
+            "href": "#chapter-scheduling",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Make it observable3",
+            "href": "#chapter-bench",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Read the evidence4",
+            "href": "#chapter-evidence",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The answer & its limits5",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Warm",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Night",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "Return to the question ↑",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "beforeImage": {
+        "path": "01-phone/keyboard-before.png",
+        "sha256": "39ef1df64bca57144526cec002b9c9241155eac547382a9bce6193b09c1917c3",
+        "bytes": 98847
+      },
+      "activationKey": "Enter",
+      "after": {
+        "url": "http://127.0.0.1:37735/",
+        "scroll": 0,
+        "scene": "on",
+        "look": "light",
+        "palette": [
+          [
+            "--story-ground",
+            "#f3efe5"
+          ],
+          [
+            "--story-ink",
+            "#273b34"
+          ],
+          [
+            "--story-accent",
+            "#985533"
+          ]
+        ],
+        "overflowX": false,
+        "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+        "canvases": [
+          {
+            "visible": true,
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844
+          }
+        ],
+        "controls": [
+          {
+            "name": "Skip to the answer",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Code → physical check1",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Organize the cycle2",
+            "href": "#chapter-scheduling",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Make it observable3",
+            "href": "#chapter-bench",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Read the evidence4",
+            "href": "#chapter-evidence",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "The answer & its limits5",
+            "href": "#chapter-scope",
+            "pressed": null,
+            "selected": null
+          },
+          {
+            "name": "Warm",
+            "href": null,
+            "pressed": "true",
+            "selected": null
+          },
+          {
+            "name": "Night",
+            "href": null,
+            "pressed": "false",
+            "selected": null
+          },
+          {
+            "name": "Return to the question ↑",
+            "href": "#chapter-question",
+            "pressed": null,
+            "selected": null
+          }
+        ]
+      },
+      "afterImage": {
+        "path": "01-phone/keyboard-after.png",
+        "sha256": "07ef61b428076e0f60095cbc0e87a2d1609eddefc10adda0b0382c15d872ef09",
+        "bytes": 113657
+      },
+      "identityChanged": true,
+      "responseStatus": "observed look/route response; material appearance requires review",
+      "meaning": "Manual review required: response and pixels do not alone prove the intended material look"
+    }
+  ],
+  "requests": [],
+  "errors": [],
+  "images": [
+    {
+      "path": "01-phone/entry.png",
+      "sha256": "2f7a85d7a26d31f8bcfa598c1b7d325d79aeaae6ab750532478fa784e9d511a1",
+      "bytes": 112277
+    },
+    {
+      "path": "01-phone/opening.png",
+      "sha256": "a607fe184ac188f3204a772ec009bad55986e0063a8efb1b78ad0425a51cddcd",
+      "bytes": 108939
+    },
+    {
+      "path": "01-phone/middle.png",
+      "sha256": "911b722e70817dce89b8b72fd08632af880d55450082235003a84d17761d0cd2",
+      "bytes": 104710
+    },
+    {
+      "path": "01-phone/ending.png",
+      "sha256": "4b5cc22d03b70e36dc5152645dcb4747e9ba1041ec3911eacc3e8bd399216d87",
+      "bytes": 109947
+    },
+    {
+      "path": "01-phone/pointer-before.png",
+      "sha256": "01e4b6a53615ff9ceeb9db45e4c93c8ecdb14e16b3f2a1424c5dfe414e537217",
+      "bytes": 97532
+    },
+    {
+      "path": "01-phone/pointer-after.png",
+      "sha256": "f799afeef87f37e46448fe8cde867648be332cd78ef05666ba446a73df796daf",
+      "bytes": 112240
+    },
+    {
+      "path": "01-phone/keyboard-before.png",
+      "sha256": "39ef1df64bca57144526cec002b9c9241155eac547382a9bce6193b09c1917c3",
+      "bytes": 98847
+    },
+    {
+      "path": "01-phone/keyboard-after.png",
+      "sha256": "07ef61b428076e0f60095cbc0e87a2d1609eddefc10adda0b0382c15d872ef09",
+      "bytes": 113657
+    }
+  ],
+  "complete": true,
+  "entry": {
+    "url": "http://127.0.0.1:37735/",
+    "scroll": 0,
+    "scene": "on",
+    "look": "light",
+    "palette": [
+      [
+        "--story-ground",
+        "#f3efe5"
+      ],
+      [
+        "--story-ink",
+        "#273b34"
+      ],
+      [
+        "--story-accent",
+        "#985533"
+      ]
+    ],
+    "overflowX": false,
+    "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+    "canvases": [
+      {
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "controls": [
+      {
+        "name": "Skip to the answer",
+        "href": "#chapter-scope",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Code → physical check1",
+        "href": "#chapter-question",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Organize the cycle2",
+        "href": "#chapter-scheduling",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Make it observable3",
+        "href": "#chapter-bench",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Read the evidence4",
+        "href": "#chapter-evidence",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "The answer & its limits5",
+        "href": "#chapter-scope",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Warm",
+        "href": null,
+        "pressed": "true",
+        "selected": null
+      },
+      {
+        "name": "Night",
+        "href": null,
+        "pressed": "false",
+        "selected": null
+      },
+      {
+        "name": "Return to the question ↑",
+        "href": "#chapter-question",
+        "pressed": null,
+        "selected": null
+      }
+    ]
+  },
+  "entryImage": {
+    "path": "01-phone/entry.png",
+    "sha256": "2f7a85d7a26d31f8bcfa598c1b7d325d79aeaae6ab750532478fa784e9d511a1",
+    "bytes": 112277
+  },
+  "lookActivation": {
+    "url": "http://127.0.0.1:37735/",
+    "scroll": 0,
+    "scene": "on",
+    "look": "light",
+    "palette": [
+      [
+        "--story-ground",
+        "#f3efe5"
+      ],
+      [
+        "--story-ink",
+        "#273b34"
+      ],
+      [
+        "--story-accent",
+        "#985533"
+      ]
+    ],
+    "overflowX": false,
+    "text": "Skip to the answer\nWarm\nNight\nAda Mensah\nFIRMWARE / MOSSLINK\n\n1 / CODE → PHYSICAL CHECK\n\nHow do you check a decision made in code?\n\nAda Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.\n\nBring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device.\n\n2 / ORGANIZE THE CYCLE\n\nGive each activity its place.\n\nSleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.\n\nThe loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented.\n\n3 / MAKE IT OBSERVABLE\n\nA command needs a physical answer.\n\nA firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.\n\nAda: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring.\n\n4 / READ THE EVIDENCE\n\nTwo claims. Two kinds of support.\n\nMeasured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.\n\nNeither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied.\n\n5 / THE ANSWER & ITS LIMITS\n\nCode, connected to a bench check.\n\nAda’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.\n\nSix of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.\n\nReturn to the question ↑\nIllustrative portfolio · fictional evaluation subject · local prototype",
+    "canvases": [
+      {
+        "visible": true,
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "controls": [
+      {
+        "name": "Skip to the answer",
+        "href": "#chapter-scope",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Code → physical check1",
+        "href": "#chapter-question",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Organize the cycle2",
+        "href": "#chapter-scheduling",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Make it observable3",
+        "href": "#chapter-bench",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Read the evidence4",
+        "href": "#chapter-evidence",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "The answer & its limits5",
+        "href": "#chapter-scope",
+        "pressed": null,
+        "selected": null
+      },
+      {
+        "name": "Warm",
+        "href": null,
+        "pressed": "true",
+        "selected": null
+      },
+      {
+        "name": "Night",
+        "href": null,
+        "pressed": "false",
+        "selected": null
+      },
+      {
+        "name": "Return to the question ↑",
+        "href": "#chapter-question",
+        "pressed": null,
+        "selected": null
+      }
+    ]
+  },
+  "beatInventory": [
+    {
+      "id": "question.inspect",
+      "text": "1 / Code → physical checkHow do you check a decision made in code?Ada Mensah works with embedded firmware: code that controls a physical device. For Mosslink, an environmental sensor, she wrote the firmware, scheduled power states and built the bring-up fixture.Bring-up means checking a new board’s basic operation. Follow the illustrative apparatus from a code decision to a bench observation. This is an explanatory model, not the actual device."
+    },
+    {
+      "id": "scheduling.loop",
+      "text": "2 / Organize the cycleGive each activity its place.Sleep → Measure → Transmit → repeat. Scheduling organizes different activities over a cycle, making the order of device behavior something you can inspect. Ada scheduled Mosslink’s power states.The loop on the board is a teaching sequence, not recovered Mosslink firmware or measured timing. No durations or current values are represented."
+    },
+    {
+      "id": "bench.connect",
+      "text": "3 / Make it observableA command needs a physical answer.A firmware command asks the board to act. The bring-up fixture provides access to that board so its response can be observed on the bench. The fixture enables the check; the board’s circuitry makes the device work.Ada: firmware, scheduling and fixture. A colleague: the PCB (printed circuit board) and analogue front end, the circuitry handling sensor signals. The connectors show relationships, not actual wiring."
+    },
+    {
+      "id": "evidence.paths",
+      "text": "4 / Read the evidenceTwo claims. Two kinds of support.Measured sleep and transmit current, plus an assumed reporting interval, support a two-year endurance projection. A separate continuous bench run supports 72 hours observed. That run does not validate two years of endurance.Neither path establishes field conditions or customer deployment. The instrument displays explain the claims; no original measurements table, trace, spreadsheet or run notebook is supplied."
+    },
+    {
+      "id": "scope.answer",
+      "text": "5 / The answer & its limitsCode, connected to a bench check.Ada’s firmware and scheduling define device behavior; her fixture makes a physical board response accessible to observation. That is the connection from a code decision to a check on the bench.Six of forty assembled engineering samples were bench-tested; none went to customers. One preliminary emissions check passed. Full qualification is unfinished. The projection and bench run remain distinct evidence, with distinct limits.Return to the question ↑"
+    }
+  ]
+}

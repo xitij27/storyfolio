@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "measurement": "natural-entry-spine",
+  "sourceDigest": "fea7a2ef704fa6c30e3d6d1477a39b911fa06961b54560f8f0bca90f3c1403c3",
+  "actorResultSha256": "d758c277d2af1700d5a3c62913501917bee457f4df9da3b13d32266f9de6a291",
+  "discovery": {
+    "reviewer": "acceptance coordinator",
+    "allAdvertisedLooksRecorded": true,
+    "sources": [
+      {
+        "path": "app/page.tsx",
+        "sha256": "d08f4172bc8f701870be1cb28b6668fab3589180f76a329397b53660c451bdad"
+      },
+      {
+        "path": "app/sketch/[id]/page.tsx",
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+      },
+      {
+        "path": "content/sketches/index.ts",
+        "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0"
+      },
+      {
+        "path": "content/looks.ts",
+        "sha256": "58d1b4c00027e7abe550d6669bf47e7c4b60ca62a61288f2e7d7612dfd1af362"
+      },
+      {
+        "path": "content/index.ts",
+        "sha256": "0541eaa47dd833971433ff5328645735dc50b7c6e15f7e121df2a26b3a771898"
+      },
+      {
+        "path": "content/story.ts",
+        "sha256": "49a6f114fdf689e14988fba32e83b19864ca9d77971f892eef0622d51cc95654"
+      },
+      {
+        "path": "content/copy.ts",
+        "sha256": "cccf3b186f7c55ae80ca6c4315a06594b945cee536c7a11dfbf12ec5fecd581c"
+      },
+      {
+        "path": "content/experience.tsx",
+        "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35"
+      },
+      {
+        "path": "content/formations.ts",
+        "sha256": "9f4ccf065cd88ac161643ffa13b07a189d2a5747896bc2e3dc8f6d1f713a2c05"
+      },
+      {
+        "path": "content/apparatus.tsx",
+        "sha256": "79236868476074d02f8f0a47cec773f9ad0d193ee7f65da71ebd5f5fc92c3f00"
+      },
+      {
+        "path": "content/links.ts",
+        "sha256": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb"
+      },
+      {
+        "path": "content/extras/relationships.tsx",
+        "sha256": "156e50c81638181162ea3b92b6597bf3383d7137cd80b45b09ebbfcb060ec554"
+      },
+      {
+        "path": "components/story/story.tsx",
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      },
+      {
+        "path": "components/story/chapter.tsx",
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": "components/story/look-switch.tsx",
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": "components/story/use-look.ts",
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+      },
+      {
+        "path": "components/story/rail.tsx",
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": "lib/story/looks.ts",
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+      },
+      {
+        "path": "docs/story/handover.md",
+        "sha256": "714a152b15e9cf9dfcb540e1bfe146c5558239fc55873bc44340fc820d5fcaa0"
+      },
+      {
+        "path": "docs/story/decided-for-you.md",
+        "sha256": "02abd49c3b726a2130e2376bf2e6d92ecfb24b26fb6279f70e06139b3dd73961"
+      }
+    ],
+    "notes": "Exactly two source-defined runtime looks are exposed by content/index.ts and components/story/story.tsx. Warm/light uses / with /?look=light as an alias; Night/dark uses /?look=dark. No third runtime look exists. The empty sketches registry makes /sketch/[id] return notFound for every id, so it is not an advertised alternate portfolio. The actor's third textual choice, 'Choose the visual look for me', was delegation, not a third implemented look. Both source-defined looks are recorded regardless of visual quality; no browser pixels were used to choose targets. Source declaration and label differences are not material-look or control-operation evidence."
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "The actor replaced the starter with authored copy, a five-part apparatus, five approved meanings and two configured looks. A broken or unfinished authored implementation would ordinarily attempt the one capture. The separate strict source-set gate is currently blocked by 18 unexpected .git-local metadata files, so this record is not launch authorization."
+  },
+  "looks": [
+    {
+      "id": "light",
+      "route": "/",
+      "advertised": true,
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Appearance\"] > button:nth-of-type(1)",
+        "name": "Warm",
+        "fromRoute": "/?look=dark"
+      }
+    },
+    {
+      "id": "dark",
+      "route": "/?look=dark",
+      "advertised": true,
+      "control": {
+        "selector": ".story-look-switch[aria-label=\"Appearance\"] > button:nth-of-type(2)",
+        "name": "Night",
+        "fromRoute": "/"
+      }
+    }
+  ],
+  "beats": {
+    "opening": "question.inspect",
+    "middle": "bench.connect",
+    "ending": "scope.answer"
+  },
+  "middleMeaning": "bench",
+  "semanticMapping": {
+    "opening": {
+      "meaning": "question",
+      "chapter": "chapter-question",
+      "source": "content/copy.ts",
+      "basis": "Asks how to check a decision made in code; introduces firmware, physical device and Ada's scheduling/fixture work."
+    },
+    "middle": {
+      "meaning": "bench",
+      "chapter": "chapter-bench",
+      "source": "content/copy.ts",
+      "basis": "Connects firmware command, board response, fixture access and observable bench response while separating Ada's contributions from the colleague's circuitry.",
+      "selection": "Chosen from the frozen approved middle meanings because it directly connects the opening's code question to the ending's physical-check answer. The actor implemented all three approved middle meanings without designating one as the stop-4 sample. No pixel-quality ranking or passing subset was used."
+    },
+    "ending": {
+      "meaning": "scope",
+      "chapter": "chapter-scope",
+      "source": "content/copy.ts",
+      "basis": "Answers through firmware/scheduling and fixture access, retaining six of forty samples, no customers, preliminary emissions and unfinished qualification."
+    },
+    "otherImplementedMiddleBeats": [
+      {
+        "meaning": "scheduling",
+        "id": "scheduling.loop",
+        "chapter": "chapter-scheduling",
+        "sampled": false
+      },
+      {
+        "meaning": "evidence",
+        "id": "evidence.paths",
+        "chapter": "chapter-evidence",
+        "sampled": false
+      }
+    ]
+  },
+  "otherPublicControls": [
+    {
+      "selector": "#story-skip",
+      "name": "Skip to the answer",
+      "href": "#chapter-scope",
+      "kind": "Inherited focus-only skip, outside this narrow look-switch measurement"
+    },
+    {
+      "selector": ".story-rail a[href=\"#chapter-question\"]",
+      "href": "#chapter-question",
+      "kind": "Chapter navigation, outside this narrow look-switch measurement"
+    },
+    {
+      "selector": ".story-rail a[href=\"#chapter-scheduling\"]",
+      "href": "#chapter-scheduling",
+      "kind": "Chapter navigation, outside this narrow look-switch measurement"
+    },
+    {
+      "selector": ".story-rail a[href=\"#chapter-bench\"]",
+      "href": "#chapter-bench",
+      "kind": "Chapter navigation, outside this narrow look-switch measurement"
+    },
+    {
+      "selector": ".story-rail a[href=\"#chapter-evidence\"]",
+      "href": "#chapter-evidence",
+      "kind": "Chapter navigation, outside this narrow look-switch measurement"
+    },
+    {
+      "selector": ".story-rail a[href=\"#chapter-scope\"]",
+      "href": "#chapter-scope",
+      "kind": "Chapter navigation, outside this narrow look-switch measurement"
+    },
+    {
+      "selector": ".return-link",
+      "name": "Return to the question ↑",
+      "href": "#chapter-question",
+      "kind": "Ending-to-opening navigation, outside this narrow look-switch measurement"
+    }
+  ],
+  "controlLimits": "content/links.ts is empty; bundle declares no extra control config. Apparatus knobs are decorative meshes without input handlers. Selectors and labels are source observations only; actual visibility, pointer/Tab behavior and material look changes remain unobserved.",
+  "conversation": {
+    "actorComplete": false,
+    "actorTimedOut": true,
+    "finalReplyAvailable": false,
+    "commentaryOnlyReplyFile": true,
+    "earlyChoiceMessage": "item_3",
+    "provisionalWarmMessage": "item_12",
+    "lastCompletedMessage": "item_52",
+    "notes": "An early textual Warm/Dark/delegation question received no answer. The actor proceeded provisionally with Warm and all five chapters, acknowledging no appearance approval in handover. Timeout occurred before final delivery or a completed runnable-look choice handoff. Actor-local check claims and corrections are preserved separately, not adopted as independent acceptance."
+  },
+  "sourceBinding": {
+    "snapshotFiles": 180,
+    "capturedFiles": 198,
+    "commonSourceFilesMatch": true,
+    "strictSourceIdentity": false,
+    "extraSourcePaths": [
+      ".git-local/config",
+      ".git-local/description",
+      ".git-local/HEAD",
+      ".git-local/hooks/applypatch-msg.sample",
+      ".git-local/hooks/commit-msg.sample",
+      ".git-local/hooks/fsmonitor-watchman.sample",
+      ".git-local/hooks/post-update.sample",
+      ".git-local/hooks/pre-applypatch.sample",
+      ".git-local/hooks/pre-commit.sample",
+      ".git-local/hooks/pre-merge-commit.sample",
+      ".git-local/hooks/pre-push.sample",
+      ".git-local/hooks/pre-rebase.sample",
+      ".git-local/hooks/pre-receive.sample",
+      ".git-local/hooks/prepare-commit-msg.sample",
+      ".git-local/hooks/push-to-checkout.sample",
+      ".git-local/hooks/sendemail-validate.sample",
+      ".git-local/hooks/update.sample",
+      ".git-local/info/exclude"
+    ],
+    "status": "blocked: frozen launcher requires exact snapshot/current file-set equality",
+    "measurementLaunched": false
+  }
+}

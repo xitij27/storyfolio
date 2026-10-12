@@ -13,10 +13,22 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
+Latest implementation checkpoint: the saved entry source has now passed a
+fresh independent narrow capture. All 32 originals were reviewed; both
+looks render and switch on desktop and phone. Small 3D labels remain a
+phone legibility limitation. The original timeout and missing choice gate
+remain failures, not erased by this measurement. See the
+[source-bound review](../evals/runs/stage-3-completion-2/entry-replay/visual-review.md).
+The candidate skill now includes the supported look and whole-beat wording
+stops, with [line-level reasons](../evals/runs/stage-3-completion-2/written-against.md).
+These changes are pending fresh matched tests, full-journey proof and final
+planning regression. No new paid actor has run at this checkpoint.
+
 Stage-level position: **Stage 3, the build, is active and incomplete.**
 Stage 1's planning method is implemented with closing review decisions open;
-Stage 2's engine is complete and approved. The shipped skill still ends at
-an approved storyboard. The approved manual prototype demonstrates the
+Stage 2's engine is complete and approved. The candidate skill now routes
+requested builds beyond the approved storyboard, with the build workflow
+still under test. The approved manual prototype demonstrates the
 quality target, not a proven reusable build workflow. Stage 4 packaging
 follows the complete-site proof. The author's request for this framing and
 the remaining product work are in the

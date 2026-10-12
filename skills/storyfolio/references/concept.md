@@ -89,4 +89,4 @@ How each was reasoned, and not only where it ended.
 
 **An example shows how to reason. Its concept is not taken.** Camille's menu was reasoned from how Camille serves. A chef who sells one loaf a day from a hatch is not a tasting menu. If you find one of these three concepts in your hand for someone else, it has already failed the swap test: it was made for a person who is not in front of you.
 
-In this version a concept is shown in words. There is no engine yet to sketch one on.
+In this version a concept is shown in words.

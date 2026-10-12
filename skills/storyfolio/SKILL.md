@@ -7,9 +7,9 @@ description: Use when someone wants a personal portfolio site made from their pr
 
 Makes one kind of portfolio site: one long scroll that tells one story, carried by one object in 3D that is taken from the person's own work.
 
-This version plans the site and does not build it. It ends when the person has said yes to a storyboard.
+Start from the recorded handover on a continuation. Build after storyboard approval when building is requested. A planning-only request still ends at the storyboard.
 
-## Three stops
+## Stops
 
 Between stops you work by yourself. At each stop the person decides one thing. You go on only when their answer is in the conversation and you have written it into the file.
 
@@ -18,18 +18,11 @@ Between stops you work by yourself. At each stop the person decides one thing. Y
 | 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. Nothing else | They have answered, and `docs/story/facts.md` holds their answers |
 | 2. Concept | `references/concept.md` | Three concepts, and which you would choose | They have picked one, or told you to pick, and `docs/story/concepts.md` says which |
 | 3. Storyboard | `references/storyboard.md` | The script of the whole page | They have said yes to it |
+| 4. Spine | `references/building.md`, `engine/README.md` | A runnable opening, middle and ending in two or three looks | They have chosen a look |
+| 5. Chapters | `references/building.md` | The remaining chapters and three whole-beat wording versions | They have chosen the wording |
+| 6. Finish | `engine/README.md` | The checked site and what still needs their review | Their actual review is recorded |
 
-**Your first reply is the first stop, and no more than that.** People ask for the whole plan at once: the idea, the scroll, the colours. Do not give it yet, and say why in a sentence. A plan made now is made from your reading of a resume, and a resume leaves out exactly what a site must not get wrong: whose result a number was, what a title hides, who took a photograph. Once they have answered you will have a better idea, and it will not have to be taken apart.
-
-When the storyboard has its yes, say that building is not in this version, and bring `docs/story/handover.md` up to date.
-
-## For a separately authorized build
-
-This does not grant permission to build.
-
-Compare the running scene with the storyboard at its settled beats. Can the visitor inspect the work relationship or evidence the pieces were meant to show, rather than only read its names? Revise the composition when the explanation lives only in the surrounding prose. Keep that accessible prose; it does not replace what the scene was meant to show.
-
-Inspect the changes between beats in both scroll directions, including intermediate positions. When words on the pieces change, correct any overlap that makes the old and new words unreadable together. A readable settled beat does not establish a readable transition.
+**When starting from profile material, your first reply is the first stop, and no more than that.** People ask for the whole plan at once: the idea, the scroll, the colours. Do not give it yet, and say why in a sentence. A plan made now is made from your reading of a resume, and a resume leaves out exactly what a site must not get wrong: whose result a number was, what a title hides, who took a photograph. Once they have answered you will have a better idea, and it will not have to be taken apart.
 
 ## Ask or decide
 

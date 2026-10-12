@@ -1,0 +1,1020 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-10-12T03:27:34.935Z",
+  "method": "Read-only byte hashing and equality comparisons. No actor, judge, test suite, build, browser, installation or source edit.",
+  "scope": "Historical baseline evidence for prospective coordinator-only whole-beat wording comparison; not a changed historical rubric or score.",
+  "firstCollectionAttempt": {
+    "toolChunk": "462cba",
+    "exitCode": 1,
+    "condition": "Overbroad protocol byte-equality assertion failed: current 6218 bytes, frozen 4807 bytes. No evidence file was written by that attempt. The qualified record below preserves the inequality rather than claiming equality."
+  },
+  "baselineInputDigest": "d0e14ef568c0d136796be8434b86ae65c884ced13102d8cb83950cef13a0f824",
+  "caseId": "embedded-completion-1",
+  "currentFixtureMatchesHistoricalFrozenInput": true,
+  "fixtureFileCount": 97,
+  "fixtureBytes": 503374,
+  "casePromptsExpectationsRubricMatchHistoricalFrozenInput": true,
+  "coordinatorContractBindings": [
+    {
+      "current": "evals/builds/embedded-completion-1/case.json",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/case.json",
+      "currentRecord": {
+        "path": "evals/builds/embedded-completion-1/case.json",
+        "bytes": 4167,
+        "sha256": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/case.json",
+        "bytes": 4167,
+        "sha256": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/prompts/build-completion-turn1.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/prompts/turn1.md",
+      "currentRecord": {
+        "path": "evals/prompts/build-completion-turn1.md",
+        "bytes": 1204,
+        "sha256": "ca6b5952c82faca50e9f487c6493e3dfee73042f40af81d8b983c0a7e2d6113f"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/prompts/turn1.md",
+        "bytes": 1204,
+        "sha256": "ca6b5952c82faca50e9f487c6493e3dfee73042f40af81d8b983c0a7e2d6113f"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/prompts/build-turn3.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/prompts/turn2.md",
+      "currentRecord": {
+        "path": "evals/prompts/build-turn3.md",
+        "bytes": 396,
+        "sha256": "ea0ed159f2cc04bc0cc9a01a703d3d0065351b44eacb8625b348792dcccf0f0e"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/prompts/turn2.md",
+        "bytes": 396,
+        "sha256": "ea0ed159f2cc04bc0cc9a01a703d3d0065351b44eacb8625b348792dcccf0f0e"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/builds/embedded-completion-1/expectations.json",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/expectations.json",
+      "currentRecord": {
+        "path": "evals/builds/embedded-completion-1/expectations.json",
+        "bytes": 6095,
+        "sha256": "a75187339af15ec34dc8adf6a56989d56873cf5adb04ba1a0f2ab663b5d8d01a"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/expectations.json",
+        "bytes": 6095,
+        "sha256": "a75187339af15ec34dc8adf6a56989d56873cf5adb04ba1a0f2ab663b5d8d01a"
+      },
+      "equal": true
+    },
+    {
+      "current": "evals/prompts/build-criteria.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/rubric.md",
+      "currentRecord": {
+        "path": "evals/prompts/build-criteria.md",
+        "bytes": 11265,
+        "sha256": "14f7f2f196db33b408231a03cb594396392ca9d5baf108a60cf5c660a41add23"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/rubric.md",
+        "bytes": 11265,
+        "sha256": "14f7f2f196db33b408231a03cb594396392ca9d5baf108a60cf5c660a41add23"
+      },
+      "equal": true
+    },
+    {
+      "current": "docs/superpowers/plans/2026-10-11-build-completion-proposal.md",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/protocol.md",
+      "currentRecord": {
+        "path": "docs/superpowers/plans/2026-10-11-build-completion-proposal.md",
+        "bytes": 6218,
+        "sha256": "045753f532efcb87d124c868d53769c5304544f282768ed352e7050ebecc0f71"
+      },
+      "frozenRecord": {
+        "path": "evals/runs/codex-build-completion-1/inputs/protocol.md",
+        "bytes": 4807,
+        "sha256": "66f9fd88459e14b906ce24ae3dbe45ebeff66ef4e56a4402379af33fae950dfb"
+      },
+      "equal": false
+    }
+  ],
+  "bounds": {
+    "maxTurns": 2,
+    "turnTimeoutMs": 900000,
+    "maxWallMs": 1500000,
+    "maxTokens": 12000000,
+    "maxUncachedTokens": 350000
+  },
+  "requestedStops": [
+    5,
+    6
+  ],
+  "baselineOptions": {
+    "source": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/reply.md",
+    "lines": [
+      26,
+      33
+    ],
+    "exactStrings": {
+      "O1": "On Mosslink, an environmental sensor, my work spans firmware, power-state scheduling and the bring-up fixture.",
+      "O2": "Mosslink is an environmental sensor. My contribution was firmware, power-state scheduling and the bring-up fixture.",
+      "C1": "Read the firmware contribution alongside the bench evidence and its limits.",
+      "C2": "For the contribution and evidence together, download my CV or email me."
+    },
+    "recommended": [
+      "O1",
+      "C1"
+    ],
+    "countPerPlacement": 2,
+    "wholeBeatVersionsPresented": false,
+    "choiceGateObserved": true,
+    "ownEditsInvited": true,
+    "limitedFinding": "Count and whole-beat omissions fail the product design; historical narrower rubric is unchanged."
+  },
+  "baselineAdoption": {
+    "selectedByFixedTurn2": [
+      "O1",
+      "C1"
+    ],
+    "copySourceEqualAcrossTurns": true,
+    "limitation": "Existing source adoption observations, not a fresh browser or visual quality pass."
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "complete": true,
+      "durationMs": 512798,
+      "usage": {
+        "input_tokens": 2435119,
+        "cached_input_tokens": 2310912,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 16099,
+        "reasoning_output_tokens": 3265
+      },
+      "resultSha256": "f58ef04cd19cd94819c44d0d366a5986aacb5d33e6467a5ce80846c0e26c98d2"
+    },
+    {
+      "turn": 2,
+      "complete": true,
+      "durationMs": 505892,
+      "usage": {
+        "input_tokens": 7025838,
+        "cached_input_tokens": 6818304,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 30958,
+        "reasoning_output_tokens": 8581
+      },
+      "resultSha256": "539e92e2002aa50e5eaa584df3563633122ae666c555cea74d3a1a57d4271448"
+    }
+  ],
+  "files": [
+    {
+      "path": "evals/runs/codex-build-completion-1/inputs/manifest.json",
+      "bytes": 22984,
+      "sha256": "5062aaf5a06b2ee4bcea69290c888c529ed83a3d40a50cb636bc28f12e643d60"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/inputs/case.json",
+      "bytes": 4167,
+      "sha256": "9ccb380985306d23e7512c8756fe7feccbb756c0b7b0525d8b17e9eaa5cfe1bb"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/inputs/skill/SKILL.md",
+      "bytes": 4087,
+      "sha256": "70d57c5a71e8e34e48da7fe23ae660fa961ae87f9f56ef6fb674d967b6ba9f98"
+    },
+    {
+      "path": "evals/prompts/build-completion-turn1.md",
+      "bytes": 1204,
+      "sha256": "ca6b5952c82faca50e9f487c6493e3dfee73042f40af81d8b983c0a7e2d6113f"
+    },
+    {
+      "path": "evals/prompts/build-turn3.md",
+      "bytes": 396,
+      "sha256": "ea0ed159f2cc04bc0cc9a01a703d3d0065351b44eacb8625b348792dcccf0f0e"
+    },
+    {
+      "path": "evals/builds/embedded-completion-1/expectations.json",
+      "bytes": 6095,
+      "sha256": "a75187339af15ec34dc8adf6a56989d56873cf5adb04ba1a0f2ab663b5d8d01a"
+    },
+    {
+      "path": "evals/prompts/build-criteria.md",
+      "bytes": 11265,
+      "sha256": "14f7f2f196db33b408231a03cb594396392ca9d5baf108a60cf5c660a41add23"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-10-11-build-completion-proposal.md",
+      "bytes": 6218,
+      "sha256": "045753f532efcb87d124c868d53769c5304544f282768ed352e7050ebecc0f71"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/inputs/protocol.md",
+      "bytes": 4807,
+      "sha256": "66f9fd88459e14b906ce24ae3dbe45ebeff66ef4e56a4402379af33fae950dfb"
+    },
+    {
+      "path": "evals/builds/embedded-completion-1/source-manifest.json",
+      "bytes": 45250,
+      "sha256": "a2e2808a33e6cf38e6fa538e6b50a9fbe626f3f24020b57652c72a5364864eac"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/gate-after-turn-1.json",
+      "bytes": 802,
+      "sha256": "2d6949ffe06bdc625af3799dcba7632d8bbba2d0bd061d4b1ffe9b7ea9e89555"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/result.json",
+      "bytes": 334549,
+      "sha256": "f58ef04cd19cd94819c44d0d366a5986aacb5d33e6467a5ce80846c0e26c98d2"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/stream.jsonl",
+      "bytes": 295687,
+      "sha256": "479d2d7ab1a2b0a44811a6d9a4c3c2f72632e409af94910b86bbc746829812b8"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/reply.md",
+      "bytes": 3247,
+      "sha256": "ed389af95dcf41d4c3f3edb160a94391b44adccbea4fa6199a11143b4a267bd4"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/snapshot/manifest.json",
+      "bytes": 40064,
+      "sha256": "d3da7d0756f5b07e8a23b54263ce731f8da6bb6abcb2d151ae0ccce80b2b6138"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/snapshot/files/docs/story/copy-choices.md",
+      "bytes": 2905,
+      "sha256": "006d007e8e1085e42f0722716665de69d4adb2c87fa3ddcb6d15ec6b90d11cbc"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/snapshot/files/content/copy.ts",
+      "bytes": 2558,
+      "sha256": "36b0c3190fd4bb8a6ade430bd15c3ea3b525c5108feda90161ca748866b15731"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/snapshot/files/app/page.tsx",
+      "bytes": 3779,
+      "sha256": "88ed24917f7f90532d6c034b3f9e8273e9742bc517aa3d79ebde71adca43cd6e"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/snapshot/files/docs/story/confirmations.md",
+      "bytes": 4655,
+      "sha256": "77641b1bc3cb36f8cf6d2e3689cd05a890b30bafe4e4cf716e38833e1f0cf67f"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/snapshot/files/docs/story/facts.md",
+      "bytes": 3727,
+      "sha256": "64955499056e5608e126f7ded0ef3e04e21face5aeb9356d2ff83a0f2a03a715"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/01/snapshot/files/docs/story/storyboard.md",
+      "bytes": 7774,
+      "sha256": "5a0e50abb00e48c5844f61ed6843fa0ab54a85a61f4d5c2e7c967b32aef551fd"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/02/result.json",
+      "bytes": 255003,
+      "sha256": "539e92e2002aa50e5eaa584df3563633122ae666c555cea74d3a1a57d4271448"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/02/reply.md",
+      "bytes": 2428,
+      "sha256": "405c19cd73e820508340290b05593a25a1aaa3b98da7312eda60420410d9abe6"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/02/snapshot/files/docs/story/copy-choices.md",
+      "bytes": 3554,
+      "sha256": "7b45c691f1c5f710dd6681c4da5cc153d6d0ad59f15b1579b2a0523b7af088f8"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/02/snapshot/files/content/copy.ts",
+      "bytes": 2558,
+      "sha256": "36b0c3190fd4bb8a6ade430bd15c3ea3b525c5108feda90161ca748866b15731"
+    },
+    {
+      "path": "evals/runs/codex-build-completion-1/embedded-completion-1/baseline-1/turns/02/snapshot/files/app/page.tsx",
+      "bytes": 3779,
+      "sha256": "88ed24917f7f90532d6c034b3f9e8273e9742bc517aa3d79ebde71adca43cd6e"
+    }
+  ],
+  "fixture": [
+    {
+      "relativePath": ".gitignore",
+      "path": "evals/builds/embedded-completion-1/workspace/.gitignore",
+      "bytes": 86,
+      "sha256": "19ce1aa4498f9a33026722104d8041745662a7c43d2cd8649baa6d1f666e1e43",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/.gitignore"
+    },
+    {
+      "relativePath": "AGENTS.md",
+      "path": "evals/builds/embedded-completion-1/workspace/AGENTS.md",
+      "bytes": 1734,
+      "sha256": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/AGENTS.md"
+    },
+    {
+      "relativePath": "CLAUDE.md",
+      "path": "evals/builds/embedded-completion-1/workspace/CLAUDE.md",
+      "bytes": 11,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/CLAUDE.md"
+    },
+    {
+      "relativePath": "LICENSE",
+      "path": "evals/builds/embedded-completion-1/workspace/LICENSE",
+      "bytes": 1080,
+      "sha256": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/LICENSE"
+    },
+    {
+      "relativePath": "README.md",
+      "path": "evals/builds/embedded-completion-1/workspace/README.md",
+      "bytes": 8053,
+      "sha256": "fb219637830adf6bec59c5d38c61d6ddd76c5bd3f997b420f91f2238d92e0b2f",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/README.md"
+    },
+    {
+      "relativePath": "app/globals.css",
+      "path": "evals/builds/embedded-completion-1/workspace/app/globals.css",
+      "bytes": 5388,
+      "sha256": "18b1febde7fdfb60ef381f72c5fa60dbd92e9e7bd30d447206528c3e2aeef9cb",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/app/globals.css"
+    },
+    {
+      "relativePath": "app/layout.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/app/layout.tsx",
+      "bytes": 299,
+      "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/app/layout.tsx"
+    },
+    {
+      "relativePath": "app/not-found.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/app/not-found.tsx",
+      "bytes": 251,
+      "sha256": "744440f19bb101c269d33dd37facbdfb6e35c5516a4099550ccdec6976081af9",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/app/not-found.tsx"
+    },
+    {
+      "relativePath": "app/page.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/app/page.tsx",
+      "bytes": 3188,
+      "sha256": "20a6b99fda69bea1fa89fa81a207a6f95ca7bd5cff9f6822d2aeb4a8cb4d3c5e",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/app/page.tsx"
+    },
+    {
+      "relativePath": "app/sketch/[id]/page.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/app/sketch/[id]/page.tsx",
+      "bytes": 446,
+      "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/app/sketch/[id]/page.tsx"
+    },
+    {
+      "relativePath": "components/story/chapter.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/chapter.tsx",
+      "bytes": 1504,
+      "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/chapter.tsx"
+    },
+    {
+      "relativePath": "components/story/conductor.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/conductor.tsx",
+      "bytes": 1479,
+      "sha256": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/conductor.tsx"
+    },
+    {
+      "relativePath": "components/story/controls.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/controls.tsx",
+      "bytes": 882,
+      "sha256": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/controls.tsx"
+    },
+    {
+      "relativePath": "components/story/extra-frame.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/extra-frame.tsx",
+      "bytes": 1420,
+      "sha256": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/extra-frame.tsx"
+    },
+    {
+      "relativePath": "components/story/face-material.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/face-material.ts",
+      "bytes": 1714,
+      "sha256": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/face-material.ts"
+    },
+    {
+      "relativePath": "components/story/faces.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/faces.ts",
+      "bytes": 3066,
+      "sha256": "10eced0f0e306a0d9c812348ace89f42b4c1c253e498407471dffe7eb9c232da",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/faces.ts"
+    },
+    {
+      "relativePath": "components/story/guard-extra-callback.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/guard-extra-callback.test.ts",
+      "bytes": 1624,
+      "sha256": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/guard-extra-callback.test.ts"
+    },
+    {
+      "relativePath": "components/story/guard-extra-callback.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/guard-extra-callback.ts",
+      "bytes": 504,
+      "sha256": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/guard-extra-callback.ts"
+    },
+    {
+      "relativePath": "components/story/look-switch.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/look-switch.tsx",
+      "bytes": 515,
+      "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/look-switch.tsx"
+    },
+    {
+      "relativePath": "components/story/meter.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/meter.tsx",
+      "bytes": 731,
+      "sha256": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/meter.tsx"
+    },
+    {
+      "relativePath": "components/story/overlay.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/overlay.tsx",
+      "bytes": 711,
+      "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/overlay.tsx"
+    },
+    {
+      "relativePath": "components/story/pieces.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/pieces.tsx",
+      "bytes": 7753,
+      "sha256": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/pieces.tsx"
+    },
+    {
+      "relativePath": "components/story/rail.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/rail.tsx",
+      "bytes": 452,
+      "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/rail.tsx"
+    },
+    {
+      "relativePath": "components/story/scene.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/scene.tsx",
+      "bytes": 4623,
+      "sha256": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/scene.tsx"
+    },
+    {
+      "relativePath": "components/story/stage.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/stage.tsx",
+      "bytes": 1230,
+      "sha256": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/stage.tsx"
+    },
+    {
+      "relativePath": "components/story/story.css",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/story.css",
+      "bytes": 5859,
+      "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/story.css"
+    },
+    {
+      "relativePath": "components/story/story.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/story.tsx",
+      "bytes": 6167,
+      "sha256": "de8782eb09fa55083ba63e199ce217dafda6790e2c740e8a0d809fe137f1c442",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/story.tsx"
+    },
+    {
+      "relativePath": "components/story/types.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/types.ts",
+      "bytes": 1421,
+      "sha256": "29e064282d8669ff55863b5ddc20fdc477877fb03d9e8b30db8d926883a0c9b9",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/types.ts"
+    },
+    {
+      "relativePath": "components/story/use-look.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/use-look.ts",
+      "bytes": 897,
+      "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/use-look.ts"
+    },
+    {
+      "relativePath": "components/story/use-reduced-motion.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/use-reduced-motion.ts",
+      "bytes": 432,
+      "sha256": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/use-reduced-motion.ts"
+    },
+    {
+      "relativePath": "components/story/use-webgl-supported.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/use-webgl-supported.ts",
+      "bytes": 591,
+      "sha256": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/use-webgl-supported.ts"
+    },
+    {
+      "relativePath": "components/story/validate.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/validate.test.ts",
+      "bytes": 2610,
+      "sha256": "6ee648de16b8f38ebf1f3701b2658e92b0e60a76137b6db1ca54bf601038eb19",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/validate.test.ts"
+    },
+    {
+      "relativePath": "components/story/validate.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/validate.ts",
+      "bytes": 2154,
+      "sha256": "8b5754eed78ef77be47067649d9fdc2e34bdff48eda5e785129e2db42d4b1915",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/validate.ts"
+    },
+    {
+      "relativePath": "components/story/webgl-boundary.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/components/story/webgl-boundary.tsx",
+      "bytes": 476,
+      "sha256": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/components/story/webgl-boundary.tsx"
+    },
+    {
+      "relativePath": "content/checks.json",
+      "path": "evals/builds/embedded-completion-1/workspace/content/checks.json",
+      "bytes": 47,
+      "sha256": "949837d672145b219e4053001438a447d991c64d432f9385abe2003892693d90",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/checks.json"
+    },
+    {
+      "relativePath": "content/copy.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/copy.ts",
+      "bytes": 1290,
+      "sha256": "87cfb969d607190b00b3a2d9bc76b26e1784ef885a5ca16770cb5d7fc214856d",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/copy.ts"
+    },
+    {
+      "relativePath": "content/experience.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/content/experience.tsx",
+      "bytes": 260,
+      "sha256": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/experience.tsx"
+    },
+    {
+      "relativePath": "content/extras.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/extras.ts",
+      "bytes": 26,
+      "sha256": "6c738050d7a8fc2e6bb214a401994e6a69ade3c052a263f45749699ffc5fc454",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/extras.ts"
+    },
+    {
+      "relativePath": "content/extras/middle-line.tsx",
+      "path": "evals/builds/embedded-completion-1/workspace/content/extras/middle-line.tsx",
+      "bytes": 613,
+      "sha256": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/extras/middle-line.tsx"
+    },
+    {
+      "relativePath": "content/faces.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/faces.ts",
+      "bytes": 1426,
+      "sha256": "28249baf7550bb8cfdfe4a8668806ccda6a94fdeb811a3d3c9be58cf91598811",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/faces.ts"
+    },
+    {
+      "relativePath": "content/formations.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/formations.ts",
+      "bytes": 1156,
+      "sha256": "8ea3a7491fe905c99ba22d4cba78cd81e57a2cbea630a2cbd9b56651f5842ba4",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/formations.ts"
+    },
+    {
+      "relativePath": "content/index.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/index.ts",
+      "bytes": 427,
+      "sha256": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/index.ts"
+    },
+    {
+      "relativePath": "content/links.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/links.ts",
+      "bytes": 25,
+      "sha256": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/links.ts"
+    },
+    {
+      "relativePath": "content/looks.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/looks.ts",
+      "bytes": 880,
+      "sha256": "2999cc2ade2a5f7905d645d890d58e22fb435128ac40a27705e5d94fae50834c",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/looks.ts"
+    },
+    {
+      "relativePath": "content/sketches/index.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/sketches/index.ts",
+      "bytes": 238,
+      "sha256": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/sketches/index.ts"
+    },
+    {
+      "relativePath": "content/story.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/content/story.ts",
+      "bytes": 621,
+      "sha256": "ddfaa151e46c390a540b4c96a4ca81e0bf30ee677a16f67d9b4152ebd78fa32e",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/content/story.ts"
+    },
+    {
+      "relativePath": "docs/story/assets.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/assets.md",
+      "bytes": 3788,
+      "sha256": "ed3f28323ceaea7b1cbf794b82d424e458f3dba61cffa6ccb7a5d373a08edc8b",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/assets.md"
+    },
+    {
+      "relativePath": "docs/story/check-results.json",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/check-results.json",
+      "bytes": 17381,
+      "sha256": "fa504e70401ecee1de795f648a41c63b6528717c3744f5fffd806a9987e4e59d",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/check-results.json"
+    },
+    {
+      "relativePath": "docs/story/concepts.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/concepts.md",
+      "bytes": 8296,
+      "sha256": "eaf57ef20423e4bbfc467aebeb989a4f4b8b95b07ec8ca4700d6d78a762a10f4",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/concepts.md"
+    },
+    {
+      "relativePath": "docs/story/confirmations.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/confirmations.md",
+      "bytes": 4655,
+      "sha256": "77641b1bc3cb36f8cf6d2e3689cd05a890b30bafe4e4cf716e38833e1f0cf67f",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/confirmations.md"
+    },
+    {
+      "relativePath": "docs/story/decided-for-you.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/decided-for-you.md",
+      "bytes": 5213,
+      "sha256": "342ed96f07031482bccfb8a816f6c255f6cbed15354ba86c8e40be217d5ddadb",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/decided-for-you.md"
+    },
+    {
+      "relativePath": "docs/story/facts.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/facts.md",
+      "bytes": 3727,
+      "sha256": "64955499056e5608e126f7ded0ef3e04e21face5aeb9356d2ff83a0f2a03a715",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/facts.md"
+    },
+    {
+      "relativePath": "docs/story/handover.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/handover.md",
+      "bytes": 5688,
+      "sha256": "5727c0fedc15f1070e85a87643587509716659052caf812ddcf208c7c502aa65",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/handover.md"
+    },
+    {
+      "relativePath": "docs/story/review.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/review.md",
+      "bytes": 3997,
+      "sha256": "6b2d5a754e1a3e8391a1330b3a9cb0dee4005f4fa0b84699e902343404739f0d",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/review.md"
+    },
+    {
+      "relativePath": "docs/story/storyboard.md",
+      "path": "evals/builds/embedded-completion-1/workspace/docs/story/storyboard.md",
+      "bytes": 7774,
+      "sha256": "5a0e50abb00e48c5844f61ed6843fa0ab54a85a61f4d5c2e7c967b32aef551fd",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/docs/story/storyboard.md"
+    },
+    {
+      "relativePath": "eslint.config.mjs",
+      "path": "evals/builds/embedded-completion-1/workspace/eslint.config.mjs",
+      "bytes": 309,
+      "sha256": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/eslint.config.mjs"
+    },
+    {
+      "relativePath": "lib/story/camera.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/camera.test.ts",
+      "bytes": 6594,
+      "sha256": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/camera.test.ts"
+    },
+    {
+      "relativePath": "lib/story/camera.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/camera.ts",
+      "bytes": 5201,
+      "sha256": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/camera.ts"
+    },
+    {
+      "relativePath": "lib/story/controls.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/controls.test.ts",
+      "bytes": 1608,
+      "sha256": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/controls.test.ts"
+    },
+    {
+      "relativePath": "lib/story/controls.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/controls.ts",
+      "bytes": 1054,
+      "sha256": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/controls.ts"
+    },
+    {
+      "relativePath": "lib/story/formation.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/formation.test.ts",
+      "bytes": 5294,
+      "sha256": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/formation.test.ts"
+    },
+    {
+      "relativePath": "lib/story/formation.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/formation.ts",
+      "bytes": 5414,
+      "sha256": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/formation.ts"
+    },
+    {
+      "relativePath": "lib/story/layouts.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/layouts.test.ts",
+      "bytes": 2728,
+      "sha256": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/layouts.test.ts"
+    },
+    {
+      "relativePath": "lib/story/layouts.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/layouts.ts",
+      "bytes": 4733,
+      "sha256": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/layouts.ts"
+    },
+    {
+      "relativePath": "lib/story/looks.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/looks.test.ts",
+      "bytes": 1238,
+      "sha256": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/looks.test.ts"
+    },
+    {
+      "relativePath": "lib/story/looks.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/looks.ts",
+      "bytes": 1262,
+      "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/looks.ts"
+    },
+    {
+      "relativePath": "lib/story/overlay.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/overlay.test.ts",
+      "bytes": 1844,
+      "sha256": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/overlay.test.ts"
+    },
+    {
+      "relativePath": "lib/story/overlay.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/overlay.ts",
+      "bytes": 3252,
+      "sha256": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/overlay.ts"
+    },
+    {
+      "relativePath": "lib/story/quality.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/quality.test.ts",
+      "bytes": 1838,
+      "sha256": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/quality.test.ts"
+    },
+    {
+      "relativePath": "lib/story/quality.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/quality.ts",
+      "bytes": 1762,
+      "sha256": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/quality.ts"
+    },
+    {
+      "relativePath": "lib/story/rand.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/rand.test.ts",
+      "bytes": 567,
+      "sha256": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/rand.test.ts"
+    },
+    {
+      "relativePath": "lib/story/rand.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/rand.ts",
+      "bytes": 384,
+      "sha256": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/rand.ts"
+    },
+    {
+      "relativePath": "lib/story/story.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/story.test.ts",
+      "bytes": 4065,
+      "sha256": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/story.test.ts"
+    },
+    {
+      "relativePath": "lib/story/story.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/story.ts",
+      "bytes": 4796,
+      "sha256": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/story.ts"
+    },
+    {
+      "relativePath": "lib/story/timeline.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/timeline.test.ts",
+      "bytes": 7998,
+      "sha256": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/timeline.test.ts"
+    },
+    {
+      "relativePath": "lib/story/timeline.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/timeline.ts",
+      "bytes": 5697,
+      "sha256": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/timeline.ts"
+    },
+    {
+      "relativePath": "lib/story/typeset.test.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/typeset.test.ts",
+      "bytes": 4495,
+      "sha256": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/typeset.test.ts"
+    },
+    {
+      "relativePath": "lib/story/typeset.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/lib/story/typeset.ts",
+      "bytes": 3329,
+      "sha256": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/lib/story/typeset.ts"
+    },
+    {
+      "relativePath": "material/cv.md",
+      "path": "evals/builds/embedded-completion-1/workspace/material/cv.md",
+      "bytes": 383,
+      "sha256": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/material/cv.md"
+    },
+    {
+      "relativePath": "material/lab-notes.md",
+      "path": "evals/builds/embedded-completion-1/workspace/material/lab-notes.md",
+      "bytes": 613,
+      "sha256": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/material/lab-notes.md"
+    },
+    {
+      "relativePath": "next.config.ts",
+      "path": "evals/builds/embedded-completion-1/workspace/next.config.ts",
+      "bytes": 94,
+      "sha256": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/next.config.ts"
+    },
+    {
+      "relativePath": "package-lock.json",
+      "path": "evals/builds/embedded-completion-1/workspace/package-lock.json",
+      "bytes": 233717,
+      "sha256": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/package-lock.json"
+    },
+    {
+      "relativePath": "package.json",
+      "path": "evals/builds/embedded-completion-1/workspace/package.json",
+      "bytes": 1015,
+      "sha256": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/package.json"
+    },
+    {
+      "relativePath": "postcss.config.mjs",
+      "path": "evals/builds/embedded-completion-1/workspace/postcss.config.mjs",
+      "bytes": 94,
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/postcss.config.mjs"
+    },
+    {
+      "relativePath": "public/ada-mensah-cv.html",
+      "path": "evals/builds/embedded-completion-1/workspace/public/ada-mensah-cv.html",
+      "bytes": 2280,
+      "sha256": "a5ef0f37b5c5bd4520e4f91f82989c77a68987e82202a261eccc8d2118a4dede",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/public/ada-mensah-cv.html"
+    },
+    {
+      "relativePath": "public/assets/bring-up-fixture.svg",
+      "path": "evals/builds/embedded-completion-1/workspace/public/assets/bring-up-fixture.svg",
+      "bytes": 1822,
+      "sha256": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/public/assets/bring-up-fixture.svg"
+    },
+    {
+      "relativePath": "public/assets/power-states.svg",
+      "path": "evals/builds/embedded-completion-1/workspace/public/assets/power-states.svg",
+      "bytes": 1657,
+      "sha256": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/public/assets/power-states.svg"
+    },
+    {
+      "relativePath": "public/assets/share-card.svg",
+      "path": "evals/builds/embedded-completion-1/workspace/public/assets/share-card.svg",
+      "bytes": 1181,
+      "sha256": "d0cf78ff76d11cc0dc2910025345067ece0f65373fead69907dbe9b38dab0f19",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/public/assets/share-card.svg"
+    },
+    {
+      "relativePath": "public/icon.svg",
+      "path": "evals/builds/embedded-completion-1/workspace/public/icon.svg",
+      "bytes": 409,
+      "sha256": "d9883de2536afe1d9f599ca7f09c1680e93a214239e505d8e77537c6270a03f9",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/public/icon.svg"
+    },
+    {
+      "relativePath": "public/plain/face.svg",
+      "path": "evals/builds/embedded-completion-1/workspace/public/plain/face.svg",
+      "bytes": 309,
+      "sha256": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/public/plain/face.svg"
+    },
+    {
+      "relativePath": "public/plain/fan.svg",
+      "path": "evals/builds/embedded-completion-1/workspace/public/plain/fan.svg",
+      "bytes": 775,
+      "sha256": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/public/plain/fan.svg"
+    },
+    {
+      "relativePath": "scripts/check-lib.mjs",
+      "path": "evals/builds/embedded-completion-1/workspace/scripts/check-lib.mjs",
+      "bytes": 4710,
+      "sha256": "e32668b8d452c4153b16fd5bd36ae11f2112f66bf0383ed8b88f755ed0d83c07",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/scripts/check-lib.mjs"
+    },
+    {
+      "relativePath": "scripts/check-lib.test.mjs",
+      "path": "evals/builds/embedded-completion-1/workspace/scripts/check-lib.test.mjs",
+      "bytes": 4805,
+      "sha256": "c22b87f0a7461a84ad20fb33c47022615223cc1f7e7542e28004c2d48c452e10",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/scripts/check-lib.test.mjs"
+    },
+    {
+      "relativePath": "scripts/check-spine.mjs",
+      "path": "evals/builds/embedded-completion-1/workspace/scripts/check-spine.mjs",
+      "bytes": 4139,
+      "sha256": "441e7ee332c3a6b6501dcc82b37fbce54fdc598c201306dd000660c940f40b3c",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/scripts/check-spine.mjs"
+    },
+    {
+      "relativePath": "scripts/check.mjs",
+      "path": "evals/builds/embedded-completion-1/workspace/scripts/check.mjs",
+      "bytes": 6615,
+      "sha256": "0fb7f65d1bf3cd62a98574c749b015e5a07b1d9e10888686dfefd4342bb1a064",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/scripts/check.mjs"
+    },
+    {
+      "relativePath": "scripts/shoot.mjs",
+      "path": "evals/builds/embedded-completion-1/workspace/scripts/shoot.mjs",
+      "bytes": 25709,
+      "sha256": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/scripts/shoot.mjs"
+    },
+    {
+      "relativePath": "tsconfig.json",
+      "path": "evals/builds/embedded-completion-1/workspace/tsconfig.json",
+      "bytes": 706,
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "frozen": "evals/runs/codex-build-completion-1/inputs/fixture/tsconfig.json"
+    }
+  ],
+  "reviewedRunnerFiles": [
+    {
+      "path": "evals/codex-build-run.mjs",
+      "bytes": 8917,
+      "sha256": "a6d427e7a9084e0e0c0761e006657fa2bf78262b11f2209d2093c3c4f1bbc13e"
+    },
+    {
+      "path": "evals/lib/build.mjs",
+      "bytes": 27975,
+      "sha256": "96ef7b597a4b8e389e8a1dfbc08d2e76edef8f23408a6af7ff4e64be262026d5"
+    },
+    {
+      "path": "evals/lib/codex.mjs",
+      "bytes": 5794,
+      "sha256": "783f863195f191129de87aaebbd5fbda7a37d9bea7d256904d5391da4c034176"
+    }
+  ],
+  "currentEngineDifferencesFromHistoricalSkill": [
+    {
+      "frozenPath": "skill/engine/components/story/story.tsx",
+      "before": "7961909ead315faf46cffdf36cdd54bc38e86dd70e0d80d19afaed050af4878f",
+      "current": {
+        "path": "skills/storyfolio/engine/components/story/story.tsx",
+        "bytes": 5735,
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      }
+    }
+  ],
+  "comparisonLimit": "Fixture and prompts are matched, but intervening coordinator protocol, harness/capability and skill changes preclude a claim of single-line causal isolation. Candidate must freeze and inventory every difference before launch."
+}

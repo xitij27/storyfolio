@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "status": "Prospective coordinator helpers only. No candidate inputs frozen or setup executed by this preparation.",
+  "baselineCohort": "codex-bench-entry-baseline-1",
+  "candidateCohort": "codex-bench-entry-candidate-1",
+  "caseId": "bench-entry-1",
+  "baselineInputDigest": "504064164d5410a3d8cba07e7c877989924a3a4b15b67d76af92ec28e920238a",
+  "derivations": [
+    {
+      "source": "evals/runs/stage-3-natural-entry-1/run-capability-probe.mjs",
+      "target": "evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs",
+      "replacements": [
+        {
+          "from": "codex-bench-entry-baseline-1",
+          "to": "codex-bench-entry-candidate-1",
+          "count": 2
+        },
+        {
+          "from": "\"../../lib/build.mjs\"",
+          "to": "\"../../../lib/build.mjs\"",
+          "count": 1
+        },
+        {
+          "from": "resolve(study, \"../../..\")",
+          "to": "resolve(study, \"../../../..\")",
+          "count": 1
+        },
+        {
+          "from": "entry baseline is supported",
+          "to": "entry candidate is supported",
+          "count": 1
+        },
+        {
+          "from": "// Unpaid command-only probe for the newly prepared natural-entry workspace.",
+          "to": "// Unpaid command-only probe for the newly prepared entry candidate workspace.",
+          "count": 1
+        },
+        {
+          "from": "// Identity-only derivative of stage-3-comparison-1; no historical files changed.",
+          "to": "// Identity-only derivative of stage-3-natural-entry-1; no historical files changed.",
+          "count": 1
+        }
+      ],
+      "sourceSha256": "5cd33076fca5a87823041374fa46e9e3c8443c30d71edd09f5cf773a958935fc",
+      "targetSha256": "a20f112337703d85b1c04618f1a5d5d79601f7c3319641a3306fc50cbee681b4",
+      "baselineFrozenPath": "implementation/evals/runs/stage-3-natural-entry-1/run-capability-probe.mjs"
+    },
+    {
+      "source": "evals/runs/stage-3-natural-entry-1/check-ready.mjs",
+      "target": "evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs",
+      "replacements": [
+        {
+          "from": "codex-bench-entry-baseline-1",
+          "to": "codex-bench-entry-candidate-1",
+          "count": 2
+        },
+        {
+          "from": "\"../../lib/build.mjs\"",
+          "to": "\"../../../lib/build.mjs\"",
+          "count": 1
+        },
+        {
+          "from": "resolve(study, \"../../..\")",
+          "to": "resolve(study, \"../../../..\")",
+          "count": 1
+        },
+        {
+          "from": "evals/runs/stage-3-natural-entry-1/",
+          "to": "evals/runs/stage-3-completion-2/entry-candidate-preparation/",
+          "count": 3
+        },
+        {
+          "from": "entry baseline is supported",
+          "to": "entry candidate is supported",
+          "count": 1
+        },
+        {
+          "from": "// Read-only prospective entry readiness gate. Its only subprocess is runner --dry.",
+          "to": "// Read-only candidate entry readiness gate. Its only subprocess is runner --dry.",
+          "count": 1
+        },
+        {
+          "from": "// Narrow derivative of stage-3-comparison-1; not a paid launch or source mutation.",
+          "to": "// Identity-only derivative of stage-3-natural-entry-1; not a paid launch or source mutation.",
+          "count": 1
+        }
+      ],
+      "sourceSha256": "846195205850865ecdb7604f04051d2545c556c9cdf6e3a1d8a87080294804f5",
+      "targetSha256": "b285f8e8c579157428dd1114ddd8ecd77ca3f0cf26f2389f5fe44ecd6de062ea",
+      "baselineFrozenPath": "implementation/evals/runs/stage-3-natural-entry-1/check-ready.mjs"
+    },
+    {
+      "source": "evals/runs/stage-3-natural-entry-1/finalize-setup.mjs",
+      "target": "evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs",
+      "replacements": [
+        {
+          "from": "codex-bench-entry-baseline-1",
+          "to": "codex-bench-entry-candidate-1",
+          "count": 1
+        },
+        {
+          "from": "\"../../lib/build.mjs\"",
+          "to": "\"../../../lib/build.mjs\"",
+          "count": 1
+        },
+        {
+          "from": "resolve(study, \"../../..\")",
+          "to": "resolve(study, \"../../../..\")",
+          "count": 1
+        },
+        {
+          "from": "evals/runs/stage-3-natural-entry-1/",
+          "to": "evals/runs/stage-3-completion-2/entry-candidate-preparation/",
+          "count": 1
+        }
+      ],
+      "sourceSha256": "30d535d24029cf48c3e8733778f0c2fec769da0730192fe0556732b9bf00f0c1",
+      "targetSha256": "84d806872d318862a8d680fe7ff6d61e7a2774af545519087bd9bfc0db6a7221",
+      "baselineFrozenPath": "implementation/evals/runs/stage-3-natural-entry-1/finalize-setup.mjs"
+    },
+    {
+      "source": "evals/builds/bench-entry-1/case.json",
+      "target": "evals/runs/stage-3-completion-2/entry-candidate-preparation/case.json",
+      "replacements": [
+        {
+          "from": "evals/runs/stage-3-natural-entry-1/",
+          "to": "evals/runs/stage-3-completion-2/entry-candidate-preparation/",
+          "count": 3
+        }
+      ],
+      "sourceSha256": "6dde159135b29aa361af470c5e501df8bdaaec43112ca564c128d45f9fb919cd",
+      "targetSha256": "37861306d824d957c2e6b4d22198f4f6cdc994a45c6aafd5e0b477c68c80b676",
+      "baselineFrozenPath": "case.json"
+    }
+  ],
+  "controlChanges": [
+    "The case implementationFiles replaces the three historical setup helper paths with these candidate-specific derivatives.",
+    "The helper cohort identity, relative import/root depth and frozen helper identity paths change; explanatory comments and candidate guard labels change.",
+    "Setup assertions, process behavior, environment requirements, exact source checks and nine-original review requirements are unchanged.",
+    "Only coordinator controls are described by this derivation. The candidate skill change and actual complete frozen-input delta require their own prelaunch audit after root commits the candidate skill.",
+    "The new case has the same actor-visible fixture, one ordinary prompt, schema, requested stop, bounds, expectations, rubric and protocol references."
+  ],
+  "limits": [
+    "This is not whole-freeze byte equality.",
+    "Fresh candidate setup and image review have not happened.",
+    "The read-only derivation verifier and README are coordinator preparation evidence, not actor input or a runtime setup dependency."
+  ]
+}

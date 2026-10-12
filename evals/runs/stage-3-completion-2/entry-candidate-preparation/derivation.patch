@@ -1,0 +1,101 @@
+--- evals/runs/stage-3-natural-entry-1/run-capability-probe.mjs
++++ evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs
+@@ -1,5 +1,5 @@
+-// Unpaid command-only probe for the newly prepared natural-entry workspace.
+-// Identity-only derivative of stage-3-comparison-1; no historical files changed.
++// Unpaid command-only probe for the newly prepared entry candidate workspace.
++// Identity-only derivative of stage-3-natural-entry-1; no historical files changed.
+ // Intentionally cannot prepare a workspace or invoke an actor/judge.
+ import assert from "node:assert/strict";
+ import { spawn } from "node:child_process";
+@@ -7,11 +7,11 @@
+ import { dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+ import { parseArgs } from "node:util";
+-import { hash, json, verifyInputs, writeNew } from "../../lib/build.mjs";
++import { hash, json, verifyInputs, writeNew } from "../../../lib/build.mjs";
+ 
+-const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-bench-entry-baseline-1" } } });
+-assert.ok(["codex-bench-entry-baseline-1"].includes(values.cohort), "Only the prospectively authorized entry baseline is supported");
+-const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../..");
++const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-bench-entry-candidate-1" } } });
++assert.ok(["codex-bench-entry-candidate-1"].includes(values.cohort), "Only the prospectively authorized entry candidate is supported");
++const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../..");
+ const out = join(root, "evals/runs", values.cohort, "bench-entry-1/baseline-1"), setup = join(out, "setup");
+ const meta = JSON.parse(await readFile(join(out, "meta.json"), "utf8"));
+ assert.deepEqual((await readdir(out)).sort(), ["meta.json", "setup"], "Workspace is already spent or has unexpected artifacts");
+--- evals/runs/stage-3-natural-entry-1/check-ready.mjs
++++ evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs
+@@ -1,16 +1,16 @@
+-// Read-only prospective entry readiness gate. Its only subprocess is runner --dry.
+-// Narrow derivative of stage-3-comparison-1; not a paid launch or source mutation.
++// Read-only candidate entry readiness gate. Its only subprocess is runner --dry.
++// Identity-only derivative of stage-3-natural-entry-1; not a paid launch or source mutation.
+ import assert from "node:assert/strict";
+ import { spawnSync } from "node:child_process";
+ import { readFile, readdir, realpath } from "node:fs/promises";
+ import { basename, dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+ import { parseArgs } from "node:util";
+-import { hash, inspectBuildInputs, inspectWorkspace, json, regularBytes, safePath, verifyInputs } from "../../lib/build.mjs";
++import { hash, inspectBuildInputs, inspectWorkspace, json, regularBytes, safePath, verifyInputs } from "../../../lib/build.mjs";
+ 
+-const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-bench-entry-baseline-1" } } });
+-assert.ok(["codex-bench-entry-baseline-1"].includes(values.cohort), "Only the prospectively authorized entry baseline is supported");
+-const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../..");
++const { values } = parseArgs({ options: { cohort: { type: "string", default: "codex-bench-entry-candidate-1" } } });
++assert.ok(["codex-bench-entry-candidate-1"].includes(values.cohort), "Only the prospectively authorized entry candidate is supported");
++const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../..");
+ const cohort = join(root, "evals/runs", values.cohort), inputs = join(cohort, "inputs"), out = join(cohort, "bench-entry-1/baseline-1"), setup = join(out, "setup");
+ const readJson = async path => JSON.parse(await readFile(path, "utf8"));
+ const sorted = items => [...items].sort();
+@@ -130,7 +130,7 @@
+   for (const path of gate.evidence) { safePath(path); const bytes = await regularBytes(setup, path); evidence[path] = { sha256: hash(bytes), bytes: bytes.length }; }
+   assert.deepEqual(evidence, gate.evidenceHashes, "Retained setup proof bytes changed");
+   for (const path of ["dependency-install/command.json", "dependency-install/result.json", "dependency-install/stdout.log", "dependency-install/stderr.log", "runtime-environment.json", "capability-command.json", "capability-process.json", "capability/probe.json", "capability/build.log", "capability/browser.log", "capability/browser/manifest.json", "capability/browser/light-wide/report.json", "capability-visual-review.md", "original-images.json", "environment-setup.json", "source-before-capability.json", "source-after-capability.json"]) assert.ok(evidence[path], `Missing required proof: ${path}`);
+-  const helpers = ["evals/runs/stage-3-natural-entry-1/check-ready.mjs", "evals/runs/stage-3-natural-entry-1/finalize-setup.mjs", "evals/runs/stage-3-natural-entry-1/run-capability-probe.mjs"];
++  const helpers = ["evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs", "evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs", "evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs"];
+   assert.deepEqual(sorted(Object.keys(gate.coordinatorHelpers)), helpers);
+   for (const path of helpers) {
+     const digest = hash(await regularBytes(root, path));
+--- evals/runs/stage-3-natural-entry-1/finalize-setup.mjs
++++ evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs
+@@ -4,11 +4,11 @@
+ import { lstat, readdir, realpath } from "node:fs/promises";
+ import { basename, dirname, join, resolve } from "node:path";
+ import { fileURLToPath } from "node:url";
+-import { hash, inspectWorkspace, json, regularBytes, safePath, validateCase, verifyInputs, writeNew } from "../../lib/build.mjs";
++import { hash, inspectWorkspace, json, regularBytes, safePath, validateCase, verifyInputs, writeNew } from "../../../lib/build.mjs";
+ 
+ assert.equal(process.argv.length, 2, "No alternative cohort, workspace or output is supported");
+-const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../..");
+-const cohort = "codex-bench-entry-baseline-1", caseId = "bench-entry-1";
++const study = dirname(fileURLToPath(import.meta.url)), root = resolve(study, "../../../..");
++const cohort = "codex-bench-entry-candidate-1", caseId = "bench-entry-1";
+ const inputs = join(root, "evals/runs", cohort, "inputs");
+ const out = join(root, "evals/runs", cohort, caseId, "baseline-1"), setup = join(out, "setup");
+ const readJson = async (directory, path) => JSON.parse(await regularBytes(directory, path));
+@@ -106,7 +106,7 @@
+ 
+ const coordinatorHelpers = {};
+ for (const name of ["check-ready.mjs", "finalize-setup.mjs", "run-capability-probe.mjs"]) {
+-  const path = `evals/runs/stage-3-natural-entry-1/${name}`, digest = hash(await regularBytes(root, path));
++  const path = `evals/runs/stage-3-completion-2/entry-candidate-preparation/${name}`, digest = hash(await regularBytes(root, path));
+   assert.equal(digest, manifest.hashes[`implementation/${path}`], `Unfrozen helper: ${path}`);
+   coordinatorHelpers[path] = digest;
+ }
+--- evals/builds/bench-entry-1/case.json
++++ evals/runs/stage-3-completion-2/entry-candidate-preparation/case.json
+@@ -46,9 +46,9 @@
+     "evals/builds/bench-entry-1/measurement-expectations.json",
+     "evals/builds/bench-entry-1/measurement-protocol.md",
+     "evals/runs/stage-3-candidate-verification-1/bounded-process.mjs",
+-    "evals/runs/stage-3-natural-entry-1/run-capability-probe.mjs",
+-    "evals/runs/stage-3-natural-entry-1/check-ready.mjs",
+-    "evals/runs/stage-3-natural-entry-1/finalize-setup.mjs",
++    "evals/runs/stage-3-completion-2/entry-candidate-preparation/run-capability-probe.mjs",
++    "evals/runs/stage-3-completion-2/entry-candidate-preparation/check-ready.mjs",
++    "evals/runs/stage-3-completion-2/entry-candidate-preparation/finalize-setup.mjs",
+     "evals/probe-build-environment.mjs",
+     "evals/check-build.mjs",
+     "evals/lib/build-capture.mjs",
