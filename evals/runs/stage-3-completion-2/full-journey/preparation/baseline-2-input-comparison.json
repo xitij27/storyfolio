@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-12T06:15:13.933Z",
+  "command": {
+    "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+    "args": [
+      "-e",
+      "const fs=require('node:fs'),assert=require('node:assert/strict');const a=JSON.parse(fs.readFileSync('evals/runs/codex-full-journey-baseline-1/inputs/manifest.json')),b=JSON.parse(fs.readFileSync('evals/runs/codex-full-journey-baseline-2/inputs/manifest.json'));assert.deepEqual(Object.keys(a.hashes),Object.keys(b.hashes));const changed=Object.keys(a.hashes).filter(k=>a.hashes[k]!==b.hashes[k]);console.log(JSON.stringify({oldDigest:a.digest,newDigest:b.digest,count:Object.keys(b.hashes).length,changed:changed.map(path=>({path,before:a.hashes[path],after:b.hashes[path]})),capabilitiesEqual:a.hashes['capabilities.json']===b.hashes['capabilities.json'],skillAndPromptsEqual:Object.keys(a.hashes).filter(k=>k.startsWith('skill/')||k.startsWith('prompts/')).every(k=>a.hashes[k]===b.hashes[k])},null,2));"
+    ]
+  },
+  "result": {
+    "chunk_id": "bf16da",
+    "wall_time_seconds": 0.000016561,
+    "exit_code": 0,
+    "original_token_count": 429,
+    "output": "{\n  \"oldDigest\": \"8fbd93c6432e5a8972401959c1a326a8417eca77f47690bbde4bf5244f08a7ad\",\n  \"newDigest\": \"899898fc055c96452a77c03ff9d815782367d2634b10bcbdd5ab322857d8ab82\",\n  \"count\": 149,\n  \"changed\": [\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/README.md\",\n      \"before\": \"73b7e7ee5b9b477032bf590af5ce09340ff823847afd82a1d446950740041dc4\",\n      \"after\": \"4df0c79914eb7681668c08b39db35da4d07fa52d4b6511d82d8eaa39facdfb68\"\n    },\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/finalize-readiness.mjs\",\n      \"before\": \"849527a5f69bbd2d4239e54eea582d7ea25f1769c6284b5103443e1e9a90fbda\",\n      \"after\": \"40f7bba036e05c24b65280f7ffa2755efe92a838c3f13432317629650234fb6d\"\n    },\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs\",\n      \"before\": \"c5ee528bea9045c0d5dd846850dc88394c202f01444ab582800e164ad434851a\",\n      \"after\": \"ee76125328f7e9613e6b6eefb100db34304bb12a03bf3bcb4837225320129ef8\"\n    },\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.test.mjs\",\n      \"before\": \"b7e9199e208fe9112f4b472332ffeb8bdbb6dbb6176d5540989061cda84be8e6\",\n      \"after\": \"61569a71899cfc4d26fdbd7d53f79c799a4f7e881316c289ad21e5168437f187\"\n    },\n    {\n      \"path\": \"implementation/evals/runs/stage-3-completion-2/full-journey/preparation/run-environment-proof.mjs\",\n      \"before\": \"a077ea603f6a6f83d523d263b8e1d565c673e27c2c262e008128998011473e9f\",\n      \"after\": \"c3a3cef8c95ea267ded58b97d21d96b2636af8110c94d0efb2b09291c424643f\"\n    }\n  ],\n  \"capabilitiesEqual\": true,\n  \"skillAndPromptsEqual\": true\n}\n"
+  }
+}

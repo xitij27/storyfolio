@@ -13,7 +13,17 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
-Newest checkpoint: the first full-journey neutral setup proof failed
+Newest checkpoint: baseline-2 is ready for paid turn 1. Its single neutral
+proof passed normally, root reviewed the new original, final readiness
+passed, and an independent byte/source/evidence audit verified all 149
+inputs and 94 unscaffolded source files. The
+[readiness audit](../evals/runs/stage-3-completion-2/full-journey/preparation/baseline-2-readiness-audit.json)
+records the exact scope. Only five measurement-helper/documentation files
+differ from failed setup 1; skill, prompts and capabilities are identical.
+All 351 repository tests pass in `local-tests-9`. The actual paid journey
+still awaits launch and its six observed gates; setup is not site proof.
+
+Earlier checkpoint: the first full-journey neutral setup proof failed
 normally before browser or model activity because Codex prepended two
 launcher directories to PATH. All 149 frozen inputs and 94 source files
 are independently verified unchanged. The narrow, independently reviewed

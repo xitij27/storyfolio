@@ -222,3 +222,25 @@ repository tests passed. No browser or model ran during these checks.
 The separate [decision](full-journey/preparation/environment-correction-decision.md)
 allows one newly frozen baseline-2 neutral proof after commit, not an old
 evidence overwrite, extra paid retry or relaxed product gate.
+
+## Fresh baseline-2 ready for first paid journey
+
+The fresh 149-input digest is
+`899898fc055c96452a77c03ff9d815782367d2634b10bcbdd5ab322857d8ab82`.
+Its explicit input comparison shows only five prospective proof helper/docs
+changes. Skill, prompts, case, engine and capabilities remain exact. The
+new workspace has only seven fixture files and 87 installed skill files.
+The single neutral proof closed normally at 06:15:28.483 UTC after 1,497 ms;
+its outer recorder closed zero after 2,407 ms. All seven observations pass,
+including browser rendering and explicit proxy 403 denial. Root viewed the
+new original individually at original detail and recorded its identity.
+
+Fresh dry/readiness finalization passed; the independent audit verified
+all frozen/source/evidence bindings at 06:17:21.618 UTC. Its full result is
+saved despite the tool display's output truncation. Actual terminal tool
+returns are retained. No actor has run or app been scaffolded. Root's
+`local-tests-9` closed zero at 06:17:53.741 UTC after 13,955 ms: audit syntax,
+skill/people checks and all 351 repository tests passed. Commit this
+readiness before one turn-1 launch using the already fixed controls and
+stop-review checklist. No setup check is represented as actor preflight,
+human approval or Stage 3 completion.

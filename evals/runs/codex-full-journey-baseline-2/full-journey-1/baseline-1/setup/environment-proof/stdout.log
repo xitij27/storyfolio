@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "scope": "unscaffolded-environment",
+  "actorPreflight": false,
+  "modelCalls": 0,
+  "started": "2026-10-12T06:15:27.192Z",
+  "workspace": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-A1xJ9e",
+  "out": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-environment-proof-S4UHZc/proof",
+  "passed": true,
+  "interruptedBy": null,
+  "observations": [
+    {
+      "name": "node",
+      "executable": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node",
+      "version": "v22.22.1",
+      "passed": true
+    },
+    {
+      "name": "npm",
+      "executable": "/usr/share/nodejs/npm/bin/npm-cli.js",
+      "args": [
+        "--version"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "9.2.0\n",
+      "stderr": "(node:14) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+      "timedOut": false,
+      "error": null,
+      "durationMs": 241,
+      "passed": true
+    },
+    {
+      "name": "git",
+      "executable": "/usr/bin/git",
+      "args": [
+        "--version"
+      ],
+      "code": 0,
+      "signal": null,
+      "stdout": "git version 2.53.0\n",
+      "stderr": "",
+      "timedOut": false,
+      "error": null,
+      "durationMs": 11,
+      "passed": true
+    },
+    {
+      "name": "resources",
+      "resources": {
+        "npmCache": {
+          "path": "/tmp/storyfolio-npm-cache",
+          "canonical": "/tmp/storyfolio-npm-cache",
+          "available": true
+        },
+        "browserCache": {
+          "path": "/tmp/storyfolio-browser-cache",
+          "canonical": "/tmp/storyfolio-browser-cache",
+          "available": true
+        },
+        "browserLibraries": {
+          "path": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+          "canonical": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+          "available": true
+        },
+        "dependencies": {
+          "path": "/tmp/storyfolio-build-capability-20261011",
+          "canonical": "/tmp/storyfolio-build-capability-20261011",
+          "available": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "local-http",
+      "passed": true,
+      "url": "http://127.0.0.1:35323/",
+      "status": 200,
+      "contentSha256": "b153acbf62cc81a37f46caccb368f44758c1d43197c717f654fcf68d706b842c"
+    },
+    {
+      "name": "external-request",
+      "blocked": true,
+      "error": "TypeError: fetch failed",
+      "cause": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:14902:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async main (file:///home/kshitij/projects/storyfolio/evals/runs/codex-full-journey-baseline-2/inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs:226:24)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/codex-full-journey-baseline-2/inputs/implementation/evals/runs/stage-3-completion-2/full-journey/preparation/probe-environment.mjs:152:13 {\n  [cause]: DOMException [Error]: Request was cancelled.\n      at new DOMException (node:internal/per_context/domexception:76:18)\n      at makeAppropriateNetworkError (node:internal/deps/undici/undici:9531:182)\n      at httpNetworkFetch (node:internal/deps/undici/undici:11242:18)\n      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n      at async httpNetworkOrCacheFetch (node:internal/deps/undici/undici:11117:33)\n      at async httpFetch (node:internal/deps/undici/undici:10950:37)\n      at async node:internal/deps/undici/undici:10712:20\n      at async mainFetch (node:internal/deps/undici/undici:10702:20) {\n    cause: RequestAbortedError [AbortError]: Proxy response (403) !== 200 when HTTP Tunneling\n        at Client.connect (node:internal/deps/undici/undici:8553:26)\n        at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {\n      code: 'UND_ERR_ABORTED',\n      [Symbol(undici.error.UND_ERR)]: true,\n      [Symbol(undici.error.UND_ERR_ABORT)]: true,\n      [Symbol(undici.error.UND_ERR_ABORTED)]: true\n    }\n  }\n}"
+    },
+    {
+      "name": "browser",
+      "passed": true,
+      "playwrightEntrypoint": "/home/kshitij/projects/storyfolio/node_modules/storyfolio-build-dependencies-20261011/node_modules/playwright-core/index.js",
+      "playwrightEntrypointSha256": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b",
+      "playwrightVersion": "1.64.0",
+      "browserExecutable": "/tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome",
+      "browserVersion": "156.0.8078.4",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "image": "neutral.png",
+      "imageSha256": "f4c4c37435a310fab9d09a38aedadfdab0ee71b0d840e5009606a0852a92afbd",
+      "imageBytes": 34533,
+      "url": "http://127.0.0.1:35323/"
+    }
+  ],
+  "environment": {
+    "expectedOuter": {
+      "PATH": "/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+      "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+      "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/var/tmp/storyfolio-entry-runtime-20261012",
+      "NEXT_TELEMETRY_DISABLED": null
+    },
+    "sandbox": {
+      "PATH": "/home/kshitij/.codex/tmp/arg0/codex-arg0ZGXToS:/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/tmp/storyfolio-node-check-20261011/node_modules/node/bin:/home/kshitij/.local/bin:/home/kshitij/.codex/tmp/arg0/codex-arg03W66Hr:/home/kshitij/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/remote-cli:/home/kshitij/.local/bin:/home/kshitij/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Tailscale/:/mnt/c/Users/Kshitij/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Kshitij/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/kshitij/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64",
+      "PLAYWRIGHT_BROWSERS_PATH": "/tmp/storyfolio-browser-cache",
+      "LD_LIBRARY_PATH": "/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu",
+      "LANG": "C.UTF-8",
+      "TMPDIR": "/var/tmp/storyfolio-entry-runtime-20261012",
+      "NEXT_TELEMETRY_DISABLED": null
+    },
+    "launcher": {
+      "layout": {
+        "releaseRoot": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl",
+        "arg0Root": "/home/kshitij/.codex/tmp/arg0",
+        "arg0Directory": "/home/kshitij/.codex/tmp/arg0/codex-arg0ZGXToS",
+        "pathDirectory": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path",
+        "metadataPath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-package.json"
+      },
+      "metadata": {
+        "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-package.json",
+        "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-package.json",
+        "type": "file",
+        "bytes": 205,
+        "sha256": "f05ebff6db98bd613dd5654461985090c6416b41ad67902243d83a53b305ac05",
+        "value": {
+          "layoutVersion": 1,
+          "version": "0.162.1",
+          "target": "x86_64-unknown-linux-musl",
+          "variant": "codex",
+          "entrypoint": "bin/codex",
+          "resourcesDir": "codex-resources",
+          "pathDir": "codex-path"
+        }
+      },
+      "cli": {
+        "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+        "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+        "type": "file",
+        "bytes": 294415048,
+        "sha256": "628e35487d888a28f0427fc37501da529dd3d81fcbad7a2c3421c1e8670d92e1"
+      },
+      "directories": [
+        {
+          "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl",
+          "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl",
+          "type": "directory"
+        },
+        {
+          "path": "/home/kshitij/.codex/tmp/arg0",
+          "realpath": "/home/kshitij/.codex/tmp/arg0",
+          "type": "directory"
+        },
+        {
+          "path": "/home/kshitij/.codex/tmp/arg0/codex-arg0ZGXToS",
+          "realpath": "/home/kshitij/.codex/tmp/arg0/codex-arg0ZGXToS",
+          "type": "directory"
+        },
+        {
+          "path": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path",
+          "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path",
+          "type": "directory"
+        }
+      ],
+      "pathEntries": [
+        {
+          "name": "rg",
+          "type": "file",
+          "bytes": 5408904,
+          "sha256": "e62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849"
+        }
+      ],
+      "arg0Entries": [
+        {
+          "name": ".lock",
+          "type": "file",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "apply_patch",
+          "type": "symlink",
+          "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+          "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+        },
+        {
+          "name": "applypatch",
+          "type": "symlink",
+          "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+          "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+        },
+        {
+          "name": "codex-execve-wrapper",
+          "type": "symlink",
+          "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+          "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+        },
+        {
+          "name": "codex-linux-sandbox",
+          "type": "symlink",
+          "target": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex",
+          "realpath": "/home/kshitij/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex"
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Neutral local page only, not a built application or actor preflight.",
+    "No installation, optional-skill activation, real phone review or site acceptance.",
+    "Command-only sandbox inherits user configuration and is not a filesystem read jail."
+  ],
+  "finished": "2026-10-12T06:15:28.460Z"
+}
+
