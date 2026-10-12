@@ -51,6 +51,12 @@ hidden answers or enabled third-party skills.
 
 Independent measurement retains its frozen separate unit schedule: stop-2
 and stop-4 captures each have one 15-minute attempt; stop 6 has one 5-minute
-build, seven 8-minute modes and one 5-minute auxiliary unit. No failed
-coverage is waived. Actual author desktop/phone review is still required
+build, three 25-minute travel modes, four 15-minute non-travel modes and
+one 5-minute auxiliary unit, a 145-minute maximum summed final envelope.
+Root adopts these prospective caps before the first full-journey freeze,
+following the actual five-beat timing and 12-to-22-beat scope calculation
+in `../calibration-2/prospective-timing-and-focus-review.md`. Historical
+8-minute calibrations keep their original bounds and outcomes. Increasing
+a future cap does not fix or identify the unexplained interruption.
+No failed coverage is waived. Actual author desktop/phone review is still required
 after the whole-site evidence, and no push or publication is authorized.

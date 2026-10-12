@@ -35,23 +35,31 @@ test("movement during an original screenshot invalidates its settled observation
   assert.equal(settlementMatches(settled(100), []), false);
 });
 function fixture({ preFails = false, postFails = false, imageDrift = false, noResponse = false, peerMode = null } = {}) {
-  const events = []; let activated = false, scroll = 100, focused = false, selected = !!peerMode, peerSelected = false;
+  const events = [], resetFocusOptions = []; let activated = false, scroll = 100, focused = false, selected = !!peerMode, peerSelected = false;
   const control = { selector: "#go", tag: "button", type: null, role: "button", name: "Inspect", href: null, targetIds: "panel", beat: "middle", visible: true, disabled: false }; control.key = controlKey(control);
   const inspect = () => { events.push(activated ? "inspect-after" : "inspect-before"); return { html: "button", value: undefined, checked: undefined, location: "http://local/", scroll, scrollX: 0, state: { pressed: peerMode ? String(selected) : activated && !noResponse ? "true" : "false" }, targets: [{ id: "panel", exists: true, html: activated && !noResponse ? "new" : "old", containsCanvas: false, visible: true, inView: true }], hitTarget: true }; };
   const activate = async () => { events.push("activate"); activated = true; if (!noResponse) { scroll = 200; selected = true; } };
   const target = { count: async () => 1, scrollIntoViewIfNeeded: async () => {}, hover: async () => { events.push("hover"); }, click: activate,
     evaluate: async operation => { const code = operation.toString(); if (code.includes("html: node.outerHTML")) return inspect(); if (operation === findDeclaredPeer) return peerMode ? { index: 1, attribute: "aria-pressed", relationship: "same declared pressed-button group" } : null; if (code.includes('attribute === "checked"')) return String(selected); if (code.includes("document.activeElement === node")) return focused; throw new Error("Unexpected fake target observation"); } };
   const peerTarget = { click: async () => { events.push("prepare-peer"); peerSelected = true; if (peerMode !== "ineffective") selected = false; }, evaluate: async () => String(peerSelected) };
-  const page = { locator: selector => selector === control.selector ? target : { evaluateAll: async () => [control], nth: () => peerTarget }, waitForTimeout: async () => {}, evaluate: async () => { events.push("focus-body"); focused = false; }, keyboard: { press: async key => { if (key === "Tab") { events.push("Tab"); focused = true; } else await activate(); } } };
+  const page = { locator: selector => selector === control.selector ? target : { evaluateAll: async () => [control], nth: () => peerTarget }, waitForTimeout: async () => {}, evaluate: async operation => {
+    const original = globalThis.document;
+    try { globalThis.document = { activeElement: { blur: () => { focused = false; } }, body: { focus: options => { events.push("focus-body"); resetFocusOptions.push(options); } } }; return operation(); }
+    finally { if (original === undefined) delete globalThis.document; else globalThis.document = original; }
+  }, keyboard: { press: async key => { if (key === "Tab") { events.push("Tab"); focused = true; } else await activate(); } } };
   const reset = async () => { events.push("reset"); activated = false; focused = false; scroll = 100; selected = !!peerMode; peerSelected = false; };
   const settle = async () => { events.push(activated ? "settle-after" : "settle-before"); return { ...settled(scroll), settled: activated ? !postFails : !preFails }; };
   const screenshot = async name => { events.push(name.endsWith("-after") ? "image-after" : "image-before"); if (imageDrift && name.endsWith("-after")) scroll += 5; return { sha256: hash }; };
-  return { events, run: () => exerciseSettledControl(page, control, screenshot, reset, [], { settle }) };
+  return { events, resetFocusOptions, run: () => exerciseSettledControl(page, control, screenshot, reset, [], { settle }) };
 }
 test("both modalities settle after focus/hover and activation, then retain post-image observations", async () => {
   const f = fixture(), result = await f.run(); assert.equal(result.trials.length, 2); assert.deepEqual(assessControl(result), []);
   for (const trial of result.trials) { assert.equal(trial.preActivationSettlement.settled, true); assert.equal(trial.postActivationSettlement.settled, true); assert.equal(trial.scrollSettled, true); assert.ok(trial.beforeImageObservation); assert.ok(trial.afterImageObservation); }
   const keyboardStart = f.events.lastIndexOf("reset"), keyboard = f.events.slice(keyboardStart); assert.ok(keyboard.indexOf("Tab") < keyboard.indexOf("settle-before")); assert.ok(keyboard.indexOf("settle-before") < keyboard.indexOf("image-before")); assert.ok(keyboard.indexOf("activate") < keyboard.indexOf("settle-after")); assert.ok(keyboard.indexOf("settle-after") < keyboard.indexOf("image-after")); assert.equal(keyboard.at(-1), "inspect-after");
+});
+test("artificial body-focus reset prevents scroll but target is still reached by actual Tab", async () => {
+  const f = fixture(), result = await f.run(); assert.deepEqual(f.resetFocusOptions, [{ preventScroll: true }]);
+  assert.equal(result.trials[1].tabPresses, 1); assert.ok(f.events.indexOf("focus-body") < f.events.indexOf("Tab")); assert.deepEqual(assessControl(result), []);
 });
 test("an unstable pre-activation baseline is retained but never activated", async () => {
   const f = fixture({ preFails: true }), result = await f.run(); assert.equal(f.events.includes("activate"), false); for (const trial of result.trials) { assert.equal(trial.activated, false); assert.ok(trial.beforeImage); assert.match(trial.error, /activation withheld/); } assert.ok(assessControl(result).length);

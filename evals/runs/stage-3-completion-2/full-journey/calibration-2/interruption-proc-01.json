@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-12T05:12:44.592Z",
+  "uid": 1000,
+  "inspectorPid": 271956,
+  "scopes": [
+    "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-calibration-5yt94U",
+    "/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/calibration-2/desktop",
+    "/home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/calibration-2/desktop-command"
+  ],
+  "sameUid": 78,
+  "fdLinks": 2055,
+  "ties": [
+    {
+      "pid": 258380,
+      "type": "cwd",
+      "target": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-calibration-5yt94U"
+    }
+  ],
+  "inaccessible": [
+    {
+      "pid": 372,
+      "type": "cwd",
+      "code": "EACCES"
+    },
+    {
+      "pid": 372,
+      "type": "fd-links",
+      "code": "EACCES",
+      "count": 45
+    },
+    {
+      "pid": 374,
+      "type": "cwd",
+      "code": "EACCES"
+    },
+    {
+      "pid": 374,
+      "type": "fd-directory",
+      "code": "EACCES"
+    }
+  ],
+  "ownedMetadata": [
+    {
+      "pid": 258380,
+      "comm": "next-server (v1",
+      "state": "S",
+      "ppid": 2044554,
+      "pgrp": 258380,
+      "session": 258380,
+      "startTicks": "91563927"
+    }
+  ]
+}

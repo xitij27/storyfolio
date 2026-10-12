@@ -35,13 +35,31 @@ immutable seeds, with exact owner/key and one numeric metadata timestamp,
 are accepted. Unknown payloads and changed existing files still fail.
 Neither change edits the shared checker, skill or application source.
 
+The second calibration was interrupted before its own deadline, preserving
+partial originals but no completed mode report. Its implementation remains
+frozen in `../full-journey/calibration-2/implementation/`. The prospective
+next baseline changes only the artificial body-focus reset to
+`focus({ preventScroll: true })`, retains actual sequential Tab behavior,
+persists bounded-process events/streams synchronously from launch, and
+uses the scope-based limits below. The
+[timing and focus assessment](../full-journey/calibration-2/prospective-timing-and-focus-review.md)
+and [supervision review](../full-journey/calibration-2/supervision-source-review.md)
+record the evidence and limits. No signal sender or interruption fix is
+inferred, and neither historical calibration receives a new deadline.
+
 | Stop | Required observations | Total child limit, including 5 s shutdown |
 |---|---|---|
 | 2 | Every advertised concept, its actual opening/middle/ending, desktop/phone, actual chooser trials | One 900000 ms unit |
 | 4 | Every advertised look, its actual three-point spine, desktop/phone, switch trials | One 900000 ms unit |
-| 6 | One trusted type/lint/build; every final beat and transition in seven modes; auxiliary pages/download | Build 300000 ms; each mode 480000 ms; auxiliary 300000 ms |
+| 6 | One trusted type/lint/build; every final beat and transition in seven modes; auxiliary pages/download | Build 300000 ms; desktop/phone/short each 1500000 ms; other four modes each 900000 ms; auxiliary 300000 ms |
 
-Stop 6 has nine distinct units, 66 minutes maximum summed child lifetimes.
+Stop 6 has nine distinct units, 145 minutes maximum summed child lifetimes.
+The three travel modes receive 1495 seconds work plus 5 seconds shutdown;
+the four non-travel modes receive 895 seconds work plus 5 seconds shutdown.
+Reduced motion uses the non-travel cap despite retaining scene/rest/still
+observations. This prospective bound follows the actual five-beat timing
+and declared 12 to 22 beat/control workload, not an inconvenient paid result.
+It does not guarantee completion for arbitrary controls or slow pages.
 It does not have an automatic continuation, retry or whole-orchestration
 wall cap. A cleanly completed technical failure may leave later predeclared
 units useful. Failed build, interruption, log failure, incomplete capture,
@@ -197,9 +215,17 @@ and path stays in the raw inventory and validated cache inventory described
 above. Node/Next/Playwright entrypoint identities are checked;
 this does not claim full transitive dependency byte integrity.
 
-Save exact outer tool launch/session/poll/terminal results. Never overwrite
-unit directories. Each unit retains command, PIDs, deadlines, streams,
-lifecycle, source before/after, complete raw artifacts and closure. A log
+Save exact outer tool launch/session/poll/terminal results. Use the new
+`process-supervision/recorder.mjs` for future long-running outer commands;
+the old install recorder has no signal journal. Never overwrite unit
+directories. Each unit retains command, PIDs, deadlines, streams,
+lifecycle, source before/after, complete raw artifacts and closure. Both
+measurement launchers open all three evidence streams exclusively before
+worker spawn, and append every callback's lifecycle/stdout/stderr bytes
+synchronously. Logs no longer wait for worker close or asynchronous stream
+buffers. Final result and closure files remain exclusive, never overwritten.
+This preserves completed writes across process loss, not a host power-loss
+or filesystem durability guarantee. A log
 failure triggers shutdown of the owned worker PID and blocks further units;
 it is not misattributed as an unknown external signal. If storage itself
 fails, result preservation can fail too and remains incomplete.
@@ -222,11 +248,12 @@ name fails before overwriting an earlier original.
 Pure deterministic suite, after root clears all live runtime work:
 
 ```text
-/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node --test evals/runs/stage-3-completion-2/full-journey-measurement/measurement.test.mjs
+/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node --test evals/runs/stage-3-completion-2/full-journey-measurement/measurement.test.mjs evals/runs/stage-3-completion-2/full-journey-measurement/controls.test.mjs evals/runs/stage-3-completion-2/full-journey-measurement/cache-identity.test.mjs
 ```
 
 Tests import only coordinator functions, read the policy and use in-memory
-fixtures. They do not spawn subprocesses, touch actor workspaces, build,
+fixtures, including injected synchronous I/O and body-focus options.
+They do not spawn subprocesses, touch actor workspaces, build,
 install, browse or call a model. Root should record syntax checks as well.
 
 For root's approved local calibration before freeze, first copy the manual
@@ -247,14 +274,17 @@ Use synthetic stage 4 targets for that single look. Expected count failure
 must remain recorded. For the same clean copy's five-beat final targets,
 run the same entry once with `--unit=build` and a fresh output, then once
 with `--unit=desktop --build-proof=BUILD_OUTPUT/artifacts/manifest.json`
-and another fresh output. The limits are the frozen 5-minute build and
-8-minute desktop bounds. These are positive renderer/coverage checks with
+and another fresh output. The prospective limits are the frozen 5-minute
+build and 25-minute desktop bounds. Historical calibrations retained their
+original 8-minute desktop cap; later attempts require root's separate
+explicit decision and label. These are positive renderer/coverage checks with
 negative journey counts, not a full journey or a replacement actor run.
 
 This direct-worker calibration has no actor lifecycle eligibility and
 cannot create a real gate binding or pass the journey verifier. It exists
 only to test the prospective worker on known source. Its final output
-contains source/streams/lifecycle/process records; an uncatchable wrapper
-termination may prevent their final write, so root retains outer tool
-evidence too. Review all its original images separately, not as journey
-evidence. Root has not launched this calibration at this source checkpoint.
+contains source/streams/lifecycle/process records. Lifecycle and raw streams
+are now written during execution, but an uncatchable wrapper termination
+can still prevent terminal result/source-after records, so root retains
+outer tool evidence too. Review all its original images separately, not as
+journey evidence. No new calibration is launched by these source changes.

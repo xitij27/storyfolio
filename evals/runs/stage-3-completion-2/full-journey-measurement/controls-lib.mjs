@@ -116,7 +116,7 @@ export async function exerciseSettledControl(page, control, screenshot, reset, d
       trial.applicability = "applicable";
       if (method === "keyboard") {
         // Reach by actual sequential keyboard navigation, not element.focus().
-        await page.evaluate(() => { document.activeElement?.blur(); document.body.tabIndex = -1; document.body.focus(); });
+        await page.evaluate(() => { document.activeElement?.blur(); document.body.tabIndex = -1; document.body.focus({ preventScroll: true }); });
         for (let count = 0; count < 200; count++) {
           await page.keyboard.press("Tab");
           if (await target.evaluate(node => document.activeElement === node)) { trial.reached = true; trial.tabPresses = count + 1; break; }

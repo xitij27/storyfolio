@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { closeSync, openSync, writeSync } from "node:fs";
 import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { assessDiagnosticCapture, validateFocusOnlyControls } from "../../../lib/build-capture.mjs";
@@ -28,9 +29,35 @@ export function units(stage) {
 }
 export function bounds(unit, policy) {
   assert.ok(["concepts", "looks", "build", "auxiliary", ...MODE_IDS].includes(unit));
-  const totalCapMs = policy.boundsMs[MODE_IDS.includes(unit) ? "mode" : unit];
+  const category = ["desktop", "mobile", "short"].includes(unit) ? "animatedMode" : MODE_IDS.includes(unit) ? "staticMode" : unit;
+  const totalCapMs = policy.boundsMs[category];
+  assert.ok(Number.isSafeInteger(policy.shutdownGraceMs) && policy.shutdownGraceMs > 0);
   assert.ok(Number.isSafeInteger(totalCapMs) && totalCapMs > policy.shutdownGraceMs);
   return { timeoutMs: totalCapMs - policy.shutdownGraceMs, graceMs: policy.shutdownGraceMs, totalCapMs };
+}
+
+// Opens all evidence before spawn. Each callback append finishes synchronously,
+// so a process loss cannot discard an in-memory journal or stream buffer.
+// This is not an fsync/power-loss guarantee. Callers own stopping on log errors.
+export function openCaptureLogs(directory, { open = openSync, write = writeSync, close = closeSync } = {}) {
+  const descriptors = new Map(); let closed = false;
+  try { for (const name of ["lifecycle", "stdout", "stderr"]) descriptors.set(name, open(join(directory, name === "lifecycle" ? "lifecycle.jsonl" : name + ".log"), "wx")); }
+  catch (error) { for (const fd of descriptors.values()) { try { close(fd); } catch { /* preserve the original open failure; no worker was spawned */ } } throw error; }
+  return {
+    write(name, data) {
+      assert.ok(!closed && descriptors.has(name), "Unknown or closed evidence stream");
+      const bytes = Buffer.isBuffer(data) ? data : Buffer.from(data);
+      for (let offset = 0; offset < bytes.length;) {
+        const count = write(descriptors.get(name), bytes, offset, bytes.length - offset, null);
+        assert.ok(Number.isSafeInteger(count) && count > 0 && count <= bytes.length - offset, "Incomplete synchronous evidence append"); offset += count;
+      }
+    },
+    close() {
+      if (closed) return []; closed = true;
+      const errors = []; for (const [name, fd] of descriptors) { try { close(fd); } catch (error) { errors.push(`${name}: ${error}`); } }
+      return errors;
+    },
+  };
 }
 export function gateDisposition(state) {
   const reasons = [];

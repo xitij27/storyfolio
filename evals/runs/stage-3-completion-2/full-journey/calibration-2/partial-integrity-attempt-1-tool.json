@@ -1,0 +1,7 @@
+{
+  "chunk_id": "23d887",
+  "wall_time_seconds": 0.000017503,
+  "exit_code": 1,
+  "original_token_count": 194,
+  "output": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Current implementation drift: evals/runs/stage-3-completion-2/full-journey-measurement/policy.json\n+ actual - expected\n\n+ 'fb0564dcc2ca4319cc151679ddcb53295ced702148b91d36c537582397f93d54'\n- '0f3e9afd3aab1370df72bcf1deb9089227292de1421231bece0af5e06ecaddb7'\n\n    at file:///home/kshitij/projects/storyfolio/evals/runs/stage-3-completion-2/full-journey/calibration-2/partial-integrity.mjs:52:88 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 'fb0564dcc2ca4319cc151679ddcb53295ced702148b91d36c537582397f93d54',\n  expected: '0f3e9afd3aab1370df72bcf1deb9089227292de1421231bece0af5e06ecaddb7',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v22.22.1\n"
+}

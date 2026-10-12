@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: proc parser keeps only own identity and handles parentheses in the process name
+ok 1 - proc parser keeps only own identity and handles parentheses in the process name
+  ---
+  duration_ms: 8.407221
+  type: 'test'
+  ...
+# Subtest: pipe and PTY labels must match the actually observed stdout TTY state
+ok 2 - pipe and PTY labels must match the actually observed stdout TTY state
+  ---
+  duration_ms: 0.583676
+  type: 'test'
+  ...
+# Subtest: natural completion cannot precede fixed 660 seconds and records exact 30-second heartbeats
+ok 3 - natural completion cannot precede fixed 660 seconds and records exact 30-second heartbeats
+  ---
+  duration_ms: 1.589808
+  type: 'test'
+  ...
+# Subtest: SIGTERM, SIGINT and PTY SIGHUP immediately journal incomplete closure with unknown sender
+ok 4 - SIGTERM, SIGINT and PTY SIGHUP immediately journal incomplete closure with unknown sender
+  ---
+  duration_ms: 0.450609
+  type: 'test'
+  ...
+# Subtest: a failed journal, stdout sink or terminal record never becomes completion
+ok 5 - a failed journal, stdout sink or terminal record never becomes completion
+  ---
+  duration_ms: 0.812932
+  type: 'test'
+  ...
+# Subtest: failure after initial heartbeats closes immediately without silent continuation
+ok 6 - failure after initial heartbeats closes immediately without silent continuation
+  ---
+  duration_ms: 0.187629
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 67.812665

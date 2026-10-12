@@ -13,6 +13,21 @@ journey. Earlier per-test restrictions below are historical, not a reason
 to ask again for ordinary needed work. Real author desktop/phone acceptance,
 immutable old evidence and no-push remain. Stage 3 is not complete.
 
+Latest runtime checkpoint: the second desktop calibration stopped with
+outer exit 143 before its deadline. All 75 available originals were
+reviewed, and the unchanged source/build plus archived launch helpers
+were independently verified. A surviving owned server was reverified and
+stopped; the subsequent scoped scan found no owned ties. The missing
+terminal report remains missing. Read the
+[interruption audit](../evals/runs/stage-3-completion-2/full-journey/calibration-2/interruption-audit.md)
+and [partial visual review](../evals/runs/stage-3-completion-2/full-journey/calibration-2/desktop-visual-review.md).
+Before another paid launch, root is checking neutral command longevity and
+preparing prospective live logging, artificial-focus reset and scope-based
+capture deadlines. These changes do not identify the interruption sender
+or turn partial evidence into a pass. See the
+[bounded no-model diagnostic decision](../evals/runs/stage-3-completion-2/process-supervision/longevity-1/launch-decision.md).
+The checkpoints below preserve the sequence leading here.
+
 Current measurement checkpoint: the unchanged manual prototype's new
 full-journey calibration completed normally, with source/artifact integrity
 verified and all eight gate plus 102 desktop originals reviewed. It exposed

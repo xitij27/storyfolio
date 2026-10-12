@@ -1,0 +1,38 @@
+{
+  "started": "2026-10-12T05:13:42.399Z",
+  "authority": "Root explicitly authorized one reverified PID SIGTERM, at most five seconds observation, no SIGKILL",
+  "expected": {
+    "uid": 1000,
+    "pid": 258380,
+    "pgrp": 258380,
+    "session": 258380,
+    "startTicks": "91563927",
+    "cwd": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-calibration-5yt94U"
+  },
+  "signals": [
+    {
+      "at": "2026-10-12T05:13:42.399Z",
+      "pid": 258380,
+      "signal": "SIGTERM",
+      "target": "single PID, not process group or parent"
+    }
+  ],
+  "before": {
+    "uid": 1000,
+    "pid": 258380,
+    "comm": "next-server (v1",
+    "state": "S",
+    "ppid": 2044554,
+    "pgrp": 258380,
+    "session": 258380,
+    "startTicks": "91563927",
+    "cwd": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-calibration-5yt94U"
+  },
+  "after": {
+    "pid": 258380,
+    "error": "ENOENT"
+  },
+  "observedMs": 100.679741,
+  "finished": "2026-10-12T05:13:42.500Z",
+  "disposition": "PID absent"
+}

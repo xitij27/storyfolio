@@ -4,7 +4,7 @@ import { mkdir, realpath } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { parseArgs } from "node:util";
 import { runBounded } from "../../stage-3-candidate-verification-1/bounded-process.mjs";
-import { bounds, validateTargets } from "./measurement-lib.mjs";
+import { bounds, validateTargets, openCaptureLogs } from "./measurement-lib.mjs";
 import { root, study, regularBytes, captureSource, assertSnapshot, writeNew, hash, json } from "./binding-lib.mjs";
 const { values } = parseArgs({ options: Object.fromEntries(["workspace", "snapshot", "targets", "out", "unit", "build-proof"].map(key => [key, { type: "string" }])) });
 for (const key of ["workspace", "snapshot", "targets", "out"]) assert.ok(values[key]);
@@ -23,7 +23,19 @@ const args = [join(study, targets.stage === 6 ? "final-worker.mjs" : "gate-worke
 if (targets.stage === 6) { args.push(`--unit=${unit}`); if (unit !== "build") { assert.ok(values["build-proof"]); args.push(`--build-proof=${values["build-proof"]}`); } }
 const command = { scope: "local no-model worker calibration only, not an actor run, journey gate or Stage 3 pass", executable: process.execPath, args, cwd: work, ...limits, snapshotSha256: hash(snapshotBytes), targetsSha256: hash(targetsBytes), sourceBefore: before, environment: Object.fromEntries(["PATH", "PLAYWRIGHT_BROWSERS_PATH", "LD_LIBRARY_PATH", "LANG", "TMPDIR", "NEXT_TELEMETRY_DISABLED"].map(key => [key, process.env[key] ?? null])), modelCalls: 0, retries: 0 };
 await writeNew(join(review, "command.json"), json(command));
-const events = [], result = await runBounded({ executable: process.execPath, args, cwd: work, env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" }, ...limits, onEvent: event => events.push(event) });
-await writeNew(join(review, "stdout.log"), result.stdout); await writeNew(join(review, "stderr.log"), result.stderr); await writeNew(join(review, "lifecycle.jsonl"), events.map(event => JSON.stringify(event) + "\n").join(""));
+const logs = openCaptureLogs(review), logErrors = []; let ownedPid = null, logStop = false, logKillTimer;
+function stopForLogError() {
+  if (logStop || !ownedPid) return; logStop = true;
+  const signal = name => { try { process.kill(ownedPid, name); } catch (error) { if (error.code !== "ESRCH") logErrors.push(`Owned worker shutdown: ${error}`); } };
+  signal("SIGTERM"); logKillTimer = setTimeout(() => signal("SIGKILL"), limits.graceMs);
+}
+const append = (name, bytes) => { try { logs.write(name, bytes); } catch (error) { logErrors.push(`${name}: ${error}`); stopForLogError(); } };
+let result;
+try {
+  result = await runBounded({ executable: process.execPath, args, cwd: work, env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" }, ...limits,
+    onEvent: event => { if (["exit", "closed"].includes(event.type)) { ownedPid = null; clearTimeout(logKillTimer); } else if (["spawn-request", "spawned"].includes(event.type)) ownedPid = event.childPid; if (logErrors.length) stopForLogError(); append("lifecycle", JSON.stringify(event) + "\n"); },
+    onStdout: bytes => append("stdout", bytes), onStderr: bytes => append("stderr", bytes) });
+} finally { clearTimeout(logKillTimer); ownedPid = null; logErrors.push(...logs.close()); }
+result.logError = logErrors.length ? { errors: logErrors, shutdown: "coordinator log failure, signalled only the owned worker PID; not an external-signal attribution" } : null;
 const after = await captureSource(work), sourceUnchanged = json(before) === json(after); await writeNew(join(review, "result.json"), json({ ...result, sourceAfter: after, sourceUnchanged, scope: command.scope }));
-console.log(json({ output, code: result.code, sourceUnchanged, scope: command.scope })); process.exitCode = result.code === 0 && sourceUnchanged && !result.timedOut && !result.externalSignal ? 0 : 1;
+console.log(json({ output, code: result.code, sourceUnchanged, logError: result.logError, scope: command.scope })); process.exitCode = result.code === 0 && sourceUnchanged && !result.timedOut && !result.externalSignal && !result.logError ? 0 : 1;

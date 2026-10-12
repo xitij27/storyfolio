@@ -2,7 +2,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { validateTargets, observationProblems, gateDisposition, units, bounds, modeCases, imageName, wholeText, reserveImage, observeWording, assertCoverage, assertUnitCoverage, assessGateReport, assessWording, activationKey } from "./measurement-lib.mjs";
+import { validateTargets, observationProblems, gateDisposition, units, bounds, modeCases, imageName, wholeText, reserveImage, observeWording, assertCoverage, assertUnitCoverage, assessGateReport, assessWording, activationKey, openCaptureLogs } from "./measurement-lib.mjs";
 import { assertExtras, assertSnapshot, assertSupervisor, hash, metadataPath } from "./binding-lib.mjs";
 const policy = JSON.parse(await readFile(new URL("policy.json", import.meta.url)));
 const digest = "a".repeat(64), other = "b".repeat(64), copy = value => structuredClone(value);
@@ -66,9 +66,37 @@ test("no source, nonterminal actor, unresolved gate and starter are explicit non
 });
 test("finite unit schedule and shutdown-inclusive caps are frozen", () => {
   assert.deepEqual(units(2), ["concepts"]); assert.deepEqual(units(4), ["looks"]); assert.equal(units(6).length, 9);
-  for (const unit of [...units(2), ...units(4), ...units(6)]) { const actual = bounds(unit, policy); assert.equal(actual.timeoutMs + actual.graceMs, actual.totalCapMs); assert.equal(actual.graceMs, 5000); assert.ok(actual.totalCapMs <= 900000); }
-  assert.equal(units(6).reduce((sum, unit) => sum + bounds(unit, policy).totalCapMs, 0), 3960000); assert.throws(() => bounds("retry", policy));
+  for (const unit of [...units(2), ...units(4), ...units(6)]) { const actual = bounds(unit, policy); assert.equal(actual.timeoutMs + actual.graceMs, actual.totalCapMs); assert.equal(actual.graceMs, 5000); assert.ok(actual.totalCapMs <= 1500000); }
+  for (const unit of ["desktop", "mobile", "short"]) assert.deepEqual(bounds(unit, policy), { timeoutMs: 1495000, graceMs: 5000, totalCapMs: 1500000 });
+  for (const unit of ["concepts", "looks", "reduced-motion", "no-webgl", "no-javascript", "context-loss"]) assert.deepEqual(bounds(unit, policy), { timeoutMs: 895000, graceMs: 5000, totalCapMs: 900000 });
+  for (const unit of ["build", "auxiliary"]) assert.deepEqual(bounds(unit, policy), { timeoutMs: 295000, graceMs: 5000, totalCapMs: 300000 });
+  assert.equal(units(6).reduce((sum, unit) => sum + bounds(unit, policy).totalCapMs, 0), 8700000); assert.throws(() => bounds("retry", policy));
+  assert.throws(() => bounds("desktop", { ...policy, boundsMs: { ...policy.boundsMs, animatedMode: undefined, mode: 480000 } }));
+  assert.throws(() => bounds("desktop", { ...policy, shutdownGraceMs: 0 }));
   assert.deepEqual(modeCases(policy).map(entry => entry.id), units(6).slice(1, -1)); assert.equal(modeCases(policy).at(-1).loseContext, true);
+});
+function logIO({ shortWrite = false, failOpen = false, failWrite = false, failClose = false } = {}) {
+  const events = [], files = new Map(); let next = 0;
+  return { events, files, io: {
+    open(path, flag) { events.push(["open", path, flag]); if (failOpen && next === 1) throw new Error("existing stream"); const fd = ++next; files.set(fd, Buffer.alloc(0)); return fd; },
+    write(fd, bytes, offset, length, position) { events.push(["write", fd, position]); if (failWrite) throw new Error("storage unavailable"); const count = shortWrite ? Math.min(1, length) : length; files.set(fd, Buffer.concat([files.get(fd), bytes.subarray(offset, offset + count)])); return count; },
+    close(fd) { events.push(["close", fd]); if (failClose) throw new Error("close failure"); },
+  } };
+}
+test("capture logs are exclusive, synchronous and retain every callback byte before close", () => {
+  const f = logIO({ shortWrite: true }), logs = openCaptureLogs("/fictional/review", f.io);
+  assert.deepEqual(f.events, [["open", "/fictional/review/lifecycle.jsonl", "wx"], ["open", "/fictional/review/stdout.log", "wx"], ["open", "/fictional/review/stderr.log", "wx"]]);
+  logs.write("lifecycle", '{"type":"spawned"}\n'); logs.write("stdout", "é"); logs.write("stdout", Buffer.from(" work\n")); logs.write("stderr", "warning\n");
+  assert.equal(f.files.get(1).toString(), '{"type":"spawned"}\n'); assert.equal(f.files.get(2).toString(), "é work\n"); assert.equal(f.files.get(3).toString(), "warning\n");
+  assert.equal(f.events.some(event => event[0] === "close"), false); assert.deepEqual(logs.close(), []); assert.equal(f.events.filter(event => event[0] === "close").length, 3);
+  assert.throws(() => logs.write("stdout", "later"), /closed/); assert.deepEqual(logs.close(), []);
+});
+test("capture log open failures abort before spawn and close previously opened descriptors", () => {
+  const f = logIO({ failOpen: true }); assert.throws(() => openCaptureLogs("/fictional/review", f.io), /existing stream/); assert.deepEqual(f.events.at(-1), ["close", 1]);
+});
+test("capture log write failures and zero-byte writes are explicit, and all closes are attempted", () => {
+  const f = logIO({ failWrite: true, failClose: true }), logs = openCaptureLogs("/fictional/review", f.io); assert.throws(() => logs.write("lifecycle", "event"), /storage unavailable/); assert.equal(logs.close().length, 3);
+  const zero = logIO(), stopped = openCaptureLogs("/fictional/review", { ...zero.io, write: () => 0 }); assert.throws(() => stopped.write("stdout", "data"), /Incomplete/); stopped.close();
 });
 test("actual HTML beat IDs cannot escape image paths or collide by lossy replacement", () => { assert.equal(imageName("../rest/a"), "..%2Frest%2Fa.png"); assert.notEqual(imageName("a/b"), imageName("a_b")); assert.equal(activationKey({ role: "switch" }), "Space"); assert.equal(activationKey({ role: "button" }), "Enter"); });
 function gateEvidence(target = gates()) {

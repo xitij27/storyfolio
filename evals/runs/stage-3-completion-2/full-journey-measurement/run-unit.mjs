@@ -1,11 +1,10 @@
 // Root launches one predeclared unit. No automatic next unit, retry or model.
 import assert from "node:assert/strict";
-import { createWriteStream } from "node:fs";
 import { mkdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { runBounded } from "../../stage-3-candidate-verification-1/bounded-process.mjs";
-import { bounds } from "./measurement-lib.mjs";
+import { bounds, openCaptureLogs } from "./measurement-lib.mjs";
 import { loadBinding, loadPrepared, captureSource, regularBytes, inventory, hash, json, writeNew } from "./binding-lib.mjs";
 const { values } = parseArgs({ options: { binding: { type: "string" }, unit: { type: "string" } } }); assert.ok(values.binding && values.unit);
 const binding = await loadBinding(values.binding), prepared = await loadPrepared(binding), unit = values.unit;
@@ -34,19 +33,20 @@ const limits = bounds(unit, binding.policy);
 await writeNew(join(review, "attempt.json"), json({ started: new Date().toISOString(), unit, stage: binding.record.turn, bindingSha256: binding.bindingSha256, actorResultSha256: binding.record.actorResultSha256, actorComplete: true, retries: 0, modelCalls: 0 }));
 await writeNew(join(review, "source-before.json"), json(binding.restored));
 await writeNew(join(review, "command.json"), json({ executable: process.execPath, args, cwd: prepared.work, environment: binding.environment, ...limits, helperHashes: binding.helperHashes, inputDigest: binding.frozen.digest, workerSha256: hash(await readFile(args[0])), installResultSha256: hash(await regularBytes(prepared.setup, "dependency-install/result.json")), limit: "Total child lifetime includes shutdown grace, subject to scheduling jitter; hard worker exit does not prove all detached descendants exited" }));
-const lifecycle = createWriteStream(join(review, "lifecycle.jsonl"), { flags: "wx" }), stdout = createWriteStream(join(review, "stdout.log"), { flags: "wx" }), stderr = createWriteStream(join(review, "stderr.log"), { flags: "wx" });
+const logs = openCaptureLogs(review);
 const logErrors = []; let ownedPid = null, logStop = false, logKillTimer;
 function stopForLogError() {
   if (logStop || !ownedPid) return; logStop = true;
   const signal = name => { try { process.kill(ownedPid, name); } catch (error) { if (error.code !== "ESRCH") logErrors.push(`Owned worker shutdown: ${error}`); } };
   signal("SIGTERM"); logKillTimer = setTimeout(() => signal("SIGKILL"), limits.graceMs);
 }
-for (const [name, stream] of [["lifecycle", lifecycle], ["stdout", stdout], ["stderr", stderr]]) stream.on("error", error => { logErrors.push(`${name}: ${error}`); stopForLogError(); });
-const execution = await runBounded({ executable: process.execPath, args, cwd: prepared.work, env: { ...process.env, ...binding.environment }, ...limits,
-  onEvent: event => { if (["exit", "closed"].includes(event.type)) { ownedPid = null; clearTimeout(logKillTimer); } else if (["spawn-request", "spawned"].includes(event.type)) ownedPid = event.childPid; if (logErrors.length) stopForLogError(); if (!lifecycle.destroyed) lifecycle.write(JSON.stringify(event) + "\n"); },
-  onStdout: bytes => { if (!stdout.destroyed) stdout.write(bytes); process.stdout.write(bytes); }, onStderr: bytes => { if (!stderr.destroyed) stderr.write(bytes); process.stderr.write(bytes); } });
-clearTimeout(logKillTimer); ownedPid = null;
-await Promise.all([lifecycle, stdout, stderr].map(stream => new Promise(done => { if (stream.destroyed) done(); else { stream.once("error", done); stream.end(done); } })));
+const append = (name, bytes) => { try { logs.write(name, bytes); } catch (error) { logErrors.push(`${name}: ${error}`); stopForLogError(); } };
+let execution;
+try {
+  execution = await runBounded({ executable: process.execPath, args, cwd: prepared.work, env: { ...process.env, ...binding.environment }, ...limits,
+    onEvent: event => { if (["exit", "closed"].includes(event.type)) { ownedPid = null; clearTimeout(logKillTimer); } else if (["spawn-request", "spawned"].includes(event.type)) ownedPid = event.childPid; if (logErrors.length) stopForLogError(); append("lifecycle", JSON.stringify(event) + "\n"); },
+    onStdout: bytes => append("stdout", bytes), onStderr: bytes => append("stderr", bytes) });
+} finally { clearTimeout(logKillTimer); ownedPid = null; logErrors.push(...logs.close()); }
 execution.logError = logErrors.length ? { errors: logErrors, shutdown: "coordinator log failure, signalled only the owned worker PID; not an external-signal attribution" } : null;
 const logHash = async path => { try { return hash(await regularBytes(review, path)); } catch { return null; } };
 await writeNew(join(review, "process.json"), json({ ...execution, stdoutSha256: await logHash("stdout.log"), stderrSha256: await logHash("stderr.log"), lifecycleSha256: await logHash("lifecycle.jsonl") }));
