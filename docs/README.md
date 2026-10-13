@@ -1,6 +1,11 @@
 # Documentation map
 
-Latest result: the [seven-batch continuation completed successfully](../evals/runs/stage-3-storyboard-length-1/concept-continuation-disposition.md).
+Latest result: [turn 3 now proposes an explicit shorter storyboard](../evals/runs/stage-3-storyboard-length-1/turn-3-disposition.md),
+ten meaningful beats and twelve screen heights. Root [requests the author's
+scope decision](history/2026-10-13-stage-3-short-storyboard-decision-request.md)
+before any turn 4. This is not a normal-range or Stage 3 pass.
+
+Earlier completed result: the [seven-batch continuation completed successfully](../evals/runs/stage-3-storyboard-length-1/concept-continuation-disposition.md).
 All 18 reports and 144 reviewed originals verify, preserving the explicit
 old interruption exception. Concept selection may advance to existing
 candidate-3 turn 3 after commit. Stage 3 and the length correction remain open.

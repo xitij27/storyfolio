@@ -1,0 +1,1436 @@
+{
+  "turn": 3,
+  "taskKind": "full-journey",
+  "requestedStop": 3,
+  "complete": true,
+  "durationMs": 213044,
+  "sessionId": "01a13189-6311-7042-a63f-394a33e47fc6",
+  "usage": {
+    "input_tokens": 2563620,
+    "cached_input_tokens": 2394752,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 23007,
+    "reasoning_output_tokens": 2003
+  },
+  "artifacts": {
+    "before/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "before/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "before/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "before/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "before/files/.agents/skills/storyfolio/engine/app/page.tsx": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+    "before/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "before/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "before/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "before/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "before/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "before/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "before/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "before/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+    "before/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.css": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "before/files/.agents/skills/storyfolio/engine/content/checks.json": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+    "before/files/.agents/skills/storyfolio/engine/content/copy.ts": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+    "before/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "before/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+    "before/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "before/files/.agents/skills/storyfolio/engine/content/faces.ts": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+    "before/files/.agents/skills/storyfolio/engine/content/formations.ts": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+    "before/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "before/files/.agents/skills/storyfolio/engine/content/links.ts": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+    "before/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "before/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "before/files/.agents/skills/storyfolio/engine/content/story.ts": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+    "before/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "before/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "before/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "before/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "before/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "before/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "before/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+    "before/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+    "before/files/.agents/skills/storyfolio/engine/README.md": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "before/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "before/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "before/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "before/files/.agents/skills/storyfolio/references/building.md": "3a7f6f1620bde62e40ea2e8847485a2ebe6afa8435aeed6a426773d5c12b9a73",
+    "before/files/.agents/skills/storyfolio/references/concept.md": "657bf63d38eb587229412775de5c867f5cbed9989e02e30af2e9cd746f4e3f1a",
+    "before/files/.agents/skills/storyfolio/references/reading-a-profile.md": "602ab27f0717880fc59628441c756d47b5e2bc07f503b7430e52d90e561671fe",
+    "before/files/.agents/skills/storyfolio/references/storyboard.md": "6aff31e6dfe227957a28c8f92fbca15b5dcbf772a0e607482c6a6996be21cfc8",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "before/files/.agents/skills/storyfolio/SKILL.md": "f71c179d24a5da42fc25b20bc924db63c4bf7b603f86b3f25349afca683b135c",
+    "before/files/docs/story/concepts.md": "3555283da98b63a450e3dd89f16ce53e1f317fb6ac372a7be792a3620cd8cf23",
+    "before/files/docs/story/decided-for-you.md": "a20670f9ae174019b5a662cfee15af8a73f1eaf611c2e0b843db630b80935b42",
+    "before/files/docs/story/facts.md": "972b1d67bb4cc23a13cd76ac54ffe4ecddc4d416502ccdbbf011f56351d8b5e6",
+    "before/files/docs/story/handover.md": "1801dcbbf1167e5c8ef5b3e77df62b7bcf4ef848cae801be3c0102de2318194d",
+    "before/files/material/asset-notes.md": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+    "before/files/material/cv.md": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+    "before/files/material/external-helper-catalog.json": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+    "before/files/material/lab-notes.md": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+    "before/files/material/runtime-resources.json": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+    "before/files/public/assets/bring-up-fixture.svg": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+    "before/files/public/assets/power-states.svg": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+    "before/files/site/.env.local": "e1f3acb37f0e8123bb63cefcdfedc4ff16c575ee6d4c9e0e9fc022201d5d3692",
+    "before/files/site/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "before/files/site/AGENTS.md": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+    "before/files/site/app/globals.css": "185432be21fd905f48b6940a46562c20bafcf7640e8af01e1fda2818d5c243ca",
+    "before/files/site/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "before/files/site/app/page.tsx": "61541b6a20d3ee932763039f7e7c3da2bfe2e2a1946107faeb9ec55cd547ea38",
+    "before/files/site/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "before/files/site/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "before/files/site/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "before/files/site/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "before/files/site/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "before/files/site/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "before/files/site/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "before/files/site/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "before/files/site/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "before/files/site/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "before/files/site/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "before/files/site/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "before/files/site/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "before/files/site/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "before/files/site/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "before/files/site/components/story/scene.tsx": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+    "before/files/site/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "before/files/site/components/story/story.css": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+    "before/files/site/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "before/files/site/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "before/files/site/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "before/files/site/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "before/files/site/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "before/files/site/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "before/files/site/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "before/files/site/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "before/files/site/content/checks.json": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+    "before/files/site/content/copy.ts": "d8e1d5a24d5316473aa5cd5368b6ec74c992caeebdfe23a87fef6bf1d6e38bcc",
+    "before/files/site/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "before/files/site/content/extras/middle-line.tsx": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+    "before/files/site/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "before/files/site/content/faces.ts": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+    "before/files/site/content/formations.ts": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+    "before/files/site/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "before/files/site/content/links.ts": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb",
+    "before/files/site/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "before/files/site/content/sketches/concepts.tsx": "28c9e51ec0946915ae5c5846f9c4cc9f99a2017d61536d4a4c4b3138138982ff",
+    "before/files/site/content/sketches/index.ts": "5cebdf7fab9041d71416dd8a00803d4c37f139c781b83d5a05efb9dac66b9f95",
+    "before/files/site/content/story.ts": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+    "before/files/site/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "before/files/site/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "before/files/site/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "before/files/site/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "before/files/site/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "before/files/site/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "before/files/site/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "before/files/site/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "before/files/site/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "before/files/site/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "before/files/site/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "before/files/site/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "before/files/site/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "before/files/site/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "before/files/site/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "before/files/site/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "before/files/site/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "before/files/site/lib/story/story.test.ts": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+    "before/files/site/lib/story/story.ts": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+    "before/files/site/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "before/files/site/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "before/files/site/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "before/files/site/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "before/files/site/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "before/files/site/LOCAL-PREVIEW.md": "772c2cf3a9a6304ea29f719d26dd048f9afe0f17e77e1dc53bb850418b03e638",
+    "before/files/site/next.config.ts": "f73ba586a0986354ff1318e9be9a1033b1f1e1684077c2863f64e4a45434a4aa",
+    "before/files/site/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "before/files/site/package.json": "d769164645d830d2a9512685d3212b2b7955327cbea6859fb6937047f9a56a57",
+    "before/files/site/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "before/files/site/public/assets/bring-up-fixture.svg": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+    "before/files/site/public/assets/power-states.svg": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+    "before/files/site/public/plain/face.svg": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+    "before/files/site/public/plain/fan.svg": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+    "before/files/site/README.md": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+    "before/files/site/scripts/check-concepts.mjs": "5919fe3fc3ffb56ee8c83023774bbed8b9e9d0771447b7b31683c91ac61768c6",
+    "before/files/site/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "before/files/site/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "before/files/site/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "before/files/site/scripts/local-only.mjs": "c0aae115bf940205b178b6e0f72e4eaca8d773fd70ab776163be00f67bf34fbd",
+    "before/files/site/scripts/preview-concepts.mjs": "4a18488f6e337c6ef3d9c9b3707aa137e008af21d2f1e502996e149b5fc7e365",
+    "before/files/site/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "before/files/site/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "before/manifest.json": "d7d170b867ef7a73b57d00df164e4012ee0680c0013e2bd6d9a65571e5ffa38d",
+    "gate.json": "ccc88558fa0b11f56e0bb648d1e68791de1e1fd9afbfad5be300762bd102c330",
+    "process.json": "65d97127fd40dd17a38c3501cc6e103f93ec0272d3e23a13354ddb698ae694d9",
+    "prompt.md": "919005327255a873af0f7f26c4693ca700769980dacee55d64a7e3b5a89e3a38",
+    "reply.md": "1d21152b75c42114b4cbd72a434d6ac29885ac0faa14ee9a89a61cdf1e444778",
+    "snapshot/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "snapshot/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/page.tsx": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "snapshot/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.css": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/checks.json": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/copy.ts": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/faces.ts": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/formations.ts": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/links.ts": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/story.ts": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+    "snapshot/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "snapshot/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "snapshot/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "snapshot/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "snapshot/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "snapshot/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+    "snapshot/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+    "snapshot/files/.agents/skills/storyfolio/engine/README.md": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "snapshot/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "snapshot/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "snapshot/files/.agents/skills/storyfolio/references/building.md": "3a7f6f1620bde62e40ea2e8847485a2ebe6afa8435aeed6a426773d5c12b9a73",
+    "snapshot/files/.agents/skills/storyfolio/references/concept.md": "657bf63d38eb587229412775de5c867f5cbed9989e02e30af2e9cd746f4e3f1a",
+    "snapshot/files/.agents/skills/storyfolio/references/reading-a-profile.md": "602ab27f0717880fc59628441c756d47b5e2bc07f503b7430e52d90e561671fe",
+    "snapshot/files/.agents/skills/storyfolio/references/storyboard.md": "6aff31e6dfe227957a28c8f92fbca15b5dcbf772a0e607482c6a6996be21cfc8",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "snapshot/files/.agents/skills/storyfolio/SKILL.md": "f71c179d24a5da42fc25b20bc924db63c4bf7b603f86b3f25349afca683b135c",
+    "snapshot/files/docs/story/concepts.md": "a3186915fbe6f45cb9dfb5cc0f43b164ca04a6e6be8aa4471903322954b9c732",
+    "snapshot/files/docs/story/decided-for-you.md": "f431137ddaa0b87b3038dddc0a7d1e82c19eec618ac276fdf4bf34379e7296da",
+    "snapshot/files/docs/story/facts.md": "699112d98c25a842d50a8d44e1a37e44b6e6f48332932b2e5b65c4535787774e",
+    "snapshot/files/docs/story/handover.md": "8aba7ee7fec2d7348b70160b8c524f40204e8b7c3f3aeb767ab72e142e8ec29d",
+    "snapshot/files/docs/story/storyboard.md": "9f3b7ce192b1e85eb6617ed3d79a0ac66a826ac3d782dbca74d583d3d5118beb",
+    "snapshot/files/material/asset-notes.md": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+    "snapshot/files/material/cv.md": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+    "snapshot/files/material/external-helper-catalog.json": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+    "snapshot/files/material/lab-notes.md": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+    "snapshot/files/material/runtime-resources.json": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+    "snapshot/files/public/assets/bring-up-fixture.svg": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+    "snapshot/files/public/assets/power-states.svg": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+    "snapshot/files/site/.env.local": "e1f3acb37f0e8123bb63cefcdfedc4ff16c575ee6d4c9e0e9fc022201d5d3692",
+    "snapshot/files/site/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "snapshot/files/site/AGENTS.md": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+    "snapshot/files/site/app/globals.css": "185432be21fd905f48b6940a46562c20bafcf7640e8af01e1fda2818d5c243ca",
+    "snapshot/files/site/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "snapshot/files/site/app/page.tsx": "61541b6a20d3ee932763039f7e7c3da2bfe2e2a1946107faeb9ec55cd547ea38",
+    "snapshot/files/site/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "snapshot/files/site/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "snapshot/files/site/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "snapshot/files/site/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "snapshot/files/site/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "snapshot/files/site/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "snapshot/files/site/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "snapshot/files/site/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "snapshot/files/site/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "snapshot/files/site/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "snapshot/files/site/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "snapshot/files/site/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "snapshot/files/site/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "snapshot/files/site/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "snapshot/files/site/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "snapshot/files/site/components/story/scene.tsx": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+    "snapshot/files/site/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "snapshot/files/site/components/story/story.css": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+    "snapshot/files/site/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "snapshot/files/site/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "snapshot/files/site/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "snapshot/files/site/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "snapshot/files/site/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "snapshot/files/site/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "snapshot/files/site/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "snapshot/files/site/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "snapshot/files/site/content/checks.json": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+    "snapshot/files/site/content/copy.ts": "d8e1d5a24d5316473aa5cd5368b6ec74c992caeebdfe23a87fef6bf1d6e38bcc",
+    "snapshot/files/site/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "snapshot/files/site/content/extras/middle-line.tsx": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+    "snapshot/files/site/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "snapshot/files/site/content/faces.ts": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+    "snapshot/files/site/content/formations.ts": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+    "snapshot/files/site/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "snapshot/files/site/content/links.ts": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb",
+    "snapshot/files/site/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "snapshot/files/site/content/sketches/concepts.tsx": "28c9e51ec0946915ae5c5846f9c4cc9f99a2017d61536d4a4c4b3138138982ff",
+    "snapshot/files/site/content/sketches/index.ts": "5cebdf7fab9041d71416dd8a00803d4c37f139c781b83d5a05efb9dac66b9f95",
+    "snapshot/files/site/content/story.ts": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+    "snapshot/files/site/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "snapshot/files/site/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "snapshot/files/site/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "snapshot/files/site/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "snapshot/files/site/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "snapshot/files/site/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "snapshot/files/site/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "snapshot/files/site/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "snapshot/files/site/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "snapshot/files/site/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "snapshot/files/site/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "snapshot/files/site/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "snapshot/files/site/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "snapshot/files/site/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "snapshot/files/site/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "snapshot/files/site/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "snapshot/files/site/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "snapshot/files/site/lib/story/story.test.ts": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+    "snapshot/files/site/lib/story/story.ts": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+    "snapshot/files/site/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "snapshot/files/site/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "snapshot/files/site/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "snapshot/files/site/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "snapshot/files/site/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "snapshot/files/site/LOCAL-PREVIEW.md": "772c2cf3a9a6304ea29f719d26dd048f9afe0f17e77e1dc53bb850418b03e638",
+    "snapshot/files/site/next.config.ts": "f73ba586a0986354ff1318e9be9a1033b1f1e1684077c2863f64e4a45434a4aa",
+    "snapshot/files/site/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "snapshot/files/site/package.json": "d769164645d830d2a9512685d3212b2b7955327cbea6859fb6937047f9a56a57",
+    "snapshot/files/site/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "snapshot/files/site/public/assets/bring-up-fixture.svg": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+    "snapshot/files/site/public/assets/power-states.svg": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+    "snapshot/files/site/public/plain/face.svg": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+    "snapshot/files/site/public/plain/fan.svg": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+    "snapshot/files/site/README.md": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+    "snapshot/files/site/scripts/check-concepts.mjs": "5919fe3fc3ffb56ee8c83023774bbed8b9e9d0771447b7b31683c91ac61768c6",
+    "snapshot/files/site/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "snapshot/files/site/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "snapshot/files/site/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "snapshot/files/site/scripts/local-only.mjs": "c0aae115bf940205b178b6e0f72e4eaca8d773fd70ab776163be00f67bf34fbd",
+    "snapshot/files/site/scripts/preview-concepts.mjs": "4a18488f6e337c6ef3d9c9b3707aa137e008af21d2f1e502996e149b5fc7e365",
+    "snapshot/files/site/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "snapshot/files/site/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "snapshot/manifest.json": "1f123eb1d1eec5c29543127357a04059896f13607229b6712ff78a197972eafd",
+    "started.json": "d4478731853e6bb914ea835d4943bdec9355b0cc33a7c8acfa5a935d33afb08a",
+    "stderr.log": "d6bc3483d2e6b417ce617bfeed45a495bdd5ea551cf3f49120efee0d2af8a031",
+    "stream.jsonl": "df10bf95f9e97e805e6c09a650b860526938be0a32d1e85b2324495b3f3aa837"
+  },
+  "completionMeaning": "The actor turn completed. This is not a passed build, reached stop or author approval.",
+  "usageAggregation": "Raw turn.completed usage is preserved. Between turns, reported input_tokens plus output_tokens are summed across actor turns. If configured, maxUncachedTokens separately bounds input_tokens minus cached_input_tokens plus output_tokens; cached input must be a nonnegative safe integer no greater than input. Resumed counters may overlap. No dollar estimate or hard in-flight token cap is inferred.",
+  "commands": [
+    {
+      "command": "/bin/bash -lc 'cat docs/story/handover.md docs/story/facts.md .agents/skills/storyfolio/references/storyboard.md'",
+      "output": "# Handover\n\n## Current stop\nStop 1: profile read, fact questions pending. No concept chosen, no storyboard approved, no portfolio scaffolded. User requested plan and working local site, guided decisions, tangible work-derived 3D object, no paper/sheets/card collection, no publishing.\n\n## Read\nListed material files first. Read cv.md, lab-notes.md, asset-notes.md, runtime-resources.json and external-helper-catalog.json. No private correspondence/contact exports/participant records present in listed material; none read. Read and inspected two local teaching SVGs. Recorded source claims and unresolved questions in facts.md.\n\n## Runtime checks performed in this session\n- `node --version`: v22.22.1, meets engine requirement >=22.18.\n- Native TypeScript probe: wrote temporary typed .ts file, imported with Node, printed 42, deleted probe. Passed.\n- `git --version`: 2.53.0. `git status --short` failed: supplied .git is not a usable repository. No commits possible in current setup without initialization.\n- Browser: no browser connector tools exposed. Initial candidate package lacked index.mjs; actual Playwright Core package found at /tmp/storyfolio-engine-acceptance-20261011/node_modules/playwright-core/index.mjs. Launched cached Chromium with PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache and LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu. Created own neutral loopback HTTP page, opened it, checked title/heading/body, saved /tmp/storyfolio-neutral-check.png and visually inspected via view_image. Passed; browser and neutral server stopped. This is runtime verification, not an application check.\n- Runtime resource file states external downloads unavailable (loopback-only proxy); dependency cache not yet tested for app installation.\n\n## Skills\nAdvertised/enabled: storyfolio only. Locally listed .agents contains storyfolio SKILL.md only. External helper catalog dated 2026-10-12 describes pinned remote sources and source-checked install routes, not local installation or enabled skill access. No helper recommended or installed: bundled engine and available browser are sufficient at present.\n\n## Next\nGet stop 1 factual answers and write each beside source fact. Then read concept reference and create three runnable concept sketches for requested build. Continue skill stops with actual user decisions recorded. Nothing published.\n\n# Continuation — stop 2\n\nStop 1 answers received and written to facts.md (user-confirmed corrections supersede source ambiguities). User declined additional skills and instructed omission for unconfirmed facts. Required final deliverables: single scroll story, Mosslink-only project page, corrected printable downloadable HTML CV, email link, English ordinary navigation, local share preview/icon/useful 404. No employer/dates/current-title assertions, no radio resolution, no pilot/launch/certification, no third-party diagram, no unavailable photos/traces, no external downloads/purchases. No publishing authorized.\n\nScaffolded site/ using bundled engine. Offline npm ci with supplied cache succeeded (392 dependencies); no downloads. Local two SVG originals copied unchanged; not yet used as evidence. docs/story/concepts.md contains three premises-checked directions and planned chapter forms, recommendation fixture; selection pending. Implemented /sketch/fixture, /sketch/enclosure, /sketch/probe, each with three scroll beats and custom tangible geometry. Root is comparison index; this is not the final portfolio.\n\nChecks: typecheck and lint passed; all 129 engine tests passed. Focused browser checks opened all three sketches at desktop 1440x900 and phone 390x844, captured opening/middle/ending, each WebGL on, no page errors, no horizontal overflow. Reviewed all 18 screenshots in three montage images under site/checks/concepts/. Removed Next dev indicator because it obscured links in phone captures; rerunning focused check. Final production acceptance matrix remains for completed chosen portfolio; none claimed yet.\n\nRuntime detail: separately spawned tool command servers are not reachable from another command's network context. Use scripts/preview-concepts.mjs to start/check/stop within one command. Default Next dev version freshness fetch to npm registry was blocked; scripts/local-only.mjs rejects non-loopback fetch before I/O, dev script preloads it. .env.local disables telemetry and automatic lockfile patch. Browser check requires PLAYWRIGHT_BROWSERS_PATH and LD_LIBRARY_PATH noted above. npm run dev locally binds 127.0.0.1, default port 3000.\n\nNext stop: user selects fixture, enclosure or probe (or explicitly asks us to choose). Record selection in concepts.md, then read storyboard reference and present whole page script for approval before final portfolio implementation. Retain all requested supporting routes/assets in that storyboard. Final look and wording choices are later stops. Nothing published.\nFocused browser recheck after hiding dev indicator passed all six concept/viewport cases with no page errors or horizontal overflow and WebGL on. Updated ending phone captures inspected; indicator no longer obscures links. Temporary preview server stopped. User can start continuous local preview with cd site && npm run dev; instructions in site/LOCAL-PREVIEW.md.\n# Facts — stop 1, awaiting Ada's answers\n\nSources: material/cv.md (CV), material/lab-notes.md (notes), material/asset-notes.md (asset terms). User requests embedded firmware portfolio, one scroll story with tangible work-derived 3D object, local only, with guided decisions.\n\n| Fact as supplied | Source | Status / question |\n|---|---|---|\n| Ada Mensah; embedded systems engineer, Reedglass Sensing, 2021–present | CV | Confirm current role, official title and dates. |\n| ada@example.com | CV | Confirm appropriate contact for local site. |\n| Seeking embedded firmware roles involving physical devices | CV and user | Established target; ask audience and end action. |\n| Mosslink is an environmental sensor | CV | Ask whether personal, employer or team project; actual use unknown. |\n| Owned low-power sensor design, bring-up and verification | CV | Ask personal firmware contribution, collaborators and scope. |\n| C, oscilloscopes, logic analysers, board bring-up | CV | Listed tools. |\n| Two-year battery life | CV | Unconfirmed: notes describe spreadsheet using measured sleep/transmit current and assumed reporting interval. Longest continuous notebook run is 72 hours. Ask model assumptions, ownership and permitted wording; do not state demonstrated two-year runtime. |\n| Forty-unit pilot | CV | Unconfirmed: notes say forty engineering samples assembled; six in bench log. Ask real pilot/deployment versus assembled samples and personal part; do not claim deployed pilot. |\n| Qualification: emissions pass | CV | Unconfirmed: notes say preliminary emissions report. Ask scope/status and ownership; do not claim final qualification. |\n| A state transition left radio awake after failed transmission; current trace made it visible | Notes | Ask what Ada personally diagnosed/changed/verified and what outcome may be stated. No supplied measured trace. |\n| Uses state tables, timing diagrams, bench checklists | Notes | Established everyday artifacts; ask other relevant tools/rituals. |\n| No old portfolio | Notes | No existing-site migration question needed. |\n| Described project photo includes PCB, test fixture and colleague's circuit diagram | Notes | Not supplied; ownership/permission unknown. Exclude until addressed. |\n| Two local SVG teaching drawings, power-states.svg and bring-up-fixture.svg | Asset terms; files inspected | Coordinator authored 11 October 2026, MIT; may display/link/adapt/use as textures. Explanatory only, no real device, actual states, timing, measured current, wiring or reports. Preserve originals; record derivative provenance, changes, terms and accessible description. |\n| No external image, model or font; no actual trace, spreadsheet, notebook or qualification report supplied | Asset terms and file list | Availability established. Permission for a described artifact does not supply it. |\n\n## Gaps\n- Precise personal firmware actions, collaborators, and confirmed debugging outcome.\n- Battery modelling assumptions and exact reporting interval; pilot/deployment status; emissions scope.\n- Audience, end action, display restrictions and formative learning.\n- Real project evidence unavailable; only explanatory drawings supplied.\n\n## Disagreements\n- CV's two-year battery life versus model and 72-hour longest run in notes.\n- CV's forty-unit pilot versus forty assembled engineering samples and six bench-log units.\n- CV's emissions pass versus preliminary report in notes.\n\n## To confirm\n1. Official current title/dates and personal firmware contribution, including radio bug diagnosis, change, verification, outcome and collaborators.\n2. Battery estimate assumptions, measurement/model distinction and ownership; whether figures should be used.\n3. Forty samples versus actual pilot use; what six bench-log units represent; Ada's contribution.\n4. Emissions preliminary/final status, scope and Ada's role.\n5. Audience and end action/contact address.\n6. What may be shared about Reedglass/Mosslink; restrictions and photo/diagram ownership if ever used.\n7. Everyday working artifacts/rituals beyond the listed ones.\n8. What Ada learned from: incident, person, book or experience.\n\nNo user answers received yet. Unanswered claims remain excluded from future page copy.\n\n# User-confirmed corrections — stop 1 completed\n\nSource for every item below: user's second substantive message, 12 October 2026. These answers supersede ambiguous CV wording above.\n\n- Public name: Ada Mensah. Public project name: Mosslink. Omit employer and employment dates from site and downloadable CV; current details/title not confirmed. No claim of current employment.\n- Personal work: wrote firmware, scheduled power states, built bring-up fixture. Colleague designed PCB and analogue front end. Do not say Ada owned sensor hardware design.\n- Battery: two-year projection from bench current readings and assumed reporting cycle; longest run 72 hours. No field endurance/weather testing supports two-year claim. Exact reporting interval unconfirmed and omitted.\n- Samples: forty engineering samples assembled; six bench tested. None sent to customers. No field pilot or launch. Do not imply Ada alone assembled or tested all samples.\n- Emissions: one preliminary check passed; full qualification programme unfinished. No certified/qualified claim or personal ownership of emissions result.\n- Radio problem: radio remained awake after failed transmission, seen in current trace. No cause, fix, timing or later resolution confirmed. No trace available.\n- Own fixture photograph and simplified power-state diagram permitted for public use. Photograph unavailable. Colleague's circuit diagram has no permission; exclude. The supplied two SVGs may serve as labelled explanations only, never photographs, original wiring, firmware, measured traces or results. Sleep/Measure/Transmit is a teaching sequence with no durations or current values.\n- Audience: firmware hiring manager. Desired understanding: how Ada connects code to a measurable signal.\n- Daily artifacts: state table, timing diagram, current trace; notes also list bench checklists. Bring-up means checking a new board's basic operation.\n- Expressed lesson: a firmware decision needs a physical observation; estimates and observed runs support different claims. This is a principle, not an all-problems-resolved/all-devices-tested claim.\n- End actions: email link to public example contact ada@example.com and download corrected printable HTML CV. No PDF invention, mail sending or delivery-test claim.\n- Mosslink only project; needs its own project page and main-story presence.\n- English, ordinary navigation, share preview, icon, useful missing-page page. No testimonials/blog/chat/translation/contact form. Legal/hosting-jurisdiction details deferred until publishing; no legal-compliance claim.\n- Local system fonts, supplied drawings or own explanatory geometry. No external purchase/download. No additional skill installation; user declined.\n- No old site or testimonials. Keep everything local; user decides publishing.\n\n## Remaining omissions, not blockers\nEmployment/title/dates, exact reporting cycle, radio cause/fix/timing/outcome, individual ownership of team sample/emissions results: unconfirmed and excluded. No extra facts requested because user explicitly instructed omission over guessing.\n# The storyboard\n\nThe third stop: the script of the whole page, which the person says yes to. Write it to `docs/story/storyboard.md`.\n\nA plan covers what its asker thought to ask for. Most people ask for the idea and for what moves. Nobody asks what the site does on a phone, or without the 3D, or what a shared link shows, and a script that leaves those out is half a script. So this one has a place for each, and an empty place shows.\n\n## The chapters\n\nA row to a chapter:\n\n| Chapter | Its name in the form | The role it holds | What it tells, in a few words | What the pieces do | What you can touch |\n|---|---|---|---|---|---|\n\n## The beats\n\nUnder each chapter, a row to a beat. A beat is one settled state of the scene and one block of text.\n\nA full story normally has twelve to twenty-two meaningful beats. Add up their screen heights, state the total, and trim repetition. Do not pad or invent facts to reach the range. If the confirmed material calls for a shorter story, propose that exception explicitly for the person's approval.\n\n| Beat | Screens | How the pieces stand | What is on their faces | What the chapter adds | What its caption stands on |\n|---|---|---|---|---|---|\n\n- **Screens:** how much scroll the beat takes. One, or more where the scroll works something.\n- **How the pieces stand:** a stack, a fan, a ring, a row, a wall, or what the chapter needs. The same pieces in every beat.\n- **What is on their faces:** the person's real pictures and words. Name the picture.\n- **What the chapter adds:** anything in the scene besides the pieces. Often nothing.\n- **What its caption stands on:** a working title of a few words, and the lines of the fact sheet the caption will be written from. Not the caption.\n\n**Write no captions yet.** The words are written at a later stop, where the person chooses them. A sentence written now, to make the script read well, is where a detail gets in that nobody told you: a hall that was \"standing empty\", a wheel that is \"true again\". So a beat names its facts and stops there. Where a beat wants something the fact sheet does not hold, such as what the work taught them or what was wrong before they came, put the question in its place.\n\nFor the close, state in planning notes what answers the opening question and which facts support that answer. Its final wording still waits, but its meaning must be decided. A contact link, a job goal or a promise to write an answer later does not supply that meaning.\n\n## Someone with thirty seconds\n\nSay how a visitor who does not scroll gets the name, what the person does, one proof of it, and how to reach them. The first screen carries the first three. A rail jumps to any chapter, and one link skips to the close.\n\nSpecify what the opening tells someone outside the field about the person's work, in ordinary words supported by the fact sheet. Explain any unfamiliar title or technical term there. This meaning is part of the plan even while the final captions wait.\n\n## Without the scene\n\nSay what a visitor gets in each case. The text is ordinary HTML over the scene, so all of it is there in every row. Say what stands in for the pieces.\n\n| Where | What the visitor gets |\n|---|---|\n| On a phone | |\n| With reduced motion | |\n| With no WebGL | |\n| With no JavaScript | |\n\n## The look and the type\n\nBoth come from the object's material: plates are ceramic on linen, a status page is dark glass, a paper is white with dark ink. Name two or three looks, each as its ground, its ink, one accent, and the surface of the pieces. The person picks by scrolling, once it is built.\n\nTwo typefaces: one for the text, and one for what is printed on the pieces, which belongs to the form.\n\n## Everything else the site needs\n\nMark every row build, later or never, and say who decided.\n\n| | Build, later or never | Who decided |\n|---|---|---|\n| The way round the page | | |\n| A page for each project | | |\n| Every project listed | | |\n| How to reach them, and a CV | | |\n| What others say | | |\n| Languages | | |\n| What a shared link shows, and the site's icon | | |\n| The page for an address that is not there | | |\n| A blog | | |\n| A chat | | |\n| A legal notice, where their country asks for one | | |\n\n## What you ask for\n\nA yes to the script, or what to change. Give the list of what you decided for them with it.\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('docs/story/concepts.md');s=p.read_text().replace('Selection: pending user choice. No full storyboard or final appearance committed.', '''Selection: **Concept 1 — The bring-up fixture**, chosen 13 October 2026 under the user's instruction to choose the recommended concept.\n\nWhy: Ada personally built the fixture. A bench checklist lets a firmware hiring manager inspect the relationship between firmware responsibility, board access, physical observation and evidence limits. The symbolic enclosure and probe are less directly tied to something Ada made. The fixture remains explanatory geometry rather than a reconstruction of real hardware.\n\nStoryboard is now in storyboard.md for approval. Final appearance and wording remain later choices.''').replace('# Concept studies — awaiting selection','# Concept studies — fixture selected');p.write_text(s)\np=Path('docs/story/facts.md');s=p.read_text().replace('# Facts — stop 1, awaiting Ada\\\\'s answers','# Facts — source reading and confirmed corrections').replace('No user answers received yet. Unanswered claims remain excluded from future page copy.','The initial questions above are a historical record. User-confirmed corrections below supersede them; remaining unknowns are omissions, not blockers.');s+='''\n\n## Stable references for storyboard\n\nAll user-confirmed references below refer to the corrections above and the user's messages. Source-only F10 is separately identified.\n\n- F1: public Ada Mensah/Mosslink; firmware-role target; audience is firmware hiring manager.\n- F2: Ada wrote firmware, scheduled power states and built bring-up fixture.\n- F3: colleague designed PCB and analogue front end; Ada does not claim hardware-design ownership.\n- F4: state table, timing diagram, current trace and bench checklists; bring-up checks a new board's basic operation.\n- F5: permitted local teaching drawings only; Sleep/Measure/Transmit illustrative, no actual states/durations/current values, original wiring or measured evidence; no fixture photo/trace available.\n- F6: radio awake after failed transmission observed in current trace; no cause/fix/timing/later outcome confirmed.\n- F7: two-year projection from bench currents/assumed cycle; longest run 72 hours; no supporting field endurance/weather testing.\n- F8: forty engineering samples assembled, six bench tested, none to customers, no field pilot/launch.\n- F9: one preliminary emissions check passed; full qualification unfinished, no certification/qualification claim.\n- F10: C, oscilloscopes and logic analysers listed in material/cv.md; user authorizes corrected CV from confirmed facts and omission of unknown facts. Tools were supplied as source facts with no contradiction; include as listed skills, without proficiency ranking or years.\n- F11: lesson: a firmware decision needs a physical observation; estimates and observed runs support different claims.\n- F12: public example email link, printable downloadable HTML CV, Mosslink-only project page, English, ordinary navigation, share preview/icon/useful missing page.\n- F13: no employer/dates/current employment assertion, testimonials/blog/chat/translation/form, external purchase/download/skill installation or publishing; legal/hosting details deferred.\n''';p.write_text(s)\nPY\ncat > docs/story/storyboard.md <<'EOF'\n# Storyboard — The bring-up fixture\n\nStatus: proposed 13 October 2026; awaiting user's approval. Concept 1 selected by the user authorizing the recommendation. Appearance and final wording remain later choices. No new skill or remote asset is needed.\n\n## Question, form and answer\n\nOpening question: **How do you connect firmware to a physical observation?**\n\nPremises: Ada wrote Mosslink firmware, scheduled power states and built its bring-up fixture (F2). Ada wants a firmware hiring manager to understand the connection between code and a measurable signal (F1/F11).\n\nForm: a bench checklist. Purpose → Setup → Exercise → Observe → Record limits → Handover. This is a narrative order, not a claim about Mosslink's historical test chronology or a reproduction of Ada's actual checklist.\n\nObject: one explanatory bring-up fixture made of six substantial contact modules, with bodies, metallic pins and labelled inset faces. The same six modules persist throughout and reunite at the close. They stand for conceptual relationships; six does not stand for six tested samples, actual contact count or recovered hardware construction. No paper, sheets or card collection.\n\nClosing meaning: connect a firmware decision to a physical observation through bench access, then limit the claim to the evidence. Ada's firmware/fixture work establishes the personal contribution. The radio-awake note establishes an observation without a confirmed explanation. The projection and 72-hour run establish that different evidence supports different claims (F2/F6/F7/F11). The close does not imply successful diagnosis, a fix, or completed testing.\n\n## Chapters\n\n| Chapter | Name in the form | Role | What it tells | What the pieces do | What you can touch |\n|---|---|---|---|---|---|\n| 1 | Purpose | Opening / who | Ada, Mosslink, firmware and fixture work; central question | Form the complete contact fixture from the start; gently settle with scroll | Email, CV view/download, Mosslink page, skip to Handover |\n| 2 | Setup | Who / contribution | Ada's firmware, power scheduling and fixture; colleague's PCB/analogue responsibility | Open into two groups, distinguishing responsibilities; inset labels remain on solid modules | Link to Mosslink contribution detail |\n| 3 | Exercise | How | Working documents, meaning of bring-up, permitted teaching cycle | Arrange paired modules along a conceptual command/access/observation path, then a three-pair loop | Open either local explanatory SVG; project link |\n| 4 | Observe | What | Radio-awake behavior seen after failed transmission; no confirmed cause or resolution | Separate observation from the modules representing explanation/claim; no animated waveform | Mosslink observation detail |\n| 5 | Record limits | Evidence / outcomes | Battery projection vs run; samples vs use; preliminary check vs qualification | Split into matched groups for evidence categories, with bounded labels; no quantitative scaling | Project evidence table; CV |\n| 6 | Handover | Close | Answer to opening question and next action for a hiring manager | Reunite as a whole fixture, keeping the code/access/observation/claim relationships visible | Email, HTML CV view/download, Mosslink page, return to Purpose |\n\nNo employment-history chapter, additional project or testimonial section: the confirmed material does not support them.\n\n## Beats — no final captions yet\n\nProposed exception: **10 meaningful beats, totalling 12 screen heights**. The engine's usual full-story range is 12–22 beats, but this material has one project and limited publishable evidence. Ten avoids repeating claims or adding unsupported chronology. Approval of this storyboard includes this shorter structure.\n\nEvery face label below is explanatory navigation, not a claim of a real component or firmware state. Real figures appear in ordinary HTML with their qualifications; no count, spacing, pin glow, travel speed or shape measures real time/current/sample quantity.\n\n| Beat | Screens | How the pieces stand | What is on their faces | What the chapter adds | Working title / fact references for later caption |\n|---|---:|---|---|---|---|\n| purpose.fixture | 1.5 | Complete two-row fixture, already recognisable; modest settling during scroll | CODE / STATE / BOARD / ACCESS / SIGNAL / CLAIM | Nothing | Firmware at the bench — F1/F2/F4/F11; name, work and question |\n| setup.contribution | 1 | Three foreground modules with the other three still connected behind | FIRMWARE / SCHEDULING / FIXTURE; background relationship labels | Nothing | Ada's contribution — F2 |\n| setup.boundary | 1 | Two groups with a clear gap; all modules remain visible | ADA / FIRMWARE / FIXTURE; COLLEAGUE / PCB / ANALOGUE | Nothing | Responsibility boundary — F2/F3; PCB explained as printed circuit board |\n| exercise.documents | 1.25 | Three paired solid modules follow conceptual command → access → observation order | STATE TABLE / TIMING / COMMAND / ACCESS / TRACE / OBSERVE | Local bring-up SVG in a labelled HTML figure, available without scene | From command to bench — F4/F5; meaning of bring-up and working documents |\n| exercise.cycle | 1.25 | Three pairs form a loop, without a timer or moving pulse | SLEEP / TEACHING / MEASURE / TEACHING / TRANSMIT / TEACHING | Local power-states SVG in labelled HTML figure | Illustrative scheduling — F2/F5; teaching sequence only, no actual firmware/current/time |\n| observe.radio | 1.5 | One pair comes forward as observation; remaining modules separated as context/claim boundaries | RADIO / AWAKE; OBSERVATION / TRACE NOTE / CAUSE UNKNOWN / OUTCOME UNKNOWN | Nothing; no fabricated trace image or waveform | Radio-awake observation — F6; after failed transmission, no confirmed cause/fix/timing/resolution |\n| limits.battery | 1.25 | Two distinct groups represent projection and observed-run evidence; neither larger than the other | PROJECTED / BENCH CURRENT / ASSUMED CYCLE; OBSERVED RUN / 72 HOURS / LIMITS | Nothing | Battery evidence — F7; two-year projection, 72-hour run, no supporting field/weather test |\n| limits.samples | 1 | Fixture stays joined, with two groups highlighted by face labels rather than module count | ASSEMBLED / 40 SAMPLES / ENGINEERING; BENCH TESTED / 6 SAMPLES / NO CUSTOMERS | Nothing | Samples and use — F8; no pilot/launch, no individual total-testing claim |\n| limits.emissions | 1 | Small separation between preliminary check and programme status, without pass/fail spectacle | PRELIMINARY / EMISSIONS / CHECK PASSED; PROGRAMME / UNFINISHED / STATUS | Nothing | Qualification boundary — F9; no certified/qualified claim |\n| handover.whole | 1.25 | Whole fixture reunited at rest, with no ongoing idle motion at the conclusion | CODE / STATE / BOARD / ACCESS / SIGNAL / CLAIM | Ordinary HTML contact/download links | Claims follow evidence — F2/F6/F7/F11/F12; explicit answer plus actions |\n\nTotal: 1.5 + 1 + 1 + 1.25 + 1.25 + 1.5 + 1.25 + 1 + 1 + 1.25 = **12 screens**.\n\n## Someone with thirty seconds\n\nThe opening gives Ada's name, the firmware-role focus, Mosslink and her specific firmware/power-scheduling/fixture contribution. Explain firmware as code that controls a physical device, and bring-up as checking a new board's basic operation. This is supported by F1/F2/F4, without asserting a current job title.\n\nThe first screen includes a compact evidence line linking the two-year projection to its bench-current basis and identifying the longest run as 72 hours, with access to the full limitations (F7). This supplies concrete project evidence with its limits; do not suggest a measured trace or report is publicly available.\n\nEmail, CV view/download and Mosslink details are reachable immediately. A visible ordinary chapter navigation jumps to each of the six chapters; a skip link reaches Handover. Navigation remains available with the canvas disabled. Final opening wording is not decided here.\n\n## Without the scene\n\nAll factual claims, headings, evidence qualifications and links live in ordinary server-rendered HTML. The canvas is explanatory and takes no pointer events. No factual claim exists only on a 3D face.\n\n| Where | What the visitor gets |\n|---|---|\n| Phone | Same chapter/beat order, centred fixture above the caption, sized to available space; ordinary compact navigation and visible links. At very short heights, prioritise complete text and static explanation over squeezing an unreadable scene. No horizontal scrolling. |\n| Reduced motion | Cut between settled poses; no interpolation, sway, idle movement or animated caption entrances. All chapters and links remain available. |\n| No WebGL / failed scene | A compact HTML reading layout, figures for the two supplied explanations and a local static fixture illustration with an explicit conceptual-geometry label. No blank canvas gap. |\n| No JavaScript | Same full HTML story, navigation, email, project and HTML CV links; all figures and static explanation remain readable. CV download uses a normal same-origin anchor; printing uses browser Print. |\n\nThe static fixture illustration will be an original explanatory SVG derived from our geometry, with a useful accessible description. It is not a fixture photograph. Preserve both supplied SVG originals; retain their MIT/provenance details and record any adaptations.\n\n## Appearance studies after storyboard approval\n\nThe user will scroll the opening, observation and closing spine in these three looks and choose one. These are proposals, not a selected final look.\n\n| Look | Ground | Ink | Accent | Fixture material |\n|---|---|---|---|---|\n| Warm bench | Warm off-white #f2f0e9 | Charcoal #202932 | Oxide #8d471e | Matte deep-green bodies, brass pins, cream inset labels |\n| Instrument dark | Deep blue-black #111c22 | Off-white #f3eee2 | Amber #efb475 | Graphite bodies, muted metal pins, light engraved labels |\n| Clean lab | Pale grey #e8eeed | Deep teal #163831 | Copper #a35d38 | Grey-green bodies, brushed-metal pins, dark inset labels |\n\nTwo local system-font stacks: system-ui for readable page text, ui-monospace for checklist labels and module faces. No external font/asset service. Use spacing and typographic weight for hierarchy; no extra font purchase/download.\n\n## Everything else the site needs\n\n| Item | Build, later or never | Who decided / scope |\n|---|---|---|\n| Way round the page | Build | User requests ordinary navigation; assistant proposes Home, Mosslink, CV and Email plus six chapter anchors/skip link |\n| Page for each project | Build | User; only /projects/mosslink |\n| Every project listed | Build | User; Mosslink is the only project, no padded grid |\n| Contact and CV | Build | User; mailto:ada@example.com, /cv for reading/printing, downloadable standalone /downloads/ada-mensah-cv.html |\n| What others say | Never | User; no testimonials or invented quotes |\n| Languages | Build English only | User; no translation |\n| Share preview and icon | Build | User; locally generated raster preview and SVG icon, page-specific titles/descriptions |\n| Missing-page page | Build | User; useful explanation plus Home, Mosslink and CV links |\n| Blog | Never | User |\n| Chat | Never | User |\n| Contact form | Never | User |\n| Legal notice / hosting jurisdiction | Later | User; wait for publication decision, no compliance claim |\n| Publishing / public URL | Later | User; keep local until explicit instruction |\n| External assets / helper skills | Never for this build | User; use available engine, local fonts/drawings and own geometry |\n\n## Supporting-page contents\n\n### /projects/mosslink\n\nOrdinary HTML case study, navigable independently of the scroll story. Sections:\n\n1. Project: Mosslink environmental sensor; Ada's firmware-role interest (F1, CV source for project description).\n2. Contribution: firmware, power scheduling, fixture; explicit colleague PCB/analogue division (F2/F3).\n3. Working method: state table, timing diagram, current trace and bench checklist; definition of bring-up (F4).\n4. Two local explanatory figures with accurate accessible descriptions, source/provenance and limits (F5). No unavailable photo/trace/diagram placeholders implying evidence exists.\n5. Radio-awake observation after failed transmission, with unknown cause/fix/timing/later outcome stated (F6).\n6. Evidence table: projection versus run, samples versus bench tests, preliminary emissions versus unfinished qualification (F7/F8/F9). Team quantities remain project-level statements.\n7. Lesson and links back to the corresponding main-story chapters, email and CV (F11/F12).\n\n### /cv and standalone downloadable HTML\n\nSame corrected content in both: Ada Mensah; seeking embedded firmware roles involving physical devices; public example email; Mosslink contribution and collaboration boundary; listed tools C, oscilloscopes, logic analysers and working documents; evidence/status with all qualifications preserved. No employer, dates, asserted current role, hardware ownership, launch/pilot/certification, photograph, extra project, award or testimonial.\n\nDownload is a complete self-contained HTML file with inline print CSS and system fonts, readable offline. Print layout keeps headings with related text, removes navigation and preserves evidence qualifications. /cv includes View/Download guidance and ordinary download link. No PDF or email delivery claim.\n\n### Share preview, icon and missing page\n\nShare preview: local 1200×630 PNG with Ada's name, embedded firmware role focus, Mosslink and a conceptual fixture illustration; no metrics without their qualifiers. Icon: simple original contact-pin/fixture mark. Both recorded as original explanatory assets. Set local metadata references and titles/descriptions; do not invent a public canonical URL. External crawler/public share behavior cannot be verified until publication; validate image/metadata locally.\n\nMissing page: clear missing-address message, normal links to Home, Mosslink and CV, preserving site identity. Do not send a visitor to an external page or expose framework diagnostics.\n\n## Decisions made for the user\n\n- Choose fixture under explicit instruction to use recommendation; record why in concepts.md.\n- Keep six tangible modules and a bench-checklist structure; no literal construction/count inference.\n- Propose 10 beats / 12 screen heights because one project does not justify padding; ask approval as part of this storyboard.\n- Use chapter order as a reading structure, not a project chronology.\n- Preserve meaning and links in HTML; supply static explanatory geometry for fallback.\n- Use system-ui and ui-monospace, three material-based appearance studies and a later look choice.\n- Use one project route and matching printable/viewable plus standalone downloadable HTML CV.\n- Use locally generated share/icon assets; defer public canonical URL, hosting and legal decisions.\n\n## Approval needed\n\nApprove this script, including the shorter 10-beat structure, or specify changes. Approval permits the opening/observation/ending spine in three looks. The user chooses a look after reviewing the runnable spine, then chooses final wording after the remaining chapters are built. Final site acceptance follows actual review and full browser/fallback checks.\nEOF\ncat >> docs/story/decided-for-you.md <<'EOF'\n\n## Storyboard decisions — 13 October 2026\n\n- Selected the bring-up fixture under the user's instruction to choose our recommendation. Reason: Ada built the fixture; code/access/observation/evidence limits are direct to her work. Change before storyboard approval by choosing another concept.\n- Proposed a 10-beat, 12-screen story across six checklist chapters. Reason: one project and limited available evidence do not justify 12–22 beats; shorter structure requires storyboard approval. Change screen heights/count in storyboard before implementation.\n- Proposed system-ui page type and ui-monospace labels, ordinary chapter/site links, one standalone project route and matched readable/downloadable printable HTML CV. Reason: local availability, access without scene and user's scope. Paths and type are adjustable without altering facts.\n- Proposed own static fixture SVG, local share-preview PNG and icon, with accurate explanatory labels/provenance. Reason: no actual photo or trace is available. Change assets only within user's local-asset authorization.\n- Appearance studies will be Warm bench, Instrument dark and Clean lab; none is selected. Final wording waits for its later user choice.\nEOF\npython3 - <<'PY'\nfrom pathlib import Path\np=Path('docs/story/handover.md');s=p.read_text();p.write_text('''# Current handover — 13 October 2026\n\nStop 3: storyboard proposed, awaiting approval. User explicitly authorized choosing the recommended alternative; selected Concept 1, the bring-up fixture, and recorded selection/reason in concepts.md. User again declined additional skills and required local-only work.\n\nCreated docs/story/storyboard.md: six bench-checklist chapters, proposed shorter 10-beat / 12-screen structure, opening/closing meaning, beat formations and fact references, accessibility/fallback behavior, three later appearance studies, complete supporting routes/assets scope. No final captions written. Added stable factual reference IDs F1–F13 in facts.md. All earlier factual limits remain in force.\n\nNo new site code in this turn: current implementation remains the three inspected concept sketches. Next: obtain storyboard approval (including short-story exception), record it, read building.md and build opening/observation/closing spine for user to choose among three looks. Then remaining chapters and wording choice; finally required checks and actual user review. No publishing, installation or external assets authorized.\n\nThe content of storyboard.md covers requested Mosslink page, printable readable/downloadable standalone HTML CV, email link, ordinary navigation, metadata/share preview/icon and useful 404. Employer/dates and unsupported outcomes remain excluded. Legal/hosting/canonical-public-URL decisions wait for publishing.\n\n---\n\n# Earlier handover history (superseded where noted above)\n\n'''+s)\nPY\"",
+      "output": "",
+      "exitCode": 0
+    }
+  ],
+  "errors": [],
+  "timedOut": false,
+  "interruptedBy": null,
+  "snapshot": {
+    "schemaVersion": 1,
+    "files": {
+      ".agents/skills/storyfolio/engine/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      ".agents/skills/storyfolio/engine/AGENTS.md": {
+        "type": "file",
+        "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+        "size": 1055
+      },
+      ".agents/skills/storyfolio/engine/app/globals.css": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      ".agents/skills/storyfolio/engine/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      ".agents/skills/storyfolio/engine/app/page.tsx": {
+        "type": "file",
+        "hash": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+        "size": 1271
+      },
+      ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      ".agents/skills/storyfolio/engine/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      ".agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      ".agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      ".agents/skills/storyfolio/engine/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      ".agents/skills/storyfolio/engine/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      ".agents/skills/storyfolio/engine/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      ".agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      ".agents/skills/storyfolio/engine/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      ".agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      ".agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      ".agents/skills/storyfolio/engine/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      ".agents/skills/storyfolio/engine/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+        "size": 4623
+      },
+      ".agents/skills/storyfolio/engine/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.css": {
+        "type": "file",
+        "hash": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+        "size": 5859
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      ".agents/skills/storyfolio/engine/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      ".agents/skills/storyfolio/engine/content/checks.json": {
+        "type": "file",
+        "hash": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+        "size": 130
+      },
+      ".agents/skills/storyfolio/engine/content/copy.ts": {
+        "type": "file",
+        "hash": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+        "size": 1468
+      },
+      ".agents/skills/storyfolio/engine/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+        "size": 613
+      },
+      ".agents/skills/storyfolio/engine/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      ".agents/skills/storyfolio/engine/content/faces.ts": {
+        "type": "file",
+        "hash": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+        "size": 883
+      },
+      ".agents/skills/storyfolio/engine/content/formations.ts": {
+        "type": "file",
+        "hash": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+        "size": 942
+      },
+      ".agents/skills/storyfolio/engine/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      ".agents/skills/storyfolio/engine/content/links.ts": {
+        "type": "file",
+        "hash": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+        "size": 130
+      },
+      ".agents/skills/storyfolio/engine/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      ".agents/skills/storyfolio/engine/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+        "size": 238
+      },
+      ".agents/skills/storyfolio/engine/content/story.ts": {
+        "type": "file",
+        "hash": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+        "size": 518
+      },
+      ".agents/skills/storyfolio/engine/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+        "size": 4065
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.ts": {
+        "type": "file",
+        "hash": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+        "size": 4796
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      ".agents/skills/storyfolio/engine/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      ".agents/skills/storyfolio/engine/next.config.ts": {
+        "type": "file",
+        "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      ".agents/skills/storyfolio/engine/package.json": {
+        "type": "file",
+        "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+        "size": 1015
+      },
+      ".agents/skills/storyfolio/engine/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/public/plain/face.svg": {
+        "type": "file",
+        "hash": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+        "size": 309
+      },
+      ".agents/skills/storyfolio/engine/public/plain/fan.svg": {
+        "type": "file",
+        "hash": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+        "size": 775
+      },
+      ".agents/skills/storyfolio/engine/README.md": {
+        "type": "file",
+        "hash": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+        "size": 6746
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      ".agents/skills/storyfolio/engine/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      ".agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      ".agents/skills/storyfolio/engine/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      },
+      ".agents/skills/storyfolio/references/asking.md": {
+        "type": "file",
+        "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+        "size": 1486
+      },
+      ".agents/skills/storyfolio/references/building.md": {
+        "type": "file",
+        "hash": "3a7f6f1620bde62e40ea2e8847485a2ebe6afa8435aeed6a426773d5c12b9a73",
+        "size": 1275
+      },
+      ".agents/skills/storyfolio/references/concept.md": {
+        "type": "file",
+        "hash": "657bf63d38eb587229412775de5c867f5cbed9989e02e30af2e9cd746f4e3f1a",
+        "size": 8048
+      },
+      ".agents/skills/storyfolio/references/reading-a-profile.md": {
+        "type": "file",
+        "hash": "602ab27f0717880fc59628441c756d47b5e2bc07f503b7430e52d90e561671fe",
+        "size": 6500
+      },
+      ".agents/skills/storyfolio/references/storyboard.md": {
+        "type": "file",
+        "hash": "6aff31e6dfe227957a28c8f92fbca15b5dcbf772a0e607482c6a6996be21cfc8",
+        "size": 4310
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.mjs": {
+        "type": "file",
+        "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+        "size": 3566
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+        "type": "file",
+        "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+        "size": 4044
+      },
+      ".agents/skills/storyfolio/SKILL.md": {
+        "type": "file",
+        "hash": "f71c179d24a5da42fc25b20bc924db63c4bf7b603f86b3f25349afca683b135c",
+        "size": 4593
+      },
+      "docs/story/concepts.md": {
+        "type": "file",
+        "hash": "a3186915fbe6f45cb9dfb5cc0f43b164ca04a6e6be8aa4471903322954b9c732",
+        "size": 7505
+      },
+      "docs/story/decided-for-you.md": {
+        "type": "file",
+        "hash": "f431137ddaa0b87b3038dddc0a7d1e82c19eec618ac276fdf4bf34379e7296da",
+        "size": 3278
+      },
+      "docs/story/facts.md": {
+        "type": "file",
+        "hash": "699112d98c25a842d50a8d44e1a37e44b6e6f48332932b2e5b65c4535787774e",
+        "size": 9337
+      },
+      "docs/story/handover.md": {
+        "type": "file",
+        "hash": "8aba7ee7fec2d7348b70160b8c524f40204e8b7c3f3aeb767ab72e142e8ec29d",
+        "size": 6824
+      },
+      "docs/story/storyboard.md": {
+        "type": "file",
+        "hash": "9f3b7ce192b1e85eb6617ed3d79a0ac66a826ac3d782dbca74d583d3d5118beb",
+        "size": 15203
+      },
+      "material/asset-notes.md": {
+        "type": "file",
+        "hash": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+        "size": 1296
+      },
+      "material/cv.md": {
+        "type": "file",
+        "hash": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+        "size": 383
+      },
+      "material/external-helper-catalog.json": {
+        "type": "file",
+        "hash": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+        "size": 14881
+      },
+      "material/lab-notes.md": {
+        "type": "file",
+        "hash": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+        "size": 613
+      },
+      "material/runtime-resources.json": {
+        "type": "file",
+        "hash": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+        "size": 928
+      },
+      "public/assets/bring-up-fixture.svg": {
+        "type": "file",
+        "hash": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+        "size": 1822
+      },
+      "public/assets/power-states.svg": {
+        "type": "file",
+        "hash": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+        "size": 1657
+      },
+      "site/.env.local": {
+        "type": "file",
+        "hash": "e1f3acb37f0e8123bb63cefcdfedc4ff16c575ee6d4c9e0e9fc022201d5d3692",
+        "size": 59
+      },
+      "site/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      "site/AGENTS.md": {
+        "type": "file",
+        "hash": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+        "size": 1734
+      },
+      "site/app/globals.css": {
+        "type": "file",
+        "hash": "185432be21fd905f48b6940a46562c20bafcf7640e8af01e1fda2818d5c243ca",
+        "size": 1580
+      },
+      "site/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      "site/app/page.tsx": {
+        "type": "file",
+        "hash": "61541b6a20d3ee932763039f7e7c3da2bfe2e2a1946107faeb9ec55cd547ea38",
+        "size": 947
+      },
+      "site/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      "site/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      "site/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      "site/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      "site/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      "site/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      "site/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      "site/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      "site/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      "site/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      "site/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      "site/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      "site/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      "site/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      "site/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      "site/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+        "size": 4623
+      },
+      "site/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      "site/components/story/story.css": {
+        "type": "file",
+        "hash": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+        "size": 5859
+      },
+      "site/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      "site/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      "site/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      "site/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      "site/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      "site/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      "site/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      "site/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      "site/content/checks.json": {
+        "type": "file",
+        "hash": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+        "size": 130
+      },
+      "site/content/copy.ts": {
+        "type": "file",
+        "hash": "d8e1d5a24d5316473aa5cd5368b6ec74c992caeebdfe23a87fef6bf1d6e38bcc",
+        "size": 296
+      },
+      "site/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      "site/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+        "size": 613
+      },
+      "site/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      "site/content/faces.ts": {
+        "type": "file",
+        "hash": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+        "size": 883
+      },
+      "site/content/formations.ts": {
+        "type": "file",
+        "hash": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+        "size": 942
+      },
+      "site/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      "site/content/links.ts": {
+        "type": "file",
+        "hash": "3f3dc7e34bfd5bd30d3b5d3e5105f038eff3ea5f804f9bb9bcc0a547b80b96cb",
+        "size": 25
+      },
+      "site/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      "site/content/sketches/concepts.tsx": {
+        "type": "file",
+        "hash": "28c9e51ec0946915ae5c5846f9c4cc9f99a2017d61536d4a4c4b3138138982ff",
+        "size": 8604
+      },
+      "site/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "5cebdf7fab9041d71416dd8a00803d4c37f139c781b83d5a05efb9dac66b9f95",
+        "size": 242
+      },
+      "site/content/story.ts": {
+        "type": "file",
+        "hash": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+        "size": 518
+      },
+      "site/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      "site/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      "site/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      "site/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      "site/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      "site/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      "site/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      "site/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      "site/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      "site/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      "site/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      "site/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      "site/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      "site/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      "site/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      "site/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      "site/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      "site/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+        "size": 4065
+      },
+      "site/lib/story/story.ts": {
+        "type": "file",
+        "hash": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+        "size": 4796
+      },
+      "site/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      "site/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      "site/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      "site/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      "site/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      "site/LOCAL-PREVIEW.md": {
+        "type": "file",
+        "hash": "772c2cf3a9a6304ea29f719d26dd048f9afe0f17e77e1dc53bb850418b03e638",
+        "size": 1664
+      },
+      "site/next.config.ts": {
+        "type": "file",
+        "hash": "f73ba586a0986354ff1318e9be9a1033b1f1e1684077c2863f64e4a45434a4aa",
+        "size": 116
+      },
+      "site/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      "site/package.json": {
+        "type": "file",
+        "hash": "d769164645d830d2a9512685d3212b2b7955327cbea6859fb6937047f9a56a57",
+        "size": 1102
+      },
+      "site/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      "site/public/assets/bring-up-fixture.svg": {
+        "type": "file",
+        "hash": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+        "size": 1822
+      },
+      "site/public/assets/power-states.svg": {
+        "type": "file",
+        "hash": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+        "size": 1657
+      },
+      "site/public/plain/face.svg": {
+        "type": "file",
+        "hash": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+        "size": 309
+      },
+      "site/public/plain/fan.svg": {
+        "type": "file",
+        "hash": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+        "size": 775
+      },
+      "site/README.md": {
+        "type": "file",
+        "hash": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+        "size": 6746
+      },
+      "site/scripts/check-concepts.mjs": {
+        "type": "file",
+        "hash": "5919fe3fc3ffb56ee8c83023774bbed8b9e9d0771447b7b31683c91ac61768c6",
+        "size": 1271
+      },
+      "site/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      "site/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      "site/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      "site/scripts/local-only.mjs": {
+        "type": "file",
+        "hash": "c0aae115bf940205b178b6e0f72e4eaca8d773fd70ab776163be00f67bf34fbd",
+        "size": 487
+      },
+      "site/scripts/preview-concepts.mjs": {
+        "type": "file",
+        "hash": "4a18488f6e337c6ef3d9c9b3707aa137e008af21d2f1e502996e149b5fc7e365",
+        "size": 583
+      },
+      "site/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      "site/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      }
+    },
+    "excluded": [
+      ".git",
+      "site/.next",
+      "site/checks",
+      "site/next-env.d.ts",
+      "site/node_modules",
+      "site/tsconfig.tsbuildinfo"
+    ],
+    "unexpected": [
+      {
+        "path": ".aws",
+        "type": "directory"
+      },
+      {
+        "path": ".codex",
+        "type": "directory"
+      }
+    ],
+    "totalBytes": 950426,
+    "changes": [
+      {
+        "path": "docs/story/concepts.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "3555283da98b63a450e3dd89f16ce53e1f317fb6ac372a7be792a3620cd8cf23",
+          "size": 6980
+        },
+        "after": {
+          "type": "file",
+          "hash": "a3186915fbe6f45cb9dfb5cc0f43b164ca04a6e6be8aa4471903322954b9c732",
+          "size": 7505
+        }
+      },
+      {
+        "path": "docs/story/decided-for-you.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "a20670f9ae174019b5a662cfee15af8a73f1eaf611c2e0b843db630b80935b42",
+          "size": 2074
+        },
+        "after": {
+          "type": "file",
+          "hash": "f431137ddaa0b87b3038dddc0a7d1e82c19eec618ac276fdf4bf34379e7296da",
+          "size": 3278
+        }
+      },
+      {
+        "path": "docs/story/facts.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "972b1d67bb4cc23a13cd76ac54ffe4ecddc4d416502ccdbbf011f56351d8b5e6",
+          "size": 7295
+        },
+        "after": {
+          "type": "file",
+          "hash": "699112d98c25a842d50a8d44e1a37e44b6e6f48332932b2e5b65c4535787774e",
+          "size": 9337
+        }
+      },
+      {
+        "path": "docs/story/handover.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "1801dcbbf1167e5c8ef5b3e77df62b7bcf4ef848cae801be3c0102de2318194d",
+          "size": 5297
+        },
+        "after": {
+          "type": "file",
+          "hash": "8aba7ee7fec2d7348b70160b8c524f40204e8b7c3f3aeb767ab72e142e8ec29d",
+          "size": 6824
+        }
+      },
+      {
+        "path": "docs/story/storyboard.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "9f3b7ce192b1e85eb6617ed3d79a0ac66a826ac3d782dbca74d583d3d5118beb",
+          "size": 15203
+        }
+      }
+    ]
+  }
+}

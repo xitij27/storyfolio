@@ -1,0 +1,1 @@
+export const copy={lang:"en",metadata:{title:"Ada Mensah | Local portfolio concepts",description:"Local scroll-story sketches about Mosslink firmware and physical observation."},railLabel:"Chapters",lookLabel:"Appearance",faceWords:["Code","State","Board","Access","Signal","Claim","Evidence"]};

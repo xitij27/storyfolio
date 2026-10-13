@@ -4,6 +4,17 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Newest result: [candidate-3 turn 3 completed normally](../evals/runs/stage-3-storyboard-length-1/turn-3-disposition.md)
+and explicitly proposes ten meaningful beats across twelve screen heights,
+asking approval for the shorter structure. Total length and explicit
+exception-request behavior improved; the fixed 12-to-22 requirement remains
+unmet and no shorter exception is approved. Root [asks for that scope decision](history/2026-10-13-stage-3-short-storyboard-decision-request.md).
+No turn-4 gate or paid continuation is authorized until it is settled.
+Integrity verifies all 149 inputs, 380 new artifacts and full 186-file
+live/saved source; all 87 app files are unchanged. All 47 focused checks and
+351 repository tests pass. No other storyboard blocker was found. Stage 3
+is still open; no new skill instruction, push or publication occurred.
+
 Latest result: [all seven resumed browser batches passed](../evals/runs/stage-3-storyboard-length-1/concept-continuation-disposition.md),
 with normal closure and no further SIGTERM. Complete coverage is 18 reports
 and 144 individually viewed originals, unchanged 185-file source and 536342

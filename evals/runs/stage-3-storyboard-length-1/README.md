@@ -1,5 +1,11 @@
 # Storyboard length correction
 
+Current checkpoint: [turn 3 explicitly requests a ten-beat exception](turn-3-disposition.md),
+with a correctly stated twelve-screen total and genuine approval wait.
+The original normal range is unmet; author approval is pending. No turn 4,
+new skill instruction or Stage 3 pass follows. Integrity and all local
+checks pass, and the site code is unchanged in this planning turn.
+
 Completed continuation: [root disposition](concept-continuation-disposition.md).
 All seven new batches closed normally; 18 reports and 144 individually
 reviewed originals verify within 536342 ms cumulative execution. Stop 2
