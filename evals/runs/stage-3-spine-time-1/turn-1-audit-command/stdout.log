@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "integrityVerified": true,
+  "cohort": "codex-full-journey-timing-1",
+  "turn": 1,
+  "inputDigest": "f94e0ef05af37a3eadb1992f7b22a0b589873fac8d5c4adf5ffe1cf967e23512",
+  "frozenInputs": 149,
+  "normalOuterClosure": true,
+  "outerDurationMs": 161766,
+  "outerFinished": "2026-10-13T05:47:59.022Z",
+  "sourceFiles": 97,
+  "sourceDigest": "b80dd139a2c877bf41e899a05981033bde59847e575f906ba5ff43ef4f6899af",
+  "fullLiveSourceEqualsSnapshot": true,
+  "applicationFilesUnderSite": 0,
+  "exclusions": [],
+  "emptyUnexpectedDirectories": [],
+  "history": [
+    {
+      "turn": 1,
+      "resultSha256": "3ab6ad72c66cec6e163cd3a1606fc205bd1b26b40cd718b1c721c3d4547ee670",
+      "artifacts": 199,
+      "snapshotFiles": 97,
+      "usage": {
+        "input_tokens": 166478,
+        "cached_input_tokens": 112640,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3593,
+        "reasoning_output_tokens": 106
+      },
+      "durationMs": 160089,
+      "terminal": {
+        "text": "Your material describes work on Mosslink’s low-power design, board bring-up and verification, using C and bench instruments. The radio staying awake after a failed transmission is a specific debugging episode we can explore once your contribution and outcome are clear.\n\nPlease answer by number; short answers are fine.\n\n1. **Your role:** Is “Embedded systems engineer, Reedglass Sensing, 2021–present” your official title and current timeline? What firmware and hardware did you personally own, what did others do, and where did Mosslink actually run?\n2. **Battery life:** Was two years a calculated estimate? What reporting interval did it assume, what did the 72-hour run demonstrate, and which measurements/calculations were yours?\n3. **Forty units:** Were these engineering samples or a deployed pilot? What testing did the six logged units receive, and what was your part?\n4. **Emissions:** Was the report preliminary, or did final qualification happen? What did you personally do?\n5. **Debugging and permissions:** What did you diagnose, change and retest for the radio-awake issue? What outcome can we claim? May we name Reedglass and Mosslink and show a generic explanatory 3D representation? The actual photo, colleague’s diagram and trace aren’t supplied.\n6. **Visitor and boundaries:** Which embedded-firmware teams should this appeal to, and what should visitors do at the end? Is `ada@example.com` a placeholder? What must stay out?\n7. **Working habits and learning:** You mention state tables, timing diagrams and bench checklists—how do you use them day to day? What failure, person, book or experience shaped your approach?\n\nNode’s native TypeScript execution and a neutral local browser page both work. I’ve saved the source facts in [facts.md](/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-zdvnMZ/docs/story/facts.md). Everything stays local.\n\nI’m pausing before concepts because the [storyfolio skill](/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-zdvnMZ/.agents/skills/storyfolio/SKILL.md) requires factual answers first: “You go on only when their answer is in the conversation and you have written it into the file.” Here, that prevents estimates and preliminary tests becoming overstated portfolio claims.",
+        "sha256": "4d248e18cdf4c0c7076b1970fd82d7c91309c4711c42eade5490a3b8713de77b"
+      },
+      "accessTriage": {
+        "commands": [
+          {
+            "id": "item_1",
+            "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/SKILL.md'",
+            "lines": [
+              4,
+              5
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_2",
+            "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g '\"'!node_modules'\"' -g '\"'!'\"\\\\.git' -g 'material/**' -g 'package.json'\"",
+            "lines": [
+              6,
+              7
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_3",
+            "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/references/reading-a-profile.md'",
+            "lines": [
+              8,
+              11
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_4",
+            "command": "/bin/bash -lc 'cat material/cv.md material/lab-notes.md material/asset-notes.md material/runtime-resources.json material/external-helper-catalog.json'",
+            "lines": [
+              9,
+              12
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_5",
+            "command": "/bin/bash -lc \"rg --files -g '\"'!node_modules'\"' -g '\"'!'\"\\\\.git' -g 'AGENTS.md' -g 'docs/**' -g '.agents/skills/storyfolio/**'\"",
+            "lines": [
+              10,
+              13
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 1,
+            "flags": []
+          },
+          {
+            "id": "item_6",
+            "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/engine/README.md'",
+            "lines": [
+              14,
+              16
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_7",
+            "command": "/bin/bash -lc 'ls -la .agents/skills && ls -la /tmp/storyfolio-node-check-20261011/node_modules && ls -la /tmp/storyfolio-browser-cache && git --version && node --version && rg --files public'",
+            "lines": [
+              15,
+              17
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_9",
+            "command": "/bin/bash -lc 'rg --files /tmp/storyfolio-browser-cache/chromium-1248 /tmp/storyfolio-browser-cache/chromium_headless_shell-1248 | head -25'",
+            "lines": [
+              19,
+              20
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_10",
+            "command": "/bin/bash -lc \"node --input-type=module -e 'import {writeFileSync} from \\\"node:fs\\\"; writeFileSync(\\\"/tmp/storyfolio-runtime-probe.ts\\\", \\\"const value: number = 22; console.log(\"'`native TypeScript: ${value}`);'\"\\\\n\\\");' && node /tmp/storyfolio-runtime-probe.ts && /tmp/storyfolio-node-check-20261011/node_modules/node/bin/node --version && git status --short\"",
+            "lines": [
+              21,
+              22
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 128,
+            "flags": []
+          },
+          {
+            "id": "item_11",
+            "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\nPath('/tmp/storyfolio-neutral.html').write_text('<\"'!doctype html><html lang=\"en\"><meta charset=\"utf-8\"><title>Local runtime check</title><body style=\"font:24px system-ui;padding:48px\"><h1>Local runtime check</h1><p>Neutral page. No portfolio content.</p></body></html>'\"')\nPY\nLD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu /tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --no-sandbox --headless --disable-gpu --screenshot=/tmp/storyfolio-neutral.png --dump-dom file:///tmp/storyfolio-neutral.html\"",
+            "lines": [
+              23,
+              24
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          },
+          {
+            "id": "item_12",
+            "command": "/bin/bash -lc 'nl -ba material/cv.md && nl -ba material/lab-notes.md && nl -ba material/asset-notes.md'",
+            "lines": [
+              25,
+              26
+            ],
+            "events": [
+              "item.started",
+              "item.completed"
+            ],
+            "exitCode": 0,
+            "flags": []
+          }
+        ],
+        "flaggedCommands": [],
+        "incompleteCommands": [],
+        "limitation": "Literal command-text triage, not syscall tracing or a read jail. Flags need manual review. No flags do not prove absence of indirect, script-mediated, native-tool or network access. Configuration isolation is not filesystem isolation."
+      }
+    }
+  ],
+  "totals": {
+    "durationMs": 160089,
+    "reportedTokens": 170071,
+    "uncachedTokens": 57431
+  },
+  "bounds": {
+    "maxTurns": 6,
+    "turnTimeoutMs": 1800000,
+    "maxWallMs": 5400000,
+    "maxTokens": 12000000,
+    "maxUncachedTokens": 1500000
+  },
+  "boundsExceeded": false,
+  "hashes": {
+    "audit": "9ee45749401aa64f43c67c429dc5128517fb2993cd050fa405a615cec6f9c711",
+    "terminalTool": "0ce03beeb64f72f91435ec41b3e74a23aea10dea17799c3d849c15927546fbfb",
+    "outerResult": "e5d4976f764e09110ea3df655b8a27cc8c3e0ebba4387f67fde3720013bc130d",
+    "outerCommand": "d3e2406f26b5ce0a8c66bef8601104aacc022054e6c892e8e70c2672981ee5c6",
+    "latestResult": "3ab6ad72c66cec6e163cd3a1606fc205bd1b26b40cd718b1c721c3d4547ee670"
+  },
+  "manualAccessReviewRequired": true,
+  "behavioralGate": "Not assessed; no next turn, application eligibility or final acceptance is authorized.",
+  "limits": "Normal process/source/prompt/session/usage integrity only. Command flags are triage, not a read-jail proof. Prior outer process audits remain separately retained; this invocation binds the selected turn's outer supervisor. Resume token totals may overlap and are not dollar or in-flight spending guarantees. Source exclusions stay unchanged. No runtime, model, browser, test or subprocess was launched by this audit.",
+  "modelCalls": 0,
+  "writes": false
+}

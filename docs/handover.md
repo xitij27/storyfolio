@@ -4,6 +4,12 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest timing-proof result: [turn 1 completed normally and passes fact/preflight review](../evals/runs/stage-3-spine-time-1/turn-1-disposition.md).
+The independent review and root agree; native same-session screenshot
+delivery is corroborated. All 149 inputs and 97 source files verify;
+all 351 tests pass in local-tests-3. After committing the actual gate,
+send only unchanged fixed turn 2. No concept or site acceptance yet.
+
 Current readiness: the [fresh timing proof is ready for its sole start](../evals/runs/stage-3-spine-time-1/launch-disposition.md).
 All 149 inputs, exact declared deltas and 94 unchanged initial files verify;
 root viewed the neutral original and every setup command closed normally.

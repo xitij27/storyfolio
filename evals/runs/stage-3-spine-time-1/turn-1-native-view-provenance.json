@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "source": "/home/kshitij/.codex/sessions/2026/10/13/rollout-2026-10-13T07-45-22-01a133cb-3949-7881-a279-b078b5f3baca.jsonl",
+  "sourceBytes": 227887,
+  "sourceSha256": "f73c852f765451ae23bbd22dc3ab08e20b6c0df9ff180076b29d98a6b8870632",
+  "sourceLines": 68,
+  "sessionId": "01a133cb-3949-7881-a279-b078b5f3baca",
+  "calls": [
+    {
+      "callLine": 51,
+      "callLineSha256": "21f78fb98fbe47860f3e8ac0e6b75fc77c645b7040f4a44375ee2e6b7e8d088c",
+      "timestamp": "2026-10-13T05:46:22.975Z",
+      "callId": "call_eUqmDvPNEVBiwAkOLGndHYee",
+      "input": "image((await tools.view_image({path:\"/tmp/storyfolio-neutral.png\"})).image_url);\ntext(await tools.exec_command({cmd:\"nl -ba material/cv.md && nl -ba material/lab-notes.md && nl -ba material/asset-notes.md\",\"max_output_tokens\":3000}));\n",
+      "outputLine": 55,
+      "outputLineSha256": "89654496b6f53a5be4c587536a39f1fe3602c8f5a23527efc884a0d3a1f56f9f",
+      "outputTimestamp": "2026-10-13T05:46:23.197Z",
+      "images": [
+        {
+          "path": "/tmp/storyfolio-neutral.png",
+          "detail": "high",
+          "mimeType": "image/png",
+          "deliveredBytes": 14008,
+          "deliveredSha256": "fb2124b757d957ef56cadeb9331e3f4d31e01d2aea37dec7e867f811099b2067",
+          "originalBytes": 14008,
+          "originalSha256": "fb2124b757d957ef56cadeb9331e3f4d31e01d2aea37dec7e867f811099b2067",
+          "byteIdentical": true,
+          "retainedPath": "evals/runs/stage-3-spine-time-1/actor-neutral.png"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Only the owned test session was read; raw session analysis and unrelated sessions are not copied",
+    "Image delivery corroborates inspection capability, not comprehension or portfolio acceptance"
+  ]
+}

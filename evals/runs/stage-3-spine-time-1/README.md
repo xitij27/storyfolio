@@ -1,5 +1,10 @@
 # Fresh whole-site proof with a longer turn allowance
 
+Current result: [turn 1 passes the actual factual/preflight gate](turn-1-disposition.md).
+Native image-view delivery is corroborated; all 149 inputs and 97 source
+files verify. Optional recommendation/refusal stays unobserved. All 351
+tests pass in local-tests-3. After the gate commit, unchanged turn 2 may run.
+
 13 October 2026. The author [directs completion of Stage 3](../../../docs/history/2026-10-13-stage-3-implementation-direction.md),
 under the retained [authority for necessary paid work](../../../docs/history/2026-10-12-stage-3-completion-authority.md).
 Root records this prospective adjustment before a new launch. The previous
