@@ -5,6 +5,18 @@
 This consolidates the next work, not a new evaluation allowance or a change
 to the design. No implementation or paid run starts in this planning task.
 
+Execution update: the author subsequently [directed this sequence through Stage 3 completion](../../history/2026-10-13-stage-3-implementation-direction.md),
+accepting the recommended fixture exception. Candidate 3's original spine
+turn then [reached its own 15-minute deadline](../../../evals/runs/stage-3-storyboard-length-1/turn-4-timeout-disposition.md).
+Root preserves that failure and leaves skill wording unchanged. The
+[prospective timing proof](../../../evals/runs/stage-3-spine-time-1/README.md)
+uses one fresh six-stop conversation, up to 30 minutes per turn, with the
+same 90-minute cumulative and token ceilings. All timing/scope/setup
+differences are checked before launch. This adjustment uses the retained
+necessary-paid-work authority; it does not waive any product acceptance
+gate or rewrite the earlier fixed-budget comparison. Remaining matched
+entry/wording, planning regression and real author review requirements stand.
+
 ## Where we are
 
 | Stage | Implemented and evidenced | Still needed |

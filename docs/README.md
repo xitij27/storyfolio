@@ -1,5 +1,9 @@
 # Documentation map
 
+Newest result: [the spine turn reached its own deadline](../evals/runs/stage-3-storyboard-length-1/turn-4-timeout-disposition.md).
+The cohort is closed. [One prospective proof with a longer turn allowance](../evals/runs/stage-3-spine-time-1/README.md)
+retains the cumulative/time-token limits and records all input differences.
+
 Current direction: [implement through Stage 3 completion](history/2026-10-13-stage-3-implementation-direction.md),
 including the recommended ten-beat fixture exception. Follow the
 [continuation](../evals/runs/stage-3-storyboard-length-1/implementation-continuation.md)

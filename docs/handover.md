@@ -4,6 +4,17 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest implementation result: [candidate-3 turn 4 hit its local deadline](../evals/runs/stage-3-storyboard-length-1/turn-4-timeout-disposition.md).
+Three looks and supporting features were built; a look question appeared in
+progress, but no completed terminal turn/usage or updated handover exists.
+Its own 18-case pass predates a final CSS change. All 201 saved/live source
+files verify. The failed cohort stays closed and no skill wording changes.
+Under the current completion direction, root prepares [one fresh timing proof](../evals/runs/stage-3-spine-time-1/README.md)
+with 30-minute per-turn, unchanged 90-minute cumulative and token ceilings,
+and the prospective same-fixture ten-beat exception. This is a disclosed
+measurement/scope variance, not a retroactive or same-budget pass. Stage 3
+still needs the complete journey, comparisons, regression and actual review.
+
 Current implementation direction: [follow the recommended sequence until Stage 3 is complete](history/2026-10-13-stage-3-implementation-direction.md).
 This accepts the recommended ten-beat exception for the current fixture,
 recorded prospectively while preserving the normal-range miss. Resume the

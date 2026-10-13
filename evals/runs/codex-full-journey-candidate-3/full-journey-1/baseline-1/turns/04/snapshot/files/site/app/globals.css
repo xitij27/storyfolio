@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+.concept-nav{position:absolute;top:1.5rem;left:clamp(1.25rem,5vw,5rem);z-index:8;display:flex;gap:1.5rem;font: .8rem ui-monospace,monospace;color:#58636c;max-width:60%;}
+.concept-nav span{display:none;}
+.concept-question{font-size:1.12rem;font-weight:600;line-height:1.4;margin-top:1rem;}
+.concept-contact{font-size:.85rem;line-height:1.5;}
+.concept-index{background:#f2f0e9;color:#202932;min-height:100vh;padding:clamp(2rem,8vw,8rem);max-width:none;}
+.concept-index h1{font:500 clamp(2.5rem,6vw,5.5rem)/1.02 Georgia,serif;letter-spacing:-.04em;}
+.concept-index p{max-width:42rem;line-height:1.7;}
+.concept-index ol{padding-left:1.3rem;margin:3rem 0;}
+.concept-index li{padding:1rem 0;border-top:1px solid #c9ccc4;max-width:44rem;}
+.concept-index li a{font:500 1.65rem Georgia,serif;text-underline-offset:.25rem;}
+.eyebrow{font:.8rem ui-monospace,monospace;letter-spacing:.1em;}
+@media(min-width:800px){.concept-nav span{display:inline;}.story-caption-text{max-width:29rem;}}
+@media(max-width:479px){.story-caption{padding:1.1rem 1.25rem;}.story-title{font-size:2rem;}.story-body{font-size:.94rem;line-height:1.5;}.story-note{font-size:.75rem;margin-top:.65rem;}.concept-question{font-size:.96rem;}.story-bar{padding:.75rem;}.story-look-switch button{padding:.35rem .6rem;}.concept-nav{top:1.65rem;font-size:.7rem;}}
+.site-nav{position:absolute;inset:0 0 auto;z-index:20;padding:1.15rem clamp(1.25rem,5vw,5rem);display:flex;justify-content:space-between;gap:1rem;color:#202932;font-size:.85rem;}
+.site-name{text-decoration:none;font-weight:700;}.site-name span{font-weight:400;}
+.site-nav nav{display:flex;gap:1.5rem;}.site-nav a{text-underline-offset:.25rem;}
+body:has(.story[data-look="dark"]) .site-nav{color:#f3eee2;}
+.spine-note{position:absolute;top:4.1rem;left:clamp(1.25rem,5vw,5rem);font:.68rem ui-monospace,monospace;color:var(--story-faint);pointer-events:auto;max-width:36rem;}
+.chapter-menu{position:absolute;top:6.2rem;left:clamp(1.25rem,5vw,5rem);display:flex;gap:1.2rem;font:.72rem ui-monospace,monospace;pointer-events:auto;}
+.story-title{font-family:system-ui,sans-serif;font-weight:650;letter-spacing:-.055em;font-size:clamp(2rem,3.8vw,4rem);}
+.story-caption-text{max-width:31rem;}.story-body{line-height:1.55;}.story-question{font-size:1.15rem;font-weight:600;line-height:1.35;margin:1rem 0 0;}
+.story-bar{padding-top:4.2rem;}.story-look-switch button{font-size:.73rem;}
+.actions{display:flex;flex-wrap:wrap;gap:.7rem 1.2rem;margin-top:1.1rem;font-size:.85rem;line-height:1.6;}.detail-link{display:inline-block;margin-top:1rem;font-size:.9rem;}
+.fixture-fallback{margin:0;}.fixture-fallback figcaption{font-size:.8rem;color:var(--story-faint);}
+.document{max-width:70rem;margin:0 auto;padding:8rem clamp(1.25rem,5vw,4rem) 4rem;background:#f2f0e9;color:#202932;min-height:100vh;}
+body:has(.document){background:#f2f0e9;}.document h1{font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-.04em;line-height:1.1;margin-top:.5rem;}.document h2{font-size:1.6rem;margin-top:2.8rem;}.document p,.document li{line-height:1.7;max-width:48rem;}.document figure{margin:2rem 0;max-width:42rem;}.document figure img{max-width:100%;height:auto;}.document figcaption{font-size:.85rem;line-height:1.6;color:#58636c;}.document table{border-collapse:collapse;width:100%;font-size:.95rem;}.document th,.document td{padding:1rem;text-align:left;border-bottom:1px solid #c8cfc9;vertical-align:top;line-height:1.6;}.document a{text-underline-offset:.25rem;}.document .eyebrow{color:#8d471e;}.document-footer{border-top:1px solid #c8cfc9;padding-top:1.5rem;margin-top:3rem;font-size:.85rem;}
+@media(max-width:700px){.site-nav{font-size:.8rem;}.site-name span{display:none;}.site-nav nav{gap:1rem;}.spine-note{top:3.5rem;max-width:90%;}.chapter-menu{top:5.8rem;font-size:.65rem;gap:.8rem;}.story-bar{padding-top:7.5rem;justify-content:center;}.story-caption{padding:1.1rem 1.25rem 1.5rem;}.story-caption-text{max-width:100%;}.story-title{font-size:1.9rem;}.story-question{font-size:1rem;}.story-body{font-size:.93rem;line-height:1.5;margin-top:.8rem;}.story-note{font-size:.78rem;line-height:1.5;margin-top:.65rem;}.actions{gap:.4rem 1rem;font-size:.78rem;margin-top:.7rem;}.document table{font-size:.82rem;}.document td,.document th{padding:.6rem;}}
+@media print{.site-nav,.download-actions,.document-footer{display:none}.document{padding:0;max-width:none;background:white;color:black;}.document h1{font-size:26pt}.document h2{font-size:15pt;break-after:avoid}.document p,.document li{font-size:10pt;line-height:1.45;max-width:none}.document a{color:black}.document table{font-size:9pt}.document tr{break-inside:avoid}@page{margin:16mm}}
+/* The ordinary chapter menu replaces the scene rail, which could cross module labels. */
+.story-rail-holder{display:none!important;}
+.site-nav{position:fixed;background:#f2f0e9;}
+body:has(.story[data-look="dark"]) .site-nav{background:#111c22;}
+body:has(.story[data-look="lab"]) .site-nav{background:#e8eeed;}
+section[id]{scroll-margin-top:5rem;}
+/* Fallback controls and review notes occupy normal flow above the reading layout. */
+.story[data-scene="off"] .story-bar{position:static;height:auto;margin:0;padding:0 clamp(1.25rem,5vw,5rem) 1rem;}
+.story[data-scene="off"] .spine-note{position:static;margin:0 clamp(1.25rem,5vw,5rem) 1rem;max-width:none;}
+.story[data-scene="off"] .chapter-menu{position:static;margin:0 clamp(1.25rem,5vw,5rem) 1rem;}

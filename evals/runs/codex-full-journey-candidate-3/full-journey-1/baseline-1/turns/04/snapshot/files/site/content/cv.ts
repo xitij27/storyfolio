@@ -1,0 +1,18 @@
+// Trusted, locally authored markup shared by /cv and the standalone download.
+export const cvMarkup=`<p class="eyebrow">EMBEDDED FIRMWARE / PHYSICAL DEVICES</p>
+<h1>Ada Mensah</h1>
+<p>Seeking embedded firmware roles involving physical devices.<br><a href="mailto:ada@example.com">ada@example.com</a> — public example contact</p>
+<h2>Mosslink — environmental sensor</h2>
+<p>I wrote the firmware, scheduled the power states and built the bring-up fixture. A colleague designed the printed circuit board and analogue front end. Bring-up means checking a new board’s basic operation.</p>
+<h2>Tools and working documents</h2>
+<p>C, oscilloscopes, logic analysers and board bring-up. Working documents include state tables, timing diagrams, current traces and bench checklists.</p>
+<h2>Observation and evidence</h2>
+<ul>
+<li>A current trace showed the radio remaining awake after a failed transmission. The cause, fix, timing and later outcome are not confirmed.</li>
+<li>The two-year battery figure is a projection from bench current readings and an assumed reporting cycle. The longest run was 72 hours. No field endurance or weather testing supports a two-year claim.</li>
+<li>Forty engineering samples were assembled; six were bench tested. None went to customers. This was not a field pilot or product launch.</li>
+<li>One preliminary emissions check passed. The full qualification programme is unfinished; the device is not described as certified or qualified.</li>
+</ul>
+<h2>Engineering principle</h2>
+<p>A firmware decision needs a physical observation. An estimate and an observed run support different claims.</p>`;
+export const cvStyles=`:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202932;background:#f2f0e9}body{margin:0}main{max-width:760px;margin:auto;padding:48px 28px}h1{font-size:42px;line-height:1.1;letter-spacing:-.04em}h2{font-size:22px;margin-top:32px}p,li{line-height:1.6}li{margin-bottom:12px}a{color:inherit}.eyebrow{font:12px ui-monospace,monospace;letter-spacing:.08em;color:#8d471e}@media print{:root{background:white;color:black}main{max-width:none;padding:0}h1{font-size:26pt}h2{font-size:14pt;break-after:avoid}p,li{font-size:10pt;line-height:1.45}li{break-inside:avoid}@page{margin:16mm}}`;

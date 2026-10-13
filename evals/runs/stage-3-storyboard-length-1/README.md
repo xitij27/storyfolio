@@ -1,5 +1,10 @@
 # Storyboard length correction
 
+Newest outcome: [turn 4 timed out at its own limit](turn-4-timeout-disposition.md).
+Full source and raw artifacts are preserved. This cohort is closed; no
+turn 5 or proof capture proceeds. The [fresh timing-proof study](../stage-3-spine-time-1/README.md)
+records root's prospective next step under completion authority.
+
 Current continuation: the author [directs implementation through Stage 3](../../../docs/history/2026-10-13-stage-3-implementation-direction.md),
 accepting the recommended ten-beat fixture exception. Follow the additive
 [continuation record](implementation-continuation.md). Earlier range results
