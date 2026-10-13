@@ -4,6 +4,13 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest question: [can SIGTERM origin and reason be determined?](history/2026-10-13-sigterm-attribution-question.md)
+Read-only checks confirm the known receive/forward path, not the initial
+sender. Narrow journal queries had no entries; sender-aware tracing was not
+installed or enabled. Future tracing could identify the sending process;
+its reason needs correlated sender/service logs. No attribution to the
+author, new run, helper change or shorter-storyboard approval follows.
+
 Newest result: [candidate-3 turn 3 completed normally](../evals/runs/stage-3-storyboard-length-1/turn-3-disposition.md)
 and explicitly proposes ten meaningful beats across twelve screen heights,
 asking approval for the shorter structure. Total length and explicit

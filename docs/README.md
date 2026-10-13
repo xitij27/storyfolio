@@ -1,5 +1,8 @@
 # Documentation map
 
+Latest diagnostic question: [SIGTERM delivery, attribution limits and prospective tracing](history/2026-10-13-sigterm-attribution-question.md).
+No tracing was installed, and the storyboard decision is still pending.
+
 Latest result: [turn 3 now proposes an explicit shorter storyboard](../evals/runs/stage-3-storyboard-length-1/turn-3-disposition.md),
 ten meaningful beats and twelve screen heights. Root [requests the author's
 scope decision](history/2026-10-13-stage-3-short-storyboard-decision-request.md)
