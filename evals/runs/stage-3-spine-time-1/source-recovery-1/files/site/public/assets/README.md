@@ -1,0 +1,7 @@
+# Asset provenance
+
+`power-states.svg` and `bring-up-fixture.svg` are unchanged copies of the supplied local teaching drawings. Author: repository evaluation coordinator, 11 October 2026. Terms: repository MIT license, as recorded in material/asset-notes.md. No derivative SVG changes made.
+
+Accessible purpose: a teaching power-state loop, and a generic firmware-command/board/fixture/observation relationship. Neither is actual device geometry, original wiring/firmware, timing, a current trace, photograph or test evidence. Labels and HTML retain those limits.
+
+Concept geometry in content/sketches/concepts.tsx is authored locally from simple mesh primitives for explanatory purposes. It depicts generic fixture blocks with contacts, a generic sensor-module assembly, or a generic connector loom. No private circuit, dimensions, timings or measured results reconstructed. Geometry uses the site's MIT engine license. No external model, image or font fetched.

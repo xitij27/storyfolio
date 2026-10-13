@@ -1,0 +1,1 @@
+export const copy = {lang:"en",railLabel:"Chapters",lookLabel:"Appearance",backLabel:"Back to opening",metadata:{title:"Ada Mensah | Local portfolio concepts",description:"Embedded firmware, Mosslink and the connection between code and physical observation. Local concept sketches."}};

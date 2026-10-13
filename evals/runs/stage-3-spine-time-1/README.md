@@ -1,5 +1,9 @@
 # Fresh whole-site proof with a longer turn allowance
 
+Latest checkpoint: [all authored source is retained in a post-closure archive](source-recovery-disposition.md).
+Original failure remains; recovery measurement/continuation bindings and
+real concept verification are still required. No turn 3 or paid retry.
+
 Current result: [turn 2 completed natively; original source capture failed](turn-2-capture-disposition.md).
 The custom `.next-concepts` cache hit the snapshot byte bound. Original
 failure and all 149 inputs are preserved. No paid retry, independent

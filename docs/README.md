@@ -1,5 +1,9 @@
 # Documentation map
 
+Latest retention checkpoint: [full post-closure source archive and next recovery work](../evals/runs/stage-3-spine-time-1/source-recovery-disposition.md).
+See also [unexecuted measurement-adapter preparation](../evals/runs/stage-3-spine-time-1/measurement/preparation-disposition.md).
+These are separately documented local-main commits, not concept acceptance.
+
 Current result: [timing-proof concept turn and capture-failure diagnosis](../evals/runs/stage-3-spine-time-1/turn-2-capture-disposition.md).
 Native work completed; an included custom Next.js build cache broke source
 capture. Preserve the failure and bind post-closure recovery before browser

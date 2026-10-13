@@ -1,0 +1,20 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'b9a7c6fca3319037d8328dc1ea11de71b9e702dd22188a7c1c11b8994a01e822'
+- 'a0c094b2658becfc1eadfc79948b6aead3f438e84927c415f2a2373a6c64d91f'
+
+    at file:///home/kshitij/projects/storyfolio/evals/runs/stage-3-spine-time-1/verify-source-archive.mjs:15:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'b9a7c6fca3319037d8328dc1ea11de71b9e702dd22188a7c1c11b8994a01e822',
+  expected: 'a0c094b2658becfc1eadfc79948b6aead3f438e84927c415f2a2373a6c64d91f',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.22.1

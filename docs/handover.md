@@ -4,6 +4,18 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest local checkpoint: [the full post-closure authored source is archived](../evals/runs/stage-3-spine-time-1/source-recovery-disposition.md),
+189 files including the actual app, fact ledger and current concept notes.
+The original failed capture is preserved, not promoted. The
+[measurement adapters](../evals/runs/stage-3-spine-time-1/measurement/preparation-disposition.md)
+pass preparation checks but have not run. Next: additive recovery binders
+and same-session continuation accounting, concrete source/target checks,
+then independent concept measurement before fixed turn 3. Stage 3 is open.
+All work is organized as documented local-main commits, without a push.
+Archive integrity, skill/people checks and all 351 repository tests pass
+in local-tests-7. Adapter preparation separately passed 71 focused checks
+and all 351 repository tests in local-tests-5. No browser pass is inferred.
+
 Current result: [timing-proof turn 2 completed natively but its source capture failed](../evals/runs/stage-3-spine-time-1/turn-2-capture-disposition.md).
 The recorder included the actor's custom `.next-concepts` build cache and
 hit its snapshot byte bound after normal model completion. No SIGTERM,
