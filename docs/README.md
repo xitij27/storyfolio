@@ -1,5 +1,11 @@
 # Documentation map
 
+Current result: [timing-proof concept turn and capture-failure diagnosis](../evals/runs/stage-3-spine-time-1/turn-2-capture-disposition.md).
+Native work completed; an included custom Next.js build cache broke source
+capture. Preserve the failure and bind post-closure recovery before browser
+verification or turn 3. The author [requests documented local-main commits](history/2026-10-13-local-commit-direction.md).
+Read the newest handover checkpoint first; earlier entries are historical.
+
 Newest result: [the spine turn reached its own deadline](../evals/runs/stage-3-storyboard-length-1/turn-4-timeout-disposition.md).
 The cohort is closed. [One prospective proof with a longer turn allowance](../evals/runs/stage-3-spine-time-1/README.md)
 retains the cumulative/time-token limits and records all input differences.

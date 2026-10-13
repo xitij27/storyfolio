@@ -4,6 +4,17 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Current result: [timing-proof turn 2 completed natively but its source capture failed](../evals/runs/stage-3-spine-time-1/turn-2-capture-disposition.md).
+The recorder included the actor's custom `.next-concepts` build cache and
+hit its snapshot byte bound after normal model completion. No SIGTERM,
+timeout or paid retry occurred. All 149 inputs and 105 retained artifacts
+verify, but no complete source snapshot or independent concept pass exists.
+Next: additive, explicitly post-closure source recovery, then real concept
+verification before any fixed turn 3. Four original turns remain in the
+same session and cumulative budget. No skill change or Stage 3 completion.
+The author [requests coherent commits with detailed documentation on local main](history/2026-10-13-local-commit-direction.md).
+No push is authorized. Earlier checkpoints below retain their chronology.
+
 Latest timing-proof result: [turn 1 completed normally and passes fact/preflight review](../evals/runs/stage-3-spine-time-1/turn-1-disposition.md).
 The independent review and root agree; native same-session screenshot
 delivery is corroborated. All 149 inputs and 97 source files verify;

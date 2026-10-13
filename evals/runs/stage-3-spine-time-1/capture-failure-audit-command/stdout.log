@@ -1,0 +1,47 @@
+{
+  "verifiedFrozenInputs": 149,
+  "originalResultSha256": "7a7cbf72ccf7963cc665961a486af11b8c49b44f7ea755db217a6ec3f5ac63b6",
+  "originalArtifactsVerified": 105,
+  "originalComplete": false,
+  "nativeTurnCompleted": true,
+  "sourceSnapshotAvailable": false,
+  "signalOrTimeout": false,
+  "outerCode": 1,
+  "sessionId": "01a133cb-3949-7881-a279-b078b5f3baca",
+  "durationMs": 941074,
+  "usage": {
+    "input_tokens": 1877588,
+    "cached_input_tokens": 1750656,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 23770,
+    "reasoning_output_tokens": 4018
+  },
+  "finalMessage": "Three runnable local sketches are ready. **I recommend the bring-up fixture**: it connects directly to something you built and explains the relationship between command, access and observation.\n\nRun:\n\n```bash\ncd site\nnpm run concepts\n```\n\nThen compare:\n\n| Concept | Local preview | Story structure |\n|---|---|---|\n| **1. Bring-up fixture — recommended** | [Fixture](http://127.0.0.1:3000/sketch/fixture) | Prepare → command → access → observe → record |\n| 2. Power-state assembly | [Sensor](http://127.0.0.1:3000/sketch/sensor) | State table separating planning from observation |\n| 3. Observation loom | [Loom](http://127.0.0.1:3000/sketch/loom) | Probe connectors relating commands, observations and open questions |\n\nEach has an opening, middle and ending. Geometry is labelled explanatory. I checked desktop and phone layouts, text fallbacks, and reduced-motion rendering. The corrected [printable HTML CV](http://127.0.0.1:3000/cv.html) downloads successfully. Nothing is published.\n\n**Which concept should carry the full story: 1, 2 or 3?** You can also tell me to choose.\n\nThis is the concept-choice stop required by the [storyfolio skill](/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-zdvnMZ/.agents/skills/storyfolio/SKILL.md): “They have picked one, or told you to pick.” Your choice leads to the complete storyboard for review before the full build.",
+  "liveDiagnosisEvidence": [
+    {
+      "path": "site/next.config.ts",
+      "sha256": "6f7cc811472fd450d8a16beb43744c585f348a1b7dd95a6b0643e4bd05264bca",
+      "bytes": 147
+    },
+    {
+      "path": "site/scripts/serve-concepts.mjs",
+      "sha256": "441da004dc8da06e6055ac23ae60ae4cfa54681b43a411d2f27980e8aa97945b",
+      "bytes": 681
+    },
+    {
+      "path": "site/.next-concepts/BUILD_ID",
+      "sha256": "a3416877e11875fe7282c7bb89b49eccea79101cc673a7fc902cf5cf6d9ea488",
+      "bytes": 21
+    },
+    {
+      "path": "site/.next-concepts/required-server-files.json",
+      "sha256": "a39b3b3c41ecfa5f2c4735aa94ef81d320a5b42d18ac8bcb3a74d7965cb0ac33",
+      "bytes": 10278
+    }
+  ],
+  "sourceEvidenceBasis": "Live post-closure diagnosis, not a recovered snapshot or original closure-time source proof",
+  "paidCalls": 0,
+  "writes": false,
+  "next": "Preserve failure; bind additive source recovery before any browser or paid continuation"
+}
+

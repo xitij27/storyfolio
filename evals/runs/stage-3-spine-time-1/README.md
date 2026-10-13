@@ -1,5 +1,11 @@
 # Fresh whole-site proof with a longer turn allowance
 
+Current result: [turn 2 completed natively; original source capture failed](turn-2-capture-disposition.md).
+The custom `.next-concepts` cache hit the snapshot byte bound. Original
+failure and all 149 inputs are preserved. No paid retry, independent
+concept pass or turn 3. Additive post-closure source recovery comes next.
+Earlier preparation checkpoints below retain their chronology.
+
 Current result: [turn 1 passes the actual factual/preflight gate](turn-1-disposition.md).
 Native image-view delivery is corroborated; all 149 inputs and 97 source
 files verify. Optional recommendation/refusal stays unobserved. All 351
