@@ -4,6 +4,10 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest status question: [where are we after the local commits?](history/2026-10-13-stage-status-after-local-commits.md)
+Still Stage 3, currently awaiting independent verification of the fresh
+journey's concepts. No product or test state changed in this status answer.
+
 Latest local checkpoint: [the full post-closure authored source is archived](../evals/runs/stage-3-spine-time-1/source-recovery-disposition.md),
 189 files including the actual app, fact ledger and current concept notes.
 The original failed capture is preserved, not promoted. The
