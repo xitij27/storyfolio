@@ -1,5 +1,10 @@
 # Storyboard length correction
 
+Current continuation: the author [directs implementation through Stage 3](../../../docs/history/2026-10-13-stage-3-implementation-direction.md),
+accepting the recommended ten-beat fixture exception. Follow the additive
+[continuation record](implementation-continuation.md). Earlier range results
+remain unchanged; final site approval is still required.
+
 Current checkpoint: [turn 3 explicitly requests a ten-beat exception](turn-3-disposition.md),
 with a correctly stated twelve-screen total and genuine approval wait.
 The original normal range is unmet; author approval is pending. No turn 4,

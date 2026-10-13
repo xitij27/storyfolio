@@ -1,5 +1,8 @@
 # Historical documentation and preservation record
 
+Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
+following the recommended plan and its single-fixture scope exception.
+
 Newest planning request: [13 October stage status and next implementation](2026-10-13-next-implementation-request.md).
 This records a plan, not approval of the ten-beat exception or a new run.
 

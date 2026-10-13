@@ -1,5 +1,10 @@
 # Documentation map
 
+Current direction: [implement through Stage 3 completion](history/2026-10-13-stage-3-implementation-direction.md),
+including the recommended ten-beat fixture exception. Follow the
+[continuation](../evals/runs/stage-3-storyboard-length-1/implementation-continuation.md)
+and the newest handover checkpoint. Actual final site review is still required.
+
 Current next-work summary: [stage status and next implementation](superpowers/plans/2026-10-13-stage-status-and-next-implementation.md),
 requested on [13 October](history/2026-10-13-next-implementation-request.md).
 Stage 2 is complete; finish Stage 3 before release packaging. The ten-beat

@@ -4,6 +4,16 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Current implementation direction: [follow the recommended sequence until Stage 3 is complete](history/2026-10-13-stage-3-implementation-direction.md).
+This accepts the recommended ten-beat exception for the current fixture,
+recorded prospectively while preserving the normal-range miss. Resume the
+existing candidate at fixed turn 4 after original integrity/readiness
+checks and commit. Three original gated turns remain, followed by the
+finite comparisons, regression, whole-site checks and actual author review.
+The [continuation record](../evals/runs/stage-3-storyboard-length-1/implementation-continuation.md)
+tracks this work. No new permission question is needed for ordinary steps
+already within the plan. Stage 3 remains open; no push or publication.
+
 Current planning checkpoint: the author asks for stage status and a next
 implementation plan. Start with the [13 October consolidated plan](superpowers/plans/2026-10-13-stage-status-and-next-implementation.md)
 and [exact request](history/2026-10-13-next-implementation-request.md).
