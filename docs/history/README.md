@@ -1,5 +1,8 @@
 # Historical documentation and preservation record
 
+Newest planning request: [13 October stage status and next implementation](2026-10-13-next-implementation-request.md).
+This records a plan, not approval of the ten-beat exception or a new run.
+
 Latest: [authority to finish Stage 3](2026-10-12-stage-3-completion-authority.md),
 including necessary paid agents. Earlier narrow approvals remain historical.
 

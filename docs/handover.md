@@ -4,6 +4,18 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Current planning checkpoint: the author asks for stage status and a next
+implementation plan. Start with the [13 October consolidated plan](superpowers/plans/2026-10-13-stage-status-and-next-implementation.md)
+and [exact request](history/2026-10-13-next-implementation-request.md).
+Stage 1 is implemented with closure decisions open; Stage 2 is complete;
+Stage 3 has build guidance and a candidate at storyboard approval, not an
+accepted full site; Stage 4 packaging follows that acceptance. Next visible
+work is a three-beat spine in reviewable looks, conditional on the author's
+still-pending ten-beat scope decision. The plan recommends that exception
+for this fixture only, without passing normal-range coverage. No new run,
+skill change or tracing installation occurred. Earlier checkpoints below
+retain their chronology; this plan is the current next-work summary.
+
 Latest question: [can SIGTERM origin and reason be determined?](history/2026-10-13-sigterm-attribution-question.md)
 Read-only checks confirm the known receive/forward path, not the initial
 sender. Narrow journal queries had no entries; sender-aware tracing was not
@@ -1022,6 +1034,10 @@ No skill change, evaluation run, clone, dependency installation or example
 repository change was made for this planning amendment.
 
 ## Start the next session
+
+For current next work, use the [13 October stage and implementation plan](superpowers/plans/2026-10-13-stage-status-and-next-implementation.md)
+and the top checkpoint. The older launch sequence below is historical;
+do not use its former pending states as fresh instructions or allowances.
 
 Read [AGENTS.md](../AGENTS.md), this page and the
 [corrected baseline findings](../evals/runs/codex-bench-depth-baseline-1/findings.md).

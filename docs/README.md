@@ -1,5 +1,10 @@
 # Documentation map
 
+Current next-work summary: [stage status and next implementation](superpowers/plans/2026-10-13-stage-status-and-next-implementation.md),
+requested on [13 October](history/2026-10-13-next-implementation-request.md).
+Stage 2 is complete; finish Stage 3 before release packaging. The ten-beat
+storyboard decision remains pending. Earlier checkpoints below are historical.
+
 Latest diagnostic question: [SIGTERM delivery, attribution limits and prospective tracing](history/2026-10-13-sigterm-attribution-question.md).
 No tracing was installed, and the storyboard decision is still pending.
 
