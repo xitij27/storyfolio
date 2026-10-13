@@ -1,5 +1,11 @@
 # Storyboard length correction
 
+Completed continuation: [root disposition](concept-continuation-disposition.md).
+All seven new batches closed normally; 18 reports and 144 individually
+reviewed originals verify within 536342 ms cumulative execution. Stop 2
+passes for provisional selection only. Existing candidate-3 turn 3 is next
+after the gate commit, not a new paid attempt or Stage 3 completion.
+
 13 October continuation: [author approval](../../../docs/history/2026-10-13-stage-3-browser-continuation-approval.md)
 and [root launch disposition](concept-continuation-launch-disposition.md)
 permit only seven unstarted browser batches. The completed prefix stays

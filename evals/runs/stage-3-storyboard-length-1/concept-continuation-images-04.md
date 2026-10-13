@@ -1,0 +1,13 @@
+# Continuation batch 04 original-image review
+
+All 16 new batch-04 PNGs were individually opened with `view_image` at original detail, including files whose pixels resemble prior captures. The [exact inventory](concept-continuation-images-04.json) records repository-relative paths, independently checked SHA-256 and byte sizes, and per-image notes. Review completion is not measurement completion or permission for a later actor gate.
+
+The [manifest](concepts-2/batches/04/artifacts/manifest.json) reports complete, passing desktop and phone captures, with identical before/after source digest `7104be428d5e26c867e8dbcc3f650a467931135346a54209ec8f3e137a45ceb9`. This review did not rerun the final integrity verifier.
+
+The actual target is `fixture-light-appearance`, the existing Light button on the fixture sketch. Both [desktop](concepts-2/batches/04/artifacts/04-desktop/report.json) and [phone](concepts-2/batches/04/artifacts/04-phone/report.json) trials begin at `/sketch/fixture?look=dark`, with Light unselected and Dark selected. Pointer and keyboard activation reach `/sketch/fixture`, report `look:light`, reverse the pressed states and change the palette. The images visibly corroborate dark-ground/pale-text to pale-ground/dark-text switching. Keyboard before images show Light focus; Enter follows five actual Tab presses on desktop and two on phone. This is an observed intended response, not an unchanged default selection.
+
+Opening, middle and ending prose is legible on both viewports, including the unresolved incident and the distinction between a two-year projection and a 72-hour observed run. No material clipping or object/text collision is visible in these originals. The pinned fixture is volumetric and changes from a joined two-row assembly to six separated modules, then rejoins. However, its face labels are blurred on desktop and effectively unreadable on phone. Separation alone weakly explains the named code/access/observation relationship, so prose still supplies much of the meaning.
+
+These are provisional concept sketches. A functioning palette switch does not prove final material diversity, detailed explanatory geometry, animation quality, final-site readiness or author acceptance. The other batches, physical devices and any later gate are outside this review. Prior operation-02 outer interruption is neither changed nor excused by this batch.
+
+Only saved-file reads, image viewing, hash/size checks and these new review records were performed. No browser, model, test, app-runtime, cleanup or process-signalling action was issued. No old review or capture file was edited.

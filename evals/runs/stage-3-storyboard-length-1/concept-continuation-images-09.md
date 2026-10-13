@@ -1,0 +1,12 @@
+# Batch 09 original-image review
+
+All 16 retained PNG originals were individually opened with `view_image` at original detail on 13 October 2026: eight desktop (1440 x 900), eight phone (390 x 844). [The inventory](concept-continuation-images-09.json) records actual paths, byte counts, SHA-256 hashes and per-image notes. Its `complete: true` means review-only completion; `measurementComplete: false` leaves the combined gate to root.
+
+The probe concept's **Dark** appearance control was exercised from Light. Both saved reports are complete with no listed problems and record pointer and keyboard identity changes, with Enter for keyboard activation.
+
+- Both modalities and viewports visibly change the ground, main text, accents and selected pill from Light to Dark. Keyboard focus is visible on Dark before and after activation. The green probe itself remains recognizably the same object.
+- Opening, middle and ending main copy, smaller explanatory qualification and lower links fit and remain readable without observed clipping or object/prose collision. The opening states ownership; the middle explicitly declines actual timing, cause or resolution; the ending preserves the forty samples/six tests/no customers and unfinished-qualification limits.
+- The six sleeves visibly form one horizontal assembly, split into two angled groups of three, then reassemble. This supports a symbolic separation accompanying the command/observation wording, but neither group has a readable identifying label. Fine face marks do not provide an independent timing explanation; the sample and qualification limits at the ending are conveyed by prose, not geometry.
+- Dark-mode limitations are real: top-left All concepts and the desktop breadcrumb are dim; black loops and dark lower object edges have weak separation from the ground, especially on phone. The object remains visible through its green faces, highlighted edges and gold tips, but the dark appearance makes fine detail less distinct than the paired Light frames. No numeric contrast ratio or conformance verdict was measured.
+
+This batch establishes only the observed appearance response and sampled visual findings. It is not final look approval, author approval, full-site accessibility acceptance or Stage 3 completion. Continuous and reverse transitions are unobserved here. Root owns the combined integrity and semantic gate. Earlier inventories and historical records remain unchanged.

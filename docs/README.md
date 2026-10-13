@@ -1,5 +1,10 @@
 # Documentation map
 
+Latest result: the [seven-batch continuation completed successfully](../evals/runs/stage-3-storyboard-length-1/concept-continuation-disposition.md).
+All 18 reports and 144 reviewed originals verify, preserving the explicit
+old interruption exception. Concept selection may advance to existing
+candidate-3 turn 3 after commit. Stage 3 and the length correction remain open.
+
 The author has [approved the seven-batch browser continuation](history/2026-10-13-stage-3-browser-continuation-approval.md)
 on 13 October and clarified that they sent no SIGTERMs. Reuse completed
 captures within the original remaining budget; no reruns or model calls.

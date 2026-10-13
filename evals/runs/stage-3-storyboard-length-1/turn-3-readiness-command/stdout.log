@@ -1,0 +1,647 @@
+{
+  "audit": {
+    "schemaVersion": 1,
+    "integrityVerified": true,
+    "cohort": "codex-full-journey-candidate-3",
+    "turn": 2,
+    "inputDigest": "68c2bfd15305eb9b9fcb8114dbe64dd511d9a227627c8865833aad281f95ebeb",
+    "frozenInputs": 149,
+    "normalOuterClosure": true,
+    "outerDurationMs": 571451,
+    "outerFinished": "2026-10-12T19:31:03.249Z",
+    "sourceFiles": 185,
+    "sourceDigest": "7104be428d5e26c867e8dbcc3f650a467931135346a54209ec8f3e137a45ceb9",
+    "fullLiveSourceEqualsSnapshot": true,
+    "applicationFilesUnderSite": 87,
+    "exclusions": [
+      ".git",
+      "site/.next",
+      "site/checks",
+      "site/next-env.d.ts",
+      "site/node_modules",
+      "site/tsconfig.tsbuildinfo"
+    ],
+    "emptyUnexpectedDirectories": [
+      {
+        "path": ".aws",
+        "type": "directory"
+      },
+      {
+        "path": ".codex",
+        "type": "directory"
+      }
+    ],
+    "history": [
+      {
+        "turn": 1,
+        "resultSha256": "0809bcb67b735ef4825c95327a2db3d38955ad68d0b9d420ca8ef35e3b7efc2e",
+        "artifacts": 199,
+        "snapshotFiles": 97,
+        "usage": {
+          "input_tokens": 241341,
+          "cached_input_tokens": 207488,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3326,
+          "reasoning_output_tokens": 98
+        },
+        "durationMs": 145688
+      },
+      {
+        "turn": 2,
+        "resultSha256": "290c39f7aca8ae6e8254e78a6423292f4bf34af233ca2c94f34d09189615fbfe",
+        "artifacts": 291,
+        "snapshotFiles": 185,
+        "usage": {
+          "input_tokens": 2319779,
+          "cached_input_tokens": 2237312,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 17259,
+          "reasoning_output_tokens": 1438
+        },
+        "durationMs": 569276,
+        "invokedGate": {
+          "path": "evals/runs/stage-3-storyboard-length-1/gate-after-1.json",
+          "sha256": "dc4dddcef00f56c57dd24eb4cd6d4159f784c29d4b1766686f58b2457246ddd0",
+          "savedSha256": "dc4dddcef00f56c57dd24eb4cd6d4159f784c29d4b1766686f58b2457246ddd0"
+        },
+        "terminal": {
+          "text": "I’ve recorded your corrections and built three runnable local scroll sketches.\n\n| Concept | Story structure | 3D object |\n|---|---|---|\n| **[Bring-up fixture](http://127.0.0.1:3000/sketch/fixture)** — recommended | Bench checklist: connect firmware to physical observation | Six contact modules assemble, separate and reunite |\n| [Inside the power cycle](http://127.0.0.1:3000/sketch/enclosure) | State table: what supports a battery-life claim? | Six symbolic enclosure sections open into a loop |\n| [Follow the observation](http://127.0.0.1:3000/sketch/probe) | Timing diagram: what can a signal tell you? | Six connector sleeves separate command from observation |\n\nAll geometry is labelled explanatory. Each sketch has an opening, middle and ending, checked at desktop and phone sizes. Type checking, lint and all 129 engine tests passed.\n\nTo review them, run from this workspace:\n\n```bash\ncd site\nnpm run dev\n```\n\nThen open the links above. **I recommend the fixture** because you built that part of Mosslink yourself, and it directly supports your code-to-observation story.\n\nWhich concept should we develop: **fixture, enclosure or probe**? You can also ask me to choose.\n\nThe [storyfolio skill](/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/.agents/skills/storyfolio/SKILL.md) requires a concept choice before the storyboard: “They have picked one, or told you to pick.” That choice is the next step toward the complete local portfolio, Mosslink page, printable HTML CV and supporting assets. Nothing has been published.",
+          "sha256": "170f49d6a84646dd942e5c8034413e3edfd55df67dddd2a4ac63902afe02dfff"
+        },
+        "accessTriage": {
+          "commands": [
+            {
+              "id": "item_1",
+              "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/references/concept.md .agents/skills/storyfolio/engine/AGENTS.md .agents/skills/storyfolio/engine/package.json .agents/skills/storyfolio/engine/content/experience.tsx .agents/skills/storyfolio/engine/content/sketches/index.ts'",
+              "lines": [
+                4,
+                5
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_2",
+              "command": "/bin/bash -lc \"cat >> docs/story/facts.md <<'EOF'\n\n# User-confirmed corrections — stop 1 completed\n\nSource for every item below: user's second substantive message, 12 October 2026. These answers supersede ambiguous CV wording above.\n\n- Public name: Ada Mensah. Public project name: Mosslink. Omit employer and employment dates from site and downloadable CV; current details/title not confirmed. No claim of current employment.\n- Personal work: wrote firmware, scheduled power states, built bring-up fixture. Colleague designed PCB and analogue front end. Do not say Ada owned sensor hardware design.\n- Battery: two-year projection from bench current readings and assumed reporting cycle; longest run 72 hours. No field endurance/weather testing supports two-year claim. Exact reporting interval unconfirmed and omitted.\n- Samples: forty engineering samples assembled; six bench tested. None sent to customers. No field pilot or launch. Do not imply Ada alone assembled or tested all samples.\n- Emissions: one preliminary check passed; full qualification programme unfinished. No certified/qualified claim or personal ownership of emissions result.\n- Radio problem: radio remained awake after failed transmission, seen in current trace. No cause, fix, timing or later resolution confirmed. No trace available.\n- Own fixture photograph and simplified power-state diagram permitted for public use. Photograph unavailable. Colleague's circuit diagram has no permission; exclude. The supplied two SVGs may serve as labelled explanations only, never photographs, original wiring, firmware, measured traces or results. Sleep/Measure/Transmit is a teaching sequence with no durations or current values.\n- Audience: firmware hiring manager. Desired understanding: how Ada connects code to a measurable signal.\n- Daily artifacts: state table, timing diagram, current trace; notes also list bench checklists. Bring-up means checking a new board's basic operation.\n- Expressed lesson: a firmware decision needs a physical observation; estimates and observed runs support different claims. This is a principle, not an all-problems-resolved/all-devices-tested claim.\n- End actions: email link to public example contact ada@example.com and download corrected printable HTML CV. No PDF invention, mail sending or delivery-test claim.\n- Mosslink only project; needs its own project page and main-story presence.\n- English, ordinary navigation, share preview, icon, useful missing-page page. No testimonials/blog/chat/translation/contact form. Legal/hosting-jurisdiction details deferred until publishing; no legal-compliance claim.\n- Local system fonts, supplied drawings or own explanatory geometry. No external purchase/download. No additional skill installation; user declined.\n- No old site or testimonials. Keep everything local; user decides publishing.\n\n## Remaining omissions, not blockers\nEmployment/title/dates, exact reporting cycle, radio cause/fix/timing/outcome, individual ownership of team sample/emissions results: unconfirmed and excluded. No extra facts requested because user explicitly instructed omission over guessing.\nEOF\nnode .agents/skills/storyfolio/scripts/scaffold.mjs site\"",
+              "lines": [
+                6,
+                7
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_3",
+              "command": "/bin/bash -lc 'npm ci --offline --cache /tmp/storyfolio-npm-cache'",
+              "lines": [
+                8,
+                11
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_4",
+              "command": "/bin/bash -lc 'cat content/index.ts content/story.ts content/formations.ts content/copy.ts content/looks.ts components/story/types.ts app/page.tsx app/globals.css components/story/pieces.tsx components/story/chapter.tsx'",
+              "lines": [
+                9,
+                10
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_5",
+              "command": "/bin/bash -lc \"cat components/story/story.css lib/story/formation.ts content/faces.ts app/layout.tsx app/sketch/\\\\[id\\\\]/page.tsx\"",
+              "lines": [
+                12,
+                13
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_7",
+              "command": "/bin/bash -lc \"mkdir -p public/assets\ncp ../public/assets/*.svg public/assets/\ncat > content/sketches/concepts.tsx <<'EOF'\n\\\"use client\\\";\nimport { Story } from \\\"@/components/story/story\\\";\nimport { Chapter, Beat, Kicker, Title, Body, Note } from \\\"@/components/story/chapter\\\";\nimport type { PieceProps, StoryBundle, FaceDef } from \\\"@/components/story/types\\\";\nimport { blankFormation, type Pose, type Formation } from \\\"@/lib/story/formation\\\";\nimport { looks } from \\\"../looks\\\";\n\ntype Kind = \\\"fixture\\\" | \\\"enclosure\\\" | \\\"probe\\\";\nconst labels = [\\\"CODE\\\", \\\"STATE\\\", \\\"BOARD\\\", \\\"ACCESS\\\", \\\"SIGNAL\\\", \\\"CLAIM\\\"];\nfunction Fixture({ material, look }: PieceProps) {\n  return <group>\n    <mesh castShadow receiveShadow position={[0, -.22, 0]}><boxGeometry args={[1, .56, .65]}/><meshStandardMaterial color=\\\"#263c3a\\\" roughness={.65}/></mesh>\n    <mesh material={material} position={[0,-.22,.331]}><planeGeometry args={[.86,.4]}/></mesh>\n    {[-.27,.27].map(x=><group key={x} position={[x,.15,0]}><mesh castShadow><cylinderGeometry args={[.07,.09,.36,16]}/><meshStandardMaterial color=\\\"#cba95d\\\" metalness={.75} roughness={.28}/></mesh><mesh position={[0,.23,0]}><cylinderGeometry args={[.035,.035,.16,12]}/><meshStandardMaterial color=\\\"#dde0d8\\\" metalness={.8} roughness={.3}/></mesh></group>)}\n    <mesh position={[.37,-.22,.345]}><sphereGeometry args={[.03,12,12]}/><meshStandardMaterial color={look.accent}/></mesh>\n  </group>;\n}\nfunction Enclosure({material}:PieceProps) {\n  return <group>\n    <mesh castShadow receiveShadow><cylinderGeometry args={[.48,.48,.5,40]}/><meshStandardMaterial color=\\\"#e2e0d3\\\" roughness={.65}/></mesh>\n    <mesh material={material} rotation={[-Math.PI/2,0,0]} position={[0,.256,0]}><circleGeometry args={[.37,40]}/></mesh>\n    <mesh rotation={[Math.PI/2,0,0]}><torusGeometry args={[.48,.045,12,40]}/><meshStandardMaterial color=\\\"#cba95d\\\" metalness={.55} roughness={.4}/></mesh>\n    {[0,1,2,3].map(i=><mesh key={i} position={[Math.cos(i*Math.PI/2)*.38,.27,Math.sin(i*Math.PI/2)*.38]}><sphereGeometry args={[.025,8,8]}/><meshStandardMaterial color=\\\"#304541\\\"/></mesh>)}\n  </group>;\n}\nfunction Probe({material}:PieceProps) {\n  return <group>\n    <mesh castShadow receiveShadow rotation={[0,0,Math.PI/2]}><cylinderGeometry args={[.22,.26,.8,24]}/><meshStandardMaterial color=\\\"#304541\\\" roughness={.5}/></mesh>\n    <mesh castShadow rotation={[0,0,Math.PI/2]} position={[.48,0,0]}><cylinderGeometry args={[.05,.12,.25,16]}/><meshStandardMaterial color=\\\"#cba95d\\\" metalness={.7} roughness={.3}/></mesh>\n    <mesh material={material} position={[0,0,.24]}><planeGeometry args={[.65,.24]}/></mesh>\n    <mesh rotation={[0,0,Math.PI/2]} position={[-.41,0,0]}><torusGeometry args={[.22,.035,10,24]}/><meshStandardMaterial color=\\\"#191f21\\\" roughness={.8}/></mesh>\n  </group>;\n}\nfunction poses(kind:Kind, stage:number): Pose[] {\n  return Array.from({length:6},(_,i)=> {\n    if(kind===\\\"fixture\\\") return {position:stage===1 ? [(i%3-1)*1.4, (i<3?.85:-.85),i===4?.35:0] : [(i%3-1)*1.02,(i<3?.36:-.36),0],rotation:[.25,stage===1?.12:0,0],size:[1,1]};\n    if(kind===\\\"enclosure\\\") return {position:stage===1?[Math.cos(i*Math.PI/3)*1.55,Math.sin(i*Math.PI/3)*1.55,0]:[0,(i-2.5)*.51,0],rotation:stage===1?[1.2,0,0]:[.2,0,0],size:[1,1]};\n    return {position:stage===1?[(i-2.5)*.9,(i<3?.85:-.85),0]:[(i-2.5)*.83,0,0],rotation:[0,0,stage===1?(i<3?.25:-.25):0],size:[1,1]};\n  });\n}\nfunction formation(kind:Kind,stage:number):Formation {\n  return {...blankFormation(6),pieces:poses(kind,stage),span:kind===\\\"probe\\\"?6.4:4.8,rise:kind===\\\"enclosure\\\"?4.8:3.4,anchor:[.48,.15],turn:[.16,-.28],near:5,floor:-3,sway:[.06,.16,0]};\n}\nconst descriptions = {\n fixture: {name:\\\"The bring-up fixture\\\",question:\\\"How do you connect firmware to a physical observation?\\\",form:\\\"Bench checklist\\\",titles:[\\\"Ada Mensah. Firmware at the bench.\\\",\\\"A command needs an observation.\\\",\\\"A claim needs its limits.\\\"],body:[\\\"For Mosslink, I wrote the firmware, scheduled the power states and built the bring-up fixture. Bring-up means checking a new board’s basic operation.\\\",\\\"A current trace showed the radio remaining awake after a failed transmission. The cause, fix and later outcome are not confirmed. The fixture opens here to separate code, access and observation.\\\",\\\"Two years is a projection from bench current readings and an assumed reporting cycle. The longest observed run was 72 hours. An estimate and an observed run support different claims.\\\"],note:\\\"Six contact modules form an explanatory fixture. This geometry shows relationships, not actual wiring or the real device.\\\"},\n enclosure: {name:\\\"Inside the power cycle\\\",question:\\\"What supports a battery-life claim?\\\",form:\\\"State table\\\",titles:[\\\"Ada Mensah. Open the estimate.\\\",\\\"A teaching cycle, an unresolved observation.\\\",\\\"Projection and run: different evidence.\\\"],body:[\\\"I wrote Mosslink’s firmware and scheduled its power states. The two-year battery figure is a projection; there is no field endurance or weather testing to support it.\\\",\\\"Sleep, Measure and Transmit are a teaching sequence, with no actual firmware state names, durations or current values claimed. Separately, a current trace showed the radio staying awake after a failed transmission.\\\",\\\"The longest run was 72 hours. I want to make the basis of a claim visible: measured bench current supports the estimate, while an observed run supports a different statement.\\\"],note:\\\"Six machined sections make a symbolic sensor enclosure. They are explanatory geometry, not a reconstruction of Mosslink.\\\"},\n probe: {name:\\\"Follow the observation\\\",question:\\\"What can a physical signal tell you about firmware?\\\",form:\\\"Timing diagram\\\",titles:[\\\"Ada Mensah. Follow code to the bench.\\\",\\\"An observation, without an invented ending.\\\",\\\"Make the claim match the observation.\\\"],body:[\\\"My working documents are a state table, timing diagram and current trace. For Mosslink, I wrote firmware, scheduled power states and built a bring-up fixture.\\\",\\\"After a failed transmission, a current trace showed the radio remaining awake. This sketch separates a conceptual command path from its observation. No actual trace, timing, cause or resolution is shown.\\\",\\\"Forty engineering samples were assembled; six were bench tested. None went to customers. The preliminary emissions check passed, while the full qualification programme remains unfinished.\\\"],note:\\\"Six connector sleeves form a symbolic probe assembly. Position indicates conceptual order, not duration, wiring or a measured signal.\\\"}\n};\nfunction Concept({kind}:{kind:Kind}) {\n  const d=descriptions[kind];\n  const story={pieces:6,chapters:[{id:\\\"opening\\\",number:1,name:kind===\\\"fixture\\\"?\\\"Purpose\\\":kind===\\\"enclosure\\\"?\\\"State\\\":\\\"Command\\\",role:\\\"opening\\\" as const,beats:[{id:\\\"opening.start\\\",height:1.5}]},{id:\\\"middle\\\",number:2,name:kind===\\\"fixture\\\"?\\\"Observe\\\":kind===\\\"enclosure\\\"?\\\"Transition\\\":\\\"Observation\\\",role:\\\"how\\\" as const,beats:[{id:\\\"middle.open\\\",height:1.5}]},{id:\\\"close\\\",number:3,name:\\\"Claim\\\",role:\\\"close\\\" as const,beats:[{id:\\\"close.end\\\",height:1.5}]}]};\n  const faces:FaceDef[]=story.chapters.flatMap(c=>Array.from({length:6},(_,piece)=>({id:\"'`${c.id}-${piece}`,beat:c.beats[0].id,piece,draw(ctx,w,h,look){ctx.fillStyle=\"#263c3a\";ctx.fillRect(0,0,w,h);ctx.strokeStyle=\"#cba95d\";ctx.lineWidth=w*.014;ctx.strokeRect(w*.04,h*.08,w*.92,h*.84);ctx.fillStyle=\"#faf7ec\";ctx.font=`600 ${w*.14}px ui-monospace,monospace`;ctx.textAlign=\"center\";ctx.fillText(labels[piece],w*.5,h*.58);ctx.fillStyle=look.accent;}})));\n  const bundle:StoryBundle={story,formations:{\"opening.start\":{rest:formation(kind,0)},\"middle.open\":{rest:formation(kind,1)},\"close.end\":{rest:formation(kind,2)}},faces,looks,copy:{railLabel:\"Sketch chapters\",lookLabel:\"Appearance\"},Piece:kind===\"fixture\"?Fixture:kind===\"enclosure\"?Enclosure:Probe};\n  return <main><nav className=\"concept-nav\" aria-label=\"Concept navigation\"><a href=\"/\">All concepts</a><span>{d.name}</span></nav><Story bundle={bundle}>{story.chapters.map((c,i)=><Chapter key={c.id} id={c.id}><Beat story={story} id={c.beats[0].id} fallback={<p>{d.note}</p>}><Kicker number={i+1}>{d.form} · {c.name}</Kicker><Title as={i===0?\"h1\":\"h2\"} id={`${c.id}-title`}>{d.titles[i]}</Title>{i===0&&<p className=\"concept-question\">{d.question}</p>}<Body>{d.body[i]}</Body><Note>{d.note}</Note>{i===0&&<p className=\"concept-contact\"><a href=\"mailto:ada@example.com\">Email Ada</a> · <a href=\"#close\">Read the conclusion</a></p>}{i===2&&<p><a href=\"mailto:ada@example.com\">ada@example.com</a> · <a href=\"/\">Compare concepts</a></p>}</Beat></Chapter>)}</Story></main>;\n}\nexport function FixtureSketch(){return <Concept kind=\"fixture\"/>;}\nexport function EnclosureSketch(){return <Concept kind=\"enclosure\"/>;}\nexport function ProbeSketch(){return <Concept kind=\"probe\"/>;}\nEOF\ncat > content/sketches/index.ts <<'\"'EOF'\nimport type { ComponentType } from \\\"react\\\";\nimport { FixtureSketch, EnclosureSketch, ProbeSketch } from \\\"./concepts\\\";\nexport const sketches: Record<string, ComponentType> = {fixture:FixtureSketch,enclosure:EnclosureSketch,probe:ProbeSketch};\nEOF\ncat > app/page.tsx <<'EOF'\nexport default function Home(){return <main className=\\\"concept-index\\\"><p className=\\\"eyebrow\\\">ADA MENSAH / LOCAL CONCEPT STUDIES</p><h1>Firmware decisions.<br/>Physical observations.</h1><p>Three scroll sketches for Mosslink. Choose the object and story structure before we build the full portfolio.</p><ol><li><a href=\\\"/sketch/fixture\\\">The bring-up fixture ↗</a><p>A bench checklist, carried by six contact modules. Recommended.</p></li><li><a href=\\\"/sketch/enclosure\\\">Inside the power cycle ↗</a><p>A state table, carried by six sensor-enclosure sections.</p></li><li><a href=\\\"/sketch/probe\\\">Follow the observation ↗</a><p>A timing diagram, carried by six probe connector sleeves.</p></li></ol><p>All geometry is explanatory. These sketches contain no actual device wiring, firmware timing, measured traces or proof of results.</p><a href=\\\"mailto:ada@example.com\\\">ada@example.com</a></main>}\nEOF\ncat >> app/globals.css <<'EOF'\n.concept-nav{position:absolute;top:1.5rem;left:clamp(1.25rem,5vw,5rem);z-index:8;display:flex;gap:1.5rem;font: .8rem ui-monospace,monospace;color:#58636c;max-width:60%;}\n.concept-nav span{display:none;}\n.concept-question{font-size:1.12rem;font-weight:600;line-height:1.4;margin-top:1rem;}\n.concept-contact{font-size:.85rem;line-height:1.5;}\n.concept-index{background:#f2f0e9;color:#202932;min-height:100vh;padding:clamp(2rem,8vw,8rem);max-width:none;}\n.concept-index h1{font:500 clamp(2.5rem,6vw,5.5rem)/1.02 Georgia,serif;letter-spacing:-.04em;}\n.concept-index p{max-width:42rem;line-height:1.7;}\n.concept-index ol{padding-left:1.3rem;margin:3rem 0;}\n.concept-index li{padding:1rem 0;border-top:1px solid #c9ccc4;max-width:44rem;}\n.concept-index li a{font:500 1.65rem Georgia,serif;text-underline-offset:.25rem;}\n.eyebrow{font:.8rem ui-monospace,monospace;letter-spacing:.1em;}\n@media(min-width:800px){.concept-nav span{display:inline;}.story-caption-text{max-width:29rem;}}\n@media(max-width:479px){.story-caption{padding:1.1rem 1.25rem;}.story-title{font-size:2rem;}.story-body{font-size:.94rem;line-height:1.5;}.story-note{font-size:.75rem;margin-top:.65rem;}.concept-question{font-size:.96rem;}.story-bar{padding:.75rem;}.story-look-switch button{padding:.35rem .6rem;}.concept-nav{top:1.65rem;font-size:.7rem;}}\nEOF\ncat > content/copy.ts <<'EOF'\nexport const copy={lang:\\\"en\\\",metadata:{title:\\\"Ada Mensah | Local portfolio concepts\\\",description:\\\"Local scroll-story sketches about Mosslink firmware and physical observation.\\\"},railLabel:\\\"Chapters\\\",lookLabel:\\\"Appearance\\\",faceWords:[\\\"Code\\\",\\\"State\\\",\\\"Board\\\",\\\"Access\\\",\\\"Signal\\\",\\\"Claim\\\",\\\"Evidence\\\"]};\nEOF\nnpm run typecheck\"",
+              "lines": [
+                15,
+                16
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 2,
+              "flags": [
+                "parent-traversal-needs-context"
+              ]
+            },
+            {
+              "id": "item_8",
+              "command": "/bin/bash -lc 'npm run dev -- --hostname 127.0.0.1 --port 3000'",
+              "lines": [
+                17,
+                18
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": -1,
+              "flags": []
+            },
+            {
+              "id": "item_9",
+              "command": "/bin/bash -lc 'npm run lint'",
+              "lines": [
+                19,
+                20
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 1,
+              "flags": []
+            },
+            {
+              "id": "item_10",
+              "command": "/bin/bash -lc \"cat > content/links.ts <<'EOF'\nexport const links = [];\nEOF\nmkdir -p checks/concepts\ncat > scripts/check-concepts.mjs <<'EOF'\nimport {chromium} from 'playwright-core';\nimport {writeFileSync} from 'node:fs';\nconst browser=await chromium.launch({headless:true,args:['--no-sandbox']});\nconst results=[];\ntry{for(const kind of ['fixture','enclosure','probe'])for(const [size,viewport] of [['desktop',{width:1440,height:900}],['phone',{width:390,height:844}]]){\n const page=await browser.newPage({viewport});const errors=[];page.on('pageerror',e=>errors.push(String(e)));\n await page.goto(\"'`http://127.0.0.1:3000/sketch/${kind}`,{waitUntil:'\"'networkidle'});await page.waitForTimeout(1800);\n for(const [i,id]of ['opening','middle','close'].entries()){\n  const y=await page.locator(\"'`#${id}`).evaluate((el)=>el.getBoundingClientRect().top+scrollY+innerHeight*.5);\n  await page.evaluate(y=>scrollTo(0,y),y);await page.waitForTimeout(900);\n  await page.screenshot({path:`checks/concepts/${kind}-${size}-${i}.png`});\n }\n results.push({kind,size,errors,scene:await page.locator('\"'.story').getAttribute('data-scene'),overflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),heading:await page.locator('h1').innerText()});await page.close();\n}writeFileSync('checks/concepts/report.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results));}finally{await browser.close();}\nEOF\nPLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/check-concepts.mjs\"",
+              "lines": [
+                21,
+                22
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 1,
+              "flags": []
+            },
+            {
+              "id": "item_11",
+              "command": "/bin/bash -lc \"rg --files node_modules/next/dist/docs -g '*link*'\"",
+              "lines": [
+                23,
+                24
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_12",
+              "command": "/bin/bash -lc 'NEXT_TELEMETRY_DISABLED=1 npm run dev -- --hostname 127.0.0.1 --port 3000'",
+              "lines": [
+                25,
+                39
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 130,
+              "flags": []
+            },
+            {
+              "id": "item_13",
+              "command": "/bin/bash -lc 'head -65 node_modules/next/dist/docs/01-app/03-api-reference/02-components/link.md && cat AGENTS.md'",
+              "lines": [
+                26,
+                27
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_14",
+              "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\nfor name in ['app/page.tsx','content/sketches/concepts.tsx']:\n p=Path(name);s=p.read_text();pos=s.find('import ')\n if pos<0:s='import Link from \\\"next/link\\\";\\\\n'+s\n else:s=s[:pos]+'import Link from \\\"next/link\\\";\\\\n'+s[pos:]\n import re\n s=re.sub(r'<a href=\\\"(/[\"'^'\"\\\\\\\"]*)\\\">(.*?)</a>',r'<Link href=\\\"\\\\1\\\">\\\\2</Link>',s)\n p.write_text(s)\nPY\nPLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/check-concepts.mjs\"",
+              "lines": [
+                28,
+                29
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 1,
+              "flags": []
+            },
+            {
+              "id": "item_15",
+              "command": "/bin/bash -lc \"curl --noproxy '*' -I http://127.0.0.1:3000 && ps aux | rg 'next dev|next-server'\"",
+              "lines": [
+                30,
+                31
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 7,
+              "flags": []
+            },
+            {
+              "id": "item_17",
+              "command": "/bin/bash -lc \"cat > scripts/preview-concepts.mjs <<'EOF'\nimport {spawn} from 'node:child_process';\nconst server=spawn(process.execPath,['node_modules/next/dist/bin/next','dev','--hostname','127.0.0.1','--port','3000'],{stdio:'inherit',env:{...process.env,NEXT_TELEMETRY_DISABLED:'1'}});\ntry{for(let i=0;i<80;i++){await new Promise(r=>setTimeout(r,250));try{await fetch('http://127.0.0.1:3000');break;}catch{}}\n const check=spawn(process.execPath,['scripts/check-concepts.mjs'],{stdio:'inherit'});const code=await new Promise(r=>check.on('exit',r));process.exitCode=code;\n}finally{server.kill('SIGTERM');}\nEOF\nPLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/preview-concepts.mjs\"",
+              "lines": [
+                33,
+                36
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 1,
+              "flags": []
+            },
+            {
+              "id": "item_18",
+              "command": "/bin/bash -lc 'NEXT_TELEMETRY_DISABLED=1 npm run typecheck && npm run lint'",
+              "lines": [
+                34,
+                35
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_19",
+              "command": "/bin/bash -lc \"cat > docs/story/concepts.md <<'EOF'\n# Concept studies — awaiting selection\n\nAll premises below use the user-confirmed corrections in facts.md. No employment/date claim, cause/fix claim, actual trace, field pilot, certification, or hardware-design ownership is used.\n\nTrade forms considered: state table, timing diagram, current-trace annotation, bench checklist, bring-up procedure, verification record. Ada explicitly uses state tables, timing diagrams, current traces and bench checklists. These structures organize reading; the 3D object is physical explanatory geometry, never a document/card collection. No claim that the drawings reconstruct real artifacts.\n\n## 1. The bring-up fixture — recommended\n\nQuestion: **How do you connect firmware to a physical observation?**\nPremises: Ada wrote Mosslink firmware, scheduled power states and built its bring-up fixture; her stated lesson connects firmware decisions to physical observations.\n\nForm: bench checklist. Planned chapters: Purpose (opening/question/name), Setup (who did firmware/fixture versus colleague's PCB/analogue work), Exercise (state scheduling and local explanatory bring-up drawing), Observe (radio-awake observation without invented cause/fix/trace), Record limits (projection/72-hour run, forty samples/six bench tested, preliminary check/unfinished qualification), Handover (answer, Mosslink project page, printable HTML CV and email).\n\nObject: six chunky contact modules with spring-pin geometry assemble into a symbolic bring-up fixture. The six modules are storytelling components, not six samples or a claimed real pin count. Faces say CODE, STATE, BOARD, ACCESS, SIGNAL, CLAIM. Generic geometry shows conceptual relationships only.\n\nTransformations: Purpose assembles a fixture from the principle that decisions need observations; Observe separates contact modules to make code/access/signal/claim distinctions visible; Handover reunites them, keeping the evidence boundary attached to the claim.\n\nOpening: Ada's name, personal firmware/fixture contribution, question, email and link to ending. Close: estimates and observed runs support different claims; contact/CV/project links.\n\nStands on: personal-contribution, audience, working-artifacts, expressed-lesson and evidence-limit corrections. Needs: no new asset or third-party permission. Supplied bring-up diagram may explain relationships, labelled accordingly; no unavailable fixture photograph.\n\nWhy Ada's: the work-derived fixture carries her stated division of responsibility and the specific Mosslink distinction between observation and unsupported conclusions.\n\nRunnable sketch: /sketch/fixture. Opening, Observe middle, Claim ending. Neutral shared look for conceptual comparison, not final appearance selection.\n\n## 2. Inside the power cycle\n\nQuestion: **What supports a battery-life claim?**\nPremises: Ada scheduled power states; two years is projected from bench current and assumed cycle, while the longest run was 72 hours.\n\nForm: state table. Planned chapters: State (opening/question/name), Responsibility (personal firmware vs colleague hardware), Transition (teaching Sleep/Measure/Transmit with no timing/current/actual firmware claims), Observation (radio awake after failed transmission; unresolved), Evidence (estimate versus observed run and qualification limits), Claim (answer and contact/CV/project).\n\nObject: six thick cylindrical sections form a symbolic sensor enclosure. This is an invented explanatory container, not a reconstruction or a claim that Ada designed hardware. Six segments do not depict actual device construction.\n\nTransformations: State builds the enclosure; Transition opens its sections into a loop, exposing the teaching sequence; Claim closes the enclosure, while text keeps projected and observed evidence distinct.\n\nOpening: Ada's power-scheduling contribution and the unsupported field-endurance boundary. Close: bench-current projection and 72-hour run support different statements.\n\nStands on: personal firmware scheduling, teaching-drawing terms, battery/run correction and expressed lesson. Needs: no new assets or permissions; optional supplied power-state explanation.\n\nWhy Ada's: Mosslink's two-year projection and 72-hour observed run determine the question and ending. Less direct than the fixture because enclosure geometry is symbolic and hardware was her colleague's work.\n\nRunnable sketch: /sketch/enclosure. Opening, Transition middle, Evidence ending.\n\n## 3. Follow the observation\n\nQuestion: **What can a physical signal tell you about firmware?**\nPremises: a current trace revealed radio-awake behavior after a failed transmission; Ada uses timing diagrams/current traces, without confirmed causality or later outcome.\n\nForm: timing diagram. Planned chapters: Command (opening/name/question), Access (firmware/fixture contribution), Sequence (teaching order, no quantitative time axis), Observation (radio-awake note with no published trace), Boundaries (six bench-tested samples, no pilot, preliminary emissions only), Conclusion (answer and contact/CV/project).\n\nObject: six connector sleeves join into a symbolic probe assembly. This is conceptual bench-access geometry, not a claim that Ada made an actual probe or used these connections.\n\nTransformations: Command joins sleeves into one access path; Observation divides conceptual command and observation paths; Conclusion rejoins the assembly with the claim limited by its evidence. No spacing represents elapsed time.\n\nOpening: working documents and firmware/fixture work. Close: sample and qualification boundaries, plus principle that claims match observation.\n\nStands on: working-document, radio-problem, contribution and sample/emissions corrections. Needs: no new asset or permission.\n\nWhy Ada's: it follows her stated code-to-observation aim through the specific unresolved radio observation, but its symbolic probe is less directly hers than the fixture.\n\nRunnable sketch: /sketch/probe. Opening, Observation middle, Boundaries ending.\n\n## Tests and recommendation\n\nSwap: labels alone are generic, but each complete sequence depends on Ada's fixture/firmware ownership and specific Mosslink evidence boundaries. Backdrop: modules physically separate the code/access/observation/claim relationships; geometry carries structure rather than background movement. Depth: each opens from personal work, exposes evidence, returns to a bounded claim. Emblem: fixture directly comes from her contribution; enclosure/probe clearly labelled symbolic, not professional badges. Honesty: all factual copy checked against user-confirmed facts; no invented chronology/results. Thirty seconds: each opening gives name, contribution, contact and ending access, though no real measured artifacts were supplied.\n\nChoose concept 1: its object is directly tied to what Ada built, and a bench checklist supports a hiring manager's inspection of responsibility, observation and limits.\n\nSelection: pending user choice. No full storyboard or final appearance committed.\nEOF\ncat >> docs/story/decided-for-you.md <<'EOF'\n\n- Use site/ as the self-contained Next.js project; preserve source materials and story records at workspace root. Change by moving the folder and retaining docs.\n- Reuse local npm cache only. npm ci --offline succeeded; no dependency download or new skill installation.\n- Use six explanatory modules for each sketch, not a literal number of device components or samples. Reason: tangible repeatable object with clear transformations; change in formation/Piece definitions after concept selection.\n- Give sketches a common neutral system-font appearance, so concept selection compares object/story structure; final appearance is a later skill stop.\n- Disable Next telemetry for local checks/start commands after default dev process attempted blocked telemetry. All preview requests remain loopback.\n- Preserve original local SVGs unchanged in site/public/assets. No derivative yet. MIT supplied terms, coordinator authorship/date and accessible descriptions are retained from asset-notes.md.\nEOF\"",
+              "lines": [
+                37,
+                38
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_20",
+              "command": "/bin/bash -lc \"ls -la .next/dev/lock && rg 'another next dev|already running' node_modules/next/dist/server -n | head -10\"",
+              "lines": [
+                40,
+                41
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_21",
+              "command": "/bin/bash -lc 'PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/preview-concepts.mjs'",
+              "lines": [
+                42,
+                43
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": -1,
+              "flags": []
+            },
+            {
+              "id": "item_22",
+              "command": "/bin/bash -lc \"rg -n 'registry.npmjs|IGNORE.*LOCK|patchIncorrect' node_modules/next/dist/lib/patch-incorrect-lockfile.js node_modules/next/dist/build/swc/index.js && cat .next/dev/logs/next-development.log | tail -30\"",
+              "lines": [
+                44,
+                45
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_23",
+              "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('scripts/preview-concepts.mjs');s=p.read_text().replace(\\\"NEXT_TELEMETRY_DISABLED:'1'\\\",\\\"NEXT_TELEMETRY_DISABLED:'1',NEXT_IGNORE_INCORRECT_LOCKFILE:'1'\\\");p.write_text(s)\nPY\nNEXT_IGNORE_INCORRECT_LOCKFILE=1 PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/preview-concepts.mjs\"",
+              "lines": [
+                46,
+                49
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": -1,
+              "flags": []
+            },
+            {
+              "id": "item_24",
+              "command": "/bin/bash -lc 'npm test'",
+              "lines": [
+                47,
+                48
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_25",
+              "command": "/bin/bash -lc \"ls node_modules/@next && rg -n 'getRegistry|downloadNativeNextSwc|downloadWasm|fetch\\\\(' node_modules/next/dist/build/swc/index.js && cat next.config.ts && ls node_modules/@next/swc-linux-x64-gnu\"",
+              "lines": [
+                50,
+                51
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_26",
+              "command": "/bin/bash -lc \"node -e \\\"const s=require('@next/swc-linux-x64-gnu'); console.log(typeof s.transformSync); console.log(require('@next/swc-linux-x64-gnu/package.json').version)\\\" && rg -n 'getRegistry' node_modules/next/dist -g '*.js' | head -20\"",
+              "lines": [
+                52,
+                53
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_27",
+              "command": "/bin/bash -lc \"rg -n 'registry.npmjs|registry.yarn|check.*ersion|fetch.*ersion' node_modules/next/dist/server/dev -g '*.js' | head -25\"",
+              "lines": [
+                54,
+                55
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_28",
+              "command": "/bin/bash -lc 'cat node_modules/next/dist/server/dev/hot-reloader-shared-utils.js | head -75'",
+              "lines": [
+                56,
+                57
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_29",
+              "command": "/bin/bash -lc \"cat > scripts/local-only.mjs <<'EOF'\n// Next development mode checks the npm registry for version freshness.\n// Keep the local preview offline by rejecting non-loopback fetches before I/O.\nconst originalFetch=globalThis.fetch;\nglobalThis.fetch=(input,init)=>{\n const url=new URL(typeof input==='string'||input instanceof URL?input:input.url);\n if(\"'!['\"'127.0.0.1','localhost','[::1]'].includes(url.hostname))return Promise.reject(new Error('Local preview permits loopback fetches only'));\n return originalFetch(input,init);\n};\nEOF\nNODE_OPTIONS='--import ./scripts/local-only.mjs' NEXT_IGNORE_INCORRECT_LOCKFILE=1 PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/preview-concepts.mjs\"",
+              "lines": [
+                58,
+                62
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_30",
+              "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\nimport json\np=Path('package.json');data=json.loads(p.read_text());data['scripts']['dev']='node --import ./scripts/local-only.mjs node_modules/next/dist/bin/next dev --hostname 127.0.0.1';p.write_text(json.dumps(data,indent=2)+'\\\\n')\nPath('.env.local').write_text('NEXT_TELEMETRY_DISABLED=1\\\\nNEXT_IGNORE_INCORRECT_LOCKFILE=1\\\\n')\nPY\"",
+              "lines": [
+                59,
+                60
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_32",
+              "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom PIL import Image,ImageOps,ImageDraw\nfrom pathlib import Path\nfor kind in ['fixture','enclosure','probe']:\n files=[Path(f'checks/concepts/{kind}-{size}-{i}.png') for size in ['desktop','phone'] for i in range(3)]\n if not all(p.exists() for p in files):continue\n canvas=Image.new('RGB',(1200,1100),'white')\n for j,p in enumerate(files):\n  im=Image.open(p);im.thumbnail((390,510));x=(j%3)*400;y=(j//3)*550;canvas.paste(im,(x,y+25));ImageDraw.Draw(canvas).text((x+10,y+6),p.stem,fill='black')\n canvas.save(f'checks/concepts/{kind}-review.jpg')\nPY\"",
+              "lines": [
+                63,
+                64
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 1,
+              "flags": []
+            },
+            {
+              "id": "item_33",
+              "command": "/bin/bash -lc \"node --input-type=module <<'EOF'\nimport sharp from 'sharp';\nfor(const kind of ['fixture','enclosure','probe']){\n const parts=[];let j=0;\n for(const size of ['desktop','phone'])for(let i=0;i<3;i++,j++) parts.push({input:await sharp(\"'`checks/concepts/${kind}-${size}-${i}.png`).resize({width:390,height:510,fit:'\"'inside'}).toBuffer(),left:(j%3)*400,top:Math.floor(j/3)*530});\n await sharp({create:{width:1200,height:1060,channels:3,background:'#ffffff'}}).composite(parts).jpeg().toFile(\"'`checks/concepts/${kind}-review.jpg`);\n}\nEOF'",
+              "lines": [
+                65,
+                66
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_34",
+              "command": "/bin/bash -lc 'cat node_modules/next/dist/docs/01-app/03-api-reference/05-config/01-next-config-js/devIndicators.md | head -65'",
+              "lines": [
+                67,
+                68
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_35",
+              "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('next.config.ts');s=p.read_text().replace('const config: NextConfig = {};','const config: NextConfig = { devIndicators: false };');p.write_text(s)\nPY\nNODE_OPTIONS='--import ./scripts/local-only.mjs' NEXT_IGNORE_INCORRECT_LOCKFILE=1 PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/preview-concepts.mjs\"",
+              "lines": [
+                69,
+                75
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_36",
+              "command": "/bin/bash -lc \"cat >> docs/story/handover.md <<'EOF'\n\n# Continuation — stop 2\n\nStop 1 answers received and written to facts.md (user-confirmed corrections supersede source ambiguities). User declined additional skills and instructed omission for unconfirmed facts. Required final deliverables: single scroll story, Mosslink-only project page, corrected printable downloadable HTML CV, email link, English ordinary navigation, local share preview/icon/useful 404. No employer/dates/current-title assertions, no radio resolution, no pilot/launch/certification, no third-party diagram, no unavailable photos/traces, no external downloads/purchases. No publishing authorized.\n\nScaffolded site/ using bundled engine. Offline npm ci with supplied cache succeeded (392 dependencies); no downloads. Local two SVG originals copied unchanged; not yet used as evidence. docs/story/concepts.md contains three premises-checked directions and planned chapter forms, recommendation fixture; selection pending. Implemented /sketch/fixture, /sketch/enclosure, /sketch/probe, each with three scroll beats and custom tangible geometry. Root is comparison index; this is not the final portfolio.\n\nChecks: typecheck and lint passed; all 129 engine tests passed. Focused browser checks opened all three sketches at desktop 1440x900 and phone 390x844, captured opening/middle/ending, each WebGL on, no page errors, no horizontal overflow. Reviewed all 18 screenshots in three montage images under site/checks/concepts/. Removed Next dev indicator because it obscured links in phone captures; rerunning focused check. Final production acceptance matrix remains for completed chosen portfolio; none claimed yet.\n\nRuntime detail: separately spawned tool command servers are not reachable from another command's network context. Use scripts/preview-concepts.mjs to start/check/stop within one command. Default Next dev version freshness fetch to npm registry was blocked; scripts/local-only.mjs rejects non-loopback fetch before I/O, dev script preloads it. .env.local disables telemetry and automatic lockfile patch. Browser check requires PLAYWRIGHT_BROWSERS_PATH and LD_LIBRARY_PATH noted above. npm run dev locally binds 127.0.0.1, default port 3000.\n\nNext stop: user selects fixture, enclosure or probe (or explicitly asks us to choose). Record selection in concepts.md, then read storyboard reference and present whole page script for approval before final portfolio implementation. Retain all requested supporting routes/assets in that storyboard. Final look and wording choices are later stops. Nothing published.\nEOF\ncat >> docs/story/decided-for-you.md <<'EOF'\n- Hide the Next development indicator because its default bottom-left position covered email/ending links on phone sketches. Set devIndicators false; restore in next.config.ts for debugging if needed.\n- Preload a local-only fetch guard in dev script to stop automatic version checks; use .env.local to disable telemetry and lockfile registry patching. These prevent development tooling from fetching external URLs; no legal/security guarantee is implied. Remove only if user authorizes network services.\nEOF\"",
+              "lines": [
+                70,
+                71
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            },
+            {
+              "id": "item_37",
+              "command": "/bin/bash -lc \"cat > LOCAL-PREVIEW.md <<'EOF'\n# Ada Mensah — local concept previews\n\nThis is the concept-selection stage, not the completed portfolio.\n\nFrom this folder:\n\n\"'```bash\nnpm run dev\n```\n\nOpen http://127.0.0.1:3000 for comparison, or:\n- http://127.0.0.1:3000/sketch/fixture\n- http://127.0.0.1:3000/sketch/enclosure\n- http://127.0.0.1:3000/sketch/probe\n\nEach sketch has opening, middle and ending poses driven by scroll, a mobile composition, ordinary email/ending links and a text fallback. All geometry is explanatory; it is not a reconstruction of real wiring or measured evidence. Both neutral engine appearances are available, pending a later final look decision.\n\nDevelopment binds to loopback, uses system fonts/local geometry and preloads scripts/local-only.mjs to reject remote development fetches. .env.local disables Next telemetry and registry lockfile patching. No mail was sent; the contact is an example address. Nothing is published.\n\nStory records are in ../docs/story/. Concept selection and storyboard approval are next. The printable HTML CV, project route, share preview, icon, useful 404 and completed story will be built from the selected storyboard. No PDF or extra project is planned.\n\nFocused browser verification in this environment:\n\n```bash\nNODE_OPTIONS='\"'--import ./scripts/local-only.mjs' PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/preview-concepts.mjs\n\"'```\n\nThis starts a temporary preview server, checks all three concepts at desktop/phone sizes, saves checks/concepts/report.json and screenshots, then stops that server. Use npm run dev for your own continuing review.\nEOF'",
+              "lines": [
+                72,
+                73
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": [
+                "parent-traversal-needs-context"
+              ]
+            },
+            {
+              "id": "item_39",
+              "command": "/bin/bash -lc \"cat >> docs/story/handover.md <<'EOF'\nFocused browser recheck after hiding dev indicator passed all six concept/viewport cases with no page errors or horizontal overflow and WebGL on. Updated ending phone captures inspected; indicator no longer obscures links. Temporary preview server stopped. User can start continuous local preview with cd site && npm run dev; instructions in site/LOCAL-PREVIEW.md.\nEOF\"",
+              "lines": [
+                76,
+                77
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": []
+            }
+          ],
+          "flaggedCommands": [
+            {
+              "id": "item_7",
+              "command": "/bin/bash -lc \"mkdir -p public/assets\ncp ../public/assets/*.svg public/assets/\ncat > content/sketches/concepts.tsx <<'EOF'\n\\\"use client\\\";\nimport { Story } from \\\"@/components/story/story\\\";\nimport { Chapter, Beat, Kicker, Title, Body, Note } from \\\"@/components/story/chapter\\\";\nimport type { PieceProps, StoryBundle, FaceDef } from \\\"@/components/story/types\\\";\nimport { blankFormation, type Pose, type Formation } from \\\"@/lib/story/formation\\\";\nimport { looks } from \\\"../looks\\\";\n\ntype Kind = \\\"fixture\\\" | \\\"enclosure\\\" | \\\"probe\\\";\nconst labels = [\\\"CODE\\\", \\\"STATE\\\", \\\"BOARD\\\", \\\"ACCESS\\\", \\\"SIGNAL\\\", \\\"CLAIM\\\"];\nfunction Fixture({ material, look }: PieceProps) {\n  return <group>\n    <mesh castShadow receiveShadow position={[0, -.22, 0]}><boxGeometry args={[1, .56, .65]}/><meshStandardMaterial color=\\\"#263c3a\\\" roughness={.65}/></mesh>\n    <mesh material={material} position={[0,-.22,.331]}><planeGeometry args={[.86,.4]}/></mesh>\n    {[-.27,.27].map(x=><group key={x} position={[x,.15,0]}><mesh castShadow><cylinderGeometry args={[.07,.09,.36,16]}/><meshStandardMaterial color=\\\"#cba95d\\\" metalness={.75} roughness={.28}/></mesh><mesh position={[0,.23,0]}><cylinderGeometry args={[.035,.035,.16,12]}/><meshStandardMaterial color=\\\"#dde0d8\\\" metalness={.8} roughness={.3}/></mesh></group>)}\n    <mesh position={[.37,-.22,.345]}><sphereGeometry args={[.03,12,12]}/><meshStandardMaterial color={look.accent}/></mesh>\n  </group>;\n}\nfunction Enclosure({material}:PieceProps) {\n  return <group>\n    <mesh castShadow receiveShadow><cylinderGeometry args={[.48,.48,.5,40]}/><meshStandardMaterial color=\\\"#e2e0d3\\\" roughness={.65}/></mesh>\n    <mesh material={material} rotation={[-Math.PI/2,0,0]} position={[0,.256,0]}><circleGeometry args={[.37,40]}/></mesh>\n    <mesh rotation={[Math.PI/2,0,0]}><torusGeometry args={[.48,.045,12,40]}/><meshStandardMaterial color=\\\"#cba95d\\\" metalness={.55} roughness={.4}/></mesh>\n    {[0,1,2,3].map(i=><mesh key={i} position={[Math.cos(i*Math.PI/2)*.38,.27,Math.sin(i*Math.PI/2)*.38]}><sphereGeometry args={[.025,8,8]}/><meshStandardMaterial color=\\\"#304541\\\"/></mesh>)}\n  </group>;\n}\nfunction Probe({material}:PieceProps) {\n  return <group>\n    <mesh castShadow receiveShadow rotation={[0,0,Math.PI/2]}><cylinderGeometry args={[.22,.26,.8,24]}/><meshStandardMaterial color=\\\"#304541\\\" roughness={.5}/></mesh>\n    <mesh castShadow rotation={[0,0,Math.PI/2]} position={[.48,0,0]}><cylinderGeometry args={[.05,.12,.25,16]}/><meshStandardMaterial color=\\\"#cba95d\\\" metalness={.7} roughness={.3}/></mesh>\n    <mesh material={material} position={[0,0,.24]}><planeGeometry args={[.65,.24]}/></mesh>\n    <mesh rotation={[0,0,Math.PI/2]} position={[-.41,0,0]}><torusGeometry args={[.22,.035,10,24]}/><meshStandardMaterial color=\\\"#191f21\\\" roughness={.8}/></mesh>\n  </group>;\n}\nfunction poses(kind:Kind, stage:number): Pose[] {\n  return Array.from({length:6},(_,i)=> {\n    if(kind===\\\"fixture\\\") return {position:stage===1 ? [(i%3-1)*1.4, (i<3?.85:-.85),i===4?.35:0] : [(i%3-1)*1.02,(i<3?.36:-.36),0],rotation:[.25,stage===1?.12:0,0],size:[1,1]};\n    if(kind===\\\"enclosure\\\") return {position:stage===1?[Math.cos(i*Math.PI/3)*1.55,Math.sin(i*Math.PI/3)*1.55,0]:[0,(i-2.5)*.51,0],rotation:stage===1?[1.2,0,0]:[.2,0,0],size:[1,1]};\n    return {position:stage===1?[(i-2.5)*.9,(i<3?.85:-.85),0]:[(i-2.5)*.83,0,0],rotation:[0,0,stage===1?(i<3?.25:-.25):0],size:[1,1]};\n  });\n}\nfunction formation(kind:Kind,stage:number):Formation {\n  return {...blankFormation(6),pieces:poses(kind,stage),span:kind===\\\"probe\\\"?6.4:4.8,rise:kind===\\\"enclosure\\\"?4.8:3.4,anchor:[.48,.15],turn:[.16,-.28],near:5,floor:-3,sway:[.06,.16,0]};\n}\nconst descriptions = {\n fixture: {name:\\\"The bring-up fixture\\\",question:\\\"How do you connect firmware to a physical observation?\\\",form:\\\"Bench checklist\\\",titles:[\\\"Ada Mensah. Firmware at the bench.\\\",\\\"A command needs an observation.\\\",\\\"A claim needs its limits.\\\"],body:[\\\"For Mosslink, I wrote the firmware, scheduled the power states and built the bring-up fixture. Bring-up means checking a new board’s basic operation.\\\",\\\"A current trace showed the radio remaining awake after a failed transmission. The cause, fix and later outcome are not confirmed. The fixture opens here to separate code, access and observation.\\\",\\\"Two years is a projection from bench current readings and an assumed reporting cycle. The longest observed run was 72 hours. An estimate and an observed run support different claims.\\\"],note:\\\"Six contact modules form an explanatory fixture. This geometry shows relationships, not actual wiring or the real device.\\\"},\n enclosure: {name:\\\"Inside the power cycle\\\",question:\\\"What supports a battery-life claim?\\\",form:\\\"State table\\\",titles:[\\\"Ada Mensah. Open the estimate.\\\",\\\"A teaching cycle, an unresolved observation.\\\",\\\"Projection and run: different evidence.\\\"],body:[\\\"I wrote Mosslink’s firmware and scheduled its power states. The two-year battery figure is a projection; there is no field endurance or weather testing to support it.\\\",\\\"Sleep, Measure and Transmit are a teaching sequence, with no actual firmware state names, durations or current values claimed. Separately, a current trace showed the radio staying awake after a failed transmission.\\\",\\\"The longest run was 72 hours. I want to make the basis of a claim visible: measured bench current supports the estimate, while an observed run supports a different statement.\\\"],note:\\\"Six machined sections make a symbolic sensor enclosure. They are explanatory geometry, not a reconstruction of Mosslink.\\\"},\n probe: {name:\\\"Follow the observation\\\",question:\\\"What can a physical signal tell you about firmware?\\\",form:\\\"Timing diagram\\\",titles:[\\\"Ada Mensah. Follow code to the bench.\\\",\\\"An observation, without an invented ending.\\\",\\\"Make the claim match the observation.\\\"],body:[\\\"My working documents are a state table, timing diagram and current trace. For Mosslink, I wrote firmware, scheduled power states and built a bring-up fixture.\\\",\\\"After a failed transmission, a current trace showed the radio remaining awake. This sketch separates a conceptual command path from its observation. No actual trace, timing, cause or resolution is shown.\\\",\\\"Forty engineering samples were assembled; six were bench tested. None went to customers. The preliminary emissions check passed, while the full qualification programme remains unfinished.\\\"],note:\\\"Six connector sleeves form a symbolic probe assembly. Position indicates conceptual order, not duration, wiring or a measured signal.\\\"}\n};\nfunction Concept({kind}:{kind:Kind}) {\n  const d=descriptions[kind];\n  const story={pieces:6,chapters:[{id:\\\"opening\\\",number:1,name:kind===\\\"fixture\\\"?\\\"Purpose\\\":kind===\\\"enclosure\\\"?\\\"State\\\":\\\"Command\\\",role:\\\"opening\\\" as const,beats:[{id:\\\"opening.start\\\",height:1.5}]},{id:\\\"middle\\\",number:2,name:kind===\\\"fixture\\\"?\\\"Observe\\\":kind===\\\"enclosure\\\"?\\\"Transition\\\":\\\"Observation\\\",role:\\\"how\\\" as const,beats:[{id:\\\"middle.open\\\",height:1.5}]},{id:\\\"close\\\",number:3,name:\\\"Claim\\\",role:\\\"close\\\" as const,beats:[{id:\\\"close.end\\\",height:1.5}]}]};\n  const faces:FaceDef[]=story.chapters.flatMap(c=>Array.from({length:6},(_,piece)=>({id:\"'`${c.id}-${piece}`,beat:c.beats[0].id,piece,draw(ctx,w,h,look){ctx.fillStyle=\"#263c3a\";ctx.fillRect(0,0,w,h);ctx.strokeStyle=\"#cba95d\";ctx.lineWidth=w*.014;ctx.strokeRect(w*.04,h*.08,w*.92,h*.84);ctx.fillStyle=\"#faf7ec\";ctx.font=`600 ${w*.14}px ui-monospace,monospace`;ctx.textAlign=\"center\";ctx.fillText(labels[piece],w*.5,h*.58);ctx.fillStyle=look.accent;}})));\n  const bundle:StoryBundle={story,formations:{\"opening.start\":{rest:formation(kind,0)},\"middle.open\":{rest:formation(kind,1)},\"close.end\":{rest:formation(kind,2)}},faces,looks,copy:{railLabel:\"Sketch chapters\",lookLabel:\"Appearance\"},Piece:kind===\"fixture\"?Fixture:kind===\"enclosure\"?Enclosure:Probe};\n  return <main><nav className=\"concept-nav\" aria-label=\"Concept navigation\"><a href=\"/\">All concepts</a><span>{d.name}</span></nav><Story bundle={bundle}>{story.chapters.map((c,i)=><Chapter key={c.id} id={c.id}><Beat story={story} id={c.beats[0].id} fallback={<p>{d.note}</p>}><Kicker number={i+1}>{d.form} · {c.name}</Kicker><Title as={i===0?\"h1\":\"h2\"} id={`${c.id}-title`}>{d.titles[i]}</Title>{i===0&&<p className=\"concept-question\">{d.question}</p>}<Body>{d.body[i]}</Body><Note>{d.note}</Note>{i===0&&<p className=\"concept-contact\"><a href=\"mailto:ada@example.com\">Email Ada</a> · <a href=\"#close\">Read the conclusion</a></p>}{i===2&&<p><a href=\"mailto:ada@example.com\">ada@example.com</a> · <a href=\"/\">Compare concepts</a></p>}</Beat></Chapter>)}</Story></main>;\n}\nexport function FixtureSketch(){return <Concept kind=\"fixture\"/>;}\nexport function EnclosureSketch(){return <Concept kind=\"enclosure\"/>;}\nexport function ProbeSketch(){return <Concept kind=\"probe\"/>;}\nEOF\ncat > content/sketches/index.ts <<'\"'EOF'\nimport type { ComponentType } from \\\"react\\\";\nimport { FixtureSketch, EnclosureSketch, ProbeSketch } from \\\"./concepts\\\";\nexport const sketches: Record<string, ComponentType> = {fixture:FixtureSketch,enclosure:EnclosureSketch,probe:ProbeSketch};\nEOF\ncat > app/page.tsx <<'EOF'\nexport default function Home(){return <main className=\\\"concept-index\\\"><p className=\\\"eyebrow\\\">ADA MENSAH / LOCAL CONCEPT STUDIES</p><h1>Firmware decisions.<br/>Physical observations.</h1><p>Three scroll sketches for Mosslink. Choose the object and story structure before we build the full portfolio.</p><ol><li><a href=\\\"/sketch/fixture\\\">The bring-up fixture ↗</a><p>A bench checklist, carried by six contact modules. Recommended.</p></li><li><a href=\\\"/sketch/enclosure\\\">Inside the power cycle ↗</a><p>A state table, carried by six sensor-enclosure sections.</p></li><li><a href=\\\"/sketch/probe\\\">Follow the observation ↗</a><p>A timing diagram, carried by six probe connector sleeves.</p></li></ol><p>All geometry is explanatory. These sketches contain no actual device wiring, firmware timing, measured traces or proof of results.</p><a href=\\\"mailto:ada@example.com\\\">ada@example.com</a></main>}\nEOF\ncat >> app/globals.css <<'EOF'\n.concept-nav{position:absolute;top:1.5rem;left:clamp(1.25rem,5vw,5rem);z-index:8;display:flex;gap:1.5rem;font: .8rem ui-monospace,monospace;color:#58636c;max-width:60%;}\n.concept-nav span{display:none;}\n.concept-question{font-size:1.12rem;font-weight:600;line-height:1.4;margin-top:1rem;}\n.concept-contact{font-size:.85rem;line-height:1.5;}\n.concept-index{background:#f2f0e9;color:#202932;min-height:100vh;padding:clamp(2rem,8vw,8rem);max-width:none;}\n.concept-index h1{font:500 clamp(2.5rem,6vw,5.5rem)/1.02 Georgia,serif;letter-spacing:-.04em;}\n.concept-index p{max-width:42rem;line-height:1.7;}\n.concept-index ol{padding-left:1.3rem;margin:3rem 0;}\n.concept-index li{padding:1rem 0;border-top:1px solid #c9ccc4;max-width:44rem;}\n.concept-index li a{font:500 1.65rem Georgia,serif;text-underline-offset:.25rem;}\n.eyebrow{font:.8rem ui-monospace,monospace;letter-spacing:.1em;}\n@media(min-width:800px){.concept-nav span{display:inline;}.story-caption-text{max-width:29rem;}}\n@media(max-width:479px){.story-caption{padding:1.1rem 1.25rem;}.story-title{font-size:2rem;}.story-body{font-size:.94rem;line-height:1.5;}.story-note{font-size:.75rem;margin-top:.65rem;}.concept-question{font-size:.96rem;}.story-bar{padding:.75rem;}.story-look-switch button{padding:.35rem .6rem;}.concept-nav{top:1.65rem;font-size:.7rem;}}\nEOF\ncat > content/copy.ts <<'EOF'\nexport const copy={lang:\\\"en\\\",metadata:{title:\\\"Ada Mensah | Local portfolio concepts\\\",description:\\\"Local scroll-story sketches about Mosslink firmware and physical observation.\\\"},railLabel:\\\"Chapters\\\",lookLabel:\\\"Appearance\\\",faceWords:[\\\"Code\\\",\\\"State\\\",\\\"Board\\\",\\\"Access\\\",\\\"Signal\\\",\\\"Claim\\\",\\\"Evidence\\\"]};\nEOF\nnpm run typecheck\"",
+              "lines": [
+                15,
+                16
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 2,
+              "flags": [
+                "parent-traversal-needs-context"
+              ]
+            },
+            {
+              "id": "item_37",
+              "command": "/bin/bash -lc \"cat > LOCAL-PREVIEW.md <<'EOF'\n# Ada Mensah — local concept previews\n\nThis is the concept-selection stage, not the completed portfolio.\n\nFrom this folder:\n\n\"'```bash\nnpm run dev\n```\n\nOpen http://127.0.0.1:3000 for comparison, or:\n- http://127.0.0.1:3000/sketch/fixture\n- http://127.0.0.1:3000/sketch/enclosure\n- http://127.0.0.1:3000/sketch/probe\n\nEach sketch has opening, middle and ending poses driven by scroll, a mobile composition, ordinary email/ending links and a text fallback. All geometry is explanatory; it is not a reconstruction of real wiring or measured evidence. Both neutral engine appearances are available, pending a later final look decision.\n\nDevelopment binds to loopback, uses system fonts/local geometry and preloads scripts/local-only.mjs to reject remote development fetches. .env.local disables Next telemetry and registry lockfile patching. No mail was sent; the contact is an example address. Nothing is published.\n\nStory records are in ../docs/story/. Concept selection and storyboard approval are next. The printable HTML CV, project route, share preview, icon, useful 404 and completed story will be built from the selected storyboard. No PDF or extra project is planned.\n\nFocused browser verification in this environment:\n\n```bash\nNODE_OPTIONS='\"'--import ./scripts/local-only.mjs' PLAYWRIGHT_BROWSERS_PATH=/tmp/storyfolio-browser-cache LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu node scripts/preview-concepts.mjs\n\"'```\n\nThis starts a temporary preview server, checks all three concepts at desktop/phone sizes, saves checks/concepts/report.json and screenshots, then stops that server. Use npm run dev for your own continuing review.\nEOF'",
+              "lines": [
+                72,
+                73
+              ],
+              "events": [
+                "item.started",
+                "item.completed"
+              ],
+              "exitCode": 0,
+              "flags": [
+                "parent-traversal-needs-context"
+              ]
+            }
+          ],
+          "incompleteCommands": [],
+          "limitation": "Literal command-text triage, not syscall tracing or a read jail. Flags need manual review. No flags do not prove absence of indirect, script-mediated, native-tool or network access. Configuration isolation is not filesystem isolation."
+        }
+      }
+    ],
+    "totals": {
+      "durationMs": 714964,
+      "reportedTokens": 2581705,
+      "uncachedTokens": 136905
+    },
+    "bounds": {
+      "maxTurns": 6,
+      "turnTimeoutMs": 900000,
+      "maxWallMs": 5400000,
+      "maxTokens": 12000000,
+      "maxUncachedTokens": 1500000
+    },
+    "boundsExceeded": false,
+    "hashes": {
+      "audit": "f8b80a3517629e9f77893a470f801bcd8cd812749f2bc5cbf57bead981eca371",
+      "terminalTool": "b40a528576ed6fe2a24ed11532589e1ab78e073ff60ea73c865ec4af777c6b63",
+      "outerResult": "260e8aabb52f6b59fd6e2335f60b5b5bcbc8b0645d388bd7dd10dfcb3c0368df",
+      "outerCommand": "85a1c19c2eb2ed62a2c1c00c8fc889df0a6eeadeed2f2f4dc252859c6cbb7975",
+      "latestResult": "290c39f7aca8ae6e8254e78a6423292f4bf34af233ca2c94f34d09189615fbfe"
+    },
+    "manualAccessReviewRequired": true,
+    "behavioralGate": "Not assessed; no next turn, application eligibility or final acceptance is authorized.",
+    "limits": "Normal process/source/prompt/session/usage integrity only. Command flags are triage, not a read-jail proof. Prior outer process audits remain separately retained; this invocation binds the selected turn's outer supervisor. Resume token totals may overlap and are not dollar or in-flight spending guarantees. Source exclusions stay unchanged. No runtime, model, browser, test or subprocess was launched by this audit.",
+    "modelCalls": 0,
+    "writes": false
+  },
+  "plan": {
+    "sessionId": "01a13189-6311-7042-a63f-394a33e47fc6",
+    "taskKind": "full-journey",
+    "requestedStop": 3,
+    "timeoutMs": 900000,
+    "elapsedMs": 714964,
+    "tokens": 2581705,
+    "inputTokens": 2561120,
+    "outputTokens": 20585,
+    "cachedInputTokens": 2444800,
+    "uncachedTokens": 136905
+  },
+  "modelCalls": 0,
+  "writes": false
+}

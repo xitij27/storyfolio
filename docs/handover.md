@@ -4,6 +4,16 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Latest result: [all seven resumed browser batches passed](../evals/runs/stage-3-storyboard-length-1/concept-continuation-disposition.md),
+with normal closure and no further SIGTERM. Complete coverage is 18 reports
+and 144 individually viewed originals, unchanged 185-file source and 536342
+ms of the original 900000-ms execution cap. The old operation-02 interruption
+remains explicitly reconciled, not normalised. Stop 2 passes only for choosing
+among three provisional concepts; visual limitations remain recorded. All
+47 focused and 351 repository tests pass. After committing the gate, root
+may resume only the existing candidate-3 fixed turn 3 under its earlier
+six-turn approval. The storyboard correction and Stage 3 are not yet proved.
+
 Newest direction: [the author approved the narrow browser continuation](history/2026-10-13-stage-3-browser-continuation-approval.md),
 saying "yes start again. I did not give any sigterms". Continue only the seven
 unstarted batches within the original remaining 766134 ms, no model calls
