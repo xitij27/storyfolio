@@ -4,6 +4,13 @@ Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
+Current readiness: the [fresh timing proof is ready for its sole start](../evals/runs/stage-3-spine-time-1/launch-disposition.md).
+All 149 inputs, exact declared deltas and 94 unchanged initial files verify;
+root viewed the neutral original and every setup command closed normally.
+All 351 tests pass in local-tests-2. After committing readiness, launch only
+turn 1 and assess its actual factual/preflight handoff before continuing.
+No site or behavioral pass is inferred from preparation.
+
 Latest implementation result: [candidate-3 turn 4 hit its local deadline](../evals/runs/stage-3-storyboard-length-1/turn-4-timeout-disposition.md).
 Three looks and supporting features were built; a look question appeared in
 progress, but no completed terminal turn/usage or updated handover exists.
