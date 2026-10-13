@@ -1,5 +1,13 @@
 # Storyboard length correction
 
+13 October continuation: [author approval](../../../docs/history/2026-10-13-stage-3-browser-continuation-approval.md)
+and [root launch disposition](concept-continuation-launch-disposition.md)
+permit only seven unstarted browser batches. The completed prefix stays
+immutable; exact outer operation 02 is explicitly reconciled, not relabelled
+normal. Original budget, source, targets and all-original coverage remain.
+No concept or Stage 3 pass follows from preparation. The author denies
+sending SIGTERMs, and the technical sender remains unknown.
+
 Question: does the missing whole-story length guidance restore the approved
 normal depth and explicit total without padding, inventing facts or losing
 the existing choice gates?

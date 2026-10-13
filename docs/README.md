@@ -1,5 +1,10 @@
 # Documentation map
 
+The author has [approved the seven-batch browser continuation](history/2026-10-13-stage-3-browser-continuation-approval.md)
+on 13 October and clarified that they sent no SIGTERMs. Reuse completed
+captures within the original remaining budget; no reruns or model calls.
+The signal origin remains unknown. Follow the newest handover checkpoint.
+
 Latest result: the [browser replacement confirmed the wrapped-link fix](../evals/runs/stage-3-storyboard-length-1/replacement-interruption-disposition.md),
 but its supervisor was externally interrupted after the second browser
 worker completed. All 32 originals are verified; seven batches remain.

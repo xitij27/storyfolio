@@ -1,8 +1,20 @@
 # Handover
 
-Current state as of 12 October 2026. Start with this page and
+Current state as of 13 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
+
+Newest direction: [the author approved the narrow browser continuation](history/2026-10-13-stage-3-browser-continuation-approval.md),
+saying "yes start again. I did not give any sigterms". Continue only the seven
+unstarted batches within the original remaining 766134 ms, no model calls
+or reruns. Preserve and explicitly reconcile the exact reviewed operation-02
+outer interruption; never rewrite it as normal success. Later operations
+still need normal closure. The author denies sending SIGTERMs; the technical
+sender remains unknown, not attributed to them. No new push permission.
+The [separately bound continuation is ready](../evals/runs/stage-3-storyboard-length-1/concept-continuation-launch-disposition.md),
+with independent source review, concrete unchanged-source preflight, 47
+focused tests and all 351 repository tests passing. After committing this
+readiness, root may launch batch 03, without another setup or model call.
 
 Latest result: the approved replacement observed successful phone pointer
 and keyboard navigation with the fragment-aware fix. Its browser worker
