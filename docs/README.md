@@ -1,5 +1,10 @@
 # Documentation map
 
+Start here for status: [remaining work to complete the skill](superpowers/plans/2026-10-14-remaining-work-to-completion.md),
+14 October. It orders every open item from the plans below into one
+checklist with an estimate, risks and the decisions the author is asked
+for. It adds no authority and changes no requirement.
+
 Latest retention checkpoint: [full post-closure source archive and next recovery work](../evals/runs/stage-3-spine-time-1/source-recovery-disposition.md).
 See also [unexecuted measurement-adapter preparation](../evals/runs/stage-3-spine-time-1/measurement/preparation-disposition.md).
 These are separately documented local-main commits, not concept acceptance.

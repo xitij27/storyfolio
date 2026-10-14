@@ -3,7 +3,10 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest planning request: [13 October stage status and next implementation](2026-10-13-next-implementation-request.md).
+Newest status request: [14 October remaining work to complete the skill](2026-10-14-remaining-work-request.md).
+Documentation only; it adds no run authority and approves nothing.
+
+Earlier planning request: [13 October stage status and next implementation](2026-10-13-next-implementation-request.md).
 This records a plan, not approval of the ten-beat exception or a new run.
 
 Latest: [authority to finish Stage 3](2026-10-12-stage-3-completion-authority.md),

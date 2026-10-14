@@ -1,8 +1,18 @@
 # Handover
 
-Current state as of 13 October 2026. Start with this page and
+Current state as of 14 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
+
+Latest summary: [what is left to complete the skill](superpowers/plans/2026-10-14-remaining-work-to-completion.md),
+answering the author's [14 October request](history/2026-10-14-remaining-work-request.md).
+One ordered checklist of 24 items to a releasable skill; three are done.
+Still Stage 3: the timing proof passed stop 1 and its agent built stop 2,
+whose concepts await recovery binding and an independent check. New
+projection, not an observed failure: the proof's reported-token and
+cumulative time ceilings may run out before turn 6, so the author is
+asked to settle that policy before turn 4. Documentation only; no run,
+skill change or push. Earlier checkpoints below retain their chronology.
 
 Latest status question: [where are we after the local commits?](history/2026-10-13-stage-status-after-local-commits.md)
 Still Stage 3, currently awaiting independent verification of the fresh
