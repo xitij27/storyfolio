@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "stage": 4,
+  "sourceDigest": "ef33a605525a03e01c39631886a189a8fa423098b7d48ba49a5c116e2a747bb4",
+  "actorResultSha256": "434c0cdf7bdda2bdcbe42589fbb57ebc0d26deda0a0afc821cf1bba8976987b7",
+  "discovery": {
+    "reviewer": "Root (Claude Code), source review of the archived turn-4 site: routes, look registry, look switch, URL handling, story beats and ordinary navigation",
+    "exhaustive": true,
+    "sources": [
+      {
+        "path": "docs/story/storyboard.md",
+        "sha256": "905149f0bc94dd0c295e5e59437fb286697ea558a77942d86f0b87508d8afc11"
+      },
+      {
+        "path": "docs/story/handover.md",
+        "sha256": "6d202c92243a367318eea1db2cf23f5dc46baa462d673b70d86e45710a012385"
+      },
+      {
+        "path": "site/app/page.tsx",
+        "sha256": "2e374532de704514d9857a2b16f6da6192dc6610f2807447b7929e600600fe1b"
+      },
+      {
+        "path": "site/app/layout.tsx",
+        "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c"
+      },
+      {
+        "path": "site/content/index.ts",
+        "sha256": "0132b6198e699a60fe62f30718670076e084aab26fe1453793a7c05a24047f5d"
+      },
+      {
+        "path": "site/content/story.ts",
+        "sha256": "f27dba436ab00b32915601bcb51a998195a464e3169970cf15bb3ef037caab69"
+      },
+      {
+        "path": "site/content/looks.ts",
+        "sha256": "43f5fe29207a8f3e93e9f9ea249593f773a9f62b2bc0913bf01cf6ae5365052b"
+      },
+      {
+        "path": "site/content/copy.ts",
+        "sha256": "4a64e44d64f65376ee3ffbb0b04a0253cea6d0224bc9a8996925a332edd2e421"
+      },
+      {
+        "path": "site/lib/story/looks.ts",
+        "sha256": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8"
+      },
+      {
+        "path": "site/components/story/story.tsx",
+        "sha256": "e34d2e6eeb7dcc223ae8805aecf63eaf74bd8015c231f606d954d35ba2b7049d"
+      },
+      {
+        "path": "site/components/story/look-switch.tsx",
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": "site/components/story/use-look.ts",
+        "sha256": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e"
+      },
+      {
+        "path": "site/components/story/chapter.tsx",
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": "site/components/story/rail.tsx",
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": "site/components/site/navigation.tsx",
+        "sha256": "1179eda98128e3419257df8a89f15b66190ca04b32a8909a96f2c1a1eaed9dbd"
+      },
+      {
+        "path": "site/app/concepts/page.tsx",
+        "sha256": "7d1bb7919835551447608b4020f4a8195c17cb967caa67070df96c8e162eb0b5"
+      }
+    ],
+    "scope": "The two registered looks of the single story route, Aluminium (light, default) and Anodized (dark), selected by the story-bar switch, which rewrites ?look= in place. The final reply advertises exactly these two at /?look=light and /?look=dark. The spine has seven beats over Prepare, Access and Record; the opening, middle and ending rests are the first beat of each, as the storyboard's spine names them. The concept archive at /concepts and the old sketches are ordinary links, not look alternatives."
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "The archive holds the authored nested site with two registered looks, a real look switch and the custom fixture geometry. This is eligibility for measurement, not a technical, visual or look pass."
+  },
+  "applicationRoot": "site",
+  "evidence": {
+    "actorTurn": "evals/runs/stage-3-spine-time-1/recovery/continuation/turns/04",
+    "sourceRecord": "evals/runs/stage-3-spine-time-1/recovery/source-recovery-4/source.json",
+    "sourceBasis": "post-closure archive of all 205 authored files; the original turn-4 result failed capture and stays complete false",
+    "terminal": {
+      "stream": "evals/runs/stage-3-spine-time-1/recovery/continuation/turns/04/stream.jsonl",
+      "sha256": "6c866171d84690d0a9f8c6e2a4ca41c0a2ecb91c2c8e2f75883921924082536c",
+      "itemId": "item_61",
+      "event": "item.completed",
+      "type": "agent_message"
+    },
+    "validation": "Selectors, names and beat ids are read from the archived source; no scratch build or browser probe was made before this unit."
+  },
+  "alternatives": [
+    {
+      "id": "light",
+      "route": "/?look=light",
+      "advertised": true,
+      "control": {
+        "selector": ".story-look-switch > button:nth-child(1)",
+        "name": "Aluminium",
+        "fromRoute": "/?look=dark"
+      },
+      "beats": {
+        "opening": "prepare.assemble",
+        "middle": "access.relationship",
+        "ending": "record.close"
+      },
+      "meaning": "Aluminium: warm off-white ground, graphite ink, copper accent and light matte aluminium segments; the agent's recommendation. The trial starts in Anodized so the switch has to change something."
+    },
+    {
+      "id": "dark",
+      "route": "/?look=dark",
+      "advertised": true,
+      "control": {
+        "selector": ".story-look-switch > button:nth-child(2)",
+        "name": "Anodized",
+        "fromRoute": "/"
+      },
+      "beats": {
+        "opening": "prepare.assemble",
+        "middle": "access.relationship",
+        "ending": "record.close"
+      },
+      "meaning": "Anodized: deep blue-grey ground, ivory ink, pale teal accent and dark anodized segments. The trial starts in the default Aluminium."
+    }
+  ],
+  "sourceCensus": {
+    "registeredLooks": [
+      "light",
+      "dark"
+    ],
+    "advertisedLookCount": 2,
+    "defaultLook": "light",
+    "lookQuery": "look",
+    "spineBeats": [
+      "prepare.assemble",
+      "prepare.responsibility",
+      "access.relationship",
+      "access.mosslink",
+      "record.battery",
+      "record.scope",
+      "record.close"
+    ],
+    "routeFiles": [
+      "site/app/page.tsx",
+      "site/app/concepts/page.tsx",
+      "site/app/projects/mosslink/page.tsx",
+      "site/app/not-found.tsx"
+    ],
+    "ordinaryControls": [
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".story-skip",
+        "purpose": "skip link to Record"
+      },
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".site-header nav a",
+        "purpose": "Story, Mosslink, CV and Email navigation"
+      },
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".look-study a[href=\"/concepts\"]",
+        "purpose": "concept archive, not a look alternative"
+      },
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".story-rail a",
+        "purpose": "same-story chapter links"
+      },
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".opening-links a, .contact-links a, .project-link, .text-link, .return-link",
+        "purpose": "in-story shortcuts, CV, contact and project links"
+      },
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".site-footer nav a",
+        "purpose": "footer navigation"
+      }
+    ]
+  },
+  "limits": [
+    "Source declarations and actor claims do not establish legibility, material difference or meaningful spatial explanation.",
+    "Ordinary links, the Mosslink page, CV, icon, preview and 404 are inventoried but not exercised by the look worker; they belong to the final whole-site check.",
+    "The measured source is a post-closure archive, not the missing closure-time snapshot."
+  ],
+  "reviewedByRoot": true
+}
