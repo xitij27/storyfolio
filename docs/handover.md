@@ -4,7 +4,7 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest checkpoint, 21 October: **stop 2 passes and turn 3 is running.**
+Latest checkpoint, 21 October: **stops 2, 3 and 4 pass; turn 5 is next.**
 The author answered "Claude implements now" and dropped the 12 million
 reported-token ceiling for turns 3 to 6, keeping the time and uncached
 ceilings ([decision record](history/2026-10-21-claude-implementation-and-ceiling-decision.md)).
@@ -32,8 +32,17 @@ natively but its capture failed](../evals/runs/stage-3-spine-time-1/recovery/tur
 on the regenerated `site/.next-concepts` cache, as turn 2 did. The agent
 offered two looks and waited for a choice. After turn 4: 51.2 minutes and
 587,800 uncached tokens left. The author [chose the turn-2 recovery path and
-dropped the uncached ceiling for turns 5 and 6](history/2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md). The
-runner pins turn 3's exact `PATH`, so launch with the one recorded in
+dropped the uncached ceiling for turns 5 and 6](history/2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md).
+Root archived turn 4's 205 files, extended the recovery binder to turn 4,
+and measured both looks: [stop 4 passes](../evals/runs/stage-3-spine-time-1/recovery/looks-1-disposition.md)
+with all 32 originals reviewed. Recorded against the criteria: supporting
+pages were built before the look choice (a candidate skill finding for
+after this run). Unreadable face words, the rail over the opening geometry
+and faint caption-column rectangles are carried forward. Turns 5 and 6 run
+through [continue-2.mjs](../evals/runs/stage-3-spine-time-1/recovery/continue-2.mjs),
+whose capture skips exactly `site/.next-concepts` and which lifts the
+uncached ceiling; [gate-after-4.json](../evals/runs/stage-3-spine-time-1/recovery/gate-after-4.json)
+passes a dry run. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.
 

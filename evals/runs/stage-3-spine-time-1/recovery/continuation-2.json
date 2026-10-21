@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "timing-proof-continuation-2",
+  "binding": {
+    "path": "evals/runs/stage-3-spine-time-1/recovery/binding-4.json",
+    "sha256": "71eb0b2000a199ca0c360ad5b8dfb770ab7438325ff9289f1a323aed81fc02ba"
+  },
+  "previous": {
+    "path": "evals/runs/stage-3-spine-time-1/recovery/continuation.json",
+    "sha256": "7e88ad782f76ee77ddafe4df8399804050fac0c57a0e9442375fec1c41e92dcc"
+  },
+  "allowedTurns": [
+    5,
+    6
+  ],
+  "boundsVariance": {
+    "maxTokens": "removed",
+    "maxUncachedTokens": "removed",
+    "decisions": [
+      {
+        "path": "docs/history/2026-10-21-claude-implementation-and-ceiling-decision.md",
+        "sha256": "6ac100531bfd37730bf354315c80ccb45977c46f28255fe14a324db0daba33e8"
+      },
+      {
+        "path": "docs/history/2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md",
+        "sha256": "2b0e3b258cda074e4d42c922a6ca2bc0d598df9c39cb0973aaec5672ddc77081"
+      }
+    ],
+    "unchanged": [
+      "turnTimeoutMs 1800000",
+      "maxWallMs 5400000"
+    ]
+  },
+  "capture": {
+    "exactExclusion": "site/.next-concepts",
+    "reason": "The actor's own build directory, recreated by every build; it stopped turn 2 and turn 4 capture. Original exclusions otherwise unchanged; no .next* or hidden-directory wildcard.",
+    "decision": {
+      "path": "docs/history/2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md",
+      "sha256": "2b0e3b258cda074e4d42c922a6ca2bc0d598df9c39cb0973aaec5672ddc77081"
+    }
+  },
+  "helperHashes": {
+    "evals/runs/stage-3-spine-time-1/recovery/continue-2.mjs": "e60be6f39e6a2e9de68619d3614cedecf0df118dc07bf5a28797314d1a8c53eb",
+    "evals/runs/stage-3-spine-time-1/recovery/continue-2.test.mjs": "a91041d332273b84a99822321c497d13db265506ff0c9b7a349f2f8d54535754",
+    "evals/runs/stage-3-spine-time-1/recovery/exact-capture.mjs": "1bd16bd356b0028886d420838bd76d125a1185568d86e465feae60c2e09782dd",
+    "evals/runs/stage-3-spine-time-1/recovery/exact-capture.test.mjs": "e9e778365051b519a313bdb094ef385946c17c56d31cfbf0e00225d624f9d6c0",
+    "evals/runs/stage-3-spine-time-1/recovery/binding-lib.mjs": "c49c9c266c3f6cc7e3197cf1b674ab4a0a1a0eb1d5615321d00f6354072213e4",
+    "evals/runs/stage-3-completion-2/full-journey-recovery/runner/execution-core.mjs": "c00fde0ffb84bae898d68ca9cd0b27fbd2f7166ca70afc5c71c50020cdcc0aa1"
+  },
+  "output": "evals/runs/stage-3-spine-time-1/recovery/continuation-2"
+}
