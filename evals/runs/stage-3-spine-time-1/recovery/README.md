@@ -41,3 +41,4 @@ see [the restore record](../environment-restore-1.md).
 - 21 October: [concept unit 2](concepts-2-disposition.md): capture complete, one sub-pixel checker false negative; author decision pending.
 - 21 October: author chose a checker-only fix; `binding-3.json` and `adapter-3.json` pin [hit-target-2.mjs](../measurement/hit-target-2.mjs) and write `concepts-3`.
 - 21 October: [concept unit 3 passes the stop-2 gate](concepts-3-disposition.md). Turns 3 to 6 run through [continue.mjs](continue.mjs), after a one-shot [cache move](relocate-cache.mjs).
+- 21 October: generated cache [moved](cache-relocation.json); [continuation](continuation.json) and [turn-3 gate](gate-after-2.json) pass a dry run. Turn 3 launches next.

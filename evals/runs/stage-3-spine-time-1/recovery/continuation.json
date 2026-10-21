@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "kind": "timing-proof-continuation",
+  "binding": {
+    "path": "evals/runs/stage-3-spine-time-1/recovery/binding-3.json",
+    "sha256": "ce43a9e9b69c9b73f9035250412b741edd6d27f36254b0001e3192b2af53c3d4"
+  },
+  "allowedTurns": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "boundsVariance": {
+    "maxTokens": "removed",
+    "decision": {
+      "path": "docs/history/2026-10-21-claude-implementation-and-ceiling-decision.md",
+      "sha256": "6ac100531bfd37730bf354315c80ccb45977c46f28255fe14a324db0daba33e8"
+    },
+    "unchanged": [
+      "turnTimeoutMs 1800000",
+      "maxWallMs 5400000",
+      "maxUncachedTokens 1500000"
+    ]
+  },
+  "cacheRelocation": {
+    "manifest": {
+      "path": "evals/runs/stage-3-spine-time-1/recovery/cache-relocation.json",
+      "sha256": "14ceeefafb1ff2ef9af38be2c45c4963625f7fc4938135c9cba7c21dc25cd1cf"
+    }
+  },
+  "helperHashes": {
+    "evals/runs/stage-3-spine-time-1/recovery/continue.mjs": "dbd9fba19f215913a49c9f410018d34e06f1cf0a19320b15a244d2fb5f9ea127",
+    "evals/runs/stage-3-spine-time-1/recovery/continue.test.mjs": "ae906792579c10efd8caa9afbe5e39cc72b35c716ce4ef156612eb710ce69444",
+    "evals/runs/stage-3-spine-time-1/recovery/binding-lib.mjs": "4571c208bbd679364937e79304d913f241e08e1e2b67db89a8001ea04b0931db",
+    "evals/runs/stage-3-spine-time-1/recovery/relocate-cache.mjs": "971c4179ad3e546da6a248ca351319bc2a25f6e98c8b49dc8402b2ef845945a9",
+    "evals/runs/stage-3-completion-2/full-journey-recovery/runner/execution-core.mjs": "c00fde0ffb84bae898d68ca9cd0b27fbd2f7166ca70afc5c71c50020cdcc0aa1"
+  },
+  "output": "evals/runs/stage-3-spine-time-1/recovery/continuation"
+}
