@@ -1,5 +1,7 @@
 # Documentation map
 
+Latest checkpoint, 21 October: [stop 2 passes; turn 3 running](../evals/runs/stage-3-spine-time-1/recovery/concepts-3-disposition.md), with the [author's implementer and token decisions](history/2026-10-21-claude-implementation-and-ceiling-decision.md).
+
 Start here for status: [remaining work to complete the skill](superpowers/plans/2026-10-14-remaining-work-to-completion.md),
 14 October. It orders every open item from the plans below into one
 checklist with an estimate, risks and the decisions the author is asked

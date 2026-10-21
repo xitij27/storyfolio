@@ -3,6 +3,8 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
+Newest decisions: [21 October, Claude implements and the reported-token ceiling is dropped](2026-10-21-claude-implementation-and-ceiling-decision.md).
+
 Newest status request: [14 October remaining work to complete the skill](2026-10-14-remaining-work-request.md).
 Documentation only; it adds no run authority and approves nothing.
 

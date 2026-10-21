@@ -1,8 +1,27 @@
 # Handover
 
-Current state as of 14 October 2026. Start with this page and
+Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
+
+Latest checkpoint, 21 October: **stop 2 passes and turn 3 is running.**
+The author answered "Claude implements now" and dropped the 12 million
+reported-token ceiling for turns 3 to 6, keeping the time and uncached
+ceilings ([decision record](history/2026-10-21-claude-implementation-and-ceiling-decision.md)).
+A host restart had wiped `/tmp`; the pinned Node, npm cache, Chromium,
+OS libraries and trusted dependency tree were rebuilt at their exact
+paths, proven identical where hashes exist ([restore record](../evals/runs/stage-3-spine-time-1/environment-restore-1.md)).
+An additive [recovery binder](../evals/runs/stage-3-spine-time-1/recovery/README.md)
+measured the concepts from the post-closure archive. Unit 1 stopped at
+startup on a missed tooling path; unit 2 hit a 0.078-px checker false
+negative; after the author chose a checker-only fix, [unit 3 passes the
+stop-2 gate](../evals/runs/stage-3-spine-time-1/recovery/concepts-3-disposition.md)
+with all 48 originals reviewed. The generated `site/.next-concepts` cache
+was moved out of the live workspace intact, and fixed turn 3 (storyboard)
+launched at 05:56 UTC through [continue.mjs](../evals/runs/stage-3-spine-time-1/recovery/continue.mjs).
+Next: review turn 3 against the 12-to-22-beat range or the approved
+ten-beat exception, then gate turn 4. `/tmp` tooling must be checked
+before any run after a restart. Local commits only; no push.
 
 Latest summary: [what is left to complete the skill](superpowers/plans/2026-10-14-remaining-work-to-completion.md),
 answering the author's [14 October request](history/2026-10-14-remaining-work-request.md).
