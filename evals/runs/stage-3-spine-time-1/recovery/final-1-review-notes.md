@@ -28,3 +28,4 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
   jumps to Record. After long jumps the after-image shows the scene and
   rail still catching up (the trial waits for page scroll, not the scene):
   a transient lag, not a fault.
+- Back to the start: its focus outline spans the full caption width, wider than the link text (minor).
