@@ -31,8 +31,8 @@ passes a dry run, and fixed turn 4 ran at 12:02 UTC. [Turn 4 completed
 natively but its capture failed](../evals/runs/stage-3-spine-time-1/recovery/turn-4-capture-disposition.md)
 on the regenerated `site/.next-concepts` cache, as turn 2 did. The agent
 offered two looks and waited for a choice. After turn 4: 51.2 minutes and
-587,800 uncached tokens left. Author decision pending on the recovery path
-and on the uncached ceiling. The
+587,800 uncached tokens left. The author [chose the turn-2 recovery path and
+dropped the uncached ceiling for turns 5 and 6](history/2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md). The
 runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.
