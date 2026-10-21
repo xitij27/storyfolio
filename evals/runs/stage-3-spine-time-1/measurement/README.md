@@ -62,3 +62,10 @@ still use the whole workspace. Asset URL checks strip only the attested
 application prefix. Original mode/control/wording/coverage logic and final
 bounds remain. All three worker/launcher files are prepared before the
 first supplemental freeze so completed stage bindings never drift later.
+
+21 October, after [concept unit 2](../recovery/concepts-2-disposition.md):
+the author chose a checker-only correction. [hit-target-2.mjs](hit-target-2.mjs)
+copies the frozen helper with a 1-px in-view allowance; the click point
+must still be inside the viewport. The gate worker imports it and the
+pinned helper lists name it in place of the original. Concept units 1 and
+2 verify against these helpers as they were at commit `ff8e0d8`.

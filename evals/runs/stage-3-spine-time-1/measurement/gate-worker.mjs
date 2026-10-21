@@ -11,7 +11,7 @@ import { captureSource } from "../../../lib/build-capture.mjs";
 import { outsideWorkspace, verifyNextRuntime, requestFailureReason } from "../../../lib/build-check.mjs";
 import { sha, json, validateTargets, observationProblems, restPosition, activationKey, assessGateReport } from "../../stage-3-completion-2/full-journey-measurement/measurement-lib.mjs";
 import { resolveApplication } from "../../stage-3-completion-2/full-journey-recovery/measurement/app-root.mjs";
-import { inspectControlHit } from "../../stage-3-storyboard-length-1/measurement-2/hit-target.mjs";
+import { inspectControlHit } from "./hit-target-2.mjs";
 import { activateChoice } from "../../stage-3-completion-2/full-journey-recovery/measurement/choice-activation.mjs";
 
 const { values: o } = parseArgs({ options: Object.fromEntries(["workspace", "targets", "expectations", "out", "dependencies", "application-root", "batch"].map(key => [key, { type: "string" }])) });

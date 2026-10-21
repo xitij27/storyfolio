@@ -18,7 +18,7 @@ const adapterBytes = await regularBytes(root, binding.record.adapter.path); asse
 const adapter = JSON.parse(adapterBytes); assert.equal(adapter.stage, binding.record.turn); assert.ok(["site", "."].includes(adapter.applicationRoot));
 const names = ["gate-worker.mjs", "final-worker.mjs", "run-unit.mjs", "supplemental-verify.mjs", "README.md"];
 const expected = names.map(name => "evals/runs/stage-3-spine-time-1/measurement/" + name).concat([
-  "evals/runs/stage-3-storyboard-length-1/measurement-2/hit-target.mjs",
+  "evals/runs/stage-3-spine-time-1/measurement/hit-target-2.mjs",
   "evals/runs/stage-3-completion-2/full-journey-recovery/measurement/app-root.mjs",
   "evals/runs/stage-3-completion-2/full-journey-recovery/measurement/choice-activation.mjs",
   "evals/runs/stage-3-spine-time-1/recovery/binding-lib.mjs",

@@ -29,7 +29,7 @@ const expectedHelpers = [
   "evals/runs/stage-3-spine-time-1/measurement/supplemental-verify.mjs",
   "evals/runs/stage-3-spine-time-1/measurement/README.md",
   "evals/runs/stage-3-spine-time-1/measurement/run-unit.mjs",
-  "evals/runs/stage-3-storyboard-length-1/measurement-2/hit-target.mjs",
+  "evals/runs/stage-3-spine-time-1/measurement/hit-target-2.mjs",
   "evals/runs/stage-3-completion-2/full-journey-recovery/measurement/app-root.mjs",
   "evals/runs/stage-3-completion-2/full-journey-recovery/measurement/choice-activation.mjs",
   "evals/runs/stage-3-spine-time-1/recovery/binding-lib.mjs",

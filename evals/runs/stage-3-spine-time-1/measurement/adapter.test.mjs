@@ -13,7 +13,7 @@ for (const name of names) test(`${name}: relative imports resolve without execut
 });
 test("real fragment hit helper and complete-source capture remain present", async () => {
   const code = await readFile(resolve(here, names[0]), "utf8");
-  assert.ok(code.includes("../../stage-3-storyboard-length-1/measurement-2/hit-target.mjs"));
+  assert.ok(code.includes("./hit-target-2.mjs"));
   assert.ok(code.includes("await captureSource(workspace)"));
   assert.ok(code.includes("await resolveApplication(workspace"));
   assert.ok(!code.includes("force: true"));
