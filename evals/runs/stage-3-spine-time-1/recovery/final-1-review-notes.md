@@ -21,3 +21,6 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
   continuously and pass through or touch each other mid-move (Prepare to
   Command, States/Command, Current trace/Fixture, Estimate and Run behind
   Observe); transient only, no settled pose affected.
+- Forward travel, last 4 transitions, and all 27 reverse frames: reverse
+  mirrors forward; caption fades are clean both ways; the rail label sits
+  on the moving Run piece mid-move at Command and at Access/Mosslink.
