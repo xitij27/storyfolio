@@ -61,7 +61,8 @@ with Opening A and Closing A applied word for word and an honest final
 handover; root's transport rule had matched only turn 5's wording, was
 widened after seeing turn 6 (disclosed), and now covers it. The agent made
 `.next-concepts` the site's default build directory, which the final
-check must account for. Total actor time 67.5 of 90 minutes. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
+check must account for; the author chose [an exact exclusion of that folder in
+the final check](history/2026-10-21-final-check-build-folder-decision.md). Total actor time 67.5 of 90 minutes. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.
 
