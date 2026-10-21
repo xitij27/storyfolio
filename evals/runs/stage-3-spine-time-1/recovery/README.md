@@ -45,3 +45,4 @@ see [the restore record](../environment-restore-1.md).
 - 21 October: turn 3 closed normally (172874 ms actor time; snapshot captured; 392 artifacts). Storyboard review and turn-4 gate pending.
 - 21 October: [turn 3 passes the stop-3 gate](turn-3-disposition.md) under the ten-beat exception; [gate-after-3.json](gate-after-3.json) passes a dry run. Turn 4 launches next.
 - 21 October: turn 4 completed natively; [capture failed on the regenerated `site/.next-concepts`](turn-4-capture-disposition.md). Evidence preserved; author decision pending.
+- 21 October: [recover-source-4.mjs](recover-source-4.mjs) archived turn 4's 205 authored files (source digest `ef33a605…`) in [source-recovery-4](source-recovery-4/result.json), excluding exactly `site/.next-concepts`. Source retention only; the turn-4 binder, look measurement and continuation record follow.

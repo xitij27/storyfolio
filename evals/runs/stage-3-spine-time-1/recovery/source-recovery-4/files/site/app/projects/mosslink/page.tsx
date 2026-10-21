@@ -1,0 +1,25 @@
+/* Local, explicitly sized explanatory SVGs need no image optimizer. */
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+import type { Metadata } from "next";
+import { SiteHeader, SiteFooter, ContactLinks } from "@/components/site/navigation";
+export const metadata: Metadata = {
+  title: "Mosslink | Ada Mensah",
+  description: "Firmware, power-state scheduling and a bring-up fixture for Mosslink. Contribution, reported observation and evidence limits.",
+  openGraph: { title: "Mosslink | Ada Mensah", description: "An environmental sensor: firmware, fixture access and the limits of the evidence.", type: "article", images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Ada Mensah, embedded firmware. Original explanatory fixture geometry, not a photograph or actual device." }] },
+};
+export default function Mosslink() {
+  return <><SiteHeader /><main className="article-page">
+    <Link className="breadcrumb" href="/#access">← Back to the fixture</Link>
+    <p className="eyebrow">PROJECT / ENVIRONMENTAL SENSOR</p><h1>Mosslink.</h1><p className="article-lead">Firmware, power states and the connection to a physical observation.</p>
+    <nav className="article-nav" aria-label="Project sections"><a href="#contribution">Contribution</a><a href="#explanations">Explanations</a><a href="#observation">Observation</a><a href="#evidence">Evidence</a></nav>
+    <section id="contribution" aria-labelledby="contribution-title"><p className="eyebrow">01 / CONTRIBUTION</p><h2 id="contribution-title">My work and its boundary.</h2><p>I wrote Mosslink’s firmware, scheduled the power states and built the bring-up fixture. My colleague designed the printed circuit board and analogue front end.</p><p>Bring-up means checking a new board’s basic operation. My tools include C, oscilloscopes, logic analysers and board bring-up. My working documents are a state table, a timing diagram and a current trace.</p></section>
+    <section id="explanations" aria-labelledby="explanations-title"><p className="eyebrow">02 / EXPLANATIONS</p><h2 id="explanations-title">Two teaching drawings.</h2><p>These supplied local drawings explain relationships. They are not photographs, original wiring, recovered firmware, a current trace or test results. The fixture photograph remains unavailable.</p><div className="drawing-pair">
+      <figure><img src="/assets/power-states.svg" width="720" height="500" alt="Teaching sequence Sleep, Measure, Transmit; no durations, current values or actual firmware states claimed." /><figcaption>Power states: a teaching sequence, with no claimed durations or current values.</figcaption><a href="/assets/power-states.svg">Open power-state drawing ↗</a></figure>
+      <figure><img src="/assets/bring-up-fixture.svg" width="720" height="500" alt="Explanatory relationship from firmware command through a generic board and bring-up fixture to bench observation; no actual wiring shown." /><figcaption>Fixture access: a generic relationship, without actual circuit or wiring detail.</figcaption><a href="/assets/bring-up-fixture.svg">Open fixture drawing ↗</a></figure>
+    </div><p className="article-note">Drawings supplied under the repository’s MIT licence. The colleague’s circuit diagram is excluded.</p></section>
+    <section id="observation" aria-labelledby="observation-title"><p className="eyebrow">03 / OBSERVATION</p><h2 id="observation-title">A radio that stayed awake.</h2><p>A current trace showed the radio staying awake after a failed transmission. No cause, fix, timing or later resolution is confirmed. No trace file is available to publish.</p><p>The lesson I want to express: a firmware decision needs a physical observation. An estimate and an observed run support different claims.</p></section>
+    <section id="evidence" aria-labelledby="evidence-title"><p className="eyebrow">04 / EVIDENCE</p><h2 id="evidence-title">Keep each claim within its evidence.</h2><dl className="evidence-ledger"><div><dt>Battery projection</dt><dd>Two years, projected from bench current readings and an assumed reporting cycle. No field endurance or weather testing supports a two-year claim.</dd></div><div><dt>Observed run</dt><dd>The longest continuous run was 72 hours.</dd></div><div><dt>Engineering samples</dt><dd>Forty assembled; six tested on the bench. None went to customers. This was not a field pilot or a product launch.</dd></div><div><dt>Emissions</dt><dd>One preliminary check passed. The full qualification programme is unfinished. The device is not described here as certified or qualified.</dd></div></dl><p className="article-note">Sample counts and check outcomes describe the project. They do not assign all assembly, testing or qualification work to me.</p></section>
+    <section className="article-contact" aria-labelledby="contact-title"><p className="eyebrow">NEXT / CONTACT</p><h2 id="contact-title">Embedded firmware roles.</h2><p>I’m looking for embedded firmware roles involving physical devices.</p><ContactLinks /><Link href="/#record">Return to the story’s evidence and contact →</Link></section>
+  </main><SiteFooter /></>;
+}
