@@ -29,3 +29,7 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
   rail still catching up (the trial waits for page scroll, not the scene):
   a transient lag, not a fault.
 - Back to the start: its focus outline spans the full caption width, wider than the link text (minor).
+- All 55 desktop control images: every header chapter link, rail link,
+  opening shortcut, skip link and Back to the start activates by pointer
+  and keyboard with a visible focus outline. Focused or hovered rail items
+  draw over the Run piece at the opening. Desktop complete: 139 of 139.
