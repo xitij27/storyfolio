@@ -27,7 +27,12 @@ carried forward. After turn 3: 21.2 of 90 minutes and 469,319 of 1.5
 million uncached tokens used. Turn 3 alone used 261,186 uncached tokens in
 under three minutes, so root projects that the uncached ceiling, not time,
 may bind in turns 4 to 6. [gate-after-3.json](../evals/runs/stage-3-spine-time-1/recovery/gate-after-3.json)
-passes a dry run; fixed turn 4 (spine and look choice) launches next. The
+passes a dry run, and fixed turn 4 ran at 12:02 UTC. [Turn 4 completed
+natively but its capture failed](../evals/runs/stage-3-spine-time-1/recovery/turn-4-capture-disposition.md)
+on the regenerated `site/.next-concepts` cache, as turn 2 did. The agent
+offered two looks and waited for a choice. After turn 4: 51.2 minutes and
+587,800 uncached tokens left. Author decision pending on the recovery path
+and on the uncached ceiling. The
 runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.

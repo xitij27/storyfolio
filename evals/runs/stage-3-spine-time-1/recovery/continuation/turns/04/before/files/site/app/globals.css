@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+
+:root { --font-story-display: system-ui, sans-serif; }
+body { background: #f2f0e9; color: #202932; }
+.local-nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem 1.5rem; position:relative; z-index:10; padding:1rem clamp(1.25rem,5vw,5rem); font: .8rem ui-monospace,monospace; border-bottom:1px solid #c7c9bf; min-height:64px; }
+.local-nav a { padding:.6rem 0; }
+.concept-index { max-width:1080px; margin:0 auto; padding:64px 28px; }
+.eyebrow { font: .8rem ui-monospace,monospace; letter-spacing:.1em; color:#8d471e; }
+.concept-index h1 { font-size:clamp(3rem,7vw,6rem); letter-spacing:-.06em; line-height:1.02; margin:40px 0 24px; }
+.concept-index>p { max-width:650px; line-height:1.7; }
+.concept-list { list-style:none; margin:56px 0 36px; padding:0; }
+.concept-list li { border-top:1px solid #9aa59c; }
+.concept-list a { display:block; padding:28px 0; text-decoration:none; }
+.concept-list a:hover h2 { color:#8d471e; }
+.concept-list span { font:.8rem ui-monospace,monospace; color:#58636c; }
+.concept-list h2 { font-size:clamp(1.6rem,3vw,2.5rem); letter-spacing:-.035em; margin:12px 0; }
+.concept-list p { line-height:1.65; max-width:690px; }
+.concept-question { font-size:1rem; line-height:1.5; color:var(--story-accent); }
+.concept-sketch .story-title { font-weight:600; font-size:clamp(2rem,3.8vw,3.8rem); }
+.concept-sketch .story-caption-text { max-width:30rem; }
+.concept-sketch .story-caption { padding-block:2.5rem; }
+.sketch-shortcuts { font-size:.85rem; line-height:1.7; }
+@media(max-width:600px){.local-nav span { order:3; width:100%; }.concept-sketch .story-title{font-size:2rem}.concept-sketch .story-body{line-height:1.5;font-size:.95rem}.concept-sketch .story-note{font-size:.78rem}.concept-sketch .story-caption{padding-block:1.5rem}.concept-question{font-size:.9rem}}

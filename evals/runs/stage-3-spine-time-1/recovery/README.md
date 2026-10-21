@@ -44,3 +44,4 @@ see [the restore record](../environment-restore-1.md).
 - 21 October: generated cache [moved](cache-relocation.json); [continuation](continuation.json) and [turn-3 gate](gate-after-2.json) pass a dry run. Turn 3 launches next.
 - 21 October: turn 3 closed normally (172874 ms actor time; snapshot captured; 392 artifacts). Storyboard review and turn-4 gate pending.
 - 21 October: [turn 3 passes the stop-3 gate](turn-3-disposition.md) under the ten-beat exception; [gate-after-3.json](gate-after-3.json) passes a dry run. Turn 4 launches next.
+- 21 October: turn 4 completed natively; [capture failed on the regenerated `site/.next-concepts`](turn-4-capture-disposition.md). Evidence preserved; author decision pending.
