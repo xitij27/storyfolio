@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "stage": 2,
+  "sourceDigest": "a0c094b2658becfc1eadfc79948b6aead3f438e84927c415f2a2373a6c64d91f",
+  "actorResultSha256": "7a7cbf72ccf7963cc665961a486af11b8c49b44f7ea755db217a6ec3f5ac63b6",
+  "discovery": {
+    "reviewer": "Root (Claude Code), complete review of the archived public source plus a scratch-build browser probe of chooser names, beats and links",
+    "exhaustive": true,
+    "sources": [
+      {
+        "path": "docs/story/concepts.md",
+        "sha256": "8c53bc029a4ea66820ccff7408793091b2e639ef8999bf7d5c5f4c66046be2fc"
+      },
+      {
+        "path": "site/app/page.tsx",
+        "sha256": "7d1bb7919835551447608b4020f4a8195c17cb967caa67070df96c8e162eb0b5"
+      },
+      {
+        "path": "site/app/sketch/[id]/page.tsx",
+        "sha256": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739"
+      },
+      {
+        "path": "site/content/sketches/index.ts",
+        "sha256": "d02c9c87955e97b6efd2a7306bcb48aa869e844e811d67ed03e592661ebb4da1"
+      },
+      {
+        "path": "site/content/sketches/concepts.tsx",
+        "sha256": "25a5aa84a6245d418b6b0f639c5ebb554619eaf73ebbcef679d3d7c6151daeca"
+      },
+      {
+        "path": "site/content/looks.ts",
+        "sha256": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559"
+      },
+      {
+        "path": "site/components/story/story.tsx",
+        "sha256": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a"
+      },
+      {
+        "path": "site/components/story/chapter.tsx",
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": "site/components/story/rail.tsx",
+        "sha256": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624"
+      },
+      {
+        "path": "site/components/story/look-switch.tsx",
+        "sha256": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8"
+      },
+      {
+        "path": "site/components/story/overlay.tsx",
+        "sha256": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d"
+      }
+    ],
+    "scope": "All registered and advertised concept routes and their actual index chooser links. Each sketch has one look, so no look switch renders and there are no appearance alternatives. Ordinary return, chapter, shortcut, CV and contact links are inventoried below, not relabelled concept alternatives."
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "The post-closure archive includes the authored nested site, its index chooser, three registered concept components, three beat rests each and custom physical geometry. This is eligibility for measurement, not a runnable, technical or visual pass."
+  },
+  "applicationRoot": "site",
+  "evidence": {
+    "actorTurn": "evals/runs/codex-full-journey-timing-1/full-journey-1/baseline-1/turns/02",
+    "sourceRecord": "evals/runs/stage-3-spine-time-1/source-recovery-1/source.json",
+    "sourceBasis": "post-closure archive of all 189 authored files; the original turn-2 result failed capture and stays complete false",
+    "terminal": {
+      "stream": "evals/runs/codex-full-journey-timing-1/full-journey-1/baseline-1/turns/02/stream.jsonl",
+      "sha256": "d097b493fa07f69d990b4ebb7a9fd736d42eaa6afb6247636c50b1a79381860a",
+      "itemId": "item_35",
+      "event": "item.completed",
+      "type": "agent_message"
+    },
+    "validation": "Root source-reviewed routes, registry, controls and labels, then read the actual chooser names, beat ids and links from a disposable scratch build of the same archive. That probe is not a measurement and is not retained as evidence."
+  },
+  "alternatives": [
+    {
+      "id": "fixture",
+      "route": "/sketch/fixture",
+      "advertised": true,
+      "control": {
+        "selector": ".concept-index a[href=\"/sketch/fixture\"]",
+        "name": "01 / Bring-up checklistThe bring-up fixture ↗Command, access and observation separate from the same solid fixture. Recommended: closest to the fixture Ada built and the work a hiring manager needs to understand.",
+        "fromRoute": "/"
+      },
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.evidence"
+      },
+      "meaning": "A bring-up checklist account: a seven-segment generic fixture assembles, separates into command, access and observation groups, then separates Estimate from Run, connecting Ada's firmware and the fixture she built to the unresolved radio observation and the projected-versus-observed distinction."
+    },
+    {
+      "id": "sensor",
+      "route": "/sketch/sensor",
+      "advertised": true,
+      "control": {
+        "selector": ".concept-index a[href=\"/sketch/sensor\"]",
+        "name": "02 / State tableThe power-state assembly ↗A generic sensor assembly separates planning from observation, using a labelled teaching loop.",
+        "fromRoute": "/"
+      },
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.evidence"
+      },
+      "meaning": "A state-table account: a seven-module generic sensor assembly opens into a labelled teaching loop and observation branch, separating Ada's power-state planning from the colleague's PCB work and from what an observation shows."
+    },
+    {
+      "id": "loom",
+      "route": "/sketch/loom",
+      "advertised": true,
+      "control": {
+        "selector": ".concept-index a[href=\"/sketch/loom\"]",
+        "name": "03 / Timing diagram readingThe observation loom ↗Probe connectors order the relationship between command, observation and an open question, without invented timings or traces.",
+        "fromRoute": "/"
+      },
+      "beats": {
+        "opening": "opening.object",
+        "middle": "middle.observe",
+        "ending": "close.evidence"
+      },
+      "meaning": "A timing-diagram reading without an actual diagram: seven probe connectors gather into a loom and open into ordered command, observation and question positions, with distances explicitly not elapsed time, closing on separate Estimate and Run."
+    }
+  ],
+  "sourceCensus": {
+    "registeredConcepts": [
+      "fixture",
+      "sensor",
+      "loom"
+    ],
+    "advertisedConceptCount": 3,
+    "observationAlternativeCount": 3,
+    "lookIds": [
+      "light"
+    ],
+    "defaultLook": "light",
+    "lookQuery": "look",
+    "otherRegisteredConceptAliases": [],
+    "routeFiles": [
+      "site/app/page.tsx",
+      "site/app/sketch/[id]/page.tsx"
+    ],
+    "ordinaryControls": [
+      {
+        "routes": [
+          "/"
+        ],
+        "selector": ".concept-index > a[href=\"/cv.html\"]",
+        "name": "View corrected printable HTML CV",
+        "purpose": "CV page, not a concept chooser"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": ".local-nav a[href=\"/\"]",
+        "name": "All concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": ".local-nav a[href=\"mailto:ada@example.com\"]",
+        "name": "Email",
+        "purpose": "contact, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": ".story-rail a",
+        "hrefs": [
+          "#opening",
+          "#middle",
+          "#close"
+        ],
+        "purpose": "three same-story chapter links"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": "#opening .sketch-shortcuts a",
+        "hrefs": [
+          "#middle",
+          "#close"
+        ],
+        "purpose": "same-story shortcuts"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": "#close a[href=\"mailto:ada@example.com\"]",
+        "name": "ada@example.com",
+        "purpose": "contact, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": "#close a[href=\"/cv.html\"]",
+        "name": "Download HTML CV",
+        "purpose": "CV download, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/fixture"
+        ],
+        "selector": "#close a[href=\"/\"]",
+        "name": "Compare concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/sensor"
+        ],
+        "selector": ".local-nav a[href=\"/\"]",
+        "name": "All concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/sensor"
+        ],
+        "selector": ".local-nav a[href=\"mailto:ada@example.com\"]",
+        "name": "Email",
+        "purpose": "contact, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/sensor"
+        ],
+        "selector": ".story-rail a",
+        "hrefs": [
+          "#opening",
+          "#middle",
+          "#close"
+        ],
+        "purpose": "three same-story chapter links"
+      },
+      {
+        "routes": [
+          "/sketch/sensor"
+        ],
+        "selector": "#opening .sketch-shortcuts a",
+        "hrefs": [
+          "#middle",
+          "#close"
+        ],
+        "purpose": "same-story shortcuts"
+      },
+      {
+        "routes": [
+          "/sketch/sensor"
+        ],
+        "selector": "#close a[href=\"mailto:ada@example.com\"]",
+        "name": "ada@example.com",
+        "purpose": "contact, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/sensor"
+        ],
+        "selector": "#close a[href=\"/cv.html\"]",
+        "name": "Download HTML CV",
+        "purpose": "CV download, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/sensor"
+        ],
+        "selector": "#close a[href=\"/\"]",
+        "name": "Compare concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/loom"
+        ],
+        "selector": ".local-nav a[href=\"/\"]",
+        "name": "All concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      },
+      {
+        "routes": [
+          "/sketch/loom"
+        ],
+        "selector": ".local-nav a[href=\"mailto:ada@example.com\"]",
+        "name": "Email",
+        "purpose": "contact, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/loom"
+        ],
+        "selector": ".story-rail a",
+        "hrefs": [
+          "#opening",
+          "#middle",
+          "#close"
+        ],
+        "purpose": "three same-story chapter links"
+      },
+      {
+        "routes": [
+          "/sketch/loom"
+        ],
+        "selector": "#opening .sketch-shortcuts a",
+        "hrefs": [
+          "#middle",
+          "#close"
+        ],
+        "purpose": "same-story shortcuts"
+      },
+      {
+        "routes": [
+          "/sketch/loom"
+        ],
+        "selector": "#close a[href=\"mailto:ada@example.com\"]",
+        "name": "ada@example.com",
+        "purpose": "contact, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/loom"
+        ],
+        "selector": "#close a[href=\"/cv.html\"]",
+        "name": "Download HTML CV",
+        "purpose": "CV download, not a concept alternative"
+      },
+      {
+        "routes": [
+          "/sketch/loom"
+        ],
+        "selector": "#close a[href=\"/\"]",
+        "name": "Compare concepts",
+        "purpose": "returns to the index, not a direct alternate-concept alias"
+      }
+    ]
+  },
+  "limits": [
+    "Source declarations and actor claims do not establish usability, legibility, meaningful spatial explanation or genuine desktop/phone behavior.",
+    "The ordinary return, chapter, shortcut, CV and mail links are disclosed but not exercised by the narrow concept-alternative worker; final whole-site ordinary-control coverage remains later.",
+    "All three sketches share one provisional light look; no stop-4 look is established.",
+    "The measured source is a post-closure archive, not the missing closure-time snapshot."
+  ],
+  "reviewedByRoot": true
+}
