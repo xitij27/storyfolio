@@ -38,3 +38,4 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 
 - Rests and mid/end (30): the fixture sits above the caption at every beat with no overlap; mid and end frames are already settled; formations remain distinguishable at phone size; face words unreadable, carried by HTML.
 - Phone travel: moving pieces pass over the fading outgoing caption mid-move (prepare.responsibility to command.states, command.states to command.documents) and at 0.8 into command.states sit on the incoming kicker; transient, settled beats clear.
+  Same at observe.open to record.battery (0.8: Estimate and Run reach the incoming kicker) and record.battery to record.scope (0.2: pieces over the fading heading).
