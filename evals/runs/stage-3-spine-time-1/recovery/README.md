@@ -37,3 +37,4 @@ recorder; `supplemental-verify.mjs`; review every original image; then
 
 The temporary tooling these runs need was rebuilt after a host restart;
 see [the restore record](../environment-restore-1.md).
+- 21 October: [concept unit 1 stopped at startup on missing tooling](concepts-1-disposition.md); replacement `binding-2.json` writes `concepts-2`.

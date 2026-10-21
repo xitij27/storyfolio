@@ -1,0 +1,14 @@
+node:internal/fs/promises:1162
+  return await PromisePrototypeThen(
+         ^
+
+Error: ENOENT: no such file or directory, realpath '/tmp/storyfolio-build-capability-20261011'
+    at async realpath (node:internal/fs/promises:1162:10)
+    at async file:///home/kshitij/projects/storyfolio/evals/runs/stage-3-spine-time-1/measurement/gate-worker.mjs:19:88 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'realpath',
+  path: '/tmp/storyfolio-build-capability-20261011'
+}
+
+Node.js v22.22.1

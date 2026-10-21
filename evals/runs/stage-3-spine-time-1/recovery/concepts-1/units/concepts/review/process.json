@@ -1,0 +1,21 @@
+{
+  "code": 1,
+  "signal": null,
+  "timedOut": false,
+  "externalSignal": null,
+  "spawnError": null,
+  "wrapperPid": 3251125,
+  "childPid": 3251172,
+  "started": "2026-10-21T05:37:46.277Z",
+  "finished": "2026-10-21T05:37:46.321Z",
+  "durationMs": 44,
+  "timeoutMs": 895000,
+  "graceMs": 5000,
+  "totalCapMs": 900000,
+  "stdout": "",
+  "stderr": "node:internal/fs/promises:1162\n  return await PromisePrototypeThen(\n         ^\n\nError: ENOENT: no such file or directory, realpath '/tmp/storyfolio-build-capability-20261011'\n    at async realpath (node:internal/fs/promises:1162:10)\n    at async file:///home/kshitij/projects/storyfolio/evals/runs/stage-3-spine-time-1/measurement/gate-worker.mjs:19:88 {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'realpath',\n  path: '/tmp/storyfolio-build-capability-20261011'\n}\n\nNode.js v22.22.1\n",
+  "logError": null,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "6933809c3a0612dedae8cfbdd60df19dfb9e7bc6ffcd4c0cb256809a3b0f63e7",
+  "lifecycleSha256": "6895e9100bf2b32bfa3a33c08e8c9341fa1e69157a158b83adc7e5df22451821"
+}

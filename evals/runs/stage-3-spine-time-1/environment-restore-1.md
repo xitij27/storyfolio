@@ -41,3 +41,11 @@ Limit: these are restored copies. Equality with the erased bytes is
 proved for Node and the OS packages, and rests on a pinned revision for
 Chromium. A later restart erases them again, so check these paths before
 any run.
+
+## Missed path, restored later the same day
+
+`/tmp/storyfolio-build-capability-20261011`, the measurement policy's
+trusted dependency root, was also erased and was missed above. The first
+concept unit stopped on it at startup; see the
+[disposition](recovery/concepts-1-disposition.md). It is now rebuilt and
+its two pinned hashes match.
