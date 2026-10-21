@@ -1,4 +1,4 @@
-// Stop-2 and stop-4 bindings of post-closure archives. The failed turn-2 and turn-4 results stay failed; nothing here promotes them.
+// Stop-2, stop-4 and stop-6 bindings of recovered turns. The failed turn-2, turn-4 and turn-6 results stay failed; nothing here promotes them.
 import assert from "node:assert/strict";
 import { readdir, realpath } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
@@ -11,15 +11,26 @@ export const study = "evals/runs/stage-3-spine-time-1";
 export const run = "evals/runs/codex-full-journey-timing-1/full-journey-1/baseline-1";
 export const turn2ResultSha256 = "7a7cbf72ccf7963cc665961a486af11b8c49b44f7ea755db217a6ec3f5ac63b6";
 export const turn4ResultSha256 = "434c0cdf7bdda2bdcbe42589fbb57ebc0d26deda0a0afc821cf1bba8976987b7";
-// Each recovered turn: its failed result, where it lives, the runner that launched it and its archive.
+export const turn6ResultSha256 = "57bf4dac9a0505f99886041aab9d55e9688c70206cbd4479294677d04c3926b9";
+const captureError = "Error: Snapshot byte bound exceeded: site/.next-concepts/cache/turbopack/v16.3.8-b0fad0d4/00000001.sst";
+const transportError = "AssertionError [ERR_ASSERTION]: Transport fallback after the agent's first action is not covered";
+const reconnect = /^Reconnecting\.\.\. \d+\/\d+ \(stream disconnected before completion: .+\)$/;
+// Each recovered turn: its failed result, how it failed, the turn it resumed, how it was launched and where its source is.
+// Turns 2 and 4 failed capture and are measured from post-closure archives; turn 6 failed only the transport rule as first
+// written and has its own closure-time snapshot. Turn 6 builds into .next through the agent's own STORYFOLIO_DIST_DIR (author, 21 October).
+const capturedLater = actor => { assert.equal(actor.captureError, captureError); assert.equal(actor.snapshot, undefined); assert.deepEqual(actor.errors, []); };
 const recoveries = {
-  "recovered-concepts-measurement": { turn: 2, resultSha256: turn2ResultSha256, turnPath: `${run}/turns/02`, runner: "evals/codex-build-run.mjs", archive: `${study}/source-recovery-1` },
-  "recovered-looks-measurement": { turn: 4, resultSha256: turn4ResultSha256, turnPath: `${study}/recovery/continuation/turns/04`, runner: `${study}/recovery/continue.mjs`, archive: `${study}/recovery/source-recovery-4` },
+  "recovered-concepts-measurement": { turn: 2, resultSha256: turn2ResultSha256, turnPath: `${run}/turns/02`, runner: "evals/codex-build-run.mjs", archive: `${study}/source-recovery-1`, failure: capturedLater },
+  "recovered-looks-measurement": { turn: 4, resultSha256: turn4ResultSha256, turnPath: `${study}/recovery/continuation/turns/04`, runner: `${study}/recovery/continue.mjs`, archive: `${study}/recovery/source-recovery-4`, failure: capturedLater,
+    previous: { path: `${study}/recovery/continuation/turns/03`, complete: true }, launch: { continuation: `${study}/recovery/continuation.json`, gate: `${study}/recovery/gate-after-3.json` } },
+  "recovered-final-measurement": { turn: 6, resultSha256: turn6ResultSha256, turnPath: `${study}/recovery/continuation-3/turns/06`, runner: `${study}/recovery/continue-3.mjs`, environment: { STORYFOLIO_DIST_DIR: ".next" },
+    failure: actor => { assert.equal(actor.error, transportError); assert.equal(actor.captureError, undefined); assert.ok(actor.snapshot); assert.ok(actor.errors.length && actor.errors.every(error => error.type === "error" && reconnect.test(error.message))); },
+    previous: { path: `${study}/recovery/continuation-2/turns/05`, complete: false }, launch: { continuation: `${study}/recovery/continuation-3.json`, gate: `${study}/recovery/gate-after-5.json` } },
 };
 export const isRecovered = kind => Object.hasOwn(recoveries, kind);
 export const excluded = "site/.next-concepts";
-const captureError = "Error: Snapshot byte bound exceeded: site/.next-concepts/cache/turbopack/v16.3.8-b0fad0d4/00000001.sst";
-const sourceBasis = "post-closure archive of the live actor workspace, not the missing closure-time snapshot";
+const archiveBasis = "post-closure archive of the live actor workspace, not the missing closure-time snapshot";
+const snapshotBasis = "closure-time snapshot of the actor workspace, taken by the continuation runner's exact capture";
 async function bound(reference) {
   safePath(reference.path); assert.ok(reference.path.startsWith("evals/runs/")); assert.match(reference.sha256, /^[a-f0-9]{64}$/);
   const bytes = await regularBytes(root, reference.path); assert.equal(hash(bytes), reference.sha256, `Bound bytes changed: ${reference.path}`); return JSON.parse(bytes);
@@ -53,21 +64,22 @@ export async function loadBinding(path, { liveOriginal = true } = {}) {
   // Turn 1 is an ordinary complete turn of the same session.
   const first = JSON.parse(await regularBytes(join(runPath, "turns/01"), "result.json"));
   assert.equal(first.complete, true); assert.equal(first.turn, 1); assert.ok(first.sessionId);
-  // The recovered turn completed natively; only its source capture failed.
+  // The recovered turn completed natively; only the runner's own check after it failed.
   const turn = join(root, spec.turnPath), actorBytes = await regularBytes(turn, "result.json"), actor = JSON.parse(actorBytes);
   assert.equal(hash(actorBytes), spec.resultSha256); assert.equal(actor.turn, spec.turn); assert.equal(actor.requestedStop, spec.turn); assert.equal(actor.taskKind, "full-journey");
-  assert.equal(actor.complete, false); assert.equal(actor.captureError, captureError); assert.equal(actor.snapshot, undefined);
-  assert.equal(actor.timedOut, false); assert.equal(actor.interruptedBy, null); assert.deepEqual(actor.errors, []); assert.equal(actor.sessionId, first.sessionId);
+  assert.equal(actor.complete, false); spec.failure(actor);
+  assert.equal(actor.timedOut, false); assert.equal(actor.interruptedBy, null); assert.equal(actor.sessionId, first.sessionId);
   const artifacts = (await inventory(turn)).filter(file => file.path !== "result.json");
   assert.deepEqual(Object.fromEntries(artifacts.map(file => [file.path, file.sha256])), actor.artifacts, `Original turn-${spec.turn} artifact set changed`);
-  if (spec.turn === 4) {
-    // Turn 3 is the complete continuation turn this one resumed.
-    const previousBytes = await regularBytes(join(root, study, "recovery/continuation/turns/03"), "result.json"), previous = JSON.parse(previousBytes);
-    assert.equal(previous.complete, true); assert.equal(previous.turn, 3); assert.equal(hash(previousBytes), actor.previousTurnDigest); assert.equal(previous.sessionId, first.sessionId);
+  if (spec.previous) {
+    // The continuation turn this one resumed: turn 3 complete, turn 5 counted under the transport rule.
+    const previousBytes = await regularBytes(join(root, spec.previous.path), "result.json"), previous = JSON.parse(previousBytes);
+    assert.equal(previous.complete, spec.previous.complete); assert.equal(previous.turn, spec.turn - 1); assert.equal(hash(previousBytes), actor.previousTurnDigest); assert.equal(previous.sessionId, first.sessionId);
   }
-  const stream = (await regularBytes(turn, "stream.jsonl")).toString().trim().split("\n"), last = JSON.parse(stream.at(-1));
+  const stream = (await regularBytes(turn, "stream.jsonl")).toString().trim().split("\n"), last = JSON.parse(stream.at(-1)), terminal = JSON.parse(stream.at(-2));
   assert.equal(last.type, "turn.completed"); assert.deepEqual(last.usage, actor.usage);
-  // The outer recorder closed normally with the runner's capture failure, not a signal or timeout.
+  if (spec.turn === 6) { assert.equal(terminal.item?.type, "agent_message"); assert.ok((await regularBytes(turn, "reply.md")).toString().endsWith(terminal.item.text + "\n")); }
+  // The outer recorder closed normally with the runner's failure, not a signal or timeout.
   const processRecord = await bound(record.processRecord), processDirectory = dirname(record.processRecord.path), raw = {};
   for (const name of ["command.json", "lifecycle.jsonl", "stdout.log", "stderr.log"]) { raw[name] = await regularBytes(root, `${processDirectory}/${name}`); assert.equal(hash(raw[name]), processRecord.rawArtifacts?.[name]); }
   assert.equal(processRecord.code, 1); assert.equal(processRecord.status, "child-exited-unsuccessfully"); assert.equal(processRecord.childClosed, true);
@@ -79,15 +91,19 @@ export async function loadBinding(path, { liveOriginal = true } = {}) {
   assert.equal(actorFlags["--turn"], String(spec.turn));
   if (spec.turn === 2) { assert.equal(actorFlags["--cohort"], meta.cohort); assert.equal(hash(await regularBytes(root, actorFlags["--case"])), frozen.hashes["case.json"]); }
   else {
-    assert.equal(actorFlags["--continuation"], `${study}/recovery/continuation.json`); assert.equal(actorFlags["--continuation-sha256"], actor.continuationSha256);
-    assert.equal(actorFlags["--gate"], `${study}/recovery/gate-after-3.json`); assert.equal(actorFlags["--gate-sha256"], actor.gateSha256);
+    assert.equal(actorFlags["--continuation"], spec.launch.continuation); assert.equal(actorFlags["--continuation-sha256"], actor.continuationSha256);
+    assert.equal(actorFlags["--gate"], spec.launch.gate); assert.equal(actorFlags["--gate-sha256"], actor.gateSha256);
     assert.equal(hash(await regularBytes(root, actorFlags["--gate"])), actor.gateSha256);
   }
-  // The archive: complete authored source, verified byte for byte.
-  const archive = join(root, spec.archive), recovery = JSON.parse(await regularBytes(archive, "result.json")), originalSource = JSON.parse(await regularBytes(archive, "source.json"));
-  assert.equal(recovery.kind, "post-closure-source-archive"); assert.equal(recovery.turn ?? 2, spec.turn); assert.equal(recovery.originalResultSha256, spec.resultSha256); assert.equal(recovery.originalInputDigest, frozen.digest);
-  assert.equal(recovery.exactAdditionalExclusion, excluded); assert.equal(recovery.modelCalls, 0); assert.equal(recovery.originalFilesModified, false); assert.equal(recovery.sourceUnchangedDuringArchive, true);
-  assert.equal(originalSource.digest, hash(JSON.stringify(originalSource.files))); assert.equal(recovery.sourceDigest, originalSource.digest);
+  // The source: a post-closure archive or the turn's own snapshot, complete authored source verified byte for byte.
+  const archive = join(root, spec.archive ?? `${spec.turnPath}/snapshot`), originalSource = JSON.parse(await regularBytes(archive, "source.json"));
+  if (spec.archive) {
+    const recovery = JSON.parse(await regularBytes(archive, "result.json"));
+    assert.equal(recovery.kind, "post-closure-source-archive"); assert.equal(recovery.turn ?? 2, spec.turn); assert.equal(recovery.originalResultSha256, spec.resultSha256); assert.equal(recovery.originalInputDigest, frozen.digest);
+    assert.equal(recovery.exactAdditionalExclusion, excluded); assert.equal(recovery.modelCalls, 0); assert.equal(recovery.originalFilesModified, false); assert.equal(recovery.sourceUnchangedDuringArchive, true);
+    assert.equal(recovery.sourceDigest, originalSource.digest);
+  } else assert.equal(actor.sourceDigest, originalSource.digest);
+  assert.equal(originalSource.digest, hash(JSON.stringify(originalSource.files)));
   const recoveryFilesRoot = join(archive, "files"), archived = await inventory(recoveryFilesRoot);
   assert.deepEqual(archived.map(({ path, bytes, sha256 }) => ({ path, bytes, sha256 })), originalSource.files, "Archive differs from its manifest");
   // What captureSource yields on an exact reconstruction, which has no .next-concepts directory.
@@ -104,8 +120,8 @@ export async function loadBinding(path, { liveOriginal = true } = {}) {
   const installContract = { executable: "npm", args: ["ci", "--offline", "--cache=/tmp/storyfolio-npm-cache"], environment: { ...capabilities.environment, TMPDIR: runtime.TMPDIR, NEXT_TELEMETRY_DISABLED: null } };
   safePath(record.output); assert.ok(record.output.startsWith(study + "/recovery/")); const output = join(root, record.output);
   for (const protectedRoot of [meta.work, meta.inputs, archive, runPath]) assert.ok(output !== protectedRoot && !output.startsWith(protectedRoot + "/"), "Measurement output overlaps protected evidence/source");
-  return { record, workPrefix: `journey-recovery-time-${spec.turn}-`, bindingPath: absolute, bindingSha256: hash(bytes), run: runPath, turn, meta, frozen, helperHashes, policy, actor, originalSource, restored, recoveryFilesRoot, sourceBasis, targets, capabilities, runtime, installContract, output,
-    environment: { ...capabilities.environment, TMPDIR: runtime.TMPDIR, NEXT_TELEMETRY_DISABLED: "1" }, units: units(spec.turn) };
+  return { record, workPrefix: `journey-recovery-time-${spec.turn}-`, bindingPath: absolute, bindingSha256: hash(bytes), run: runPath, turn, meta, frozen, helperHashes, policy, actor, originalSource, restored, recoveryFilesRoot, sourceBasis: spec.archive ? archiveBasis : snapshotBasis, targets, capabilities, runtime, installContract, output,
+    environment: { ...capabilities.environment, TMPDIR: runtime.TMPDIR, NEXT_TELEMETRY_DISABLED: "1", ...spec.environment }, units: units(spec.turn) };
 }
 export async function loadPrepared(binding, { currentSource = true } = {}) {
   const setup = join(binding.output, "setup"), preparation = JSON.parse(await regularBytes(setup, "reconstruction.json"));
