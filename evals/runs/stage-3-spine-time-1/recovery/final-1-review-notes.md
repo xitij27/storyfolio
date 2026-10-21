@@ -41,3 +41,7 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
   Same at observe.open to record.battery (0.8: Estimate and Run reach the incoming kicker) and record.battery to record.scope (0.2: pieces over the fading heading).
 - Phone reverse travel mirrors forward; no further issues.
 - All 35 phone control images: skip link, header chapter links, opening shortcuts and Back to the start work by touch-pointer and keyboard with visible focus; no rail on phone. Phone complete: 119 of 119.
+
+## short
+
+- Rests and mid/end (30): layout holds at 720 px; at record.close the Back to the start link sits at the bottom edge. Rail overlaps the Radio awake piece at observe.open and Prepare label overlaps the Run piece at the opening; observe.open's separated piece runs to the viewport edge behind rail numbers 1 and 2.
