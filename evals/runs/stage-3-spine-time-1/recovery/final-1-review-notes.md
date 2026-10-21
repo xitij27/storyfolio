@@ -33,3 +33,7 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
   opening shortcut, skip link and Back to the start activates by pointer
   and keyboard with a visible focus outline. Focused or hovered rail items
   draw over the Run piece at the opening. Desktop complete: 139 of 139.
+
+## mobile
+
+- Rests and mid/end (30): the fixture sits above the caption at every beat with no overlap; mid and end frames are already settled; formations remain distinguishable at phone size; face words unreadable, carried by HTML.
