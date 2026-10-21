@@ -4,7 +4,7 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest checkpoint, 21 October: **stops 2, 3 and 4 pass; turn 5 is next.**
+Latest checkpoint, 21 October: **stops 2 to 5 pass; turn 6 is next.**
 The author answered "Claude implements now" and dropped the 12 million
 reported-token ceiling for turns 3 to 6, keeping the time and uncached
 ceilings ([decision record](history/2026-10-21-claude-implementation-and-ceiling-decision.md)).
@@ -48,7 +48,15 @@ the agent built the remaining chapters, showed three whole versions of the
 opening and closing with a recommendation, and waited; the exact capture
 worked. The runner rejected the turn because the stream holds WebSocket
 reconnect errors from before any work. 36.0 minutes of actor time remain.
-Author decision pending on how to count that turn. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
+The author chose to [count it under a narrow transport rule](history/2026-10-21-turn-5-transport-fallback-decision.md):
+reconnect and HTTPS-fallback errors only, all before the agent's first
+action, then one normal completed turn. Under that rule [stop 5
+passes](../evals/runs/stage-3-spine-time-1/recovery/turn-5-disposition.md)
+on source and reply review; the new chapters are not yet browser-checked.
+Turn 6 runs through [continue-3.mjs](../evals/runs/stage-3-spine-time-1/recovery/continue-3.mjs);
+[gate-after-5.json](../evals/runs/stage-3-spine-time-1/recovery/gate-after-5.json)
+passes a dry run. Cumulative uncached tokens after turn 5: 1,697,614
+(ceiling lifted). The runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.
 

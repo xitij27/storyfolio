@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "kind": "timing-proof-continuation-3",
+  "binding": {
+    "path": "evals/runs/stage-3-spine-time-1/recovery/binding-4.json",
+    "sha256": "71eb0b2000a199ca0c360ad5b8dfb770ab7438325ff9289f1a323aed81fc02ba"
+  },
+  "previous": {
+    "path": "evals/runs/stage-3-spine-time-1/recovery/continuation.json",
+    "sha256": "7e88ad782f76ee77ddafe4df8399804050fac0c57a0e9442375fec1c41e92dcc"
+  },
+  "second": {
+    "path": "evals/runs/stage-3-spine-time-1/recovery/continuation-2.json",
+    "sha256": "97d8d08672ae0354086d97edcc10bf2146730ee3c11aca06c927afa8bdd6359b"
+  },
+  "allowedTurns": [
+    6
+  ],
+  "boundsVariance": {
+    "maxTokens": "removed",
+    "maxUncachedTokens": "removed",
+    "decisions": [
+      {
+        "path": "docs/history/2026-10-21-claude-implementation-and-ceiling-decision.md",
+        "sha256": "6ac100531bfd37730bf354315c80ccb45977c46f28255fe14a324db0daba33e8"
+      },
+      {
+        "path": "docs/history/2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md",
+        "sha256": "2b0e3b258cda074e4d42c922a6ca2bc0d598df9c39cb0973aaec5672ddc77081"
+      },
+      {
+        "path": "docs/history/2026-10-21-turn-5-transport-fallback-decision.md",
+        "sha256": "2e797265517a3fa30fa367522a5f4b2e559ef357d4dc7068e29f609d2ad983af"
+      }
+    ],
+    "unchanged": [
+      "turnTimeoutMs 1800000",
+      "maxWallMs 5400000"
+    ]
+  },
+  "capture": {
+    "exactExclusion": "site/.next-concepts",
+    "reason": "The actor's own build directory, recreated by every build; it stopped turn 2 and turn 4 capture. Original exclusions otherwise unchanged; no .next* or hidden-directory wildcard.",
+    "decision": {
+      "path": "docs/history/2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md",
+      "sha256": "2b0e3b258cda074e4d42c922a6ca2bc0d598df9c39cb0973aaec5672ddc77081"
+    }
+  },
+  "transport": {
+    "rule": "reconnect and HTTPS-fallback errors only, all before the agent's first action, then one normal completed turn",
+    "decision": {
+      "path": "docs/history/2026-10-21-turn-5-transport-fallback-decision.md",
+      "sha256": "2e797265517a3fa30fa367522a5f4b2e559ef357d4dc7068e29f609d2ad983af"
+    }
+  },
+  "helperHashes": {
+    "evals/runs/stage-3-spine-time-1/recovery/continue-3.mjs": "c7b45b1f00be1e25b84006ea95481fa916a5f21dc3ae69792a94da94a81d1628",
+    "evals/runs/stage-3-spine-time-1/recovery/transport-fallback.mjs": "068766a9017436782160eb9eb81c25547054ed0e4605e17511c5b41216d17cfa",
+    "evals/runs/stage-3-spine-time-1/recovery/transport-fallback.test.mjs": "84526246266f9301b1d1e015840be6bae6b324af706634afc4d0d264d15d49cd",
+    "evals/runs/stage-3-spine-time-1/recovery/exact-capture.mjs": "1bd16bd356b0028886d420838bd76d125a1185568d86e465feae60c2e09782dd",
+    "evals/runs/stage-3-spine-time-1/recovery/exact-capture.test.mjs": "e9e778365051b519a313bdb094ef385946c17c56d31cfbf0e00225d624f9d6c0",
+    "evals/runs/stage-3-spine-time-1/recovery/binding-lib.mjs": "c49c9c266c3f6cc7e3197cf1b674ab4a0a1a0eb1d5615321d00f6354072213e4",
+    "evals/runs/stage-3-completion-2/full-journey-recovery/runner/execution-core.mjs": "c00fde0ffb84bae898d68ca9cd0b27fbd2f7166ca70afc5c71c50020cdcc0aa1"
+  },
+  "output": "evals/runs/stage-3-spine-time-1/recovery/continuation-3"
+}
