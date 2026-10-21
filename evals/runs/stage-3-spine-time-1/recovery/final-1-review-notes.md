@@ -24,3 +24,7 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 - Forward travel, last 4 transitions, and all 27 reverse frames: reverse
   mirrors forward; caption fades are clean both ways; the rail label sits
   on the moving Run piece mid-move at Command and at Access/Mosslink.
+- Controls: the skip link is invisible until focused, then outlined, and
+  jumps to Record. After long jumps the after-image shows the scene and
+  rail still catching up (the trial waits for page scroll, not the scene):
+  a transient lag, not a fault.
