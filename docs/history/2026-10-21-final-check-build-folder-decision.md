@@ -24,3 +24,23 @@ exclusion is added, the agent's source and build configuration are not
 changed, and every other check of the final worker stays as frozen.
 
 The answer approves no site and authorizes no push.
+
+## Correction and revised answer
+
+Root then found that `.next` is assumed by more than source capture: the
+final worker's build inventory and cross-unit build comparison read
+`.next`, its typecheck includes `.next/types`, and its lint ignores only
+`.next/**`. The first option had understated the work as "small copies".
+Root asked again: "Correction to my earlier option: '.next' is assumed by
+the final check's source capture, build-identity comparison, typecheck
+and lint, not just capture. Which do you want now?"
+
+Answer: **"Build into .next (Recommended)"**. The option read: "Set the
+agent's own STORYFOLIO_DIST_DIR=.next for the check only. One added
+environment value in the turn-6 binding; every frozen check runs
+unchanged. The site's source is untouched; only the build output's
+folder name differs from the agent's default."
+
+This replaces the first answer. The agent's `site/next.config.ts` reads
+`STORYFOLIO_DIST_DIR` and its own scripts set it, so the check uses the
+agent's own switch. No source, exclusion or frozen check changes.
