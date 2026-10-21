@@ -11,7 +11,7 @@ const { captureSource, regularBytes, inventory, hash, json, writeNew } = origina
 import { resolveApplication } from "../../stage-3-completion-2/full-journey-recovery/measurement/app-root.mjs";
 const { values } = parseArgs({ options: { binding: { type: "string" }, unit: { type: "string" } } }); assert.ok(values.binding && values.unit);
 // A post-closure recovery binding uses its additive loader; every other binding the original one.
-const { loadBinding, loadPrepared } = JSON.parse(await readFile(values.binding)).kind === "recovered-concepts-measurement" ? recovered : original;
+const { loadBinding, loadPrepared } = recovered.isRecovered(JSON.parse(await readFile(values.binding)).kind) ? recovered : original;
 const binding = await loadBinding(values.binding), prepared = await loadPrepared(binding), unit = values.unit;
 assert.ok(binding.units.includes(unit), "Unit not in this stage's predeclared schedule");
 const readJson = async (base, path) => JSON.parse(await regularBytes(base, path));

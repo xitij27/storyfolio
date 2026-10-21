@@ -1,4 +1,4 @@
-// Read-only audit of the recovered stop-2 measurement. Copy of the frozen original verify.mjs with the recovery loader.
+// Read-only audit of a recovered stop-2 or stop-4 measurement. Copy of the frozen original verify.mjs with the recovery loader.
 import assert from "node:assert/strict";
 import { readdir } from "node:fs/promises";
 import { join } from "node:path";

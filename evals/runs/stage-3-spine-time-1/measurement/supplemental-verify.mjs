@@ -9,7 +9,7 @@ const { root, regularBytes, hash, json, safePath, assertSupervisor } = original;
 const { values } = parseArgs({ options: Object.fromEntries(["binding", "unit", "command", "terminal"].map(key => [key, { type: "string" }])) });
 for (const key of ["binding", "unit", "command", "terminal"]) assert.ok(values[key], key);
 // A post-closure recovery binding uses its additive loader; every other binding the original one.
-const { loadBinding, loadPrepared } = JSON.parse(await readFile(values.binding)).kind === "recovered-concepts-measurement" ? recovered : original;
+const { loadBinding, loadPrepared } = recovered.isRecovered(JSON.parse(await readFile(values.binding)).kind) ? recovered : original;
 for (const key of ["command", "terminal"]) { safePath(values[key]); assert.ok(values[key].startsWith("evals/runs/stage-3-spine-time-1/")); }
 const binding = await loadBinding(values.binding), prepared = await loadPrepared(binding);
 assert.equal(binding.meta.cohort, "codex-full-journey-timing-1"); assert.ok(binding.units.includes(values.unit));
