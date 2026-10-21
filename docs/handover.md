@@ -4,7 +4,7 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest checkpoint, 21 October: **all six turns ran; the independent whole-site check is next.**
+Latest checkpoint, 21 October: **all six turns ran; the whole-site check ran all nine units; the screenshot review is next.**
 The author answered "Claude implements now" and dropped the 12 million
 reported-token ceiling for turns 3 to 6, keeping the time and uncached
 ceilings ([decision record](history/2026-10-21-claude-implementation-and-ceiling-decision.md)).
@@ -62,7 +62,12 @@ handover; root's transport rule had matched only turn 5's wording, was
 widened after seeing turn 6 (disclosed), and now covers it. The agent made
 `.next-concepts` the site's default build directory, which the final
 check must account for; after a corrected question the author chose [to build into `.next`
-through the agent's own `STORYFOLIO_DIST_DIR` during the final check](history/2026-10-21-final-check-build-folder-decision.md). Total actor time 67.5 of 90 minutes. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
+through the agent's own `STORYFOLIO_DIST_DIR` during the final check](history/2026-10-21-final-check-build-folder-decision.md). All nine
+units then ran ([interim record](../evals/runs/stage-3-spine-time-1/recovery/final-1-interim.md)):
+build and seven browser modes pass with their audits; the extra pages all
+pass, but the unit failed a frozen cache rule that never covered route
+handlers, and the author [accepted it on root's diagnosis](history/2026-10-21-final-check-cache-and-review-decisions.md).
+Root now views all 677 originals before the verdict. Total actor time 67.5 of 90 minutes. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.
 

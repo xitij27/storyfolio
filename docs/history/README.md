@@ -3,7 +3,7 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest decisions: [21 October, the final check builds into .next through the agent's own STORYFOLIO_DIST_DIR (revised)](2026-10-21-final-check-build-folder-decision.md); [21 October, turn 5 counts under a narrow transport-fallback rule](2026-10-21-turn-5-transport-fallback-decision.md); [21 October, turn-4 recovery repeats the turn-2 path and the uncached ceiling is dropped for turns 5 and 6](2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md); earlier the same day, [Claude implements and the reported-token ceiling is dropped](2026-10-21-claude-implementation-and-ceiling-decision.md).
+Newest decisions: [21 October, the final check accepts the auxiliary unit on diagnosis and root views all 677 originals](2026-10-21-final-check-cache-and-review-decisions.md); [21 October, the final check builds into .next through the agent's own STORYFOLIO_DIST_DIR (revised)](2026-10-21-final-check-build-folder-decision.md); [21 October, turn 5 counts under a narrow transport-fallback rule](2026-10-21-turn-5-transport-fallback-decision.md); [21 October, turn-4 recovery repeats the turn-2 path and the uncached ceiling is dropped for turns 5 and 6](2026-10-21-turn-4-recovery-and-uncached-ceiling-decision.md); earlier the same day, [Claude implements and the reported-token ceiling is dropped](2026-10-21-claude-implementation-and-ceiling-decision.md).
 
 Newest status request: [14 October remaining work to complete the skill](2026-10-14-remaining-work-request.md).
 Documentation only; it adds no run authority and approves nothing.

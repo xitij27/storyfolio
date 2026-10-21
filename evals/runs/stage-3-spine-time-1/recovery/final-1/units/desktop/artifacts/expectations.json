@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "stage": 6,
+  "sourceDigest": "dfdb609d58c951de57345a2df247ed1ac544a9af36b1ff8f7c7dd2764e3b4343",
+  "actorResultSha256": "57bf4dac9a0505f99886041aab9d55e9688c70206cbd4479294677d04c3926b9",
+  "discovery": {
+    "reviewer": "Root (Claude Code), source review of the turn-6 snapshot plus a disposable scratch build read with the measurement text walker",
+    "exhaustive": true,
+    "sources": [
+      {
+        "path": "docs/story/storyboard.md",
+        "sha256": "8a772a480ec53248db089354fdce5eefafd6a7419f717b8210e29207a34fb341"
+      },
+      {
+        "path": "docs/story/wording.md",
+        "sha256": "3905cb134239ba611154708032ebe0e5045c8f6f502026abe3b0d21b45f902d0"
+      },
+      {
+        "path": "docs/story/FINAL-HANDOVER.md",
+        "sha256": "0920fe87f26bbf3d9d696f740c963228e129e379a254e6d3e55fd13e7fd83ba9"
+      },
+      {
+        "path": "site/app/page.tsx",
+        "sha256": "452017a65afd234b3670cc066c82f6bfc62b7a805b20f95d79e92d33ec9291ba"
+      },
+      {
+        "path": "site/app/layout.tsx",
+        "sha256": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c"
+      },
+      {
+        "path": "site/app/not-found.tsx",
+        "sha256": "878272c8fdac7001041b6ad7515833502fd5a3f814f701d5a1f1fcfe95164d95"
+      },
+      {
+        "path": "site/app/projects/mosslink/page.tsx",
+        "sha256": "64dce6a02434d5f022942829436e9077d86c78b9605ac96855aa0bfb96c27cef"
+      },
+      {
+        "path": "site/content/story.ts",
+        "sha256": "d79edc2d28ee4fa012406713c4f36b6a05288fb43e24d244906b2503d499f9d7"
+      },
+      {
+        "path": "site/content/copy.ts",
+        "sha256": "5982ac4a9d3ac21267511f5491599467e164ccfd79b3b0c3758f2312d7d311cf"
+      },
+      {
+        "path": "site/content/wording.ts",
+        "sha256": "d8f48d5f801451620555ff53b5bc55edb00e8fceac03e8e181706e67165ccce7"
+      },
+      {
+        "path": "site/components/site/navigation.tsx",
+        "sha256": "1179eda98128e3419257df8a89f15b66190ca04b32a8909a96f2c1a1eaed9dbd"
+      },
+      {
+        "path": "site/components/story/chapter.tsx",
+        "sha256": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9"
+      },
+      {
+        "path": "site/components/story/story.css",
+        "sha256": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23"
+      },
+      {
+        "path": "site/app/globals.css",
+        "sha256": "13f3f9f2f8523a9e19240b4c5be74df17f0a7825906c8fd3c59bf364bcf2ca57"
+      },
+      {
+        "path": "site/next.config.ts",
+        "sha256": "3a7144156469224ccc9db0ad2fdef0ff3286efb8d91ecf142840e12f019d92b3"
+      },
+      {
+        "path": "site/public/cv.html",
+        "sha256": "0ffa48c645210a03455472aaf47cbed79d9759866ae66f21d1bf047377860cd8"
+      }
+    ],
+    "scope": "The single story route with all ten beats of the approved storyboard; the selected Opening A and Closing A as whole beats; in-beat contact, CV, project and same-story links; the Mosslink page, HTML CV as page and download, the 404, share image, icon, the wording decision archive and the concept archive. Header, chapter and footer navigation are covered by the raw control census, not listed as required links."
+  },
+  "eligibility": {
+    "disposition": "implemented-output",
+    "authoredApplication": true,
+    "rationale": "The turn-6 closure-time snapshot holds the authored nested site with all ten beats, the custom fixture geometry and the auxiliary pages. This is eligibility for measurement, not a pass."
+  },
+  "applicationRoot": "site",
+  "route": "/",
+  "beats": [
+    {
+      "id": "prepare.assemble",
+      "headingLevel": 1,
+      "meaning": "prepare.assemble"
+    },
+    {
+      "id": "prepare.responsibility",
+      "headingLevel": 2,
+      "meaning": "prepare.responsibility"
+    },
+    {
+      "id": "command.states",
+      "headingLevel": 2,
+      "meaning": "command.states"
+    },
+    {
+      "id": "command.documents",
+      "headingLevel": 2,
+      "meaning": "command.documents"
+    },
+    {
+      "id": "access.relationship",
+      "headingLevel": 2,
+      "meaning": "access.relationship"
+    },
+    {
+      "id": "access.mosslink",
+      "headingLevel": 2,
+      "meaning": "access.mosslink"
+    },
+    {
+      "id": "observe.open",
+      "headingLevel": 2,
+      "meaning": "observe.open"
+    },
+    {
+      "id": "record.battery",
+      "headingLevel": 2,
+      "meaning": "record.battery"
+    },
+    {
+      "id": "record.scope",
+      "headingLevel": 2,
+      "meaning": "record.scope"
+    },
+    {
+      "id": "record.close",
+      "headingLevel": 2,
+      "meaning": "record.close"
+    }
+  ],
+  "approvedBeats": [
+    {
+      "meaning": "prepare.assemble",
+      "actualId": "prepare.assemble"
+    },
+    {
+      "meaning": "prepare.responsibility",
+      "actualId": "prepare.responsibility"
+    },
+    {
+      "meaning": "command.states",
+      "actualId": "command.states"
+    },
+    {
+      "meaning": "command.documents",
+      "actualId": "command.documents"
+    },
+    {
+      "meaning": "access.relationship",
+      "actualId": "access.relationship"
+    },
+    {
+      "meaning": "access.mosslink",
+      "actualId": "access.mosslink"
+    },
+    {
+      "meaning": "observe.open",
+      "actualId": "observe.open"
+    },
+    {
+      "meaning": "record.battery",
+      "actualId": "record.battery"
+    },
+    {
+      "meaning": "record.scope",
+      "actualId": "record.scope"
+    },
+    {
+      "meaning": "record.close",
+      "actualId": "record.close"
+    }
+  ],
+  "requiredText": [
+    "1 / Prepare Ada Mensah / Embedded firmware Code meets the bench. I’m Ada Mensah. I’m looking for embedded firmware roles involving physical devices. For Mosslink, an environmental sensor, I wrote the firmware, scheduled the power states and built the bring-up fixture. How does a firmware decision become something you can check? Inspect the fixture ↓ Evidence & contact Download HTML CV Firmware is the code that controls a physical device’s operation. Bring-up means checking a new board’s basic operation.",
+    "5 / Record The claim follows the observation. A firmware decision needs a physical observation. An estimate and an observed run support different claims. That is the lesson I want to bring to firmware work involving physical devices. A current trace showed the radio staying awake after a failed transmission. No cause, fix, timing or later resolution is confirmed. No trace file is available to publish. ada@example.com ↗ View / print CV Download HTML CV ↓ Read the Mosslink project Back to the start ↑"
+  ],
+  "selectedWording": {
+    "record": {
+      "path": "evals/runs/stage-3-spine-time-1/recovery/wording-selection-6.json",
+      "sha256": "89bfe1a4f95f7b72f72192e39e888a66d88da4162c0759ad262c3aaf36de82ad"
+    },
+    "versions": [
+      {
+        "meaning": "prepare.assemble",
+        "version": "Opening A, Code and observation",
+        "text": "1 / Prepare Ada Mensah / Embedded firmware Code meets the bench. I’m Ada Mensah. I’m looking for embedded firmware roles involving physical devices. For Mosslink, an environmental sensor, I wrote the firmware, scheduled the power states and built the bring-up fixture. How does a firmware decision become something you can check? Inspect the fixture ↓ Evidence & contact Download HTML CV Firmware is the code that controls a physical device’s operation. Bring-up means checking a new board’s basic operation."
+      },
+      {
+        "meaning": "record.close",
+        "version": "Closing A, Code and observation",
+        "text": "5 / Record The claim follows the observation. A firmware decision needs a physical observation. An estimate and an observed run support different claims. That is the lesson I want to bring to firmware work involving physical devices. A current trace showed the radio staying awake after a failed transmission. No cause, fix, timing or later resolution is confirmed. No trace file is available to publish. ada@example.com ↗ View / print CV Download HTML CV ↓ Read the Mosslink project Back to the start ↑"
+      }
+    ]
+  },
+  "links": [
+    {
+      "text": "Inspect the fixture",
+      "href": "#access"
+    },
+    {
+      "text": "Evidence & contact",
+      "href": "#record"
+    },
+    {
+      "text": "Download HTML CV",
+      "href": "/cv.html"
+    },
+    {
+      "text": "Mosslink / project detail",
+      "href": "/projects/mosslink"
+    },
+    {
+      "text": "ada@example.com",
+      "href": "mailto:ada@example.com"
+    },
+    {
+      "text": "View / print CV",
+      "href": "/cv.html"
+    },
+    {
+      "text": "Read the Mosslink project",
+      "href": "/projects/mosslink"
+    },
+    {
+      "text": "Back to the start",
+      "href": "#prepare"
+    }
+  ],
+  "assets": [
+    "site/public/assets/bring-up-fixture.svg",
+    "site/public/assets/power-states.svg",
+    "site/public/assets/power-states-label.svg",
+    "site/public/assets/share-preview.svg",
+    "site/app/icon.svg",
+    "site/app/icon.png",
+    "site/app/opengraph-image.png"
+  ],
+  "requiredFiles": [
+    "site/public/cv.html",
+    "docs/story/storyboard.md",
+    "docs/story/wording.md",
+    "docs/story/FINAL-HANDOVER.md",
+    "docs/story/facts.md"
+  ],
+  "auxiliaryPages": [
+    {
+      "id": "mosslink",
+      "route": "/projects/mosslink",
+      "status": 200,
+      "purpose": "Mosslink's own project page"
+    },
+    {
+      "id": "cv",
+      "route": "/cv.html",
+      "status": 200,
+      "purpose": "printable HTML CV"
+    },
+    {
+      "id": "cv-download",
+      "route": "/cv.html",
+      "status": 200,
+      "kind": "download",
+      "purpose": "downloadable HTML CV bytes"
+    },
+    {
+      "id": "missing",
+      "route": "/no-such-page",
+      "status": 404,
+      "purpose": "useful missing-page page"
+    },
+    {
+      "id": "share-image",
+      "route": "/opengraph-image.png",
+      "status": 200,
+      "kind": "download",
+      "purpose": "share preview image"
+    },
+    {
+      "id": "icon",
+      "route": "/icon.svg",
+      "status": 200,
+      "kind": "download",
+      "purpose": "site icon"
+    },
+    {
+      "id": "wording-archive",
+      "route": "/wording",
+      "status": 200,
+      "purpose": "local wording decision archive"
+    },
+    {
+      "id": "concept-archive",
+      "route": "/concepts",
+      "status": 200,
+      "purpose": "local concept archive outside main navigation"
+    }
+  ],
+  "focusOnlyControls": [
+    {
+      "selector": "body:nth-of-type(1) > main:nth-of-type(1) > a:nth-of-type(1)",
+      "name": "Skip to evidence and contact",
+      "href": "#record",
+      "reason": "First link in site/app/page.tsx main; story.css moves it on screen only on :focus-visible; it jumps to the Record chapter"
+    }
+  ],
+  "focusOnlyAttestation": {
+    "purpose": "document-start-to-main-story",
+    "reviewedByRoot": true,
+    "sourcePath": "site/app/page.tsx"
+  },
+  "limits": [
+    "Ten beats under the author's prospective ten-beat exception; the frozen policy's 12-to-22 count still reports a scope problem, which is expected and not waived.",
+    "Built with STORYFOLIO_DIST_DIR=.next under the author's decision; the agent's own default build folder is .next-concepts.",
+    "The three /sketch concept studies are not separately covered.",
+    "Headless software rendering does not prove physical-phone performance or visual quality; every original needs human review."
+  ],
+  "reviewedByRoot": true
+}

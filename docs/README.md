@@ -1,6 +1,6 @@
 # Documentation map
 
-Latest checkpoint, 21 October: [stop 2 passes](../evals/runs/stage-3-spine-time-1/recovery/concepts-3-disposition.md), [stop 3 passes](../evals/runs/stage-3-spine-time-1/recovery/turn-3-disposition.md), [stop 4 passes from the turn-4 archive](../evals/runs/stage-3-spine-time-1/recovery/looks-1-disposition.md), [stop 5 passes](../evals/runs/stage-3-spine-time-1/recovery/turn-5-disposition.md), [turn 6 handed over; whole-site check next](../evals/runs/stage-3-spine-time-1/recovery/turn-6-disposition.md), with the [author's implementer and token decisions](history/2026-10-21-claude-implementation-and-ceiling-decision.md).
+Latest checkpoint, 21 October: [stop 2 passes](../evals/runs/stage-3-spine-time-1/recovery/concepts-3-disposition.md), [stop 3 passes](../evals/runs/stage-3-spine-time-1/recovery/turn-3-disposition.md), [stop 4 passes from the turn-4 archive](../evals/runs/stage-3-spine-time-1/recovery/looks-1-disposition.md), [stop 5 passes](../evals/runs/stage-3-spine-time-1/recovery/turn-5-disposition.md), [turn 6 handed over](../evals/runs/stage-3-spine-time-1/recovery/turn-6-disposition.md), [whole-site units ran; screenshot review next](../evals/runs/stage-3-spine-time-1/recovery/final-1-interim.md), with the [author's implementer and token decisions](history/2026-10-21-claude-implementation-and-ceiling-decision.md).
 
 Start here for status: [remaining work to complete the skill](superpowers/plans/2026-10-14-remaining-work-to-completion.md),
 14 October. It orders every open item from the plans below into one
