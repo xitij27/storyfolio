@@ -19,9 +19,18 @@ stop-2 gate](../evals/runs/stage-3-spine-time-1/recovery/concepts-3-disposition.
 with all 48 originals reviewed. The generated `site/.next-concepts` cache
 was moved out of the live workspace intact, and fixed turn 3 (storyboard)
 launched at 05:56 UTC through [continue.mjs](../evals/runs/stage-3-spine-time-1/recovery/continue.mjs).
-Next: review turn 3 against the 12-to-22-beat range or the approved
-ten-beat exception, then gate turn 4. `/tmp` tooling must be checked
-before any run after a restart. Local commits only; no push.
+Turn 3 closed normally and [stop 3 passes](../evals/runs/stage-3-spine-time-1/recovery/turn-3-disposition.md):
+a ten-beat, 11.5-screen storyboard for the bring-up fixture, proposed
+explicitly and accepted under the ten-beat exception, with every checklist
+row disposed and no invented fact. Repetition and face-word legibility are
+carried forward. After turn 3: 21.2 of 90 minutes and 469,319 of 1.5
+million uncached tokens used. Turn 3 alone used 261,186 uncached tokens in
+under three minutes, so root projects that the uncached ceiling, not time,
+may bind in turns 4 to 6. [gate-after-3.json](../evals/runs/stage-3-spine-time-1/recovery/gate-after-3.json)
+passes a dry run; fixed turn 4 (spine and look choice) launches next. The
+runner pins turn 3's exact `PATH`, so launch with the one recorded in
+`turn-3-command/command.json`. `/tmp` tooling must be checked before any
+run after a restart. Local commits only; no push.
 
 Latest summary: [what is left to complete the skill](superpowers/plans/2026-10-14-remaining-work-to-completion.md),
 answering the author's [14 October request](history/2026-10-14-remaining-work-request.md).
