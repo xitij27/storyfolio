@@ -1,5 +1,10 @@
 # Independent concept and look measurement
 
+21 October: the turn-2 recovery binding uses the additive loader in
+[recovery/](../recovery/README.md). The launcher and supplemental audit
+select it by binding `kind`; all other bindings use the original loader.
+The three recovery helpers are part of the pinned helper set.
+
 Status on 13 October: preparation only, never executed or frozen for a
 launch. The actual timing-proof turn 2 has native completion but failed
 source capture. The original loadBinding rejects that result correctly;

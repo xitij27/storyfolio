@@ -2,9 +2,14 @@
 import assert from "node:assert/strict";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { loadBinding, loadPrepared, root, regularBytes, hash, json, safePath, assertSupervisor } from "../../stage-3-completion-2/full-journey-measurement/binding-lib.mjs";
+import { readFile } from "node:fs/promises";
+import * as original from "../../stage-3-completion-2/full-journey-measurement/binding-lib.mjs";
+import * as recovered from "../recovery/binding-lib.mjs";
+const { root, regularBytes, hash, json, safePath, assertSupervisor } = original;
 const { values } = parseArgs({ options: Object.fromEntries(["binding", "unit", "command", "terminal"].map(key => [key, { type: "string" }])) });
 for (const key of ["binding", "unit", "command", "terminal"]) assert.ok(values[key], key);
+// A post-closure recovery binding uses its additive loader; every other binding the original one.
+const { loadBinding, loadPrepared } = JSON.parse(await readFile(values.binding)).kind === "recovered-concepts-measurement" ? recovered : original;
 for (const key of ["command", "terminal"]) { safePath(values[key]); assert.ok(values[key].startsWith("evals/runs/stage-3-spine-time-1/")); }
 const binding = await loadBinding(values.binding), prepared = await loadPrepared(binding);
 assert.equal(binding.meta.cohort, "codex-full-journey-timing-1"); assert.ok(binding.units.includes(values.unit));
@@ -15,7 +20,10 @@ const names = ["gate-worker.mjs", "final-worker.mjs", "run-unit.mjs", "supplemen
 const expected = names.map(name => "evals/runs/stage-3-spine-time-1/measurement/" + name).concat([
   "evals/runs/stage-3-storyboard-length-1/measurement-2/hit-target.mjs",
   "evals/runs/stage-3-completion-2/full-journey-recovery/measurement/app-root.mjs",
-  "evals/runs/stage-3-completion-2/full-journey-recovery/measurement/choice-activation.mjs"
+  "evals/runs/stage-3-completion-2/full-journey-recovery/measurement/choice-activation.mjs",
+  "evals/runs/stage-3-spine-time-1/recovery/binding-lib.mjs",
+  "evals/runs/stage-3-spine-time-1/recovery/prepare-source.mjs",
+  "evals/runs/stage-3-spine-time-1/recovery/verify.mjs"
 ]).sort();
 assert.deepEqual(Object.keys(adapter.helperHashes).sort(), expected);
 for (const [path, digest] of Object.entries(adapter.helperHashes)) assert.equal(hash(await regularBytes(root, path)), digest, path);
