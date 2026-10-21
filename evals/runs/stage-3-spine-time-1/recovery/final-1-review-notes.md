@@ -45,3 +45,4 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 ## short
 
 - Rests and mid/end (30): layout holds at 720 px; at record.close the Back to the start link sits at the bottom edge. Rail overlaps the Radio awake piece at observe.open and Prepare label overlaps the Run piece at the opening; observe.open's separated piece runs to the viewport edge behind rail numbers 1 and 2.
+- Short travel (54): consistent with desktop; no caption superimposition; rail labels touch moving pieces as on desktop.
