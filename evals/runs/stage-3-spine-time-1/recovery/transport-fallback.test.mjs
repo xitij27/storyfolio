@@ -24,3 +24,10 @@ test("a reconnect after the first action, or any other error, still fails", () =
   const other = [...lines.slice(0, 7), JSON.stringify({ type: "error", message: "Rate limited" }), ...lines.slice(7)].join("\n");
   assert.throws(() => finalMessageAfterFallback(other), /one successful completed turn/);
 });
+test("turn 6's reconnects, one of them a connection reset, are set aside too", async () => {
+  const turn6 = await readFile(new URL("continuation-3/turns/06/stream.jsonl", import.meta.url), "utf8");
+  assert.match(turn6, /Connection reset by peer/);
+  const { text, transport } = finalMessageAfterFallback(turn6);
+  assert.ok((await readFile(new URL("continuation-3/turns/06/reply.md", import.meta.url), "utf8")).endsWith(text + "\n"));
+  assert.equal(transport.length, 5);
+});

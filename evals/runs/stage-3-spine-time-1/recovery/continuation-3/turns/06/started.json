@@ -1,0 +1,59 @@
+{
+  "turn": 6,
+  "started": "2026-10-21T18:23:27.072Z",
+  "sessionId": "01a133cb-3949-7881-a279-b078b5f3baca",
+  "taskKind": "full-journey",
+  "requestedStop": 6,
+  "timeoutMs": 1800000,
+  "elapsedMs": 3237972,
+  "tokens": 32248142,
+  "inputTokens": 32013353,
+  "outputTokens": 234789,
+  "cachedInputTokens": 30550528,
+  "uncachedTokens": 1697614,
+  "inputDigest": "f94e0ef05af37a3eadb1992f7b22a0b589873fac8d5c4adf5ffe1cf967e23512",
+  "continuationSha256": "9e1579ed2da0e7cba9dd575fa8d008b2cdff7c3624174697f2f58adb6752e86d",
+  "previousTurnDigest": "a2d00e933c9664e1228fd8f1106caa046b96e9dd25e2e3d9b96408c0ae7bdd29",
+  "gateSha256": "71febbc671f8497729af913adb8e606515ce72d0f7e087b020d8d29b08e01bdd",
+  "sourceBasis": {
+    "kind": "previous-continuation-snapshot",
+    "sourceDigest": "ca89d14d9b881d1cf337347dd8e5a44a88315dc4a50294f41a9e54e528ad0dc3"
+  },
+  "capturePolicy": {
+    "roots": [
+      "app",
+      "components",
+      "content",
+      "docs",
+      "lib",
+      "public",
+      "scripts",
+      "styles",
+      "types",
+      "material",
+      ".agents",
+      "site"
+    ],
+    "files": [
+      "package.json",
+      "package-lock.json",
+      "next.config.ts",
+      "next.config.mjs",
+      "next-env.d.ts",
+      "tsconfig.json",
+      "eslint.config.mjs",
+      "postcss.config.mjs",
+      "README.md",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "LICENSE",
+      ".gitignore"
+    ],
+    "maxFiles": 400,
+    "maxBytes": 20971520,
+    "maxFileBytes": 2097152,
+    "exactExclusion": "site/.next-concepts"
+  },
+  "boundsVariance": "reported-token and uncached ceilings removed by the author on 21 October; both time ceilings unchanged",
+  "transportRule": "reconnect and HTTPS-fallback errors only, all before the agent's first action"
+}

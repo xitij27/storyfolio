@@ -3,7 +3,8 @@
 import assert from "node:assert/strict";
 import { finalCodexMessage } from "../../../lib/codex.mjs";
 
-const reconnect = /^Reconnecting\.\.\. \d+\/\d+ \(stream disconnected before completion: websocket closed by server before response\.completed\)$/;
+// Any stated disconnect cause: turn 6 also logged "IO error: Connection reset by peer (os error 104)".
+const reconnect = /^Reconnecting\.\.\. \d+\/\d+ \(stream disconnected before completion: .+\)$/;
 const fallback = /^Falling back from WebSockets to HTTPS transport\. /;
 const isTransport = event => (event.type === "error" && reconnect.test(event.message ?? "")) || (event.type === "item.completed" && event.item?.type === "error" && fallback.test(event.item.message ?? ""));
 

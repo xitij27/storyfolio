@@ -4,7 +4,7 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest checkpoint, 21 October: **stops 2 to 5 pass; turn 6 is next.**
+Latest checkpoint, 21 October: **all six turns ran; the independent whole-site check is next.**
 The author answered "Claude implements now" and dropped the 12 million
 reported-token ceiling for turns 3 to 6, keeping the time and uncached
 ceilings ([decision record](history/2026-10-21-claude-implementation-and-ceiling-decision.md)).
@@ -56,7 +56,12 @@ on source and reply review; the new chapters are not yet browser-checked.
 Turn 6 runs through [continue-3.mjs](../evals/runs/stage-3-spine-time-1/recovery/continue-3.mjs);
 [gate-after-5.json](../evals/runs/stage-3-spine-time-1/recovery/gate-after-5.json)
 passes a dry run. Cumulative uncached tokens after turn 5: 1,697,614
-(ceiling lifted). The runner pins turn 3's exact `PATH`, so launch with the one recorded in
+(ceiling lifted). [Turn 6 completed](../evals/runs/stage-3-spine-time-1/recovery/turn-6-disposition.md)
+with Opening A and Closing A applied word for word and an honest final
+handover; root's transport rule had matched only turn 5's wording, was
+widened after seeing turn 6 (disclosed), and now covers it. The agent made
+`.next-concepts` the site's default build directory, which the final
+check must account for. Total actor time 67.5 of 90 minutes. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.
 

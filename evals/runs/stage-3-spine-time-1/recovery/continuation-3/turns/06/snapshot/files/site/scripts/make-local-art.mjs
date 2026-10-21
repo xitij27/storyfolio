@@ -1,0 +1,10 @@
+import sharp from 'sharp';
+import {writeFile} from 'node:fs/promises';
+const pieces=Array.from({length:7},(_,i)=>{const x=760+(i%4)*75,y=260+Math.floor(i/4)*100;return `<g transform="translate(${x} ${y})"><path d="M0 30 42 10 85 32 43 53Z" fill="#c8cecb"/><path d="M0 30 43 53 43 77 0 54Z" fill="#8d999b"/><path d="M43 53 85 32 85 56 43 77Z" fill="#adb8b6"/><path d="M25 29V-7M57 31V-5" stroke="#394449" stroke-width="7"/><path d="M25-7V-19M57-5V-17" stroke="#8d471e" stroke-width="5"/><path d="M26 37 45 27 63 37 44 47Z" fill="#8d471e"/></g>`}).join('');
+const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f2f0e9"/><path d="M60 100H1140M60 550H1140" stroke="#bfc5bc"/><text x="60" y="75" font-family="monospace" font-size="20" fill="#8d471e">ADA MENSAH / EMBEDDED FIRMWARE</text><text x="60" y="275" font-family="sans-serif" font-size="78" font-weight="600" letter-spacing="-4" fill="#202932">Code meets</text><text x="60" y="365" font-family="sans-serif" font-size="78" font-weight="600" letter-spacing="-4" fill="#202932">the bench.</text><text x="60" y="475" font-family="sans-serif" font-size="23" fill="#58636c">Firmware · Power states · Bring-up fixture</text>${pieces}<text x="750" y="475" font-family="monospace" font-size="14" fill="#58636c">EXPLANATORY FIXTURE GEOMETRY</text></svg>`;
+await writeFile('public/assets/share-preview.svg',svg);
+await sharp(Buffer.from(svg)).png().toFile('app/opengraph-image.png');
+await writeFile('app/opengraph-image.alt.txt','Ada Mensah, embedded firmware: Code meets the bench. Original explanatory fixture geometry, not a photograph or actual device.');
+const icon=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#14252b"/><path d="M13 39h38v14H13z" fill="#c8cecb"/><path d="M20 38V16m24 22V16" stroke="#b3c5c7" stroke-width="5"/><path d="M20 16V10m24 6V10" stroke="#83d8c4" stroke-width="3"/><path d="M25 27h14v11H25z" fill="#83d8c4"/></svg>`;
+await writeFile('app/icon.svg',icon);
+await sharp(Buffer.from(icon)).resize(32,32).png().toFile('app/icon.png');
