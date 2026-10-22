@@ -5,7 +5,7 @@ description: Use when someone wants a personal portfolio site made from their pr
 
 # Storyfolio
 
-Makes one kind of portfolio site: one long scroll that tells one story in 3D, each chapter's scene a picture of what it is about.
+Makes one kind of portfolio site: one long scroll that introduces the person in 3D, each chapter's scene a picture of what it is about.
 
 Start from the recorded handover on a continuation. For a requested build, sketch concepts at stop 2; build the chosen site after storyboard approval. A planning-only request still ends at the storyboard.
 

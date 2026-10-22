@@ -4,7 +4,7 @@
 ([record](../../history/2026-10-22-a-portfolio-introduces-the-person.md)).
 Amends [the skill design](2026-10-10-portfolio-skill-design.md) and corrects
 [Each scene pictures its section](2026-10-22-scenes-picture-their-section.md).
-Not yet in the skill.
+In the skill since the author's "yes this looks right"; not yet tested by a run.
 
 ## What was wrong
 

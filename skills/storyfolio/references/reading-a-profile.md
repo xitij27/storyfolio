@@ -34,7 +34,8 @@ These steps were checked against LinkedIn's help pages on 10 October 2026. The n
 Write `docs/story/facts.md`. Beside every fact, write where it came from.
 
 - **Who they are,** in the words they use for themselves.
-- **Where they have been,** with the years.
+- **Where they have lived,** with the years.
+- **What they studied:** where, what and when.
 - **Each job:** the employer, the title, the dates, what they did there.
 - **Each project:** what it was, what they did in it, who else did, what there is to show of it.
 - **Each figure.**
@@ -61,7 +62,7 @@ So put these to every line of the fact sheet. Where the material does not answer
 
 End the fact sheet with three lists:
 
-- **Gaps.** What a site needs and the material lacks: a project with no picture, a job with no outcome.
+- **Gaps.** What a site needs and the material lacks: places lived, education, a role without years, a project with no picture, a job with no outcome.
 - **Disagreements.** Where two sources differ, with both readings. You do not settle one yourself, and you do not take the one that reads better.
 - **To confirm.** Every question the table raised.
 
@@ -74,7 +75,8 @@ One message, which is the whole of your reply:
 3. These, which no material answers:
    - Who is the site for, and what should a visitor do when they reach its end?
    - What must not be shown?
-   - What do you work from, day to day? The documents, lists and rituals of your trade, by the names you call them.
+   - Where have you lived, what did you study, and where have you worked, with the years, wherever the material does not say?
+   - What do you work with and make, day to day, by the names you call them?
    - What did you learn from?
    - If they have a site already: what becomes of it?
 4. No concept, outline or look. For a requested build, a brief setup limit or optional-tooling note may accompany the fact questions.

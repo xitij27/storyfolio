@@ -8,7 +8,7 @@ A plan covers what its asker thought to ask for. Most people ask for the idea an
 
 A row to a chapter:
 
-| Chapter | Its name in the form | The role it holds | What it tells, in a few words | What its scene pictures | What you can touch |
+| Chapter | Its name | What it holds, from the concept's list | What it tells, in a few words | What its scene pictures | What you can touch |
 |---|---|---|---|---|---|
 
 ## The beats
@@ -23,11 +23,13 @@ A full story normally has twelve to twenty-two meaningful beats. Add up their sc
 - **Screens:** how much scroll the beat takes. One, or more where the scroll works something.
 - **What the scene shows:** what a visitor would name with the caption hidden: the person, a piece of their work, the place or the things of their field. "The pieces move", "a gap opens" or "one lights up" is not an answer.
 - **The pictures and words in it:** the person's own pictures, each named, and any illustration of the kind of thing they work with, labelled as one. Words in the scene are readable at the size shown, or left to the caption. A category name, such as Method or Results, shows nothing.
+
+Every project is listed in brief on the scroll, and each opens its detail on a click: a window or its own page.
 - **What its caption stands on:** a working title of a few words, and the lines of the fact sheet the caption will be written from. Not the caption.
 
 **Write no captions yet.** The words are written at a later stop, where the person chooses them. A sentence written now, to make the script read well, is where a detail gets in that nobody told you: a hall that was "standing empty", a wheel that is "true again". So a beat names its facts and stops there. Where a beat wants something the fact sheet does not hold, such as what the work taught them or what was wrong before they came, put the question in its place.
 
-For the close, state in planning notes what answers the opening question and which facts support that answer. Its final wording still waits, but its meaning must be decided. A contact link, a job goal or a promise to write an answer later does not supply that meaning.
+If the site poses a question, state in planning notes what answers it at the close and which facts support that answer. Its final wording still waits, but its meaning must be decided. A contact link, a job goal or a promise to write an answer later does not supply that meaning.
 
 ## Someone with thirty seconds
 
@@ -50,7 +52,7 @@ Say what a visitor gets in each case. The text is ordinary HTML over the scene, 
 
 Both come from the world's materials: plates are ceramic on linen, a status page is dark glass, a paper is white with dark ink. Name two or three looks, each as its ground, its ink, one accent, and its surfaces. The person picks by scrolling, once it is built.
 
-Two typefaces: one for the text, and one for what is printed in the scenes, which belongs to the form.
+Two typefaces: one for the text, and one for what is printed in the scenes, which belongs to the object.
 
 ## Everything else the site needs
 
