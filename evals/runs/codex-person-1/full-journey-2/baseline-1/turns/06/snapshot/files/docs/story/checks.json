@@ -1,0 +1,208 @@
+{
+  "application_source_hash": "920cd80fb42a57956e674018c97c69b0ab83156716f99c7d8f6e91a95dad24e7",
+  "scope": "Complete matrix coverage assembled from completed fresh-build batches and explicitly bounded reduced-motion beat ranges; not one uninterrupted full run",
+  "single_full_run_complete": false,
+  "matrix_coverage_complete": true,
+  "cases": [
+    {
+      "name": "light-wide",
+      "pass": true,
+      "samples": 45,
+      "expected_samples": 45,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-wide/light-wide/report.json"
+      ]
+    },
+    {
+      "name": "light-short",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-full/light-short/report.json"
+      ]
+    },
+    {
+      "name": "light-phone",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-full/light-phone/report.json"
+      ]
+    },
+    {
+      "name": "light-reduced",
+      "pass": true,
+      "samples": 45,
+      "expected_samples": 45,
+      "stationary_samples": 45,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-reduced-0/light-reduced/report.json",
+        "checks/finish-reduced-1-retry/light-reduced/report.json",
+        "checks/finish-reduced-2/light-reduced/report.json"
+      ]
+    },
+    {
+      "name": "light-no-webgl",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-full/light-no-webgl/report.json"
+      ]
+    },
+    {
+      "name": "dark-wide",
+      "pass": true,
+      "samples": 45,
+      "expected_samples": 45,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-wide/dark-wide/report.json"
+      ]
+    },
+    {
+      "name": "dark-short",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-full/dark-short/report.json"
+      ]
+    },
+    {
+      "name": "dark-phone",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-full/dark-phone/report.json"
+      ]
+    },
+    {
+      "name": "dark-reduced",
+      "pass": true,
+      "samples": 45,
+      "expected_samples": 45,
+      "stationary_samples": 45,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-reduced-0/dark-reduced/report.json",
+        "checks/finish-reduced-1-retry/dark-reduced/report.json",
+        "checks/finish-reduced-2/dark-reduced/report.json"
+      ]
+    },
+    {
+      "name": "dark-no-webgl",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-fallbacks/dark-no-webgl/report.json"
+      ]
+    },
+    {
+      "name": "no-js",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-fallbacks/no-js/report.json"
+      ]
+    },
+    {
+      "name": "context-loss",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-fallbacks/context-loss/report.json"
+      ]
+    },
+    {
+      "name": "look-switch",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-fallbacks/look-switch/report.json"
+      ]
+    },
+    {
+      "name": "failed-extra",
+      "pass": true,
+      "samples": 15,
+      "expected_samples": 15,
+      "stationary_samples": 0,
+      "missing": [],
+      "missing_stationary": [],
+      "evidence": [
+        "checks/finish-fallbacks/failed-extra/report.json"
+      ]
+    }
+  ],
+  "passing_cases": 14,
+  "total_cases": 14,
+  "functional": {
+    "complete": true,
+    "checks": [
+      "All 15 beats, five work links, selected Paper look, verbatim selected A opening/closing and exact Lumen line",
+      "3D model controls visibly work with reduced motion",
+      "All new scene types stay still at rest under reduced motion",
+      "Pause retains static scene equivalents",
+      "All five standalone work pages return 200, render their images and link back to the correct beat",
+      "Back from a work page navigates to its live story beat",
+      "Detail-page migration miniature works",
+      "Database detail expands its cutaway illustration without invented specifications",
+      "All three historical wording previews retain exact headings and paragraphs",
+      "Complete wording comparison renders on desktop and phone without overflow",
+      "Mobile chapter disclosure has all seven anchors and closes after navigation",
+      "Keyboard skip link reaches contact and tabs directly to its email without following the animation",
+      "Cutover/rollback explanation opens on narrow phone and short desktop without horizontal overflow",
+      "CV print button invokes browser print; CV downloads as standalone HTML and has a print layout",
+      "Unknown work route returns useful real 404",
+      "Local share image, social metadata and all icon formats work; noindex remains",
+      "No-JavaScript phone retains all 15 beats, 15 static illustrations and five work links; work detail retains its static image without inert controls"
+    ],
+    "errors": [],
+    "external_requests": []
+  },
+  "actual_user_review": "PENDING — explicitly not established by wording approval or browser emulation",
+  "publishing": "Outside task; no publishing performed"
+}
