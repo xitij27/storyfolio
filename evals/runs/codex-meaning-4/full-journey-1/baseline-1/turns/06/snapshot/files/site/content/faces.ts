@@ -1,0 +1,3 @@
+import type {FaceDef} from '@/components/story/types';
+import {story} from './story';
+export const faces:FaceDef[]=story.chapters.flatMap(ch=>ch.beats.flatMap(beat=>Array.from({length:8},(_,piece)=>({id:beat.id+'-'+piece,beat:beat.id,piece,draw(ctx,w,h,look){ctx.fillStyle=look.surface.color;ctx.fillRect(0,0,w,h);for(let j=0;j<5;j++){const on=beat.id==='record.samples'&&piece*5+j<6;ctx.beginPath();ctx.ellipse(w*(.15+j*.175),h*.5,w*.032,h*.25,0,0,Math.PI*2);ctx.fillStyle=on?'#efbc67':'#101f1b';ctx.fill();if(on){ctx.beginPath();ctx.ellipse(w*(.15+j*.175),h*.5,w*.013,h*.11,0,0,Math.PI*2);ctx.fillStyle='#fff0cb';ctx.fill();}}}}))));

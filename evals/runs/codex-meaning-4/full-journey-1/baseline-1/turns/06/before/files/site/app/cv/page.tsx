@@ -1,0 +1,5 @@
+import {pageMetadata} from '@/content/metadata';
+import {Header,Footer} from '@/components/site/header';
+import {profile} from '@/content/profile';
+export const metadata=pageMetadata("CV — Ada Mensah","Ada Mensah’s firmware contribution to Mosslink, working practice and evidence boundaries.");
+export default function CV(){return <div className="document-page"><a className="story-skip" href="#main">Skip to CV</a><Header/><main id="main" className="cv-sheet"><p className="eyebrow">CURRICULUM VITAE / HTML</p><h1>{profile.name}</h1><p className="document-lead">{profile.goal}</p><p><a href={'mailto:'+profile.email}>{profile.email}</a><small> · public example contact</small></p><div className="cv-actions"><a className="button" href="/downloads/ada-mensah-cv.html" download="ada-mensah-cv.html">Download HTML CV ↓</a><p>To print, use your browser’s Print command.</p></div>{profile.sections.map(s=><section key={s.title}><h2>{s.title}</h2><ul>{s.items.map(i=><li key={i}>{i}</li>)}</ul></section>)}</main><Footer/></div>}

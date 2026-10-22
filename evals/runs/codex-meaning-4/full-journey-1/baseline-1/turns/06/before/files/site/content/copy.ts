@@ -1,0 +1,1 @@
+export const copy={lang:'en',metadata:{title:'Ada Mensah — embedded firmware',description:'Mosslink firmware, power-state scheduling and bring-up. Connecting code to physical observation.'},railLabel:'Story chapters',lookLabel:'Bench appearance',fpsLabel:'Frames per second'};

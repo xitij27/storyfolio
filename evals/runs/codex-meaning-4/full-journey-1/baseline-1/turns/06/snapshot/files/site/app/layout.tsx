@@ -1,0 +1,4 @@
+import type {Metadata} from 'next';
+import './globals.css';
+export const metadata:Metadata={metadataBase:new URL('http://127.0.0.1:3000'),title:'Ada Mensah — embedded firmware',description:'Mosslink firmware, power-state scheduling and bring-up. Connecting code to physical observation.',robots:{index:false,follow:false},openGraph:{title:'Ada Mensah — embedded firmware',description:'Firmware decisions. Physical observations. Mosslink firmware and bring-up.',type:'website',locale:'en_GB',images:[{url:'/share-preview.png',width:1200,height:630,alt:'Ada Mensah — embedded firmware. An explanatory fixture and six-of-forty socket motif.'}]},twitter:{card:'summary_large_image',title:'Ada Mensah — embedded firmware',description:'Firmware decisions. Physical observations.',images:['/share-preview.png']}};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
