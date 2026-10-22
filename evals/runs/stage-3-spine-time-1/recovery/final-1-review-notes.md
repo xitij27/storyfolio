@@ -52,3 +52,4 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 ## reduced-motion
 
 - Every beat cuts to a settled pose; mid frames show the outgoing caption scrolling past an already-settled pose; rest, end and still before/after are byte-identical per beat (a still pose stays still). At scroll 0 the pieces stand apart, the pre-assembly pose, distinct from prepare.assemble's joined row.
+- Reduced-motion controls: every trial lands on the destination pose immediately (no scene lag); before images are the opening pose with focus or hover on the control. Unique reduced-motion originals all viewed; the rest are byte-identical copies.
