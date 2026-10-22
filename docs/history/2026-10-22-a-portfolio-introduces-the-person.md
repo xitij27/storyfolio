@@ -79,3 +79,16 @@ During the person test, after turn 5 closed, the author wrote, verbatim:
 
 Root stopped before turn 6 and wrote the state into `docs/handover.md` and
 `evals/runs/stage-3-person-1/README.md`. Nothing was pushed.
+
+## Moving devices, then staying
+
+The author asked for the agent's conversation to go to another device
+("no but I need to provide it to the next session on another device");
+root packed `/var/tmp/storyfolio-transfer/` and wrote
+[TRANSFER.md](../../evals/runs/stage-3-person-1/TRANSFER.md). The author
+then wrote, verbatim:
+
+> no now we continue here
+
+Root continues the person test on this machine. The transfer folder stays
+as a backup.
