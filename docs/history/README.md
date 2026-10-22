@@ -3,7 +3,9 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author decision: [22 October, build the rerun 4 storyboard and look](2026-10-22-build-and-look-decision.md).
+Newest author decision: [22 October, reported-token ceiling removed for meaning rerun 4](2026-10-22-rerun-4-reported-cap-decision.md).
+
+Earlier author decision: [22 October, build the rerun 4 storyboard and look](2026-10-22-build-and-look-decision.md).
 
 Earlier author decision: [22 October, rank concepts by what the scene shows](2026-10-22-rank-by-showing-decision.md).
 

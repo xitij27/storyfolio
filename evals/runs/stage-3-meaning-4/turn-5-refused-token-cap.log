@@ -1,0 +1,11 @@
+file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:327
+  if (tokens >= source.bounds.maxTokens) throw new Error("Cumulative actor token ceiling reached");
+                                               ^
+
+Error: Cumulative actor token ceiling reached
+    at planTurn (file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:327:48)
+    at executeBuildTurn (file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:398:18)
+    at async file:///home/kshitij/projects/storyfolio/evals/codex-build-run.mjs:94:16
+
+Node.js v22.22.1
+exit 1
