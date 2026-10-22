@@ -62,3 +62,7 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 ## no-javascript (phone)
 
 - Complete server-rendered narrative with the teaching drawings, the header chapter row fits 390 px, every control shows a visible focus outline or hover underline; no look switch or broken control shown.
+
+## context-loss
+
+- After the deliberate context loss the page falls back to the same complete HTML narrative as no-WebGL, with the teaching drawings, focus outlines and footer; never blank.
