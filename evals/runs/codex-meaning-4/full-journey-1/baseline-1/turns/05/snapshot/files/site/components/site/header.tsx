@@ -1,0 +1,3 @@
+import Link from 'next/link';
+export function Header(){return <header className="site-header" data-story-top><Link className="brand" href="/" prefetch={false}><span className="brand-mark" aria-hidden="true">⌑</span> Ada Mensah<span className="brand-role"> / embedded firmware</span></Link><nav aria-label="Main navigation"><Link prefetch={false} href="/">Story</Link><Link prefetch={false} href="/projects/mosslink">Mosslink</Link><Link prefetch={false} href="/cv">CV</Link><a href="mailto:ada@example.com">Email ↗</a></nav></header>}
+export function Footer(){return <footer className="site-footer"><span>Ada Mensah · Firmware for physical devices</span><a href="mailto:ada@example.com">ada@example.com ↗</a><Link prefetch={false} href="/cv">CV</Link></footer>}
