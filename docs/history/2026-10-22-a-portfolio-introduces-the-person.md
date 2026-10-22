@@ -45,3 +45,22 @@ versus depth, the author's own site, and a through-line. The author
 replied, verbatim:
 
 > Yes, that order is perfect. How much life, how much professional stuff? That really depends on how much information we get from the user. When they try to use this skill, I mean, everything can be shown in brief and the user can get more information by clicking on the project or stuff like that. Yeah, so as far as my project goes, like my own portfolio website, I made it the way I wanted to, and see how creative I have been with the 3D designs. The ones you make are terrible. Terrible for introduction. A single idea tying it together sounds cool, but honestly, your generated ideas are terrible. You need to do better over there. I mean, a simple introduction also is okay, but it feels like it's missing something.
+
+## The bar for ideas, and approval
+
+Root wrote the structure into
+[the portfolio structure spec](../superpowers/specs/2026-10-22-portfolio-structure.md)
+and offered one example at V3's bar for an embedded engineer: a circuit
+board as the through-line (datasheets laminate into a board with the name
+in the silkscreen; the board flexes into a globe with traces routed between
+cities lived in; a breadboard with the thesis circuit; a line of boards per
+employer; the board running its power states with a live current trace and
+the bug to flip on; a shelf of devices, one running, each opening on a
+click; notes on the bench; the finished board boxed with the email on the
+shipping label). Root asked whether that is the bar. The author replied,
+verbatim:
+
+> yes this looks right
+
+Root rewrites the skill to that structure and bar. No run is made without
+the author's word.
