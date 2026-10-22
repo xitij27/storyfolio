@@ -17,19 +17,39 @@ word "I want to continue this in another session".
 | Total | | 3,710 (62 of 90 min) | 869,890 of 1,500,000 |
 
 Turn 6 (finish with the recommended wording) has not been sent. It has up
-to 28 minutes of the 90-minute bound.
+to 28 minutes of the 90-minute bound. Root has viewed the turn-5 chapters
+and written the turn-6 gate ([turn-5-disposition.md](turn-5-disposition.md),
+[gates/after-5.json](gates/after-5.json)).
+
+## Where the run lives
+
+The run was made on another machine, from a clone at
+`/home/kshitij/projects/storyfolio`. Only that machine has what turn 6
+needs: the agent's conversation (Codex session
+`01a16475-7bbe-7713-a4a4-7d794da29d57`, in that machine's `~/.codex`), the
+workspace under `/var/tmp/storyfolio-entry-runtime-20261012/`, the frozen
+inputs at the absolute path in `meta.json`, Codex itself, and the pinned
+tools in `/tmp`. The runner resumes the conversation with
+`codex exec resume <session>` and refuses a workspace path that differs
+from the saved probe (`evals/lib/build.mjs`), so turn 6 is sent from that
+machine.
+
+On 22 October (evening) the work was taken up on a second machine (a clone
+at `/home/kshitij-parashar/Downloads/projects/storyfolio`, pulled from
+GitHub at `543c51a`). It has none of the above: no Codex, no session, no
+workspace, and `/tmp` is on disk there. Root's view of the turn-5 chapters
+was made there on a rebuild of the saved snapshot, as the disposition says.
 
 ## To continue
 
-1. Look at the turn-5 chapters before writing the gate:
-   `site/checks/chapters-final/light-wide/` in the workspace
-   `/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-2-fs9yQ7`.
-   Check each chapter's scene with the captions hidden, as in the turn-3
-   disposition.
-2. Write `gates/after-5.json` like `gates/after-4.json`, with
-   `afterTurn: 5` and `previousTurnDigest` the SHA-256 of
+1. Done: the turn-5 chapters are viewed with the captions hidden
+   ([turn-5-disposition.md](turn-5-disposition.md)).
+2. Done: [gates/after-5.json](gates/after-5.json), whose
+   `previousTurnDigest` is the SHA-256 of
    `evals/runs/codex-person-1/full-journey-2/baseline-1/turns/05/result.json`.
-3. Run, from the repository root:
+3. On the machine the run was made on, with this gate pulled into its
+   clone, check that the `/tmp` tools below still exist, then run from the
+   repository root:
 
 ```bash
 export PATH=/tmp/storyfolio-node-check-20261011/node_modules/node/bin:$PATH \
