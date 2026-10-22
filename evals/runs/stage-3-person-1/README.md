@@ -66,7 +66,7 @@ What the agent was told and said is in the repository: each turn's
 `prompt.md`, `reply.md` and raw event stream `stream.jsonl` under
 `evals/runs/codex-person-1/full-journey-2/baseline-1/turns/`.
 
-Turn 6 must run on this machine, as the same Linux user (`kshitij`), with
+Turn 6 must run on this machine or on another prepared as in [TRANSFER.md](TRANSFER.md), as the same Linux user (`kshitij`), with
 the same Codex login, because the conversation, the workspace
 (`/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-2-fs9yQ7`)
 and the tooling in `/tmp` are here. Another machine would need all three
