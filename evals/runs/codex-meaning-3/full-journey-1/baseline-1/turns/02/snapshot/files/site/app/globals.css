@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+body { background:#101c24; color:#f1eee3; }
+.comparison { max-width:1000px; margin:auto; padding:clamp(28px,8vw,100px) 24px; }
+.comparison h1 {font-size:clamp(2.8rem,7vw,5.8rem);line-height:1.02;letter-spacing:-.05em;font-weight:500;margin:28px 0;}
+.comparison>p {max-width:650px;line-height:1.7;color:#a6b7bc;}
+.eyebrow {font:12px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.12em;color:#e6af63!important;}
+.comparison ol {list-style:none;padding:0;margin:60px 0;}
+.comparison li {padding:28px 0;border-top:1px solid #38505a;}
+.comparison li strong {font-size:clamp(1.3rem,3vw,2rem);font-weight:500;}
+.comparison li p {color:#a6b7bc;max-width:620px;line-height:1.7;}
+.comparison a {text-decoration:none;} .comparison a:hover {color:#e6af63;}
+.concept-nav {position:fixed;inset:0 0 auto;z-index:20;display:flex;gap:24px;padding:18px 24px;background:#101c24e8;border-bottom:1px solid #38505a;font:12px ui-monospace,monospace;}
+.concept-nav a {min-height:28px;display:flex;align-items:center;text-decoration:none;}
+.concept .story-rail {top:70px;}
+.concept .story-title {font-family:system-ui,sans-serif;font-size:clamp(2rem,4vw,4rem);font-weight:500;}
+.concept .story-caption-text {max-width:31rem;}
+.concept .story-caption {padding-bottom:3rem;}
+.concept-question {font-size:.875rem;line-height:1.5;color:#e6af63;}
+.concept-links {display:flex;gap:24px;font-size:.85rem;flex-wrap:wrap;}
+.concept-links a {text-underline-offset:5px;min-height:32px;}
+@media(max-width:600px){.concept-nav {gap:14px;padding:12px 16px;font-size:11px;}.concept .story-body {font-size:.9rem;line-height:1.5;}.concept .story-note {font-size:.75rem;line-height:1.4;margin-top:.6rem;}.concept .story-caption{padding:1.5rem 1.25rem;}.concept .story-title{font-size:1.8rem;}.concept .story-question{font-size:.75rem;}.concept .story-body{margin-top:.7rem;}}
