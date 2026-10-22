@@ -92,3 +92,15 @@ then wrote, verbatim:
 
 Root continues the person test on this machine. The transfer folder stays
 as a backup.
+
+## Pull, finish, push
+
+The author wrote "pull main first" and "and then continue"; a second
+session had pushed `c0d7546` (turn-5 review and the turn-6 gate) from
+another clone. Root rebased onto it and ran turn 6 here. The author then
+wrote, verbatim:
+
+> okay then do whatever is necessary and continue
+
+Root took that as the word to push, so that the other clone works from the
+same history, and pushed `main` to `origin` after the final review.
