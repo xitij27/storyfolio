@@ -1,5 +1,7 @@
 # A skill that makes sites like V3
 
+> **Amended 22 October 2026:** each chapter's scene pictures its section, in place of one object whose pieces carry every chapter. See [Each scene pictures its section](2026-10-22-scenes-picture-their-section.md). Where this file says otherwise below, the amendment holds.
+
 This is the copy that is kept current. It was written in the author's
 portfolio, a private repository named `portfolio-website`, in a folder beside
 this one. Where it names `docs/project-notes.md`, `docs/v3-handover.md` or
@@ -61,7 +63,8 @@ One kind of site, the kind V3 is:
 
 - One long scroll that tells one story, from a beginning to an end.
 - One object in 3D, made of a few pieces, on screen the whole way. It becomes
-  what each chapter needs and closes at the end.
+  what each chapter needs and closes at the end. (Amended 22 October: each
+  chapter's scene pictures its section; see the amendment.)
 - The text is ordinary HTML over one pinned canvas, and the page reads top to
   bottom with the canvas missing.
 - The scroll works everything. Nothing plays by itself.
@@ -224,7 +227,7 @@ websites".
    has before choosing, and asks the person at stop 1 which they use. The
    form is structure and not costume: its names and its order are used, and
    no jokes are made in its voice. A chapter holds what its name says.
-3. **One object.** The thing that form is physically made of. It is five to
+3. **One object** (amended 22 October: one world, see the amendment). The thing that form is physically made of. It is five to
    twelve similar pieces. They can carry the person's real work on their
    faces. They are recognisable when they stand together at rest. They can
    be built in code from simple shapes. And the object comes from what the
@@ -246,7 +249,7 @@ padded one.
 | What others say | Peer review |
 | The close: the answer, and how to reach them | Conclusion |
 
-**What the object becomes.** For each chapter, one new form of the same
+**What the object becomes** (amended 22 October: what each scene shows, see the amendment). For each chapter, one new form of the same
 pieces that shows what the chapter is about: the way they came as a map or a
 line, how they work as a diagram, a piece of work as an exhibit, every
 project as a wall whose faces carry real pictures, outcomes as cards, quotes

@@ -3,6 +3,8 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
+Newest author direction: [22 October, change the design: each scene pictures its section](2026-10-22-change-the-design-direction.md).
+
 Newest author verdict: [22 October, rerun 4 rejected: rods with dots that arrange themselves](2026-10-22-author-rejects-rerun-4.md).
 
 Newest author decision: [22 October, reported-token ceiling removed for meaning rerun 4](2026-10-22-rerun-4-reported-cap-decision.md).

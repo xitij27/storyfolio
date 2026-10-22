@@ -5,7 +5,7 @@ description: Use when someone wants a personal portfolio site made from their pr
 
 # Storyfolio
 
-Makes one kind of portfolio site: one long scroll that tells one story, carried by one object in 3D that is taken from the person's own work.
+Makes one kind of portfolio site: one long scroll that tells one story in 3D, each chapter's scene a picture of what it is about.
 
 Start from the recorded handover on a continuation. For a requested build, sketch concepts at stop 2; build the chosen site after storyboard approval. A planning-only request still ends at the storyboard.
 
@@ -51,6 +51,6 @@ In the person's own folder, so that a later session can go on from the files alo
 
 ## What holds from the first stop on
 
-- **Nothing about the person is invented.** You know that a number, an employer, a title and a quote are facts. So is every small thing a sentence says on its way: what was wrong before they came, how often a thing is used, which came first, why, how a thing was left, what it taught them. That sounds like writing, and it is a claim. Before handing over any reply or file, check each claim against the fact sheet, including introductory summaries, working titles and labels on the object's faces. Read the supporting line and its unresolved questions, not just its reference. It must establish the whole claim: a topic attached to one item does not establish the topic of another. Wording that depends on an unanswered question stays out of the introduction and the planned page, even if copied from a profile. Remove it or list it as a question to confirm. Drawing a confirmed number, order or proportion as it is invents nothing: twenty-four seats are twenty-four marks. Leaving the scene empty to stay safe is also a failure.
+- **Nothing about the person is invented.** You know that a number, an employer, a title and a quote are facts. So is every small thing a sentence says on its way: what was wrong before they came, how often a thing is used, which came first, why, how a thing was left, what it taught them. That sounds like writing, and it is a claim. Before handing over any reply or file, check each claim against the fact sheet, including introductory summaries, working titles and words in the scene. Read the supporting line and its unresolved questions, not just its reference. It must establish the whole claim: a topic attached to one item does not establish the topic of another. Wording that depends on an unanswered question stays out of the introduction and the planned page, even if copied from a profile. Remove it or list it as a question to confirm. An illustration of the kind of thing they work with, labelled as one, claims nothing: a plated dessert, a status page. A particular design, a measured value or an event does. An empty scene is no safer.
 - **A number is used as the person confirmed it,** with what it measures and whose result it is.
 - **What is someone else's is asked about before it is planned for:** a photograph a photographer took, a friend's drawing, a quote, an employer's screens, a story with a patient or a client in it.

@@ -4,7 +4,7 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest, 22 October (evening): **the author rejected meaning rerun 4** and the approach behind all four reruns ([record](history/2026-10-22-author-rejects-rerun-4.md)): each scene must picture its section (the person, their work, their field), not rearrange one set of pieces. No paid run until the author agrees the design change.
+Latest, 22 October (evening): **the author rejected meaning rerun 4** and the approach behind all four reruns ([record](history/2026-10-22-author-rejects-rerun-4.md)): each scene must picture its section (the person, their work, their field), not rearrange one set of pieces. No paid run until the author agrees the design change. The author then said "yes change it please" ([record](history/2026-10-22-change-the-design-direction.md)); the [design amendment](superpowers/specs/2026-10-22-scenes-picture-their-section.md) and the skill now say each chapter's scene pictures its section from the person's world, illustration of their field is allowed when labelled, and the one-object and drawn-quantity rules are gone. Not yet tested by a run; a run needs the author's word.
 
 Earlier, 22 October: **the author rejected the turn-6 site at review**:
 "It is just the same 3d asset roaming around across each scene. Is this

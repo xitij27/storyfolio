@@ -1,6 +1,7 @@
 # Storyfolio engine
 
-A starting project for one scroll, one story and one family of 3D pieces.
+A starting project for one scroll and one story in 3D: shared pieces for what carries on
+through the story, and a scene of its own for each chapter.
 The supplied page is a plain test story, not a person's portfolio.
 
 Taken from V3 at `163b8ceb302b7b4e5beeff8f1161f4cdc7663b15` and made
@@ -44,7 +45,7 @@ the browser and scene. The person's story belongs in `content/`:
 | `faces.ts` | Pictures or canvas drawing functions for a beat and piece |
 | `copy.ts` | Metadata, language, labels and complete HTML text |
 | `looks.ts` | Ground, text and surface colors, lights and matte/no floor |
-| `extras.ts` | Lazy imports of chapter-specific shapes, each in its own error boundary |
+| `extras.ts` | Each chapter's own scene: lazy imports, each in its own error boundary |
 | `links.ts` | Ordinary HTML links over a named piece at a named beat |
 | `checks.json` | Optional checks of capabilities this fixture exercises |
 

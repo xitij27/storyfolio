@@ -8,7 +8,7 @@ A plan covers what its asker thought to ask for. Most people ask for the idea an
 
 A row to a chapter:
 
-| Chapter | Its name in the form | The role it holds | What it tells, in a few words | What the pieces do | What you can touch |
+| Chapter | Its name in the form | The role it holds | What it tells, in a few words | What its scene pictures | What you can touch |
 |---|---|---|---|---|---|
 
 ## The beats
@@ -17,13 +17,12 @@ Under each chapter, a row to a beat. A beat is one settled state of the scene an
 
 A full story normally has twelve to twenty-two meaningful beats. Add up their screen heights, state the total, and trim repetition. Do not pad or invent facts to reach the range. If the confirmed material calls for a shorter story, propose that exception explicitly for the person's approval.
 
-| Beat | Screens | How the pieces stand | What is on their faces | What the chapter adds | What its caption stands on |
-|---|---|---|---|---|---|
+| Beat | Screens | What the scene shows | The pictures and words in it | What its caption stands on |
+|---|---|---|---|---|
 
 - **Screens:** how much scroll the beat takes. One, or more where the scroll works something.
-- **How the pieces stand:** a stack, a fan, a ring, a row, a wall, or what the chapter needs. The same pieces in every beat. Say what a visitor learns from it with the caption hidden. One piece stepping forward, or a label changing, says only that the subject moved on.
-- **What is on their faces:** the person's real pictures and words, or a confirmed fact drawn, such as a week's trial beside a year's plan at their true lengths. Name the picture. A category name, such as Method or Results, shows nothing. What is on a face is readable at the size it is shown, or it is left to the caption.
-- **What the chapter adds:** anything in the scene besides the pieces. Often nothing.
+- **What the scene shows:** what a visitor would name with the caption hidden: the person, a piece of their work, the place or the things of their field. "The pieces move", "a gap opens" or "one lights up" is not an answer.
+- **The pictures and words in it:** the person's own pictures, each named, and any illustration of the kind of thing they work with, labelled as one. Words in the scene are readable at the size shown, or left to the caption. A category name, such as Method or Results, shows nothing.
 - **What its caption stands on:** a working title of a few words, and the lines of the fact sheet the caption will be written from. Not the caption.
 
 **Write no captions yet.** The words are written at a later stop, where the person chooses them. A sentence written now, to make the script read well, is where a detail gets in that nobody told you: a hall that was "standing empty", a wheel that is "true again". So a beat names its facts and stops there. Where a beat wants something the fact sheet does not hold, such as what the work taught them or what was wrong before they came, put the question in its place.
@@ -38,7 +37,7 @@ Specify what the opening tells someone outside the field about the person's work
 
 ## Without the scene
 
-Say what a visitor gets in each case. The text is ordinary HTML over the scene, so all of it is there in every row. Say what stands in for the pieces.
+Say what a visitor gets in each case. The text is ordinary HTML over the scene, so all of it is there in every row. Say what stands in for the scenes.
 
 | Where | What the visitor gets |
 |---|---|
@@ -49,9 +48,9 @@ Say what a visitor gets in each case. The text is ordinary HTML over the scene, 
 
 ## The look and the type
 
-Both come from the object's material: plates are ceramic on linen, a status page is dark glass, a paper is white with dark ink. Name two or three looks, each as its ground, its ink, one accent, and the surface of the pieces. The person picks by scrolling, once it is built.
+Both come from the world's materials: plates are ceramic on linen, a status page is dark glass, a paper is white with dark ink. Name two or three looks, each as its ground, its ink, one accent, and its surfaces. The person picks by scrolling, once it is built.
 
-Two typefaces: one for the text, and one for what is printed on the pieces, which belongs to the form.
+Two typefaces: one for the text, and one for what is printed in the scenes, which belongs to the form.
 
 ## Everything else the site needs
 
