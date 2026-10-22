@@ -4,7 +4,13 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest checkpoint, 22 October: **the whole-site check is complete; the author's desktop and phone review is next.**
+Latest, 22 October: **the author rejected the turn-6 site at review**:
+"It is just the same 3d asset roaming around across each scene. Is this
+how you tell a story?" ([record](history/2026-10-22-author-review-first-reaction.md)).
+The formations show nothing a chapter is about; Stage 3 does not close on
+this site, and what changes next is the author's call.
+
+Earlier checkpoint, 22 October: **the whole-site check is complete; the author's desktop and phone review is next.**
 The author answered "Claude implements now" and dropped the 12 million
 reported-token ceiling for turns 3 to 6, keeping the time and uncached
 ceilings ([decision record](history/2026-10-21-claude-implementation-and-ceiling-decision.md)).
