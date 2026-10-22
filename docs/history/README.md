@@ -3,7 +3,9 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author decision: [22 October, rank concepts by what the scene shows](2026-10-22-rank-by-showing-decision.md).
+Newest author decision: [22 October, build the rerun 4 storyboard and look](2026-10-22-build-and-look-decision.md).
+
+Earlier author decision: [22 October, rank concepts by what the scene shows](2026-10-22-rank-by-showing-decision.md).
 
 Earlier author decision: [22 October, one sharper fix, rerun to turn 2 only](2026-10-22-one-sharper-fix-decision.md).
 
