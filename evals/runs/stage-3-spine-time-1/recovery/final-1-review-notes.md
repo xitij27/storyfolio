@@ -57,3 +57,4 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 ## no-webgl
 
 - Natural-height HTML narrative; the supplied teaching drawings (scheduling loop, checking basic operation) appear as labelled figures in Command and Access; no scene, no faint bands; focus outlines visible on header chapter links.
+- No-WebGL controls: every header link, opening shortcut, skip link and Back to the start has a visible focus outline or hover underline over the plain HTML page.
