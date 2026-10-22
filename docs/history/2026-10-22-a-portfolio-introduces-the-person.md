@@ -17,3 +17,18 @@ person's trade, and "Leave out a role that has nothing to hold" lets the
 Who and Where from roles drop without asking. Fuller test people exist
 (nurse, chef, architect, reliability engineer have education and
 multi-year histories) but were not used for Stage 3.
+
+## Framing question
+
+Root proposed making the site an introduction of the person (field,
+places, education, experience, expertise and several works, others' words,
+contact), with background asked for at stop 1 and a fuller test person, and
+asked through the question tool: "Your own site used a research question
+and a paper's chapters. Should the skill keep that kind of framing, now on
+top of a whole-person structure, or drop it?"
+
+Answer: **"Talk it through first"**. The option read: "Don't change the
+skill yet; discuss what a good portfolio structure is before anything is
+written."
+
+The skill is not changed until that discussion settles the structure.
