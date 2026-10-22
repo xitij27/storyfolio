@@ -8,7 +8,7 @@ Latest, 22 October: **the author rejected the turn-6 site at review**:
 "It is just the same 3d asset roaming around across each scene. Is this
 how you tell a story?" ([record](history/2026-10-22-author-review-first-reaction.md)).
 The formations show nothing a chapter is about; Stage 3 does not close on
-this site. Root traced the cause in [author review 1](../evals/runs/stage-3-spine-time-1/recovery/author-review-1.md); the fix is the author's call.
+this site. Root traced the cause in [author review 1](../evals/runs/stage-3-spine-time-1/recovery/author-review-1.md); the author then said "Fix the skill and try again" ([record](history/2026-10-22-fix-skill-and-rerun-direction.md)). The skill now asks what each beat shows with the captions hidden, lets confirmed facts be drawn, chooses the concept that shows the most, and keeps faces readable and chrome off the object. A fresh six-turn journey on the same fixture tests it.
 
 Earlier checkpoint, 22 October: **the whole-site check is complete; the author's desktop and phone review is next.**
 The author answered "Claude implements now" and dropped the 12 million

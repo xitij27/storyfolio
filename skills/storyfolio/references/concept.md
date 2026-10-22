@@ -44,9 +44,6 @@ Map the form's sections onto these roles. Leave out a role that has nothing to h
 ## What the object becomes
 
 In each chapter the same pieces take a new arrangement that shows what the chapter is about: the way they came as a line or a map, how they work as a diagram, one piece of work as an exhibit, every project as a wall whose faces carry real pictures, outcomes as cards. At the close the object is whole again.
-
-If a chapter's 3D could be deleted and only decoration would be lost, the pieces are not showing that chapter yet.
-
 **The opening shows where the object comes from.** The answer is the person's own: what they learned from, or what they began with. The object may gather, be put together, unfold, be drawn, develop or switch on.
 
 ## Three concepts, each written like this
@@ -62,7 +59,7 @@ Make three that differ in kind: in their form or their object, and not in their 
 - **What it needs from the person:** a picture, someone else's yes.
 - **Why it is theirs:** one sentence on why it could not sit on a colleague's site.
 
-Then say which you would choose, and why.
+Then say which you would choose, and why: the one whose object shows the most, not the one that risks least.
 
 For a requested build, open `engine/README.md` and implement all three concepts as local sketches, each with opening, middle and ending. Inspect each at desktop and phone sizes. Give their working addresses with your recommendation. Planning-only concepts stay in words.
 
@@ -73,7 +70,7 @@ Rework or drop one that fails.
 | Test | Ask |
 |---|---|
 | Swap | Could it sit unchanged on a colleague's site? Then it is not theirs yet. |
-| Backdrop | With the 3D deleted, is meaning lost, or only decoration? |
+| Backdrop | With the captions hidden, does each chapter's 3D show what the chapter is about, or only that the subject changed, as when one piece steps forward? |
 | Depth | Has it a beginning, a middle and an end that follow from one another? |
 | Emblem | Is the object the picture that stands for the job? |
 | Honesty | Does any sentence in it say more than the fact sheet does: a ranking, a reason, which came first, how a thing was left, a day, a place? |
@@ -85,7 +82,7 @@ How each was reasoned, and not only where it ended.
 
 **A research paper.** The site this skill came from belongs to someone whose work lies between AI research and software engineering. Three restyled layouts were, in their words, "all cliche". Three single 3D scenes were "not deep enough". What turned it was a sentence of theirs: "Think of it like a research question." The form became a paper, with a paper's chapters: Abstract, Introduction, Background, Method, Experiments, Results, Peer review, Conclusion. The object became the paper's nine pages, which fold into a globe for where they have lived, stand as the layers of a network for how they work, and hang as a wall of projects. The question was first too abstract for a recruiter, and was reworded. The opening was first a plain pile of pages. It became the front pages of the papers they learned from, gathering into the paper as the reader scrolls.
 
-**A tasting menu.** Camille is a pastry chef, made up for this page. She trained in Lyon, spent six years in the pastry sections of two restaurants, and now runs a dessert-only evening once a month: 24 seats, five courses, all sweet. People write to her about one burnt-honey tart. Her trade's forms: the recipe card, the prep list, the tasting menu, the order sheet, the costing sheet. She serves in courses and plans by the menu, so the form is a tasting menu, and each course is a chapter. Each course arrives on a plate, so the object is a stack of plates. The question: "What makes someone remember a dessert?" Turned down first: a whisk and a chef's hat turning in the air, which is the emblem, and one croissant in 3D, which is one scene.
+**A tasting menu.** Camille is a pastry chef, made up for this page. She trained in Lyon and now runs a dessert-only evening once a month: 24 seats, five courses, all sweet. People write to her about one burnt-honey tart. Her trade's forms: the recipe card, the prep list, the tasting menu, the order sheet, the costing sheet. She serves in courses and plans by the menu, so the form is a tasting menu, and each course is a chapter. Each course arrives on a plate, so the object is a stack of plates. The question: "What makes someone remember a dessert?" Turned down first: a whisk and a chef's hat turning in the air, which is the emblem, and one croissant in 3D, which is one scene.
 
 **An incident review.** Jun is a reliability engineer, also made up. Seven years on call, at a payments company and then at one that books hospital appointments. He wrote his team's incident review template, and gives talks on reviews without blame. His trade's forms: the runbook, the incident review, the on-call handover, the status page, the dashboard. His work is what happens after something breaks, so the form is an incident review: summary, timeline, root cause, action items. A status page is made of tiles, one to a service, so the object is those tiles. The question: "What keeps a system up at 3 a.m.?" Turned down first: a server rack turning, which is the emblem, and a globe of pings behind the text, which is a backdrop.
 
