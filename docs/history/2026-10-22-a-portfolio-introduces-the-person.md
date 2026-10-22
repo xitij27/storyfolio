@@ -64,3 +64,9 @@ verbatim:
 
 Root rewrites the skill to that structure and bar. No run is made without
 the author's word.
+
+## Test it
+
+After the skill change (commit `f107a2e`), the author wrote, verbatim:
+
+> okay then let us test it. Remember to delete pointless examples
