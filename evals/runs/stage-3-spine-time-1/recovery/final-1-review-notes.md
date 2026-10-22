@@ -48,3 +48,7 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 - Short travel (54): consistent with desktop; no caption superimposition; rail labels touch moving pieces as on desktop.
 - All 55 short control images: every control activates by pointer and keyboard with visible focus; the focused rail item outline sits over the Run piece; long jumps show the scene lagging the caption (Record caption over the Observe pose), as on desktop. Short complete: 139 of 139.
 - Byte-identical originals: following the concept-review precedent (concepts-3-images.json), an original byte-identical to one viewed whole is recorded with that basis rather than viewed again. Reduced motion repeats each settled pose four times per beat (rest, end, still before/after).
+
+## reduced-motion
+
+- Every beat cuts to a settled pose; mid frames show the outgoing caption scrolling past an already-settled pose; rest, end and still before/after are byte-identical per beat (a still pose stays still). At scroll 0 the pieces stand apart, the pre-assembly pose, distinct from prepare.assemble's joined row.
