@@ -1,0 +1,11 @@
+file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:202
+  if (json((await fileTree(work, "", !initial)).sort()) !== json(paths)) throw new Error("Full-journey source inventory differs from approved snapshot; no turn was launched");
+                                                                               ^
+
+Error: Full-journey source inventory differs from approved snapshot; no turn was launched
+    at verifyJourneySource (file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:202:80)
+    at async executeBuildTurn (file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:404:5)
+    at async file:///home/kshitij/projects/storyfolio/evals/codex-build-run.mjs:94:16
+
+Node.js v22.22.1
+exit 1

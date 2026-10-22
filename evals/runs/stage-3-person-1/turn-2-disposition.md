@@ -22,3 +22,11 @@ claims", a caution the author's own site does not share; only opening,
 middle and close are sketched.
 
 Gate passes; fixed turn 3 is sent.
+
+The first turn 3 invocation stopped before any model call: the agent's
+`local-check/` folder (25 files: its sketch-check scripts, logs and
+screenshots) lies outside the snapshot roots. As the protocol allows, root
+moved it intact to
+`/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/person-1-turn-2-local-check-relocated/local-check`;
+hashes taken before the move ([sha256](turn-2-local-check-relocation.sha256))
+all verify there. The evidence images above were copied before the move.
