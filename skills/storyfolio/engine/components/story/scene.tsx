@@ -14,6 +14,9 @@ import { Lighting, Floor } from "./stage";
 import { ExtraBoundary } from "./extra-frame";
 import type { StoryBundle } from "./types";
 
+// A chapter's scene mounts once the travel toward it starts, while its presence is still near 0, so it loads late and still grows in.
+const REACH = 0.99;
+
 function Monitor({ bundle, frameRef, onNear, onError, onQuality, onChapter, coarse, fpsRef }: { bundle: StoryBundle; frameRef: RefObject<Frame>; onNear: (near: string) => void; onError: () => void; onQuality: (quality: Quality) => void; onChapter: (chapter: string | undefined) => void; coarse: boolean; fpsRef: RefObject<number> }) {
   const gl = useThree(state => state.gl);
   // Quality remembers the device's budget; each look chooses whether to use it.
@@ -31,7 +34,7 @@ function Monitor({ bundle, frameRef, onNear, onError, onQuality, onChapter, coar
       const next = quality.current.sample(Math.min(delta * 1000, 250));
       if (next.step !== step.current) { step.current = next.step; onQuality(next); }
     }
-    const value = (bundle.extras ?? []).map((extra, index) => chapterNear(bundle.story, extra.chapter, frameRef.current.beat, 0.5) ? index : "").filter(String).join(",");
+    const value = (bundle.extras ?? []).map((extra, index) => chapterNear(bundle.story, extra.chapter, frameRef.current.beat, REACH) ? index : "").filter(String).join(",");
     if (value !== near.current) { near.current = value; onNear(value); }
     const current = chapterAt(bundle.story, frameRef.current.beat);
     if (current !== chapter.current) { chapter.current = current; onChapter(current); }

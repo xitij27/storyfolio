@@ -8,8 +8,8 @@ A plan covers what its asker thought to ask for. Most people ask for the idea an
 
 A row to a chapter:
 
-| Chapter | Its name | What it holds, from the concept's list | What it tells, in a few words | What its scene pictures | What you can touch |
-|---|---|---|---|---|---|
+| Chapter | Its name | What it holds, from the concept's list | What it tells, in a few words | What its scene pictures | How it grows out of the last | What you can touch |
+|---|---|---|---|---|---|---|
 
 ## The beats
 
@@ -21,7 +21,7 @@ A full story normally has twelve to twenty-two meaningful beats. Add up their sc
 |---|---|---|---|---|
 
 - **Screens:** how much scroll the beat takes. One, or more where the scroll works something.
-- **What the scene shows:** what a visitor would name with the caption hidden: the person, a piece of their work, the place or the things of their field. "The pieces move", "a gap opens" or "one lights up" is not an answer.
+- **What the scene shows:** what a visitor would name with the caption hidden: the person, a piece of their work, the place or the things of their field. "The pieces move", "a gap opens" or "one lights up" is not an answer. Say also what of the last scene turns into this one as the reader scrolls.
 - **The pictures and words in it:** the person's own pictures, each named, and any illustration of the kind of thing they work with, labelled as one. Words in the scene are readable at the size shown, or left to the caption. A category name, such as Method or Results, shows nothing.
 
 Every project is listed in brief on the scroll, and each opens its detail on a click: a window or its own page.

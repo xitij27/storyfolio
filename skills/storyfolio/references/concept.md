@@ -26,36 +26,40 @@ Everything on the scroll is brief. More opens on a click: a project's window or 
 - 3D as a backdrop behind the text.
 - One 3D scene, however good.
 - A different effect for every chapter with nothing joining them. Together they are a tour of effects.
-- Another site's idea with the names changed.
 
 ## The through-line
 
-One idea ties the chapters together: an object from the person's own medium that becomes each chapter's picture.
+One world ties the chapters together, and it looks like the person's field to a colleague at a glance: the systems someone runs, the instruments someone builds with, a cook's kitchen. Paper is for people whose work is paper. Within that world, something that can change shape becomes each chapter's picture.
 
 The site this skill came from belongs to a researcher, and its object is a paper's nine pages. The front pages of the papers they learned from hang in the air and fly in to pile up as the paper. The pages bend into the gores of a paper globe for where they have lived. They lie as a desk where scattered data points gather into clusters, for how they work. A maze is printed across them as a floor and solved as the reader scrolls. One photograph spans all nine, grey on one side of a seam and colour on the other. They hang as a wall of plates, a plate for each project, each opening its window.
 
-Choose an object that can become pictures. Sheets bend, lie flat, tile, carry any print and fold into a globe. Rigid bars and blocks can only be rearranged. The object comes from what the person works with and makes, never the trade's emblem: a chef's hat, a server rack, a stethoscope. For anyone who works with data, the emblem is a field of points that gathers into a chart. It fits every analyst alive, which is what is wrong with it.
+Sheets bend, tile and fold into a globe; light, lines, particles and nodes can draw a route, a building or a machine. Rigid bars and blocks can only be rearranged. It comes from what the person works with and makes, never the trade's emblem: a chef's hat, a server rack, a stethoscope. For anyone who works with data, the emblem is a field of points that gathers into a chart. It fits every analyst alive, which is what is wrong with it.
 
-The chapters may take names from the object, as a paper's sections, while holding the chapters above in their order. A question the close answers can tie the site together too. Leave it out rather than force one, and check each premise it rests on against the fact sheet: an employer's field is not the person's contribution. A plain introduction is the fallback, not the aim.
+The chapters may take names from the world, as a paper's sections, while holding the chapters above in their order. A question the close answers can tie the site together too. Leave it out rather than force one, and check each premise it rests on against the fact sheet: an employer's field is not the person's contribution. A plain introduction is the fallback, not the aim.
 
 ## What each chapter's scene shows
 
 A picture of that chapter, which a visitor would name with the captions hidden: a globe or a route for where from, the place they studied, a line of the places they worked, the things of their field, the work itself. A scene that shows only that something moved is not done.
 
-For each chapter, write at least three candidate pictures before choosing one. Drop every candidate that is a rearrangement.
+Make each from what the person told you: their answers to the picture questions, or one particular thing in their material. A label turned into its symbol, a degree into a circuit board, a job into its logo, could be anyone's.
+
+For each chapter, write at least three candidate pictures before choosing one, at least one from something only this person said. Drop every candidate that is a rearrangement.
+
+The scenes are one world the camera travels through. Each grows out of the last as the reader scrolls; nothing appears or vanishes at a chapter's edge.
 
 At least one project is shown working, in miniature, worked by the scroll or a control: the maze is solved, the photograph takes its colour.
 
 Where the person has pictures of their own work, the scenes show them. Where they have none, the scenes picture the kind of thing they work with, labelled as illustration.
 
-**The opening shows where the person comes from:** what they learned from, or what they began with. The object may gather, be put together, unfold, be drawn, develop or switch on. At the close it is whole again.
+**The opening shows where the person comes from:** what they learned from, or what they began with. The scene may gather, be put together, unfold, be drawn, develop or switch on. At the close the world is whole again.
 
 ## Three concepts, each written like this
 
-Make three with different objects, not different colours. Write them to `docs/story/concepts.md`.
+Make three with different worlds or different things changing shape, not different colours. Write them to `docs/story/concepts.md`.
 
-- **The object,** and why it is theirs.
+- **The world,** how it shows their field, and what in it changes shape.
 - **Each chapter's scene,** a line each, as a visitor would see it, with the candidates you turned down.
+- **How each scene turns into the next.**
 - **The project shown working,** and how the scroll or a control works it.
 - **The opening and the close.**
 - **What it stands on:** the lines of the fact sheet it needs.
@@ -75,6 +79,8 @@ Write each concept's answer to every test. Rework or drop one that fails.
 | Backdrop | With the captions hidden, does each scene show what its chapter is about? |
 | Working | Does at least one project run? |
 | Swap | Could it sit unchanged on a colleague's site? Then it is not theirs yet. |
-| Emblem | Is a scene the picture that stands for the job, rather than this person's work? |
+| Field | Would a colleague know their field from the look of the world? |
+| Emblem | Is a scene the symbol of a job or a label, rather than this person's work and what they told you? |
+| Seams | Does each scene grow out of the last, with nothing popping in? |
 | Honesty | Does any sentence in it say more than the fact sheet does: a ranking, a reason, which came first, how a thing was left, a day, a place? |
 | Thirty seconds | Can someone who does not scroll get the name, the work, some proof, and how to reach them? |

@@ -34,6 +34,24 @@ export function chapterAt(story: StoryDef, beat: number): string | undefined {
   return chapters[Math.min(Math.max(nearest, 0), chapters.length - 1)];
 }
 
+/**
+ * How much of a chapter's own scene is showing at `beat`: 1 on its beats,
+ * easing to 0 over the travel from the beat before and to the beat after,
+ * so a scene grows out of the last one instead of appearing.
+ */
+export function chapterPresence(story: StoryDef, id: string, beat: number): number {
+  let first = 0;
+  for (const chapter of story.chapters) {
+    if (chapter.id === id) {
+      if (!chapter.beats.length || !Number.isFinite(beat)) return 0;
+      const last = first + chapter.beats.length - 1;
+      return Math.max(0, 1 - Math.max(first - beat, beat - last, 0));
+    }
+    first += chapter.beats.length;
+  }
+  return 0;
+}
+
 export function chapterNear(story: StoryDef, id: string, beat: number, reach = 1.5): boolean {
   let first = 0;
   for (const chapter of story.chapters) {

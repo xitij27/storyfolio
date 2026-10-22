@@ -72,8 +72,13 @@ A custom `Piece` component receives its index, face material and look.
 Build it at unit width/height centered at the origin. Its parent group gets
 the formation's position, rotation and width/height scale each frame. Keep
 materials present from the first frame. Extras receive the shared frame,
-look, reduced-motion flag and control store and mount only near their
-chapter. Their shapes are children of the formation group.
+look, reduced-motion flag and control store, and stay mounted from a beat
+before their chapter to a beat after it. Drive each with
+`chapterPresence(story, chapter, frameRef.current.beat)` from
+`lib/story/story.ts`, 0 to 1 over the travel in and back to 0 over the travel
+out: let it grow, unfold, fly in or turn into the next scene with that value,
+so that one chapter's scene grows out of the last. Never switch one on or off
+at a chapter's edge. Their shapes are children of the formation group.
 
 Use `useExtraFrame` from `components/story/extra-frame.tsx` for an extra's
 frame callback. It receives the same state, delta and optional XR frame as
@@ -84,7 +89,8 @@ render failures and rejected lazy imports. For example:
 
 ```tsx
 useExtraFrame(() => {
-  if (line.current) line.current.visible = frameRef.current.from === 1;
+  const shown = chapterPresence(story, "middle", frameRef.current.beat);
+  if (line.current) line.current.scale.x = Math.max(shown, 0.001);
 });
 ```
 

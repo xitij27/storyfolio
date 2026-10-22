@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { blankFormation } from "./formation.ts";
-import { beatHeight, beatIndex, beatsOf, chapterAt, chapterNear, chapterNumber, checkStory, type StoryDef } from "./story.ts";
+import { beatHeight, beatIndex, beatsOf, chapterAt, chapterNear, chapterNumber, chapterPresence, checkStory, type StoryDef } from "./story.ts";
 
 const story: StoryDef = {
   pieces: 2,
@@ -20,6 +20,17 @@ test("story helpers follow supplied chapters rather than global story data", () 
   assert.throws(() => beatHeight(story, "missing"), /Unknown beat/);
   assert.equal(chapterNumber(story, "close"), 1);
   assert.equal(chapterNumber(story, "missing"), 0);
+});
+
+test("a chapter's scene grows in and out over the travel to and from its beats", () => {
+  assert.equal(chapterPresence(story, "close", 1), 0);
+  assert.equal(chapterPresence(story, "close", 1.25), 0.25);
+  assert.equal(chapterPresence(story, "close", 2), 1);
+  assert.equal(chapterPresence(story, "opening", 0.5), 1);
+  assert.equal(chapterPresence(story, "opening", 1.75), 0.25);
+  assert.equal(chapterPresence(story, "opening", 2), 0);
+  assert.equal(chapterPresence(story, "missing", 1), 0);
+  assert.equal(chapterPresence(story, "close", NaN), 0);
 });
 
 test("chapter proximity covers the entire chapter and bounded travel on each side", () => {
