@@ -66,3 +66,8 @@ beyond the settled-beat observations in the [interim record](final-1-interim.md)
 ## context-loss
 
 - After the deliberate context loss the page falls back to the same complete HTML narrative as no-WebGL, with the teaching drawings, focus outlines and footer; never blank.
+
+## auxiliary
+
+- Mosslink page (01, 02): facts match the fact sheet (contribution split, labelled teaching drawings with limits, open radio observation, evidence ledger with projection, run, samples and preliminary emissions check). Full-page captures are tall (desktop 1440x3292, phone 390x4288) and the viewer displayed them downscaled (to about 0.6 and 0.47); layout and text were legible at that scale.
+- CV (03, 04): same facts and limits as the site, employer and dates omitted, print instruction, example contact. 404 (07, 08): plain explanation with Story, Mosslink, CV and Email links. Minor: the CV heading 'Mosslink — environmental sensor' uses an em dash in the agent's generated content.

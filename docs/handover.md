@@ -4,7 +4,7 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest checkpoint, 21 October: **all six turns ran; the whole-site check ran all nine units; the screenshot review is next.**
+Latest checkpoint, 22 October: **the whole-site check is complete; the author's desktop and phone review is next.**
 The author answered "Claude implements now" and dropped the 12 million
 reported-token ceiling for turns 3 to 6, keeping the time and uncached
 ceilings ([decision record](history/2026-10-21-claude-implementation-and-ceiling-decision.md)).
@@ -67,7 +67,13 @@ units then ran ([interim record](../evals/runs/stage-3-spine-time-1/recovery/fin
 build and seven browser modes pass with their audits; the extra pages all
 pass, but the unit failed a frozen cache rule that never covered route
 handlers, and the author [accepted it on root's diagnosis](history/2026-10-21-final-check-cache-and-review-decisions.md).
-Root now views all 677 originals before the verdict. Total actor time 67.5 of 90 minutes. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
+Root viewed all 677 originals (535 whole, 142 byte-identical) and the
+coverage verifier passes. [Verdict](../evals/runs/stage-3-spine-time-1/recovery/final-1-disposition.md):
+technical, factual and workflow checks pass; visually the site fails
+Detail and hierarchy (unreadable words on the pieces, the rail over the
+geometry, faint bands behind captions) and is weak on Spatial at two
+beats. Three candidate skill findings are recorded for after the author's
+review. Total actor time 67.5 of 90 minutes. The runner pins turn 3's exact `PATH`, so launch with the one recorded in
 `turn-3-command/command.json`. `/tmp` tooling must be checked before any
 run after a restart. Local commits only; no push.
 
