@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 3,
+  "taskKind": "full-journey",
+  "id": "full-journey-2",
+  "setupMode": "unscaffolded",
+  "requestedStops": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "refusalTurns": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "workspaceRoot": "evals/builds/full-journey-2/workspace",
+  "files": [
+    "material/linkedin.md",
+    "material/old-site.md",
+    "material/resume.md"
+  ],
+  "expectations": "evals/builds/full-journey-2/expectations.json",
+  "rubric": "evals/builds/full-journey-2/criteria.md",
+  "protocol": "evals/runs/stage-3-person-1/protocol.md",
+  "prompts": [
+    "evals/builds/full-journey-2/prompts/turn1.md",
+    "evals/builds/full-journey-2/prompts/turn2.md",
+    "evals/builds/full-journey-2/prompts/turn3.md",
+    "evals/builds/full-journey-2/prompts/turn4.md",
+    "evals/builds/full-journey-2/prompts/turn5.md",
+    "evals/builds/full-journey-2/prompts/turn6.md"
+  ],
+  "bounds": {
+    "maxTurns": 6,
+    "turnTimeoutMs": 1800000,
+    "maxWallMs": 5400000,
+    "maxTokens": 1000000000,
+    "maxUncachedTokens": 1500000
+  },
+  "snapshot": {
+    "roots": [
+      "app",
+      "components",
+      "content",
+      "docs",
+      "lib",
+      "public",
+      "scripts",
+      "styles",
+      "types",
+      "material",
+      ".agents",
+      "site"
+    ]
+  },
+  "implementationFiles": [
+    "evals/builds/full-journey-1/journey.json",
+    "evals/builds/full-journey-1/README.md",
+    "evals/builds/full-journey-1/derivative.md",
+    "evals/builds/full-journey-1/runner-contract.md",
+    "evals/builds/full-journey-1/source-manifest.json",
+    "evals/builds/full-journey-1/workspace-inventory.json",
+    "evals/builds/full-journey-1/verify-fixture.mjs",
+    "evals/lib/build-check.mjs",
+    "evals/lib/build-capture.mjs",
+    "evals/lib/build.test.mjs",
+    "evals/runs/stage-3-comparison-1/record-command.mjs",
+    "evals/runs/stage-3-candidate-verification-1/bounded-process.mjs",
+    "evals/runs/stage-3-completion-2/process-supervision/recorder.mjs",
+    "evals/runs/stage-3-completion-2/process-supervision/recorder.test.mjs",
+    "evals/runs/stage-3-completion-2/process-supervision/README.md",
+    "evals/runs/stage-3-completion-2/full-journey/timing-1-preparation/probe-environment.mjs",
+    "evals/runs/stage-3-completion-2/full-journey/timing-1-preparation/probe-environment.test.mjs",
+    "evals/runs/stage-3-completion-2/full-journey/timing-1-preparation/run-environment-proof.mjs",
+    "evals/runs/stage-3-completion-2/full-journey/timing-1-preparation/finalize-readiness.mjs",
+    "evals/runs/stage-3-completion-2/full-journey/timing-1-preparation/README.md",
+    "evals/runs/stage-3-completion-2/full-journey/preparation/launch-controls.md",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/policy.json",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/measurement-lib.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/binding-lib.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/gate-worker.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/final-worker.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/controls-lib.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/controls.test.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/cache-identity.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/cache-identity.test.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/prepare-source.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/run-unit.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/verify.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/measurement.test.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/calibrate.mjs",
+    "evals/runs/stage-3-completion-2/full-journey-measurement/README.md",
+    "evals/builds/full-journey-2/README.md"
+  ]
+}
