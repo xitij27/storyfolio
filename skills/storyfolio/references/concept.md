@@ -59,13 +59,13 @@ Make three that differ in kind: in their form or their object, and not in their 
 - **What it needs from the person:** a picture, someone else's yes.
 - **Why it is theirs:** one sentence on why it could not sit on a colleague's site.
 
-Then say which you would choose, and why: the one whose object shows the most, not the one that risks least.
+Then say which you would choose, and why: the one whose scene shows the most with the captions hidden, not the one that risks least.
 
-For a requested build, open `engine/README.md` and implement all three concepts as local sketches, each with opening, middle and ending. Inspect each at desktop and phone sizes. Give their working addresses with your recommendation. Planning-only concepts stay in words.
+For a requested build, open `engine/README.md` and implement all three concepts as local sketches, each with opening, middle and ending. In each middle the pieces draw a confirmed fact or carry the work, readable at the size shown. Inspect each at desktop and phone sizes. Give their working addresses with your recommendation. Planning-only concepts stay in words.
 
 ## Test each one before you show it
 
-Rework or drop one that fails.
+Write each concept's answer to every test. Rework or drop one that fails.
 
 | Test | Ask |
 |---|---|
@@ -82,8 +82,8 @@ How each was reasoned, and not only where it ended.
 
 **A research paper.** The site this skill came from belongs to someone whose work lies between AI research and software engineering. Three restyled layouts were, in their words, "all cliche". Three single 3D scenes were "not deep enough". What turned it was a sentence of theirs: "Think of it like a research question." The form became a paper, with a paper's chapters: Abstract, Introduction, Background, Method, Experiments, Results, Peer review, Conclusion. The object became the paper's nine pages, which fold into a globe for where they have lived, stand as the layers of a network for how they work, and hang as a wall of projects. The question was first too abstract for a recruiter, and was reworded. The opening was first a plain pile of pages. It became the front pages of the papers they learned from, gathering into the paper as the reader scrolls.
 
-**A tasting menu.** Camille is a pastry chef, made up for this page. She trained in Lyon and now runs a dessert-only evening once a month: 24 seats, five courses, all sweet. People write to her about one burnt-honey tart. Her trade's forms: the recipe card, the prep list, the tasting menu, the order sheet, the costing sheet. She serves in courses and plans by the menu, so the form is a tasting menu, and each course is a chapter. Each course arrives on a plate, so the object is a stack of plates. The question: "What makes someone remember a dessert?" Turned down first: a whisk and a chef's hat turning in the air, which is the emblem, and one croissant in 3D, which is one scene.
+**A tasting menu.** Camille is a pastry chef, made up for this page. She trained in Lyon and now runs a dessert-only evening once a month: 24 seats, five courses, all sweet. Her trade's forms: the recipe card, the prep list, the tasting menu, the order sheet, the costing sheet. She serves in courses and plans by the menu, so the form is a tasting menu, and each course is a chapter. Each course arrives on a plate, so the object is a stack of plates. The question: "What makes someone remember a dessert?" Turned down first: a whisk and a chef's hat turning in the air, which is the emblem, and one croissant in 3D, which is one scene.
 
-**An incident review.** Jun is a reliability engineer, also made up. Seven years on call, at a payments company and then at one that books hospital appointments. He wrote his team's incident review template, and gives talks on reviews without blame. His trade's forms: the runbook, the incident review, the on-call handover, the status page, the dashboard. His work is what happens after something breaks, so the form is an incident review: summary, timeline, root cause, action items. A status page is made of tiles, one to a service, so the object is those tiles. The question: "What keeps a system up at 3 a.m.?" Turned down first: a server rack turning, which is the emblem, and a globe of pings behind the text, which is a backdrop.
+**An incident review.** Jun is a reliability engineer, also made up. Seven years on call. He wrote his team's incident review template. His trade's forms: the runbook, the incident review, the on-call handover, the status page, the dashboard. His work is what happens after something breaks, so the form is an incident review: summary, timeline, root cause, action items. A status page is made of tiles, one to a service, so the object is those tiles. The question: "What keeps a system up at 3 a.m.?" Turned down first: a server rack turning, which is the emblem, and a globe of pings behind the text, which is a backdrop.
 
 **An example shows how to reason. Its concept is not taken.** Camille's menu was reasoned from how Camille serves. A chef who sells one loaf a day from a hatch is not a tasting menu. If you find one of these three concepts in your hand for someone else, it has already failed the swap test: it was made for a person who is not in front of you.

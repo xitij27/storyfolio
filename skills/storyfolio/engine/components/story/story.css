@@ -28,11 +28,12 @@
 .story-look-switch button[aria-pressed="true"] { background: var(--story-ink); color: var(--story-ground); }
 .story[data-scene="off"] .story-bar { position: absolute; inset: 0 0 auto; height: auto; margin-bottom: 0; }
 .story-rail-holder { z-index: 3; display: none; }
-.story-rail { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); pointer-events: auto; }
-.story-rail ol { list-style: none; padding: 0; margin: 0; }
+/* Top left, beside the look switch: the scene stands to the right on a wide screen. */
+.story-rail { position: absolute; left: 1.25rem; top: 1rem; pointer-events: auto; }
+.story-rail ol { list-style: none; padding: 0; margin: 0; display: flex; }
 .story-rail a { display: flex; justify-content: flex-end; gap: .8rem; padding: .7rem .5rem; font: .75rem ui-monospace, monospace; text-decoration: none; }
-.story-rail a span:first-child { opacity: 0; }
-.story-rail a:hover span:first-child, .story-rail a:focus-visible span:first-child, .story-rail a[aria-current] span:first-child { opacity: 1; }
+.story-rail a span:first-child { display: none; }
+.story-rail a:hover span:first-child, .story-rail a:focus-visible span:first-child, .story-rail a[aria-current] span:first-child { display: inline; }
 .story-rail a[aria-current] { color: var(--story-accent); }
 .story-overlay { z-index: 2; overflow: hidden; }
 .story-piece-link { position: absolute; left: -50px; top: -50px; width: 100px; height: 100px; transform-origin: 50% 50%; visibility: hidden; pointer-events: auto; -webkit-tap-highlight-color: transparent; border-radius: 2px; }

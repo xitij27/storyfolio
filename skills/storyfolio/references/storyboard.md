@@ -22,9 +22,7 @@ A full story normally has twelve to twenty-two meaningful beats. Add up their sc
 
 - **Screens:** how much scroll the beat takes. One, or more where the scroll works something.
 - **How the pieces stand:** a stack, a fan, a ring, a row, a wall, or what the chapter needs. The same pieces in every beat. Say what a visitor learns from it with the caption hidden. One piece stepping forward, or a label changing, says only that the subject moved on.
-- **What is on their faces:** the person's real pictures and words, or a confirmed fact drawn. Name the picture. A category name, such as Method or Results, shows nothing. What is on a face is readable at the size it is shown, or it is left to the caption.
-
-**Draw the facts.** A confirmed number, order or proportion can be drawn as it is: twenty-four seats as twenty-four marks, a week's trial beside a year's plan at their true lengths. That invents nothing. A value the fact sheet does not hold, such as a duration or a count, is invented. Where there are no pictures, the drawn facts are what the pieces show.
+- **What is on their faces:** the person's real pictures and words, or a confirmed fact drawn, such as a week's trial beside a year's plan at their true lengths. Name the picture. A category name, such as Method or Results, shows nothing. What is on a face is readable at the size it is shown, or it is left to the caption.
 - **What the chapter adds:** anything in the scene besides the pieces. Often nothing.
 - **What its caption stands on:** a working title of a few words, and the lines of the fact sheet the caption will be written from. Not the caption.
 
