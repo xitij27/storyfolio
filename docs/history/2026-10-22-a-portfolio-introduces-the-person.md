@@ -32,3 +32,16 @@ skill yet; discuss what a good portfolio structure is before anything is
 written."
 
 The skill is not changed until that discussion settles the structure.
+
+## Discussion, first round
+
+Root proposed a draft order for an embedded engineer with a fuller
+background: Hello (name, field, what they want; their bench), Where I'm
+from (map or globe of places lived), What I studied, Where I've worked (a
+timeline of roles), What I'm good at (the things of their field), What
+I've made (several projects briefly, one in depth), What others say, Get
+in touch. Root asked about order, personal versus professional, breadth
+versus depth, the author's own site, and a through-line. The author
+replied, verbatim:
+
+> Yes, that order is perfect. How much life, how much professional stuff? That really depends on how much information we get from the user. When they try to use this skill, I mean, everything can be shown in brief and the user can get more information by clicking on the project or stuff like that. Yeah, so as far as my project goes, like my own portfolio website, I made it the way I wanted to, and see how creative I have been with the 3D designs. The ones you make are terrible. Terrible for introduction. A single idea tying it together sounds cool, but honestly, your generated ideas are terrible. You need to do better over there. I mean, a simple introduction also is okay, but it feels like it's missing something.
