@@ -1,0 +1,810 @@
+{
+  "turn": 1,
+  "taskKind": "full-journey",
+  "requestedStop": 1,
+  "complete": true,
+  "durationMs": 87723,
+  "sessionId": "01a16351-0593-7961-9c60-7104a72eaa04",
+  "usage": {
+    "input_tokens": 223628,
+    "cached_input_tokens": 194048,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3208,
+    "reasoning_output_tokens": 31
+  },
+  "artifacts": {
+    "before/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "before/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "before/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "before/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "before/files/.agents/skills/storyfolio/engine/app/page.tsx": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+    "before/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "before/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "before/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "before/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "before/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "before/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "before/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "before/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+    "before/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.css": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "before/files/.agents/skills/storyfolio/engine/content/checks.json": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+    "before/files/.agents/skills/storyfolio/engine/content/copy.ts": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+    "before/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "before/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+    "before/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "before/files/.agents/skills/storyfolio/engine/content/faces.ts": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+    "before/files/.agents/skills/storyfolio/engine/content/formations.ts": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+    "before/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "before/files/.agents/skills/storyfolio/engine/content/links.ts": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+    "before/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "before/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "before/files/.agents/skills/storyfolio/engine/content/story.ts": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+    "before/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "before/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "before/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "before/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "before/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "before/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "before/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+    "before/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+    "before/files/.agents/skills/storyfolio/engine/README.md": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "before/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "before/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "before/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "before/files/.agents/skills/storyfolio/references/building.md": "f977bc7ff9a51e21d96b62e60d1a35f8aeccc3100cbf1fa4f9d2a033ffdf1b2b",
+    "before/files/.agents/skills/storyfolio/references/concept.md": "bd4c8f03db0d64979f9f97292d1a7b9a75d274c75c329f631767f478519b7d23",
+    "before/files/.agents/skills/storyfolio/references/reading-a-profile.md": "602ab27f0717880fc59628441c756d47b5e2bc07f503b7430e52d90e561671fe",
+    "before/files/.agents/skills/storyfolio/references/storyboard.md": "04fd1c243c26f530732f612b9a46153e610f4cba949368d0e250881dab27a46b",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "before/files/.agents/skills/storyfolio/SKILL.md": "f71c179d24a5da42fc25b20bc924db63c4bf7b603f86b3f25349afca683b135c",
+    "before/files/material/asset-notes.md": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+    "before/files/material/cv.md": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+    "before/files/material/external-helper-catalog.json": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+    "before/files/material/lab-notes.md": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+    "before/files/material/runtime-resources.json": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+    "before/files/public/assets/bring-up-fixture.svg": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+    "before/files/public/assets/power-states.svg": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+    "before/manifest.json": "373bc9ce7813eb5347c9e2df0881d779cf5333f928d9aedfd91b5967f93239ea",
+    "process.json": "1931d8978b3c3acc29ef05a1501f11388f6a1f023044339873f011beaf6b3137",
+    "prompt.md": "fb6bde048bf36d4fada24d63c809ff24e69dfc9da9fc9b9c6f94acb4f398f35b",
+    "reply.md": "42b39e3a302a0152bb634f997495d7ec50b4454470a53c5291966238a3945e95",
+    "snapshot/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "snapshot/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/page.tsx": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "snapshot/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.css": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/checks.json": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/copy.ts": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/faces.ts": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/formations.ts": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/links.ts": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/story.ts": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+    "snapshot/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "snapshot/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "snapshot/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "snapshot/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "snapshot/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "snapshot/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+    "snapshot/files/.agents/skills/storyfolio/engine/public/plain/fan.svg": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+    "snapshot/files/.agents/skills/storyfolio/engine/README.md": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "snapshot/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "snapshot/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "snapshot/files/.agents/skills/storyfolio/references/building.md": "f977bc7ff9a51e21d96b62e60d1a35f8aeccc3100cbf1fa4f9d2a033ffdf1b2b",
+    "snapshot/files/.agents/skills/storyfolio/references/concept.md": "bd4c8f03db0d64979f9f97292d1a7b9a75d274c75c329f631767f478519b7d23",
+    "snapshot/files/.agents/skills/storyfolio/references/reading-a-profile.md": "602ab27f0717880fc59628441c756d47b5e2bc07f503b7430e52d90e561671fe",
+    "snapshot/files/.agents/skills/storyfolio/references/storyboard.md": "04fd1c243c26f530732f612b9a46153e610f4cba949368d0e250881dab27a46b",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "snapshot/files/.agents/skills/storyfolio/SKILL.md": "f71c179d24a5da42fc25b20bc924db63c4bf7b603f86b3f25349afca683b135c",
+    "snapshot/files/docs/story/decided-for-you.md": "488eac7af526fcf551a27e4ae561c35f1a81974f2672328ae46b1188d5439dd1",
+    "snapshot/files/docs/story/facts.md": "0b4ed8f6141a2c938c32209cbecc5d037ef2d4ea1cfebde96e62e8f661d74d08",
+    "snapshot/files/docs/story/handover.md": "a2afa13c713af241e313a1035b5e94d52a368ef4669496c9d7bfc8e7827a0c2e",
+    "snapshot/files/material/asset-notes.md": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+    "snapshot/files/material/cv.md": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+    "snapshot/files/material/external-helper-catalog.json": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+    "snapshot/files/material/lab-notes.md": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+    "snapshot/files/material/runtime-resources.json": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+    "snapshot/files/public/assets/bring-up-fixture.svg": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+    "snapshot/files/public/assets/power-states.svg": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+    "snapshot/manifest.json": "24c5963a668812135d6001bb7879f04d21237a163f16cec89f7b9ed47e8ca732",
+    "started.json": "e0550547afcc8f2af6ebb4485e02a5ae8a946738e3b44e5a128b5ef8d01fdb31",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stream.jsonl": "f2defa51bf476f9c200dd613d931d2317f5af77481964b569c4642203b5cd39b"
+  },
+  "completionMeaning": "The actor turn completed. This is not a passed build, reached stop or author approval.",
+  "usageAggregation": "Raw turn.completed usage is preserved. Between turns, reported input_tokens plus output_tokens are summed across actor turns. If configured, maxUncachedTokens separately bounds input_tokens minus cached_input_tokens plus output_tokens; cached input must be a nonnegative safe integer no greater than input. Resumed counters may overlap. No dollar estimate or hard in-flight token cap is inferred.",
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g 'SKILL.md' -g 'material/**' -g 'package.json' -g 'README*' -g '\"'!node_modules'\"'\"",
+      "output": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vkG3r6\nmaterial/cv.md\nmaterial/asset-notes.md\nmaterial/lab-notes.md\nmaterial/external-helper-catalog.json\nmaterial/runtime-resources.json\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/SKILL.md'",
+      "output": "---\nname: storyfolio\ndescription: Use when someone wants a personal portfolio site made from their profile, resume, LinkedIn or GitHub, especially one with 3D, scroll-driven animation or a story, or says their portfolio looks generic, templated or AI-made.\n---\n\n# Storyfolio\n\nMakes one kind of portfolio site: one long scroll that tells one story, carried by one object in 3D that is taken from the person's own work.\n\nStart from the recorded handover on a continuation. For a requested build, sketch concepts at stop 2; build the chosen site after storyboard approval. A planning-only request still ends at the storyboard.\n\n## Stops\n\nBetween stops you work by yourself. At each stop the person decides one thing. You go on only when their answer is in the conversation and you have written it into the file.\n\n| Stop | First open | You put to the person | You go on when |\n|---|---|---|---|\n| 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. No concept or design | They have answered, and `docs/story/facts.md` holds their answers |\n| 2. Concept | `references/concept.md` | Three concepts, runnable for a requested build, and which you would choose | They have picked one, or told you to pick, and `docs/story/concepts.md` says which |\n| 3. Storyboard | `references/storyboard.md` | The script of the whole page | They have said yes to it |\n| 4. Spine | `references/building.md`, `engine/README.md` | A runnable opening, middle and ending in two or three looks | They have chosen a look |\n| 5. Chapters | `references/building.md` | The remaining chapters and three whole-beat wording versions | They have chosen the wording |\n| 6. Finish | `engine/README.md` | The checked site and what still needs their review | Their actual review is recorded |\n\n**When starting from profile material, your first reply is the first stop, and no more than that.** Brief build-setup notes do not advance the design. People ask for the whole plan at once: the idea, the scroll, the colours. Do not give it yet, and say why in a sentence. A plan made now is made from your reading of a resume, and a resume leaves out exactly what a site must not get wrong: whose result a number was, what a title hides, who took a photograph. Once they have answered you will have a better idea, and it will not have to be taken apart.\n\n## Ask or decide\n\nAsk the person when a thing is:\n\n1. a fact only they know,\n2. a claim that could embarrass them if it were wrong,\n3. taste on what a visitor sees first: the concept, the look, the opening words,\n4. anything that publishes, costs money, or shows another person or an employer's work.\n\nEverything else you decide. Write each decision into `docs/story/decided-for-you.md`: what you decided, why, and how to change it.\n\nIf the person will not answer, or tells you to decide everything, open `references/asking.md`.\n\n## What you keep\n\nIn the person's own folder, so that a later session can go on from the files alone:\n\n| File | Holds |\n|---|---|\n| `docs/story/facts.md` | The fact sheet, each fact with where it came from, and the person's answers |\n| `docs/story/concepts.md` | The three concepts, which was picked, and why |\n| `docs/story/storyboard.md` | The script |\n| `docs/story/decided-for-you.md` | What you decided without asking |\n| `docs/story/handover.md` | What exists, what the person has said, what is next |\n\n## What holds from the first stop on\n\n- **Nothing about the person is invented.** You know that a number, an employer, a title and a quote are facts. So is every small thing a sentence says on its way: what was wrong before they came, how often a thing is used, which came first, why, how a thing was left, what it taught them. That sounds like writing, and it is a claim. Before handing over any reply or file, check each claim against the fact sheet, including introductory summaries, working titles and labels on the object's faces. Read the supporting line and its unresolved questions, not just its reference. It must establish the whole claim: a topic attached to one item does not establish the topic of another. Wording that depends on an unanswered question stays out of the introduction and the planned page, even if copied from a profile. Remove it or list it as a question to confirm.\n- **A number is used as the person confirmed it,** with what it measures and whose result it is.\n- **What is someone else's is asked about before it is planned for:** a photograph a photographer took, a friend's drawing, a quote, an employer's screens, a story with a patient or a client in it.\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/references/reading-a-profile.md material/cv.md material/asset-notes.md material/lab-notes.md'",
+      "output": "# Reading a profile\n\nThe first stop. You read the profile material, write down what you found, and ask. You do not plan yet.\n\n## Before a requested build\n\nBefore the first factual handoff, verify Node against `engine/README.md`, including native TypeScript execution; check Git; and actually open and inspect a neutral local page with an available browser. Distinguish installed skills from those enabled for this session, using the advertised skill list and relevant local metadata. Record what you ran, what worked and any limits in the handover. Supplied tool paths or another agent's setup are not your checks.\n\nConsider whether a missing skill would materially help this build. If so, give its purpose, source and a source-verified installation route for this agent, noting the evidence's date and limits. Do not guess a route you cannot verify. The person installs or declines; you neither install nor enable it, and carry on with available tools. Recommend nothing when nothing useful is missing.\n\n## What to read\n\n**A folder is not permission to read every file in it.** List filenames first and read the accompanying source notes. Leave private correspondence, contact exports and participant records unopened, even when they are beside profile material. Do not sample their contents to decide whether they belong. Tell the person which files you left. If a file's purpose is unclear, ask what it contains before opening it.\n\nRead the profile material: a resume, a LinkedIn profile, GitHub, writing, talks, notes to you, a site they already have. Read all of that before you write a word.\n\nA site they already have is a source of facts and pictures. What becomes of it is theirs to say, so ask.\n\n## LinkedIn\n\nYou cannot fetch a LinkedIn profile. It turns away anything that is not signed in. It reaches you in one of four ways:\n\n- **A PDF.** On their own profile, in a desktop browser: **More** under their name (some accounts show **Resources**), then **Save to PDF**. The phone app does not have it.\n- **A copy of their data.** **Me**, **Settings & Privacy**, **Data privacy**, **Get a copy of your data**. They can pick only the profile and the positions, and the link then comes by email within minutes. The whole archive can take a day.\n- **The text,** pasted.\n- **Their own browser,** where you have a tool that works it and they have said yes.\n\nThese steps were checked against LinkedIn's help pages on 10 October 2026. The names of its buttons change.\n\n**A copy of their data holds more than a profile.** It has their messages, and everyone they are connected to. Those are other people's words and addresses. The person unzipped a folder: they did not hand you their inbox. Open the files that are about the profile: the profile, positions, education, skills, projects, honours, recommendations. Leave messages and connections unopened, and tell the person that you left them. Nothing from the archive goes into the repository but facts about the person.\n\n## The fact sheet\n\nWrite `docs/story/facts.md`. Beside every fact, write where it came from.\n\n- **Who they are,** in the words they use for themselves.\n- **Where they have been,** with the years.\n- **Each job:** the employer, the title, the dates, what they did there.\n- **Each project:** what it was, what they did in it, who else did, what there is to show of it.\n- **Each figure.**\n- **What others have said** of them.\n- **What they learned from:** a book, a person, a first failure.\n- **Each picture, drawing or file** they say they have.\n\n## What one source hides\n\nWhere two sources disagree, you will see it. The mistakes that reach a site are in one line of one resume, where nothing disagrees with it. A team's result reads as theirs. A lab's name suggests work they never did. A photograph has someone else in it.\n\nSo put these to every line of the fact sheet. Where the material does not answer, you have a question for the person.\n\n| Of every | Ask |\n|---|---|\n| Figure | What does it measure, and over what time? Is it measured, modelled or a guess? Whose result is it: theirs, or a team's? |\n| Result of a team, a firm or a club | Were they in it when it happened, and what was their part? |\n| Job, employer or lab | What did they themselves do there, in a sentence of their own? Its name is not an answer, and neither is a line such as \"operations\" or \"supported the team\". |\n| Project | What was it: something in use, a course exercise, a script? Did it ever run anywhere? Who else made it? |\n| Title | Is it what they are on paper, or what they are called? |\n| Picture, drawing or quote | Who made it? Whose is it to use? Who or what does it show? |\n| Story about a patient, a client or a colleague | May it be told at all, and with what left out? |\n| Anything of an employer's | May it be shown? |\n\nEnd the fact sheet with three lists:\n\n- **Gaps.** What a site needs and the material lacks: a project with no picture, a job with no outcome.\n- **Disagreements.** Where two sources differ, with both readings. You do not settle one yourself, and you do not take the one that reads better.\n- **To confirm.** Every question the table raised.\n\n## What you put to the person\n\nOne message, which is the whole of your reply:\n\n1. Two or three sentences on what the material establishes about the person. Describe their own work, not an employer's field. If their responsibilities need confirming, give the employer and listed role without turning its name or their profile slogan into a speciality.\n2. Your questions, numbered, so that they can answer by number. Plain words. Say why you ask wherever that is not plain. Every disagreement and every item under \"To confirm\" is one of them.\n3. These, which no material answers:\n   - Who is the site for, and what should a visitor do when they reach its end?\n   - What must not be shown?\n   - What do you work from, day to day? The documents, lists and rituals of your trade, by the names you call them.\n   - What did you learn from?\n   - If they have a site already: what becomes of it?\n4. No concept, outline or look. For a requested build, a brief setup limit or optional-tooling note may accompany the fact questions.\n\nWhen they answer, write each answer into the fact sheet beside its fact, before you do anything else.\n\nEvery question then stands as one of two: answered, in their words, or not answered. One they passed over is not answered, and it stays under \"To confirm\". Silence is not a yes. That they have photographs does not say whose the photographs are.\nADA MENSAH\nEmbedded systems engineer, Reedglass Sensing, 2021 to present\nada@example.com\n\nMosslink environmental sensor: two-year battery life, forty-unit pilot.\nOwned the low-power sensor design, bring-up and verification.\nQualification: emissions pass.\n\nTools: C, oscilloscopes, logic analysers, board bring-up.\nI am looking for embedded firmware roles involving physical devices.\n# Supplied local drawings\n\nTwo original local SVG teaching drawings are available:\n\n- `public/assets/power-states.svg`: a Sleep, Measure, Transmit loop.\n- `public/assets/bring-up-fixture.svg`: a firmware command, generic board,\n  fixture access and bench observation.\n\nThey were authored for this fictional subject by the repository's evaluation\ncoordinator on 11 October 2026 and are supplied under the repository MIT\nlicense. They contain no external fonts, photographs, private firmware,\ncircuit detail, measured trace or test report. They may be displayed,\nlinked, resized, adapted or used as textures. Keep their source and record\nany derivative's changes, purpose, terms and accessible description.\n\nThese are explanatory schematics, not depictions of an actual device or\nproof of measured results. The loop is illustrative, not recovered firmware\nstates, timing or current values. Do not label either drawing as a photograph.\nTheir shapes and layout do not choose a portfolio concept or visual look.\n\nThe photograph and circuit diagram mentioned in the notes are not supplied.\nNo actual trace, spreadsheet, run notebook or qualification report is in this\nfolder. Permission for a described artifact does not make the artifact\navailable. No external image, model or font has been supplied.\n# Mosslink notes\n\nBattery spreadsheet uses measured sleep and transmit current with an assumed\nreporting interval. The longest continuous run in the notebook is 72 hours.\n\nForty engineering samples were assembled. Six appear in the bench log.\nThe project photo shows the PCB, my test fixture and a colleague's circuit\ndiagram. The qualification folder has a preliminary emissions report.\n\nThe interesting work for me was a state transition that left the radio awake\nafter a failed transmission. The current trace made it visible. I use state\ntables, timing diagrams and bench checklists. I have no old portfolio.\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'ls -la && find material -maxdepth 3 -type f'",
+      "output": "total 20\ndrwx------  8 kshitij kshitij 4096 Oct 22 13:13 .\ndrwxr-xr-x 24 kshitij kshitij 4096 Oct 22 13:13 ..\ndrwxr-xr-x  3 kshitij kshitij 4096 Oct 22 13:13 .agents\ndr-xr-xr-x  2 kshitij kshitij   40 Oct 22 13:13 .aws\ndr-xr-xr-x  2 kshitij kshitij   40 Oct 22 13:13 .codex\ndr-xr-xr-x  2 kshitij kshitij   40 Oct 22 13:13 .git\ndrwxr-xr-x  2 kshitij kshitij 4096 Oct 22 13:13 material\ndrwxr-xr-x  3 kshitij kshitij 4096 Oct 22 13:13 public\nmaterial/runtime-resources.json\nmaterial/external-helper-catalog.json\nmaterial/lab-notes.md\nmaterial/asset-notes.md\nmaterial/cv.md\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/engine/README.md material/runtime-resources.json material/external-helper-catalog.json'",
+      "output": "# Storyfolio engine\n\nA starting project for one scroll, one story and one family of 3D pieces.\nThe supplied page is a plain test story, not a person's portfolio.\n\nTaken from V3 at `163b8ceb302b7b4e5beeff8f1161f4cdc7663b15` and made\nindependent of that site's content, paper shapes and assets. The source\nproject is unchanged. Storyfolio's engine and generated SVGs are MIT licensed.\n\n## Start\n\nUse Node 22.18 or later with native TypeScript support. Scaffold this folder\nwith `node <installed-skill>/scripts/scaffold.mjs <site-folder>`. Existing\n`docs/story/` files are kept; any conflicting engine path aborts the copy.\nThen, in the new site folder:\n\n```bash\nnpm ci\nnpm run browsers\nnpm run dev\n```\n\nOpen the local address printed by Next.js. Append `?look=dark` to choose a\nlook and `?fps` to show the frame meter. The appearance switch preserves\nother query parameters, the fragment and the current scroll position.\nRead the frame meter on a real phone; software rendering in a headless\nbrowser does not measure phone performance.\n\nNever install dependencies inside an installed skill. The copied project\nbelongs to the person, has its own lockfile, and does not depend on the\nskill after scaffolding. System fonts make builds independent of remote\nfont services. Add licensed local files with `next/font/local` if needed;\nthe scene starts without waiting for them and redraws faces when fonts load.\n\n## From storyboard to content\n\n`lib/story/` contains pure, tested calculations. `components/story/` owns\nthe browser and scene. The person's story belongs in `content/`:\n\n| File | Storyboard input |\n|---|---|\n| `story.ts` | Chapter IDs, names, roles, beat IDs and screen heights; one fixed piece count |\n| `formations.ts` | A rest formation for every beat; optional `within` formation reached as its rest is scrolled |\n| `faces.ts` | Pictures or canvas drawing functions for a beat and piece |\n| `copy.ts` | Metadata, language, labels and complete HTML text |\n| `looks.ts` | Ground, text and surface colors, lights and matte/no floor |\n| `extras.ts` | Lazy imports of chapter-specific shapes, each in its own error boundary |\n| `links.ts` | Ordinary HTML links over a named piece at a named beat |\n| `checks.json` | Optional checks of capabilities this fixture exercises |\n\nUse `as const satisfies StoryDef` for the story and\n`satisfies Record<BeatId, BeatFormation>` for formations. `checkStory`\nalso rejects invalid IDs, heights, piece counts and face references at\nruntime. A formation contains one position, rotation and size per piece,\nplus framing. `layouts.ts` supplies stack, fan, ring, grid, row and seeded\nscatter; `measure` bounds their rotated faces. Depth, a custom shape's\nextent and a whole formation's turn can require extra framing room.\n\nThe HTML in `app/page.tsx` follows the same beat order using `Chapter` and\n`Beat`. A `Beat` can carry a static `fallback` image or diagram. Keep one\n`h1`, stable chapter heading IDs and every factual claim in HTML. The check\nscript verifies the rendered beat IDs against the content contract.\n\nThe bundle type is in `components/story/types.ts`. Import a bundle inside a\nclient component, as `content/experience.tsx` does, and pass server-rendered\nHTML as children. Bundles contain drawing functions and component loaders,\nso cannot be serialized across a server/client prop boundary.\n\nA custom `Piece` component receives its index, face material and look.\nBuild it at unit width/height centered at the origin. Its parent group gets\nthe formation's position, rotation and width/height scale each frame. Keep\nmaterials present from the first frame. Extras receive the shared frame,\nlook, reduced-motion flag and control store and mount only near their\nchapter. Their shapes are children of the formation group.\n\nUse `useExtraFrame` from `components/story/extra-frame.tsx` for an extra's\nframe callback. It receives the same state, delta and optional XR frame as\nReact Three Fiber's `useFrame`. A synchronous exception disables that\ncallback immediately and unmounts its owning extra, leaving the core scene,\nother extras and HTML running. Each extra also has a React boundary for\nrender failures and rejected lazy imports. For example:\n\n```tsx\nuseExtraFrame(() => {\n  if (line.current) line.current.visible = frameRef.current.from === 1;\n});\n```\n\n`content/extras/middle-line.tsx` uses this hook. A raw third-party `useFrame`\ncallback, timer, event handler or rejected asynchronous task does not pass\nthrough this guard. Handle failures at those boundaries explicitly;\nwrapping a component in a React boundary does not catch them.\n\nFor caption controls, use `useControl` or `useControls` from\n`components/story/controls.tsx` in a client component. Real controls remain\nHTML. The canvas takes no pointer events. Overlay links are hidden and\nremoved from keyboard navigation outside their beat; supply the same\ndestination in the text for fallback access.\n\nFor a sketch, add a client component importing its own bundle and HTML to\n`content/sketches/index.ts`. Its key becomes `/sketch/<id>`. The initial\nregistry is empty and unknown keys return 404.\n\n## Check\n\n```bash\nnpm test\nnpm run typecheck\nnpm run lint\nnpm run check\n```\n\n`check` builds, starts its own production server on a free local port,\nruns the browser matrix and stops only that process group. It writes a\nmanifest, logs, reports and screenshots under `checks/<timestamp>/` and\nreturns a failure exit code for failed checks. `PLAYWRIGHT_BROWSERS_PATH`\nselects an optional shared browser cache. `PLAYWRIGHT_CORE` is an optional\noverride; normally the installed local package provides the browser tool.\n\nThe matrix checks both looks at wide, short and phone sizes, reduced\nmotion, no WebGL and no JavaScript. Optional plain-story probes exercise\nkeyboard access and failed chapter loading. Context loss checks the HTML\nfallback. Wide captures include the beginning, middle and end of each\nbeat's rest; reduced-motion captures also check that a stationary scene\nstays still. Open every screenshot for overlap, clipping, legibility and\nframing. Automatic passes do not replace visual review.\n\nFor a focused investigation use `npm run check -- --only=light-phone`.\n`--skip-build` checks a previously built app and is diagnostic only.\nNeither establishes a fresh full acceptance run. `scripts/shoot.mjs`\ndocuments individual screenshots, blocked requests, look switching,\noverflow and shader checks.\n\nNo JavaScript leaves the server-rendered text. No WebGL or a failed scene\nleaves ordinary text and any beat's static image. Reduced motion cuts\nbetween poses, including within-beat formations, without idle movement.\nThe scene pauses offscreen, caps sharpness on touch devices and steps down\nquality when measured frames stay slow.\n{\n  \"schemaVersion\": 1,\n  \"kind\": \"Coordinator-supplied runtime resource locations, not observations made by the actor\",\n  \"nodeExecutable\": \"/tmp/storyfolio-node-check-20261011/node_modules/node/bin/node\",\n  \"npmCache\": \"/tmp/storyfolio-npm-cache\",\n  \"browserCache\": \"/tmp/storyfolio-browser-cache\",\n  \"browserLibraries\": \"/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu\",\n  \"temporaryDirectory\": \"/var/tmp/storyfolio-entry-runtime-20261012\",\n  \"networkConfiguration\": \"The configured proxy permits loopback destinations only. External package downloads are unavailable.\",\n  \"externalSourceData\": \"external-helper-catalog.json records remote source facts only, not locally installed or enabled skills.\",\n  \"limits\": \"These locations are supplied as environment data. They do not establish application existence, successful execution or a completed actor inspection. No application has been seeded in this folder.\"\n}\n{\n  \"schemaVersion\": 1,\n  \"title\": \"External helper source catalog\",\n  \"observedOn\": \"2026-10-12\",\n  \"scope\": \"Remote source facts only. This catalog does not establish local installation, enabled status, tool access or runtime behavior. No entry is a project dependency.\",\n  \"installer\": {\n    \"package\": \"skills\",\n    \"version\": \"1.7.2\",\n    \"repository\": \"vercel-labs/skills\",\n    \"publishedGitHead\": \"671e8c320810d36fed80fac5f1a2c1bf7e82d812\",\n    \"nodeRequirement\": \">=22.20.0\",\n    \"syntaxDocumentation\": \"https://github.com/vercel-labs/skills/blob/671e8c320810d36fed80fac5f1a2c1bf7e82d812/README.md\",\n    \"packageVersionSyntax\": \"https://docs.npmjs.com/cli/v11/commands/npx/\",\n    \"scope\": \"Project by default; the examples do not request global installation or skip confirmation.\",\n    \"operation\": \"npx may fetch the CLI into the npm cache; skills add installs the selected skill. These commands were not run.\",\n    \"agents\": {\n      \"codex\": {\n        \"projectPath\": \".agents/skills\",\n        \"documentation\": \"https://learn.chatgpt.com/docs/build-skills\"\n      },\n      \"claudeCode\": {\n        \"argument\": \"claude-code\",\n        \"projectPath\": \".claude/skills\",\n        \"documentation\": \"https://code.claude.com/docs/en/skills\"\n      }\n    },\n    \"agentWithoutSkillLoading\": \"A file or command cannot establish support for an agent without documented skill-loading capability. No installation or activation claim is made for such an agent.\"\n  },\n  \"entries\": [\n    {\n      \"name\": \"frontend-design\",\n      \"purpose\": \"Visual direction, typography and distinctive interface composition.\",\n      \"repository\": \"anthropics/claude-plugins-official\",\n      \"commit\": \"f359d43b406057f1a8cdbc4ea93b827642c162e6\",\n      \"skillPath\": \"plugins/frontend-design/skills/frontend-design/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/anthropics/claude-plugins-official/tree/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/anthropics/claude-plugins-official/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design/SKILL.md\",\n      \"skillSha256\": \"d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/anthropics/claude-plugins-official/tree/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design --skill frontend-design --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/anthropics/claude-plugins-official/tree/f359d43b406057f1a8cdbc4ea93b827642c162e6/plugins/frontend-design/skills/frontend-design --skill frontend-design --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"ui-design\",\n      \"purpose\": \"React, Next.js and Tailwind interface design, implementation and source review.\",\n      \"repository\": \"mblode/agent-skills\",\n      \"commit\": \"872bc83bdb6dd54a9ff456fbf1181beea6db7875\",\n      \"skillPath\": \"skills/ui-design/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/mblode/agent-skills/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design/SKILL.md\",\n      \"skillSha256\": \"77fdfd2ca8f8b31c7ce719ddc75e9af1f35f4bedffed0a87e6fc216fbb87f720\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design --skill ui-design --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-design --skill ui-design --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"react-three-fiber\",\n      \"purpose\": \"Declarative React-based 3D scenes, interactions and scene performance.\",\n      \"repository\": \"freshtechbro/claudedesignskills\",\n      \"commit\": \"1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd\",\n      \"skillPath\": \"plugins/individual/react-three-fiber/skills/react-three-fiber/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber/SKILL.md\",\n      \"skillSha256\": \"f9747e9e93bf939a1eff4a1c845146f38d8f9e06655be58653a9f95f36c342cc\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber --skill react-three-fiber --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/react-three-fiber/skills/react-three-fiber --skill react-three-fiber --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"threejs-webgl\",\n      \"purpose\": \"Three.js scene construction, rendering, assets and performance.\",\n      \"repository\": \"freshtechbro/claudedesignskills\",\n      \"commit\": \"1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd\",\n      \"skillPath\": \"plugins/individual/threejs-webgl/skills/threejs-webgl/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl/SKILL.md\",\n      \"skillSha256\": \"2fb912c851db124e212afdd2e80b5213f756ca62af6e2eb50de320f6f8ba4f9e\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl --skill threejs-webgl --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/threejs-webgl/skills/threejs-webgl --skill threejs-webgl --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"web3d-integration-patterns\",\n      \"purpose\": \"Integration of 3D rendering, animation libraries and shared state.\",\n      \"repository\": \"freshtechbro/claudedesignskills\",\n      \"commit\": \"1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd\",\n      \"skillPath\": \"plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns/SKILL.md\",\n      \"skillSha256\": \"3c5f22042307a59751de6684fdae033c011048d5fe8d3a7525b9e51564254034\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns --skill web3d-integration-patterns --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/web3d-integration-patterns/skills/web3d-integration-patterns --skill web3d-integration-patterns --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"typography-audit\",\n      \"purpose\": \"Font loading, type hierarchy, measure, spacing and punctuation review.\",\n      \"repository\": \"mblode/agent-skills\",\n      \"commit\": \"872bc83bdb6dd54a9ff456fbf1181beea6db7875\",\n      \"skillPath\": \"skills/typography-audit/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/mblode/agent-skills/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit/SKILL.md\",\n      \"skillSha256\": \"9b603c6abfaccf85422e7c0a767231fd9f44aaaf0d4ef065975296facae7dcbd\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit --skill typography-audit --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/typography-audit --skill typography-audit --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"ui-verification\",\n      \"purpose\": \"Browser probes for focus, layout, controls and runtime behavior.\",\n      \"repository\": \"mblode/agent-skills\",\n      \"commit\": \"872bc83bdb6dd54a9ff456fbf1181beea6db7875\",\n      \"skillPath\": \"skills/ui-verification/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/mblode/agent-skills/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification/SKILL.md\",\n      \"skillSha256\": \"f5cbdcd185cada0bad9dee833465f1e55066b6a39076077711a4a64913fb5193\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification --skill ui-verification --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/mblode/agent-skills/tree/872bc83bdb6dd54a9ff456fbf1181beea6db7875/skills/ui-verification --skill ui-verification --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"vercel-react-best-practices\",\n      \"purpose\": \"React and Next.js rendering, data loading and bundle performance.\",\n      \"repository\": \"vercel-labs/agent-skills\",\n      \"commit\": \"063bee94c3f4df8453406c830b0a7df0f2860278\",\n      \"skillPath\": \"skills/react-best-practices/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/vercel-labs/agent-skills/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices/SKILL.md\",\n      \"skillSha256\": \"71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices --skill vercel-react-best-practices --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices --skill vercel-react-best-practices --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"blender-web-pipeline\",\n      \"purpose\": \"Blender model export, glTF preparation and web asset optimization.\",\n      \"repository\": \"freshtechbro/claudedesignskills\",\n      \"commit\": \"1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd\",\n      \"skillPath\": \"plugins/individual/blender-web-pipeline/skills/blender-web-pipeline/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/freshtechbro/claudedesignskills/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline/SKILL.md\",\n      \"skillSha256\": \"788e4c2fa8d559b5f682a0c49c87159bed06207fd04119ec6f8c3fc7203a7b4c\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline --skill blender-web-pipeline --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/freshtechbro/claudedesignskills/tree/1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd/plugins/individual/blender-web-pipeline/skills/blender-web-pipeline --skill blender-web-pipeline --agent claude-code\"\n      }\n    },\n    {\n      \"name\": \"find-skills\",\n      \"purpose\": \"Discovery of additional skills and their installation sources.\",\n      \"repository\": \"vercel-labs/skills\",\n      \"commit\": \"13e4063a1cf913f5606d57d42ab83a86f5001e04\",\n      \"skillPath\": \"skills/find-skills/SKILL.md\",\n      \"sourceDirectory\": \"https://github.com/vercel-labs/skills/tree/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills\",\n      \"rawSkillUrl\": \"https://raw.githubusercontent.com/vercel-labs/skills/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills/SKILL.md\",\n      \"skillSha256\": \"c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f\",\n      \"remoteAvailability\": \"HTTP 200 on 2026-10-12\",\n      \"installation\": {\n        \"status\": \"documentation-and-source-checked, not executed\",\n        \"codex\": \"npx skills@1.7.2 add https://github.com/vercel-labs/skills/tree/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills --skill find-skills --agent codex\",\n        \"claudeCode\": \"npx skills@1.7.2 add https://github.com/vercel-labs/skills/tree/13e4063a1cf913f5606d57d42ab83a86f5001e04/skills/find-skills --skill find-skills --agent claude-code\"\n      }\n    }\n  ]\n}\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"node --version; git --version; /tmp/storyfolio-node-check-20261011/node_modules/node/bin/node --version; rg --files /tmp/storyfolio-node-check-20261011 /tmp/storyfolio-browser-cache /var/tmp/storyfolio-entry-runtime-20261012 -g '*playwright*/package.json' -g '*playwright*' -g 'AGENTS.md' -g 'SKILL.md' -g 'chrome' -g 'chromium' -g '\"'!external-helper-catalog.json'\"'\"",
+      "output": "v22.22.1\ngit version 2.53.0\nv22.22.1\n/tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-embedded-completion-1-kE257A/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-j8Zt2w/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-time-4-QgrJBi/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vfhAO9/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-time-2-d6BkwA/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-calibration-5yt94U/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-measure-2-l65QnH/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/replay-bench-entry-1-Zuh5Og/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-2-p9coTd/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-measure-2-O43efR/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-time-2-YyHCJB/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-zdvnMZ/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-time-6-6k01cZ/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-sa1yxh/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-2-TeomCV/site/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-bench-entry-1-Ivff90/AGENTS.md\n/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/journey-recovery-time-2-ZSdkQw/site/AGENTS.md\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'ls /tmp; ls -la .agents/skills; ls /tmp/storyfolio-browser-cache; ls /tmp/storyfolio-node-check-20261011/node_modules'",
+      "output": "00506fa6a4230f6647bbb5819a181bff\n037118a49f9e87aba229599042be1802\n057c4488e7a03be2427c378f4b5e7e89\n0a605cef9a6309865d620c3057c064a6\n0af71b7133c2420aaf159a9ec05327ea\n1002194c0038f5a8de58efb072f4cf5f\n11f0865d38116bd79d722ba93f8a71e7\n1b6d60ee67dc6299db40e4a2f53b5aba\n224abe2f5b68eec0b17fccb666250d00\n238eee92723bd94e57dd41633bb40dc2\n2593cf8e4b1bd0fa60a0e030e0d00c53\n2b3d0df29f0626495d42faa0bee3aaa6\n2f7c504161e740ec72d457014aced2b4\n2f82b5bef0e698a4b462d976e5a1673e\n34a21157285de52528b040c78bce9af2\n3593fcbcecaefd3574daf3edff5c9e02\n452b1ea9c3f0ec1f4fd476666a6078d8\n46b04bac976d7bb7105b23168e996c62\n48fbb7d9fd1cfe43022684d5ee224c1b\n4f65bb597fe00812c87d24589270b72b\n5cbcd6c69e134b396c7ed797f15b34bf\n6900a8c46da37735f135375f083a9f71\n6bfbdcd024b39fd0aada2bc0f02d5cd1\n6d89b8ac05a267603c29f6497970c9a9\n736eed317e62a8e85409223a015a5d9d\n7ace1c71b69e4c412828df7230ee2ece\n81e02c216725a1a21144b0458aa165ae\n83c0870357a51a3703ac371c4f5c9c80\n851854edafd6b1d1539523c4567d92c5\n868311eb3ca567def599dd4a40ad1ad8\n894e771034139cde76b255534d8ac71a\n89a327c188f90a781c91fcc5fb7b4b82\n8ce59b2a682188139a650451ba41d4a1\n8dd7fb9507846c6a3e84820fc86776f3\n8e581dbb6bdb77ba42a5b3832385d4f1\n9089602a4f13a5b5b697302d44795079\n9511954e10b63350779333460499b865\n9b716ebc0a34e9a332e6012a86722134\na194de0492566c4c6112c013a9b4caff\na1be3faecf943e4966a616613ea46d37\na2c4aaab9770c1f1fbde39cc10aa8871\naa5600b197c3fa78d9f467a3c73ae50a\nac7f93b6e76165581b37560cfa871862\nadb.1000.log\nb812f4679f3828f264b900ab28ebab6e\nc2a4cf611339770af2841ceb1f72011f\ncf3aa6bef0b27101a9d79690ae454d6a\nclaude-1000\ncodex-daemon-1000\nd5c782a09d39f442ebb16c88332ab432\nd8b38e55daf51bd7537ba2060e3a6669\ne314ec2869c63374aee9df8e0906a681\ne5f23377b026a991c2e69183319ddf8d\nevent-log-1000\nf0d53171a4de818e76a10be7ad16aaf8\nf60b0efd00c4b27946c52331fd93feab\nfd0edaaa2a958e78cc2a8be56c315436\nhsperfdata_kshitij\njest_rs\nkotlin-daemon.2026-10-16.14-40-38-388.00.log\nkotlin-daemon.2026-10-16.14-40-49-488.00.log\nkotlin-daemon.2026-10-16.14-42-56-947.00.log\nkotlin-daemon.2026-10-16.14-42-56-947.01.log\nkotlin-daemon.2026-10-16.14-59-15-172.00.log\nkotlin-daemon.2026-10-16.14-59-15-172.01.log\nmcp-cGu12I\nmcp-kaRGII\nmcp-njUoBe\nmetro-cache\nmetro-file-map-expo-e01c2b528e38941fff0b6125cebf401d-39d8419c349eebf11f75e62852378719\nnode-compile-cache\nnode-jiti\npuppeteer_dev_chrome_profile-csMZXH\npuppeteer_dev_chrome_profile-hgvS6o\npuppeteer_dev_chrome_profile-uhtTLH\npytest-of-kshitij\nsnap-private-tmp\nstoryfolio-browser-cache\nstoryfolio-browser-libs\nstoryfolio-build-capability-20261011\nstoryfolio-node-check-20261011\nstoryfolio-npm-cache\nstoryfolio-sheet-cli-0hgeWD\nstoryfolio-sheet-cli-3dtkLr\nstoryfolio-sheet-cli-53GZDn\nstoryfolio-sheet-cli-6BiVZS\nstoryfolio-sheet-cli-82bw0R\nstoryfolio-sheet-cli-9y6Ogn\nstoryfolio-sheet-cli-CAcwQt\nstoryfolio-sheet-cli-CNlRB1\nstoryfolio-sheet-cli-DHafnP\nstoryfolio-sheet-cli-E3EfAv\nstoryfolio-sheet-cli-Eavmal\nstoryfolio-sheet-cli-KJWrf8\nstoryfolio-sheet-cli-MuSUtl\nstoryfolio-sheet-cli-SDa2ax\nstoryfolio-sheet-cli-Zz3gx5\nstoryfolio-sheet-cli-cQAwNL\nstoryfolio-sheet-cli-ftap0l\nstoryfolio-sheet-cli-h80wlX\nstoryfolio-sheet-cli-iBS4xo\nstoryfolio-sheet-cli-mSY66o\nstoryfolio-sheet-cli-nHnO13\nstoryfolio-sheet-cli-orPX27\nstoryfolio-sheet-cli-pwL14S\nstoryfolio-sheet-failure-8LWZdT\nstoryfolio-sheet-failure-AgD4xB\nstoryfolio-sheet-failure-FnefMK\nstoryfolio-sheet-failure-FqnVI5\nstoryfolio-sheet-failure-G6CGnx\nstoryfolio-sheet-failure-I6RRAE\nstoryfolio-sheet-failure-InGpVs\nstoryfolio-sheet-failure-L4RRbe\nstoryfolio-sheet-failure-NvKssU\nstoryfolio-sheet-failure-OmGXzH\nstoryfolio-sheet-failure-SGmrea\nstoryfolio-sheet-failure-XEhjjN\nstoryfolio-sheet-failure-XNjqVS\nstoryfolio-sheet-failure-bGQkNN\nstoryfolio-sheet-failure-ed5xqp\nstoryfolio-sheet-failure-hiMZd1\nstoryfolio-sheet-failure-ksFiaB\nstoryfolio-sheet-failure-r9HlcY\nstoryfolio-sheet-failure-sb4kFC\nstoryfolio-sheet-failure-u8kwBf\nstoryfolio-sheet-failure-vah4lO\nstoryfolio-sheet-failure-wKnr7w\nstoryfolio-sheet-failure-wpl8cF\nstoryfolio-sheet-test-2fqg6q\nstoryfolio-sheet-test-55co2A\nstoryfolio-sheet-test-5O1qOD\nstoryfolio-sheet-test-IP7flf\nstoryfolio-sheet-test-Izezmc\nstoryfolio-sheet-test-JayFXG\nstoryfolio-sheet-test-LlLu0U\nstoryfolio-sheet-test-OQ6RBw\nstoryfolio-sheet-test-QoyZie\nstoryfolio-sheet-test-TdbTT7\nstoryfolio-sheet-test-VAovEx\nstoryfolio-sheet-test-aFIcVd\nstoryfolio-sheet-test-gNmAg1\nstoryfolio-sheet-test-k0QnAH\nstoryfolio-sheet-test-kWYjNS\nstoryfolio-sheet-test-n6SAbd\nstoryfolio-sheet-test-pRKd7n\nstoryfolio-sheet-test-r9MGCc\nstoryfolio-sheet-test-rvVY8M\nstoryfolio-sheet-test-sdTImJ\nstoryfolio-sheet-test-ulfgBu\nstoryfolio-sheet-test-vhRPai\nstoryfolio-sheet-test-ziJ3uD\nstoryfolio-spine-lint.log\nstoryfolio-spine-typecheck.log\nsystemd-private-b4ddf5e9c42b41efbc48cca7df20499c-chrony.service-mEotlU\nsystemd-private-b4ddf5e9c42b41efbc48cca7df20499c-polkit.service-38YcSb\nsystemd-private-b4ddf5e9c42b41efbc48cca7df20499c-systemd-logind.service-QVKwKO\ntmp.649FrcDPnT\ntmp53di03qg\ntmp5ocunbg0\ntmp8ejnjfd3\ntmp_g46fk1_\ntmp_imcstqm\ntmpf36ggvyl\ntmpi09aefeo\ntmpjnujcgnh\ntmpjq9eut15\ntmpjujef3of\ntmpo73n4_2l\ntmpow4b_6du\ntmpqf26051w\ntmpqyazpfjp\ntmprrv0kfrh\ntmpuepngrlx\ntmpulq4_jn6\ntmpxn1yzdjq\nv8-compile-cache-1000\nvscode-typescript1000\ntotal 12\ndrwxr-xr-x 3 kshitij kshitij 4096 Oct 22 13:13 .\ndrwxr-xr-x 3 kshitij kshitij 4096 Oct 22 13:13 ..\ndrwxr-xr-x 5 kshitij kshitij 4096 Oct 22 13:13 storyfolio\nchromium-1248\nchromium_headless_shell-1248\nffmpeg-1013\nnode\nnode-bin-setup\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"ls /tmp/storyfolio-build-capability-20261011; rg --files .agents -g 'SKILL.md'; git rev-parse --is-inside-work-tree; node --input-type=module -e \\\"import {writeFileSync,unlinkSync} from 'node:fs'; const p='/tmp/ada-native-check.ts'; writeFileSync(p,'const value: number = 42; console.log(value);'); await import(p); unlinkSync(p);\\\"\"",
+      "output": "AGENTS.md\nCLAUDE.md\nLICENSE\nREADME.md\napp\ncomponents\ncontent\neslint.config.mjs\nlib\nnext.config.ts\nnode_modules\npackage-lock.json\npackage.json\npostcss.config.mjs\npublic\nscripts\ntsconfig.json\n.agents/skills/storyfolio/SKILL.md\nfatal: not a git repository (or any of the parent directories): .git\n(node:2) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\n42\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"mkdir -p docs/story checks/setup; cat > checks/setup/neutral.html <<'EOF'\n<\"'!doctype html><html lang=\"en\"><meta charset=\"utf-8\"><title>Local setup check</title><style>body{font:24px system-ui;padding:64px;background:#f4f3ee;color:#182523}</style><h1>Local setup check</h1><p>Browser and local file rendering are available.</p></html>\nEOF\ncat > checks/setup/browser-check.mjs <<'\"'EOF'\nimport { chromium } from '/tmp/storyfolio-build-capability-20261011/node_modules/playwright-core/index.mjs';\nconst browser = await chromium.launch({executablePath:'/tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome',headless:true,args:['--no-sandbox'],env:{...process.env,LD_LIBRARY_PATH:'/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu'}});\nconst page=await browser.newPage({viewport:{width:1200,height:800}});\nawait page.goto(new URL('./neutral.html',import.meta.url).href);\nconsole.log(JSON.stringify({title:await page.title(),heading:await page.locator('h1').innerText(),body:await page.locator('body').boundingBox()}));\nawait page.screenshot({path:new URL('./neutral.png',import.meta.url).pathname});\nawait browser.close();\nEOF\nnode checks/setup/browser-check.mjs\"",
+      "output": "(node:2) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\nnode:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nbrowserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --user-data-dir=/var/tmp/storyfolio-entry-runtime-20261012/playwright_chromiumdev_profile-elSJ4l --remote-debugging-pipe --no-startup-window\n<launched> pid=23\n[pid=23][err] chrome_crashpad_handler: --database is required\n[pid=23][err] Try 'chrome_crashpad_handler --help' for more information.\n[pid=23][err] [23:23:1022/131413.540350:ERROR:third_party/crashpad/crashpad/util/linux/socket.cc:120] recvmsg: Connection reset by peer (104)\nCall log:\n\u001b[2m  - <launching> /tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --user-data-dir=/var/tmp/storyfolio-entry-runtime-20261012/playwright_chromiumdev_profile-elSJ4l --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=23\u001b[22m\n\u001b[2m  - [pid=23][err] chrome_crashpad_handler: --database is required\u001b[22m\n\u001b[2m  - [pid=23][err] Try 'chrome_crashpad_handler --help' for more information.\u001b[22m\n\u001b[2m  - [pid=23][err] [23:23:1022/131413.540350:ERROR:third_party/crashpad/crashpad/util/linux/socket.cc:120] recvmsg: Connection reset by peer (104)\u001b[22m\n\u001b[2m  - [pid=23] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=23] <kill>\u001b[22m\n\u001b[2m  - [pid=23] <will force kill>\u001b[22m\n\u001b[2m  - [pid=23] <process did exit: exitCode=null, signal=SIGTRAP>\u001b[22m\n\u001b[2m  - [pid=23] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=23] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=23] <gracefully close end>\u001b[22m\n\n    at /var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vkG3r6/checks/setup/browser-check.mjs:2:32 {\n  log: [\n    '  - <launching> /tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --no-sandbox --user-data-dir=/var/tmp/storyfolio-entry-runtime-20261012/playwright_chromiumdev_profile-elSJ4l --remote-debugging-pipe --no-startup-window',\n    '  - <launched> pid=23',\n    '  - [pid=23][err] chrome_crashpad_handler: --database is required',\n    \"  - [pid=23][err] Try 'chrome_crashpad_handler --help' for more information.\",\n    '  - [pid=23][err] [23:23:1022/131413.540350:ERROR:third_party/crashpad/crashpad/util/linux/socket.cc:120] recvmsg: Connection reset by peer (104)',\n    '  - [pid=23] <gracefully close start>',\n    '  - [pid=23] <kill>',\n    '  - [pid=23] <will force kill>',\n    '  - [pid=23] <process did exit: exitCode=null, signal=SIGTRAP>',\n    '  - [pid=23] starting temporary directories cleanup',\n    '  - [pid=23] finished temporary directories cleanup',\n    '  - [pid=23] <gracefully close end>'\n  ]\n}\n\nNode.js v22.22.1\n",
+      "exitCode": 1
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files /tmp/storyfolio-browser-cache/chromium_headless_shell-1248 -g '*headless_shell'; python3 - <<'PY'\np='checks/setup/browser-check.mjs'\ns=open(p).read().replace('chromium-1248/chrome-linux64/chrome','chromium_headless_shell-1248/chrome-linux/headless_shell')\nopen(p,'w').write(s)\nPY\nnode checks/setup/browser-check.mjs\"",
+      "output": "/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/LICENSE.headless_shell\n(node:2) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\nnode:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nbrowserType.launch: Failed to launch chromium because executable doesn't exist at /tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-linux/headless_shell\n    at /var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-1-vkG3r6/checks/setup/browser-check.mjs:2:32 {\n  log: [],\n  name: 'Error'\n}\n\nNode.js v22.22.1\n",
+      "exitCode": 1
+    },
+    {
+      "command": "/bin/bash -lc \"ls /tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64; sed -i 's@chrome-linux/headless_shell@chrome-headless-shell-linux64/chrome-headless-shell@' checks/setup/browser-check.mjs\nnode checks/setup/browser-check.mjs\"",
+      "output": "ABOUT\nLICENSE.headless_shell\nchrome-headless-shell\ndeb.deps\nheadless_command_resources.pak\nheadless_lib_data.pak\nheadless_lib_strings.pak\nhyphen-data\nicudtl.dat\nlibEGL.so\nlibGLESv2.so\nlibvk_swiftshader.so\nlibvulkan.so.1\nlocales\nrpm.deps\nv8_context_snapshot.bin\nvk_swiftshader_icd.json\n(node:2) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\n{\"title\":\"Local setup check\",\"heading\":\"Local setup check\",\"body\":{\"x\":8,\"y\":8,\"width\":1184,\"height\":300.3125}}\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"cat > docs/story/facts.md <<'EOF'\n# Facts and open questions\n\nNo user confirmations received yet. Source statements below are not automatically approved site claims.\n\n| Item | Source | Status / question |\n|---|---|---|\n| Ada Mensah; embedded systems engineer, Reedglass Sensing, 2021–present; ada@example.com | material/cv.md | Confirm official title, dates and usable contact address. |\n| Seeking embedded firmware roles involving physical devices | material/cv.md; user request | Confirm audience and desired ending action. |\n| Mosslink environmental sensor; owned low-power sensor design, bring-up and verification | material/cv.md | Clarify personal firmware, hardware and verification responsibilities versus team work; prototype or deployed project? |\n| Two-year battery life | material/cv.md | Notes describe a spreadsheet using measured sleep/transmit current and assumed reporting interval, not two years observed. Confirm model assumptions, attribution and approved wording. |\n| Longest continuous notebook run: 72 hours | material/lab-notes.md | Confirm what ran, who measured it and what the run demonstrated. |\n| Forty-unit pilot | material/cv.md | Notes say forty engineering samples assembled and six in bench log. Confirm tested and deployed counts, team and personal scope. |\n| Qualification: emissions pass | material/cv.md | Notes say preliminary emissions report. Confirm actual status and personal contribution; do not call certified or qualified. |\n| Radio left awake after failed transmission; current trace exposed state-transition issue | material/lab-notes.md | Confirm personal diagnosis, fix and verification, and permission to tell sanitized story. |\n| C, oscilloscopes, logic analysers, board bring-up | material/cv.md | Supplied skills. |\n| Uses state tables, timing diagrams, bench checklists | material/lab-notes.md | Ask day-to-day sequence and names used. |\n| No old portfolio | material/lab-notes.md | No replacement/migration decision needed. |\n| Photo described: PCB, own fixture, colleague circuit diagram | material/lab-notes.md | Not supplied; ownership, employer and colleague permission unknown. Do not plan to display. |\n| Two supplied SVG teaching drawings | material/asset-notes.md; public/assets | Original coordinator work, 11 Oct 2026, repository MIT license; adaptation permitted with provenance and accessible description. Illustrative, not actual circuitry, traces or proof. |\n\n## Gaps\n- No actual trace, spreadsheet, notebook, qualification report, photo or circuit diagram supplied.\n- Personal firmware contributions, outcome verification, learning influences and intended contact action need detail.\n- No education, other roles, projects or endorsements supplied; do not invent.\n\n## Disagreements\n- Two-year battery life headline versus model and 72-hour continuous run.\n- Forty-unit pilot versus forty assembled samples and six bench-logged units.\n- Emissions pass versus preliminary report.\n\n## To confirm\n1. Official role/title, dates, employer name use, actual personal responsibilities and project status.\n2. Battery estimate assumptions, measurement ownership, 72-hour run meaning and acceptable wording.\n3. Forty assembled, six logged, tested/deployed counts and individual/team attribution.\n4. Preliminary emissions outcome, limits and personal part.\n5. Radio fault discovery, fix, re-test and safe-to-show scope.\n6. Restrictions on employer names, project names, hardware, diagrams and stories; described photo's ownership if ever supplied.\n7. Audience, final action and whether supplied email is suitable.\n8. Day-to-day process and learning influences.\nEOF\ncat > docs/story/decided-for-you.md <<'EOF'\n# Decisions made without asking\n\n- Keep everything local, per user instruction. No publishing, analytics or remote assets. Change only on user request.\n- Do not use missing photographs or actual employer circuitry. Supplied SVGs are illustrative assets with MIT permission; retain provenance for any adaptation. User can supply cleared artifacts later.\n- Record unresolved profile claims before design. Numbers and qualification language require factual clarification.\n- Use available storyfolio tooling; no additional skill is materially necessary at this stage. Only storyfolio is locally installed under .agents/skills and advertised as enabled; the external catalog lists remote sources, not enabled skills.\nEOF\ncat > docs/story/handover.md <<'EOF'\n# Handover\n\n## Current stop\nStop 1: profile read. Await user answers in conversation, then write each into facts.md before concept work. User requests planning and a working local portfolio for embedded firmware roles, one scroll story with a tangible work-derived 3D object; no paper, sheets or card collection. Publishing is user's decision.\n\n## Sources inspected\nListed material files, then read cv.md, lab-notes.md, asset-notes.md and runtime/tool catalog metadata. No correspondence or participant records present in listed material. No private correspondence opened. Actual photos, traces and reports are absent.\n\n## Setup observations, 22 October 2026\n- Ran node --version: v22.22.1. Supplied executable independently returned v22.22.1. Engine requires >=22.18.\n- Executed a temporary .ts file with a number type annotation through native Node import; printed 42 successfully; removed temporary file.\n- git --version: 2.53.0. git rev-parse failed: current directory is not a working Git repository. No initialization yet.\n- Browser tools are not exposed as connector tools. Used installed playwright-core via /tmp/storyfolio-build-capability-20261011/node_modules solely for a setup probe, not as an application.\n- Full Chromium crashed with crashpad database error. Correct cached headless-shell executable launched successfully with supplied library path. Opened local checks/setup/neutral.html, verified heading, captured neutral.png and visually inspected it. No portfolio application exists yet. Setup probe is rerunnable with node checks/setup/browser-check.mjs.\n- Only storyfolio is advertised enabled and found in local .agents/skills. External catalog does not indicate local installation. No extra skill is currently necessary; none installed or enabled.\n- Supplied runtime metadata says external downloads unavailable; no network requests made. Cached packages and browsers exist, but app dependency installation has not yet been verified.\n\n## Next\nPresent factual questions; wait for answers. Then record answers and read references/concept.md to prepare three runnable concepts. Skill stops require chosen concept before storyboard, approved storyboard before build, chosen look and wording before finish review.\nEOF\"",
+      "output": "",
+      "exitCode": 0
+    }
+  ],
+  "errors": [],
+  "timedOut": false,
+  "interruptedBy": null,
+  "snapshot": {
+    "schemaVersion": 1,
+    "files": {
+      ".agents/skills/storyfolio/engine/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      ".agents/skills/storyfolio/engine/AGENTS.md": {
+        "type": "file",
+        "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+        "size": 1055
+      },
+      ".agents/skills/storyfolio/engine/app/globals.css": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      ".agents/skills/storyfolio/engine/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      ".agents/skills/storyfolio/engine/app/page.tsx": {
+        "type": "file",
+        "hash": "03f3d85fd4ee11ec15aa982491cf29793d29ab8324531791a5696f58e154d687",
+        "size": 1271
+      },
+      ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      ".agents/skills/storyfolio/engine/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      ".agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      ".agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      ".agents/skills/storyfolio/engine/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      ".agents/skills/storyfolio/engine/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      ".agents/skills/storyfolio/engine/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      ".agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      ".agents/skills/storyfolio/engine/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      ".agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      ".agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      ".agents/skills/storyfolio/engine/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      ".agents/skills/storyfolio/engine/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "71262b84b98ad141195147085c14e4057a52a7f3ecd5ec05617e340b7f634060",
+        "size": 4623
+      },
+      ".agents/skills/storyfolio/engine/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.css": {
+        "type": "file",
+        "hash": "6757ae89fb89b2cdd57b0b1aa18031fb7f3f4d97858d71ae6e3545971b0e9a23",
+        "size": 5859
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      ".agents/skills/storyfolio/engine/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      ".agents/skills/storyfolio/engine/content/checks.json": {
+        "type": "file",
+        "hash": "1993dccb2bc660da6f5a23e383ce5005a4d72ded05acc6ce5119df504cbf2857",
+        "size": 130
+      },
+      ".agents/skills/storyfolio/engine/content/copy.ts": {
+        "type": "file",
+        "hash": "8fcc2b4f0aaac85b3626da32289ad3bcb8cd7a5786ed5189e45f4528598ecc86",
+        "size": 1468
+      },
+      ".agents/skills/storyfolio/engine/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "c0b8fe1a85bb8d66f1f8f27287b431cfdbbdcdf3bc2cb897a810dbe3c1da343c",
+        "size": 613
+      },
+      ".agents/skills/storyfolio/engine/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      ".agents/skills/storyfolio/engine/content/faces.ts": {
+        "type": "file",
+        "hash": "34372935e06d5ed99b5c2bdfc705acf2dd929779e956d47964ada9cc150dddad",
+        "size": 883
+      },
+      ".agents/skills/storyfolio/engine/content/formations.ts": {
+        "type": "file",
+        "hash": "1c7bc66a13817ac5927c3b68299e3233490270d654b771a3e251c07171eeec12",
+        "size": 942
+      },
+      ".agents/skills/storyfolio/engine/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      ".agents/skills/storyfolio/engine/content/links.ts": {
+        "type": "file",
+        "hash": "910b5c8ee825bb7c6d56058227294dc130d3a506e0a0e34941e397bc2eec891b",
+        "size": 130
+      },
+      ".agents/skills/storyfolio/engine/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      ".agents/skills/storyfolio/engine/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+        "size": 238
+      },
+      ".agents/skills/storyfolio/engine/content/story.ts": {
+        "type": "file",
+        "hash": "53611a023449f5c375c6e13ff91437dd24aef7034954239e67eb671e8323a855",
+        "size": 518
+      },
+      ".agents/skills/storyfolio/engine/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "a4bc7fef38dff89c4ee63027e85804cb69ebfb4f3f45b16e205c63e7f25e2563",
+        "size": 4065
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.ts": {
+        "type": "file",
+        "hash": "08f782aa56fb1d896f685eb35669be6bf46aaa7f5f92abd02066b693d8f5d21d",
+        "size": 4796
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      ".agents/skills/storyfolio/engine/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      ".agents/skills/storyfolio/engine/next.config.ts": {
+        "type": "file",
+        "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      ".agents/skills/storyfolio/engine/package.json": {
+        "type": "file",
+        "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+        "size": 1015
+      },
+      ".agents/skills/storyfolio/engine/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/public/plain/face.svg": {
+        "type": "file",
+        "hash": "d87318e7fde490217e44fdc3af19949a52e53d794a686dcfd83c40b0b0d87603",
+        "size": 309
+      },
+      ".agents/skills/storyfolio/engine/public/plain/fan.svg": {
+        "type": "file",
+        "hash": "6e72f9a876da1e55706fea403bc46336eee25c7d025c135c4634bd675dfd89a2",
+        "size": 775
+      },
+      ".agents/skills/storyfolio/engine/README.md": {
+        "type": "file",
+        "hash": "a750d217801ddbe64526eb628ad080396c023fb16c2e8ee3f1b5634e578faf3b",
+        "size": 6746
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      ".agents/skills/storyfolio/engine/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      ".agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      ".agents/skills/storyfolio/engine/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      },
+      ".agents/skills/storyfolio/references/asking.md": {
+        "type": "file",
+        "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+        "size": 1486
+      },
+      ".agents/skills/storyfolio/references/building.md": {
+        "type": "file",
+        "hash": "f977bc7ff9a51e21d96b62e60d1a35f8aeccc3100cbf1fa4f9d2a033ffdf1b2b",
+        "size": 1487
+      },
+      ".agents/skills/storyfolio/references/concept.md": {
+        "type": "file",
+        "hash": "bd4c8f03db0d64979f9f97292d1a7b9a75d274c75c329f631767f478519b7d23",
+        "size": 8028
+      },
+      ".agents/skills/storyfolio/references/reading-a-profile.md": {
+        "type": "file",
+        "hash": "602ab27f0717880fc59628441c756d47b5e2bc07f503b7430e52d90e561671fe",
+        "size": 6500
+      },
+      ".agents/skills/storyfolio/references/storyboard.md": {
+        "type": "file",
+        "hash": "04fd1c243c26f530732f612b9a46153e610f4cba949368d0e250881dab27a46b",
+        "size": 4984
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.mjs": {
+        "type": "file",
+        "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+        "size": 3566
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+        "type": "file",
+        "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+        "size": 4044
+      },
+      ".agents/skills/storyfolio/SKILL.md": {
+        "type": "file",
+        "hash": "f71c179d24a5da42fc25b20bc924db63c4bf7b603f86b3f25349afca683b135c",
+        "size": 4593
+      },
+      "docs/story/decided-for-you.md": {
+        "type": "file",
+        "hash": "488eac7af526fcf551a27e4ae561c35f1a81974f2672328ae46b1188d5439dd1",
+        "size": 712
+      },
+      "docs/story/facts.md": {
+        "type": "file",
+        "hash": "0b4ed8f6141a2c938c32209cbecc5d037ef2d4ea1cfebde96e62e8f661d74d08",
+        "size": 3586
+      },
+      "docs/story/handover.md": {
+        "type": "file",
+        "hash": "a2afa13c713af241e313a1035b5e94d52a368ef4669496c9d7bfc8e7827a0c2e",
+        "size": 2233
+      },
+      "material/asset-notes.md": {
+        "type": "file",
+        "hash": "821cacb39b7e0c54c32ea4e99a74b2b15ff91f433fb010d4fe6412cf0c175906",
+        "size": 1296
+      },
+      "material/cv.md": {
+        "type": "file",
+        "hash": "575aa68e114d4ecadf99ca1133a7bc526d4cb793116d399effaee53b21cd8896",
+        "size": 383
+      },
+      "material/external-helper-catalog.json": {
+        "type": "file",
+        "hash": "f758ebe6f21cc0938a887757eda5a168da732bb7f87fcdb12fd244c8f884de2d",
+        "size": 14881
+      },
+      "material/lab-notes.md": {
+        "type": "file",
+        "hash": "761278f8d3a7182cb15a57196565f4fef4c77206428d0be1da0df34edeb984d0",
+        "size": 613
+      },
+      "material/runtime-resources.json": {
+        "type": "file",
+        "hash": "aea987eec4e81d3b5ff036ea974ae599c15ef3d9ee0bec9165f10ac99b504abf",
+        "size": 928
+      },
+      "public/assets/bring-up-fixture.svg": {
+        "type": "file",
+        "hash": "81cc465f9849de6f98b235a320e0a85850152d335bf53508ec163402ca9b2fae",
+        "size": 1822
+      },
+      "public/assets/power-states.svg": {
+        "type": "file",
+        "hash": "85d0cfe9a0766307c394fbac078e584e1e1172bc47c6484d764fb1d31fc5d5c8",
+        "size": 1657
+      }
+    },
+    "excluded": [
+      "checks"
+    ],
+    "unexpected": [],
+    "totalBytes": 480910,
+    "changes": [
+      {
+        "path": "docs/story/decided-for-you.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "488eac7af526fcf551a27e4ae561c35f1a81974f2672328ae46b1188d5439dd1",
+          "size": 712
+        }
+      },
+      {
+        "path": "docs/story/facts.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "0b4ed8f6141a2c938c32209cbecc5d037ef2d4ea1cfebde96e62e8f661d74d08",
+          "size": 3586
+        }
+      },
+      {
+        "path": "docs/story/handover.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "a2afa13c713af241e313a1035b5e94d52a368ef4669496c9d7bfc8e7827a0c2e",
+          "size": 2233
+        }
+      }
+    ]
+  }
+}
