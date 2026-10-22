@@ -8,7 +8,7 @@ The second stop: from the fact sheet to three concepts the person can choose bet
 - 3D as a backdrop behind the text.
 - One 3D scene, however good.
 - Another site's idea with the names changed.
-- A different effect for every section: a wall of jars, then a door that opens, then a scale that tips. Each may be good. Together they are a tour of effects, and nothing carries the visitor from the first to the last.
+- A different effect for every section: a wall of jars, then a door that opens, then a scale that tips. Together they are a tour of effects, and nothing carries the visitor from the first to the last.
 
 ## Three things to find
 
@@ -44,6 +44,9 @@ Map the form's sections onto these roles. Leave out a role that has nothing to h
 ## What the object becomes
 
 In each chapter the same pieces take a new arrangement that shows what the chapter is about: the way they came as a line or a map, how they work as a diagram, one piece of work as an exhibit, every project as a wall whose faces carry real pictures, outcomes as cards. At the close the object is whole again.
+
+Words written on equal pieces are captions moved into the scene. Showing is in the shapes: how many there are, how long, in what order, where they stand. Camille's twenty-four seats are twenty-four plates, the booked ones lit.
+
 **The opening shows where the object comes from.** The answer is the person's own: what they learned from, or what they began with. The object may gather, be put together, unfold, be drawn, develop or switch on.
 
 ## Three concepts, each written like this
@@ -53,13 +56,13 @@ Make three that differ in kind: in their form or their object, and not in their 
 - **The question.**
 - **The form,** with each chapter's name and the role it holds.
 - **The object,** and its pieces.
-- **What it becomes** in three of the chapters.
+- **What it becomes** in three of the chapters, and the confirmed number, order or proportion one of them draws at true size.
 - **The opening and the close.**
 - **What it stands on:** the lines of the fact sheet it needs.
 - **What it needs from the person:** a picture, someone else's yes.
 - **Why it is theirs:** one sentence on why it could not sit on a colleague's site.
 
-Then say which you would choose, and why: the one whose scene shows the most with the captions hidden, not the one that risks least.
+Then say which you would choose, and why: the one whose scene shows the most with the captions hidden, not the one that risks least. All three are theirs, so that decides nothing.
 
 For a requested build, open `engine/README.md` and implement all three concepts as local sketches, each with opening, middle and ending. In each middle the pieces draw a confirmed fact or carry the work, readable at the size shown. Inspect each at desktop and phone sizes. Give their working addresses with your recommendation. Planning-only concepts stay in words.
 
@@ -78,9 +81,7 @@ Write each concept's answer to every test. Rework or drop one that fails.
 
 ## Three cases
 
-How each was reasoned, and not only where it ended.
-
-**A research paper.** The site this skill came from belongs to someone whose work lies between AI research and software engineering. Three restyled layouts were, in their words, "all cliche". Three single 3D scenes were "not deep enough". What turned it was a sentence of theirs: "Think of it like a research question." The form became a paper, with a paper's chapters: Abstract, Introduction, Background, Method, Experiments, Results, Peer review, Conclusion. The object became the paper's nine pages, which fold into a globe for where they have lived, stand as the layers of a network for how they work, and hang as a wall of projects. The question was first too abstract for a recruiter, and was reworded. The opening was first a plain pile of pages. It became the front pages of the papers they learned from, gathering into the paper as the reader scrolls.
+**A research paper.** The site this skill came from belongs to someone whose work lies between AI research and software engineering. What turned it was a sentence of theirs: "Think of it like a research question." The form became a paper, with a paper's chapters: Abstract, Introduction, Background, Method, Experiments, Results, Peer review, Conclusion. The object became the paper's nine pages, which fold into a globe for where they have lived, stand as the layers of a network for how they work, and hang as a wall of projects.
 
 **A tasting menu.** Camille is a pastry chef, made up for this page. She trained in Lyon and now runs a dessert-only evening once a month: 24 seats, five courses, all sweet. Her trade's forms: the recipe card, the prep list, the tasting menu, the order sheet, the costing sheet. She serves in courses and plans by the menu, so the form is a tasting menu, and each course is a chapter. Each course arrives on a plate, so the object is a stack of plates. The question: "What makes someone remember a dessert?" Turned down first: a whisk and a chef's hat turning in the air, which is the emblem, and one croissant in 3D, which is one scene.
 

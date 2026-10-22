@@ -3,7 +3,9 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author direction: [22 October, fix the skill and try again](2026-10-22-fix-skill-and-rerun-direction.md).
+Newest author decision: [22 October, one sharper fix, rerun to turn 2 only](2026-10-22-one-sharper-fix-decision.md).
+
+Earlier author direction: [22 October, fix the skill and try again](2026-10-22-fix-skill-and-rerun-direction.md).
 
 Newest author review: [22 October, the author rejects the turn-6 site as the same object roaming](2026-10-22-author-review-first-reaction.md).
 
