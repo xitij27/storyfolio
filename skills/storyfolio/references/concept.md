@@ -62,7 +62,7 @@ Make three that differ in kind: in their form or their object, and not in their 
 - **What it needs from the person:** a picture, someone else's yes.
 - **Why it is theirs:** one sentence on why it could not sit on a colleague's site.
 
-Then say which you would choose, and why: the one whose scene shows the most with the captions hidden, not the one that risks least. All three are theirs, so that decides nothing.
+Then say which you would choose, and why. Choose only by what the scene shows with the captions hidden. Coming from what the person makes, and claiming nothing unconfirmed, are bars all three clear; they rank nothing.
 
 For a requested build, open `engine/README.md` and implement all three concepts as local sketches, each with opening, middle and ending. In each middle the pieces draw a confirmed fact or carry the work, readable at the size shown. Inspect each at desktop and phone sizes. Give their working addresses with your recommendation. Planning-only concepts stay in words.
 
