@@ -1,0 +1,7 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"Migration — Dawit Bekele",description:"Measured order API availability of 99.98% over a 26-month migration, with two internal incidents."};
+export default function Migration(){return <main className="utility-page"><nav className="utility-nav" aria-label="Work navigation"><Link href="/#projects">← Back to the migration</Link><Link href="/#contact">Contact</Link><Link href="/cv">CV ↗</Link></nav><article className="utility-main"><p className="utility-eyebrow">DAWIT BEKELE / MIGRATION WORK</p><h1>The migration.</h1><p>Measured availability of the order API was <strong>99.98% over the 26-month migration.</strong></p><h2>What that figure includes</h2><p>There were two incidents during the migration. Both were internal, and both were under ten minutes.</p><figure>
+{/* Local SVG has explicit size and needs no image optimizer. */}
+{/* eslint-disable-next-line @next/next/no-img-element */}
+<img src="/illustrations/migration.svg" width="720" height="500" alt="A generic crossing between two system gateways, with a return path."/><figcaption>Illustration. This is not Kestrel Freight’s architecture or migration method.</figcaption></figure><div className="utility-links"><Link href="/#projects">Try the scroll-driven model ↗</Link><a href="mailto:dawit@example.com">Discuss a migration ↗</a></div></article></main>;}

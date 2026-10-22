@@ -70,3 +70,12 @@ the author's word.
 After the skill change (commit `f107a2e`), the author wrote, verbatim:
 
 > okay then let us test it. Remember to delete pointless examples
+
+## Continue in another session
+
+During the person test, after turn 5 closed, the author wrote, verbatim:
+
+> I want to continue this in another session
+
+Root stopped before turn 6 and wrote the state into `docs/handover.md` and
+`evals/runs/stage-3-person-1/README.md`. Nothing was pushed.
