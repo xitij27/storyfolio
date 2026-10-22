@@ -4,7 +4,9 @@ Current state as of 21 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest, 22 October: **the author rejected the turn-6 site at review**:
+Latest, 22 October (evening): **the author rejected meaning rerun 4** and the approach behind all four reruns ([record](history/2026-10-22-author-rejects-rerun-4.md)): each scene must picture its section (the person, their work, their field), not rearrange one set of pieces. No paid run until the author agrees the design change.
+
+Earlier, 22 October: **the author rejected the turn-6 site at review**:
 "It is just the same 3d asset roaming around across each scene. Is this
 how you tell a story?" ([record](history/2026-10-22-author-review-first-reaction.md)).
 The formations show nothing a chapter is about; Stage 3 does not close on
