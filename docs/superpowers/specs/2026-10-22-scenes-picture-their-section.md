@@ -1,5 +1,7 @@
 # Each scene pictures its section
 
+> **Corrected the same day** by [A portfolio introduces the person](2026-10-22-portfolio-structure.md): one object stays allowed when it can become each chapter's picture, as V3's pages do; the chapters introduce the whole person.
+
 22 October 2026. Amends [the skill design](2026-10-10-portfolio-skill-design.md)
 on the author's direction ([record](../../history/2026-10-22-change-the-design-direction.md)).
 
