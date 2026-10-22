@@ -2,7 +2,8 @@
 
 A starting project for one scroll and one story in 3D: shared pieces for what carries on
 through the story, and a scene of its own for each chapter.
-The supplied page is a plain test story, not a person's portfolio.
+The supplied page is a placeholder that tests the engine: one sheet whose
+picture changes by chapter. It has no design in it; replace all of `content/`.
 
 Taken from V3 at `163b8ceb302b7b4e5beeff8f1161f4cdc7663b15` and made
 independent of that site's content, paper shapes and assets. The source

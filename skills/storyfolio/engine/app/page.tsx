@@ -11,7 +11,7 @@ export default function Home() {
         return <Beat key={beat.id} story={story} id={beat.id} fallback={index === 1 ?
           // A local SVG is already sized; no image optimizer or network is needed.
           // eslint-disable-next-line @next/next/no-img-element
-          <img src="/plain/fan.svg" width="640" height="300" alt={copy.pictureAlt} /> : undefined}>
+          <img src="/plain/face.svg" width="448" height="608" alt={copy.pictureAlt} /> : undefined}>
           <Kicker number={chapter.number}>{chapter.name}</Kicker>
           <Title id={`${beatIndex === 0 ? chapter.id : beat.id}-title`} as={index === 0 && beatIndex === 0 ? "h1" : "h2"}>{words.title}</Title>
           <Body>{words.body}</Body>

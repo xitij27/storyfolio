@@ -78,11 +78,3 @@ Write each concept's answer to every test. Rework or drop one that fails.
 | Emblem | Is a scene the picture that stands for the job, rather than this person's work? |
 | Honesty | Does any sentence in it say more than the fact sheet does: a ranking, a reason, which came first, how a thing was left, a day, a place? |
 | Thirty seconds | Can someone who does not scroll get the name, the work, some proof, and how to reach them? |
-
-## Two more cases
-
-**Plates.** Camille is a pastry chef, made up for this page. She trained in Lyon, worked the pastry sections of two restaurants, and now runs a dessert-only evening once a month: 24 seats, five courses. Her object is the plate. Her signature dessert arrives on one to say hello. Plates set out along a table trace the route from Lyon to where she cooks now. A school's practice plates, then a restaurant pass with plates going out, one pass for each kitchen. The working project: a tart caramelises as the reader scrolls. Every dessert she has made sits on its own plate, and each opens its recipe card. Guests' notes are tucked under plates. At the close the table is set for 24. Turned down: a whisk and a chef's hat turning in the air, which is the emblem.
-
-**Screens.** Jun is a reliability engineer, also made up, seven years on call at two companies. His object is the tiles of a status page, each a small screen, and a screen can show any picture. They show the map of his moves between cities, the timeline of his roles, the dashboards of his field. The working project: an incident replays as the reader scrolls, tiles going red and coming back one by one. Turned down: a server rack turning, which is the emblem, and a globe of pings behind the text, which is a backdrop.
-
-**An example shows how to reason. Its concept is not taken.** If you find one of these concepts in your hand for someone else, it has already failed the swap test: it was made for a person who is not in front of you.
