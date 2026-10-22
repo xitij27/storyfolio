@@ -40,6 +40,38 @@ GitHub at `543c51a`). It has none of the above: no Codex, no session, no
 workspace, and `/tmp` is on disk there. Root's view of the turn-5 chapters
 was made there on a rebuild of the saved snapshot, as the disposition says.
 
+## The agent's conversation
+
+The actor is one Codex conversation across all six turns, session
+`01a16475-7bbe-7713-a4a4-7d794da29d57` (the `sessionId` in every
+`evals/runs/codex-person-1/full-journey-2/baseline-1/turns/0N/result.json`).
+Turn 6 continues it: the runner reads the session id from turn 5's result
+and calls `codex exec resume 01a16475-7bbe-7713-a4a4-7d794da29d57`, so the
+agent keeps everything it said, read and built in turns 1 to 5. Nothing
+has to be passed to it by hand.
+
+`codex exec resume` needs Codex's own record of the conversation:
+
+- `/home/kshitij/.codex/sessions/2026/10/22/rollout-2026-10-22T18-33-03-01a16475-7bbe-7713-a4a4-7d794da29d57.jsonl`,
+  19195948 bytes, SHA-256 `cbeb3a0c2fabf3c1995cff81b4a3da76c1eaa319b60be58d8304384333c566a3`, as it stood after turn 5.
+- A copy, verified identical, in
+  `/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/person-1-codex-session-backup/`.
+
+It is not committed: it is large and holds Codex account identifiers, and
+this repository is public. Earlier runs recorded such files by path and
+hash the same way. Before turn 6, check the file still hashes as above; if
+it is missing, copy the backup back to the same path.
+
+What the agent was told and said is in the repository: each turn's
+`prompt.md`, `reply.md` and raw event stream `stream.jsonl` under
+`evals/runs/codex-person-1/full-journey-2/baseline-1/turns/`.
+
+Turn 6 must run on this machine, as the same Linux user (`kshitij`), with
+the same Codex login, because the conversation, the workspace
+(`/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-2-fs9yQ7`)
+and the tooling in `/tmp` are here. Another machine would need all three
+copied to the same paths.
+
 ## To continue
 
 1. Done: the turn-5 chapters are viewed with the captions hidden
