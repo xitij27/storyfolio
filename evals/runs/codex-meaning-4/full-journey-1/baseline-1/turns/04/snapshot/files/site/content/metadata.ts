@@ -1,0 +1,2 @@
+import type {Metadata} from 'next';
+export function pageMetadata(title:string,description:string):Metadata{return {title,description,openGraph:{title,description,type:'website',locale:'en_GB',images:[{url:'/share-preview.png',width:1200,height:630,alt:'Ada Mensah — embedded firmware. Explanatory six-of-forty sample count.'}]},twitter:{card:'summary_large_image',title,description,images:['/share-preview.png']}}}

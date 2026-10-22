@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+.concept { --font-story-display: system-ui, sans-serif; }
+.concept-nav {position:absolute;top:0;left:0;z-index:8;display:flex;flex-wrap:wrap;gap:1.4rem;padding:1.2rem 5vw;font: .8rem ui-monospace,monospace;}
+.concept .story-rail {top:4.4rem;left:5vw;}
+.concept .story-title {font-weight:600;font-size:clamp(2rem,3.8vw,4.1rem);}
+.concept .story-caption-text{max-width:29rem;}
+.concept .story-caption {padding-bottom:3rem;}
+.concept-index {background:#f2f0e9;color:#202932;min-height:100vh;padding:8vh 8vw;}
+.concept-index h1{font-size:clamp(2.6rem,6vw,5.5rem);letter-spacing:-.065em;line-height:1.05;max-width:16ch;}
+.concept-index>p {max-width:64ch;line-height:1.65;}
+.concept-index ol{padding-left:1.3rem;max-width:65ch;}
+.concept-index li{padding:1.4rem 0;border-bottom:1px solid #b2b6ab;}
+.concept-index li>a{font-size:1.5rem;}
+.concept-index li p{line-height:1.6;}
+.eyebrow{font:.8rem ui-monospace,monospace;letter-spacing:.08em;}
+@media(max-width:600px){.concept-nav{gap:1rem;padding:1rem 1.25rem;}.concept .story-caption{padding-bottom:1.6rem;}.concept .story-caption-text{max-width:100%;}.concept .story-title{font-size:1.9rem;}.concept .story-body{line-height:1.5;}.concept .story-note{font-size:.75rem;}}

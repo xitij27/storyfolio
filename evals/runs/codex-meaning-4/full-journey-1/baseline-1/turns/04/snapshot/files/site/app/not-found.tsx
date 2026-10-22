@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import {Header,Footer} from '@/components/site/header';
+export default function NotFound(){return <div className="document-page"><Header/><main className="missing-page"><p className="eyebrow">404 / PAGE NOT FOUND</p><h1>This address has<br/>no page.</h1><p>You can return to Ada’s firmware story, explore Mosslink or open the CV.</p><div className="actions"><Link className="button" href="/" prefetch={false}>Return to the story →</Link><Link href="/projects/mosslink" prefetch={false}>Mosslink</Link><Link href="/cv" prefetch={false}>CV</Link></div></main><Footer/></div>}

@@ -1,0 +1,10 @@
+file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:120
+    if (manifest.casePath !== options.casePath || manifest.digest !== inspected.digest) throw new Error("Current inputs differ from frozen cohort; use a new cohort");
+                                                                                              ^
+
+Error: Current inputs differ from frozen cohort; use a new cohort
+    at prepareBuildInputs (file:///home/kshitij/projects/storyfolio/evals/lib/build.mjs:120:95)
+    at async file:///home/kshitij/projects/storyfolio/evals/codex-build-run.mjs:52:18
+
+Node.js v22.22.1
+exit 1

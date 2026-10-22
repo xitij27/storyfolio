@@ -389,13 +389,11 @@ export async function readTurnHistory(out) {
   return history;
 }
 
-export async function executeBuildTurn({ out, work, inputs, source, capabilities, turn, gate, liftReportedCap = false, invoke = invokeBuildCodex }) {
+export async function executeBuildTurn({ out, work, inputs, source, capabilities, turn, gate, invoke = invokeBuildCodex }) {
   const manifest = await verifyInputs(inputs);
   const frozenSource = validateCase(JSON.parse(await regularBytes(inputs, "case.json")));
   if (json(validateCase(source)) !== json(frozenSource)) throw new Error("Actor case differs from frozen inputs");
   source = frozenSource;
-  // An author decision may remove only the reported-token ceiling; time and uncached ceilings stay.
-  if (liftReportedCap) source = { ...source, bounds: { ...source.bounds, maxTokens: Number.MAX_SAFE_INTEGER } };
   const history = await readTurnHistory(out);
   const limits = planTurn({ turn, source, history, gate });
   if (source.schemaVersion === 3) {

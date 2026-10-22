@@ -15,6 +15,11 @@ cost measure). Remove the 12 million reported-token limit for rerun 4,
 recorded as a declared protocol change, applied through a small wrapper
 like the previous run's."
 
-Applied as `--lift-reported-cap docs/history/2026-10-22-rerun-4-reported-cap-decision.md`
-on `evals/codex-build-run.mjs`, which removes only `maxTokens` inside
-`executeBuildTurn` after the frozen case is verified. For rerun 4 only.
+Applied through `evals/runs/stage-3-meaning-4/lifted-turn.mjs`. A first
+attempt added a flag to `evals/codex-build-run.mjs`, but the runner's own
+code is part of the frozen inputs, so turn 5 was refused at launch ("Current
+inputs differ from frozen cohort"), again with no model call; that change
+was reverted to the frozen bytes. The wrapper verifies the frozen inputs and
+setup probe unchanged, then runs the unchanged turn executor on a copy
+(`evals/runs/codex-meaning-4/inputs-lifted/`) whose case differs only in
+`maxTokens`. For rerun 4, turns 5 and 6 only.
