@@ -36,8 +36,8 @@ Write `docs/story/facts.md`. Beside every fact, write where it came from.
 - **Who they are,** in the words they use for themselves.
 - **Where they have lived,** with the years.
 - **What they studied:** where, what and when.
-- **Each job:** the employer, the title, the dates, what they did there.
-- **Each project:** what it was, what they did in it, who else did, what there is to show of it.
+- **Each job:** the employer, the title, the dates, what they did there, the systems and tools, and the scale.
+- **Each project:** the problem, the approach and its stack, the scale, the result, what they did in it, who else did, what there is to show of it.
 - **Each figure.**
 - **What others have said** of them.
 - **What they learned from:** a book, a person, a first failure.
@@ -62,7 +62,7 @@ So put these to every line of the fact sheet. Where the material does not answer
 
 End the fact sheet with three lists:
 
-- **Gaps.** What a site needs and the material lacks: places lived, education, a role without years, a project with no picture, a job with no outcome.
+- **Gaps.** What a site needs and the material lacks: places lived, education, a role without years or tools, a project without its problem, approach or result, a project with no picture, a job with no outcome. A portfolio built from a line per job says nothing; ask until each piece of work can be explained to a colleague.
 - **Disagreements.** Where two sources differ, with both readings. You do not settle one yourself, and you do not take the one that reads better.
 - **To confirm.** Every question the table raised.
 
