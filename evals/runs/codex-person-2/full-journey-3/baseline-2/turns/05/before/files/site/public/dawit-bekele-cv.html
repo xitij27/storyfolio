@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Dawit Bekele — migration planning, database cutovers and reliability. Printable CV."><title>Dawit Bekele — CV</title><style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#18372f;background:#f0eee6}*{box-sizing:border-box}body{max-width:850px;margin:0 auto;padding:48px 32px;line-height:1.6}h1{font-size:46px;letter-spacing:-.05em;font-weight:500;margin:25px 0 0}h2{font-size:22px;border-bottom:1px solid #bdc9be;margin:35px 0 12px;padding-bottom:8px}h3{font-size:16px;margin:22px 0 5px}p{margin:8px 0}a{color:inherit;text-underline-offset:4px}li{margin:8px 0}nav{display:flex;gap:24px;font-size:12px}.subtitle{font-size:19px}.meta{color:#4d675b;font-size:13px}.print-note{font-size:12px;background:#e2e5da;padding:15px;margin:24px 0}a:focus-visible{outline:2px solid #176758;outline-offset:5px}@page{size:A4;margin:17mm}@media print{:root{background:white;color:#111}body{max-width:none;padding:0;font-size:10pt}nav,.print-note{display:none}h1{font-size:29pt;margin-top:0}h2{font-size:14pt;margin-top:20px}h3{font-size:11pt}h2,h3{break-after:avoid}li,p{orphans:3;widows:3}a{text-decoration:none;color:#111}.meta{color:#333}footer{font-size:9pt} }
+</style></head><body>
+<nav aria-label="CV navigation"><a href="/">Portfolio</a><a href="mailto:dawit@example.com">Contact</a><a href="/dawit-bekele-cv.html" download="dawit-bekele-cv.html">Download HTML CV</a></nav>
+<header><h1>Dawit Bekele</h1><p class="subtitle">Migrations · databases · reliability</p><p>Rotterdam · <a href="mailto:dawit@example.com">dawit@example.com</a></p></header>
+<p class="print-note">Use your browser’s Print command to print or save as PDF. This HTML file also works on its own after downloading. Facts confirmed October 2026.</p>
+<h2>Selected work — Kestrel Freight</h2>
+<h3>Data-centre exit · August 2020–October 2022</h3>
+<p>I wrote and sequenced the migration plan: 310 services, two data centres, 14 dependency-based waves over 26 months, with about 60 engineers across teams. Both data centres closed on schedule.</p>
+<p>Measured Order API availability over those 26 months: <strong>99.98%</strong>. There were two internal incidents, each under ten minutes.</p>
+<p>Approach: dependency mapping, rehearsed rollback, mirrored read traffic, dual writes for stateful services, weighted routing, SLO checks and a two-week soak before decommissioning.</p>
+<h3>Orders database · 2022</h3>
+<p>I led the 4 TB Postgres 11 → 15 upgrade with one database engineer. Logical replication, dual writes through ferry and hourly checksum comparisons for three weeks preceded moving reads, then writes. No maintenance window; the old cluster stayed warm for a month as the way back.</p>
+<h3>Migration runbook · 2021–now</h3>
+<p>I wrote the first version and still own it; 40 teams use it. Six stages, each with an exit check: preflight, shadow, dual write, cutover, soak, decommission.</p>
+<h3>On-call · 2021–2022</h3>
+<p>We reviewed the alerts as a team of nine. We deleted alerts nobody acted on and introduced SLO burn-rate alerts on the services that mattered. Pages fell from 85 to 22 per week over about a year.</p>
+<h2>Earlier work</h2>
+<h3>Lumen Pay · Amsterdam · March 2016–July 2020</h3><p>Site Reliability Engineer · Card payment systems.</p>
+<h3>Entoto Technical University Library · Addis Ababa · 2013–2016</h3>
+<p>Ran the library’s systems. After causing a dropped-table outage in 2014, I added binary-log point-in-time recovery and, in 2015, a replica. The outage lasted six hours; recovery used the nightly dump and a day of loans re-entered from paper slips.</p>
+<h2>Education</h2>
+<h3>BSc Electrical Engineering · Entoto Technical University · 2009–2013</h3><p>Addis Ababa. My final-year project was a microcontroller data logger for the campus substation, sampling feeder load every second to an SD card.</p>
+<h2>Open source and speaking</h2>
+<h3>ferry · Maintainer since 2022</h3><p>A Go CLI for dual-write cutovers, created by a former colleague in 2019. I maintain it and wrote its cutover command, which checks replication lag and checksum parity, switches the write target and keeps the old target available for a fallback window.</p>
+<h3>Boring Migrations · SRE North 2024 · 30 minutes</h3><p>Runbook stages, rehearsed rollback and exit checks. The talk opens with the 2014 library incident.</p>
+<footer><p>Contact for migration conversations and speaking: <a href="mailto:dawit@example.com">dawit@example.com</a>.</p></footer>
+</body></html>

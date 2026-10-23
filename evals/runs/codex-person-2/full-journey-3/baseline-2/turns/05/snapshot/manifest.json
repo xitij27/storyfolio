@@ -1,0 +1,1822 @@
+{
+  "schemaVersion": 1,
+  "files": {
+    ".agents/skills/storyfolio/engine/.gitignore": {
+      "type": "file",
+      "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "size": 69
+    },
+    ".agents/skills/storyfolio/engine/AGENTS.md": {
+      "type": "file",
+      "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+      "size": 1055
+    },
+    ".agents/skills/storyfolio/engine/app/globals.css": {
+      "type": "file",
+      "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+      "size": 263
+    },
+    ".agents/skills/storyfolio/engine/app/layout.tsx": {
+      "type": "file",
+      "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+      "size": 299
+    },
+    ".agents/skills/storyfolio/engine/app/page.tsx": {
+      "type": "file",
+      "hash": "7c8f8ff73878b47438b5c643683fce943ba26529c64795bb45ac4b2fa3ba5295",
+      "size": 1272
+    },
+    ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+      "type": "file",
+      "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "size": 446
+    },
+    ".agents/skills/storyfolio/engine/CLAUDE.md": {
+      "type": "file",
+      "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "size": 11
+    },
+    ".agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+      "type": "file",
+      "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+      "size": 1504
+    },
+    ".agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+      "type": "file",
+      "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "size": 1479
+    },
+    ".agents/skills/storyfolio/engine/components/story/controls.tsx": {
+      "type": "file",
+      "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "size": 882
+    },
+    ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+      "type": "file",
+      "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "size": 1420
+    },
+    ".agents/skills/storyfolio/engine/components/story/face-material.ts": {
+      "type": "file",
+      "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "size": 1714
+    },
+    ".agents/skills/storyfolio/engine/components/story/faces.ts": {
+      "type": "file",
+      "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "size": 3025
+    },
+    ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+      "type": "file",
+      "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "size": 1624
+    },
+    ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+      "type": "file",
+      "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "size": 504
+    },
+    ".agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+      "type": "file",
+      "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "size": 515
+    },
+    ".agents/skills/storyfolio/engine/components/story/meter.tsx": {
+      "type": "file",
+      "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "size": 731
+    },
+    ".agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+      "type": "file",
+      "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "size": 711
+    },
+    ".agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+      "type": "file",
+      "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "size": 7753
+    },
+    ".agents/skills/storyfolio/engine/components/story/rail.tsx": {
+      "type": "file",
+      "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+      "size": 452
+    },
+    ".agents/skills/storyfolio/engine/components/story/scene.tsx": {
+      "type": "file",
+      "hash": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+      "size": 4781
+    },
+    ".agents/skills/storyfolio/engine/components/story/stage.tsx": {
+      "type": "file",
+      "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "size": 1230
+    },
+    ".agents/skills/storyfolio/engine/components/story/story.css": {
+      "type": "file",
+      "hash": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+      "size": 5944
+    },
+    ".agents/skills/storyfolio/engine/components/story/story.tsx": {
+      "type": "file",
+      "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+      "size": 5735
+    },
+    ".agents/skills/storyfolio/engine/components/story/types.ts": {
+      "type": "file",
+      "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "size": 1324
+    },
+    ".agents/skills/storyfolio/engine/components/story/use-look.ts": {
+      "type": "file",
+      "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "size": 897
+    },
+    ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+      "type": "file",
+      "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "size": 432
+    },
+    ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+      "type": "file",
+      "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "size": 591
+    },
+    ".agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+      "type": "file",
+      "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "size": 2192
+    },
+    ".agents/skills/storyfolio/engine/components/story/validate.ts": {
+      "type": "file",
+      "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "size": 1972
+    },
+    ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+      "type": "file",
+      "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "size": 476
+    },
+    ".agents/skills/storyfolio/engine/content/checks.json": {
+      "type": "file",
+      "hash": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+      "size": 128
+    },
+    ".agents/skills/storyfolio/engine/content/copy.ts": {
+      "type": "file",
+      "hash": "924c0b852bb05782fdac0493f272f59364cd1e900e17f75a007bf33a89cc6cc5",
+      "size": 1347
+    },
+    ".agents/skills/storyfolio/engine/content/experience.tsx": {
+      "type": "file",
+      "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "size": 260
+    },
+    ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+      "type": "file",
+      "hash": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+      "size": 994
+    },
+    ".agents/skills/storyfolio/engine/content/extras.ts": {
+      "type": "file",
+      "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+      "size": 91
+    },
+    ".agents/skills/storyfolio/engine/content/faces.ts": {
+      "type": "file",
+      "hash": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+      "size": 859
+    },
+    ".agents/skills/storyfolio/engine/content/formations.ts": {
+      "type": "file",
+      "hash": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+      "size": 770
+    },
+    ".agents/skills/storyfolio/engine/content/index.ts": {
+      "type": "file",
+      "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+      "size": 427
+    },
+    ".agents/skills/storyfolio/engine/content/links.ts": {
+      "type": "file",
+      "hash": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+      "size": 128
+    },
+    ".agents/skills/storyfolio/engine/content/looks.ts": {
+      "type": "file",
+      "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+      "size": 645
+    },
+    ".agents/skills/storyfolio/engine/content/sketches/index.ts": {
+      "type": "file",
+      "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+      "size": 238
+    },
+    ".agents/skills/storyfolio/engine/content/story.ts": {
+      "type": "file",
+      "hash": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+      "size": 602
+    },
+    ".agents/skills/storyfolio/engine/eslint.config.mjs": {
+      "type": "file",
+      "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "size": 309
+    },
+    ".agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+      "type": "file",
+      "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "size": 6594
+    },
+    ".agents/skills/storyfolio/engine/lib/story/camera.ts": {
+      "type": "file",
+      "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "size": 5201
+    },
+    ".agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+      "type": "file",
+      "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "size": 1608
+    },
+    ".agents/skills/storyfolio/engine/lib/story/controls.ts": {
+      "type": "file",
+      "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "size": 1054
+    },
+    ".agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+      "type": "file",
+      "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "size": 5294
+    },
+    ".agents/skills/storyfolio/engine/lib/story/formation.ts": {
+      "type": "file",
+      "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "size": 5414
+    },
+    ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+      "type": "file",
+      "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "size": 2728
+    },
+    ".agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+      "type": "file",
+      "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "size": 4733
+    },
+    ".agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+      "type": "file",
+      "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "size": 1238
+    },
+    ".agents/skills/storyfolio/engine/lib/story/looks.ts": {
+      "type": "file",
+      "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "size": 1262
+    },
+    ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+      "type": "file",
+      "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "size": 1844
+    },
+    ".agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+      "type": "file",
+      "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "size": 3252
+    },
+    ".agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+      "type": "file",
+      "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "size": 1838
+    },
+    ".agents/skills/storyfolio/engine/lib/story/quality.ts": {
+      "type": "file",
+      "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "size": 1762
+    },
+    ".agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+      "type": "file",
+      "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "size": 567
+    },
+    ".agents/skills/storyfolio/engine/lib/story/rand.ts": {
+      "type": "file",
+      "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "size": 384
+    },
+    ".agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+      "type": "file",
+      "hash": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+      "size": 4640
+    },
+    ".agents/skills/storyfolio/engine/lib/story/story.ts": {
+      "type": "file",
+      "hash": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+      "size": 5441
+    },
+    ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+      "type": "file",
+      "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "size": 7998
+    },
+    ".agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+      "type": "file",
+      "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "size": 5697
+    },
+    ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+      "type": "file",
+      "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "size": 4495
+    },
+    ".agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+      "type": "file",
+      "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "size": 3329
+    },
+    ".agents/skills/storyfolio/engine/LICENSE": {
+      "type": "file",
+      "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "size": 1080
+    },
+    ".agents/skills/storyfolio/engine/next.config.ts": {
+      "type": "file",
+      "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "size": 94
+    },
+    ".agents/skills/storyfolio/engine/package-lock.json": {
+      "type": "file",
+      "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "size": 233717
+    },
+    ".agents/skills/storyfolio/engine/package.json": {
+      "type": "file",
+      "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "size": 1015
+    },
+    ".agents/skills/storyfolio/engine/postcss.config.mjs": {
+      "type": "file",
+      "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "size": 94
+    },
+    ".agents/skills/storyfolio/engine/public/plain/face.svg": {
+      "type": "file",
+      "hash": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+      "size": 314
+    },
+    ".agents/skills/storyfolio/engine/README.md": {
+      "type": "file",
+      "hash": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+      "size": 7343
+    },
+    ".agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+      "type": "file",
+      "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "size": 4516
+    },
+    ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+      "type": "file",
+      "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "size": 4110
+    },
+    ".agents/skills/storyfolio/engine/scripts/check.mjs": {
+      "type": "file",
+      "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "size": 6374
+    },
+    ".agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+      "type": "file",
+      "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "size": 25709
+    },
+    ".agents/skills/storyfolio/engine/tsconfig.json": {
+      "type": "file",
+      "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "size": 706
+    },
+    ".agents/skills/storyfolio/references/asking.md": {
+      "type": "file",
+      "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+      "size": 1486
+    },
+    ".agents/skills/storyfolio/references/building.md": {
+      "type": "file",
+      "hash": "95276bacbc429072f7fe634fde5c68e22ead374091bcaa7d222394ce136281e8",
+      "size": 1536
+    },
+    ".agents/skills/storyfolio/references/concept.md": {
+      "type": "file",
+      "hash": "80ca1202899d482607d3ea8565c11aaa8e08d3f4411b37ea6b92d5d82f6529d9",
+      "size": 6705
+    },
+    ".agents/skills/storyfolio/references/reading-a-profile.md": {
+      "type": "file",
+      "hash": "69116e0a96f74a34a992d2faf28f0a5b451f677321a82a858e839181b9435e24",
+      "size": 7460
+    },
+    ".agents/skills/storyfolio/references/storyboard.md": {
+      "type": "file",
+      "hash": "186ff810fc38c881c4960301d607ff3fc8ccfccf62cbcefdb8f7f31d8d9bf3db",
+      "size": 4735
+    },
+    ".agents/skills/storyfolio/scripts/scaffold.mjs": {
+      "type": "file",
+      "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+      "size": 3566
+    },
+    ".agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+      "type": "file",
+      "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+      "size": 4044
+    },
+    ".agents/skills/storyfolio/SKILL.md": {
+      "type": "file",
+      "hash": "8d68afb524f432be448919cb8df3bfaf5ccaacff861a4fc34032cc73cbfa7af9",
+      "size": 4780
+    },
+    "docs/story/concepts.md": {
+      "type": "file",
+      "hash": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+      "size": 14226
+    },
+    "docs/story/decided-for-you.md": {
+      "type": "file",
+      "hash": "076d4b68384ff3fe66e5bbe8fe2adf78fed3b64f42acf792925946e4819a5d5c",
+      "size": 8777
+    },
+    "docs/story/facts.md": {
+      "type": "file",
+      "hash": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+      "size": 13128
+    },
+    "docs/story/handover.md": {
+      "type": "file",
+      "hash": "9326d575c197ffcdf102089a85fdf386fbc958e4a743d75e1426377871bda1af",
+      "size": 21302
+    },
+    "docs/story/look-alternatives.md": {
+      "type": "file",
+      "hash": "795d1ec0257cf00286e2a800f2249bfbc737d12a804ef9f51d9d44226d3791c2",
+      "size": 1004
+    },
+    "docs/story/storyboard.md": {
+      "type": "file",
+      "hash": "e8b00d3ae785c0b3253cc334bbadadb592a6fb9283f316b85371f494bf84d2e5",
+      "size": 23283
+    },
+    "docs/story/wording.md": {
+      "type": "file",
+      "hash": "a486ea816d5304363ba48a2ab9c5b54a4be376606b0035b024f6de7b42412529",
+      "size": 4130
+    },
+    "material/linkedin.md": {
+      "type": "file",
+      "hash": "95d70f38ebc320cecf58e3530cb191eee4017e06fc1cfb56af43835db211d4d5",
+      "size": 1208
+    },
+    "material/old-site.md": {
+      "type": "file",
+      "hash": "d2897369b440f33c9bb02ea22c1a8647072bbd7a71cab3662677f58e46b92466",
+      "size": 188
+    },
+    "material/project-notes.md": {
+      "type": "file",
+      "hash": "70e4466c4d09e90e1b553f1cec710e26383f31aff4c829f018e8a6698e400478",
+      "size": 3787
+    },
+    "material/resume.md": {
+      "type": "file",
+      "hash": "72e96cce2a83a4425f1eee48d42a0b385956a9d962963b22c868a233a35a3c59",
+      "size": 1688
+    },
+    "README.md": {
+      "type": "file",
+      "hash": "6a1f06bf37c81082386d5a0d2c1007484b39fcb45d44db2e4f552292f29234cb",
+      "size": 2434
+    },
+    "site/.gitignore": {
+      "type": "file",
+      "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+      "size": 69
+    },
+    "site/AGENTS.md": {
+      "type": "file",
+      "hash": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+      "size": 1734
+    },
+    "site/app/cv/page.tsx": {
+      "type": "file",
+      "hash": "3772206044f042a7f2c3899c3815f3b5e55df0eb24a8dc86eed402f84b825f51",
+      "size": 996
+    },
+    "site/app/globals.css": {
+      "type": "file",
+      "hash": "6dadc3526cef53b6538eb25f9b20f1b39722251771f08513c6afe1486847811b",
+      "size": 11536
+    },
+    "site/app/layout.tsx": {
+      "type": "file",
+      "hash": "3a8365e788c065c4c2084e3ec95fa5ccd40b472efa3886b76713676f84a5ac19",
+      "size": 787
+    },
+    "site/app/not-found.tsx": {
+      "type": "file",
+      "hash": "1d2c27e75104dbc314c972a89154736e8124cb7654bfa7ceb177ceec447b66d5",
+      "size": 481
+    },
+    "site/app/page.tsx": {
+      "type": "file",
+      "hash": "00cdbdd895b85e013014e831918a45c22ba4b51e3932df5d9fa349ef6866b086",
+      "size": 3100
+    },
+    "site/app/sketch/[id]/page.tsx": {
+      "type": "file",
+      "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+      "size": 446
+    },
+    "site/app/wording/page.tsx": {
+      "type": "file",
+      "hash": "617ed71bf21a7a00b850685ef2a634ae62f2279c0f30b3a22f2e267298fe5e52",
+      "size": 1276
+    },
+    "site/app/work/[slug]/page.tsx": {
+      "type": "file",
+      "hash": "b860235e145c84caace2cd186de22f58385df2bf0c2839ca8c8d7ac204e8d097",
+      "size": 1543
+    },
+    "site/CLAUDE.md": {
+      "type": "file",
+      "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "size": 11
+    },
+    "site/components/story/chapter.tsx": {
+      "type": "file",
+      "hash": "afc7ec2d168906c8cc3d7a8cd936611c7ea89f3f6ac6174bc25f58bd9c5f9174",
+      "size": 1496
+    },
+    "site/components/story/conductor.tsx": {
+      "type": "file",
+      "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+      "size": 1479
+    },
+    "site/components/story/controls.tsx": {
+      "type": "file",
+      "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+      "size": 882
+    },
+    "site/components/story/extra-frame.tsx": {
+      "type": "file",
+      "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+      "size": 1420
+    },
+    "site/components/story/face-material.ts": {
+      "type": "file",
+      "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+      "size": 1714
+    },
+    "site/components/story/faces.ts": {
+      "type": "file",
+      "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+      "size": 3025
+    },
+    "site/components/story/guard-extra-callback.test.ts": {
+      "type": "file",
+      "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+      "size": 1624
+    },
+    "site/components/story/guard-extra-callback.ts": {
+      "type": "file",
+      "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+      "size": 504
+    },
+    "site/components/story/look-switch.tsx": {
+      "type": "file",
+      "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+      "size": 515
+    },
+    "site/components/story/meter.tsx": {
+      "type": "file",
+      "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+      "size": 731
+    },
+    "site/components/story/overlay.tsx": {
+      "type": "file",
+      "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+      "size": 711
+    },
+    "site/components/story/pieces.tsx": {
+      "type": "file",
+      "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+      "size": 7753
+    },
+    "site/components/story/rail.tsx": {
+      "type": "file",
+      "hash": "2a4f7fb4a86cc1204943f4d7d72babe127411d4e5e9c32f4d8c65492f0544a9e",
+      "size": 497
+    },
+    "site/components/story/scene.tsx": {
+      "type": "file",
+      "hash": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+      "size": 4781
+    },
+    "site/components/story/stage.tsx": {
+      "type": "file",
+      "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+      "size": 1230
+    },
+    "site/components/story/story.css": {
+      "type": "file",
+      "hash": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+      "size": 5944
+    },
+    "site/components/story/story.tsx": {
+      "type": "file",
+      "hash": "ceefe1ca4e37a8ea2c4fb4f79feb085824bc451c73c205dfa09ded5a80826987",
+      "size": 5750
+    },
+    "site/components/story/types.ts": {
+      "type": "file",
+      "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+      "size": 1324
+    },
+    "site/components/story/use-look.ts": {
+      "type": "file",
+      "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+      "size": 897
+    },
+    "site/components/story/use-reduced-motion.ts": {
+      "type": "file",
+      "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+      "size": 432
+    },
+    "site/components/story/use-webgl-supported.ts": {
+      "type": "file",
+      "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+      "size": 591
+    },
+    "site/components/story/validate.test.ts": {
+      "type": "file",
+      "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+      "size": 2192
+    },
+    "site/components/story/validate.ts": {
+      "type": "file",
+      "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+      "size": 1972
+    },
+    "site/components/story/webgl-boundary.tsx": {
+      "type": "file",
+      "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+      "size": 476
+    },
+    "site/content/beat-copy.ts": {
+      "type": "file",
+      "hash": "fd59e399edb71e9db109b661fd8af11a72089b2ee649ffacc67dbd23ba2e063e",
+      "size": 5948
+    },
+    "site/content/bookends.tsx": {
+      "type": "file",
+      "hash": "8df2a486dc6eb00bf314b25dc08d9c4d02b205659b0112ecb8bd8a775eb3ee3f",
+      "size": 1364
+    },
+    "site/content/checks.json": {
+      "type": "file",
+      "hash": "5747624ee0875f45922f30e32a4c8df64dc58d19d841ec9dcec72fc18f73c322",
+      "size": 19
+    },
+    "site/content/copy.ts": {
+      "type": "file",
+      "hash": "66a9d502268c75bb974c591126aac346eee3e4fb23f59cf0d9c12da2062f871a",
+      "size": 347
+    },
+    "site/content/cutover-control.tsx": {
+      "type": "file",
+      "hash": "9060186ad8be5afe545fc72f934e0c9f579799c278ba3044eeb4682f5956135c",
+      "size": 933
+    },
+    "site/content/cutover.ts": {
+      "type": "file",
+      "hash": "98cab0d277fc45892a89529c7a0ae72a424839beb39c02aff69319e3b625c329",
+      "size": 530
+    },
+    "site/content/experience.tsx": {
+      "type": "file",
+      "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+      "size": 260
+    },
+    "site/content/extras/career.tsx": {
+      "type": "file",
+      "hash": "1d4d61f6a7c5d419a2c8389a9fb2a202a13c0993c1c376dec065e8cb126685b5",
+      "size": 620
+    },
+    "site/content/extras/complete.tsx": {
+      "type": "file",
+      "hash": "35cac8b342da5f2ca116fe53080559322fa3bf1599e177cc54d064460788b15a",
+      "size": 226
+    },
+    "site/content/extras/database.tsx": {
+      "type": "file",
+      "hash": "64e8c504ab59165574b2727dab2f171837efee2f553f11d19cbeb304ee79067a",
+      "size": 3024
+    },
+    "site/content/extras/ferry.tsx": {
+      "type": "file",
+      "hash": "3569c27c4548ec832efa6fdb753ae890a5bea1240f69b299cdff48ec840897a3",
+      "size": 1128
+    },
+    "site/content/extras/geometry.tsx": {
+      "type": "file",
+      "hash": "db1657f55738717c6ccc413bfed08a60e55bc373a68a1a61fe65b6e1180f1533",
+      "size": 1122
+    },
+    "site/content/extras/library.tsx": {
+      "type": "file",
+      "hash": "c7bbd2f883c65432c4d950ab20bdc44b9258a364b714e585e39b2bdecd0f3da9",
+      "size": 1866
+    },
+    "site/content/extras/logger.tsx": {
+      "type": "file",
+      "hash": "f521478c4dd5021717071118e2e1e3e4accf3d969403853421b77da49c9fc3df",
+      "size": 1843
+    },
+    "site/content/extras/middle-line.tsx": {
+      "type": "file",
+      "hash": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+      "size": 994
+    },
+    "site/content/extras/oncall.tsx": {
+      "type": "file",
+      "hash": "b0cd3e460e75edb2e5c18d83f81f73597aef4b7a9630740f2f3bded6bcac459f",
+      "size": 1348
+    },
+    "site/content/extras/places.tsx": {
+      "type": "file",
+      "hash": "e42e2b99ea1db0a99f3effa6e02651b7351b42e0a0274dda699c1b70fed06d70",
+      "size": 2051
+    },
+    "site/content/extras/practice.tsx": {
+      "type": "file",
+      "hash": "45a7c7ca08c8c5e95aa60a3ef25d672688e46d5a923c00ae60764a2eb6956674",
+      "size": 1496
+    },
+    "site/content/extras/presence.tsx": {
+      "type": "file",
+      "hash": "2fa344e9e9f2fe5aaddef3211530f75f683b891c32912e32d8ae9f608fb299c8",
+      "size": 883
+    },
+    "site/content/extras/runbook.tsx": {
+      "type": "file",
+      "hash": "59587c02c652cd667b95d159efbfadc3b50d75c5816748316b063e63200d9ee9",
+      "size": 1472
+    },
+    "site/content/extras/selected-work.tsx": {
+      "type": "file",
+      "hash": "b7d947bfe692747c84e09c5b99ca0d8ff0fd831fac35650fd37b8be710d0f91e",
+      "size": 1569
+    },
+    "site/content/extras/waves.tsx": {
+      "type": "file",
+      "hash": "89b69a3f62af616ba6dc336dfa7d0d6e21ecc470e17b2ee1d4d80f5798a4a5c3",
+      "size": 2345
+    },
+    "site/content/extras.ts": {
+      "type": "file",
+      "hash": "706cf286becea2f967d6c9add1011e947a7ab98eb3f94f524faba498af4eeb44",
+      "size": 430
+    },
+    "site/content/faces.ts": {
+      "type": "file",
+      "hash": "d8819400ffe05be8e08986da0cc1efe2270a8588ccb32e3063743adb8a6c1dbd",
+      "size": 93
+    },
+    "site/content/fallback.tsx": {
+      "type": "file",
+      "hash": "7ed57544d93c336b148701b58d07e13d69f2d317028a0bd312f780b172fc3d13",
+      "size": 1657
+    },
+    "site/content/formations.ts": {
+      "type": "file",
+      "hash": "b04815cb8b12c203403aa71abe61f797e6bf3f177ea3d1c41d22786370917bf9",
+      "size": 1127
+    },
+    "site/content/index.ts": {
+      "type": "file",
+      "hash": "7413fa2f5effebbe6d606895d70890d9d1d5e0da832d95e84f1eeb108e00574c",
+      "size": 483
+    },
+    "site/content/links.ts": {
+      "type": "file",
+      "hash": "0eb5e739792f5ed48bea0c16211ad368a848b4de91393e8c60aee160256b57f6",
+      "size": 97
+    },
+    "site/content/looks.ts": {
+      "type": "file",
+      "hash": "8d774f549875c27c2e63a333a3ff69ebaacf16b8eb68e7ef3d57c747110c7e63",
+      "size": 337
+    },
+    "site/content/piece.tsx": {
+      "type": "file",
+      "hash": "6c08cca09ab55ac13248cfd3422fe02efaf1aa824fe55683f0858f4b994b975f",
+      "size": 953
+    },
+    "site/content/projects.ts": {
+      "type": "file",
+      "hash": "43cea1045bfd13b96ad70a5ffebe2787950d27b664d5c6c02d512fe20b31a19e",
+      "size": 5542
+    },
+    "site/content/sketches/concepts.css": {
+      "type": "file",
+      "hash": "cc8527b1c982fe6843bfa097ee5e6c9c03a21a9bce6829decc02b63b6808c665",
+      "size": 3171
+    },
+    "site/content/sketches/concepts.tsx": {
+      "type": "file",
+      "hash": "b43da8c23258ef6b1e08eab1f8693957031442ab718854968c7ebb484f4c9540",
+      "size": 11906
+    },
+    "site/content/sketches/index.ts": {
+      "type": "file",
+      "hash": "bd4410e74ed4635cbc93fe763f1ac785317de643421a7aefa94163ad77c70f11",
+      "size": 190
+    },
+    "site/content/story.ts": {
+      "type": "file",
+      "hash": "488528aa6f2f3e07a5e5dc357a4ebf09dba804dd74e4f7bee414dc63ca71ce60",
+      "size": 1121
+    },
+    "site/content/wording.ts": {
+      "type": "file",
+      "hash": "de92f457f6c736926840e4be07d4e05c08ae104db7680bf08cd595ecbf70d9e8",
+      "size": 1995
+    },
+    "site/docs/story/concepts.md": {
+      "type": "file",
+      "hash": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+      "size": 14226
+    },
+    "site/docs/story/decided-for-you.md": {
+      "type": "file",
+      "hash": "076d4b68384ff3fe66e5bbe8fe2adf78fed3b64f42acf792925946e4819a5d5c",
+      "size": 8777
+    },
+    "site/docs/story/facts.md": {
+      "type": "file",
+      "hash": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+      "size": 13128
+    },
+    "site/docs/story/handover.md": {
+      "type": "file",
+      "hash": "9326d575c197ffcdf102089a85fdf386fbc958e4a743d75e1426377871bda1af",
+      "size": 21302
+    },
+    "site/docs/story/look-alternatives.md": {
+      "type": "file",
+      "hash": "795d1ec0257cf00286e2a800f2249bfbc737d12a804ef9f51d9d44226d3791c2",
+      "size": 1004
+    },
+    "site/docs/story/storyboard.md": {
+      "type": "file",
+      "hash": "e8b00d3ae785c0b3253cc334bbadadb592a6fb9283f316b85371f494bf84d2e5",
+      "size": 23283
+    },
+    "site/docs/story/wording.md": {
+      "type": "file",
+      "hash": "a486ea816d5304363ba48a2ab9c5b54a4be376606b0035b024f6de7b42412529",
+      "size": 4130
+    },
+    "site/eslint.config.mjs": {
+      "type": "file",
+      "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+      "size": 309
+    },
+    "site/lib/story/camera.test.ts": {
+      "type": "file",
+      "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+      "size": 6594
+    },
+    "site/lib/story/camera.ts": {
+      "type": "file",
+      "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+      "size": 5201
+    },
+    "site/lib/story/controls.test.ts": {
+      "type": "file",
+      "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+      "size": 1608
+    },
+    "site/lib/story/controls.ts": {
+      "type": "file",
+      "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+      "size": 1054
+    },
+    "site/lib/story/formation.test.ts": {
+      "type": "file",
+      "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+      "size": 5294
+    },
+    "site/lib/story/formation.ts": {
+      "type": "file",
+      "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+      "size": 5414
+    },
+    "site/lib/story/layouts.test.ts": {
+      "type": "file",
+      "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+      "size": 2728
+    },
+    "site/lib/story/layouts.ts": {
+      "type": "file",
+      "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+      "size": 4733
+    },
+    "site/lib/story/looks.test.ts": {
+      "type": "file",
+      "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+      "size": 1238
+    },
+    "site/lib/story/looks.ts": {
+      "type": "file",
+      "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+      "size": 1262
+    },
+    "site/lib/story/overlay.test.ts": {
+      "type": "file",
+      "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+      "size": 1844
+    },
+    "site/lib/story/overlay.ts": {
+      "type": "file",
+      "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+      "size": 3252
+    },
+    "site/lib/story/quality.test.ts": {
+      "type": "file",
+      "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+      "size": 1838
+    },
+    "site/lib/story/quality.ts": {
+      "type": "file",
+      "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+      "size": 1762
+    },
+    "site/lib/story/rand.test.ts": {
+      "type": "file",
+      "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+      "size": 567
+    },
+    "site/lib/story/rand.ts": {
+      "type": "file",
+      "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+      "size": 384
+    },
+    "site/lib/story/story.test.ts": {
+      "type": "file",
+      "hash": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+      "size": 4640
+    },
+    "site/lib/story/story.ts": {
+      "type": "file",
+      "hash": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+      "size": 5441
+    },
+    "site/lib/story/timeline.test.ts": {
+      "type": "file",
+      "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+      "size": 7998
+    },
+    "site/lib/story/timeline.ts": {
+      "type": "file",
+      "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+      "size": 5697
+    },
+    "site/lib/story/typeset.test.ts": {
+      "type": "file",
+      "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+      "size": 4495
+    },
+    "site/lib/story/typeset.ts": {
+      "type": "file",
+      "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+      "size": 3329
+    },
+    "site/LICENSE": {
+      "type": "file",
+      "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+      "size": 1080
+    },
+    "site/LOCAL-PREVIEW.md": {
+      "type": "file",
+      "hash": "8353cc1ab6c15690d7108155f1b3dcdbec3be13f383fa8073e8041f39effa530",
+      "size": 3374
+    },
+    "site/next.config.ts": {
+      "type": "file",
+      "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+      "size": 94
+    },
+    "site/package-lock.json": {
+      "type": "file",
+      "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+      "size": 233717
+    },
+    "site/package.json": {
+      "type": "file",
+      "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+      "size": 1015
+    },
+    "site/postcss.config.mjs": {
+      "type": "file",
+      "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "size": 94
+    },
+    "site/public/dawit-bekele-cv.html": {
+      "type": "file",
+      "hash": "f7ceec5248182385662eeda2f588a215cb88d8a621c8085b80c7e97dbfd443a4",
+      "size": 4678
+    },
+    "site/public/diagrams/complete.svg": {
+      "type": "file",
+      "hash": "a296f9ebc1bb64722bd9c248837a3959353f2e7e6d5eb1e5f1596e262782e03f",
+      "size": 1611
+    },
+    "site/public/diagrams/database.svg": {
+      "type": "file",
+      "hash": "a296f9ebc1bb64722bd9c248837a3959353f2e7e6d5eb1e5f1596e262782e03f",
+      "size": 1611
+    },
+    "site/public/diagrams/ferry.svg": {
+      "type": "file",
+      "hash": "f5649c400f09e650abe854200d9e5b4e0137d640a5406e84efb6474de14b87b4",
+      "size": 1676
+    },
+    "site/public/diagrams/library.svg": {
+      "type": "file",
+      "hash": "f2a2ceb6e9d061b30be987ec59c6e9e37195cf2815d3341671eaf79c649b2579",
+      "size": 1934
+    },
+    "site/public/diagrams/logger.svg": {
+      "type": "file",
+      "hash": "0bf5511782c102e2c6cd11840e472a11b8e3c947c50857790da5fa10d69d19d8",
+      "size": 1348
+    },
+    "site/public/diagrams/oncall.svg": {
+      "type": "file",
+      "hash": "136d3389ba9bc87dd7e7e7fbc54b45beedd20a7333e4c35c5ba0d0b226c26d63",
+      "size": 2118
+    },
+    "site/public/diagrams/places.svg": {
+      "type": "file",
+      "hash": "30955c700b69e8435c82d9bfbd29b13755d9216f0bab19604b1393d910813293",
+      "size": 1295
+    },
+    "site/public/diagrams/practice.svg": {
+      "type": "file",
+      "hash": "fd3a2668dbf956421ca2985ba3d8908517b72a5886cbda4550b4faaf4f6da11e",
+      "size": 1342
+    },
+    "site/public/diagrams/replica.svg": {
+      "type": "file",
+      "hash": "82011e6d1463ba4b24aff516e9ddb6c4a1f031f0b9f34979b50d145e41f869bc",
+      "size": 1777
+    },
+    "site/public/diagrams/runbook.svg": {
+      "type": "file",
+      "hash": "d87be9b4cb74c7e6aa356a14d347a2657c26d3f4fb6b2809f59eccc5e9009603",
+      "size": 2028
+    },
+    "site/public/diagrams/talk.svg": {
+      "type": "file",
+      "hash": "adc46f1c27cec0ff41890174d27fda34919eae0b5580a0e313e79b8c17611614",
+      "size": 2384
+    },
+    "site/public/diagrams/waves.svg": {
+      "type": "file",
+      "hash": "86d4fd45eb5345abc0c490cb4572dac02b74a4f92e4540cb80a605da721ffd34",
+      "size": 2173
+    },
+    "site/public/icon.svg": {
+      "type": "file",
+      "hash": "2a328d29973e7de2513d930e91bb29d4403f496486d0d198029536f1decfde15",
+      "size": 330
+    },
+    "site/public/plain/face.svg": {
+      "type": "file",
+      "hash": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+      "size": 314
+    },
+    "site/public/share-preview.png": {
+      "type": "file",
+      "hash": "9297b31e0dc089819b9e840794d39b08018a215c869432dd417b779ac2ffda69",
+      "size": 34044
+    },
+    "site/README.md": {
+      "type": "file",
+      "hash": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+      "size": 7343
+    },
+    "site/scripts/check-chapters.mjs": {
+      "type": "file",
+      "hash": "4f9247ffff5dbcdf301bf13aaf89256835736a8a7f7b42436b258d21eb6c9b88",
+      "size": 4926
+    },
+    "site/scripts/check-concepts.mjs": {
+      "type": "file",
+      "hash": "68973af283ead050ff35245ba32ca9b126bb3141de2537a0c1fb419792e9dc97",
+      "size": 1734
+    },
+    "site/scripts/check-lib.mjs": {
+      "type": "file",
+      "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+      "size": 4516
+    },
+    "site/scripts/check-lib.test.mjs": {
+      "type": "file",
+      "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+      "size": 4110
+    },
+    "site/scripts/check-spine-details.mjs": {
+      "type": "file",
+      "hash": "15bd5910b1e528fdbd9ef35588bcce139447da026b41b196c2ab328fe1789344",
+      "size": 4437
+    },
+    "site/scripts/check.mjs": {
+      "type": "file",
+      "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+      "size": 6374
+    },
+    "site/scripts/generate-chapter-diagrams.py": {
+      "type": "file",
+      "hash": "6f7335e5844294bf7c51b54643277bb6dbfa9159436971e9b6fc11c562698e50",
+      "size": 4646
+    },
+    "site/scripts/generate-spine-assets.py": {
+      "type": "file",
+      "hash": "90044e039c4d7d592310e9efa4e5fe36e149fcdac70de2743390c10c61931d30",
+      "size": 3347
+    },
+    "site/scripts/shoot.mjs": {
+      "type": "file",
+      "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+      "size": 25709
+    },
+    "site/scripts/trace-shaders.mjs": {
+      "type": "file",
+      "hash": "112ba58336f5f63361d5893a292bd5d28a8288d7a8a9ca5e6f6d8022419756d2",
+      "size": 2267
+    },
+    "site/tsconfig.json": {
+      "type": "file",
+      "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+      "size": 706
+    }
+  },
+  "excluded": [
+    ".git",
+    "checks",
+    "site/.next",
+    "site/checks",
+    "site/next-env.d.ts",
+    "site/node_modules",
+    "site/tsconfig.tsbuildinfo"
+  ],
+  "unexpected": [
+    {
+      "path": ".aws",
+      "type": "directory"
+    },
+    {
+      "path": ".codex",
+      "type": "directory"
+    }
+  ],
+  "totalBytes": 1212106,
+  "changes": [
+    {
+      "path": "README.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "6a1f06bf37c81082386d5a0d2c1007484b39fcb45d44db2e4f552292f29234cb",
+        "size": 2434
+      }
+    },
+    {
+      "path": "docs/story/decided-for-you.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "6b07a6ac3002d0ebc1144fa262605d1cb652a62cb6e26b362759f4cf5250c3e6",
+        "size": 6264
+      },
+      "after": {
+        "type": "file",
+        "hash": "076d4b68384ff3fe66e5bbe8fe2adf78fed3b64f42acf792925946e4819a5d5c",
+        "size": 8777
+      }
+    },
+    {
+      "path": "docs/story/handover.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "92c9592bd143b5ae4d45e84b4602718b5cc98f6c114fba16a81235df29476909",
+        "size": 13086
+      },
+      "after": {
+        "type": "file",
+        "hash": "9326d575c197ffcdf102089a85fdf386fbc958e4a743d75e1426377871bda1af",
+        "size": 21302
+      }
+    },
+    {
+      "path": "docs/story/look-alternatives.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "795d1ec0257cf00286e2a800f2249bfbc737d12a804ef9f51d9d44226d3791c2",
+        "size": 1004
+      }
+    },
+    {
+      "path": "docs/story/storyboard.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "2d5d98607078eb8664818595c0cbaf1a7c2f9e6b67b620bd6bb4daa6fcc0d777",
+        "size": 22998
+      },
+      "after": {
+        "type": "file",
+        "hash": "e8b00d3ae785c0b3253cc334bbadadb592a6fb9283f316b85371f494bf84d2e5",
+        "size": 23283
+      }
+    },
+    {
+      "path": "docs/story/wording.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "a486ea816d5304363ba48a2ab9c5b54a4be376606b0035b024f6de7b42412529",
+        "size": 4130
+      }
+    },
+    {
+      "path": "site/LOCAL-PREVIEW.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "ca2bd4e8f5f8dd7d133c9a7b66502d053d919cc0c873a1d37e183c390263126f",
+        "size": 2651
+      },
+      "after": {
+        "type": "file",
+        "hash": "8353cc1ab6c15690d7108155f1b3dcdbec3be13f383fa8073e8041f39effa530",
+        "size": 3374
+      }
+    },
+    {
+      "path": "site/app/cv/page.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "3772206044f042a7f2c3899c3815f3b5e55df0eb24a8dc86eed402f84b825f51",
+        "size": 996
+      }
+    },
+    {
+      "path": "site/app/globals.css",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "dfc30fdb3d0f0130a9af23d6e3dd418e143a1393a40731d5740f4c5ebfb0963e",
+        "size": 7536
+      },
+      "after": {
+        "type": "file",
+        "hash": "6dadc3526cef53b6538eb25f9b20f1b39722251771f08513c6afe1486847811b",
+        "size": 11536
+      }
+    },
+    {
+      "path": "site/app/not-found.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "9c6049e3c6597218d78e68b5d1528b3bea35c6ba3681c8dbd223ef3d6328d43f",
+        "size": 485
+      },
+      "after": {
+        "type": "file",
+        "hash": "1d2c27e75104dbc314c972a89154736e8124cb7654bfa7ceb177ceec447b66d5",
+        "size": 481
+      }
+    },
+    {
+      "path": "site/app/page.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "a46e9a876f66354b8273355b1992ab2cde245cc898fa3640f1f41c042ae59ed1",
+        "size": 4201
+      },
+      "after": {
+        "type": "file",
+        "hash": "00cdbdd895b85e013014e831918a45c22ba4b51e3932df5d9fa349ef6866b086",
+        "size": 3100
+      }
+    },
+    {
+      "path": "site/app/wording/page.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "617ed71bf21a7a00b850685ef2a634ae62f2279c0f30b3a22f2e267298fe5e52",
+        "size": 1276
+      }
+    },
+    {
+      "path": "site/app/work/[slug]/page.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "b860235e145c84caace2cd186de22f58385df2bf0c2839ca8c8d7ac204e8d097",
+        "size": 1543
+      }
+    },
+    {
+      "path": "site/app/work/orders-database/page.tsx",
+      "change": "deleted",
+      "before": {
+        "type": "file",
+        "hash": "fb100ba5528d1b12689cf936108c3ebd00db557fc8ea2be78e2836d8281ec642",
+        "size": 1368
+      },
+      "after": null
+    },
+    {
+      "path": "site/components/story/chapter.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      "after": {
+        "type": "file",
+        "hash": "afc7ec2d168906c8cc3d7a8cd936611c7ea89f3f6ac6174bc25f58bd9c5f9174",
+        "size": 1496
+      }
+    },
+    {
+      "path": "site/components/story/rail.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      "after": {
+        "type": "file",
+        "hash": "2a4f7fb4a86cc1204943f4d7d72babe127411d4e5e9c32f4d8c65492f0544a9e",
+        "size": 497
+      }
+    },
+    {
+      "path": "site/components/story/story.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      "after": {
+        "type": "file",
+        "hash": "ceefe1ca4e37a8ea2c4fb4f79feb085824bc451c73c205dfa09ded5a80826987",
+        "size": 5750
+      }
+    },
+    {
+      "path": "site/content/beat-copy.ts",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "fd59e399edb71e9db109b661fd8af11a72089b2ee649ffacc67dbd23ba2e063e",
+        "size": 5948
+      }
+    },
+    {
+      "path": "site/content/bookends.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "8df2a486dc6eb00bf314b25dc08d9c4d02b205659b0112ecb8bd8a775eb3ee3f",
+        "size": 1364
+      }
+    },
+    {
+      "path": "site/content/checks.json",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+        "size": 3
+      },
+      "after": {
+        "type": "file",
+        "hash": "5747624ee0875f45922f30e32a4c8df64dc58d19d841ec9dcec72fc18f73c322",
+        "size": 19
+      }
+    },
+    {
+      "path": "site/content/extras.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "d199afa850f9a8f986cdab8e6756717ace90681a6109af87656bd193f741bca8",
+        "size": 207
+      },
+      "after": {
+        "type": "file",
+        "hash": "706cf286becea2f967d6c9add1011e947a7ab98eb3f94f524faba498af4eeb44",
+        "size": 430
+      }
+    },
+    {
+      "path": "site/content/extras/career.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "1d4d61f6a7c5d419a2c8389a9fb2a202a13c0993c1c376dec065e8cb126685b5",
+        "size": 620
+      }
+    },
+    {
+      "path": "site/content/extras/ferry.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "3569c27c4548ec832efa6fdb753ae890a5bea1240f69b299cdff48ec840897a3",
+        "size": 1128
+      }
+    },
+    {
+      "path": "site/content/extras/logger.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "f521478c4dd5021717071118e2e1e3e4accf3d969403853421b77da49c9fc3df",
+        "size": 1843
+      }
+    },
+    {
+      "path": "site/content/extras/oncall.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "b0cd3e460e75edb2e5c18d83f81f73597aef4b7a9630740f2f3bded6bcac459f",
+        "size": 1348
+      }
+    },
+    {
+      "path": "site/content/extras/places.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "e42e2b99ea1db0a99f3effa6e02651b7351b42e0a0274dda699c1b70fed06d70",
+        "size": 2051
+      }
+    },
+    {
+      "path": "site/content/extras/practice.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "45a7c7ca08c8c5e95aa60a3ef25d672688e46d5a923c00ae60764a2eb6956674",
+        "size": 1496
+      }
+    },
+    {
+      "path": "site/content/extras/presence.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "2fa344e9e9f2fe5aaddef3211530f75f683b891c32912e32d8ae9f608fb299c8",
+        "size": 883
+      }
+    },
+    {
+      "path": "site/content/extras/runbook.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "59587c02c652cd667b95d159efbfadc3b50d75c5816748316b063e63200d9ee9",
+        "size": 1472
+      }
+    },
+    {
+      "path": "site/content/extras/selected-work.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "b7d947bfe692747c84e09c5b99ca0d8ff0fd831fac35650fd37b8be710d0f91e",
+        "size": 1569
+      }
+    },
+    {
+      "path": "site/content/extras/waves.tsx",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "89b69a3f62af616ba6dc336dfa7d0d6e21ecc470e17b2ee1d4d80f5798a4a5c3",
+        "size": 2345
+      }
+    },
+    {
+      "path": "site/content/fallback.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "b2e040cb5d0eddc75358e8b3c7f4e6922a11f007a4bbdf53e7f7ac9964d25ba4",
+        "size": 792
+      },
+      "after": {
+        "type": "file",
+        "hash": "7ed57544d93c336b148701b58d07e13d69f2d317028a0bd312f780b172fc3d13",
+        "size": 1657
+      }
+    },
+    {
+      "path": "site/content/formations.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "4af751c16e056e2426f0519e0227ee29107b3598d621205ed31d3c67a63f64c0",
+        "size": 683
+      },
+      "after": {
+        "type": "file",
+        "hash": "b04815cb8b12c203403aa71abe61f797e6bf3f177ea3d1c41d22786370917bf9",
+        "size": 1127
+      }
+    },
+    {
+      "path": "site/content/looks.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "93735c7f2312df3369059fc61b77824f7af738477c13986f7590183b78a2e2fd",
+        "size": 783
+      },
+      "after": {
+        "type": "file",
+        "hash": "8d774f549875c27c2e63a333a3ff69ebaacf16b8eb68e7ef3d57c747110c7e63",
+        "size": 337
+      }
+    },
+    {
+      "path": "site/content/piece.tsx",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "e6da4c61f5ad4deac97dea6ac86c511e05881022cd21e8faff49072a239b8d3d",
+        "size": 652
+      },
+      "after": {
+        "type": "file",
+        "hash": "6c08cca09ab55ac13248cfd3422fe02efaf1aa824fe55683f0858f4b994b975f",
+        "size": 953
+      }
+    },
+    {
+      "path": "site/content/projects.ts",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "43cea1045bfd13b96ad70a5ffebe2787950d27b664d5c6c02d512fe20b31a19e",
+        "size": 5542
+      }
+    },
+    {
+      "path": "site/content/story.ts",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "faf8bcd924f5d8009a132d77a654136987bec750767ddc9bfd7ab114983223de",
+        "size": 685
+      },
+      "after": {
+        "type": "file",
+        "hash": "488528aa6f2f3e07a5e5dc357a4ebf09dba804dd74e4f7bee414dc63ca71ce60",
+        "size": 1121
+      }
+    },
+    {
+      "path": "site/content/wording.ts",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "de92f457f6c736926840e4be07d4e05c08ae104db7680bf08cd595ecbf70d9e8",
+        "size": 1995
+      }
+    },
+    {
+      "path": "site/docs/story/decided-for-you.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "6b07a6ac3002d0ebc1144fa262605d1cb652a62cb6e26b362759f4cf5250c3e6",
+        "size": 6264
+      },
+      "after": {
+        "type": "file",
+        "hash": "076d4b68384ff3fe66e5bbe8fe2adf78fed3b64f42acf792925946e4819a5d5c",
+        "size": 8777
+      }
+    },
+    {
+      "path": "site/docs/story/handover.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "92c9592bd143b5ae4d45e84b4602718b5cc98f6c114fba16a81235df29476909",
+        "size": 13086
+      },
+      "after": {
+        "type": "file",
+        "hash": "9326d575c197ffcdf102089a85fdf386fbc958e4a743d75e1426377871bda1af",
+        "size": 21302
+      }
+    },
+    {
+      "path": "site/docs/story/look-alternatives.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "795d1ec0257cf00286e2a800f2249bfbc737d12a804ef9f51d9d44226d3791c2",
+        "size": 1004
+      }
+    },
+    {
+      "path": "site/docs/story/storyboard.md",
+      "change": "modified",
+      "before": {
+        "type": "file",
+        "hash": "2d5d98607078eb8664818595c0cbaf1a7c2f9e6b67b620bd6bb4daa6fcc0d777",
+        "size": 22998
+      },
+      "after": {
+        "type": "file",
+        "hash": "e8b00d3ae785c0b3253cc334bbadadb592a6fb9283f316b85371f494bf84d2e5",
+        "size": 23283
+      }
+    },
+    {
+      "path": "site/docs/story/wording.md",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "a486ea816d5304363ba48a2ab9c5b54a4be376606b0035b024f6de7b42412529",
+        "size": 4130
+      }
+    },
+    {
+      "path": "site/public/diagrams/ferry.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "f5649c400f09e650abe854200d9e5b4e0137d640a5406e84efb6474de14b87b4",
+        "size": 1676
+      }
+    },
+    {
+      "path": "site/public/diagrams/logger.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "0bf5511782c102e2c6cd11840e472a11b8e3c947c50857790da5fa10d69d19d8",
+        "size": 1348
+      }
+    },
+    {
+      "path": "site/public/diagrams/oncall.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "136d3389ba9bc87dd7e7e7fbc54b45beedd20a7333e4c35c5ba0d0b226c26d63",
+        "size": 2118
+      }
+    },
+    {
+      "path": "site/public/diagrams/places.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "30955c700b69e8435c82d9bfbd29b13755d9216f0bab19604b1393d910813293",
+        "size": 1295
+      }
+    },
+    {
+      "path": "site/public/diagrams/practice.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "fd3a2668dbf956421ca2985ba3d8908517b72a5886cbda4550b4faaf4f6da11e",
+        "size": 1342
+      }
+    },
+    {
+      "path": "site/public/diagrams/replica.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "82011e6d1463ba4b24aff516e9ddb6c4a1f031f0b9f34979b50d145e41f869bc",
+        "size": 1777
+      }
+    },
+    {
+      "path": "site/public/diagrams/runbook.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "d87be9b4cb74c7e6aa356a14d347a2657c26d3f4fb6b2809f59eccc5e9009603",
+        "size": 2028
+      }
+    },
+    {
+      "path": "site/public/diagrams/talk.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "adc46f1c27cec0ff41890174d27fda34919eae0b5580a0e313e79b8c17611614",
+        "size": 2384
+      }
+    },
+    {
+      "path": "site/public/diagrams/waves.svg",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "86d4fd45eb5345abc0c490cb4572dac02b74a4f92e4540cb80a605da721ffd34",
+        "size": 2173
+      }
+    },
+    {
+      "path": "site/scripts/check-chapters.mjs",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "4f9247ffff5dbcdf301bf13aaf89256835736a8a7f7b42436b258d21eb6c9b88",
+        "size": 4926
+      }
+    },
+    {
+      "path": "site/scripts/generate-chapter-diagrams.py",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "6f7335e5844294bf7c51b54643277bb6dbfa9159436971e9b6fc11c562698e50",
+        "size": 4646
+      }
+    },
+    {
+      "path": "site/scripts/trace-shaders.mjs",
+      "change": "added",
+      "before": null,
+      "after": {
+        "type": "file",
+        "hash": "112ba58336f5f63361d5893a292bd5d28a8288d7a8a9ca5e6f6d8022419756d2",
+        "size": 2267
+      }
+    }
+  ]
+}
