@@ -56,3 +56,8 @@ to https://xitij27.github.io/storyfolio/ on a push to `main` that changes
 the library. Going live needs a push and Pages turned on (source: GitHub
 Actions) in the repository's settings. The repository rules ask for the
 author's word before a push, so root asked for it.
+
+Asked whether to push `main` and turn Pages on (the push also carrying
+the other session's unpushed `c298b336` and `e924ad1c`), the author
+answered, verbatim: "Push and turn on Pages (Recommended)". This is the
+author's word for that day's push under the repository rules.
