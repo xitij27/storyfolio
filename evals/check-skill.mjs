@@ -21,13 +21,13 @@ const problems = [];
 const words = (text) => text.split(/\s+/).filter(Boolean).length;
 
 // Check before walking: an accidental install must not traverse dependencies.
-for (const directory of ["node_modules", ".next", "checks"]) {
-  const target = join(SKILL_DIR, "engine", directory);
+for (const directory of ["engine/node_modules", "engine/.next", "engine/checks", "library/node_modules", "library/.next", "library/out"]) {
+  const target = join(SKILL_DIR, directory);
   if (await lstat(target).catch((error) => {
     if (error.code === "ENOENT") return null;
     throw error;
   })) {
-    console.error(`engine/${directory} exists: install and check in a scaffolded copy, never in the skill`);
+    console.error(`${directory} exists: install and check in a copy, never in the skill`);
     process.exit(1);
   }
 }

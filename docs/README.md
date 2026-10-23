@@ -248,6 +248,7 @@ For a new session, read:
 | README concept illustration and publication-status update | [Illustration](assets/storyfolio-overview.png), [SVG source](assets/storyfolio-overview.svg) and [publication and README record](history/2026-10-11-readme-and-publication.md) |
 | Repository-wide working rules | [AGENTS.md](../AGENTS.md) |
 | Current instructions followed by the test agent | [Skill and references](../skills/storyfolio/SKILL.md) |
+| Component library, its gallery on GitHub Pages and why it is built as it is | [Library README](../skills/storyfolio/library/README.md) and [spec](superpowers/specs/2026-10-23-component-library.md) |
 | Design rationale and intended scope | [Original approved design](superpowers/specs/2026-10-10-portfolio-skill-design.md) and [existing-portfolio review design](superpowers/specs/2026-10-10-existing-portfolio-review.md) |
 | Stage coherence corrections and engine proof | [Stage review](superpowers/plans/2026-10-11-stage-review.md), its [machine-check and optional-skill protocol](superpowers/plans/2026-10-11-stage-review.md#machine-check-and-recommendations-for-other-skills), and [engine evidence](../evals/engine/plain-story-1/findings.md) |
 | Rejected demo, original-site comparison and visual recovery | [Author's rejection](history/2026-10-11-visual-quality-rejection.md), [review findings](../evals/runs/codex-visual-quality-review-1/findings.md) and [recovery plan](superpowers/plans/2026-10-11-visual-quality-recovery.md) |

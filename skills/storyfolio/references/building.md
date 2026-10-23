@@ -7,6 +7,8 @@ Let the person scroll those looks, ask which they choose, and stop for their
 answer before building the remaining chapters. An unanswered question in
 this turn is not a refusal to choose or permission to choose for them.
 
+When you show the looks, also offer the component library, so the person can see pieces running and say which they want: https://xitij27.github.io/storyfolio/, or this skill's `library/` folder run as `library/README.md` says. Each piece names the chapter it serves and the files to copy. Copied pieces carry a made-up person; replace all of it with confirmed facts.
+
 ## The chapters and their words
 
 After the look choice, build the remaining chapters. For the opening and
