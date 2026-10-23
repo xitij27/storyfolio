@@ -159,6 +159,12 @@ docs/story/
 These files give the next session a place to pick up the work. You leave with
 an approved direction and storyboard to guide a later implementation.
 
+## Component library
+
+[Browse the library](https://xitij27.github.io/storyfolio/): portfolio pieces
+running, listed by the chapter of a site they serve, each with the files to
+copy. Its source is [`skills/storyfolio/library/`](skills/storyfolio/library/README.md).
+
 ## Where it came from
 
 Storyfolio grew out of [Kshitij's research-paper portfolio](https://xitij27.vercel.app),
