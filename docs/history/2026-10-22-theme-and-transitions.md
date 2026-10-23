@@ -26,3 +26,10 @@ note, cycling along canals, the port seen from an office window. On 23
 October the author replied, verbatim:
 
 > no these descriptions dont sound professional
+
+Root rewrote the picture question in working terms (`0e8f362`) and offered
+professional answers for the fixture (two traffic graphs crossing at a
+cutover, the catalogue servers, the runbook's six stages, one command
+switching traffic). The author replied, verbatim:
+
+> No make it more technical and professional. This is not enough information to make a meaningful portfolio website
