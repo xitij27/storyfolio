@@ -1,0 +1,1484 @@
+{
+  "turn": 3,
+  "taskKind": "full-journey",
+  "requestedStop": 3,
+  "complete": true,
+  "durationMs": 164452,
+  "sessionId": "01a16637-67b4-79e3-a2b4-e153e9e65b84",
+  "usage": {
+    "input_tokens": 2576323,
+    "cached_input_tokens": 2507520,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 29519,
+    "reasoning_output_tokens": 2375
+  },
+  "artifacts": {
+    "before/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "before/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "before/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "before/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "before/files/.agents/skills/storyfolio/engine/app/page.tsx": "7c8f8ff73878b47438b5c643683fce943ba26529c64795bb45ac4b2fa3ba5295",
+    "before/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "before/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "before/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "before/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "before/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "before/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "before/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "before/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+    "before/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.css": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "before/files/.agents/skills/storyfolio/engine/content/checks.json": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+    "before/files/.agents/skills/storyfolio/engine/content/copy.ts": "924c0b852bb05782fdac0493f272f59364cd1e900e17f75a007bf33a89cc6cc5",
+    "before/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "before/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+    "before/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "before/files/.agents/skills/storyfolio/engine/content/faces.ts": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+    "before/files/.agents/skills/storyfolio/engine/content/formations.ts": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+    "before/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "before/files/.agents/skills/storyfolio/engine/content/links.ts": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+    "before/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "before/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "before/files/.agents/skills/storyfolio/engine/content/story.ts": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+    "before/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "before/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "before/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "before/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "before/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "before/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "before/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+    "before/files/.agents/skills/storyfolio/engine/README.md": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "before/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "before/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "before/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "before/files/.agents/skills/storyfolio/references/building.md": "95276bacbc429072f7fe634fde5c68e22ead374091bcaa7d222394ce136281e8",
+    "before/files/.agents/skills/storyfolio/references/concept.md": "80ca1202899d482607d3ea8565c11aaa8e08d3f4411b37ea6b92d5d82f6529d9",
+    "before/files/.agents/skills/storyfolio/references/reading-a-profile.md": "69116e0a96f74a34a992d2faf28f0a5b451f677321a82a858e839181b9435e24",
+    "before/files/.agents/skills/storyfolio/references/storyboard.md": "186ff810fc38c881c4960301d607ff3fc8ccfccf62cbcefdb8f7f31d8d9bf3db",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "before/files/.agents/skills/storyfolio/SKILL.md": "8d68afb524f432be448919cb8df3bfaf5ccaacff861a4fc34032cc73cbfa7af9",
+    "before/files/docs/story/concepts.md": "32a0f3ec78ff0298dd414dab26cc4a18e54d8635cedfdd3f0f879ac8adac3825",
+    "before/files/docs/story/decided-for-you.md": "40afef222b74e118ff5b9eae161e1d241c2c5575f29e199b14903863efbb2659",
+    "before/files/docs/story/facts.md": "29f5d4ba674160bb20b93c73d15780d59aefdb2510733b3ed32815ee3c0de2b8",
+    "before/files/docs/story/handover.md": "89279669fc0a88f9906eda89bac362139946a6f9cdbd6f14ef654f1395b41f67",
+    "before/files/material/linkedin.md": "95d70f38ebc320cecf58e3530cb191eee4017e06fc1cfb56af43835db211d4d5",
+    "before/files/material/old-site.md": "d2897369b440f33c9bb02ea22c1a8647072bbd7a71cab3662677f58e46b92466",
+    "before/files/material/project-notes.md": "70e4466c4d09e90e1b553f1cec710e26383f31aff4c829f018e8a6698e400478",
+    "before/files/material/resume.md": "72e96cce2a83a4425f1eee48d42a0b385956a9d962963b22c868a233a35a3c59",
+    "before/files/site/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "before/files/site/AGENTS.md": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+    "before/files/site/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "before/files/site/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "before/files/site/app/page.tsx": "1fb4f19d99539ae22769db54227099793b8281f22df5930eabc0369d61fb37fa",
+    "before/files/site/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "before/files/site/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "before/files/site/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "before/files/site/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "before/files/site/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "before/files/site/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "before/files/site/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "before/files/site/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "before/files/site/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "before/files/site/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "before/files/site/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "before/files/site/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "before/files/site/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "before/files/site/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "before/files/site/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "before/files/site/components/story/scene.tsx": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+    "before/files/site/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "before/files/site/components/story/story.css": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+    "before/files/site/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "before/files/site/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "before/files/site/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "before/files/site/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "before/files/site/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "before/files/site/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "before/files/site/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "before/files/site/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "before/files/site/content/checks.json": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+    "before/files/site/content/copy.ts": "8487a199ba4c6d805886df91cab92017f82aeeadf3d527fd2897125e67c4cb1b",
+    "before/files/site/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "before/files/site/content/extras/middle-line.tsx": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+    "before/files/site/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "before/files/site/content/faces.ts": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+    "before/files/site/content/formations.ts": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+    "before/files/site/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "before/files/site/content/links.ts": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+    "before/files/site/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "before/files/site/content/sketches/concepts.css": "cc8527b1c982fe6843bfa097ee5e6c9c03a21a9bce6829decc02b63b6808c665",
+    "before/files/site/content/sketches/concepts.tsx": "b43da8c23258ef6b1e08eab1f8693957031442ab718854968c7ebb484f4c9540",
+    "before/files/site/content/sketches/index.ts": "bd4410e74ed4635cbc93fe763f1ac785317de643421a7aefa94163ad77c70f11",
+    "before/files/site/content/story.ts": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+    "before/files/site/docs/story/concepts.md": "32a0f3ec78ff0298dd414dab26cc4a18e54d8635cedfdd3f0f879ac8adac3825",
+    "before/files/site/docs/story/decided-for-you.md": "40afef222b74e118ff5b9eae161e1d241c2c5575f29e199b14903863efbb2659",
+    "before/files/site/docs/story/facts.md": "29f5d4ba674160bb20b93c73d15780d59aefdb2510733b3ed32815ee3c0de2b8",
+    "before/files/site/docs/story/handover.md": "89279669fc0a88f9906eda89bac362139946a6f9cdbd6f14ef654f1395b41f67",
+    "before/files/site/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "before/files/site/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "before/files/site/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "before/files/site/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "before/files/site/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "before/files/site/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "before/files/site/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "before/files/site/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "before/files/site/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "before/files/site/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "before/files/site/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "before/files/site/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "before/files/site/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "before/files/site/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "before/files/site/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "before/files/site/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "before/files/site/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "before/files/site/lib/story/story.test.ts": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+    "before/files/site/lib/story/story.ts": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+    "before/files/site/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "before/files/site/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "before/files/site/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "before/files/site/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "before/files/site/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "before/files/site/LOCAL-PREVIEW.md": "5e3980384ddddff9dc337c2c2af4659cedcfe0b342d8f86753c4443bfd7823d5",
+    "before/files/site/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "before/files/site/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "before/files/site/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "before/files/site/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "before/files/site/public/plain/face.svg": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+    "before/files/site/README.md": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+    "before/files/site/scripts/check-concepts.mjs": "68973af283ead050ff35245ba32ca9b126bb3141de2537a0c1fb419792e9dc97",
+    "before/files/site/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "before/files/site/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "before/files/site/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "before/files/site/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "before/files/site/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "before/manifest.json": "6e8f05a18510cfb1dadd3f47451006eefbda417474a48cf7a4f32abbf4d38965",
+    "gate.json": "5f51ede4d2dcf2a80b4727fb82cae9e7bfd44c9057d4f418eee29d8b6cd93c07",
+    "process.json": "03bd0b0b08c0f5511bb1b3466d3b5cca2586166608c591a28ab2f8991e64cd74",
+    "prompt.md": "919005327255a873af0f7f26c4693ca700769980dacee55d64a7e3b5a89e3a38",
+    "reply.md": "55ef985d385e62fad437a825f3d63149d90b5c977273a08ae147bee4bf879a1d",
+    "snapshot/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "snapshot/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/page.tsx": "7c8f8ff73878b47438b5c643683fce943ba26529c64795bb45ac4b2fa3ba5295",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "snapshot/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.css": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/checks.json": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/copy.ts": "924c0b852bb05782fdac0493f272f59364cd1e900e17f75a007bf33a89cc6cc5",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/faces.ts": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/formations.ts": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/links.ts": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/story.ts": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+    "snapshot/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "snapshot/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "snapshot/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "snapshot/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "snapshot/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "snapshot/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+    "snapshot/files/.agents/skills/storyfolio/engine/README.md": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "snapshot/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "snapshot/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "snapshot/files/.agents/skills/storyfolio/references/building.md": "95276bacbc429072f7fe634fde5c68e22ead374091bcaa7d222394ce136281e8",
+    "snapshot/files/.agents/skills/storyfolio/references/concept.md": "80ca1202899d482607d3ea8565c11aaa8e08d3f4411b37ea6b92d5d82f6529d9",
+    "snapshot/files/.agents/skills/storyfolio/references/reading-a-profile.md": "69116e0a96f74a34a992d2faf28f0a5b451f677321a82a858e839181b9435e24",
+    "snapshot/files/.agents/skills/storyfolio/references/storyboard.md": "186ff810fc38c881c4960301d607ff3fc8ccfccf62cbcefdb8f7f31d8d9bf3db",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "snapshot/files/.agents/skills/storyfolio/SKILL.md": "8d68afb524f432be448919cb8df3bfaf5ccaacff861a4fc34032cc73cbfa7af9",
+    "snapshot/files/docs/story/concepts.md": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+    "snapshot/files/docs/story/decided-for-you.md": "2320bb3edddbabc7361ebea1c30f67d38aa3e52736f5d48728574742d6fd30ed",
+    "snapshot/files/docs/story/facts.md": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+    "snapshot/files/docs/story/handover.md": "7ef17967ed6f2d6bff315c1a29b84fe34ea802ca20ea78db86c55a752714a546",
+    "snapshot/files/docs/story/storyboard.md": "a628f81221d45cde946cd4acbb60be9aeee37068e8d6a42fc3dfa8492bccb5f3",
+    "snapshot/files/material/linkedin.md": "95d70f38ebc320cecf58e3530cb191eee4017e06fc1cfb56af43835db211d4d5",
+    "snapshot/files/material/old-site.md": "d2897369b440f33c9bb02ea22c1a8647072bbd7a71cab3662677f58e46b92466",
+    "snapshot/files/material/project-notes.md": "70e4466c4d09e90e1b553f1cec710e26383f31aff4c829f018e8a6698e400478",
+    "snapshot/files/material/resume.md": "72e96cce2a83a4425f1eee48d42a0b385956a9d962963b22c868a233a35a3c59",
+    "snapshot/files/site/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "snapshot/files/site/AGENTS.md": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+    "snapshot/files/site/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "snapshot/files/site/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "snapshot/files/site/app/page.tsx": "1fb4f19d99539ae22769db54227099793b8281f22df5930eabc0369d61fb37fa",
+    "snapshot/files/site/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "snapshot/files/site/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "snapshot/files/site/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "snapshot/files/site/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "snapshot/files/site/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "snapshot/files/site/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "snapshot/files/site/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "snapshot/files/site/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "snapshot/files/site/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "snapshot/files/site/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "snapshot/files/site/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "snapshot/files/site/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "snapshot/files/site/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "snapshot/files/site/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "snapshot/files/site/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "snapshot/files/site/components/story/scene.tsx": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+    "snapshot/files/site/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "snapshot/files/site/components/story/story.css": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+    "snapshot/files/site/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "snapshot/files/site/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "snapshot/files/site/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "snapshot/files/site/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "snapshot/files/site/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "snapshot/files/site/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "snapshot/files/site/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "snapshot/files/site/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "snapshot/files/site/content/checks.json": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+    "snapshot/files/site/content/copy.ts": "8487a199ba4c6d805886df91cab92017f82aeeadf3d527fd2897125e67c4cb1b",
+    "snapshot/files/site/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "snapshot/files/site/content/extras/middle-line.tsx": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+    "snapshot/files/site/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "snapshot/files/site/content/faces.ts": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+    "snapshot/files/site/content/formations.ts": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+    "snapshot/files/site/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "snapshot/files/site/content/links.ts": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+    "snapshot/files/site/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "snapshot/files/site/content/sketches/concepts.css": "cc8527b1c982fe6843bfa097ee5e6c9c03a21a9bce6829decc02b63b6808c665",
+    "snapshot/files/site/content/sketches/concepts.tsx": "b43da8c23258ef6b1e08eab1f8693957031442ab718854968c7ebb484f4c9540",
+    "snapshot/files/site/content/sketches/index.ts": "bd4410e74ed4635cbc93fe763f1ac785317de643421a7aefa94163ad77c70f11",
+    "snapshot/files/site/content/story.ts": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+    "snapshot/files/site/docs/story/concepts.md": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+    "snapshot/files/site/docs/story/decided-for-you.md": "2320bb3edddbabc7361ebea1c30f67d38aa3e52736f5d48728574742d6fd30ed",
+    "snapshot/files/site/docs/story/facts.md": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+    "snapshot/files/site/docs/story/handover.md": "7ef17967ed6f2d6bff315c1a29b84fe34ea802ca20ea78db86c55a752714a546",
+    "snapshot/files/site/docs/story/storyboard.md": "a628f81221d45cde946cd4acbb60be9aeee37068e8d6a42fc3dfa8492bccb5f3",
+    "snapshot/files/site/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "snapshot/files/site/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "snapshot/files/site/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "snapshot/files/site/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "snapshot/files/site/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "snapshot/files/site/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "snapshot/files/site/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "snapshot/files/site/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "snapshot/files/site/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "snapshot/files/site/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "snapshot/files/site/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "snapshot/files/site/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "snapshot/files/site/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "snapshot/files/site/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "snapshot/files/site/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "snapshot/files/site/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "snapshot/files/site/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "snapshot/files/site/lib/story/story.test.ts": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+    "snapshot/files/site/lib/story/story.ts": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+    "snapshot/files/site/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "snapshot/files/site/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "snapshot/files/site/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "snapshot/files/site/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "snapshot/files/site/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "snapshot/files/site/LOCAL-PREVIEW.md": "5e3980384ddddff9dc337c2c2af4659cedcfe0b342d8f86753c4443bfd7823d5",
+    "snapshot/files/site/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "snapshot/files/site/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "snapshot/files/site/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "snapshot/files/site/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "snapshot/files/site/public/plain/face.svg": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+    "snapshot/files/site/README.md": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+    "snapshot/files/site/scripts/check-concepts.mjs": "68973af283ead050ff35245ba32ca9b126bb3141de2537a0c1fb419792e9dc97",
+    "snapshot/files/site/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "snapshot/files/site/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "snapshot/files/site/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "snapshot/files/site/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "snapshot/files/site/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "snapshot/manifest.json": "127e5c6be1a9c1a433b15da623519f7d1edb8dab25233cea4309b5eb1217eb3a",
+    "started.json": "ae3542e39f4dc2d4a6d2930c961ff8f972b7b139497836c81c7aa2032139f5b9",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stream.jsonl": "9fddcc1cc05191583c75503fbfce736d02b08f799e21680e08e7c2cc6d2915dc"
+  },
+  "completionMeaning": "The actor turn completed. This is not a passed build, reached stop or author approval.",
+  "usageAggregation": "Raw turn.completed usage is preserved. Between turns, reported input_tokens plus output_tokens are summed across actor turns. If configured, maxUncachedTokens separately bounds input_tokens minus cached_input_tokens plus output_tokens; cached input must be a nonnegative safe integer no greater than input. Resumed counters may overlap. No dollar estimate or hard in-flight token cap is inferred.",
+  "commands": [
+    {
+      "command": "/bin/bash -lc 'cat docs/story/handover.md .agents/skills/storyfolio/references/storyboard.md .agents/skills/storyfolio/references/asking.md'",
+      "output": "# Handover\n\n## State\n\nStop 1: read. Awaiting factual answers; no design, concept, storyboard or portfolio build yet. User requests planning and a working local scroll-driven 3D story, with decisions guided. User explicitly reserves publishing.\n\nRead all four material files after listing names. No private correspondence or participant files appeared in that list. Facts, ambiguities and missing context recorded in facts.md. First questions will be numbered in the conversation. Record answers beside relevant facts before moving to stop 2; unanswered items remain unresolved.\n\n## Setup verified 2026-10-23\n\n- Node v22.22.1 satisfies engine requirement >=22.18. Actually imported engine/lib/story/rand.ts using native Node TypeScript; import passed. Node printed module-type warning, no import failure.\n- Git 2.53.0 available.\n- Enabled session skill catalog lists storyfolio only. Local .agents metadata contains its references, scaffold and engine; no extra enabled skill was inferred from other folders. No additional skill recommendation needed at this stage.\n- No browser connector advertised in available tools. Inspected available cached Chromium executables directly.\n- Full Chromium failed to create default profile, then failed crashpad initialization with explicit profile. Headless shell succeeded with explicit local profile and LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu.\n- Executable: /tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell. Flags --no-sandbox --disable-gpu --user-data-dir=<workspace>/checks/setup/shell-profile --screenshot=<workspace>/checks/setup/neutral.png --dump-dom file://<workspace>/checks/setup/neutral.html.\n- Opened neutral local HTML in browser, verified DOM output, captured screenshot and actually inspected it with view_image: heading and paragraph readable with no overlap. Browser emitted DBus/udev/network-monitor warnings but exited 0. This establishes basic local browser capability, not WebGL or performance acceptance.\n- No dependencies installed or site scaffolded. Build phase must follow applicable engine AGENTS.md when copying engine.\n\n## Next\n\nGet first factual answers, record them, read references/concept.md, then prepare three runnable concepts. Follow the remaining skill stops; do not infer approval from silence. Keep everything local.\n\n## Stop 2 update\n\nFirst answers were received and recorded in facts.md before concept work. User confirms P, permits original labelled illustrations and forbids any internal diagrams, downloaded images/slides, testimonials, additional skills or publication. Audience: migration engineering leaders and conference organisers. Requested six brief work accounts opening more on click, downloadable printable HTML CV, normal navigation, English, icon, share preview, useful 404; no blog/chat/forms/translation. Contact is intentional example email, link only. Old site can go. Unconfirmed facts must be omitted.\n\nThree concepts are documented in concepts.md, with chapter candidates, rejected alternatives, transitions, working projects, source basis and tests. No concept has been picked. Recommendation: The live path for visible dual writes/checksum links/rollback loop. Concept choice pending; next read storyboard reference and write full script only after recording choice.\n\n### Local implementation\n\n- site/ contains independent scaffold and npm-ci installed dependencies. Read site/AGENTS.md (including Next's generated additions) for further work.\n- Read installed Next 16 page documentation before editing routes. Three routes use the existing async sketch registry: /sketch/paths, /sketch/bench, /sketch/logs. / compares them.\n- Each is an actual 3D Canvas with scroll-driven original geometry, HTML opening/middle/ending, email and expandable approach. Desktop and phone layouts differ. Original library restore and logger opening geometry grows into the project model; ending retains the whole system. All geometry labelled illustration.\n- These are concept samples, not a completed portfolio. Remaining chapters, all six work accounts, CV, icon, share image and custom 404 follow storyboard approval.\n- Production build, TypeScript, lint passed. 130 unit tests passed. Browser script scripts/check-concepts.mjs checks three routes at 1440×960 and 390×844, captures opening/middle/ending, tests details opening, overflow, canvas and page errors. Six initial cases passed; screenshots under site/checks/concepts. Final screenshots are regenerated after opening/marker refinements.\n- Next dev automatic version fetch was blocked by sandbox registry policy. Use production mode for review: `cd site`, `NEXT_TELEMETRY_DISABLED=1 npm run build`, `NEXT_TELEMETRY_DISABLED=1 npm run start -- --hostname 127.0.0.1`. Open http://127.0.0.1:3000. Server process started inside a tool sandbox is not guaranteed to be reachable/persist in another invocation; user can start it locally with these commands. Never claim an inaccessible preview is permanently running.\n- Git executable exists but provided .git is a nonfunctional stub (“not a git repository”). No commit made; do not initialize over supplied metadata merely to force a commit.\n\n### Final concept verification\n\nFinal production build passed after origin-geometry and runbook-marker refinement. All six browser cases passed again: canvas present, approach opens, no horizontal overflow, no page errors. Captured 18 screenshots (opening/middle/ending × three concepts × desktop/phone). Actually opened and inspected all 18 through three labelled contact sheets, plus full-size path phone middle and all three desktop middles. No text/geometry overlap seen; phone scene remains below copy. Phone absolute-page-end capture naturally has contact heading above viewport; Contact anchor reaches the full contact beat. No phone performance claim from headless software rendering.\n\nComparison sheets: site/checks/concepts/paths-review.jpg, bench-review.jpg, logs-review.jpg. Production build/typecheck, lint and 130 unit tests passed. No full final-site acceptance or completion claimed. Next decision: Dawit chooses paths, bench or logs (or authorizes selection); then record it before storyboard work.\n# The storyboard\n\nThe third stop: the script of the whole page, which the person says yes to. Write it to `docs/story/storyboard.md`.\n\nA plan covers what its asker thought to ask for. Most people ask for the idea and for what moves. Nobody asks what the site does on a phone, or without the 3D, or what a shared link shows, and a script that leaves those out is half a script. So this one has a place for each, and an empty place shows.\n\n## The chapters\n\nA row to a chapter:\n\n| Chapter | Its name | What it holds, from the concept's list | What it tells, in a few words | What its scene pictures | How it grows out of the last | What you can touch |\n|---|---|---|---|---|---|---|\n\n## The beats\n\nUnder each chapter, a row to a beat. A beat is one settled state of the scene and one block of text.\n\nA full story normally has twelve to twenty-two meaningful beats. Add up their screen heights, state the total, and trim repetition. Do not pad or invent facts to reach the range. If the confirmed material calls for a shorter story, propose that exception explicitly for the person's approval.\n\n| Beat | Screens | What the scene shows | The pictures and words in it | What its caption stands on |\n|---|---|---|---|---|\n\n- **Screens:** how much scroll the beat takes. One, or more where the scroll works something.\n- **What the scene shows:** what a visitor would name with the caption hidden: the person, a piece of their work, the place or the things of their field. \"The pieces move\", \"a gap opens\" or \"one lights up\" is not an answer. Say also what of the last scene turns into this one as the reader scrolls.\n- **The pictures and words in it:** the person's own pictures, each named, and any illustration of the kind of thing they work with, labelled as one. Words in the scene are readable at the size shown, or left to the caption. A category name, such as Method or Results, shows nothing.\n\nEvery project is listed in brief on the scroll, and each opens its detail on a click: a window or its own page.\n- **What its caption stands on:** a working title of a few words, and the lines of the fact sheet the caption will be written from. Not the caption.\n\n**Write no captions yet.** The words are written at a later stop, where the person chooses them. A sentence written now, to make the script read well, is where a detail gets in that nobody told you: a hall that was \"standing empty\", a wheel that is \"true again\". So a beat names its facts and stops there. Where a beat wants something the fact sheet does not hold, such as what the work taught them or what was wrong before they came, put the question in its place.\n\nIf the site poses a question, state in planning notes what answers it at the close and which facts support that answer. Its final wording still waits, but its meaning must be decided. A contact link, a job goal or a promise to write an answer later does not supply that meaning.\n\n## Someone with thirty seconds\n\nSay how a visitor who does not scroll gets the name, what the person does, one proof of it, and how to reach them. The first screen carries the first three. A rail jumps to any chapter, and one link skips to the close.\n\nSpecify what the opening tells someone outside the field about the person's work, in ordinary words supported by the fact sheet. Explain any unfamiliar title or technical term there. This meaning is part of the plan even while the final captions wait.\n\n## Without the scene\n\nSay what a visitor gets in each case. The text is ordinary HTML over the scene, so all of it is there in every row. Say what stands in for the scenes.\n\n| Where | What the visitor gets |\n|---|---|\n| On a phone | |\n| With reduced motion | |\n| With no WebGL | |\n| With no JavaScript | |\n\n## The look and the type\n\nBoth come from the world's materials: plates are ceramic on linen, a status page is dark glass, a paper is white with dark ink. Name two or three looks, each as its ground, its ink, one accent, and its surfaces. The person picks by scrolling, once it is built.\n\nTwo typefaces: one for the text, and one for what is printed in the scenes, which belongs to the object.\n\n## Everything else the site needs\n\nMark every row build, later or never, and say who decided.\n\n| | Build, later or never | Who decided |\n|---|---|---|\n| The way round the page | | |\n| A page for each project | | |\n| Every project listed | | |\n| How to reach them, and a CV | | |\n| What others say | | |\n| Languages | | |\n| What a shared link shows, and the site's icon | | |\n| The page for an address that is not there | | |\n| A blog | | |\n| A chat | | |\n| A legal notice, where their country asks for one | | |\n\n## What you ask for\n\nA yes to the script, or what to change. Give the list of what you decided for them with it.\n# Asking\n\n## Facts\n\nAt the first stop your questions go in one message, numbered. `reading-a-profile.md` says what they are.\n\n## A choice\n\nWhere you offer a choice, the concept above all, give the ones you would not choose as fully as the one you would. Then say which you would choose, and why.\n\nIf the person tells you to choose, choose. Write what you chose, and what you chose it over, into `docs/story/decided-for-you.md`.\n\n## If the person will not answer\n\nSome people will not answer your questions, or will say: decide everything. Then:\n\n- **What is a matter of taste, you decide:** the concept, the look, the order. Say which you chose and what you chose it over.\n- **A fact, you do not decide.** What you could not confirm stays off the page. A figure whose meaning you do not know, a project you cannot say ever ran, a paper you cannot say they wrote, a title you cannot say is theirs: leave it out, or carry it in the script marked \"to confirm\", and stand nothing on it. Build the concept on the facts that needed no confirming. The person's own resume is no exception: if you asked whether a project ever ran and they did not say, \"real-time system\" is still not confirmed, and it is not printed.\n- **Say what is waiting on them,** as a numbered list at the top of what you hand over.\n\nA wrong guess about someone's taste costs them an afternoon. A wrong claim about their work is read by the people they most want to convince, and it is their name on the site, not yours.\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat docs/story/facts.md; cat docs/story/decided-for-you.md'",
+      "output": "# Facts and open questions\n\nStatus: first answers received. User confirms all project-notes.md as accurate and permits description and original labelled illustrations. The confirmation section below overrides earlier source ambiguities. No concept selected.\n\n## Sources\n\n- R: material/resume.md\n- L: material/linkedin.md (saved October 2026)\n- O: material/old-site.md (2019 site text)\n- P: material/project-notes.md (own notes, October 2026)\n\nOnly these four profile files were supplied and read. No photographs, screens, recommendations or private records were found in the material listing.\n\n## Identity and career\n\n| Fact from material | Source | Qualification / unresolved question |\n| --- | --- | --- |\n| Dawit Bekele; Staff Platform Engineer; Rotterdam; dawit@example.com | R, L | Confirm current formal title and usable contact; example-domain address may be a placeholder. |\n| Describes work as migrations, databases, reliability; leads migrations and on-call | R; L says migrations, reliability, on-call | Daily activities at Kestrel have detailed support in P. |\n| Kestrel Freight, Rotterdam, Aug 2020–present; platform team of six | R, L | Confirm current role; distinguish six-person platform team from nine-person on-call rota. |\n| Wrote and sequenced data-centre exit plan; grouped services by dependency; 14 waves, 310 services, two sites, 26 months, Aug 2020–Oct 2022; about 60 engineers | P; R, L support scale | Programme result belongs to wider team; confirm attribution and permission to name employer and scale. |\n| Leases ending late 2022; order intake and shipment tracking support round-the-clock truck dispatch | P | Employer story permission unresolved. |\n| Preflight dependency mapping and rehearsed rollback; mirrored reads; stateful dual writes; weighted routing at 1/10/50/100%; SLO checks; two-week soak | P | Describe as method, not a measured performance trace. Permission unresolved. |\n| Both data centres closed on schedule; Order API availability 99.98% during programme | P; L gives unscoped availability | Confirm metric boundary and downtime wording. |\n| Orders database, 2022: Postgres 11 to 15, 4 TB; logical replication, dual writes through ferry; hourly checksums for three weeks; reads moved before writes; old cluster warm for one month | R, P | P says version 11 nearing end of support; timeline and rationale require clarification. L says across two major versions. |\n| Led database upgrade with one database engineer; no maintenance window | P; R, L | Confirm ownership and employer permission; no maintenance window does not establish zero downtime. |\n| Runbook: preflight, shadow, dual write, cutover, soak, decommission; exit checks; wrote first version and owns it; 2021–now; 40 teams use it | P; R, L | Confirm current count, what use means and permission. |\n| On-call 2021–2022: nine-person rota reviewed every alert, deleted unactionable alerts and introduced SLO burn-rate alerts; 85 to 22 pages weekly after about a year | P; L supports counts | Team result; averaging window and measurement source missing. R rounds reduction to 74%. |\n| Go, Python, Bash, Kubernetes, Terraform, Helm, Postgres, Kafka, metrics, tracing, SLO alerts | R | Ask which tools and artefacts dominate day-to-day work. |\n| Lumen Pay, Amsterdam, SRE, Mar 2016–Jul 2020; on team running card authorisation path | R, L | Own responsibilities, stack, recognisable system and outcome missing. Employer field does not establish personal speciality. |\n| Entoto Technical University Library, Addis Ababa, systems administrator, 2013–2016 | R, L | Confirm formal titles if inaccurate. |\n| Ran open-source catalogue in Perl/MySQL on Debian; about 30,000 records and 8,000 borrowers; moved physical server to primary/replica in 2015; nightly dumps and binlog PITR | R, P | Approximate counts: when and whose scope? Work permission unresolved. |\n| Cleanup script accidentally dropped production table in 2014; six-hour outage; restored nightly dump and re-entered a day of loans from paper; added PITR after 2014 | P | Confirm public retelling and whether any identifiers must be omitted. No borrower data supplied or needed. |\n| BSc Electrical Engineering, Entoto Technical University, 2009–2013; final project microcontroller logged campus substation feeder load every second to SD | R, L, P | Own contribution, collaborators and permission to depict project unresolved. |\n| Degree project lesson: data one cannot lose needs a second copy | P | Source supports lesson, but not that project itself implemented a second copy. |\n| Locations associated with roles: Addis Ababa 2013–2016; Amsterdam Mar 2016–Jul 2020; Rotterdam Aug 2020–present | R, L | Work locations are not proof of residence; ask if personal geography matters. |\n\n## Open source, talk and existing site\n\n| Fact | Source | Qualification / unresolved question |\n| --- | --- | --- |\n| ferry, Go CLI for dual-write cutovers; former colleague started it in 2019; Dawit maintains since 2022 and wrote cutover command | P; R supports maintainer | Do not attribute creation to Dawit. Confirm public repo URL and licence; supplied github.com/example/ferry appears placeholder. |\n| Cutover command checks replication lag/checksum parity, changes write target and keeps prior target available for fallback window | P | May illustrate workflow after confirmation; no terminal output supplied. |\n| 1.2k GitHub stars | P, L | Rounded count; date not explicit; omit unless confirmed. |\n| Boring Migrations, SRE North 2024, 30 minutes; video online | R, L, P | Needs real video URL, rights if embedding; talk discusses runbook, rollback, exit checks and library incident. |\n| Current one-page site made in 2019: Dawit Bekele, SRE, “I keep things running”; skills Linux/Kubernetes/Terraform/Postgres/Go/Python; email | O | Ask what becomes of old site and any wording to preserve. |\n| Notes describe wave map, traffic transfer/error line, two-database writes/checksums, six gated stages, weekly page counts and fallback write path as explanatory pictures | P | No real employer screens supplied. Ask if original schematic illustrations are allowed and what must remain confidential. Do not fabricate historical traces or measured values. |\n\n## Gaps\n\n- Audience, desired next action, exclusions and permission boundaries.\n- Lumen: personal work, tools, system view and outcome.\n- Actual contact/repository/video destinations; no visual assets or asset rights supplied.\n- Residence history if desired; education collaborators and actual physical device appearance.\n- Day-to-day working vocabulary; visual explanation of Lumen, library and studies.\n- What from the old site should remain; other formative influences if desired.\n\n## Disagreements\n\n- R says zero downtime for the migration; L/P report 99.98% availability (P scopes it to Order API). Those could refer to different boundaries, but none is established.\n- R/P say Postgres 11 to 15; L says across two major versions. P dates upgrade to 2022 and says version 11 going out of support; clarify exact dates and rationale.\n- L, saved October 2026, says “last four years”; P dates data-centre exit Aug 2020–Oct 2022. Avoid stale duration.\n- R says platform team of six; P says nine on rota and about 60 across migration programme. Likely different scopes; confirm.\n- R says 74% fewer pages; P/L say 85 to 22 (roughly 74%). Need comparable measurement periods.\n\n## To confirm\n\n1. Audience and ending action; current title and actual contact destinations.\n2. Migration ownership, availability scope and downtime wording; correct dates instead of stale “four years”.\n3. Database versions, date and rationale; own role versus colleague; no-window wording.\n4. Metric definitions/time windows/currentness and attribution for services, waves, teams, pages, catalogue counts, stars; team scopes.\n5. Lumen responsibilities, tools, visible artefact and outcome; correctness of listed titles/dates.\n6. Employer and third-party permissions, confidential details, library incident retelling, original schematic drawings.\n7. Working vocabulary and pictures for each role/studies; university project contribution/collaborators.\n8. Formative influences and whether degree/library lessons may be used.\n9. Residence corrections/additions if relevant; old-site disposition and words to retain.\n\n## User answers\n\nReceived in conversation, 2026-10-23. These answers govern all use of earlier source assertions.\n\n- Audience: engineering leaders planning a migration they fear, and conference organisers. Going independent next year (relative to October 2026); do not claim already independent or available for contracts now. Desired action: write to Dawit.\n- Use Dawit Bekele, Kestrel Freight, Lumen Pay (LinkedIn line only), Entoto Technical University, ferry. dawit@example.com is intentional public example contact. Link only; never send mail.\n- All P content is confirmed accurate and may be described and illustrated, including 14 waves, six runbook stages, dual writes, checksums and the 2014 incident. User says explicitly to omit facts not confirmed rather than guess.\n- Migration: zero downtime is too strong and prohibited copy. Two internal incidents, each under ten minutes. Measured Order API availability was 99.98% over the 26 months. Use this scoped metric. P confirms personal planning/sequencing, programme team of about 60, 310 services, 14 waves, Aug 2020–Oct 2022. Avoid stale LinkedIn duration.\n- On-call: nine-person team, 85 to 22 pages weekly over about one year. Half of it was deleting unneeded alerts. Use “we”; no personal-result wording, no need for derived 74% figure.\n- ferry: former colleague created it; Dawit maintains since 2022 and wrote cutover command. P confirms implementation details. No confirmed destination; do not use example repository URL. Omit star count because snapshot date was not confirmed and it is unnecessary.\n- Runbook: wrote first version, still owns it; 40 teams use it. Six stages and exit checks confirmed through P.\n- Database: P confirmed as accurate, including Postgres 11 to 15, 2022, 4 TB, leading with one database engineer, no maintenance window, checksum cadence and fallback month. Omit ambiguous “two major versions” and end-of-support rationale rather than add an interpretation.\n- Lumen: nothing may be shown or described beyond LinkedIn line: Site Reliability Engineer, Lumen Pay, Amsterdam, Mar 2016–Jul 2020; “Card payment systems.” No card-authorisation schematic, tools, clients, results or invented detail.\n- Library: user confirms first production outage caused in 2014, dropped table, tells it at start of talk; why Dawit cares about rollbacks. P confirms six-hour outage, nightly-dump restore, paper loan recovery, PITR afterwards and replica in 2015. Omit unconfirmed catalogue/borrower counts and exact old catalogue stack from R.\n- Education: BSc Electrical Engineering at Entoto Technical University in Addis Ababa, 2009–2013; ran university library systems until 2016. P confirms feeder-load logger sampling every second to SD and second-copy lesson; no collaborators, ownership beyond “my final-year project” or second-copy implementation claim.\n- Moved to Amsterdam in 2016 for Lumen; Rotterdam in 2020 for Kestrel. Study/library in Addis Ababa. No invented travel route or exact map geography needed.\n- Daily artefacts: runbook, cutover checklist, rollback plan; postmortem only when something goes wrong. Books: Google SRE book, Release It! by Michael Nygard. No book-cover download or quotation.\n- Old site may go; nothing important links to it. No wording retention requested.\n- No photographs, slides, testimonials or internal diagrams/screens/dashboards are supplied. Download none. Kestrel talk/slides public does not authorize fetching; use original geometry marked “Illustration”.\n- Six required work items, each brief with more on click: data-centre exit, orders database, runbook, on-call, ferry, talk. No invented projects, clients, figures or quotes.\n- English; ordinary navigation; printable downloadable HTML CV from confirmed facts; share preview, site icon, useful missing-page page. No blog/chat/translation/contact form. Legal/hosting decisions deferred until publishing.\n- Local system fonts and own geometry. No external asset purchase/download. No more skills to install; user declines them. Local build/dependency tooling only; no publication.\n\n### Outstanding claims: omit, do not block or guess\n\nExact formal current title and present employment dates beyond confirmed P, six-person platform team, unsupported resume-only tools/counts, degree collaborators/device appearance, real repository/video URLs, and exact metric sampling windows beyond user-confirmed scopes. No question about these is needed for the concepts. Role labels may be attributed to profile in planning; CV should use confirmed work ownership/date ranges and approved LinkedIn line.\n\nThe earlier Gaps/Disagreements/To confirm lists are the initial audit trail, not outstanding approval requests where resolved by this section.\n# Decisions made without asking\n\n- Keep all work local; no deployment, publishing or external messages. Requested explicitly. Can change only on the user's instruction.\n- Store sourced facts and outstanding decisions in docs/story so work can continue between sessions. No story/design chosen yet.\n- Verify setup with a neutral page independent of portfolio content; no personal material used in the setup page. Checks are under checks/setup.\n\n- Scaffolded the skill engine into `site/` because the scaffold prohibits placing a copy in an ancestor of its installed source. Change by moving the complete site folder; no installed skill dependency remains.\n- Concept sketches use a shared client scene with original Three.js geometry and real HTML text/navigation/details. All sketches keep geometry mounted and scale it through the transitions. Scene colour is provisional until the later appearance choice.\n- Omit unsupported resume-only catalogue/borrower counts, six-person platform team, unverified repository/video URLs and the star count. Retain confirmed project-notes detail. Can add a claim later only after confirmation.\n- Omit end-of-support rationale and LinkedIn’s ambiguous database-version wording; use confirmed Postgres 11 → 15 and migration method.\n- Production preview is the reliable local route here: Next dev checks the npm registry for version status, which this sandbox blocks. Production build and start do not need that request. Next telemetry is disabled when running checks.\n- No full final-site acceptance claim at concept stop: the supplied engine’s generic beat matrix still belongs to its placeholder content contract. Run the full acceptance matrix after the approved story replaces that contract. Current checks target the three concept routes, plus unit tests, lint, types and production build.\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('docs/story/concepts.md');s=p.read_text();s=s.replace('Status: three runnable local sketches; no concept selected. Recommendation: **The live path**. User choice pending.', 'Status: **The live path (\"'`paths`) selected** on 2026-10-23. Dawit delegated the choice to the assistant: “Go with the concept you recommend from the alternatives you just showed.” Chosen over The cutover bench and The recovery line because the distinct databases, split writes, comparison links and visible return route explain cutover most clearly with captions hidden. The bench depends more on stage labels; ribbon wave meaning depends more on its caption.'\"');p.write_text(s)\np=Path('docs/story/facts.md');s=p.read_text().replace('No concept selected.', 'The live path selected by delegated choice on 2026-10-23; see concepts.md.');p.write_text(s)\nPY\ncat > docs/story/storyboard.md <<'EOF'\n# The live path — storyboard for approval\n\nStatus: proposed full-page script, awaiting Dawit's yes or changes. Concept selected by delegated choice, recorded in concepts.md. This is the structure and meaning of the story, not final captions. Exact wording is chosen at the later wording stop.\n\n## Intended visitor and story\n\nEngineering leaders with a migration ahead of them, and conference organisers. Show Dawit as a person whose approach to migrations includes planning the return route: his degree's second-copy lesson, his own library outage, and the specific systems and checks he later worked on. Introduce background and work before expanding projects. The close brings the forward path and rollback path together, supported by the database's warm fallback month, ferry's fallback window and rehearsed rollback in the runbook. No rhetorical question or guarantee of uninterrupted service.\n\nOne connected world of request paths, storage, replication, checks and recovery. Flexible paths carry on through the story; the objects at their ends change into recognisable chapter scenes. All geometry is an original **Illustration**. No internal diagrams, real dashboards, historical request traces, photographs or downloaded material.\n\n## Chapters\n\n| Chapter | Its name (working) | What it holds | What it tells | What its scene pictures | How it grows out of the last | What you can touch |\n| --- | --- | --- | --- | --- | --- | --- |\n| 1 | Introduction | Name, migrations/reliability, audience, one proof; library origin | Migration planning with a way back | A catalogue table with a missing segment beside its dump-restore route | Record rows assemble; the restore path draws itself around the damaged table | Email; Work jump; skip to Contact |\n| 2 | Places | Addis Ababa, Amsterdam, Rotterdam; moves in 2016 and 2020 | Where study and work took place | A minimal geographic route across an original low-relief map, with three city markers | Restore path lengthens into the geographic route; storage shapes recede into the relief | Chapter navigation |\n| 3 | Study | BSc Electrical Engineering, Entoto Technical University, 2009–2013; logger and lesson | Sampling and the need for a second copy | Campus feeder input, a sampling device and recognisable SD-card silhouette with incoming samples | Route approaches the Addis marker and curves into the logger input | CV link |\n| 4 | Work | Library through 2016, Lumen's permitted line, Kestrel work from 2020 | Progression and personal ownership | Catalogue store with recovery/replica; restrained location stop for Lumen; two-site migration topology at Kestrel | SD record path becomes catalogue storage; route passes Amsterdam without inventing a payment system, then unfolds at Rotterdam | Relevant work links; CV |\n| 5 | Practice | Runbook, cutover checklist, rollback plan; formative books | Preparation, evidence and an explicit return route | Dependency routes, a cutover junction and a rehearsable fallback branch | Kestrel routes unfold at the junction; checks attach to the forward path | Ordinary links into runbook and ferry accounts |\n| 6 | Selected work | All six requested work items, brief on scroll with detail on click | Actual method, result and responsibility | Waves between sites, two databases/checksums, six gates, removed alert sources, reversible ferry switch, illustrated talk subject | Each working path grows into the next operation; shared recovery strand persists | Six project pages; scroll-driven cutover; keyboard-operable Replay/Reset control |\n| 7 | Contact | Migration and speaking enquiries, example email, printable downloadable CV | How to start a conversation | Complete migration/check/recovery system, forward and return routes both readable | Talk's rollback example settles back into the complete checked system | Email link; View CV; Download HTML CV; Back to start |\n\nLumen has **no system scene**: only an ordinary geographical/work-history stop and its permitted LinkedIn line. No testimonials chapter because none exist.\n\n## Beats\n\n**16 beats, 17.5 screen heights of scroll in total.** Heights are pacing allocations for desktop, not required reading time. Navigation skips directly to any chapter. Phone text may naturally extend a beat; readability takes priority over matching this exact height. Long explanations live on work pages. These are working labels and factual ingredients, not final captions.\n\nEvidence references below point to the confirmed “User answers” section in facts.md and its underlying P sections. P = material/project-notes.md, confirmed accurate and permitted in full by Dawit. L = permitted LinkedIn line.\n\n| Beat / chapter | Screens | What the scene shows and how it develops | Pictures and words in it | Caption basis and working title |\n| --- | ---: | --- | --- | --- |\n| 01 / Introduction | 1 | Catalogue records assemble above a store; the missing table segment and a separate backup store establish the recovery problem before scrolling | Original catalogue/restore illustration; name, migration work, 40-team runbook proof and contact remain HTML | Introduction — confirmed name, audience, runbook first-version ownership and 40-team use. Explain migration in ordinary language as moving a running system to a new home; no assumed knowledge of SRE |\n| 02 / Introduction | 1 | Missing records take the nightly-dump restore path back to the table; recovery line remains visibly distinct | Illustration, not incident reconstruction; 2014 marker in HTML, no invented records or terminal text | Library outage — dropped table in 2014; six-hour outage; restored dump and paper loan re-entry; why Dawit cares about rollbacks. P: Boring Migrations, Library; user's correction |\n| 03 / Places | 1 | Restore path stretches into a geographic route across a simple original map linking Addis Ababa, Amsterdam and Rotterdam; camera follows the three markers | City names and move years in HTML; no invented flight, itinerary or neighbourhood | Places — study/library in Addis Ababa; moved Amsterdam 2016 for Lumen, Rotterdam 2020 for Kestrel. User's direct confirmation |\n| 04 / Study | 1 | At the Addis stop the path enters a sampling device and SD-card silhouette; discrete samples advance into storage | Illustration of logger function, not exact hardware; sample cadence explained in HTML; no arbitrary waveform values | Study — BSc Electrical Engineering, Entoto Technical University 2009–2013; campus substation feeder-load logger sampling once per second to SD; second-copy lesson. P: My degree. Do not show a redundant logger that was never confirmed |\n| 05 / Work | 1 | SD record path becomes a library catalogue store; its restore path gains point-in-time recovery and a primary/replica pairing | Original storage/recovery illustration; no borrower data, catalogue counts or unconfirmed stack | Library systems — first production system, operated through 2016; PITR after 2014; replica in 2015. P: Library; direct education/location confirmation |\n| 06 / Work | 0.75 | Catalogue scene settles into the geographical route at Amsterdam; no payment system or work detail is depicted | Only the permitted HTML line: Site Reliability Engineer; Lumen Pay; Amsterdam; Mar 2016–Jul 2020; Card payment systems | Lumen — user's LinkedIn-only boundary. A deliberate quiet stop; do not invent ownership, outcomes or lessons |\n| 07 / Work | 1 | Route reaches Rotterdam and grows into two source-site footprints connected to a destination topology; dependency paths unfold between them | Illustration, not Kestrel infrastructure diagram; employer and personal planning responsibility in HTML | Kestrel — wrote plan and sequencing for data-centre exit, grouped services by dependency. P: Data-centre exit; about 60 engineers across programme. No unconfirmed present formal title |\n| 08 / Practice | 1.25 | Dependency paths meet the preflight/rollback junction; a service's forward and return routes can be traced end to end | Small HTML checklist beside illustration: dependency map and rehearsed rollback; own runbook/checklist/rollback-plan working vocabulary | Preparation — confirmed daily artefacts and P migration preflight. No invented checklist items or claim of success guaranteed by process |\n| 09 / Practice | 1 | Junction opens to show comparison before switching and a return route retained after it; stored records, not abstract particles, show what is being protected | Original reversible-route illustration. Book names as HTML references only: Google SRE book; Release It\"'! by Michael Nygard | Influences and practice — direct book confirmation; P database checksum comparison and retained fallback. Do not invent a causal lesson from either book or reproduce covers/quotes |\n| 10 / Selected work | 1.5 | Two-site topology grows fourteen wave routes into the destination; highlights move wave by wave, leaving the recovery route legible | Illustration with wave numbering; no 310 fabricated service traces. HTML summary and detail link | Data-centre exit — 310 services, 14 waves, 26 months Aug 2020–Oct 2022, Dawit planned/sequenced, about 60 engineers delivered; both sites closed on schedule; measured Order API availability 99.98% over those 26 months. P and user correction |\n| 11 / Selected work | 1.75 | Destination opens into two distinct Postgres stores; incoming writes fan to both, checksum comparison appears, reads move then writes, old store remains linked as fallback | Illustration, not historical replay; labels for old/new, replication, comparison, fallback stay HTML when canvas labels are too small. Scroll operates sequence; Replay/Reset is a real HTML control | Orders database — 4 TB, Postgres 11 → 15 in 2022, led with one database engineer; hourly checksums for three weeks, no maintenance window, old cluster warm for a month. P: Orders database. No zero-downtime claim |\n| 12 / Selected work | 1.25 | Comparison path unfolds into six individually gated runbook stages; a service waits until each illustrated exit check passes | Six real stage names in HTML: preflight, shadow, dual write, cutover, soak, decommission. Highlight illustrative checks without inventing their detailed criteria | Runbook — first version written and still owned by Dawit; 40 teams use it. P: Runbook and direct confirmation |\n| 13 / Selected work | 1 | Gate signals branch into a recognisable alert-routing system; unneeded alert sources disconnect while actionable paths remain. Two scoped endpoint counts accompany it, without an invented weekly series | Illustration, not historical monitoring screenshot. HTML endpoints 85 and 22 pages/week; team scope and approximate year alongside | On-call — “we”, team of nine, over about a year in 2021–2022; alert deletion and SLO burn-rate alerts. No derived personal 74% claim. P: On-call and direct clarification |\n| 14 / Selected work | 1 | Alert branches settle back into a dual-write junction; replication/checksum checks precede the write-target switch and the old-target return loop stays open | Original cutover-command illustration, no invented CLI syntax or output; ferry name and maintenance attribution in HTML | ferry — former colleague created it; maintained by Dawit since 2022; Dawit wrote cutover command. P: ferry. No unsupported external URL or star count |\n| 15 / Selected work | 1 | Reversible junction becomes an opened demonstration of the catalogue restore and checked cutover side by side, presenting the talk'\"'s actual subject rather than a microphone emblem | Original illustration; talk title/event/year/duration in HTML. No slides, video download, fabricated quote, audience size or testimonial | Speaking — Boring Migrations, SRE North 2024, 30 minutes; runbook, rehearsed rollback, exit checks; opens with 2014 incident. P: Boring Migrations |\n| 16 / Contact | 1 | Demonstration reconnects into one complete source/check/target system with the return route visible; motion settles and links remain ordinary HTML | Illustration; name, Rotterdam, migration/speaking contact and CV controls. No service guarantee or availability claim | Get in touch — dawit@example.com example public contact, engineering leaders and conference organisers; going independent in 2027 is confirmed intent, not current status. User's direct statements |\n\n## Someone with thirty seconds\n\nFirst screen: Dawit's name; a plain-language explanation of moving running systems between environments; runbook authored and still owned by him, used by 40 teams, as one proof; email immediately available. Avoid leading with an unexplained staff/SRE title. A visible ordinary navigation offers Background, Practice, Work, Contact and CV; a chapter rail adds direct access to every chapter. A skip-to-contact link appears before the scene; skip-to-content serves keyboard users. Work navigation jumps to all six work links without requiring animation completion. Navigation never locks scrolling.\n\n## Project detail on click\n\nDecision: six ordinary local pages rather than modal windows. Native links work by keyboard, with no JavaScript and in a new tab; each page has Work/Contact/CV navigation and a back-to-story link to its exact work beat. Do not require the visitor to replay the story.\n\n| Route | Detail content from confirmed facts |\n| --- | --- |\n| /work/data-centre-exit | Problem: leases, 310 services, continuous order intake/tracking; personal plan/sequencing versus programme team; dependency waves; mirrored reads, stateful dual writes, weighted routing 1/10/50/100%, SLO checks, two-week soak; sites closed on schedule; 99.98% measured Order API availability over 26 months. Include the two internal incidents, each under ten minutes, alongside outcome so “no downtime” cannot be inferred |\n| /work/orders-database | Postgres 11 → 15, 2022, 4 TB; Dawit led with one database engineer; logical replication, ferry dual writes, hourly checksums for three weeks; reads then writes; warm fallback month; no maintenance window. Omit disputed end-of-support rationale |\n| /work/runbook | First version and ongoing ownership, 2021–now; six named stages and exit checks; 40 teams use it. Describe the approved process, never reproduce an internal runbook |\n| /work/on-call | Nine-person team's alert review, removal of alerts nobody acted on, SLO burn-rate changes; 85 to 22 pages per week over about a year; “we” for work/result, no fabricated weekly breakdown |\n| /work/ferry | Started by a former colleague in 2019; maintained by Dawit since 2022; Go CLI and his cutover command's lag/parity checks, write-target switch and fallback window. No example repository URL, executable claim or invented command syntax |\n| /work/boring-migrations | SRE North 2024, thirty minutes; 2014 dropped-table story and recovery; rollback rehearsal, runbook and exit checks. Email for speaking; no unavailable video/slides link |\n\nEach has a brief overview, role/ownership, approach, outcome where supported, and one original static explanatory diagram with useful alternative text. No invented outcome for ferry or talk. Facts stay available in HTML; diagrams do not carry claims absent from text.\n\n## Without the scene\n\n| Where | What the visitor gets |\n| --- | --- |\n| Phone | Full HTML story in the same order; navigation in a compact accessible disclosure; scene below/alongside the current text rather than behind it. Shorter scene viewport, capped pixel ratio, no hover-only actions. Labels in HTML. Expand text naturally; no fixed-height clipping. All six detail links and CV remain available |\n| Reduced motion | Settled poses change directly at meaningful beats; no interpolation, autoplay, bobbing or idle motion. Replay/Reset becomes a user-driven step through stable states. Text and navigation identical |\n| No WebGL / scene failure | Ordinary HTML and local static SVG diagrams of catalogue recovery, place route, logger, topology, runbook, database, alerts and ferry; Lumen stays text-only. No blank canvas occupying reading space. A scene failure cannot remove navigation, details or contact |\n| No JavaScript | Complete server-rendered story, ordinary anchor navigation, local fallback diagrams, all project pages and the self-contained HTML CV. Work links, email, downloads and printing remain useful. No loading screen blocking content |\n\nAccessibility: one h1, sequential headings, visible focus, sufficient contrast in every look, real labelled controls, current chapter indicated without relying only on colour, decorative canvas hidden from assistive technology. No pointer capture or scroll hijacking. The meaningful illustrations have HTML descriptions.\n\n## Looks to try at the spine stop\n\nThree provisional treatments of the same world; the visitor chooses by scrolling the runnable opening/middle/ending later. No look has been selected by the concept delegation.\n\n| Look | Ground | Ink | Accent | Surfaces |\n| --- | --- | --- | --- | --- |\n| Night operations | Deep charcoal green | Warm off-white | Pale mint | Matte graphite storage, muted metal paths, amber recovery line |\n| Day inspection | Warm pale mineral | Dark forest | Deep teal | Chalky storage, brushed grey paths, muted rust recovery line |\n| Warm console | Dark brown charcoal | Soft ivory | Amber | Matte warm-grey storage, copper paths, cool slate recovery line |\n\nThe recovery line is distinguished by shape/position as well as colour. All looks remain usable without 3D. No glow-heavy dashboard treatment or external fonts.\n\nTwo system type stacks: \"'`system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif` for prose/headings; `ui-monospace, SFMono-Regular, Consolas, Liberation Mono, monospace` for device labels/check states. Scene text uses the same local monospace family and remains duplicated in HTML. No font download.\n\n## Everything else the site needs\n\n| Item | Build, later or never | Who decided / implementation plan |\n| --- | --- | --- |\n| Way round the page | Build | User requested ordinary navigation. Assistant selects normal anchor links, chapter rail, skip links, Work/Contact/CV, browser history and stable fragments |\n| Page for each project | Build | User requested more on click; assistant chooses six local pages over modal windows for sharing, keyboard and no-JS access |\n| Every project listed | Build | User named exactly six; all six have a brief scroll beat and a detail page; library/degree remain background, not invented extra client projects |\n| Contact and CV | Build | User requested example email link and printable downloadable HTML CV. `/cv` offers view/print/download; `/dawit-bekele-cv.html` is a self-contained file with print CSS and no JS dependency, served with an ordinary download link |\n| CV contents | Build | Assistant: name, migration/reliability focus, Rotterdam, email; confirmed education and moves; library work/recovery; permitted Lumen line; Kestrel project responsibilities/dates and scoped results; team on-call attribution; ferry maintenance/command; talk. No unconfirmed formal title, resume-only stack, private identifiers or reference contacts. Use date-specific facts, not a guessed present employment end date |\n| What others say | Never for this build | User: no testimonials, quotes or invented social proof |\n| Languages | Build English; never translation for this build | User |\n| Share preview | Build | User. Assistant: original locally generated 1200×630 PNG with name, migration/reliability focus and split/return-path geometry; matching title/description metadata for home and work pages; useful alt text. No remote asset fetch or fictional employer endorsement |\n| Site icon | Build | User. Assistant: local original split-path/return-loop SVG, readable at small sizes, plus raster fallback if needed |\n| Missing-page page | Build | User. Assistant: plain explanation and links to Home, Work, CV and Contact; stays useful without JS |\n| Blog | Never for this build | User |\n| Chat | Never for this build | User |\n| Contact form | Never for this build | User: email link only, no sending mail |\n| Legal notice | Later | User: legal details wait until publication decision |\n| Hosting / publication / production domain | Later | User: everything local; no deploy, domain registration or publishing. Production canonical URLs and public share-card URL checked only when a real origin is chosen |\n| Analytics / tracking | Never for this build | Assistant: no need to track a local portfolio. No external embeds or third-party scripts. Can revisit if requested |\n| Asset/skill purchases or downloads | Never for this build | User: own geometry and system fonts, no additional skills, no photographs/slides download |\n| README and checks | Build | Assistant: local start/build/preview instructions, dependency lockfile, verified facts and decision record; final unit/types/lint/build plus full browser acceptance of approved story |\n\n## Validation and acceptance plan\n\nAt the spine stop, implement the opening, database middle and contact ending in the three looks, then obtain a look choice. At chapters stop, complete remaining scenes and offer three whole-beat wording versions for the person'\"'s choice; no claim becomes approved merely because it is in this storyboard. At finish, run engine unit/type/lint and full production browser matrix across desktop/short/phone, looks, reduced motion, no WebGL, no JavaScript and scene failure. Open every resulting screenshot for readability/framing/overlap. Verify all six detail pages, link destinations, contact mailto, missing-page links, original metadata/icon/preview resources, CV print output and downloaded standalone HTML. Headless rendering does not establish real phone performance; record that limit rather than claim it was measured. User's actual final review must be recorded before marking finished.\n\n## Decisions made for Dawit\n\n1. The live path over the bench/ribbon alternatives, following explicit delegation; strongest caption-independent explanation of cutover and return route.\n2. Seven chapters and sixteen beats / 17.5 screens, with work details off the main scroll to keep the introduction brief.\n3. Six standalone work pages rather than modals; useful without JavaScript and directly addressable.\n4. Self-contained printable HTML CV plus view/download links; no PDF requirement inferred.\n5. Original local diagrams as fallback; Lumen only its permitted text and geographical stop.\n6. Three provisional looks to compare later; local sans-serif prose and monospace device labels.\n7. No tracking, remote embeds or unavailable repository/video links; no invented placeholders presented as working destinations.\n8. Relative local metadata/assets now; public-domain and legal decisions remain deferred to publication.\n\nThese are reversible implementation/planning decisions, recorded with reasons in decided-for-you.md. The only decision requested now is **yes to this storyboard, or changes**. No final captions have been proposed at this stop.\nEOF\"",
+      "output": "",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"python3 - <<'PY'\nfrom pathlib import Path\np=Path('docs/story/decided-for-you.md')\ns=p.read_text().replace('No story/design chosen yet.', 'Concept selection is now recorded below; storyboard approval is pending.')\ns+='''\n\n## Delegated concept choice and storyboard decisions — 2026-10-23\n\n- **Chosen: The live path (\"'`paths`).** Dawit explicitly delegated the concept choice after reviewing alternatives. Chosen over The cutover bench and The recovery line because split writes, two stores, comparison links and visible fallback explain the operation most clearly without captions. To change: name another concept or request a revision before storyboard approval.\n- **Pacing: seven chapters, sixteen beats, 17.5 screen heights.** Keeps origins, education, work history and practice alongside all six required work items. Longer technical explanations move off the scroll. To change: revise chapter/beat rows in storyboard.md; avoid inventing material to fill space.\n- **Six standalone work pages.** Chosen over modals for direct URLs, browser history, keyboard and no-JS use. To change: replace the detail mechanism while retaining ordinary fallback links and complete HTML.\n- **CV: view page and standalone HTML download.** Matches the user'\"'s printable HTML request and avoids a PDF dependency. Include only confirmed content and scoped/team-attributed results. To change: edit the approved CV content/print CSS; no format change required now.\n- **Fallback diagrams and accessible navigation.** Static original SVGs preserve chapter meaning without WebGL/JS; labels remain in HTML, compact phone navigation stays keyboard-operable. To change: revise the fallback diagram specification alongside the corresponding scene.\n- **Three provisional looks, no look selected.** Night operations, Day inspection and Warm console will be compared on a runnable spine. Two system font stacks avoid downloads. To change: choose a look at the spine stop or amend the candidate palette.\n- **Share card/icon:** generate original local geometry-based art; include text metadata without inventing a public origin. To change: edit local resources; choose real public origin only when publishing is requested.\n- **No analytics, external embeds or unavailable repo/video destinations.** Not needed for the local brief; avoids nonfunctional links and remote requests. To change: user can request these later with actual destinations.\n\nStoryboard is proposed, not approved. Exact captions wait until the wording stop. Local-only, no additional skills, and all source/permission restrictions remain in force.\n'''\np.write_text(s)\np=Path('docs/story/handover.md'); s=p.read_text(); s=s.replace('# Handover\\\\n', '''# Handover\n\n## Current state — 2026-10-23, stop 3\n\nDawit explicitly delegated the concept choice: “Go with the concept you recommend from the alternatives you just showed. Record which one you chose and why, then work out the story and the rest of what the site needs.” Selected **The live path (\"'`paths`)**, recorded in concepts.md and decided-for-you.md, because its split writes, two databases, checksum links and visible return route most clearly explain cutover. No additional skills; keep everything local, reaffirmed.\n\nRead references/storyboard.md and asking.md. Created docs/story/storyboard.md: seven chapters, sixteen beats, 17.5 screens; complete chapter scenes/transitions, factual ingredients (no final captions), all six work pages, Lumen boundary, CV plan, navigation, phone/reduced-motion/no-WebGL/no-JS behaviour, three provisional looks, fonts, metadata/share/icon/404, exclusions, deferred hosting/legal and validation plan. Counts verified against the beat table. Facts include user'\"'s corrections; do not revert to unqualified resume claims.\n\n**Waiting on Dawit:** yes to the storyboard, or requested changes. Concept approval is not storyboard approval. On approval, record it first, read building.md and engine README, then implement opening/database middle/contact spine in the proposed looks and ask for look choice. Existing site remains the concept sketches; no final portfolio, CV or supporting pages implemented at storyboard stop. No code changed this turn; documentation validation only. Do not imply final site completion.\n\nThe following sections are historical records of earlier stops; current state above governs.\n''',1); p.write_text(s)\n# Mirror the authoritative story notes into the independent site project.\nfor src in Path('docs/story').glob('*.md'):\n Path('site/docs/story',src.name).write_text(src.read_text())\n# Validate the actual storyboard beat allocation and required work routes.\ns=Path('docs/story/storyboard.md').read_text()\nrows=[line.split('|') for line in s.splitlines() if line.startswith('| ') and ' / ' in line.split('|')[1] and line.split('|')[1].strip()[:2].isdigit()]\ntotal=sum(float(r[2]) for r in rows)\nassert len(rows)==16 and total==17.5,(len(rows),total)\nfor route in ['data-centre-exit','orders-database','runbook','on-call','ferry','boring-migrations']:\n assert '/work/'+route in s\nassert all(Path('site/docs/story',p.name).read_text()==p.read_text() for p in Path('docs/story').glob('*.md'))\nprint(f'Validated: {len(rows)} beats, {total} screens, six work routes, notes mirrored.')\nPY\"",
+      "output": "Validated: 16 beats, 17.5 screens, six work routes, notes mirrored.\n",
+      "exitCode": 0
+    }
+  ],
+  "errors": [],
+  "timedOut": false,
+  "interruptedBy": null,
+  "snapshot": {
+    "schemaVersion": 1,
+    "files": {
+      ".agents/skills/storyfolio/engine/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      ".agents/skills/storyfolio/engine/AGENTS.md": {
+        "type": "file",
+        "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+        "size": 1055
+      },
+      ".agents/skills/storyfolio/engine/app/globals.css": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      ".agents/skills/storyfolio/engine/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      ".agents/skills/storyfolio/engine/app/page.tsx": {
+        "type": "file",
+        "hash": "7c8f8ff73878b47438b5c643683fce943ba26529c64795bb45ac4b2fa3ba5295",
+        "size": 1272
+      },
+      ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      ".agents/skills/storyfolio/engine/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      ".agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      ".agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      ".agents/skills/storyfolio/engine/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      ".agents/skills/storyfolio/engine/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      ".agents/skills/storyfolio/engine/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      ".agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      ".agents/skills/storyfolio/engine/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      ".agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      ".agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      ".agents/skills/storyfolio/engine/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      ".agents/skills/storyfolio/engine/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+        "size": 4781
+      },
+      ".agents/skills/storyfolio/engine/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.css": {
+        "type": "file",
+        "hash": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+        "size": 5944
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      ".agents/skills/storyfolio/engine/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      ".agents/skills/storyfolio/engine/content/checks.json": {
+        "type": "file",
+        "hash": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+        "size": 128
+      },
+      ".agents/skills/storyfolio/engine/content/copy.ts": {
+        "type": "file",
+        "hash": "924c0b852bb05782fdac0493f272f59364cd1e900e17f75a007bf33a89cc6cc5",
+        "size": 1347
+      },
+      ".agents/skills/storyfolio/engine/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+        "size": 994
+      },
+      ".agents/skills/storyfolio/engine/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      ".agents/skills/storyfolio/engine/content/faces.ts": {
+        "type": "file",
+        "hash": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+        "size": 859
+      },
+      ".agents/skills/storyfolio/engine/content/formations.ts": {
+        "type": "file",
+        "hash": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+        "size": 770
+      },
+      ".agents/skills/storyfolio/engine/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      ".agents/skills/storyfolio/engine/content/links.ts": {
+        "type": "file",
+        "hash": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+        "size": 128
+      },
+      ".agents/skills/storyfolio/engine/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      ".agents/skills/storyfolio/engine/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+        "size": 238
+      },
+      ".agents/skills/storyfolio/engine/content/story.ts": {
+        "type": "file",
+        "hash": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+        "size": 602
+      },
+      ".agents/skills/storyfolio/engine/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+        "size": 4640
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.ts": {
+        "type": "file",
+        "hash": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+        "size": 5441
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      ".agents/skills/storyfolio/engine/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      ".agents/skills/storyfolio/engine/next.config.ts": {
+        "type": "file",
+        "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      ".agents/skills/storyfolio/engine/package.json": {
+        "type": "file",
+        "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+        "size": 1015
+      },
+      ".agents/skills/storyfolio/engine/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/public/plain/face.svg": {
+        "type": "file",
+        "hash": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+        "size": 314
+      },
+      ".agents/skills/storyfolio/engine/README.md": {
+        "type": "file",
+        "hash": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+        "size": 7343
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      ".agents/skills/storyfolio/engine/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      ".agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      ".agents/skills/storyfolio/engine/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      },
+      ".agents/skills/storyfolio/references/asking.md": {
+        "type": "file",
+        "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+        "size": 1486
+      },
+      ".agents/skills/storyfolio/references/building.md": {
+        "type": "file",
+        "hash": "95276bacbc429072f7fe634fde5c68e22ead374091bcaa7d222394ce136281e8",
+        "size": 1536
+      },
+      ".agents/skills/storyfolio/references/concept.md": {
+        "type": "file",
+        "hash": "80ca1202899d482607d3ea8565c11aaa8e08d3f4411b37ea6b92d5d82f6529d9",
+        "size": 6705
+      },
+      ".agents/skills/storyfolio/references/reading-a-profile.md": {
+        "type": "file",
+        "hash": "69116e0a96f74a34a992d2faf28f0a5b451f677321a82a858e839181b9435e24",
+        "size": 7460
+      },
+      ".agents/skills/storyfolio/references/storyboard.md": {
+        "type": "file",
+        "hash": "186ff810fc38c881c4960301d607ff3fc8ccfccf62cbcefdb8f7f31d8d9bf3db",
+        "size": 4735
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.mjs": {
+        "type": "file",
+        "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+        "size": 3566
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+        "type": "file",
+        "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+        "size": 4044
+      },
+      ".agents/skills/storyfolio/SKILL.md": {
+        "type": "file",
+        "hash": "8d68afb524f432be448919cb8df3bfaf5ccaacff861a4fc34032cc73cbfa7af9",
+        "size": 4780
+      },
+      "docs/story/concepts.md": {
+        "type": "file",
+        "hash": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+        "size": 14226
+      },
+      "docs/story/decided-for-you.md": {
+        "type": "file",
+        "hash": "2320bb3edddbabc7361ebea1c30f67d38aa3e52736f5d48728574742d6fd30ed",
+        "size": 4247
+      },
+      "docs/story/facts.md": {
+        "type": "file",
+        "hash": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+        "size": 13128
+      },
+      "docs/story/handover.md": {
+        "type": "file",
+        "hash": "7ef17967ed6f2d6bff315c1a29b84fe34ea802ca20ea78db86c55a752714a546",
+        "size": 7899
+      },
+      "docs/story/storyboard.md": {
+        "type": "file",
+        "hash": "a628f81221d45cde946cd4acbb60be9aeee37068e8d6a42fc3dfa8492bccb5f3",
+        "size": 22935
+      },
+      "material/linkedin.md": {
+        "type": "file",
+        "hash": "95d70f38ebc320cecf58e3530cb191eee4017e06fc1cfb56af43835db211d4d5",
+        "size": 1208
+      },
+      "material/old-site.md": {
+        "type": "file",
+        "hash": "d2897369b440f33c9bb02ea22c1a8647072bbd7a71cab3662677f58e46b92466",
+        "size": 188
+      },
+      "material/project-notes.md": {
+        "type": "file",
+        "hash": "70e4466c4d09e90e1b553f1cec710e26383f31aff4c829f018e8a6698e400478",
+        "size": 3787
+      },
+      "material/resume.md": {
+        "type": "file",
+        "hash": "72e96cce2a83a4425f1eee48d42a0b385956a9d962963b22c868a233a35a3c59",
+        "size": 1688
+      },
+      "site/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      "site/AGENTS.md": {
+        "type": "file",
+        "hash": "f4ca7baa33b857375464de26674c96f895a2966338cd0d4dd06585c71108bbf8",
+        "size": 1734
+      },
+      "site/app/globals.css": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      "site/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      "site/app/page.tsx": {
+        "type": "file",
+        "hash": "1fb4f19d99539ae22769db54227099793b8281f22df5930eabc0369d61fb37fa",
+        "size": 1882
+      },
+      "site/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      "site/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      "site/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      "site/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      "site/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      "site/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      "site/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      "site/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      "site/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      "site/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      "site/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      "site/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      "site/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      "site/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      "site/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      "site/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+        "size": 4781
+      },
+      "site/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      "site/components/story/story.css": {
+        "type": "file",
+        "hash": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+        "size": 5944
+      },
+      "site/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      "site/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      "site/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      "site/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      "site/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      "site/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      "site/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      "site/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      "site/content/checks.json": {
+        "type": "file",
+        "hash": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+        "size": 128
+      },
+      "site/content/copy.ts": {
+        "type": "file",
+        "hash": "8487a199ba4c6d805886df91cab92017f82aeeadf3d527fd2897125e67c4cb1b",
+        "size": 1391
+      },
+      "site/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      "site/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+        "size": 994
+      },
+      "site/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      "site/content/faces.ts": {
+        "type": "file",
+        "hash": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+        "size": 859
+      },
+      "site/content/formations.ts": {
+        "type": "file",
+        "hash": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+        "size": 770
+      },
+      "site/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      "site/content/links.ts": {
+        "type": "file",
+        "hash": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+        "size": 128
+      },
+      "site/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      "site/content/sketches/concepts.css": {
+        "type": "file",
+        "hash": "cc8527b1c982fe6843bfa097ee5e6c9c03a21a9bce6829decc02b63b6808c665",
+        "size": 3171
+      },
+      "site/content/sketches/concepts.tsx": {
+        "type": "file",
+        "hash": "b43da8c23258ef6b1e08eab1f8693957031442ab718854968c7ebb484f4c9540",
+        "size": 11906
+      },
+      "site/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "bd4410e74ed4635cbc93fe763f1ac785317de643421a7aefa94163ad77c70f11",
+        "size": 190
+      },
+      "site/content/story.ts": {
+        "type": "file",
+        "hash": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+        "size": 602
+      },
+      "site/docs/story/concepts.md": {
+        "type": "file",
+        "hash": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+        "size": 14226
+      },
+      "site/docs/story/decided-for-you.md": {
+        "type": "file",
+        "hash": "2320bb3edddbabc7361ebea1c30f67d38aa3e52736f5d48728574742d6fd30ed",
+        "size": 4247
+      },
+      "site/docs/story/facts.md": {
+        "type": "file",
+        "hash": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+        "size": 13128
+      },
+      "site/docs/story/handover.md": {
+        "type": "file",
+        "hash": "7ef17967ed6f2d6bff315c1a29b84fe34ea802ca20ea78db86c55a752714a546",
+        "size": 7899
+      },
+      "site/docs/story/storyboard.md": {
+        "type": "file",
+        "hash": "a628f81221d45cde946cd4acbb60be9aeee37068e8d6a42fc3dfa8492bccb5f3",
+        "size": 22935
+      },
+      "site/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      "site/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      "site/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      "site/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      "site/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      "site/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      "site/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      "site/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      "site/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      "site/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      "site/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      "site/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      "site/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      "site/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      "site/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      "site/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      "site/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      "site/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+        "size": 4640
+      },
+      "site/lib/story/story.ts": {
+        "type": "file",
+        "hash": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+        "size": 5441
+      },
+      "site/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      "site/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      "site/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      "site/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      "site/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      "site/LOCAL-PREVIEW.md": {
+        "type": "file",
+        "hash": "5e3980384ddddff9dc337c2c2af4659cedcfe0b342d8f86753c4443bfd7823d5",
+        "size": 1015
+      },
+      "site/next.config.ts": {
+        "type": "file",
+        "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+        "size": 94
+      },
+      "site/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      "site/package.json": {
+        "type": "file",
+        "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+        "size": 1015
+      },
+      "site/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      "site/public/plain/face.svg": {
+        "type": "file",
+        "hash": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+        "size": 314
+      },
+      "site/README.md": {
+        "type": "file",
+        "hash": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+        "size": 7343
+      },
+      "site/scripts/check-concepts.mjs": {
+        "type": "file",
+        "hash": "68973af283ead050ff35245ba32ca9b126bb3141de2537a0c1fb419792e9dc97",
+        "size": 1734
+      },
+      "site/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      "site/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      "site/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      "site/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      "site/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      }
+    },
+    "excluded": [
+      ".git",
+      "checks",
+      "site/.next",
+      "site/checks",
+      "site/next-env.d.ts",
+      "site/node_modules",
+      "site/tsconfig.tsbuildinfo"
+    ],
+    "unexpected": [
+      {
+        "path": ".aws",
+        "type": "directory"
+      },
+      {
+        "path": ".codex",
+        "type": "directory"
+      }
+    ],
+    "totalBytes": 1024256,
+    "changes": [
+      {
+        "path": "docs/story/concepts.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "32a0f3ec78ff0298dd414dab26cc4a18e54d8635cedfdd3f0f879ac8adac3825",
+          "size": 13878
+        },
+        "after": {
+          "type": "file",
+          "hash": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+          "size": 14226
+        }
+      },
+      {
+        "path": "docs/story/decided-for-you.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "40afef222b74e118ff5b9eae161e1d241c2c5575f29e199b14903863efbb2659",
+          "size": 1835
+        },
+        "after": {
+          "type": "file",
+          "hash": "2320bb3edddbabc7361ebea1c30f67d38aa3e52736f5d48728574742d6fd30ed",
+          "size": 4247
+        }
+      },
+      {
+        "path": "docs/story/facts.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "29f5d4ba674160bb20b93c73d15780d59aefdb2510733b3ed32815ee3c0de2b8",
+          "size": 13074
+        },
+        "after": {
+          "type": "file",
+          "hash": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+          "size": 13128
+        }
+      },
+      {
+        "path": "docs/story/handover.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "89279669fc0a88f9906eda89bac362139946a6f9cdbd6f14ef654f1395b41f67",
+          "size": 6256
+        },
+        "after": {
+          "type": "file",
+          "hash": "7ef17967ed6f2d6bff315c1a29b84fe34ea802ca20ea78db86c55a752714a546",
+          "size": 7899
+        }
+      },
+      {
+        "path": "docs/story/storyboard.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "a628f81221d45cde946cd4acbb60be9aeee37068e8d6a42fc3dfa8492bccb5f3",
+          "size": 22935
+        }
+      },
+      {
+        "path": "site/docs/story/concepts.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "32a0f3ec78ff0298dd414dab26cc4a18e54d8635cedfdd3f0f879ac8adac3825",
+          "size": 13878
+        },
+        "after": {
+          "type": "file",
+          "hash": "087a0548dc690f366a03a1c893cc12c2bcb22d95b03180efdd13aad8161f00e8",
+          "size": 14226
+        }
+      },
+      {
+        "path": "site/docs/story/decided-for-you.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "40afef222b74e118ff5b9eae161e1d241c2c5575f29e199b14903863efbb2659",
+          "size": 1835
+        },
+        "after": {
+          "type": "file",
+          "hash": "2320bb3edddbabc7361ebea1c30f67d38aa3e52736f5d48728574742d6fd30ed",
+          "size": 4247
+        }
+      },
+      {
+        "path": "site/docs/story/facts.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "29f5d4ba674160bb20b93c73d15780d59aefdb2510733b3ed32815ee3c0de2b8",
+          "size": 13074
+        },
+        "after": {
+          "type": "file",
+          "hash": "611d8ce2cdfd00e350320a6604ce0c43a1404b210b3c287acf8a07a1f83aae05",
+          "size": 13128
+        }
+      },
+      {
+        "path": "site/docs/story/handover.md",
+        "change": "modified",
+        "before": {
+          "type": "file",
+          "hash": "89279669fc0a88f9906eda89bac362139946a6f9cdbd6f14ef654f1395b41f67",
+          "size": 6256
+        },
+        "after": {
+          "type": "file",
+          "hash": "7ef17967ed6f2d6bff315c1a29b84fe34ea802ca20ea78db86c55a752714a546",
+          "size": 7899
+        }
+      },
+      {
+        "path": "site/docs/story/storyboard.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "a628f81221d45cde946cd4acbb60be9aeee37068e8d6a42fc3dfa8492bccb5f3",
+          "size": 22935
+        }
+      }
+    ]
+  }
+}
