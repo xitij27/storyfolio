@@ -313,7 +313,8 @@ function World({ way, progress, still }: { way: WayId; progress: RefObject<numbe
           <meshBasicMaterial color={MUTED} toneMapped={false} />
         </instancedMesh>
         <Line ref={routeBack} points={ROUTE_N} color={ACCENT} lineWidth={2.5} />
-        <Line ref={routeOn} points={ROUTE_N} color={ACCENT} lineWidth={2.5} visible={false} />
+        {/* No visible prop: drei hands it to the material too, which would hide this line for good. */}
+        <Line ref={routeOn} points={ROUTE_N} color={ACCENT} lineWidth={2.5} />
         {CITIES.map((city, k) => (
           <group key={city.name} ref={(el) => void (markers.current[k] = el)} position={[city.at[0], 0.012, city.at[2]]} rotation={[-Math.PI / 2, 0, 0]}>
             <mesh>

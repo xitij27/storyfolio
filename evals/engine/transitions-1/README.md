@@ -54,6 +54,10 @@ These matter when a way moves into the engine:
   `Line2`) redrawn with fewer points kept drawing its old count and read
   past the new end: lines shot out to the origin. Every path is resampled
   to the same N before `setPositions`.
+- **drei's `Line` hands its props to the material too.** A `visible={false}`
+  prop hid the material for good, so setting the line visible each frame
+  showed nothing: the hand-off's ocean crossing never drew in the first
+  published build. Visibility is set only on the object, each frame.
 - **A line of no length is hidden,** not drawn: a zero-length segment
   gives the thick-line shader nothing to point along.
 - **Edges fade with their mesh.** drei's `Edges` has its own material; a
