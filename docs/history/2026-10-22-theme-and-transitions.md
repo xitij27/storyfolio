@@ -33,3 +33,11 @@ cutover, the catalogue servers, the runbook's six stages, one command
 switching traffic). The author replied, verbatim:
 
 > No make it more technical and professional. This is not enough information to make a meaningful portfolio website
+
+## Person test 2 approved
+
+Root made the fuller technical fixture (`evals/builds/full-journey-3`) and
+the first stop's technical-depth questions, and asked whether to start the
+paid test. On 23 October the author replied, verbatim:
+
+> yes
