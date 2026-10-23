@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main className="document-page"><p className="document-kicker">404 / Dawit Bekele</p><h1>This address has no page.</h1><p>The local story starts at the introduction. You can also go straight to the selected work, CV or contact.</p><nav aria-label="Find a page"><Link href="/">Home</Link><Link href="/#work">Work</Link><a href="/dawit-bekele-cv.html">CV</a><Link href="/#contact">Contact</Link></nav></main>;}

@@ -1,0 +1,7 @@
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { projects } from "@/content/projects";
+import { Diagram } from "@/content/fallback";
+export function generateStaticParams(){return projects.map(p=>({slug:p.slug}));}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=projects.find(p=>p.slug===slug);if(!p)return {};return {title:`${p.title} — Dawit Bekele`,description:p.summary,openGraph:{title:`${p.title} — Dawit Bekele`,description:p.summary,images:[{url:"/share-preview.png",width:1200,height:630,alt:"Dawit Bekele — migrations, reliability and a way back."}]}};}
+export default async function WorkPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=projects.find(p=>p.slug===slug);if(!p)notFound();return <main className="document-page"><nav aria-label="Page navigation"><Link href={`/#${p.anchor}`}>← Back to the story</Link><Link href="/#work">All work</Link><Link href="/cv">CV</Link><a href="mailto:dawit@example.com">Contact ↗</a></nav><p className="document-kicker">{p.period}</p><h1>{p.title}</h1><p className="document-lede">{p.summary}</p><Diagram kind={p.diagram}/>{p.sections.map(section=><section key={section.title}><h2>{section.title}</h2>{section.paragraphs.map(paragraph=><p key={paragraph}>{paragraph}</p>)}</section>)}<footer><Link href={`/#${p.anchor}`}>Explore the illustrated story →</Link><a href="mailto:dawit@example.com">Discuss a migration or talk ↗</a></footer></main>;}
