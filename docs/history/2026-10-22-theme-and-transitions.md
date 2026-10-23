@@ -15,3 +15,14 @@ as the Addis node opening into a circuit board for the electrical
 engineering degree). The author replied, verbatim:
 
 > Just because a person's studied at a university . It does not have to be something like that, right? Come up with a better and more creative way to visualize or at least ask questions about how visualizations could be made from the user so that they can give you more creative and personal answers.
+
+## Professional, not personal memoir
+
+Root added picture questions to the first stop (where they grew up, their
+studies, a good day at work, each job: things they saw, handled or kept)
+and drafted fictional answers for the person-test fixture: rain on a
+grandmother's roof in Addis Ababa, green library lamps, a "DO NOT UNPLUG"
+note, cycling along canals, the port seen from an office window. On 23
+October the author replied, verbatim:
+
+> no these descriptions dont sound professional
