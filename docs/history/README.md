@@ -9,7 +9,9 @@ Earlier author verdict: [22 October, a technical theme and smooth transitions](2
 
 Earlier author verdict: [22 October, a portfolio introduces the person](2026-10-22-a-portfolio-introduces-the-person.md).
 
-Newest author direction: [22 October, change the design: each scene pictures its section](2026-10-22-change-the-design-direction.md).
+Newest author direction: [23 October, yes to a diagram reference, craft rules and an engine drawing kit](2026-10-23-crude-diagrams.md#roots-proposal-and-the-authors-answer).
+
+Earlier author direction: [22 October, change the design: each scene pictures its section](2026-10-22-change-the-design-direction.md).
 
 Newest author verdict: [23 October, the diagrams are crude; a library of diagrams?](2026-10-23-crude-diagrams.md).
 

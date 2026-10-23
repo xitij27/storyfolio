@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import type { Look } from "@/lib/story/looks";
 import type { FaceDef } from "./types";
+import { onLand } from "./land";
 
 /** Drawing is queued; at most two faces are painted by one animation frame. */
 export function createFaces(faces: readonly FaceDef[], look: Look, coarse: boolean) {
@@ -24,6 +25,8 @@ export function createFaces(faces: readonly FaceDef[], look: Look, coarse: boole
     picture.src = face.src;
   }
   void document.fonts.ready.then(() => { if (!disposed) faces.forEach(queue); });
+  // A face that draws a map draws it again once the land has arrived.
+  const stopLand = onLand(() => faces.forEach(queue));
   return {
     blank,
     get(beat: string, piece: number) {
@@ -58,6 +61,7 @@ export function createFaces(faces: readonly FaceDef[], look: Look, coarse: boole
     },
     dispose() {
       disposed = true;
+      stopLand();
       for (const image of loading) { image.onload = null; image.onerror = null; }
       images.clear();
       for (const { texture } of made.values()) texture.dispose();

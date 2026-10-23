@@ -41,7 +41,7 @@ The chapters may take names from the world, as a paper's sections, while holding
 
 A picture of that chapter, which a visitor would name with the captions hidden: a globe or a route for where from, the place they studied, a line of the places they worked, the things of their field, the work itself. A scene that shows only that something moved is not done.
 
-Make each from what the person told you: their answers to the picture questions, or one particular thing in their material. A label turned into its symbol, a degree into a circuit board, a job into its logo, could be anyone's.
+Make each from what the person told you: their answers to the picture questions, or one particular thing in their material. A scene that explains something is a diagram: choose and draw it by `references/diagrams.md`. A label turned into its symbol, a degree into a circuit board, a job into its logo, could be anyone's.
 
 For each chapter, write at least three candidate pictures before choosing one, at least one from something only this person said. Drop every candidate that is a rearrangement.
 

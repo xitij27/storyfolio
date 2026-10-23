@@ -54,6 +54,7 @@ its review criteria and independent runtime observations are separate.
 | [source-inventory-1](runs/source-inventory-1/findings.md) | Shared conservative source scope, 45 focused tests pass. Historical 202/390 mismatch preserved; prospective inventories match 201 unchanged files. No paid run or comparator relaxation |
 | [stage-3-integration-1](runs/stage-3-integration-1/findings.md) | Measurement identity integration, reviewed nine-file neutral comparison fixture, real helper smoke and 342 passing tests. Two visual instruction drafts only; separate paid question unanswered. No shipped skill change or Stage 3 completion |
 | [stage-3-comparison-1](runs/stage-3-comparison-1/findings.md) | Baseline completed: seven technical passes, 253 originals reviewed, both visual targets fail. Text judge 15 pass/0 fail/10 unobserved, outer-status anomaly retained. Candidate timed out; independent desktop/phone pass then capture interrupted. All 118 retained originals reviewed; narrower improvements, two paragraphs provisional. No candidate judge, retry or Stage 3 acceptance |
+| [drawing-kit-1](engine/drawing-kit-1/README.md) | Diagram reference, craft rules and engine drawing kit (pen, `Figure`, Natural Earth map), shown drawing five of Dawit Bekele's diagrams at desktop and phone sizes. Engine check 15/15, 362 tests. No agent run; the person test rerun waits for the author |
 
 ## Cases and comparison rules
 

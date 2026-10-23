@@ -16,7 +16,7 @@ Stop for the choice, then use it word for word.
 
 ## The scene
 
-Compare the running scene with the storyboard at its settled beats. With the captions hidden, does each scene show what the storyboard says it shows, rather than only names for it? Revise the composition when the explanation lives only in the surrounding prose. Keep that accessible prose; it does not replace what the scene was meant to show.
+Compare the running scene with the storyboard at its settled beats. With the captions hidden, does each scene show what the storyboard says it shows, rather than only names for it? Revise the composition when the explanation lives only in the surrounding prose. Draw each diagram flat with the engine's pen, as `references/diagrams.md` says. Keep that accessible prose; it does not replace what the scene was meant to show.
 
 Inspect the changes between beats in both scroll directions, including intermediate positions. When words in the scene change, correct any overlap that makes the old and new words unreadable together. A readable settled beat does not establish a readable transition. A scene that pops in or vanishes at a chapter's edge is not done: grow it out of the last with the engine's chapter presence.
 

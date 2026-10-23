@@ -109,6 +109,56 @@ For a sketch, add a client component importing its own bundle and HTML to
 `content/sketches/index.ts`. Its key becomes `/sketch/<id>`. The initial
 registry is empty and unknown keys return 404.
 
+## Drawing figures
+
+Draw a diagram flat, on a surface in the scene, with the pen in
+`components/story/pen.ts`; do not build it from meshes. The pen works on any
+canvas, in units of a canvas 1000 wide: `pen.w` is 1000 and `pen.h` follows
+the canvas's shape. Its tones are the look's `ink`, `accent` and `faint`.
+
+| Call | Draws |
+|---|---|
+| `paper()` | The look's surface over the whole canvas |
+| `line(points, { tone, weight, dash, upTo, arrow })` | A line, drawn to `upTo` of its length, with an arrow where the drawn part ends |
+| `dot(point, { r, tone, open })` | A dot, or a ring |
+| `box({ x, y, w, h }, { tone, weight, fill, r })` | A box filled with the paper, so lines behind it stop at its edge |
+| `text(words, x, y, { size, tone, align, width, halo })` | Words; `width` wraps them, `halo` keeps them readable over lines |
+| `grid(box, step)` | Faint lines every `step` |
+| `timeline(box, from, to)` | A time axis with its years; gives the x of a date in years |
+| `map(box, bounds)` | The world's real coastlines and borders; gives the point of a latitude and longitude |
+
+`lib/story/figure.ts` places things: `boundsAround` some places, an `arc`
+between two points, a share of a line by its length (`along`), and the
+`share` of a value that one step of a scroll takes.
+
+`map` draws Natural Earth's land and borders at 1:50 million (public
+domain), from `components/story/land.json`. It is a megabyte, fetched the
+first time a map is drawn, and the map is drawn again when it arrives. Give
+it the places' real coordinates. Where two places are too close to tell
+apart, draw a second map of them at a larger scale beside the first.
+
+In an extra, `Figure` from `components/story/figure.tsx` is a sheet with a
+drawing on it, lit like the pieces. `progress` is read every frame;
+`dwellAt` from `lib/story/timeline.ts` gives one beat's own progress, 0
+before it, 1 after it:
+
+```tsx
+<Figure look={look} width={3.6} height={2.5}
+  progress={() => dwellAt(frameRef.current, beatIndex(story, "places.route"))}
+  draw={(pen, value) => {
+    const at = pen.map({ x: 20, y: 20, w: 960, h: 654 }, boundsAround([from, to]));
+    pen.line(arc(at(...from), at(...to)), { tone: "accent", upTo: value, arrow: true });
+  }} />
+```
+
+It is drawn again only when the value, the look, the fonts or the land
+change. A face's `draw` can use the pen too: `pen(context, width, height, look)`.
+A piece's printed face lies 0.03 in front of its centre, so a figure laid
+on a piece goes further forward than that.
+
+On a phone a sheet across the screen is about 320 pixels wide, so words
+smaller than about 40 units cannot be read there. Put those in the caption.
+
 ## Check
 
 ```bash

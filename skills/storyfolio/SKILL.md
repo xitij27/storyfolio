@@ -16,7 +16,7 @@ Between stops you work by yourself. At each stop the person decides one thing. Y
 | Stop | First open | You put to the person | You go on when |
 |---|---|---|---|
 | 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. No concept or design | They have answered, and `docs/story/facts.md` holds their answers |
-| 2. Concept | `references/concept.md` | Three concepts, runnable for a requested build, and which you would choose | They have picked one, or told you to pick, and `docs/story/concepts.md` says which |
+| 2. Concept | `references/concept.md`, `references/diagrams.md` | Three concepts, runnable for a requested build, and which you would choose | They have picked one, or told you to pick, and `docs/story/concepts.md` says which |
 | 3. Storyboard | `references/storyboard.md` | The script of the whole page | They have said yes to it |
 | 4. Spine | `references/building.md`, `engine/README.md` | A runnable opening, middle and ending in two or three looks | They have chosen a look |
 | 5. Chapters | `references/building.md` | The remaining chapters and three whole-beat wording versions | They have chosen the wording |
