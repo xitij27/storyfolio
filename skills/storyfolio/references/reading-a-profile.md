@@ -77,7 +77,7 @@ One message, which is the whole of your reply:
    - What must not be shown?
    - Where have you lived, what did you study, and where have you worked, with the years, wherever the material does not say?
    - What do you work with and make, day to day, by the names you call them?
-   - For the pictures: what do you see when you think of where you grew up, of your studies, of a good day at work, and of each job? Things you saw, handled or kept, a sentence each. Their answers, not the labels on their CV, are what the scenes are made from.
+   - For the pictures, in working terms: what does your work look like when it goes well, in the screens, systems, devices, drawings or sites involved? In each role and in your studies, what did you build, run or work on that a colleague would recognise? What one picture would explain a project to a colleague? A sentence each. Their answers, not the labels on their CV, are what the scenes are made from. The site is for clients and employers, so the pictures stay in their working world, not their private life.
    - What did you learn from?
    - If they have a site already: what becomes of it?
 4. No concept, outline or look. For a requested build, a brief setup limit or optional-tooling note may accompany the fact questions.
