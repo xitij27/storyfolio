@@ -3,7 +3,9 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author direction: [23 October, a library of components, published as GitHub Pages](2026-10-23-component-library.md).
+Newest author direction: [23 October, focus on transitions: how one 3D picture becomes the next](2026-10-23-transitions-focus.md).
+
+Earlier author direction: [23 October, a library of components, published as GitHub Pages](2026-10-23-component-library.md).
 
 Newest author verdict: [23 October, the diagrams are crude; a library of diagrams?](2026-10-23-crude-diagrams.md).
 
