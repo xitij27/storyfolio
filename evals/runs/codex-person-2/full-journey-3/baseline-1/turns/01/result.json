@@ -1,0 +1,790 @@
+{
+  "turn": 1,
+  "taskKind": "full-journey",
+  "requestedStop": 1,
+  "complete": true,
+  "durationMs": 123691,
+  "sessionId": "01a1662f-574d-78a2-a48b-ddf9b7c92628",
+  "usage": {
+    "input_tokens": 279474,
+    "cached_input_tokens": 246784,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4869,
+    "reasoning_output_tokens": 137
+  },
+  "artifacts": {
+    "before/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "before/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "before/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "before/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "before/files/.agents/skills/storyfolio/engine/app/page.tsx": "7c8f8ff73878b47438b5c643683fce943ba26529c64795bb45ac4b2fa3ba5295",
+    "before/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "before/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "before/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "before/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "before/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "before/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "before/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "before/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "before/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "before/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+    "before/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.css": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+    "before/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "before/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "before/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "before/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "before/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "before/files/.agents/skills/storyfolio/engine/content/checks.json": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+    "before/files/.agents/skills/storyfolio/engine/content/copy.ts": "924c0b852bb05782fdac0493f272f59364cd1e900e17f75a007bf33a89cc6cc5",
+    "before/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "before/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+    "before/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "before/files/.agents/skills/storyfolio/engine/content/faces.ts": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+    "before/files/.agents/skills/storyfolio/engine/content/formations.ts": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+    "before/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "before/files/.agents/skills/storyfolio/engine/content/links.ts": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+    "before/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "before/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "before/files/.agents/skills/storyfolio/engine/content/story.ts": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+    "before/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "before/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "before/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "before/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "before/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "before/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "before/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "before/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+    "before/files/.agents/skills/storyfolio/engine/README.md": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "before/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "before/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "before/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "before/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "before/files/.agents/skills/storyfolio/references/building.md": "95276bacbc429072f7fe634fde5c68e22ead374091bcaa7d222394ce136281e8",
+    "before/files/.agents/skills/storyfolio/references/concept.md": "80ca1202899d482607d3ea8565c11aaa8e08d3f4411b37ea6b92d5d82f6529d9",
+    "before/files/.agents/skills/storyfolio/references/reading-a-profile.md": "69116e0a96f74a34a992d2faf28f0a5b451f677321a82a858e839181b9435e24",
+    "before/files/.agents/skills/storyfolio/references/storyboard.md": "186ff810fc38c881c4960301d607ff3fc8ccfccf62cbcefdb8f7f31d8d9bf3db",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "before/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "before/files/.agents/skills/storyfolio/SKILL.md": "8d68afb524f432be448919cb8df3bfaf5ccaacff861a4fc34032cc73cbfa7af9",
+    "before/files/material/linkedin.md": "95d70f38ebc320cecf58e3530cb191eee4017e06fc1cfb56af43835db211d4d5",
+    "before/files/material/old-site.md": "d2897369b440f33c9bb02ea22c1a8647072bbd7a71cab3662677f58e46b92466",
+    "before/files/material/project-notes.md": "70e4466c4d09e90e1b553f1cec710e26383f31aff4c829f018e8a6698e400478",
+    "before/files/material/resume.md": "72e96cce2a83a4425f1eee48d42a0b385956a9d962963b22c868a233a35a3c59",
+    "before/manifest.json": "9755f6cceca417fa94b2ac02dbb35cdc45d9ce399589333799580c027f3d34c5",
+    "process.json": "d8d58c40adee403877ab50a529958249bdfa1ab2359dc959aac6c7124b2186fe",
+    "prompt.md": "67ebeb11f6279b12147ebdce02170415c0a3493501713445f496a119f2304f86",
+    "reply.md": "7564ab09bde98ca10fdd34e3728be088fcc62a62c4cf11d7f1267c0b1c3b3f58",
+    "snapshot/files/.agents/skills/storyfolio/engine/.gitignore": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+    "snapshot/files/.agents/skills/storyfolio/engine/AGENTS.md": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/globals.css": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/layout.tsx": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/page.tsx": "7c8f8ff73878b47438b5c643683fce943ba26529c64795bb45ac4b2fa3ba5295",
+    "snapshot/files/.agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+    "snapshot/files/.agents/skills/storyfolio/engine/CLAUDE.md": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/chapter.tsx": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/conductor.tsx": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/controls.tsx": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/extra-frame.tsx": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/face-material.ts": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/faces.ts": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/look-switch.tsx": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/meter.tsx": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/overlay.tsx": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/pieces.tsx": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/rail.tsx": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/scene.tsx": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/stage.tsx": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.css": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/story.tsx": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/types.ts": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-look.ts": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.test.ts": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/validate.ts": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+    "snapshot/files/.agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/checks.json": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/copy.ts": "924c0b852bb05782fdac0493f272f59364cd1e900e17f75a007bf33a89cc6cc5",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/experience.tsx": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras/middle-line.tsx": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/extras.ts": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/faces.ts": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/formations.ts": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/index.ts": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/links.ts": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/looks.ts": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/sketches/index.ts": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/content/story.ts": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+    "snapshot/files/.agents/skills/storyfolio/engine/eslint.config.mjs": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.test.ts": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/camera.ts": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.test.ts": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/controls.ts": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.test.ts": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/formation.ts": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.test.ts": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/layouts.ts": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.test.ts": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/looks.ts": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.test.ts": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/overlay.ts": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.test.ts": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/quality.ts": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.test.ts": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/rand.ts": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.test.ts": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/story.ts": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.test.ts": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/timeline.ts": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.test.ts": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+    "snapshot/files/.agents/skills/storyfolio/engine/lib/story/typeset.ts": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+    "snapshot/files/.agents/skills/storyfolio/engine/LICENSE": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+    "snapshot/files/.agents/skills/storyfolio/engine/next.config.ts": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+    "snapshot/files/.agents/skills/storyfolio/engine/package-lock.json": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+    "snapshot/files/.agents/skills/storyfolio/engine/package.json": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+    "snapshot/files/.agents/skills/storyfolio/engine/postcss.config.mjs": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+    "snapshot/files/.agents/skills/storyfolio/engine/public/plain/face.svg": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+    "snapshot/files/.agents/skills/storyfolio/engine/README.md": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.mjs": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/check.mjs": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+    "snapshot/files/.agents/skills/storyfolio/engine/scripts/shoot.mjs": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+    "snapshot/files/.agents/skills/storyfolio/engine/tsconfig.json": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+    "snapshot/files/.agents/skills/storyfolio/references/asking.md": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+    "snapshot/files/.agents/skills/storyfolio/references/building.md": "95276bacbc429072f7fe634fde5c68e22ead374091bcaa7d222394ce136281e8",
+    "snapshot/files/.agents/skills/storyfolio/references/concept.md": "80ca1202899d482607d3ea8565c11aaa8e08d3f4411b37ea6b92d5d82f6529d9",
+    "snapshot/files/.agents/skills/storyfolio/references/reading-a-profile.md": "69116e0a96f74a34a992d2faf28f0a5b451f677321a82a858e839181b9435e24",
+    "snapshot/files/.agents/skills/storyfolio/references/storyboard.md": "186ff810fc38c881c4960301d607ff3fc8ccfccf62cbcefdb8f7f31d8d9bf3db",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.mjs": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+    "snapshot/files/.agents/skills/storyfolio/scripts/scaffold.test.mjs": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+    "snapshot/files/.agents/skills/storyfolio/SKILL.md": "8d68afb524f432be448919cb8df3bfaf5ccaacff861a4fc34032cc73cbfa7af9",
+    "snapshot/files/docs/story/decided-for-you.md": "6efd04ffd018aec972feba1f8dd8d32fb7ba95d4b976292f66430aa34d915c20",
+    "snapshot/files/docs/story/facts.md": "47b512c38c4d914d184a0465a5e1576e0189173e285d128d6404f32e787ab1dd",
+    "snapshot/files/docs/story/handover.md": "2709a05598a28f40cc4282e06ee83e364ecc177684dae2003a84bdfadf13895e",
+    "snapshot/files/material/linkedin.md": "95d70f38ebc320cecf58e3530cb191eee4017e06fc1cfb56af43835db211d4d5",
+    "snapshot/files/material/old-site.md": "d2897369b440f33c9bb02ea22c1a8647072bbd7a71cab3662677f58e46b92466",
+    "snapshot/files/material/project-notes.md": "70e4466c4d09e90e1b553f1cec710e26383f31aff4c829f018e8a6698e400478",
+    "snapshot/files/material/resume.md": "72e96cce2a83a4425f1eee48d42a0b385956a9d962963b22c868a233a35a3c59",
+    "snapshot/manifest.json": "18ebb5f1657c257f8475f8d499773db75182c440d0d2cc16de4a89f17b81d679",
+    "started.json": "af409d2164e15050064506535ae50ffaf633db2139c2056efff83b0caa0e44c7",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stream.jsonl": "e20722031ad6bf4241ec1d5fbe10c3e390a7733e6fbf6d97d195453168216cfe"
+  },
+  "completionMeaning": "The actor turn completed. This is not a passed build, reached stop or author approval.",
+  "usageAggregation": "Raw turn.completed usage is preserved. Between turns, reported input_tokens plus output_tokens are summed across actor turns. If configured, maxUncachedTokens separately bounds input_tokens minus cached_input_tokens plus output_tokens; cached input must be a nonnegative safe integer no greater than input. Resumed counters may overlap. No dollar estimate or hard in-flight token cap is inferred.",
+  "commands": [
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/SKILL.md'",
+      "output": "---\nname: storyfolio\ndescription: Use when someone wants a personal portfolio site made from their profile, resume, LinkedIn or GitHub, especially one with 3D, scroll-driven animation or a story, or says their portfolio looks generic, templated or AI-made.\n---\n\n# Storyfolio\n\nMakes one kind of portfolio site: one long scroll that introduces the person in 3D, each chapter's scene a picture of what it is about.\n\nStart from the recorded handover on a continuation. For a requested build, sketch concepts at stop 2; build the chosen site after storyboard approval. A planning-only request still ends at the storyboard.\n\n## Stops\n\nBetween stops you work by yourself. At each stop the person decides one thing. You go on only when their answer is in the conversation and you have written it into the file.\n\n| Stop | First open | You put to the person | You go on when |\n|---|---|---|---|\n| 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. No concept or design | They have answered, and `docs/story/facts.md` holds their answers |\n| 2. Concept | `references/concept.md` | Three concepts, runnable for a requested build, and which you would choose | They have picked one, or told you to pick, and `docs/story/concepts.md` says which |\n| 3. Storyboard | `references/storyboard.md` | The script of the whole page | They have said yes to it |\n| 4. Spine | `references/building.md`, `engine/README.md` | A runnable opening, middle and ending in two or three looks | They have chosen a look |\n| 5. Chapters | `references/building.md` | The remaining chapters and three whole-beat wording versions | They have chosen the wording |\n| 6. Finish | `engine/README.md` | The checked site and what still needs their review | Their actual review is recorded |\n\n**When starting from profile material, your first reply is the first stop, and no more than that.** Brief build-setup notes do not advance the design. People ask for the whole plan at once: the idea, the scroll, the colours. Do not give it yet, and say why in a sentence. A plan made now is made from your reading of a resume, and a resume leaves out exactly what a site must not get wrong: whose result a number was, what a title hides, who took a photograph. Once they have answered you will have a better idea, and it will not have to be taken apart.\n\n## Ask or decide\n\nAsk the person when a thing is:\n\n1. a fact only they know,\n2. a claim that could embarrass them if it were wrong,\n3. taste on what a visitor sees first: the concept, the look, the opening words,\n4. anything that publishes, costs money, or shows another person or an employer's work.\n\nEverything else you decide. Write each decision into `docs/story/decided-for-you.md`: what you decided, why, and how to change it.\n\nIf the person will not answer, or tells you to decide everything, open `references/asking.md`.\n\n## What you keep\n\nIn the person's own folder, so that a later session can go on from the files alone:\n\n| File | Holds |\n|---|---|\n| `docs/story/facts.md` | The fact sheet, each fact with where it came from, and the person's answers |\n| `docs/story/concepts.md` | The three concepts, which was picked, and why |\n| `docs/story/storyboard.md` | The script |\n| `docs/story/decided-for-you.md` | What you decided without asking |\n| `docs/story/handover.md` | What exists, what the person has said, what is next |\n\n## What holds from the first stop on\n\n- **Nothing about the person is invented.** You know that a number, an employer, a title and a quote are facts. So is every small thing a sentence says on its way: what was wrong before they came, how often a thing is used, which came first, why, how a thing was left, what it taught them. That sounds like writing, and it is a claim. Before handing over any reply or file, check each claim against the fact sheet, including introductory summaries, working titles and words in the scene. Read the supporting line and its unresolved questions, not just its reference. It must establish the whole claim: a topic attached to one item does not establish the topic of another. Wording that depends on an unanswered question stays out of the introduction and the planned page, even if copied from a profile. Remove it or list it as a question to confirm. An illustration of the kind of thing they work with, labelled as one, claims nothing: a plated dessert, a status page. A particular design, a measured value or an event does. An empty scene is no safer.\n- **A number is used as the person confirmed it,** with what it measures and whose result it is.\n- **What is someone else's is asked about before it is planned for:** a photograph a photographer took, a friend's drawing, a quote, an employer's screens, a story with a patient or a client in it.\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g '\"'!node_modules'\"' -g '\"'!package-lock.json'\"' -g '\"'!yarn.lock'\"' | head -80\"",
+      "output": "/var/tmp/storyfolio-entry-runtime-20261012/storyfolio-evals/build-full-journey-3-Sio8dr\nmaterial/resume.md\nmaterial/old-site.md\nmaterial/linkedin.md\nmaterial/project-notes.md\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/references/reading-a-profile.md'",
+      "output": "# Reading a profile\n\nThe first stop. You read the profile material, write down what you found, and ask. You do not plan yet.\n\n## Before a requested build\n\nBefore the first factual handoff, verify Node against `engine/README.md`, including native TypeScript execution; check Git; and actually open and inspect a neutral local page with an available browser. Distinguish installed skills from those enabled for this session, using the advertised skill list and relevant local metadata. Record what you ran, what worked and any limits in the handover. Supplied tool paths or another agent's setup are not your checks.\n\nConsider whether a missing skill would materially help this build. If so, give its purpose, source and a source-verified installation route for this agent, noting the evidence's date and limits. Do not guess a route you cannot verify. The person installs or declines; you neither install nor enable it, and carry on with available tools. Recommend nothing when nothing useful is missing.\n\n## What to read\n\n**A folder is not permission to read every file in it.** List filenames first and read the accompanying source notes. Leave private correspondence, contact exports and participant records unopened, even when they are beside profile material. Do not sample their contents to decide whether they belong. Tell the person which files you left. If a file's purpose is unclear, ask what it contains before opening it.\n\nRead the profile material: a resume, a LinkedIn profile, GitHub, writing, talks, notes to you, a site they already have. Read all of that before you write a word.\n\nA site they already have is a source of facts and pictures. What becomes of it is theirs to say, so ask.\n\n## LinkedIn\n\nYou cannot fetch a LinkedIn profile. It turns away anything that is not signed in. It reaches you in one of four ways:\n\n- **A PDF.** On their own profile, in a desktop browser: **More** under their name (some accounts show **Resources**), then **Save to PDF**. The phone app does not have it.\n- **A copy of their data.** **Me**, **Settings & Privacy**, **Data privacy**, **Get a copy of your data**. They can pick only the profile and the positions, and the link then comes by email within minutes. The whole archive can take a day.\n- **The text,** pasted.\n- **Their own browser,** where you have a tool that works it and they have said yes.\n\nThese steps were checked against LinkedIn's help pages on 10 October 2026. The names of its buttons change.\n\n**A copy of their data holds more than a profile.** It has their messages, and everyone they are connected to. Those are other people's words and addresses. The person unzipped a folder: they did not hand you their inbox. Open the files that are about the profile: the profile, positions, education, skills, projects, honours, recommendations. Leave messages and connections unopened, and tell the person that you left them. Nothing from the archive goes into the repository but facts about the person.\n\n## The fact sheet\n\nWrite `docs/story/facts.md`. Beside every fact, write where it came from.\n\n- **Who they are,** in the words they use for themselves.\n- **Where they have lived,** with the years.\n- **What they studied:** where, what and when.\n- **Each job:** the employer, the title, the dates, what they did there, the systems and tools, and the scale.\n- **Each project:** the problem, the approach and its stack, the scale, the result, what they did in it, who else did, what there is to show of it.\n- **Each figure.**\n- **What others have said** of them.\n- **What they learned from:** a book, a person, a first failure.\n- **Each picture, drawing or file** they say they have.\n\n## What one source hides\n\nWhere two sources disagree, you will see it. The mistakes that reach a site are in one line of one resume, where nothing disagrees with it. A team's result reads as theirs. A lab's name suggests work they never did. A photograph has someone else in it.\n\nSo put these to every line of the fact sheet. Where the material does not answer, you have a question for the person.\n\n| Of every | Ask |\n|---|---|\n| Figure | What does it measure, and over what time? Is it measured, modelled or a guess? Whose result is it: theirs, or a team's? |\n| Result of a team, a firm or a club | Were they in it when it happened, and what was their part? |\n| Job, employer or lab | What did they themselves do there, in a sentence of their own? Its name is not an answer, and neither is a line such as \"operations\" or \"supported the team\". |\n| Project | What was it: something in use, a course exercise, a script? Did it ever run anywhere? Who else made it? |\n| Title | Is it what they are on paper, or what they are called? |\n| Picture, drawing or quote | Who made it? Whose is it to use? Who or what does it show? |\n| Story about a patient, a client or a colleague | May it be told at all, and with what left out? |\n| Anything of an employer's | May it be shown? |\n\nEnd the fact sheet with three lists:\n\n- **Gaps.** What a site needs and the material lacks: places lived, education, a role without years or tools, a project without its problem, approach or result, a project with no picture, a job with no outcome. A portfolio built from a line per job says nothing; ask until each piece of work can be explained to a colleague.\n- **Disagreements.** Where two sources differ, with both readings. You do not settle one yourself, and you do not take the one that reads better.\n- **To confirm.** Every question the table raised.\n\n## What you put to the person\n\nOne message, which is the whole of your reply:\n\n1. Two or three sentences on what the material establishes about the person. Describe their own work, not an employer's field. If their responsibilities need confirming, give the employer and listed role without turning its name or their profile slogan into a speciality.\n2. Your questions, numbered, so that they can answer by number. Plain words. Say why you ask wherever that is not plain. Every disagreement and every item under \"To confirm\" is one of them.\n3. These, which no material answers:\n   - Who is the site for, and what should a visitor do when they reach its end?\n   - What must not be shown?\n   - Where have you lived, what did you study, and where have you worked, with the years, wherever the material does not say?\n   - What do you work with and make, day to day, by the names you call them?\n   - For the pictures, in working terms: what does your work look like when it goes well, in the screens, systems, devices, drawings or sites involved? In each role and in your studies, what did you build, run or work on that a colleague would recognise? What one picture would explain a project to a colleague? A sentence each. Their answers, not the labels on their CV, are what the scenes are made from. The site is for clients and employers, so the pictures stay in their working world, not their private life.\n   - What did you learn from?\n   - If they have a site already: what becomes of it?\n4. No concept, outline or look. For a requested build, a brief setup limit or optional-tooling note may accompany the fact questions.\n\nWhen they answer, write each answer into the fact sheet beside its fact, before you do anything else.\n\nEvery question then stands as one of two: answered, in their words, or not answered. One they passed over is not answered, and it stays under \"To confirm\". Silence is not a yes. That they have photographs does not say whose the photographs are.\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat material/resume.md material/linkedin.md material/project-notes.md material/old-site.md'",
+      "output": "DAWIT BEKELE\nStaff Platform Engineer · migrations, databases, reliability\nRotterdam · dawit@example.com\n\nSTAFF PLATFORM ENGINEER, KESTREL FREIGHT, Rotterdam (Aug 2020 to present)\nFreight logistics: order intake, shipment tracking and route planning for a\nroad-freight network. Platform team of six; I lead migrations and on-call.\n- Moved 310 services from two on-premises data centres to managed\n  Kubernetes in a public cloud with zero downtime, in 14 waves over 26 months\n- Postgres 11 to 15 upgrade of the 4 TB orders database using logical\n  replication and application dual writes\n- Author of the company's migration runbook (preflight, shadow, dual write,\n  cutover, soak, decommission), used by 40 teams\n- Reduced on-call pages by 74%\n- Stack: Go, Python, Bash; Kubernetes, Terraform, Helm; Postgres, Kafka;\n  metrics, tracing and SLO-based alerting\n\nSITE RELIABILITY ENGINEER, LUMEN PAY, Amsterdam (Mar 2016 to Jul 2020)\n- On the team that ran the card authorisation path\n\nSYSTEMS ADMINISTRATOR, ENTOTO TECHNICAL UNIVERSITY LIBRARY, Addis Ababa\n(2013 to 2016)\n- Ran the library's open-source catalogue system (Perl, MySQL) on Debian\n  for about 30,000 records and 8,000 borrowers\n- Moved it from one physical server to a primary and a replica in 2015\n- Added nightly dumps and binary-log point-in-time recovery\n\nEDUCATION\nBSc Electrical Engineering, Entoto Technical University, 2009 to 2013\nFinal-year project: a microcontroller data logger for the campus\nsubstation, sampling feeder load every second to an SD card\n\nOPEN SOURCE\nferry (maintainer): github.com/example/ferry, Go CLI for dual-write cutovers\n\nSPEAKING\nBoring Migrations, SRE North 2024, 30 minutes (video online)\n(Saved from LinkedIn as text, October 2026)\n\nDawit Bekele\nStaff Platform Engineer at Kestrel Freight. Migrations, reliability, on-call.\nRotterdam, Netherlands\n\nABOUT\nI move systems that are not allowed to stop. For the last four years that\nhas meant taking Kestrel Freight out of two data centres and into the cloud,\none service at a time, while the trucks kept running. I like migrations that\nare boring on the day.\n\nEXPERIENCE\n\nStaff Platform Engineer, Kestrel Freight, Rotterdam\nAug 2020 to present\n- Led the migration of 310 services out of two data centres, in 26 months\n- 99.98% availability through the migration\n- Upgraded a 4 TB Postgres database across two major versions with dual\n  writes and no maintenance window\n- Wrote the migration runbook now used by 40 teams\n- On-call lead: pages per week from 85 to 22\n\nSite Reliability Engineer, Lumen Pay, Amsterdam\nMar 2016 to Jul 2020\n- Card payment systems\n\nSystems Administrator, Entoto Technical University Library, Addis Ababa\n2013 to 2016\n\nEDUCATION\nEntoto Technical University. BSc Electrical Engineering, 2009 to 2013\n\nPROJECTS\nferry. Command-line tool for dual-write cutovers. 1.2k stars on GitHub.\n\nTALKS\n\"Boring Migrations\", SRE North 2024\n(My own notes, written for whoever builds my site. October 2026.)\n\nTHE DATA-CENTRE EXIT, Kestrel Freight, Aug 2020 to Oct 2022\nProblem: two data centres with leases ending in late 2022, 310 services,\nand order intake and shipment tracking that must not stop: trucks are\ndispatched from them around the clock.\nApproach: I wrote the plan and sequenced it. Services were grouped by\ndependency into 14 waves. Each service went through the runbook: a\ndependency map and a rehearsed rollback in preflight, mirrored read\ntraffic in shadow, dual writes for anything with state, then traffic moved\nby weighted routing at 1, 10, 50 and 100 per cent, watched against its SLO,\nand two weeks of soak before the old instances were switched off.\nScale: 310 services, 14 waves, 26 months, about 60 engineers across teams.\nResult: both data centres closed on schedule. Order API availability\nthrough the programme: 99.98%.\nWhat it looks like: a wave map of the services moving from the two sites\ninto one cluster; for each cutover, the old side's request rate falling as\nthe new side's rises, with the error rate flat beneath them.\n\nTHE ORDERS DATABASE, Kestrel Freight, 2022\nProblem: Postgres 11 was going out of support; the orders database was\n4 TB and is written to every second.\nApproach: a new Postgres 15 cluster fed by logical replication; the order\nservice wrote to both through ferry; a checksum job compared both every\nhour for three weeks; then reads moved, then writes, with the old cluster\nkept warm as the way back for a month.\nResult: done with no maintenance window. I led it with one database\nengineer.\nWhat it looks like: every write fanning out to two databases, the\nchecksums matching, then the old one going dark.\n\nTHE RUNBOOK, 2021 to now\nProblem: every team migrated differently, and the failures were always in\nthe steps people skipped.\nApproach: six stages, each with an exit check: preflight, shadow, dual\nwrite, cutover, soak, decommission. A service cannot enter a stage until\nthe last one's check has passed.\nResult: I wrote the first version and own it; 40 teams use it.\nWhat it looks like: a service travelling along the six stages, stopping at\neach gate until its check turns green.\n\nON-CALL, 2021 to 2022\nProblem: the platform on-call rota was paged 85 times a week.\nApproach: the nine of us on the rota went through every alert; we deleted\nthe ones nobody acted on, and replaced threshold alerts with SLO burn-rate\nalerts on the services that mattered.\nResult: 22 pages a week after about a year.\nWhat it looks like: the weekly page count falling, step by step.\n\nFERRY, maintainer since 2022\nA Go command-line tool for dual-write cutovers. A former colleague wrote\nit in 2019. I maintain it and wrote its cutover command, which checks\nreplication lag and checksum parity, switches the write target, and keeps\nthe old target ready as a fallback for a set window. 1.2k stars.\nWhat it looks like: one command switching the write path, with the way\nback still open.\n\nBORING MIGRATIONS, SRE North 2024\nThirty minutes on why a good migration is uneventful: the runbook, the\nrehearsed rollback, and the exit checks. I open with the table I dropped\nat the library in 2014, a cleanup script run against production instead\nof staging. The catalogue was down for six hours; the restore came from\nthe night's dump, and a day of loans was re-entered from paper slips.\n\nTHE LIBRARY, 2013 to 2016\nThe first production system I ran. After 2014 I added binary-log\npoint-in-time recovery and, in 2015, a replica, so that the next mistake\nwould cost minutes, not a day.\n\nMY DEGREE\nElectrical engineering. My final-year project logged the campus\nsubstation's feeder load every second to an SD card; it taught me that\ndata you cannot lose needs a second copy before it needs anything else.\n(The text of my current site. One page, made in 2019.)\n\nDawit Bekele. SRE.\n\nI keep things running.\n\nSkills: Linux, Kubernetes, Terraform, Postgres, Go, Python.\n\nContact: dawit@example.com\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files -g AGENTS.md -g 'docs/**' -g '.*' | head -60\"",
+      "output": ".agents/skills/storyfolio/engine/AGENTS.md\n.agents/skills/storyfolio/engine/.gitignore\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'cat .agents/skills/storyfolio/engine/README.md; ls -a; node --version; git --version; which chromium chromium-browser google-chrome firefox; npm --version'",
+      "output": "# Storyfolio engine\n\nA starting project for one scroll and one story in 3D: shared pieces for what carries on\nthrough the story, and a scene of its own for each chapter.\nThe supplied page is a placeholder that tests the engine: one sheet whose\npicture changes by chapter. It has no design in it; replace all of `content/`.\n\nTaken from V3 at `163b8ceb302b7b4e5beeff8f1161f4cdc7663b15` and made\nindependent of that site's content, paper shapes and assets. The source\nproject is unchanged. Storyfolio's engine and generated SVGs are MIT licensed.\n\n## Start\n\nUse Node 22.18 or later with native TypeScript support. Scaffold this folder\nwith `node <installed-skill>/scripts/scaffold.mjs <site-folder>`. Existing\n`docs/story/` files are kept; any conflicting engine path aborts the copy.\nThen, in the new site folder:\n\n```bash\nnpm ci\nnpm run browsers\nnpm run dev\n```\n\nOpen the local address printed by Next.js. Append `?look=dark` to choose a\nlook and `?fps` to show the frame meter. The appearance switch preserves\nother query parameters, the fragment and the current scroll position.\nRead the frame meter on a real phone; software rendering in a headless\nbrowser does not measure phone performance.\n\nNever install dependencies inside an installed skill. The copied project\nbelongs to the person, has its own lockfile, and does not depend on the\nskill after scaffolding. System fonts make builds independent of remote\nfont services. Add licensed local files with `next/font/local` if needed;\nthe scene starts without waiting for them and redraws faces when fonts load.\n\n## From storyboard to content\n\n`lib/story/` contains pure, tested calculations. `components/story/` owns\nthe browser and scene. The person's story belongs in `content/`:\n\n| File | Storyboard input |\n|---|---|\n| `story.ts` | Chapter IDs, names, roles, beat IDs and screen heights; one fixed piece count |\n| `formations.ts` | A rest formation for every beat; optional `within` formation reached as its rest is scrolled |\n| `faces.ts` | Pictures or canvas drawing functions for a beat and piece |\n| `copy.ts` | Metadata, language, labels and complete HTML text |\n| `looks.ts` | Ground, text and surface colors, lights and matte/no floor |\n| `extras.ts` | Each chapter's own scene: lazy imports, each in its own error boundary |\n| `links.ts` | Ordinary HTML links over a named piece at a named beat |\n| `checks.json` | Optional checks of capabilities this fixture exercises |\n\nUse `as const satisfies StoryDef` for the story and\n`satisfies Record<BeatId, BeatFormation>` for formations. `checkStory`\nalso rejects invalid IDs, heights, piece counts and face references at\nruntime. A formation contains one position, rotation and size per piece,\nplus framing. `layouts.ts` supplies stack, fan, ring, grid, row and seeded\nscatter; `measure` bounds their rotated faces. Depth, a custom shape's\nextent and a whole formation's turn can require extra framing room.\n\nThe HTML in `app/page.tsx` follows the same beat order using `Chapter` and\n`Beat`. A `Beat` can carry a static `fallback` image or diagram. Keep one\n`h1`, stable chapter heading IDs and every factual claim in HTML. The check\nscript verifies the rendered beat IDs against the content contract.\n\nThe bundle type is in `components/story/types.ts`. Import a bundle inside a\nclient component, as `content/experience.tsx` does, and pass server-rendered\nHTML as children. Bundles contain drawing functions and component loaders,\nso cannot be serialized across a server/client prop boundary.\n\nA custom `Piece` component receives its index, face material and look.\nBuild it at unit width/height centered at the origin. Its parent group gets\nthe formation's position, rotation and width/height scale each frame. Keep\nmaterials present from the first frame. Extras receive the shared frame,\nlook, reduced-motion flag and control store, and stay mounted from a beat\nbefore their chapter to a beat after it. Drive each with\n`chapterPresence(story, chapter, frameRef.current.beat)` from\n`lib/story/story.ts`, 0 to 1 over the travel in and back to 0 over the travel\nout: let it grow, unfold, fly in or turn into the next scene with that value,\nso that one chapter's scene grows out of the last. Never switch one on or off\nat a chapter's edge. Their shapes are children of the formation group.\n\nUse `useExtraFrame` from `components/story/extra-frame.tsx` for an extra's\nframe callback. It receives the same state, delta and optional XR frame as\nReact Three Fiber's `useFrame`. A synchronous exception disables that\ncallback immediately and unmounts its owning extra, leaving the core scene,\nother extras and HTML running. Each extra also has a React boundary for\nrender failures and rejected lazy imports. For example:\n\n```tsx\nuseExtraFrame(() => {\n  const shown = chapterPresence(story, \"middle\", frameRef.current.beat);\n  if (line.current) line.current.scale.x = Math.max(shown, 0.001);\n});\n```\n\n`content/extras/middle-line.tsx` uses this hook. A raw third-party `useFrame`\ncallback, timer, event handler or rejected asynchronous task does not pass\nthrough this guard. Handle failures at those boundaries explicitly;\nwrapping a component in a React boundary does not catch them.\n\nFor caption controls, use `useControl` or `useControls` from\n`components/story/controls.tsx` in a client component. Real controls remain\nHTML. The canvas takes no pointer events. Overlay links are hidden and\nremoved from keyboard navigation outside their beat; supply the same\ndestination in the text for fallback access.\n\nFor a sketch, add a client component importing its own bundle and HTML to\n`content/sketches/index.ts`. Its key becomes `/sketch/<id>`. The initial\nregistry is empty and unknown keys return 404.\n\n## Check\n\n```bash\nnpm test\nnpm run typecheck\nnpm run lint\nnpm run check\n```\n\n`check` builds, starts its own production server on a free local port,\nruns the browser matrix and stops only that process group. It writes a\nmanifest, logs, reports and screenshots under `checks/<timestamp>/` and\nreturns a failure exit code for failed checks. `PLAYWRIGHT_BROWSERS_PATH`\nselects an optional shared browser cache. `PLAYWRIGHT_CORE` is an optional\noverride; normally the installed local package provides the browser tool.\n\nThe matrix checks both looks at wide, short and phone sizes, reduced\nmotion, no WebGL and no JavaScript. Optional plain-story probes exercise\nkeyboard access and failed chapter loading. Context loss checks the HTML\nfallback. Wide captures include the beginning, middle and end of each\nbeat's rest; reduced-motion captures also check that a stationary scene\nstays still. Open every screenshot for overlap, clipping, legibility and\nframing. Automatic passes do not replace visual review.\n\nFor a focused investigation use `npm run check -- --only=light-phone`.\n`--skip-build` checks a previously built app and is diagnostic only.\nNeither establishes a fresh full acceptance run. `scripts/shoot.mjs`\ndocuments individual screenshots, blocked requests, look switching,\noverflow and shader checks.\n\nNo JavaScript leaves the server-rendered text. No WebGL or a failed scene\nleaves ordinary text and any beat's static image. Reduced motion cuts\nbetween poses, including within-beat formations, without idle movement.\nThe scene pauses offscreen, caps sharpness on touch devices and steps down\nquality when measured frames stay slow.\n.\n..\n.agents\n.aws\n.codex\n.git\nmaterial\nv22.22.1\ngit version 2.53.0\n(node:2) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\n9.2.0\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"ls /tmp; ls /opt; printenv PLAYWRIGHT_BROWSERS_PATH; npm list -g --depth=0; rg --files .agents .codex | head -45; git status --short; node --input-type=module -e 'import {writeFileSync,unlinkSync} from \\\"node:fs\\\"; const p=\\\"/tmp/storyfolio-native-check.ts\\\"; writeFileSync(p,\\\"const n: number = 7; console.log(n);\\\\n\\\"); await import(p); unlinkSync(p);'\"",
+      "output": "00506fa6a4230f6647bbb5819a181bff\n037118a49f9e87aba229599042be1802\n057c4488e7a03be2427c378f4b5e7e89\n0a605cef9a6309865d620c3057c064a6\n0af71b7133c2420aaf159a9ec05327ea\n1002194c0038f5a8de58efb072f4cf5f\n11f0865d38116bd79d722ba93f8a71e7\n1b6d60ee67dc6299db40e4a2f53b5aba\n224abe2f5b68eec0b17fccb666250d00\n238eee92723bd94e57dd41633bb40dc2\n2593cf8e4b1bd0fa60a0e030e0d00c53\n2b3d0df29f0626495d42faa0bee3aaa6\n2f7c504161e740ec72d457014aced2b4\n2f82b5bef0e698a4b462d976e5a1673e\n34a21157285de52528b040c78bce9af2\n3593fcbcecaefd3574daf3edff5c9e02\n452b1ea9c3f0ec1f4fd476666a6078d8\n46b04bac976d7bb7105b23168e996c62\n48fbb7d9fd1cfe43022684d5ee224c1b\n4f65bb597fe00812c87d24589270b72b\n5cbcd6c69e134b396c7ed797f15b34bf\n6900a8c46da37735f135375f083a9f71\n6bfbdcd024b39fd0aada2bc0f02d5cd1\n6d89b8ac05a267603c29f6497970c9a9\n736eed317e62a8e85409223a015a5d9d\n7ace1c71b69e4c412828df7230ee2ece\n81e02c216725a1a21144b0458aa165ae\n83c0870357a51a3703ac371c4f5c9c80\n851854edafd6b1d1539523c4567d92c5\n868311eb3ca567def599dd4a40ad1ad8\n894e771034139cde76b255534d8ac71a\n89a327c188f90a781c91fcc5fb7b4b82\n8ce59b2a682188139a650451ba41d4a1\n8dd7fb9507846c6a3e84820fc86776f3\n8e581dbb6bdb77ba42a5b3832385d4f1\n9089602a4f13a5b5b697302d44795079\n9511954e10b63350779333460499b865\n9b716ebc0a34e9a332e6012a86722134\na194de0492566c4c6112c013a9b4caff\na1be3faecf943e4966a616613ea46d37\na2c4aaab9770c1f1fbde39cc10aa8871\naa5600b197c3fa78d9f467a3c73ae50a\nac7f93b6e76165581b37560cfa871862\nada-chapters-build.log\nada-chapters-final-lint.log\nada-chapters-final-typecheck.log\nada-chapters-lint.log\nada-chapters-test.log\nada-chapters-typecheck.log\nada-finish-lint.log\nada-finish-tests.log\nada-finish-types.log\nada-native-check.ts\nada-sketch-server.log\nada-spine-build.log\nada-spine-lint.log\nada-spine-test.log\nada-spine-typecheck.log\nada-wording-final-build.log\nada-wording-lint.log\nada-wording-tests.log\nadb.1000.log\nb812f4679f3828f264b900ab28ebab6e\nc2a4cf611339770af2841ceb1f72011f\ncf3aa6bef0b27101a9d79690ae454d6a\nclaude-1000\ncodex-daemon-1000\nd5c782a09d39f442ebb16c88332ab432\nd8b38e55daf51bd7537ba2060e3a6669\ne314ec2869c63374aee9df8e0906a681\ne5f23377b026a991c2e69183319ddf8d\nevent-log-1000\nf0d53171a4de818e76a10be7ad16aaf8\nf60b0efd00c4b27946c52331fd93feab\nfd0edaaa2a958e78cc2a8be56c315436\nhsperfdata_kshitij\njest_rs\nkotlin-daemon.2026-10-16.14-40-38-388.00.log\nkotlin-daemon.2026-10-16.14-40-49-488.00.log\nkotlin-daemon.2026-10-16.14-42-56-947.00.log\nkotlin-daemon.2026-10-16.14-42-56-947.01.log\nkotlin-daemon.2026-10-16.14-59-15-172.00.log\nkotlin-daemon.2026-10-16.14-59-15-172.01.log\nmcp-cGu12I\nmcp-kaRGII\nmcp-njUoBe\nmetro-cache\nmetro-file-map-expo-e01c2b528e38941fff0b6125cebf401d-39d8419c349eebf11f75e62852378719\nnode-compile-cache\nnode-jiti\npuppeteer_dev_chrome_profile-csMZXH\npuppeteer_dev_chrome_profile-hgvS6o\npuppeteer_dev_chrome_profile-uhtTLH\npytest-of-kshitij\nsnap-private-tmp\nstoryfolio-browser-cache\nstoryfolio-browser-libs\nstoryfolio-build-capability-20261011\nstoryfolio-node-check-20261011\nstoryfolio-npm-cache\nstoryfolio-setup\nstoryfolio-sheet-cli-0hgeWD\nstoryfolio-sheet-cli-2dwhdq\nstoryfolio-sheet-cli-3dtkLr\nstoryfolio-sheet-cli-53GZDn\nstoryfolio-sheet-cli-6BiVZS\nstoryfolio-sheet-cli-82bw0R\nstoryfolio-sheet-cli-9y6Ogn\nstoryfolio-sheet-cli-CAcwQt\nstoryfolio-sheet-cli-CNlRB1\nstoryfolio-sheet-cli-DHafnP\nstoryfolio-sheet-cli-E3EfAv\nstoryfolio-sheet-cli-Eavmal\nstoryfolio-sheet-cli-KJWrf8\nstoryfolio-sheet-cli-MuSUtl\nstoryfolio-sheet-cli-PHDSMW\nstoryfolio-sheet-cli-QaDvbI\nstoryfolio-sheet-cli-RbKuzx\nstoryfolio-sheet-cli-SDa2ax\nstoryfolio-sheet-cli-UbTA4s\nstoryfolio-sheet-cli-VJ3pA6\nstoryfolio-sheet-cli-YMnAPv\nstoryfolio-sheet-cli-YtSltq\nstoryfolio-sheet-cli-Zz3gx5\nstoryfolio-sheet-cli-cQAwNL\nstoryfolio-sheet-cli-dPk5vw\nstoryfolio-sheet-cli-ftap0l\nstoryfolio-sheet-cli-h80wlX\nstoryfolio-sheet-cli-iBS4xo\nstoryfolio-sheet-cli-jSOABF\nstoryfolio-sheet-cli-mPdRSi\nstoryfolio-sheet-cli-mSY66o\nstoryfolio-sheet-cli-nHnO13\nstoryfolio-sheet-cli-orPX27\nstoryfolio-sheet-cli-pwL14S\nstoryfolio-sheet-cli-zL7vAB\nstoryfolio-sheet-failure-5JUjvd\nstoryfolio-sheet-failure-8LWZdT\nstoryfolio-sheet-failure-9WSsMt\nstoryfolio-sheet-failure-AgD4xB\nstoryfolio-sheet-failure-B7yR44\nstoryfolio-sheet-failure-FnefMK\nstoryfolio-sheet-failure-FqnVI5\nstoryfolio-sheet-failure-G6CGnx\nstoryfolio-sheet-failure-I6RRAE\nstoryfolio-sheet-failure-IfVhtk\nstoryfolio-sheet-failure-InGpVs\nstoryfolio-sheet-failure-L4RRbe\nstoryfolio-sheet-failure-NvKssU\nstoryfolio-sheet-failure-OmGXzH\nstoryfolio-sheet-failure-SGmrea\nstoryfolio-sheet-failure-SXm4nM\nstoryfolio-sheet-failure-Wjg4Jp\nstoryfolio-sheet-failure-XEhjjN\nstoryfolio-sheet-failure-XNjqVS\nstoryfolio-sheet-failure-XvbsE0\nstoryfolio-sheet-failure-aMnNsM\nstoryfolio-sheet-failure-bGQkNN\nstoryfolio-sheet-failure-ed5xqp\nstoryfolio-sheet-failure-fG6dw5\nstoryfolio-sheet-failure-hiMZd1\nstoryfolio-sheet-failure-hinLsP\nstoryfolio-sheet-failure-hvMwBh\nstoryfolio-sheet-failure-ksFiaB\nstoryfolio-sheet-failure-r9HlcY\nstoryfolio-sheet-failure-sb4kFC\nstoryfolio-sheet-failure-u8kwBf\nstoryfolio-sheet-failure-vah4lO\nstoryfolio-sheet-failure-wJcszJ\nstoryfolio-sheet-failure-wKnr7w\nstoryfolio-sheet-failure-wpl8cF\nstoryfolio-sheet-test-2fqg6q\nstoryfolio-sheet-test-55co2A\nstoryfolio-sheet-test-5O1qOD\nstoryfolio-sheet-test-9edPiw\nstoryfolio-sheet-test-Fk7c5s\nstoryfolio-sheet-test-FxZVX8\nstoryfolio-sheet-test-GTntCd\nstoryfolio-sheet-test-IP7flf\nstoryfolio-sheet-test-Izezmc\nstoryfolio-sheet-test-JayFXG\nstoryfolio-sheet-test-LlLu0U\nstoryfolio-sheet-test-NBdM8E\nstoryfolio-sheet-test-OQ6RBw\nstoryfolio-sheet-test-QoyZie\nstoryfolio-sheet-test-TdbTT7\nstoryfolio-sheet-test-VAovEx\nstoryfolio-sheet-test-VBxadV\nstoryfolio-sheet-test-XF5pWc\nstoryfolio-sheet-test-aCj88G\nstoryfolio-sheet-test-aFIcVd\nstoryfolio-sheet-test-b5RbsM\nstoryfolio-sheet-test-biut8f\nstoryfolio-sheet-test-dUftDT\nstoryfolio-sheet-test-gNmAg1\nstoryfolio-sheet-test-k0QnAH\nstoryfolio-sheet-test-kWYjNS\nstoryfolio-sheet-test-n6SAbd\nstoryfolio-sheet-test-pRKd7n\nstoryfolio-sheet-test-r9MGCc\nstoryfolio-sheet-test-rvVY8M\nstoryfolio-sheet-test-sdTImJ\nstoryfolio-sheet-test-th8d3Y\nstoryfolio-sheet-test-ulfgBu\nstoryfolio-sheet-test-vhRPai\nstoryfolio-sheet-test-ziJ3uD\nstoryfolio-spine-lint.log\nstoryfolio-spine-typecheck.log\nsystemd-private-b4ddf5e9c42b41efbc48cca7df20499c-chrony.service-mEotlU\nsystemd-private-b4ddf5e9c42b41efbc48cca7df20499c-polkit.service-38YcSb\nsystemd-private-b4ddf5e9c42b41efbc48cca7df20499c-systemd-logind.service-QVKwKO\ntmp.649FrcDPnT\ntmp53di03qg\ntmp5ocunbg0\ntmp8ejnjfd3\ntmp_g46fk1_\ntmp_imcstqm\ntmpf36ggvyl\ntmpi09aefeo\ntmpjnujcgnh\ntmpjq9eut15\ntmpjujef3of\ntmpo73n4_2l\ntmpow4b_6du\ntmpqf26051w\ntmpqyazpfjp\ntmprrv0kfrh\ntmpuepngrlx\ntmpulq4_jn6\ntmpxn1yzdjq\nv8-compile-cache-1000\nvscode-typescript1000\n/tmp/storyfolio-browser-cache\n(node:12) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\n/home/kshitij/.npm-global/lib\n└── vercel@64.4.0\n\n.agents/skills/storyfolio/SKILL.md\n.agents/skills/storyfolio/scripts/scaffold.test.mjs\n.agents/skills/storyfolio/engine/AGENTS.md\n.agents/skills/storyfolio/engine/eslint.config.mjs\n.agents/skills/storyfolio/engine/LICENSE\n.agents/skills/storyfolio/engine/package.json\n.agents/skills/storyfolio/engine/CLAUDE.md\n.agents/skills/storyfolio/scripts/scaffold.mjs\n.agents/skills/storyfolio/engine/README.md\n.agents/skills/storyfolio/engine/package-lock.json\n.agents/skills/storyfolio/engine/postcss.config.mjs\n.agents/skills/storyfolio/engine/lib/story/looks.ts\n.agents/skills/storyfolio/engine/lib/story/controls.test.ts\n.agents/skills/storyfolio/engine/lib/story/story.test.ts\n.agents/skills/storyfolio/engine/lib/story/formation.test.ts\n.agents/skills/storyfolio/engine/lib/story/story.ts\n.agents/skills/storyfolio/engine/lib/story/timeline.test.ts\n.agents/skills/storyfolio/engine/lib/story/quality.test.ts\n.agents/skills/storyfolio/engine/lib/story/controls.ts\n.agents/skills/storyfolio/engine/lib/story/layouts.ts\n.agents/skills/storyfolio/engine/lib/story/rand.test.ts\n.agents/skills/storyfolio/engine/lib/story/quality.ts\n.agents/skills/storyfolio/engine/lib/story/timeline.ts\n.agents/skills/storyfolio/engine/lib/story/typeset.ts\n.agents/skills/storyfolio/engine/lib/story/overlay.test.ts\n.agents/skills/storyfolio/engine/lib/story/camera.test.ts\n.agents/skills/storyfolio/engine/lib/story/looks.test.ts\n.agents/skills/storyfolio/engine/lib/story/typeset.test.ts\n.agents/skills/storyfolio/engine/lib/story/camera.ts\n.agents/skills/storyfolio/engine/lib/story/layouts.test.ts\n.agents/skills/storyfolio/engine/lib/story/rand.ts\n.agents/skills/storyfolio/engine/lib/story/formation.ts\n.agents/skills/storyfolio/engine/next.config.ts\n.agents/skills/storyfolio/engine/tsconfig.json\n.agents/skills/storyfolio/engine/lib/story/overlay.ts\n.agents/skills/storyfolio/references/reading-a-profile.md\n.agents/skills/storyfolio/references/asking.md\n.agents/skills/storyfolio/references/building.md\n.agents/skills/storyfolio/references/storyboard.md\n.agents/skills/storyfolio/references/concept.md\n.agents/skills/storyfolio/engine/scripts/check-lib.mjs\n.agents/skills/storyfolio/engine/scripts/shoot.mjs\n.agents/skills/storyfolio/engine/scripts/check.mjs\n.agents/skills/storyfolio/engine/scripts/check-lib.test.mjs\n.agents/skills/storyfolio/engine/public/plain/face.svg\nfatal: not a git repository (or any of the parent directories): .git\n(node:2) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.\n(Use `node --trace-warnings ...` to show where the warning was created)\n7\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'ls /tmp/storyfolio-setup; ls /tmp/storyfolio-browser-cache; ls /tmp/storyfolio-browser-libs; cat .agents/skills/storyfolio/engine/package.json; ls .codex'",
+      "output": "browser.png\nchrome-profile\ndesktop-concepts.jpg\nfinal-desktop.jpg\nfinal-phone.jpg\nindex.html\nphone-concepts.jpg\nprobe.ts\nshell-profile\nchromium-1248\nchromium_headless_shell-1248\nffmpeg-1013\nroot\n{\n  \"name\": \"storyfolio-site\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"engines\": {\n    \"node\": \">=22.18\"\n  },\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"eslint\",\n    \"typecheck\": \"next typegen && tsc --noEmit\",\n    \"test\": \"node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \\\"lib/**/*.test.ts\\\" \\\"scripts/*.test.mjs\\\" \\\"components/story/*.test.ts\\\"\",\n    \"check\": \"node scripts/check.mjs\",\n    \"browsers\": \"playwright-core install chromium\"\n  },\n  \"dependencies\": {\n    \"next\": \"16.3.8\",\n    \"react\": \"19.2.4\",\n    \"react-dom\": \"19.2.4\",\n    \"three\": \"0.180.0\",\n    \"@react-three/fiber\": \"9.6.1\"\n  },\n  \"devDependencies\": {\n    \"tailwindcss\": \"4.3.2\",\n    \"@tailwindcss/postcss\": \"4.3.2\",\n    \"typescript\": \"5.9.3\",\n    \"eslint\": \"9.39.4\",\n    \"eslint-config-next\": \"16.3.8\",\n    \"@types/three\": \"0.180.0\",\n    \"@types/react\": \"19.2.17\",\n    \"@types/react-dom\": \"19.2.3\",\n    \"@types/node\": \"22.20.5\",\n    \"playwright-core\": \"1.64.0\"\n  }\n}\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc \"mkdir -p docs/story /tmp/dawit-local-check; python3 - <<'PY'\nfrom pathlib import Path\nPath('/tmp/dawit-local-check/index.html').write_text('<\"'!doctype html><html lang=\"en\"><title>Local setup check</title><body style=\"font:24px system-ui;padding:60px\"><h1>Local browser check</h1><p>Neutral page. No portfolio content.</p></body></html>'\"')\nPY\nLD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu /tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome --headless --no-sandbox --disable-gpu --screenshot=/tmp/dawit-local-check/browser.png --dump-dom file:///tmp/dawit-local-check/index.html\"",
+      "output": "[1023/023611.936511:ERROR:chrome/app/chrome_main.cc:210] Failed to create headless user data directory container.\n",
+      "exitCode": 1
+    },
+    {
+      "command": "/bin/bash -lc 'LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu /tmp/storyfolio-browser-cache/chromium-1248/chrome-linux64/chrome --headless --no-sandbox --disable-gpu --user-data-dir=/tmp/dawit-local-check/profile --screenshot=/tmp/dawit-local-check/browser.png --dump-dom file:///tmp/dawit-local-check/index.html'",
+      "output": "chrome_crashpad_handler: --database is required\nTry 'chrome_crashpad_handler --help' for more information.\n[2:2:1023/023615.692050:ERROR:third_party/crashpad/crashpad/util/linux/socket.cc:120] recvmsg: Connection reset by peer (104)\n",
+      "exitCode": 133
+    },
+    {
+      "command": "/bin/bash -lc 'LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu /tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-linux/headless_shell --no-sandbox --disable-gpu --user-data-dir=/tmp/dawit-local-check/shell-profile --screenshot=/tmp/dawit-local-check/browser.png --dump-dom file:///tmp/dawit-local-check/index.html'",
+      "output": "/bin/bash: line 1: /tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-linux/headless_shell: No such file or directory\n",
+      "exitCode": 127
+    },
+    {
+      "command": "/bin/bash -lc 'rg --files /tmp/storyfolio-browser-cache/chromium_headless_shell-1248 | head -10'",
+      "output": "/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/ABOUT\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/LICENSE.headless_shell\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/deb.deps\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/headless_command_resources.pak\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/headless_lib_data.pak\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/headless_lib_strings.pak\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/hyphen-data/hyph-af.hyb\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/hyphen-data/hyph-as.hyb\n/tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/hyphen-data/hyph-be.hyb\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'LD_LIBRARY_PATH=/tmp/storyfolio-browser-libs/root/usr/lib/x86_64-linux-gnu /tmp/storyfolio-browser-cache/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --no-sandbox --disable-gpu --user-data-dir=/tmp/dawit-local-check/shell-profile --screenshot=/tmp/dawit-local-check/browser.png --dump-dom file:///tmp/dawit-local-check/index.html'",
+      "output": "[1023/023626.861409:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to open socket: Operation not permitted\n[1023/023626.862202:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to open socket: Operation not permitted\n[1023/023626.896111:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to open socket: Operation not permitted\n[1023/023626.896270:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to open socket: Operation not permitted\n[1023/023626.896328:ERROR:net/base/address_tracker_linux.cc:224] Could not create NETLINK socket: Operation not permitted (1)\n[1023/023626.900992:ERROR:device/udev_linux/udev_watcher.cc:51] Failed to initialize a udev monitor.\n[1023/023626.932917:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1655] drmGetDevices2() has not found any devices\n[1023/023626.936370:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.\n[1023/023626.937688:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n[1023/023626.937802:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to open socket: Operation not permitted\n[1023/023626.937972:WARNING:device/bluetooth/dbus/bluez_dbus_manager.cc:209] Floss manager service not available, cannot set Floss enable/disable.\n[1023/023626.947355:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: \n<!DOCTYPE html>\n<html lang=\"en\"><head><title>Local setup check</title></head><body style=\"font:24px system-ui;padding:60px\"><h1>Local browser check</h1><p>Neutral page. No portfolio content.</p></body></html>\n15056 bytes written to file /tmp/dawit-local-check/browser.png\n",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/bash -lc 'nl -ba material/resume.md; nl -ba material/linkedin.md; nl -ba material/project-notes.md; nl -ba material/old-site.md'",
+      "output": "     1\tDAWIT BEKELE\n     2\tStaff Platform Engineer · migrations, databases, reliability\n     3\tRotterdam · dawit@example.com\n     4\t\n     5\tSTAFF PLATFORM ENGINEER, KESTREL FREIGHT, Rotterdam (Aug 2020 to present)\n     6\tFreight logistics: order intake, shipment tracking and route planning for a\n     7\troad-freight network. Platform team of six; I lead migrations and on-call.\n     8\t- Moved 310 services from two on-premises data centres to managed\n     9\t  Kubernetes in a public cloud with zero downtime, in 14 waves over 26 months\n    10\t- Postgres 11 to 15 upgrade of the 4 TB orders database using logical\n    11\t  replication and application dual writes\n    12\t- Author of the company's migration runbook (preflight, shadow, dual write,\n    13\t  cutover, soak, decommission), used by 40 teams\n    14\t- Reduced on-call pages by 74%\n    15\t- Stack: Go, Python, Bash; Kubernetes, Terraform, Helm; Postgres, Kafka;\n    16\t  metrics, tracing and SLO-based alerting\n    17\t\n    18\tSITE RELIABILITY ENGINEER, LUMEN PAY, Amsterdam (Mar 2016 to Jul 2020)\n    19\t- On the team that ran the card authorisation path\n    20\t\n    21\tSYSTEMS ADMINISTRATOR, ENTOTO TECHNICAL UNIVERSITY LIBRARY, Addis Ababa\n    22\t(2013 to 2016)\n    23\t- Ran the library's open-source catalogue system (Perl, MySQL) on Debian\n    24\t  for about 30,000 records and 8,000 borrowers\n    25\t- Moved it from one physical server to a primary and a replica in 2015\n    26\t- Added nightly dumps and binary-log point-in-time recovery\n    27\t\n    28\tEDUCATION\n    29\tBSc Electrical Engineering, Entoto Technical University, 2009 to 2013\n    30\tFinal-year project: a microcontroller data logger for the campus\n    31\tsubstation, sampling feeder load every second to an SD card\n    32\t\n    33\tOPEN SOURCE\n    34\tferry (maintainer): github.com/example/ferry, Go CLI for dual-write cutovers\n    35\t\n    36\tSPEAKING\n    37\tBoring Migrations, SRE North 2024, 30 minutes (video online)\n     1\t(Saved from LinkedIn as text, October 2026)\n     2\t\n     3\tDawit Bekele\n     4\tStaff Platform Engineer at Kestrel Freight. Migrations, reliability, on-call.\n     5\tRotterdam, Netherlands\n     6\t\n     7\tABOUT\n     8\tI move systems that are not allowed to stop. For the last four years that\n     9\thas meant taking Kestrel Freight out of two data centres and into the cloud,\n    10\tone service at a time, while the trucks kept running. I like migrations that\n    11\tare boring on the day.\n    12\t\n    13\tEXPERIENCE\n    14\t\n    15\tStaff Platform Engineer, Kestrel Freight, Rotterdam\n    16\tAug 2020 to present\n    17\t- Led the migration of 310 services out of two data centres, in 26 months\n    18\t- 99.98% availability through the migration\n    19\t- Upgraded a 4 TB Postgres database across two major versions with dual\n    20\t  writes and no maintenance window\n    21\t- Wrote the migration runbook now used by 40 teams\n    22\t- On-call lead: pages per week from 85 to 22\n    23\t\n    24\tSite Reliability Engineer, Lumen Pay, Amsterdam\n    25\tMar 2016 to Jul 2020\n    26\t- Card payment systems\n    27\t\n    28\tSystems Administrator, Entoto Technical University Library, Addis Ababa\n    29\t2013 to 2016\n    30\t\n    31\tEDUCATION\n    32\tEntoto Technical University. BSc Electrical Engineering, 2009 to 2013\n    33\t\n    34\tPROJECTS\n    35\tferry. Command-line tool for dual-write cutovers. 1.2k stars on GitHub.\n    36\t\n    37\tTALKS\n    38\t\"Boring Migrations\", SRE North 2024\n     1\t(My own notes, written for whoever builds my site. October 2026.)\n     2\t\n     3\tTHE DATA-CENTRE EXIT, Kestrel Freight, Aug 2020 to Oct 2022\n     4\tProblem: two data centres with leases ending in late 2022, 310 services,\n     5\tand order intake and shipment tracking that must not stop: trucks are\n     6\tdispatched from them around the clock.\n     7\tApproach: I wrote the plan and sequenced it. Services were grouped by\n     8\tdependency into 14 waves. Each service went through the runbook: a\n     9\tdependency map and a rehearsed rollback in preflight, mirrored read\n    10\ttraffic in shadow, dual writes for anything with state, then traffic moved\n    11\tby weighted routing at 1, 10, 50 and 100 per cent, watched against its SLO,\n    12\tand two weeks of soak before the old instances were switched off.\n    13\tScale: 310 services, 14 waves, 26 months, about 60 engineers across teams.\n    14\tResult: both data centres closed on schedule. Order API availability\n    15\tthrough the programme: 99.98%.\n    16\tWhat it looks like: a wave map of the services moving from the two sites\n    17\tinto one cluster; for each cutover, the old side's request rate falling as\n    18\tthe new side's rises, with the error rate flat beneath them.\n    19\t\n    20\tTHE ORDERS DATABASE, Kestrel Freight, 2022\n    21\tProblem: Postgres 11 was going out of support; the orders database was\n    22\t4 TB and is written to every second.\n    23\tApproach: a new Postgres 15 cluster fed by logical replication; the order\n    24\tservice wrote to both through ferry; a checksum job compared both every\n    25\thour for three weeks; then reads moved, then writes, with the old cluster\n    26\tkept warm as the way back for a month.\n    27\tResult: done with no maintenance window. I led it with one database\n    28\tengineer.\n    29\tWhat it looks like: every write fanning out to two databases, the\n    30\tchecksums matching, then the old one going dark.\n    31\t\n    32\tTHE RUNBOOK, 2021 to now\n    33\tProblem: every team migrated differently, and the failures were always in\n    34\tthe steps people skipped.\n    35\tApproach: six stages, each with an exit check: preflight, shadow, dual\n    36\twrite, cutover, soak, decommission. A service cannot enter a stage until\n    37\tthe last one's check has passed.\n    38\tResult: I wrote the first version and own it; 40 teams use it.\n    39\tWhat it looks like: a service travelling along the six stages, stopping at\n    40\teach gate until its check turns green.\n    41\t\n    42\tON-CALL, 2021 to 2022\n    43\tProblem: the platform on-call rota was paged 85 times a week.\n    44\tApproach: the nine of us on the rota went through every alert; we deleted\n    45\tthe ones nobody acted on, and replaced threshold alerts with SLO burn-rate\n    46\talerts on the services that mattered.\n    47\tResult: 22 pages a week after about a year.\n    48\tWhat it looks like: the weekly page count falling, step by step.\n    49\t\n    50\tFERRY, maintainer since 2022\n    51\tA Go command-line tool for dual-write cutovers. A former colleague wrote\n    52\tit in 2019. I maintain it and wrote its cutover command, which checks\n    53\treplication lag and checksum parity, switches the write target, and keeps\n    54\tthe old target ready as a fallback for a set window. 1.2k stars.\n    55\tWhat it looks like: one command switching the write path, with the way\n    56\tback still open.\n    57\t\n    58\tBORING MIGRATIONS, SRE North 2024\n    59\tThirty minutes on why a good migration is uneventful: the runbook, the\n    60\trehearsed rollback, and the exit checks. I open with the table I dropped\n    61\tat the library in 2014, a cleanup script run against production instead\n    62\tof staging. The catalogue was down for six hours; the restore came from\n    63\tthe night's dump, and a day of loans was re-entered from paper slips.\n    64\t\n    65\tTHE LIBRARY, 2013 to 2016\n    66\tThe first production system I ran. After 2014 I added binary-log\n    67\tpoint-in-time recovery and, in 2015, a replica, so that the next mistake\n    68\twould cost minutes, not a day.\n    69\t\n    70\tMY DEGREE\n    71\tElectrical engineering. My final-year project logged the campus\n    72\tsubstation's feeder load every second to an SD card; it taught me that\n    73\tdata you cannot lose needs a second copy before it needs anything else.\n     1\t(The text of my current site. One page, made in 2019.)\n     2\t\n     3\tDawit Bekele. SRE.\n     4\t\n     5\tI keep things running.\n     6\t\n     7\tSkills: Linux, Kubernetes, Terraform, Postgres, Go, Python.\n     8\t\n     9\tContact: dawit@example.com\n",
+      "exitCode": 0
+    }
+  ],
+  "errors": [],
+  "timedOut": false,
+  "interruptedBy": null,
+  "snapshot": {
+    "schemaVersion": 1,
+    "files": {
+      ".agents/skills/storyfolio/engine/.gitignore": {
+        "type": "file",
+        "hash": "e329b7a10e79140c25d59b200f7497adf28b632ee0ad6c84452fda841083d98f",
+        "size": 69
+      },
+      ".agents/skills/storyfolio/engine/AGENTS.md": {
+        "type": "file",
+        "hash": "612bdea0c3185bfd1d16821896ed9f2def3be8224d2ab1b849ae1b9435b14fd3",
+        "size": 1055
+      },
+      ".agents/skills/storyfolio/engine/app/globals.css": {
+        "type": "file",
+        "hash": "38efd4e8d382f0493766341f2dd9f13ed1295ed0ae7da6b09b0d7ed9d2a0ff82",
+        "size": 263
+      },
+      ".agents/skills/storyfolio/engine/app/layout.tsx": {
+        "type": "file",
+        "hash": "999ca93961eb1098b1d2e78fbc43103b1b8b7b96427851258bfa413a3586367c",
+        "size": 299
+      },
+      ".agents/skills/storyfolio/engine/app/page.tsx": {
+        "type": "file",
+        "hash": "7c8f8ff73878b47438b5c643683fce943ba26529c64795bb45ac4b2fa3ba5295",
+        "size": 1272
+      },
+      ".agents/skills/storyfolio/engine/app/sketch/[id]/page.tsx": {
+        "type": "file",
+        "hash": "1d3da74611d2e4520f5465e80add91d0860a891b47d2e6edbe544f7722bb9739",
+        "size": 446
+      },
+      ".agents/skills/storyfolio/engine/CLAUDE.md": {
+        "type": "file",
+        "hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "size": 11
+      },
+      ".agents/skills/storyfolio/engine/components/story/chapter.tsx": {
+        "type": "file",
+        "hash": "e867c0da89bc4ea96e4e40908d3d2ea63ffe0504c1f2d292279bb8e428b5cab9",
+        "size": 1504
+      },
+      ".agents/skills/storyfolio/engine/components/story/conductor.tsx": {
+        "type": "file",
+        "hash": "566c962bb73f925995cc3697ec3906147308b8a74c65af58ad17366d339cc28c",
+        "size": 1479
+      },
+      ".agents/skills/storyfolio/engine/components/story/controls.tsx": {
+        "type": "file",
+        "hash": "be1daaf51a47fa5a7825274a597f6fc4f439bdb7507326c1eb8287b15adb4e2c",
+        "size": 882
+      },
+      ".agents/skills/storyfolio/engine/components/story/extra-frame.tsx": {
+        "type": "file",
+        "hash": "3e00b7a8e9e93776b8e89decbada9f51cad65622fbd2d3913ec72ec3547ac449",
+        "size": 1420
+      },
+      ".agents/skills/storyfolio/engine/components/story/face-material.ts": {
+        "type": "file",
+        "hash": "b99e43dd6a5b9305ef3b09dbb812e9d08559a6823c72583f3b103108a08f6a7c",
+        "size": 1714
+      },
+      ".agents/skills/storyfolio/engine/components/story/faces.ts": {
+        "type": "file",
+        "hash": "8c0d61a08680c8929ed75efb7887f2d79a516753c6f579033e2001cc43cfeb1e",
+        "size": 3025
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.test.ts": {
+        "type": "file",
+        "hash": "ca877ebfcc45137183da6cbee25d80f6f60156807311975371ec3d1f496d7fc3",
+        "size": 1624
+      },
+      ".agents/skills/storyfolio/engine/components/story/guard-extra-callback.ts": {
+        "type": "file",
+        "hash": "86fe284c7f3d2ed56373dd92b573344b1264e3990796fc7dd78cf3439a3f1da9",
+        "size": 504
+      },
+      ".agents/skills/storyfolio/engine/components/story/look-switch.tsx": {
+        "type": "file",
+        "hash": "2f5497b3b42364c7be5b15474a273d2caf7b5f02e81e0c91d93b4f56a4b8b7a8",
+        "size": 515
+      },
+      ".agents/skills/storyfolio/engine/components/story/meter.tsx": {
+        "type": "file",
+        "hash": "598ed58bfeab5d9253a5699cd8d1aa90dd1859824a5a02b3eb2fead94f8fcd0a",
+        "size": 731
+      },
+      ".agents/skills/storyfolio/engine/components/story/overlay.tsx": {
+        "type": "file",
+        "hash": "be1857a379f4d5e8d729cfbc1fbac74036cde96c4e666fd500f3c7d381ebae2d",
+        "size": 711
+      },
+      ".agents/skills/storyfolio/engine/components/story/pieces.tsx": {
+        "type": "file",
+        "hash": "717d12c311c085d3b3a9298149187882e7b14f67b998f4a5bc4a357043968b7f",
+        "size": 7753
+      },
+      ".agents/skills/storyfolio/engine/components/story/rail.tsx": {
+        "type": "file",
+        "hash": "beb39c1b4337e1e73494ec9d79c4a65dbbe0c06f535b192fdb3fc1ca96f44624",
+        "size": 452
+      },
+      ".agents/skills/storyfolio/engine/components/story/scene.tsx": {
+        "type": "file",
+        "hash": "e9bd77db43cad3cea00e4e5079e22c06e541d797347bb58f15ff5ed292006a66",
+        "size": 4781
+      },
+      ".agents/skills/storyfolio/engine/components/story/stage.tsx": {
+        "type": "file",
+        "hash": "884aae5be8126cf22b2117e313401f99586324c9a3b02d734706e80a98aef792",
+        "size": 1230
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.css": {
+        "type": "file",
+        "hash": "b50677391c6cd0f91c534f32498b426abb1950f725c785e1e4993fc3d2bca40f",
+        "size": 5944
+      },
+      ".agents/skills/storyfolio/engine/components/story/story.tsx": {
+        "type": "file",
+        "hash": "594605d8249b9ca3b667383b11d1bc3d8518183b46fb8089c2ff7285d5ba4c5a",
+        "size": 5735
+      },
+      ".agents/skills/storyfolio/engine/components/story/types.ts": {
+        "type": "file",
+        "hash": "19944265264214c484697f4b0744b0830b11bc6913734745a132b9919be93e4b",
+        "size": 1324
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-look.ts": {
+        "type": "file",
+        "hash": "4b3432dc2505b2b09d9105ab826315333bff57a3e73c395252bf072473d8649e",
+        "size": 897
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-reduced-motion.ts": {
+        "type": "file",
+        "hash": "c8760d823f342e2a378096b0b313fa882b4b7e0bf40bd0be03b423d0ffe0433e",
+        "size": 432
+      },
+      ".agents/skills/storyfolio/engine/components/story/use-webgl-supported.ts": {
+        "type": "file",
+        "hash": "7315e7291bdac2453251c5b67cf301f10d23a84e9309d0839c182fc07945e419",
+        "size": 591
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.test.ts": {
+        "type": "file",
+        "hash": "56bde21b82898ddb189f7bd237e6b9313302e82d410c8feaf4e2437387a54bc9",
+        "size": 2192
+      },
+      ".agents/skills/storyfolio/engine/components/story/validate.ts": {
+        "type": "file",
+        "hash": "253527e789972d029718eaa1eb152dcbebcfd61ce68db0c7b6ef993acbd5957b",
+        "size": 1972
+      },
+      ".agents/skills/storyfolio/engine/components/story/webgl-boundary.tsx": {
+        "type": "file",
+        "hash": "e7b1ed45a4127bfb10af9dd22de7bcc893dc4177b562dbedbd4b93f86c4af43a",
+        "size": 476
+      },
+      ".agents/skills/storyfolio/engine/content/checks.json": {
+        "type": "file",
+        "hash": "a67c62aa3efa63b773e470c8d72112de54dc70d6633418aa65723bc09d0dafd3",
+        "size": 128
+      },
+      ".agents/skills/storyfolio/engine/content/copy.ts": {
+        "type": "file",
+        "hash": "924c0b852bb05782fdac0493f272f59364cd1e900e17f75a007bf33a89cc6cc5",
+        "size": 1347
+      },
+      ".agents/skills/storyfolio/engine/content/experience.tsx": {
+        "type": "file",
+        "hash": "761fa21d6b32b6fa0897ade423fe3d6d699a4e3585d91023cffbbfcbcc21ed35",
+        "size": 260
+      },
+      ".agents/skills/storyfolio/engine/content/extras/middle-line.tsx": {
+        "type": "file",
+        "hash": "df3be2fbd22d7a029830cc52cef609c4683ffdadeb6f953629abf30df0fee7cd",
+        "size": 994
+      },
+      ".agents/skills/storyfolio/engine/content/extras.ts": {
+        "type": "file",
+        "hash": "9f3162e29f41d324e4ab397f26c1316fd3caa4197c5b40352bddfd2c00c42485",
+        "size": 91
+      },
+      ".agents/skills/storyfolio/engine/content/faces.ts": {
+        "type": "file",
+        "hash": "6c019408945a3b1b5d4ae3008b62ab44ae5c8c4b109d3ae0b79009958a55e574",
+        "size": 859
+      },
+      ".agents/skills/storyfolio/engine/content/formations.ts": {
+        "type": "file",
+        "hash": "d6614183d3c9dbf8b7959d9632fc3d33e4365a98e07c415044dab340cff6029e",
+        "size": 770
+      },
+      ".agents/skills/storyfolio/engine/content/index.ts": {
+        "type": "file",
+        "hash": "a4901be3f3a3eaa8c386da2ed98c35cf0c9a8ec8f9aab33a991a38b9668c53ba",
+        "size": 427
+      },
+      ".agents/skills/storyfolio/engine/content/links.ts": {
+        "type": "file",
+        "hash": "fbf61c1fbebf96214365ac15513292ddf203ba0444a6ada7978536ae11f020e7",
+        "size": 128
+      },
+      ".agents/skills/storyfolio/engine/content/looks.ts": {
+        "type": "file",
+        "hash": "d596a85043bcc20c29aca1bc04037320a89509b4c35a842d3a4386361216b559",
+        "size": 645
+      },
+      ".agents/skills/storyfolio/engine/content/sketches/index.ts": {
+        "type": "file",
+        "hash": "d9edb1fffc6c7972a7c2481b13dd2b8b9fe184dd093b1907b09d2a3c9c8ae6f0",
+        "size": 238
+      },
+      ".agents/skills/storyfolio/engine/content/story.ts": {
+        "type": "file",
+        "hash": "fd454abbc9e988bb3e664c8d8b0178aa381152c21a918eb09dc322ff21ea6f8c",
+        "size": 602
+      },
+      ".agents/skills/storyfolio/engine/eslint.config.mjs": {
+        "type": "file",
+        "hash": "feecffefd2ce4e56cbd1ebd6260b3e80f6d58e6231c7ba697671565d8bfe8c7b",
+        "size": 309
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.test.ts": {
+        "type": "file",
+        "hash": "7ee868be52ff30faf17ccb863b8a8704c3080be7ca9951def3d48785e27d2df1",
+        "size": 6594
+      },
+      ".agents/skills/storyfolio/engine/lib/story/camera.ts": {
+        "type": "file",
+        "hash": "1e30a63765ae9ebf4dbf1de0105321a130a19c478e38bef63a1bef4cabec6bad",
+        "size": 5201
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.test.ts": {
+        "type": "file",
+        "hash": "ee80d3ad5812c6035e05bb987c717cddee05d77ca896a122827a19375081d528",
+        "size": 1608
+      },
+      ".agents/skills/storyfolio/engine/lib/story/controls.ts": {
+        "type": "file",
+        "hash": "69991ba4d3dad3a01abe37508c92940183316b5912f9f45cfd6cd42d7fcf2406",
+        "size": 1054
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.test.ts": {
+        "type": "file",
+        "hash": "a6133e36c4da5bda7670bfb7d7f8c6215f43113db163af286e034130affac1fc",
+        "size": 5294
+      },
+      ".agents/skills/storyfolio/engine/lib/story/formation.ts": {
+        "type": "file",
+        "hash": "556af01ab39886ab44c6dac0503bf462f2cfafd7e4f3bb60e18528b9fcb800fe",
+        "size": 5414
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.test.ts": {
+        "type": "file",
+        "hash": "759fbacc1e37ecfa180b3b07b7957ad4c73b1e78026367f8683db341fa9d73f0",
+        "size": 2728
+      },
+      ".agents/skills/storyfolio/engine/lib/story/layouts.ts": {
+        "type": "file",
+        "hash": "c3842a8d9d17f8886009512ee3f53a6f597852e1d4ef223529ca25a22ebe2db5",
+        "size": 4733
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.test.ts": {
+        "type": "file",
+        "hash": "33ea56be505f5954b3b143c157b2adae4e6d27d98f929ef6e122cc75d16429e9",
+        "size": 1238
+      },
+      ".agents/skills/storyfolio/engine/lib/story/looks.ts": {
+        "type": "file",
+        "hash": "1ddb8301d067ec963202f60a2fcf11d2711198e8206e1663322c73dbe63eccf8",
+        "size": 1262
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.test.ts": {
+        "type": "file",
+        "hash": "88e71d373769c15588ab25425601e30768205939df6b5c64edf9fbe68b36c6a4",
+        "size": 1844
+      },
+      ".agents/skills/storyfolio/engine/lib/story/overlay.ts": {
+        "type": "file",
+        "hash": "bfc1b9b7344bc9f1382b7851a6b3f86f5b6b79081113e6e98ed4de2f7bd981ce",
+        "size": 3252
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.test.ts": {
+        "type": "file",
+        "hash": "d035f07ca7495cca166fb0db64f9cd913463332e8c518b6fe0e726f230dc3023",
+        "size": 1838
+      },
+      ".agents/skills/storyfolio/engine/lib/story/quality.ts": {
+        "type": "file",
+        "hash": "d57f518078280a86caadcd18eaf84d71b627c76ed1a490b7484e6260545907bc",
+        "size": 1762
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.test.ts": {
+        "type": "file",
+        "hash": "e0a071006d9530f39f1a76aa902b0a2cd7ca6668d8e1b40028e03d07f22a5f3f",
+        "size": 567
+      },
+      ".agents/skills/storyfolio/engine/lib/story/rand.ts": {
+        "type": "file",
+        "hash": "89485fba98a29603bdef052a33d516b701877494ac9e9b66ad02e362f8c48fa8",
+        "size": 384
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.test.ts": {
+        "type": "file",
+        "hash": "d759507f54dc3f1ae35d184f33b214c6af90cc2f471f68818e79268082c43405",
+        "size": 4640
+      },
+      ".agents/skills/storyfolio/engine/lib/story/story.ts": {
+        "type": "file",
+        "hash": "36319690055f444858f17fedcc7bec69b4557d0d3d72100c2c37f64816b2dcda",
+        "size": 5441
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.test.ts": {
+        "type": "file",
+        "hash": "e43972a95c098dffb63b932b31e4aebc5a07317a0e405f26c66b26dcbc7bb859",
+        "size": 7998
+      },
+      ".agents/skills/storyfolio/engine/lib/story/timeline.ts": {
+        "type": "file",
+        "hash": "53ecafc16f07bd8d64813a2699adf1e9b155a8e0a8902104adecd957ad72993f",
+        "size": 5697
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.test.ts": {
+        "type": "file",
+        "hash": "7bb5d3b49f7c0351a5b6d3c165c0889f9d0ef4dcdd1561a6f88e6fb6b2bd56ef",
+        "size": 4495
+      },
+      ".agents/skills/storyfolio/engine/lib/story/typeset.ts": {
+        "type": "file",
+        "hash": "d8f217a1112c9eeab6c5f56175812f84e848a676fbfbc30eae8e62fbc245b3fe",
+        "size": 3329
+      },
+      ".agents/skills/storyfolio/engine/LICENSE": {
+        "type": "file",
+        "hash": "22035d85d5950e6385cf2d675c981ee1924f91df02c5a10a666d77dd1b07ef42",
+        "size": 1080
+      },
+      ".agents/skills/storyfolio/engine/next.config.ts": {
+        "type": "file",
+        "hash": "2088905ba672da56636d0209ba6ab32293585e626560ff6936338dce85c9daf2",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/package-lock.json": {
+        "type": "file",
+        "hash": "2e610e5c5594a6e59a4828e409d39569a80468fe7506ea31c8160accdddbd41a",
+        "size": 233717
+      },
+      ".agents/skills/storyfolio/engine/package.json": {
+        "type": "file",
+        "hash": "a07d43c780ae4af9ddebfa93f96f3b65a07f04cca82c265c0d0c84cb86096574",
+        "size": 1015
+      },
+      ".agents/skills/storyfolio/engine/postcss.config.mjs": {
+        "type": "file",
+        "hash": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+        "size": 94
+      },
+      ".agents/skills/storyfolio/engine/public/plain/face.svg": {
+        "type": "file",
+        "hash": "68f9195e1e98fcb2059dc4407814c9b649930119b8e2534e01b52d01e4b15e78",
+        "size": 314
+      },
+      ".agents/skills/storyfolio/engine/README.md": {
+        "type": "file",
+        "hash": "0ddf0dae2a1119d716e0d79bc22ea82f2cc9125d0ff7279c44c3539c5f5553a1",
+        "size": 7343
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.mjs": {
+        "type": "file",
+        "hash": "c3524259fea97f1f44a49591566bf3708f19ff1a9d0ef5616305a22666d58d30",
+        "size": 4516
+      },
+      ".agents/skills/storyfolio/engine/scripts/check-lib.test.mjs": {
+        "type": "file",
+        "hash": "66596ea63377306df1a1189298a1a8a477017dd64275812596aa76aacbb5efc0",
+        "size": 4110
+      },
+      ".agents/skills/storyfolio/engine/scripts/check.mjs": {
+        "type": "file",
+        "hash": "e54a93bf2ad7635ce5b7e766800a685b8c7742dcde2eafeb15488cbcc54810af",
+        "size": 6374
+      },
+      ".agents/skills/storyfolio/engine/scripts/shoot.mjs": {
+        "type": "file",
+        "hash": "afd00db64301068c1dbeee28dbfce6bbef7c044d2f4d53662b49ddf842b77278",
+        "size": 25709
+      },
+      ".agents/skills/storyfolio/engine/tsconfig.json": {
+        "type": "file",
+        "hash": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
+        "size": 706
+      },
+      ".agents/skills/storyfolio/references/asking.md": {
+        "type": "file",
+        "hash": "cedb1221ef19284b93fd82ca971c913ab5f8f6e480194253db251c2bc37761e7",
+        "size": 1486
+      },
+      ".agents/skills/storyfolio/references/building.md": {
+        "type": "file",
+        "hash": "95276bacbc429072f7fe634fde5c68e22ead374091bcaa7d222394ce136281e8",
+        "size": 1536
+      },
+      ".agents/skills/storyfolio/references/concept.md": {
+        "type": "file",
+        "hash": "80ca1202899d482607d3ea8565c11aaa8e08d3f4411b37ea6b92d5d82f6529d9",
+        "size": 6705
+      },
+      ".agents/skills/storyfolio/references/reading-a-profile.md": {
+        "type": "file",
+        "hash": "69116e0a96f74a34a992d2faf28f0a5b451f677321a82a858e839181b9435e24",
+        "size": 7460
+      },
+      ".agents/skills/storyfolio/references/storyboard.md": {
+        "type": "file",
+        "hash": "186ff810fc38c881c4960301d607ff3fc8ccfccf62cbcefdb8f7f31d8d9bf3db",
+        "size": 4735
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.mjs": {
+        "type": "file",
+        "hash": "36d04d418845f3bca6aed71ba4e3f460c3b410e0fe151dffca0fa8653006f688",
+        "size": 3566
+      },
+      ".agents/skills/storyfolio/scripts/scaffold.test.mjs": {
+        "type": "file",
+        "hash": "dcd2569b444587c7b1b57dfe2bd42d599ed22120554bca671c91721917f5b0ac",
+        "size": 4044
+      },
+      ".agents/skills/storyfolio/SKILL.md": {
+        "type": "file",
+        "hash": "8d68afb524f432be448919cb8df3bfaf5ccaacff861a4fc34032cc73cbfa7af9",
+        "size": 4780
+      },
+      "docs/story/decided-for-you.md": {
+        "type": "file",
+        "hash": "6efd04ffd018aec972feba1f8dd8d32fb7ba95d4b976292f66430aa34d915c20",
+        "size": 565
+      },
+      "docs/story/facts.md": {
+        "type": "file",
+        "hash": "47b512c38c4d914d184a0465a5e1576e0189173e285d128d6404f32e787ab1dd",
+        "size": 7948
+      },
+      "docs/story/handover.md": {
+        "type": "file",
+        "hash": "2709a05598a28f40cc4282e06ee83e364ecc177684dae2003a84bdfadf13895e",
+        "size": 2467
+      },
+      "material/linkedin.md": {
+        "type": "file",
+        "hash": "95d70f38ebc320cecf58e3530cb191eee4017e06fc1cfb56af43835db211d4d5",
+        "size": 1208
+      },
+      "material/old-site.md": {
+        "type": "file",
+        "hash": "d2897369b440f33c9bb02ea22c1a8647072bbd7a71cab3662677f58e46b92466",
+        "size": 188
+      },
+      "material/project-notes.md": {
+        "type": "file",
+        "hash": "70e4466c4d09e90e1b553f1cec710e26383f31aff4c829f018e8a6698e400478",
+        "size": 3787
+      },
+      "material/resume.md": {
+        "type": "file",
+        "hash": "72e96cce2a83a4425f1eee48d42a0b385956a9d962963b22c868a233a35a3c59",
+        "size": 1688
+      }
+    },
+    "excluded": [],
+    "unexpected": [],
+    "totalBytes": 471709,
+    "changes": [
+      {
+        "path": "docs/story/decided-for-you.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "6efd04ffd018aec972feba1f8dd8d32fb7ba95d4b976292f66430aa34d915c20",
+          "size": 565
+        }
+      },
+      {
+        "path": "docs/story/facts.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "47b512c38c4d914d184a0465a5e1576e0189173e285d128d6404f32e787ab1dd",
+          "size": 7948
+        }
+      },
+      {
+        "path": "docs/story/handover.md",
+        "change": "added",
+        "before": null,
+        "after": {
+          "type": "file",
+          "hash": "2709a05598a28f40cc4282e06ee83e364ecc177684dae2003a84bdfadf13895e",
+          "size": 2467
+        }
+      }
+    ]
+  }
+}
