@@ -16,7 +16,10 @@ export default function Index() {
           page is made up.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link href="/template/" className="inline-flex h-11 items-center rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground hover:bg-primary/85">
+          <Link href="/transitions/" className="inline-flex h-11 items-center rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground hover:bg-primary/85">
+            Transitions study
+          </Link>
+          <Link href="/template/" className="inline-flex h-11 items-center rounded-lg border border-border px-5 text-sm font-medium hover:bg-muted">
             See a whole page made of them
           </Link>
           <a href="https://github.com/xitij27/storyfolio/tree/main/skills/storyfolio/library" className="inline-flex h-11 items-center rounded-lg border border-border px-5 text-sm font-medium hover:bg-muted">

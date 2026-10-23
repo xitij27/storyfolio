@@ -28,3 +28,15 @@ After the component library went live
 Root answered with the ways one picture can become another and proposed a
 transitions study before any engine or skill change. The library stays
 published as it is; no further work on components.
+
+## The study
+
+Root proposed one seam built four ways (today's swap, line morph, hand-off,
+camera dive), scrubbed by scroll and put on the Pages site so the author
+could try it on a phone. The author replied, verbatim:
+
+> okay go ahead
+
+Root built it ([study](../../evals/engine/transitions-1/README.md)) and
+published it at https://xitij27.github.io/storyfolio/transitions/, under the
+same day's word to push.

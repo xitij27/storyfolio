@@ -20,7 +20,7 @@ const DataPointsScene = dynamic(() => import("@/components/paper/exhibits").then
 const StackScene = dynamic(() => import("@/components/paper/exhibits").then((m) => m.StackScene), { ssr: false });
 const NetworkScene = dynamic(() => import("@/components/paper/exhibits").then((m) => m.NetworkScene), { ssr: false });
 
-function Guarded({ children }: { children: ReactNode }) {
+export function Guarded({ children }: { children: ReactNode }) {
   const webgl = useWebGLSupported();
   if (webgl === false) {
     return <p className="mx-auto max-w-6xl px-page py-24 text-muted-foreground">This piece needs WebGL, which this browser has switched off.</p>;
