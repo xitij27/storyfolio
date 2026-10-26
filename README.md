@@ -1,5 +1,12 @@
 # Storyfolio
 
+[![Status: stage 3 of 4 in progress](https://img.shields.io/badge/status-stage%203%20of%204%20in%20progress-orange)](#project-status)
+[![Library on GitHub Pages](https://github.com/xitij27/storyfolio/actions/workflows/library-pages.yml/badge.svg)](https://github.com/xitij27/storyfolio/actions/workflows/library-pages.yml)
+[![License: MIT](https://img.shields.io/github/license/xitij27/storyfolio)](LICENSE)
+[![Node.js 22.18 or later](https://img.shields.io/badge/node-%3E%3D22.18-339933?logo=nodedotjs&logoColor=white)](package.json)
+[![Agent skill for Claude Code and Codex](https://img.shields.io/badge/agent%20skill-Claude%20Code%20%7C%20Codex-6f42c1)](#get-started)
+[![Last commit](https://img.shields.io/github/last-commit/xitij27/storyfolio)](https://github.com/xitij27/storyfolio/commits/main)
+
 **One scroll. One story. One object from your work.**
 
 Bring your resume, projects, and a few notes about how you work. Storyfolio
@@ -12,13 +19,34 @@ a continuous story, carried by an object in 3D, with your work on its faces.
 [Explore the skill](skills/storyfolio/SKILL.md) · [MIT License](LICENSE)
 
 Storyfolio is a portable skill for any AI agent that can load local skills
-or read instruction files. The current version takes you through an approved
-storyboard.
+or read instruction files. Planning, from your profile to an approved
+storyboard, is ready to use. Building the site from that storyboard works
+but is still being tested.
 
-Development now includes an experimental [stage 2 engine and scaffold](skills/storyfolio/engine/README.md)
-with a plain scrolling test story. The shipped skill remains planning-only;
-the six-stop build workflow and complete-portfolio proof are stage 3 work.
-See [the handover](docs/handover.md) for verification and author-review status.
+## Project status
+
+Storyfolio is in active development, built in four stages.
+
+| Stage | What it delivers | Status |
+|---|---|---|
+| 1. Method | Reading your profile, confirmed facts, three concepts, an approved storyboard | ✅ Implemented and evaluated |
+| 2. Engine | The reusable 3D scroll [engine and site scaffold](skills/storyfolio/engine/README.md) | ✅ Complete, approved on desktop and phone |
+| 3. Build | The skill's stops 4 to 6: a runnable spine, every chapter, a checked whole site | 🚧 In progress |
+| 4. Packaging | Release package, installation proof, full build documentation | ⏳ Follows stage 3 |
+
+Where stage 3 stands:
+
+- The skill now carries an agent through all six stops, from profile to
+  finished site.
+- Two complete test journeys, each on a made-up person, have built whole
+  sites. The author's review of them comes next.
+- Current focus: how one chapter's 3D scene becomes the next. The
+  [transitions study](https://xitij27.github.io/storyfolio/transitions/)
+  shows one seam joined four ways.
+- The [component library](https://xitij27.github.io/storyfolio/) is live.
+
+[The handover](docs/handover.md) records the latest state, decisions, and
+test evidence.
 
 ## A portfolio with a thread
 

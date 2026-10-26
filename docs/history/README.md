@@ -3,6 +3,8 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
+Newest author request: [26 October, completion status and badges in the README](2026-10-26-readme-status-and-badges.md).
+
 Newest author direction: [23 October, focus on transitions: how one 3D picture becomes the next](2026-10-23-transitions-focus.md).
 
 Earlier author direction: [23 October, a library of components, published as GitHub Pages](2026-10-23-component-library.md).
