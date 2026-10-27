@@ -99,3 +99,8 @@ whole site is built, or whether a written plan with gallery links is enough.
 The author answered, verbatim:
 
 > No, it needs to show the preview. Because a normal person cannot know just a written plan with gallery pieces. Like, they can't visualize it. It needs to be shown to them.
+
+Root asked whether the agent should show one recommended mix or a few to
+compare. The author answered, verbatim:
+
+> One recommended mix and then suggest them to look through the gallery so that they can add more customizations or suggest newer components
