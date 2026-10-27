@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transition examples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<style>
+  :root { --bg: #0f1318; --ink: #ece6d9; --muted: #9aa4ae; --amber: #e9a23b; --line: rgba(236,230,217,0.14); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: radial-gradient(ellipse at 50% 38%, #1d252e 0%, #10151b 55%, #0a0d11 100%) fixed; color: var(--ink);
+    font-family: "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .gl { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; z-index: 0; }
+  .spacer { position: relative; z-index: -1; }
+
+  /* The overview */
+  .overview { max-width: 1080px; margin: 0 auto; padding: 56px 24px 80px; }
+  .overview h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.1; margin: 0 0 14px; }
+  .overview .lead { color: var(--muted); font-size: 17px; line-height: 1.55; max-width: 720px; margin: 0 0 36px; }
+  .ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+  .way { border: 1px solid var(--line); border-radius: 16px; padding: 22px; background: rgba(255,255,255,0.025); display: flex; flex-direction: column; gap: 12px; }
+  .way .tag { color: var(--amber); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+  .way h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 28px; margin: 0; }
+  .way p { color: var(--muted); line-height: 1.55; margin: 0; flex: 1; }
+  .way ol { color: var(--muted); margin: 0; padding-left: 18px; line-height: 1.6; font-size: 14px; }
+  .way .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 10px 18px; font: 600 14px "Inter", sans-serif;
+    border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; text-decoration: none; }
+  .btn.primary { background: var(--ink); color: #11161c; border-color: var(--ink); }
+  .btn.picked { background: var(--amber); color: #11161c; border-color: var(--amber); }
+  .note { color: var(--muted); font-size: 14px; margin-top: 30px; line-height: 1.6; }
+
+  /* Inside an example */
+  .ui { position: fixed; inset: 0; pointer-events: none; z-index: 2; }
+  .ui > * { pointer-events: auto; }
+  .bar { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; gap: 18px; padding: 12px 18px;
+    background: linear-gradient(#0c1015ee, #0c101500); flex-wrap: wrap; }
+  .bar .back { text-decoration: none; color: var(--muted); font-size: 14px; }
+  .bar .name { display: flex; flex-direction: column; flex: 1; min-width: 180px; }
+  .bar .name b { font-family: "Fraunces", Georgia, serif; font-size: 20px; font-weight: 600; }
+  .bar .name span { color: var(--muted); font-size: 13px; }
+  .controls { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .controls .lbl { color: var(--muted); font-size: 12px; margin-right: 2px; }
+  .pill { border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font: 600 13px "Inter", sans-serif; color: var(--ink);
+    background: rgba(255,255,255,0.03); text-decoration: none; cursor: pointer; }
+  .pill.on { background: var(--ink); color: #11161c; }
+  .rail { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 6px; pointer-events: none; }
+  .rail button { pointer-events: auto; display: flex; align-items: center; justify-content: flex-end; gap: 10px; background: none; border: 0; color: var(--muted);
+    font: 500 13px "Inter", sans-serif; cursor: pointer; padding: 3px 0; flex-direction: row-reverse; }
+  .rail i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.5; }
+  .rail button.on { color: var(--ink); }
+  .rail button.on i { background: var(--amber); opacity: 1; transform: scale(1.4); }
+  .cap { position: absolute; left: 24px; bottom: 28px; max-width: 430px; padding: 18px 20px; border-radius: 14px;
+    background: rgba(12,16,21,0.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--line); }
+  .cap .num { color: var(--amber); font: 600 12px "Inter", sans-serif; letter-spacing: 0.12em; }
+  .cap h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 26px; margin: 4px 0 6px; }
+  .cap p { margin: 0; color: #c9cfd5; line-height: 1.5; font-size: 15px; }
+  .hint { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: var(--muted); font-size: 13px; letter-spacing: 0.1em;
+    text-transform: uppercase; transition: opacity 0.4s; pointer-events: none; }
+  body.nowords .cap, body.nowords .rail span { display: none; }
+  body.book .cap { display: none; }
+  .cta { position: fixed; z-index: 3; left: 50%; bottom: 34px; transform: translateX(-50%); display: flex; gap: 10px; opacity: 0; }
+  .cta a { border-radius: 999px; padding: 12px 20px; font: 600 15px "Inter", sans-serif; text-decoration: none; background: var(--amber); color: #11161c; }
+  .cta a + a { background: var(--ink); }
+  .modal { position: fixed; inset: 0; z-index: 10; background: rgba(5,7,10,0.6); display: grid; place-items: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; padding: 16px; }
+  .modal.open { opacity: 1; pointer-events: auto; }
+  .modal .sheet { position: relative; width: min(620px, 100%); background: #f2ede2; color: #1c222a; border-radius: 16px; overflow: hidden; transform: translateY(12px); transition: transform 0.25s; }
+  .modal.open .sheet { transform: none; }
+  .modal .pic canvas { width: 100%; display: block; }
+  .modal .body { padding: 20px 24px 26px; }
+  .modal .eyebrow { color: #b47718; font: 600 12px "Inter", sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modal h3 { font-family: "Fraunces", Georgia, serif; font-size: 30px; margin: 6px 0 8px; }
+  .modal p { margin: 0 0 10px; line-height: 1.55; }
+  .modal .more { color: #6d7782; font-size: 14px; }
+  .modal .tags span { display: inline-block; border: 1px solid #c9c1b0; border-radius: 999px; padding: 4px 10px; font-size: 13px; margin: 0 6px 6px 0; }
+  .modal [data-close] { position: absolute; top: 10px; right: 12px; border: 0; background: rgba(255,255,255,0.8); border-radius: 50%; width: 34px; height: 34px; font-size: 22px; cursor: pointer; }
+  .loading[hidden] { display: none; }
+  .loading { position: fixed; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: 14px; z-index: 5; pointer-events: none; }
+  @media (max-width: 720px) {
+    .rail span { display: none; }
+    .cap { left: 12px; right: 12px; bottom: 14px; max-width: none; padding: 14px 16px; }
+    .cap h2 { font-size: 22px; }
+    .bar .name span { display: none; }
+  }
+</style>
+</head>
+<body>
+<main class="overview" id="overview" hidden>
+  <h1>Three ways one chapter becomes the next</h1>
+  <p class="lead">Each example runs through all eight chapters of a portfolio, for a made-up person. Every picture and word comes from that person's details,
+    so the same example would go into anyone's portfolio with their own words and places. Switch person at the top of an example to see it.</p>
+  <div class="ways">
+    <article class="way">
+      <div class="tag">Example A</div>
+      <h2>One sheet</h2>
+      <p>The person's CV is one sheet of paper. Scrolling bends it into each chapter's picture, and the next picture is printed on it as it turns.</p>
+      <ol><li>CV page</li><li>wraps into a globe with the places</li><li>unrolls into the diploma</li><li>stretches into a timeline of jobs</li><li>folds into a leaflet of skills</li><li>splits into a wall of projects</li><li>pairs into quote cards</li><li>folds back into the CV, to download</li></ol>
+      <div class="row"><a class="btn primary" href="#sheet/noa">Open</a><button class="btn" data-choice="sheet" onclick="pick(this)">I like this one</button></div>
+    </article>
+    <article class="way">
+      <div class="tag">Example B</div>
+      <h2>One map</h2>
+      <p>Every chapter stands where it happened, on one map of the person's life. The camera flies from place to place, and each chapter rises out of the map.</p>
+      <ol><li>a sign where they live now</li><li>the route between their places</li><li>the diploma rises at the school</li><li>a building for each job, as tall as the years</li><li>skills on the buildings that used them</li><li>projects where they were made</li><li>quotes where those people worked</li><li>back home, with the whole life in view</li></ol>
+      <div class="row"><a class="btn primary" href="#map/noa">Open</a><button class="btn" data-choice="map" onclick="pick(this)">I like this one</button></div>
+    </article>
+    <article class="way">
+      <div class="tag">Example C</div>
+      <h2>Pop-up book</h2>
+      <p>Each chapter is a spread in a book: words on the left, a picture that stands up on the right. Turning the page folds one picture flat and raises the next.</p>
+      <ol><li>a cut-out of the person</li><li>a map with flags at each place</li><li>the school and the diploma</li><li>a building for each job</li><li>tabbed cards of skills</li><li>project cards to open</li><li>speech bubbles</li><li>an envelope with the email</li></ol>
+      <div class="row"><a class="btn primary" href="#book/noa">Open</a><button class="btn" data-choice="book" onclick="pick(this)">I like this one</button></div>
+    </article>
+  </div>
+  <p class="note">These are sketches of the movement, drawn quickly: judge how one picture turns into the next, not the polish. Tell me in the chat what you like and what you don't.
+    Each runs in the browser alone, with nothing to install.</p>
+</main>
+<div class="loading" id="loading" hidden>Loading...</div>
+<script>
+  function pick(el) { el.classList.toggle("picked"); el.textContent = el.classList.contains("picked") ? "Liked" : "I like this one"; }
+</script>
+<script type="module">
+  const [name, person] = location.hash.slice(1).split("/");
+  window.addEventListener("hashchange", () => { window.scrollTo(0, 0); location.reload(); });
+  if (!["sheet", "map", "book"].includes(name)) {
+    document.getElementById("overview").hidden = false;
+  } else {
+    history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+    const loading = document.getElementById("loading");
+    loading.hidden = false;
+    try {
+      const mod = await import(`/files/${name}.js`);
+      await mod.start({ personKey: person || "noa" });
+    } catch (e) {
+      loading.textContent = "This example failed to load: " + e.message;
+      console.error(e);
+      throw e;
+    }
+    loading.hidden = true;
+  }
+</script>
+</body>
+</html>

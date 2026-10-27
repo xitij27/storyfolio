@@ -48,3 +48,12 @@ Node 24.14.0 (nvm) runs the `.ts` tests directly: `npm test` passes 373 of
 373 and `node evals/check-skill.mjs` passes. A Codex CLI is installed here
 (`~/.nvm/versions/node/v24.14.0/bin/codex`, with `~/.codex`), which the
 22 October notes said this machine lacked.
+
+## The examples, and the author's opinion
+
+Root built [three examples through all eight chapters](../../evals/engine/transitions-2/README.md)
+(one sheet, one map, a pop-up book), each drawn from a person's data with a
+switch between two made-up people, and showed them in the brainstorming
+companion. The author wrote, verbatim:
+
+> the concept of the book version is nice, but it could be made to look better. Right now it looks very crude, and all in all the animations are amazing, but I wish they were a bit slower because they are too fast for the human eye. But I liked all three designs.
