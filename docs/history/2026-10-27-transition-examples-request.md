@@ -67,3 +67,7 @@ answered, verbatim:
 > okay yes this looks much better
 
 The question of one or three was not answered and is asked again.
+
+Asked again, the author answered, verbatim:
+
+> The person can get their ideas from the GitHub pages website with all of these transitions. And provide us with details about how they would like to stitch together various scenes. And information. If we pick one and then finish it by ourselves, then it would lead to a lot of token wastage. Alternatively, the user can also suggest their own design and we could try to make that. So these are the options.
