@@ -57,3 +57,13 @@ switch between two made-up people, and showed them in the brainstorming
 companion. The author wrote, verbatim:
 
 > the concept of the book version is nice, but it could be made to look better. Right now it looks very crude, and all in all the animations are amazing, but I wish they were a bit slower because they are too fast for the human eye. But I liked all three designs.
+
+Root slowed all three and remade the book
+([round 2](../../evals/engine/transitions-2/README.md#round-2-slower-and-a-better-made-book)),
+then asked whether each person should pick one of the three for their site,
+the way they pick a look, or one should become the standard. The author
+answered, verbatim:
+
+> okay yes this looks much better
+
+The question of one or three was not answered and is asked again.
