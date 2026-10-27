@@ -93,3 +93,9 @@ answer with an addition, verbatim:
 So the order is: the agent recommends a mix first, then invites the person
 to look at the gallery and suggest better pieces, or give their own. The
 question of a moving preview was not answered.
+
+Root asked whether the recommended mix should be shown moving before the
+whole site is built, or whether a written plan with gallery links is enough.
+The author answered, verbatim:
+
+> No, it needs to show the preview. Because a normal person cannot know just a written plan with gallery pieces. Like, they can't visualize it. It needs to be shown to them.
