@@ -71,3 +71,14 @@ The question of one or three was not answered and is asked again.
 Asked again, the author answered, verbatim:
 
 > The person can get their ideas from the GitHub pages website with all of these transitions. And provide us with details about how they would like to stitch together various scenes. And information. If we pick one and then finish it by ourselves, then it would lead to a lot of token wastage. Alternatively, the user can also suggest their own design and we could try to make that. So these are the options.
+
+Root played back its understanding (a Pages gallery of all the transitions;
+the person chooses at the look stop or brings their own design; the agent
+builds from the chosen example's code), with root's guess that one example
+carries a whole site. The author answered, verbatim:
+
+> or the agent can also recommend, right? They can recommend different components and transitions from different examples and stitch that up. According to whatever is suitable to the person's profile.
+
+So mixing pieces from different examples is allowed, and the agent may
+recommend a mix suited to the person's profile. Root's guess of one example
+per site is withdrawn.
