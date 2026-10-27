@@ -26,7 +26,7 @@ export const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3
 // ---------- The scroll ----------
 // Chapter k owns [k, k + 1) of the scroll: it holds for the first HOLD of
 // that, then moves to chapter k + 1. The last chapter only holds.
-export const HOLD = 0.5;
+export const HOLD = 0.4;
 const N = CHAPTERS.length;
 
 export function stateAt(s) {
@@ -42,17 +42,28 @@ export function makeScroll() {
   const spacer = document.createElement("div");
   spacer.className = "spacer";
   document.body.appendChild(spacer);
-  const unit = () => Math.max(window.innerHeight * 1.1, 600);
+  // Each chapter takes about two screens of scrolling, so a move is slow.
+  const unit = () => Math.max(window.innerHeight * 1.9, 1000);
+  window.__storyUnit = unit;
   const size = () => { spacer.style.height = `${(N - 1 + HOLD) * unit() + window.innerHeight}px`; };
   size();
   window.addEventListener("resize", size);
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let shown = window.scrollY / unit();
+  let shown = window.scrollY / unit(), last = performance.now();
+  // However fast the reader scrolls, the story moves at most this many
+  // chapters a second, easing in behind the scroll.
+  const MAX_RATE = 0.55;
   return {
     target: () => window.scrollY / unit(),
     step() {
+      const now = performance.now(), dt = Math.min(0.1, (now - last) / 1000);
+      last = now;
       const target = window.scrollY / unit();
-      shown = reduce ? target : shown + (target - shown) * 0.14;
+      if (reduce) shown = target;
+      else {
+        const want = (target - shown) * Math.min(1, dt * 4);
+        shown += Math.sign(want) * Math.min(Math.abs(want), MAX_RATE * dt);
+      }
       if (Math.abs(target - shown) < 1e-4) shown = target;
       return stateAt(shown);
     },

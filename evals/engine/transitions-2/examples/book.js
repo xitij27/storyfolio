@@ -1,23 +1,48 @@
-// Pop-up book: each chapter is a spread, words on the left and a picture
-// standing up on the right. Turning a page folds one picture flat and raises
-// the next. Every word and picture comes from the person's data.
+// Pop-up book: each chapter is a spread, words on the left and a scene
+// standing up on the right in layers of die-cut card. Turning a page folds
+// one scene flat and raises the next. Every word and picture comes from the
+// person's data.
 import {
   THREE, C, clamp, lerp, smooth, ease, makeScroll, buildUI, makeStage, fitDistance, fontsReady, canvas,
   texture, serif, sans, wrap, rrect, miniPicture, loadLand, dotLand, clickable, personFrom, contactButtons, CHAPTERS,
 } from "./kit.js";
 import { yearText } from "./people.js";
 
-const PW = 3, PD = 4, SEG = 30, EPS = 0.006, CURL = 1.1, NOW = 2026.8;
+const PW = 3, PD = 4, SEG = 40, EPS = 0.006, CURL = 1.1, NOW = 2026.8;
 const N = CHAPTERS.length;
+const CARD = "#fbf7ee";
 
-// ---------- Pages ----------
+// ---------- Paper ----------
 const PX = 1024, PY = Math.round((1024 * PD) / PW);
+
+function grain(ctx, w, h, n = 9000) {
+  for (let i = 0; i < n; i++) {
+    ctx.fillStyle = Math.random() < 0.5 ? "rgba(90,70,40,0.05)" : "rgba(255,255,255,0.06)";
+    ctx.fillRect(Math.random() * w, Math.random() * h, 2, 2);
+  }
+}
+
+/** A cut-out with a white card edge round it, as if die-cut from printed card. */
+function dieCut(src, r = 12) {
+  const sil = canvas(src.width, src.height, (c) => {
+    c.drawImage(src, 0, 0);
+    c.globalCompositeOperation = "source-in";
+    c.fillStyle = CARD; c.fillRect(0, 0, src.width, src.height);
+  });
+  const out = canvas(src.width + 2 * r, src.height + 2 * r, (ctx) => {
+    for (let a = 0; a < 24; a++) ctx.drawImage(sil, r + Math.cos((a / 24) * Math.PI * 2) * r, r + Math.sin((a / 24) * Math.PI * 2) * r);
+    ctx.drawImage(sil, r, r);
+    ctx.drawImage(src, r, r);
+  });
+  out.edge = r;
+  return out;
+}
 
 function leftPage(P, k) {
   const s = P.study[0];
   const bodies = [
     [P.name, P.role, P.line, P.seeking + "."],
-    P.places.map((p) => `${p.name}, where ${P.first} ${p.what === "lives now" ? "lives now" : p.what}.`),
+    P.places.map((p) => `${p.name}, where ${P.first} ${p.what}.`),
     [`${s.degree} in ${s.field}.`, `${s.place}, ${s.from} to ${s.to}.`, s.note + "."],
     P.work.map((w) => `${w.org}, ${w.place}, ${yearText(w)}. ${w.role}: ${w.did.toLowerCase()}.`),
     P.skills.map((g) => `${g.group}: ${g.items.join(", ")}.`),
@@ -27,45 +52,49 @@ function leftPage(P, k) {
   ];
   return canvas(PX, PY, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
-    const g = ctx.createLinearGradient(w - 90, 0, w, 0);
-    g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(1, "rgba(0,0,0,0.12)");
-    ctx.fillStyle = g; ctx.fillRect(w - 90, 0, 90, h);
-    const m = 96;
-    ctx.fillStyle = C.amber; ctx.font = sans(30, 600); ctx.fillText(`CHAPTER ${k + 1}`, m, 190);
-    ctx.fillStyle = C.ink; ctx.font = serif(92); let y = wrap(ctx, CHAPTERS[k].title, m, 310, w - 2 * m, 100);
-    ctx.fillStyle = C.line; ctx.fillRect(m, y + 10, 120, 5);
+    grain(ctx, w, h);
+    const g = ctx.createLinearGradient(w - 140, 0, w, 0);
+    g.addColorStop(0, "rgba(60,40,20,0)"); g.addColorStop(1, "rgba(60,40,20,0.18)");
+    ctx.fillStyle = g; ctx.fillRect(w - 140, 0, 140, h);
+    const m = 104;
+    ctx.fillStyle = C.amber; ctx.font = sans(28, 600); ctx.fillText(`CHAPTER ${k + 1}`, m, 200);
+    ctx.fillStyle = C.ink; ctx.font = serif(96); let y = wrap(ctx, CHAPTERS[k].title, m, 320, w - 2 * m, 104);
+    ctx.fillStyle = C.amber; ctx.fillRect(m, y + 6, 90, 6);
     y += 110;
     bodies[k].forEach((line, i) => {
-      ctx.fillStyle = i === 0 && k === 0 ? C.ink : "#3a424c";
-      ctx.font = i === 0 && k === 0 ? serif(56) : sans(38);
-      y = wrap(ctx, line, m, y, w - 2 * m, i === 0 && k === 0 ? 64 : 54) + 26;
+      const lead = i === 0 && k === 0;
+      ctx.fillStyle = lead ? C.ink : "#3a424c";
+      ctx.font = lead ? serif(58) : serif(40, 400);
+      y = wrap(ctx, line, m, y, w - 2 * m, lead ? 66 : 56) + 24;
     });
-    ctx.fillStyle = C.muted; ctx.font = sans(28); ctx.textAlign = "center"; ctx.fillText(String(k * 2 + 1), w / 2, h - 80);
+    ctx.fillStyle = C.muted; ctx.font = serif(30, 400, "italic"); ctx.textAlign = "center"; ctx.fillText(String(k * 2 + 1), w / 2, h - 86);
   });
 }
 
 function rightPage(P, k, land) {
   return canvas(PX, PY, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
-    const g = ctx.createLinearGradient(0, 0, 90, 0);
-    g.addColorStop(0, "rgba(0,0,0,0.12)"); g.addColorStop(1, "rgba(0,0,0,0)");
-    ctx.fillStyle = g; ctx.fillRect(0, 0, 90, h);
+    grain(ctx, w, h);
+    const g = ctx.createLinearGradient(0, 0, 140, 0);
+    g.addColorStop(0, "rgba(60,40,20,0.18)"); g.addColorStop(1, "rgba(60,40,20,0)");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, 140, h);
+    // A printed ground for the scene to stand on.
+    const ground = ["#efe3c8", "#e7e0d1", "#dfe8df", "#e9e2d2", "#efe3c8", "#e9e2d2", "#ece4d6", "#efe3c8"][k];
+    ctx.fillStyle = ground; rrect(ctx, 70, 110, w - 140, h - 230, 34); ctx.fill();
     if (k === 1) {
       const { project } = placeMap(P);
       const pj = (lng, lat) => { const [s, z] = project(lat, lng); return [(s / PW) * w, ((z + PD / 2) / PD) * h]; };
-      ctx.save(); ctx.beginPath(); rrect(ctx, 60, 120, w - 120, h - 240, 30); ctx.clip();
-      ctx.fillStyle = "#e7e0d1"; ctx.fillRect(0, 0, w, h);
-      dotLand(ctx, land, pj, w, h, 13, 4, "rgba(28,34,42,0.55)");
-      ctx.strokeStyle = C.amber; ctx.lineWidth = 8; ctx.setLineDash([22, 16]); ctx.beginPath();
+      ctx.save(); rrect(ctx, 70, 110, w - 140, h - 230, 34); ctx.clip();
+      ctx.fillStyle = "#cfe0e3"; ctx.fillRect(0, 0, w, h);
+      dotLand(ctx, land, pj, w, h, 12, 4.2, "rgba(48,76,70,0.75)");
+      ctx.strokeStyle = C.rose; ctx.lineWidth = 7; ctx.setLineDash([20, 14]); ctx.beginPath();
       P.places.forEach((p, i) => { const [x, y] = pj(p.lng, p.lat); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
       ctx.stroke(); ctx.restore();
-    } else if (k === 3) {
-      ctx.fillStyle = C.line; ctx.fillRect(80, h * 0.86, w - 160, 6);
-    } else if (k !== 7) {
-      ctx.strokeStyle = "rgba(201,193,176,0.6)"; ctx.lineWidth = 3;
-      for (let y = 200; y < h - 150; y += 120) { ctx.beginPath(); ctx.moveTo(120, y); ctx.lineTo(w - 120, y); ctx.stroke(); }
+    } else {
+      ctx.strokeStyle = "rgba(120,100,70,0.12)"; ctx.lineWidth = 3;
+      for (let y = 180; y < h - 140; y += 64) { ctx.beginPath(); ctx.moveTo(110, y); ctx.lineTo(w - 110, y); ctx.stroke(); }
     }
-    ctx.fillStyle = C.muted; ctx.font = sans(28); ctx.textAlign = "center"; ctx.fillText(String(k * 2 + 2), w / 2, h - 80);
+    ctx.fillStyle = C.muted; ctx.font = serif(30, 400, "italic"); ctx.textAlign = "center"; ctx.fillText(String(k * 2 + 2), w / 2, h - 50);
   });
 }
 
@@ -75,155 +104,206 @@ function placeMap(P) {
   const lat0 = (Math.min(...lats) + Math.max(...lats)) / 2, lng0 = (Math.min(...lngs) + Math.max(...lngs)) / 2;
   const cosL = Math.cos((lat0 * Math.PI) / 180);
   const sx = (Math.max(...lngs) - Math.min(...lngs)) * cosL || 1, sz = Math.max(...lats) - Math.min(...lats) || 1;
-  const k = Math.min(1.9 / sx, 2.4 / sz);
-  return { project: (lat, lng) => [PW / 2 + (lng - lng0) * cosL * k, -(lat - lat0) * k + 0.2] };
+  const k = Math.min(1.9 / sx, 2.3 / sz);
+  return { project: (lat, lng) => [PW / 2 + (lng - lng0) * cosL * k, -(lat - lat0) * k + 0.25] };
 }
 
-// ---------- Pop-ups: cut-outs on transparent canvases ----------
+// ---------- The scenes, in layers of card ----------
 const cut = (w, h, draw) => canvas(w, h, draw);
 
-function popups(P) {
+function tree(ctx, x, base, s, color) {
+  ctx.fillStyle = "#6b5a46"; ctx.fillRect(x - s * 0.06, base - s * 0.5, s * 0.12, s * 0.5);
+  ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, base - s * 0.75, s * 0.42, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.arc(x - s * 0.25, base - s * 0.55, s * 0.3, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.arc(x + s * 0.27, base - s * 0.58, s * 0.3, 0, Math.PI * 2); ctx.fill();
+}
+
+function scenes(P) {
   const s0 = P.study[0];
   const list = [];
-  const add = (chapter, pic, w, h, s, z, extra = {}) => list.push({ chapter, pic, w, h, s, z, ...extra });
+  const add = (chapter, pic, w, s, z, extra = {}) => {
+    const card = dieCut(pic, extra.edge ?? 12);
+    const h = (w * card.height) / pic.width;
+    list.push({ chapter, pic: card, w: (w * card.width) / pic.width, h, s, z, ...extra });
+  };
 
-  // 0. The person and their name.
-  add(0, cut(600, 800, (ctx, w, h) => {
-    ctx.fillStyle = C.amber; ctx.beginPath(); ctx.moveTo(40, h); ctx.lineTo(40, 300); ctx.arc(w / 2, 300, w / 2 - 40, Math.PI, 0); ctx.lineTo(w - 40, h); ctx.fill();
-    ctx.fillStyle = C.ink; ctx.beginPath(); ctx.arc(w / 2, 330, 110, 0, Math.PI * 2); ctx.fill();
-    ctx.beginPath(); ctx.moveTo(110, h); ctx.quadraticCurveTo(110, 470, w / 2, 470); ctx.quadraticCurveTo(w - 110, 470, w - 110, h); ctx.fill();
-  }), 1.35, 1.8, 1.5, -0.55);
-  add(0, cut(1100, 320, (ctx, w, h) => {
-    ctx.fillStyle = C.paper; rrect(ctx, 0, 0, w, h, 24); ctx.fill();
-    ctx.strokeStyle = C.ink; ctx.lineWidth = 6; rrect(ctx, 14, 14, w - 28, h - 28, 18); ctx.stroke();
-    ctx.fillStyle = C.ink; ctx.font = serif(96); ctx.textAlign = "center"; ctx.fillText(P.name, w / 2, 150);
-    ctx.fillStyle = C.amber; ctx.font = sans(40, 600); ctx.fillText(P.role.toUpperCase(), w / 2, 240);
-  }), 2.3, 0.67, 1.5, 0.95);
+  // 0. Hello: a sunburst, the person, their name.
+  add(0, cut(900, 760, (ctx, w, h) => {
+    ctx.fillStyle = "#f2c46b"; ctx.beginPath(); ctx.moveTo(0, h); ctx.lineTo(0, w / 2); ctx.arc(w / 2, w / 2, w / 2, Math.PI, 0); ctx.lineTo(w, h); ctx.fill();
+    ctx.save(); ctx.clip();
+    ctx.fillStyle = "rgba(233,162,59,0.55)";
+    for (let i = 0; i < 18; i++) { const a = Math.PI + (i / 18) * Math.PI; ctx.beginPath(); ctx.moveTo(w / 2, h); ctx.lineTo(w / 2 + Math.cos(a) * 900, h + Math.sin(a) * 900); ctx.lineTo(w / 2 + Math.cos(a + 0.08) * 900, h + Math.sin(a + 0.08) * 900); ctx.fill(); }
+    ctx.restore();
+  }), 2.3, 1.5, -1.05);
+  add(0, cut(560, 720, (ctx, w, h) => {
+    ctx.fillStyle = "#2f6f73"; ctx.beginPath(); ctx.moveTo(40, h); ctx.bezierCurveTo(40, 470, 130, 430, w / 2, 430); ctx.bezierCurveTo(w - 130, 430, w - 40, 470, w - 40, h); ctx.fill();
+    ctx.fillStyle = "#f6efe2"; ctx.beginPath(); ctx.moveTo(w / 2 - 70, 430); ctx.lineTo(w / 2, 540); ctx.lineTo(w / 2 + 70, 430); ctx.fill();
+    ctx.fillStyle = "#c98f6b"; ctx.fillRect(w / 2 - 42, 340, 84, 110);
+    ctx.beginPath(); ctx.ellipse(w / 2, 260, 108, 128, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#2a2522"; ctx.beginPath(); ctx.ellipse(w / 2, 200, 122, 92, 0, Math.PI, 0); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(w / 2 - 92, 250, 34, 80, 0.2, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(w / 2 + 92, 250, 34, 80, -0.2, 0, Math.PI * 2); ctx.fill();
+  }), 1.15, 1.5, -0.35);
+  add(0, cut(1100, 300, (ctx, w, h) => {
+    ctx.fillStyle = C.rose; ctx.beginPath(); ctx.moveTo(0, 60); ctx.lineTo(70, 150); ctx.lineTo(0, 240); ctx.lineTo(110, 240); ctx.lineTo(110, 60); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(w, 60); ctx.lineTo(w - 70, 150); ctx.lineTo(w, 240); ctx.lineTo(w - 110, 240); ctx.lineTo(w - 110, 60); ctx.fill();
+    ctx.fillStyle = "#e57d6f"; rrect(ctx, 80, 20, w - 160, 220, 16); ctx.fill();
+    ctx.fillStyle = "#fff"; ctx.font = serif(92); ctx.textAlign = "center"; ctx.fillText(P.name, w / 2, 135);
+    ctx.font = sans(34, 600); ctx.fillText(P.role.toUpperCase(), w / 2, 205);
+  }), 2.5, 1.5, 0.95);
 
-  // 1. A flag at each place.
+  // 1. Where from: a flag at each place on the printed map.
   const { project } = placeMap(P);
   P.places.forEach((p, i) => {
     const [s, z] = project(p.lat, p.lng);
+    const last = i === P.places.length - 1;
     add(1, cut(520, 640, (ctx) => {
-      ctx.fillStyle = C.ink; ctx.fillRect(10, 20, 14, 620);
-      ctx.fillStyle = i === P.places.length - 1 ? C.amber : C.rose; ctx.beginPath(); ctx.moveTo(24, 20); ctx.lineTo(500, 20); ctx.lineTo(450, 150); ctx.lineTo(500, 280); ctx.lineTo(24, 280); ctx.fill();
-      ctx.fillStyle = "#fff"; ctx.font = serif(76); ctx.fillText(p.name, 50, 130);
-      ctx.font = sans(44, 600); ctx.fillText(p.what, 50, 220);
-    }), 0.62, 0.76, s + 0.31 - 0.012, z, { delay: i * 0.08 });
+      ctx.fillStyle = "#4b3b2c"; ctx.fillRect(14, 24, 14, 616);
+      ctx.fillStyle = "#e7c26b"; ctx.beginPath(); ctx.arc(21, 22, 18, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = last ? C.amber : C.rose;
+      ctx.beginPath(); ctx.moveTo(28, 40); ctx.bezierCurveTo(200, 0, 330, 90, 500, 50); ctx.lineTo(500, 290); ctx.bezierCurveTo(330, 330, 200, 240, 28, 280); ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = serif(72); ctx.fillText(p.name, 56, 160);
+      ctx.font = sans(40, 600); ctx.fillText(p.what, 56, 240);
+    }), 0.62, s + 0.29, z, { delay: i * 0.1, edge: 10 });
   });
 
-  // 2. The school and the diploma.
+  // 2. Studied: trees, the school, the diploma.
+  add(2, cut(1200, 420, (ctx, w, h) => {
+    for (let i = 0; i < 7; i++) tree(ctx, 90 + i * 170, h, 300 + (i % 3) * 70, i % 2 ? "#5f9a7c" : "#4f876b");
+  }), 2.8, 1.5, -1.3);
   add(2, cut(1000, 760, (ctx, w, h) => {
-    ctx.fillStyle = C.paperDark; ctx.beginPath(); ctx.moveTo(60, 250); ctx.lineTo(w / 2, 40); ctx.lineTo(w - 60, 250); ctx.fill();
-    ctx.fillStyle = C.paper; ctx.fillRect(60, 250, w - 120, 50); ctx.fillRect(30, h - 70, w - 60, 70);
-    ctx.fillStyle = "#d9d1c1"; for (let i = 0; i < 6; i++) ctx.fillRect(110 + i * 150, 300, 60, h - 370);
-    ctx.fillStyle = C.ink; ctx.font = serif(52); ctx.textAlign = "center"; ctx.fillText(s0.place.toUpperCase(), w / 2, 200);
-    ctx.strokeStyle = C.ink; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(60, 250); ctx.lineTo(w / 2, 40); ctx.lineTo(w - 60, 250); ctx.closePath(); ctx.stroke();
-  }), 2.4, 1.8, 1.5, -0.75);
-  add(2, cut(900, 620, (ctx, w, h) => {
-    ctx.fillStyle = "#fbf8f1"; ctx.fillRect(0, 0, w, h);
-    ctx.strokeStyle = C.amber; ctx.lineWidth = 8; ctx.strokeRect(20, 20, w - 40, h - 40);
+    ctx.fillStyle = "#efe6d4"; ctx.fillRect(60, 260, w - 120, h - 330);
+    ctx.fillStyle = "#d8ccb4"; ctx.beginPath(); ctx.moveTo(30, 270); ctx.lineTo(w / 2, 50); ctx.lineTo(w - 30, 270); ctx.fill();
+    ctx.fillStyle = "#e9dfcb"; ctx.beginPath(); ctx.moveTo(90, 250); ctx.lineTo(w / 2, 90); ctx.lineTo(w - 90, 250); ctx.fill();
+    ctx.fillStyle = C.ink; ctx.font = serif(44); ctx.textAlign = "center"; ctx.fillText(s0.place.toUpperCase(), w / 2, 220);
+    for (let i = 0; i < 6; i++) {
+      const x = 120 + i * 148;
+      const g = ctx.createLinearGradient(x, 0, x + 64, 0);
+      g.addColorStop(0, "#fbf6ea"); g.addColorStop(1, "#cbbd9f");
+      ctx.fillStyle = g; ctx.fillRect(x, 300, 64, h - 400);
+      ctx.fillStyle = "#d8ccb4"; ctx.fillRect(x - 10, 290, 84, 16); ctx.fillRect(x - 10, h - 110, 84, 16);
+    }
+    ctx.fillStyle = "#5b4b3a"; ctx.fillRect(w / 2 - 50, h - 250, 100, 150);
+    ctx.fillStyle = "#d8ccb4"; for (let i = 0; i < 3; i++) ctx.fillRect(30 + i * 20, h - 90 + i * 30, w - 60 - i * 40, 30);
+  }), 2.2, 1.5, -0.55);
+  add(2, cut(1000, 520, (ctx, w, h) => {
+    ctx.fillStyle = "#fbf8f1"; ctx.fillRect(60, 30, w - 120, h - 60);
+    ctx.fillStyle = "#e9dcc2"; ctx.beginPath(); ctx.ellipse(60, h / 2, 40, h / 2 - 30, 0, 0, Math.PI * 2); ctx.fill(); ctx.beginPath(); ctx.ellipse(w - 60, h / 2, 40, h / 2 - 30, 0, 0, Math.PI * 2); ctx.fill();
     ctx.textAlign = "center"; ctx.fillStyle = C.ink;
-    ctx.font = serif(50); ctx.fillText(P.name, w / 2, 150);
-    ctx.font = serif(64); ctx.fillText(s0.degree, w / 2, 280);
-    ctx.font = serif(44, 400); ctx.fillText(`in ${s0.field}`, w / 2, 350);
-    ctx.fillStyle = C.muted; ctx.font = sans(34, 600); ctx.fillText(`${s0.from} TO ${s0.to}`, w / 2, 450);
-    ctx.fillStyle = C.amber; ctx.beginPath(); ctx.arc(w / 2, 530, 36, 0, Math.PI * 2); ctx.fill();
-  }), 1.5, 1.03, 1.5, 1.0);
+    ctx.font = serif(44, 400, "italic"); ctx.fillText(P.name, w / 2, 120);
+    ctx.font = serif(66); ctx.fillText(s0.degree, w / 2, 230);
+    ctx.font = serif(46, 400); ctx.fillText(`in ${s0.field}`, w / 2, 300);
+    ctx.fillStyle = C.muted; ctx.font = sans(32, 600); ctx.fillText(`${s0.from} TO ${s0.to}`, w / 2, 385);
+    ctx.fillStyle = C.rose; ctx.fillRect(w / 2 + 160, 360, 26, 140); ctx.fillRect(w / 2 + 200, 360, 26, 120);
+    ctx.fillStyle = C.amber; ctx.beginPath(); ctx.arc(w / 2 + 193, 380, 50, 0, Math.PI * 2); ctx.fill();
+  }), 1.7, 1.5, 0.95);
 
-  // 3. A building for each job, as tall as the years, in time order.
+  // 3. Worked: a skyline behind, a building per job in front, as tall as the years.
+  add(3, cut(1200, 460, (ctx, w, h) => {
+    ctx.fillStyle = "#cdd6d9";
+    let x = 0;
+    for (let i = 0; x < w; i++) { const bw = 70 + ((i * 53) % 90), bh = 160 + ((i * 97) % 260); ctx.fillRect(x, h - bh, bw, bh); x += bw + 8; }
+  }), 2.8, 1.5, -1.45);
   const jobs = [...P.work].sort((a, b) => a.from - b.from);
   jobs.forEach((w, i) => {
-    const years = (w.to ?? NOW) - w.from, hgt = 0.75 + years * 0.33, wid = 0.82;
+    const years = (w.to ?? NOW) - w.from, hgt = 0.8 + years * 0.32, wid = 0.84;
     const px = Math.round((600 * hgt) / wid);
-    add(3, cut(600, px, (ctx, cw, ch) => {
-      ctx.fillStyle = i === jobs.length - 1 ? "#f3dfb6" : C.paperDark; ctx.fillRect(0, 0, cw, ch);
-      ctx.strokeStyle = C.ink; ctx.lineWidth = 8; ctx.strokeRect(4, 4, cw - 8, ch - 8);
-      ctx.fillStyle = "rgba(28,34,42,0.18)";
-      for (let y = 330; y < ch - 120; y += 110) for (let x = 60; x < cw - 60; x += 130) ctx.fillRect(x, y, 70, 60);
-      ctx.fillStyle = C.ink; ctx.font = serif(66); wrap(ctx, w.org, 40, 100, cw - 80, 70, 2);
-      ctx.fillStyle = C.amber; ctx.font = sans(46, 600); ctx.fillText(yearText(w), 40, 270);
-    }), wid, hgt, 0.55 + (i * 1.9) / Math.max(1, jobs.length - 1), i % 2 ? 0.35 : -0.55, { delay: i * 0.1 });
+    const roof = i % 3;
+    add(3, cut(600, px + 120, (ctx, cw, ch) => {
+      const top = 120, now = i === jobs.length - 1;
+      ctx.fillStyle = now ? "#f0d9a8" : ["#e6dccb", "#d9e2e3", "#eadad3"][i % 3];
+      ctx.fillRect(20, top, cw - 40, ch - top);
+      ctx.fillStyle = "#8c7c69";
+      if (roof === 0) { ctx.beginPath(); ctx.moveTo(10, top + 4); ctx.lineTo(cw / 2, 10); ctx.lineTo(cw - 10, top + 4); ctx.fill(); }
+      else if (roof === 1) ctx.fillRect(10, top - 30, cw - 20, 34);
+      else for (let j = 0; j < 3; j++) { ctx.beginPath(); ctx.moveTo(20 + j * 187, top); ctx.lineTo(20 + j * 187, top - 90); ctx.lineTo(20 + (j + 1) * 187, top); ctx.fill(); }
+      ctx.fillStyle = C.ink; ctx.font = serif(60); wrap(ctx, w.org, 50, top + 90, cw - 100, 64, 2);
+      ctx.fillStyle = C.amber; ctx.font = sans(42, 600); ctx.fillText(yearText(w), 50, top + 250);
+      for (let y = top + 320; y < ch - 170; y += 105) for (let x = 60; x < cw - 90; x += 125) {
+        ctx.fillStyle = now && (x + y) % 3 ? "#f2b84b" : "rgba(40,50,60,0.35)"; ctx.fillRect(x, y, 70, 64);
+      }
+      ctx.fillStyle = "#5b4b3a"; ctx.fillRect(cw / 2 - 45, ch - 150, 90, 150);
+    }), wid, 0.55 + (i * 1.9) / Math.max(1, jobs.length - 1), i % 2 ? 0.45 : -0.45, { delay: i * 0.12 });
   });
 
-  // 4. Tabbed cards, one per group of skills.
+  // 4. Good at: tabbed cards, one per group.
   P.skills.slice(0, 4).forEach((g, i) => {
     add(4, cut(800, 680, (ctx, w, h) => {
-      ctx.fillStyle = [C.paper, "#f3dfb6", "#dcebe6", "#efd9d3"][i];
-      ctx.beginPath(); ctx.moveTo(0, 110); ctx.lineTo(60 + i * 150, 110); ctx.lineTo(80 + i * 150, 0); ctx.lineTo(330 + i * 150, 0); ctx.lineTo(350 + i * 150, 110); ctx.lineTo(w, 110); ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.fill();
-      ctx.fillStyle = C.ink; ctx.font = sans(40, 600); ctx.fillText(g.group, 100 + i * 150, 75);
-      ctx.font = sans(52); g.items.forEach((it, j) => ctx.fillText(`• ${it}`, 50, 220 + j * 100));
-    }), 1.3, 1.1, i % 2 ? 2.2 : 0.8, i < 2 ? -0.75 : 0.75, { delay: i * 0.08 });
+      ctx.fillStyle = ["#f6efe2", "#f2d8a0", "#cfe3dc", "#efcfc7"][i];
+      const tx = 40 + i * 160;
+      ctx.beginPath(); ctx.moveTo(0, 110); ctx.lineTo(tx, 110); ctx.lineTo(tx + 24, 0); ctx.lineTo(tx + 300, 0); ctx.lineTo(tx + 324, 110); ctx.lineTo(w, 110); ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.fill();
+      ctx.fillStyle = C.ink; ctx.font = sans(38, 600); ctx.fillText(g.group, tx + 40, 74);
+      ctx.font = serif(54, 400); g.items.forEach((it, j) => ctx.fillText(it, 60, 240 + j * 104));
+      ctx.fillStyle = C.amber; g.items.forEach((_, j) => { ctx.beginPath(); ctx.arc(34, 222 + j * 104, 9, 0, Math.PI * 2); ctx.fill(); });
+    }), 1.32, i % 2 ? 2.2 : 0.8, i < 2 ? -0.8 : 0.7, { delay: i * 0.1 });
   });
 
-  // 5. A card for each project, to open.
+  // 5. Made: a card for each project, to open.
   P.projects.slice(0, 6).forEach((p, i) => {
-    add(5, cut(700, 600, (ctx, w, h) => {
-      ctx.fillStyle = C.paper; rrect(ctx, 0, 0, w, h, 20); ctx.fill();
-      ctx.strokeStyle = C.line; ctx.lineWidth = 4; rrect(ctx, 2, 2, w - 4, h - 4, 20); ctx.stroke();
-      miniPicture(ctx, p.kind, 24, 24, w - 48, 330, i + 3);
-      ctx.fillStyle = C.ink; ctx.font = serif(52); wrap(ctx, p.title, 30, 430, w - 60, 56, 2);
-      ctx.fillStyle = C.amber; ctx.font = sans(30, 600); ctx.fillText(`${p.place.toUpperCase()}  ${p.year}`, 30, h - 30);
-    }), 0.88, 0.75, 0.55 + (i % 3) * 0.95, i < 3 ? -0.7 : 0.75, { delay: (i % 3) * 0.06, project: p });
+    add(5, cut(700, 620, (ctx, w, h) => {
+      ctx.fillStyle = "#fbf8f1"; rrect(ctx, 0, 0, w, h, 18); ctx.fill();
+      miniPicture(ctx, p.kind, 22, 22, w - 44, 340, i + 3);
+      ctx.fillStyle = C.ink; ctx.font = serif(50); wrap(ctx, p.title, 28, 440, w - 56, 54, 2);
+      ctx.fillStyle = C.amber; ctx.font = sans(28, 600); ctx.fillText(`${p.place.toUpperCase()}  ${p.year}`, 28, h - 28);
+    }), 0.9, 0.55 + (i % 3) * 0.95, i < 3 ? -0.75 : 0.75, { delay: (i % 3) * 0.08, project: p });
   });
 
-  // 6. Speech bubbles.
+  // 6. Others say: speech bubbles.
   P.quotes.slice(0, 3).forEach((q, i) => {
     add(6, cut(1500, 520, (ctx, w, h) => {
-      ctx.fillStyle = [C.paper, "#f3dfb6", "#dcebe6"][i]; rrect(ctx, 0, 0, w, h - 70, 40); ctx.fill();
-      ctx.beginPath(); ctx.moveTo(140 + i * 300, h - 75); ctx.lineTo(110 + i * 300, h); ctx.lineTo(260 + i * 300, h - 75); ctx.fill();
-      ctx.fillStyle = C.ink; ctx.font = serif(44, 400, "italic");
-      const y = wrap(ctx, `“${q.text}”`, 50, 80, w - 100, 56, 4);
-      ctx.font = sans(34, 600); ctx.fillText(`${q.who}, ${q.from}`, 50, Math.min(y + 20, h - 100));
-    }), 2.6, 0.9, 1.5, -1.3 + i * 1.05, { delay: i * 0.1 });
+      ctx.fillStyle = ["#fbf8f1", "#f2d8a0", "#cfe3dc"][i]; rrect(ctx, 0, 0, w, h - 70, 46); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(150 + i * 320, h - 75); ctx.lineTo(110 + i * 320, h); ctx.lineTo(270 + i * 320, h - 75); ctx.fill();
+      ctx.fillStyle = C.ink; ctx.font = serif(46, 400, "italic");
+      const y = wrap(ctx, `“${q.text}”`, 56, 86, w - 112, 58, 4);
+      ctx.font = sans(34, 600); ctx.fillText(`${q.who}, ${q.from}`, 56, Math.min(y + 22, h - 100));
+    }), 2.6, 1.5, -1.25 + i * 1.05, { delay: i * 0.12 });
   });
 
-  // 7. An envelope, and the letter out of it.
+  // 7. Get in touch: the letter, and the envelope it came out of.
   add(7, cut(1000, 760, (ctx, w, h) => {
     ctx.fillStyle = "#fbf8f1"; ctx.fillRect(0, 0, w, h);
-    ctx.strokeStyle = C.line; ctx.lineWidth = 6; ctx.strokeRect(3, 3, w - 6, h - 6);
+    ctx.strokeStyle = "rgba(120,100,70,0.15)"; ctx.lineWidth = 3;
+    for (let y = 470; y < h - 40; y += 56) { ctx.beginPath(); ctx.moveTo(60, y); ctx.lineTo(w - 60, y); ctx.stroke(); }
     ctx.fillStyle = C.amber; ctx.font = sans(36, 600); ctx.fillText("GET IN TOUCH", 60, 110);
     ctx.fillStyle = C.ink; ctx.font = serif(84); ctx.fillText(`Write to ${P.first}`, 60, 230);
     ctx.font = serif(52, 400); ctx.fillText(P.contact.email, 60, 330);
-    ctx.fillStyle = C.muted; ctx.font = sans(34); wrap(ctx, `${P.seeking}.`, 60, 420, w - 120, 44);
-  }), 2.0, 1.52, 1.5, -0.45);
+    ctx.fillStyle = C.muted; ctx.font = sans(34); wrap(ctx, `${P.seeking}.`, 60, 410, w - 120, 44);
+  }), 2.0, 1.5, -0.45);
   add(7, cut(1000, 560, (ctx, w, h) => {
     ctx.fillStyle = "#e9c48a"; ctx.fillRect(0, 0, w, h);
-    ctx.fillStyle = "#deb371"; ctx.beginPath(); ctx.moveTo(0, h); ctx.lineTo(w / 2, h * 0.38); ctx.lineTo(w, h); ctx.fill();
-    ctx.strokeStyle = "rgba(0,0,0,0.12)"; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(w / 2, h * 0.55); ctx.lineTo(w, 0); ctx.stroke();
+    ctx.fillStyle = "#dfb576"; ctx.beginPath(); ctx.moveTo(0, h); ctx.lineTo(w / 2, h * 0.4); ctx.lineTo(w, h); ctx.fill();
+    ctx.fillStyle = "#e3bc80"; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(w * 0.42, h * 0.62); ctx.lineTo(0, h); ctx.fill(); ctx.beginPath(); ctx.moveTo(w, 0); ctx.lineTo(w * 0.58, h * 0.62); ctx.lineTo(w, h); ctx.fill();
+    ctx.fillStyle = C.rose; ctx.fillRect(w - 170, 40, 120, 140); ctx.fillStyle = "#fff"; ctx.fillRect(w - 158, 52, 96, 116);
+    ctx.fillStyle = C.rose; ctx.beginPath(); ctx.arc(w - 110, 110, 30, 0, Math.PI * 2); ctx.fill();
     ctx.fillStyle = C.ink; ctx.font = sans(40, 600); ctx.textAlign = "center"; ctx.fillText(P.contact.links.join("   "), w / 2, h - 50);
-  }), 2.3, 1.29, 1.5, 0.75);
+  }), 2.3, 1.5, 0.75);
   return list;
 }
 
-// ---------- The page sheet ----------
-const VERT = `
-varying vec2 vUv; varying vec3 vN;
-void main() { vUv = uv; vN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
-const FRAG = `
-uniform sampler2D F; uniform sampler2D B;
-varying vec2 vUv; varying vec3 vN;
-void main() {
-  vec3 n = normalize(vN); if (!gl_FrontFacing) n = -n;
-  float light = 0.6 + 0.45 * max(dot(n, normalize(vec3(-0.3, 0.8, 0.5))), 0.0);
-  vec3 col = gl_FrontFacing ? texture2D(F, vUv).rgb : texture2D(B, vec2(1.0 - vUv.x, vUv.y)).rgb;
-  gl_FragColor = vec4(col * light, 1.0);
-  #include <colorspace_fragment>
-}`;
-
-function sheetGeometry() {
-  const n = (SEG + 1) * 2;
-  const g = new THREE.BufferGeometry();
-  const uv = new Float32Array(n * 2), idx = [];
-  for (let i = 0; i <= SEG; i++) for (let j = 0; j <= 1; j++) {
-    const k = i * 2 + j; uv[k * 2] = i / SEG; uv[k * 2 + 1] = 1 - j;
-  }
-  for (let i = 0; i < SEG; i++) { const a = i * 2; idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
-  g.setAttribute("position", new THREE.BufferAttribute(new Float32Array(n * 3), 3));
-  g.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
-  g.setIndex(idx);
-  return g;
+// ---------- The book ----------
+function desk() {
+  return canvas(1024, 1024, (ctx, w, h) => {
+    ctx.fillStyle = "#2c2119"; ctx.fillRect(0, 0, w, h);
+    for (let i = 0; i < 260; i++) {
+      const y = Math.random() * h, a = 0.03 + Math.random() * 0.07;
+      ctx.strokeStyle = Math.random() < 0.5 ? `rgba(0,0,0,${a})` : `rgba(160,110,70,${a})`;
+      ctx.lineWidth = 1 + Math.random() * 3;
+      ctx.beginPath(); ctx.moveTo(0, y);
+      for (let x = 0; x <= w; x += 32) ctx.lineTo(x, y + Math.sin(x / 140 + i) * 6);
+      ctx.stroke();
+    }
+  });
 }
+
+function edges() {
+  return canvas(256, 64, (ctx, w, h) => {
+    ctx.fillStyle = "#efe7d6"; ctx.fillRect(0, 0, w, h);
+    for (let y = 0; y < h; y += 3) { ctx.fillStyle = `rgba(120,100,70,${0.08 + Math.random() * 0.12})`; ctx.fillRect(0, y, w, 1); }
+  });
+}
+
+/** How far a page rises from the spine: it dips into the gutter, then lies flat. */
+const bow = (s) => 0.11 * (1 - Math.pow(1 - Math.min(s, 0.7) / 0.7, 2));
 
 /** A page turned by angle a about the spine: the point s from the spine, its tangent and normal. */
 function curve(a, s, lift) {
@@ -231,7 +311,29 @@ function curve(a, s, lift) {
   const phi = a + b * s;
   const x = Math.abs(b) < 1e-6 ? s * Math.cos(a) : (Math.sin(phi) - Math.sin(a)) / b;
   const y = Math.abs(b) < 1e-6 ? s * Math.sin(a) : (Math.cos(a) - Math.cos(phi)) / b;
-  return { p: new THREE.Vector3(x, y + lift, 0), t: new THREE.Vector3(Math.cos(phi), Math.sin(phi), 0), n: new THREE.Vector3(-Math.sin(phi), Math.cos(phi), 0) };
+  return {
+    p: new THREE.Vector3(x, y + lift + bow(s) * Math.abs(Math.cos(a)), 0),
+    t: new THREE.Vector3(Math.cos(phi), Math.sin(phi), 0),
+    n: new THREE.Vector3(-Math.sin(phi), Math.cos(phi), 0),
+  };
+}
+
+function sheetGeometries() {
+  const n = (SEG + 1) * 2;
+  const front = new THREE.BufferGeometry(), back = new THREE.BufferGeometry();
+  const uvF = new Float32Array(n * 2), uvB = new Float32Array(n * 2), idx = [];
+  for (let i = 0; i <= SEG; i++) for (let j = 0; j <= 1; j++) {
+    const k = i * 2 + j;
+    uvF[k * 2] = i / SEG; uvF[k * 2 + 1] = 1 - j;
+    uvB[k * 2] = 1 - i / SEG; uvB[k * 2 + 1] = 1 - j;
+  }
+  for (let i = 0; i < SEG; i++) { const a = i * 2; idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+  const pos = new THREE.BufferAttribute(new Float32Array(n * 3), 3);
+  front.setAttribute("position", pos); front.setAttribute("uv", new THREE.BufferAttribute(uvF, 2)); front.setIndex(idx);
+  front.computeVertexNormals();
+  back.setAttribute("position", pos); back.setAttribute("uv", new THREE.BufferAttribute(uvB, 2)); back.setIndex(idx);
+  back.setAttribute("normal", front.attributes.normal);
+  return { front, back };
 }
 
 export async function start({ personKey }) {
@@ -241,44 +343,80 @@ export async function start({ personKey }) {
   const stage = makeStage({ fov: 28 });
   document.body.classList.add("book");
   const { scene, camera, renderer } = stage;
-  const ui = buildUI({ title: "Pop-up book", how: "Turning the page folds one picture flat and raises the next", personKey, example: "book" });
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  const ui = buildUI({ title: "Pop-up book", how: "Turning the page folds one scene flat and raises the next", personKey, example: "book" });
   const scroll = makeScroll();
   ui.bindScroll(scroll);
   const cta = contactButtons(P);
   const tex = (el) => texture(el, renderer);
 
-  // Covers under the pages.
-  const board = (x) => {
-    const m = new THREE.Mesh(new THREE.BoxGeometry(PW + 0.12, 0.06, PD + 0.2), new THREE.MeshStandardMaterial({ color: "#2b3a4a", roughness: 0.8 }));
-    m.position.set(x, -0.035, 0);
-    scene.add(m);
-  };
-  board(-PW / 2 - 0.04); board(PW / 2 + 0.04);
-  scene.add(new THREE.AmbientLight(0xffffff, 1.4));
-  const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(-2, 6, 4); scene.add(sun);
+  // A desk, lit by a lamp from the upper left.
+  const deskTex = tex(desk());
+  deskTex.wrapS = deskTex.wrapT = THREE.RepeatWrapping; deskTex.repeat.set(4, 4);
+  const table = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.MeshLambertMaterial({ map: deskTex }));
+  table.rotation.x = -Math.PI / 2; table.position.y = -0.2; table.receiveShadow = true;
+  scene.add(table);
+  scene.add(new THREE.HemisphereLight(0xfff4e6, 0x2c2119, 1.25));
+  const lamp = new THREE.DirectionalLight(0xfff0da, 2.1);
+  lamp.position.set(-3.5, 7, 3.2);
+  lamp.castShadow = true;
+  lamp.shadow.mapSize.set(2048, 2048);
+  Object.assign(lamp.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6, near: 1, far: 20 });
+  lamp.shadow.bias = -0.0004; lamp.shadow.normalBias = 0.02;
+  scene.add(lamp);
+
+  // Covers, a spine and the block of pages beneath the turning ones.
+  const cloth = new THREE.MeshLambertMaterial({ color: "#24414c" });
+  for (const side of [-1, 1]) {
+    const cover = new THREE.Mesh(new THREE.BoxGeometry(PW + 0.16, 0.05, PD + 0.24), cloth);
+    cover.position.set(side * (PW / 2 + 0.02), -0.175, 0); cover.castShadow = cover.receiveShadow = true;
+    const edgeTex = tex(edges());
+    const block = new THREE.Mesh(new THREE.BoxGeometry(PW - 0.06, 0.13, PD - 0.02), [
+      new THREE.MeshLambertMaterial({ map: edgeTex }), new THREE.MeshLambertMaterial({ map: edgeTex }),
+      new THREE.MeshLambertMaterial({ color: C.paper }), new THREE.MeshLambertMaterial({ color: C.paper }),
+      new THREE.MeshLambertMaterial({ map: edgeTex }), new THREE.MeshLambertMaterial({ map: edgeTex }),
+    ]);
+    block.position.set(side * (PW / 2 + 0.03), -0.09, 0); block.castShadow = block.receiveShadow = true;
+    scene.add(cover, block);
+  }
+  const spine = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.14, PD + 0.24, 24, 1, false, Math.PI / 2, Math.PI), cloth);
+  spine.rotation.x = Math.PI / 2; spine.position.y = -0.2;
+  scene.add(spine);
 
   // The inside of the front cover carries the first chapter's words.
-  const inside = new THREE.Mesh(new THREE.PlaneGeometry(PW, PD), new THREE.MeshBasicMaterial({ map: tex(leftPage(P, 0)) }));
-  inside.rotation.x = -Math.PI / 2; inside.position.set(-PW / 2, 0.001, 0);
-  scene.add(inside);
-
-  // One sheet per chapter: its front is that chapter's right page, its back the next chapter's left page.
-  const blank = canvas(PX, PY, (ctx, w, h) => { ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h); });
-  const sheets = [];
-  for (let k = 0; k < N; k++) {
-    const mat = new THREE.ShaderMaterial({ vertexShader: VERT, fragmentShader: FRAG, side: THREE.DoubleSide,
-      uniforms: { F: { value: tex(rightPage(P, k, land)) }, B: { value: tex(k < N - 1 ? leftPage(P, k + 1) : blank) } } });
-    const geo = sheetGeometry();
-    const mesh = new THREE.Mesh(geo, mat);
-    scene.add(mesh);
-    sheets.push({ mesh, geo, angle: -1 });
+  const insideGeo = sheetGeometries().front;
+  const insideMesh = new THREE.Mesh(insideGeo, new THREE.MeshLambertMaterial({ map: tex(leftPage(P, 0)), side: THREE.BackSide }));
+  insideMesh.receiveShadow = true;
+  scene.add(insideMesh);
+  {
+    const pos = insideGeo.attributes.position.array, uv = insideGeo.attributes.uv.array;
+    for (let i = 0; i <= SEG; i++) {
+      const { p } = curve(Math.PI, (i / SEG) * PW, 0.002);
+      for (let j = 0; j <= 1; j++) { const v = (i * 2 + j) * 3; pos[v] = p.x; pos[v + 1] = p.y; pos[v + 2] = j ? PD / 2 : -PD / 2; uv[(i * 2 + j) * 2] = 1 - i / SEG; }
+    }
+    insideGeo.computeVertexNormals();
   }
 
-  // Pop-ups, each a cut-out hinged to its chapter's page.
-  const pops = popups(P).map((it) => {
+  // One sheet per chapter: its front is that chapter's right page, its back the next chapter's left page.
+  const blank = canvas(PX, PY, (ctx, w, h) => { ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h); grain(ctx, w, h); });
+  const sheets = [];
+  for (let k = 0; k < N; k++) {
+    const { front, back } = sheetGeometries();
+    const f = new THREE.Mesh(front, new THREE.MeshLambertMaterial({ map: tex(rightPage(P, k, land)), side: THREE.FrontSide }));
+    const b = new THREE.Mesh(back, new THREE.MeshLambertMaterial({ map: tex(k < N - 1 ? leftPage(P, k + 1) : blank), side: THREE.BackSide }));
+    f.castShadow = true; f.receiveShadow = b.receiveShadow = true;
+    f.material.shadowSide = THREE.DoubleSide;
+    scene.add(f, b);
+    sheets.push({ geo: front, meshes: [f, b], angle: -1 });
+  }
+
+  // The scenes: each card hinged to its chapter's page.
+  const pops = scenes(P).map((it) => {
     const g = new THREE.PlaneGeometry(it.w, it.h);
-    g.translate(0, it.h / 2, 0);
-    const m = new THREE.Mesh(g, new THREE.MeshBasicMaterial({ map: tex(it.pic), transparent: true, alphaTest: 0.4, side: THREE.DoubleSide }));
+    g.translate(0, it.h / 2 - 0.012, 0);
+    const m = new THREE.Mesh(g, new THREE.MeshLambertMaterial({ map: tex(it.pic), transparent: true, alphaTest: 0.5, side: THREE.DoubleSide }));
+    m.castShadow = true; m.receiveShadow = true;
     m.matrixAutoUpdate = false;
     if (it.project) m.userData.project = it.project;
     scene.add(m);
@@ -290,21 +428,23 @@ export async function start({ personKey }) {
 
   const angleOf = (k, st) => (k < st.from ? Math.PI : k === st.from && st.to !== st.from ? Math.PI * st.t : 0);
   const liftOf = (k, a) => lerp((N - k) * EPS, (k + 1) * EPS, a / Math.PI);
-  // How far a chapter's pop-ups stand: up when its spread is open.
+  // A chapter's scene stands while its spread is open, and folds as the page lifts.
   const raiseOf = (k, st) => {
     if (st.from === st.to) return k === st.from ? 1 : 0;
     if (k === st.from) return 1 - smooth(0.02, 0.45, st.raw);
-    if (k === st.to) return smooth(0.5, 0.95, st.raw);
+    if (k === st.to) return smooth(0.5, 0.97, st.raw);
     return 0;
   };
 
   const basis = new THREE.Matrix4(), up = new THREE.Vector3(), face = new THREE.Vector3();
   const Z = new THREE.Vector3(0, 0, 1);
+  const clock = new THREE.Clock();
 
   function frame() {
     const st = scroll.step();
     current = st;
     ui.update(st);
+    const time = clock.getElapsedTime();
 
     sheets.forEach((sh, k) => {
       const a = angleOf(k, st);
@@ -317,7 +457,9 @@ export async function start({ personKey }) {
       }
       sh.geo.attributes.position.needsUpdate = true;
       sh.geo.computeVertexNormals();
+      sh.geo.attributes.normal.needsUpdate = true;
       sh.geo.computeBoundingSphere();
+      sh.meshes[1].geometry.boundingSphere = sh.geo.boundingSphere;
     });
 
     for (const it of pops) {
@@ -334,12 +476,14 @@ export async function start({ personKey }) {
       it.m.matrixWorldNeedsUpdate = true;
     }
 
-    // Look at the open book; on a phone, at the right-hand page.
+    // Lean in on each open spread; stand back while a page turns.
     const narrow = stage.narrow;
-    const target = new THREE.Vector3(narrow ? PW / 2 : 0, 0.55, 0.1);
-    const d = fitDistance(camera, narrow ? PW + 0.5 : 2 * PW + 1.6, PD + 1.9);
-    const pitch = 0.82;
-    camera.position.set(target.x, target.y + Math.sin(pitch) * d, target.z + Math.cos(pitch) * d);
+    const turning = Math.sin(Math.PI * st.raw);
+    const target = new THREE.Vector3(narrow ? PW / 2 : lerp(0.35, 0, turning), lerp(0.55, 0.45, turning), lerp(0.05, 0.15, turning));
+    const d = fitDistance(camera, narrow ? PW + 0.5 : lerp(2 * PW + 0.5, 2 * PW + 1.8, turning), PD + 1.7);
+    const pitch = lerp(0.74, 0.86, turning) + 0.015 * Math.sin(time * 0.3);
+    const yaw = 0.04 * Math.sin(time * 0.21);
+    camera.position.set(target.x + Math.sin(yaw) * Math.cos(pitch) * d, target.y + Math.sin(pitch) * d, target.z + Math.cos(yaw) * Math.cos(pitch) * d);
     camera.lookAt(target);
 
     cta.update(st.from === 7 ? 1 : st.to === 7 ? smooth(0.7, 1, st.raw) : 0);

@@ -35,7 +35,7 @@ const points = pts.length ? pts.map(Number) : [0, 0.25, 0.75, 1.25, 1.75, 2.25, 
 fs.mkdirSync(out, { recursive: true });
 const tag = which.replace("/", "-");
 for (const s of points) {
-  await page.evaluate((s) => window.scrollTo(0, s * Math.max(window.innerHeight * 1.1, 600)), s);
+  await page.evaluate((s) => window.scrollTo(0, s * (window.__storyUnit ? window.__storyUnit() : Math.max(window.innerHeight * 1.1, 600))), s);
   await page.waitForTimeout(700);
   await page.screenshot({ path: `${out}/${tag}-${W}-${String(Math.round(s * 100)).padStart(3, "0")}.png` });
 }

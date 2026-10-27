@@ -69,5 +69,26 @@ brainstorming companion, which serves the same files from a scratch folder
   the book's cut-outs are small at full-book view; the sheet's quotes are
   fixed at three columns and its projects at six plates.
 
-Status: waiting for the author's opinion. No engine or skill change and no
-run until then.
+## Round 2: slower, and a better-made book
+
+The author liked all three, found the book crude and every move too fast
+([record](../../../docs/history/2026-10-27-transition-examples-request.md#the-examples-and-the-authors-opinion)).
+
+- **Slower, in all three** ([kit.js](examples/kit.js)): a chapter now takes
+  about two screens of scrolling instead of one, of which 60 per cent is the
+  move (was 50), and however fast the reader scrolls, the story moves at
+  most 0.55 chapters a second, easing in behind the scroll. A move takes at
+  least about a second. Reduced motion still follows the scroll exactly.
+- **The book, remade** ([book.js](examples/book.js)): a wooden desk lit by
+  one lamp from the upper left with soft shadows (the turning page shadows
+  the spread; the cut-outs shadow the page); cloth covers, a spine and a
+  block of page edges; pages that dip into the gutter; paper grain; every
+  cut-out die-cut with a white card edge; scenes in layers (a sunburst
+  behind the person and a ribbon with the name in front; trees behind the
+  school and a rolled diploma in front; a skyline behind the job buildings,
+  whose roofs differ and whose windows are lit for the current job; a
+  stamped envelope); and a camera that leans in on each open spread and
+  stands back while a page turns. [book-noa-2.jpg](frames/book-noa-2.jpg).
+
+Status: shown to the author again; waiting for their opinion. No engine or
+skill change and no run until then.
