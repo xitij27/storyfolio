@@ -6,7 +6,7 @@
 four ways) and [transitions 2](../../../evals/engine/transitions-2/README.md)
 (three whole-site examples). Amends the second stop of
 [the portfolio structure](2026-10-22-portfolio-structure.md) and of the skill.
-Not yet built or tested.
+Approved by the author: "Yes, this is right." Not yet built or tested.
 
 ## Why
 

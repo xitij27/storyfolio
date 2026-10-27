@@ -104,3 +104,9 @@ Root asked whether the agent should show one recommended mix or a few to
 compare. The author answered, verbatim:
 
 > One recommended mix and then suggest them to look through the gallery so that they can add more customizations or suggest newer components
+
+Root wrote the [design](../superpowers/specs/2026-10-27-transitions-gallery-design.md)
+with its calls marked, and asked the author to approve it or say what to
+change. The author answered, verbatim:
+
+> Yes, this is right.
