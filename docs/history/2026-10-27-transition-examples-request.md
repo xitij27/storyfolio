@@ -82,3 +82,14 @@ carries a whole site. The author answered, verbatim:
 So mixing pieces from different examples is allowed, and the agent may
 recommend a mix suited to the person's profile. Root's guess of one example
 per site is withdrawn.
+
+Root played back three ways (the person picks, brings their own, or the
+agent recommends a mix) and asked whether a recommended mix should be seen
+moving before the whole site is built. The author repeated the previous
+answer with an addition, verbatim:
+
+> or the agent can also recommend, right? They can recommend different components and transitions from different examples and stitch that up. According to whatever is suitable to the person's profile. and then suggest that the user can also look at the GitHub pages and suggest any better ideas or components from there, or give their own.
+
+So the order is: the agent recommends a mix first, then invites the person
+to look at the gallery and suggest better pieces, or give their own. The
+question of a moving preview was not answered.
