@@ -18,6 +18,8 @@
     --points        also shoot the first move between two worlds at raw
                     0.1, 0.5, 0.9 and 1.0, to see the dive end where the
                     next world begins
+    --at=LIST       also shoot at these points, in chapters from the top
+                    (2.2 is the middle of the third chapter's hold)
     --words         keep the words on screen; by default they are hidden,
                     so a shot shows only the picture
     --wait=MS       settle time after each scroll, default 500
@@ -113,5 +115,8 @@ if (options.points) {
   const k = keys.findIndex((key, i) => i + 1 < keys.length && mix[order.indexOf(key)] !== mix[order.indexOf(keys[i + 1])]);
   if (k < 0) problems.push("--points: this mix has no move between two worlds");
   else for (const raw of [0.1, 0.5, 0.9, 1.0]) await shoot(`dive-${keys[k]}-raw-${raw.toFixed(1)}`, k + 0.4 + 0.6 * raw - (raw === 1 ? 1e-4 : 0));
+}
+if (options.at && options.at !== true) {
+  for (const at of String(options.at).split(",").map(Number).filter(Number.isFinite)) await shoot(`at-${at.toFixed(2)}`, at);
 }
 await finish(problems.length ? 1 : 0);

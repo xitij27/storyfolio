@@ -9,8 +9,9 @@ import { follow, stateAt, totalUnits, unitPx, type ScrollState } from "./scroll.
 import { loadLand } from "./land.ts";
 import { holding, type World, type WorldFactory } from "./world.ts";
 import { createSheet } from "./sheet.ts";
+import { createMap } from "./map.ts";
 
-const FACTORIES: Partial<Record<WorldId, WorldFactory>> = { sheet: createSheet };
+const FACTORIES: Partial<Record<WorldId, WorldFactory>> = { sheet: createSheet, map: createMap };
 
 export type StitchOptions = {
   person: Person;
