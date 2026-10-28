@@ -6,7 +6,7 @@ At the first stop your questions go in one message, numbered. `reading-a-profile
 
 ## A choice
 
-Where you offer a choice, the concept above all, give the ones you would not choose as fully as the one you would. Then say which you would choose, and why.
+Where you offer a choice, give the ones you would not choose as fully as the one you would. Then say which you would choose, and why.
 
 If the person tells you to choose, choose. Write what you chose, and what you chose it over, into `docs/story/decided-for-you.md`.
 

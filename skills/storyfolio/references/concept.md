@@ -1,6 +1,6 @@
 # The concept
 
-The second stop: from the fact sheet to three concepts the person can choose between.
+The second stop: from the fact sheet to one mix of ready pieces, shown running, which the person accepts or changes.
 
 ## What the site is
 
@@ -18,6 +18,32 @@ An introduction of the person, in this order. A chapter is left out only when th
 | 8 | Get in touch | How to reach them, and a CV |
 
 Everything on the scroll is brief. More opens on a click: a project's window or page, the whole CV.
+
+## The pieces
+
+Three worlds can tell any chapter, each drawn only from the person's data: a sheet of paper that bends into each chapter's picture, a map of their places, and a pop-up book. A mix says which world holds each chapter. Two chapters in one world join by its own move; in two, the camera dives from one into the next. All of them run in the gallery, with two made-up people: https://xitij27.github.io/storyfolio/transitions/
+
+Use the pieces as they are, with only the person's data in them. Write a scene only when the person asks for one.
+
+## Choosing the mix
+
+For each chapter, choose the piece that shows the most of this person with the captions hidden, given what their facts hold: how many places, jobs and projects, and whether anyone is quoted. Write a line for each choice saying why, from the fact sheet.
+
+## Showing it
+
+For a requested build, scaffold the site and fill it as `engine/README.md` says under "The person's site": their confirmed facts, and nothing else, in `content/person.ts`, and the mix in `content/mix.ts`. Answer the Person, Backdrop, Honesty and Thirty seconds tests below for it. Check it at desktop and phone size and look at every picture. Nobody can picture a mix from words, so give the person its address to scroll. For a planning-only request, give the mix in words with the gallery's address.
+
+Put to them, in this order:
+
+1. the mix, and the line on why each piece;
+2. what of their facts each piece shows, and what it leaves out;
+3. the gallery's address, and that they can swap any piece for another there, ask for changes, suggest a new component, or describe a design of their own.
+
+Write the mix, the reasons and their answer to `docs/story/concepts.md`.
+
+## A scene of your own
+
+When the person asks for a new component or describes a design of their own, build it as a world, as `engine/README.md` says, and hold it to all that follows. Write in `docs/story/concepts.md` what it shows in each chapter it holds, how it joins its neighbours, and the lines of the fact sheet it stands on.
 
 ## What does not work
 
@@ -52,22 +78,6 @@ At least one project is shown working, in miniature, worked by the scroll or a c
 Where the person has pictures of their own work, the scenes show them. Where they have none, the scenes picture the kind of thing they work with, labelled as illustration.
 
 **The opening shows where the person comes from:** what they learned from, or what they began with. The scene may gather, be put together, unfold, be drawn, develop or switch on. At the close the world is whole again.
-
-## Three concepts, each written like this
-
-Make three with different worlds or different things changing shape, not different colours. Write them to `docs/story/concepts.md`.
-
-- **The world,** how it shows their field, and what in it changes shape.
-- **Each chapter's scene,** a line each, as a visitor would see it, with the candidates you turned down.
-- **How each scene turns into the next.**
-- **The project shown working,** and how the scroll or a control works it.
-- **The opening and the close.**
-- **What it stands on:** the lines of the fact sheet it needs.
-- **What it needs from the person:** a picture, someone else's yes.
-
-Then say which you would choose, and why. Choose only by what the scenes show with the captions hidden. Coming from what the person makes, and claiming nothing unconfirmed, are bars all three clear; they rank nothing.
-
-For a requested build, open `engine/README.md` and implement all three concepts as local sketches, each with opening, middle and ending. Each middle pictures its chapter, recognisable with the captions hidden. Inspect each at desktop and phone sizes. Give their working addresses with your recommendation. Planning-only concepts stay in words.
 
 ## Test each one before you show it
 
