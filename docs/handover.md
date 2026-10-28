@@ -1,10 +1,199 @@
 # Handover
 
-Current state as of 21 October 2026. Start with this page and
+Current state as of 28 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
-Latest, 28 October (plan 2 built): **plan 2 is built: the person's site is the stitched story at `/` from stop 2 on, and the skill's stops 2 to 5 say so.** On the author's "okay what next" ([record](history/2026-10-28-what-is-left.md#plan-2-goes-ahead)), root executed [plan 2](superpowers/plans/2026-10-28-the-site-from-the-pieces.md) Tasks 1 to 8 on `main`: three looks (night unchanged, daylight, blueprint); the dive's window is now a lit paper card growing from the last world (on the sheet's face, standing on the map's ground, standing on the book's front page edge); the sheet's words read on a phone (the camera crosses what is wider than about 2.2 units); the person's own words, a CV link and project `more` and `page`; `content/site.ts`; the older plain story at `/plain-story` (`npm run check:plain`, 15 of 15 with Chromium 1234); `npm run check` now checks the person's site (both sizes, no JavaScript, no WebGL, every linked page). The skill's stop 2 puts one mix running, with reasons, then the gallery; `SKILL.md` stays at 800 words. A no-model dry run on person test 2's Dawit ([stitch-2](../evals/engine/stitch-2/README.md)) passes every check and lists what the pieces get wrong with his data: the map's "where from" never shows Addis Ababa, Amsterdam and Rotterdam collide, Kestrel's building runs off the screen; root recommends fixing those three before plan 3's paid run. A fresh reviewer then read the whole change: root fixed its 2 critical and 4 important findings, each shown failing first (chosen words now show in book chapters; a phone tap on the sheet's wall opens the right project; the rail reads over the book in daylight; `more` is in the text without 3D; `npm run check` looks for every chapter's words, project lines and links; every page is titled with the person's name), and left 8 minor ones for the author ([study](../evals/engine/stitch-2/README.md#the-final-review-and-what-it-changed)). 415 tests. No run, no push. Environment: an older server from plan 1 still holds port 3100 (`/var/tmp/stitch-site`); scratch copies are `/var/tmp/plan2-engine`, `/var/tmp/library` and `/var/tmp/stitch-2-site`; the old `shoot.mjs` launches playwright-core's own browser 1248, which is not installed here.
+## Next steps
+
+Written 28 October 2026 at the end of plan 2, on the author's "document the
+possible next steps so I can work on it in another session"
+([record](history/2026-10-28-what-is-left.md#next-steps-written-down)).
+Strike out a step here when it is done, and add what it found to the
+history below.
+
+**Where things stand.** Plan 2 is built and reviewed: the person's site is
+the stitched story at `/`, in three looks (night, daylight, blueprint),
+with the person's own words, a CV link and project detail, and `npm run
+check` checks it ([study](../evals/engine/stitch-2/README.md)). `main` at
+`b8980b51` is on GitHub: the author pushed it at 09:19 UTC on 28 October,
+and the Pages deploy that followed (run 40663319271) succeeded. 415 tests
+pass and `check-skill` is ok. Stage 3 of 4 is still open. It closes with
+plan 3's person test and the author's review of its site.
+
+**Waiting on the author.** Two questions from the end of plan 2 are not
+answered yet:
+
+- Fix the three map problems (step 1) before the paid run? Root
+  recommends yes.
+- Then launch plan 3 (step 4)?
+
+### 1. Fix the map for Dawit's places (no paid run; recommended first)
+
+The no-model dry run on Dawit found three things the map gets wrong with
+his data ([stitch-2, findings 1 to 3](../evals/engine/stitch-2/README.md#what-the-pieces-get-wrong-or-cannot-show-for-the-author)).
+Plan 3 reruns on Dawit, so a paid run would meet them again.
+
+| Problem | What a visitor sees | Done when |
+|---|---|---|
+| "Where from" frames Europe only | Addis Ababa, his first place, is never in view | every place in the chapter is in the frame, at desktop and phone size |
+| Close places collide | Amsterdam and Rotterdam (57 km apart) print their labels on top of each other; in "worked" Lumen Pay's building hides behind Kestrel Freight's | every label reads and every building shows |
+| A long job runs off the screen | Kestrel Freight's six years make a building taller than the frame, cutting off its name | the tallest building and its name stay in the frame |
+
+The code is `skills/storyfolio/engine/stitch/map.ts`, with the camera in
+`stitch/stage.ts`. Possible ways, for that session to choose: frame "where
+from" to the span of the chapter's places, with a minimum; for places
+closer than a set distance, offset their labels and stand their buildings
+side by side; scale building heights against the longest job, or cap them
+to the frame. What can be measured (the frame's span, the distance between
+labels, a height against the frame) gets a failing test first; the rest is
+judged in shots.
+
+To see it, make Dawit's site again
+([stitch-2, "To make it again"](../evals/engine/stitch-2/README.md#to-make-it-again)),
+serve the production build and open `/preview` at "Where from" and "Where
+I've worked". Check that the sample people still look right
+(`/preview?person=noa`, `?person=amara`). Then run
+`node skills/storyfolio/scripts/sync-stitch.mjs` so the library's copy
+matches (a test fails otherwise), `npm test`, `node evals/check-skill.mjs`,
+and `npm run check` on Dawit's site. Record it as a new study,
+`evals/engine/stitch-3/`, and in this handover.
+
+### 2. Two wording fixes the paid run would read (small; recommended before plan 3)
+
+Found by plan 2's final review. An agent in plan 3 reads both, so leaving
+them could steer it wrong:
+
+- `skills/storyfolio/references/concept.md` still says "Write each
+  concept's answer to every test" (line 84), from when stop 2 made three
+  concepts. Its section "The through-line" does not say it is only for a
+  scene of the person's own.
+- When the CV is built: the skill says stop 5 (`SKILL.md`'s stop 5,
+  "Pages that open on a click", and `references/building.md`, which names
+  the CV), while `skills/storyfolio/engine/content/site.ts` (line 10) says
+  stop 6. Make them agree.
+
+These correct words already there and add no instruction, so they need no
+run of their own. Plan 3 is their test.
+
+### 3. Check the live gallery after the 28 October push (free)
+
+The push also published the library with plan 2's pieces (18 files: the
+looks, the dive's card, the project window). Run
+`skills/storyfolio/library/scripts/gallery-check.mjs` against
+https://xitij27.github.io/storyfolio at 1440x900 and 390x844, as for plan 1
+([live check, 28 October](../evals/engine/stitch-1/README.md#live-check-28-october)),
+look at the frames, and record the result in the stitch-2 study.
+
+### 4. Plan 3: the person test (paid; on the author's word)
+
+Run person test 2's fixture, `evals/builds/full-journey-3` (Dawit), again
+with the changed skill, to see whether a fresh agent now builds his site
+from the pieces. It is the main test of the transitions work, and its site
+is what the author reviews to close Stage 3.
+
+First write plan 3 (superpowers:writing-plans) in
+`docs/superpowers/plans/`. What it has to settle, from
+[plan 2's "After this plan"](superpowers/plans/2026-10-28-the-site-from-the-pieces.md#after-this-plan)
+and the final review:
+
+- **A new run folder,** such as `evals/runs/stage-3-person-3/`, with a
+  `protocol.md` written before any agent runs, as
+  [person test 2's](../evals/runs/stage-3-person-2/protocol.md) was: the
+  same actor and runner (`evals/codex-build-run.mjs`), six turns of 30
+  minutes each, 90 in all, 1.5 million uncached tokens.
+- **Turn 3's prompt changes.** Today it says "Go with the concept you
+  recommend". In plan 3 it accepts the agent's mix with one piece swapped
+  for another from the gallery (the design's call). Read turns 2 and 4 to
+  6 against the changed stops as well.
+- **Gates for one mix at stop 2.** After turn 2: the agent wrote
+  `content/person.ts` and `content/mix.ts` from confirmed facts only,
+  showed the mix running at `/preview` with a reason for each chapter's
+  piece, and pointed to the gallery. After turn 3: the swap is made and
+  recorded in `docs/story/concepts.md`.
+- **"Looks like my field."** Dawit asks for a site that looks like his
+  technical field. The pieces are a sheet, a map and a book in three
+  colourings, so the final reviewer asked that plan 3's gates say how that
+  ask is judged.
+- **Cost against person test 2:** 62 minutes and about 1.25 million
+  uncached tokens.
+- **Before launching,** check the run's tooling under `/tmp`, which a
+  restart wipes
+  ([person test 1's notes](../evals/runs/stage-3-person-1/README.md)).
+
+### 5. The author's review (closes Stage 3)
+
+Root serves plan 3's site and checks it against
+[full-journey-3's criteria](../evals/builds/full-journey-3/criteria.md).
+The author scrolls it on a desktop and a phone, and their verdict goes
+verbatim into `docs/history/`.
+
+### 6. Smaller things from plan 2
+
+From the final review (minor) and the dry run (findings 4 to 6). The first
+six are small fixes; the last three are for the author's review to weigh.
+
+- `site.cv` is not checked as an address, as a project's `page` is
+  (`stitch/person.ts` checks `page`, `stitch/site.ts` checks nothing).
+- `/preview?person=noa` shows the owner's CV button
+  (`engine/app/preview/preview.tsx` passes `site.cv` for every person).
+- Below 4.5:1 contrast at small sizes: the project window's "More about"
+  link (`stitch/react.tsx`, `stitch/stitch.css`) and daylight's chapter
+  number.
+- Unusual screens: the phone reading width is in world units (`READ_W` in
+  `stitch/sheet.ts`) and "narrow" is an aspect below 0.9
+  (`stitch/stage.ts`), so very small phones, portrait tablets and
+  landscape phones are framed less well.
+- The stitch-2 frames predate the fix to the sheet's contact sentence (the
+  daylight phone frame still shows "yours to download"): shoot them again.
+- `/plain-story` ships, unlinked, on every person's site.
+- Every project needs a place on the map; Dawit's talk has no city, so it
+  stands at his home.
+- Project pictures are six generic kinds (chart, photo, maze, route, bars,
+  list). None is a talk or a command-line tool and none runs, so "one
+  project shown working" is not in the pieces.
+- A long "looking for" line is cut after two lines on the sheet's contact
+  page.
+
+### 7. After Stage 3
+
+Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-in-order):
+
+- **Comparisons and Stage 1 closers** (14 October items 11 to 13 and 15
+  to 18). Still unanswered: which to run and which to defer. Several were
+  written for a skill that has since changed.
+- **Stage 4, packaging** (14 October items 19 to 24): a release package
+  with a manifest, a licence and origin review, `.claude-plugin/plugin.json`,
+  a clean install, the README's status section brought up to date, and the
+  author's decision to publish.
+
+### For the next session
+
+- Read [AGENTS.md](../AGENTS.md) first. A push and any paid run need the
+  author's word.
+- Node 24.14 runs the `.ts` tests. `npm test` (415) and
+  `node evals/check-skill.mjs` pass before each commit.
+- Browser: Chromium 1234 at
+  `~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome`, named by
+  `CHROMIUM`. playwright-core 1.64 wants 1248, which is not installed
+  here, so `npm run check:plain` (the old `shoot.mjs`) fails on this
+  machine; the engine's `npm run browsers` would install it (not tried).
+- Check production builds (`next build`, `next start`): `next dev`'s live
+  reload fails here.
+- Build copies go in `/var/tmp`, not `/tmp` (a memory filesystem that
+  fills). From plan 2: `/var/tmp/plan2-engine`, `/var/tmp/library` and
+  `/var/tmp/stitch-2-site` (Dawit's, served on port 3119 at the end of
+  plan 2). An older server from plan 1 still holds port 3100
+  (`/var/tmp/stitch-site`); stop it or use another port. A restart loses
+  the servers, and the stitch-2 study says how to make Dawit's site again.
+- Never `pkill -f` a pattern that is in the running shell command: it
+  kills the shell.
+
+## What happened, newest first
+
+Latest, 28 October (next steps): **the author asked for the next steps to be written down, to work on them in another session; they are the section above** ([record](history/2026-10-28-what-is-left.md#next-steps-written-down)). Found while writing them: `main` at `b8980b51` is on GitHub, pushed by the author at 09:19 UTC (root did not push), and the Pages deploy (run 40663319271) succeeded, so the live gallery carries plan 2's pieces. Not yet answered: fix the map first, and launch plan 3.
+
+Earlier, 28 October (plan 2 built): **plan 2 is built: the person's site is the stitched story at `/` from stop 2 on, and the skill's stops 2 to 5 say so.** On the author's "okay what next" ([record](history/2026-10-28-what-is-left.md#plan-2-goes-ahead)), root executed [plan 2](superpowers/plans/2026-10-28-the-site-from-the-pieces.md) Tasks 1 to 8 on `main`: three looks (night unchanged, daylight, blueprint); the dive's window is now a lit paper card growing from the last world (on the sheet's face, standing on the map's ground, standing on the book's front page edge); the sheet's words read on a phone (the camera crosses what is wider than about 2.2 units); the person's own words, a CV link and project `more` and `page`; `content/site.ts`; the older plain story at `/plain-story` (`npm run check:plain`, 15 of 15 with Chromium 1234); `npm run check` now checks the person's site (both sizes, no JavaScript, no WebGL, every linked page). The skill's stop 2 puts one mix running, with reasons, then the gallery; `SKILL.md` stays at 800 words. A no-model dry run on person test 2's Dawit ([stitch-2](../evals/engine/stitch-2/README.md)) passes every check and lists what the pieces get wrong with his data: the map's "where from" never shows Addis Ababa, Amsterdam and Rotterdam collide, Kestrel's building runs off the screen; root recommends fixing those three before plan 3's paid run. A fresh reviewer then read the whole change: root fixed its 2 critical and 4 important findings, each shown failing first (chosen words now show in book chapters; a phone tap on the sheet's wall opens the right project; the rail reads over the book in daylight; `more` is in the text without 3D; `npm run check` looks for every chapter's words, project lines and links; every page is titled with the person's name), and left 8 minor ones for the author ([study](../evals/engine/stitch-2/README.md#the-final-review-and-what-it-changed)). 415 tests. No run, no push. Environment: an older server from plan 1 still holds port 3100 (`/var/tmp/stitch-site`); scratch copies are `/var/tmp/plan2-engine`, `/var/tmp/library` and `/var/tmp/stitch-2-site`; the old `shoot.mjs` launches playwright-core's own browser 1248, which is not installed here.
 
 Earlier, 28 October (plan 2): **[plan 2 of 3](superpowers/plans/2026-10-28-the-site-from-the-pieces.md) is written and waits for the author's review.** It makes the person's site the stitched story at `/` from stop 2 on, adds three looks (night, daylight, blueprint), the person's chosen words, a CV link and project detail, turns the dive's window into a card standing in the last world, frames the sheet's words larger on a phone, makes `npm run check` check the person's site (the plain story engine moves to `/plain-story`), rewrites the skill's stops 2 to 5 for one mix shown running (`SKILL.md` stays at 800 words, `concept.md` about 1446), and ends with a no-model dry run on person test 2's facts. Its "Root's calls" list what the design left open. Nothing built from it yet; no run, no push.
 

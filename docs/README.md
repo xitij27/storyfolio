@@ -119,7 +119,8 @@ retains unresolved visual limitations. Only original same-session story
 planning may advance after readiness; final visual/author acceptance and
 Stage 3 completion are not established.
 
-Start with [the current handover](handover.md). It says what the skill does
+Start with [the current handover](handover.md). Its first section,
+[Next steps](handover.md#next-steps), says what to do next. It says what the skill does
 today, what the author has decided, what the evidence supports and what
 remains open. The candidate skill now routes requested builds through look
 and whole-beat wording choices, pending matched and full-journey proof.

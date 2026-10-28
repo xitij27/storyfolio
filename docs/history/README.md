@@ -3,7 +3,7 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author request: [28 October, what is left to complete the skill](2026-10-28-what-is-left.md).
+Newest author request: [28 October, write down the next steps for another session](2026-10-28-what-is-left.md#next-steps-written-down); earlier that day, [what is left to complete the skill](2026-10-28-what-is-left.md).
 
 Newest author direction: [27 October, examples to judge, ready to use with the text changed](2026-10-27-transition-examples-request.md).
 

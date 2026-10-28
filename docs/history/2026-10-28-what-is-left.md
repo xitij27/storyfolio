@@ -103,3 +103,25 @@ answered, verbatim:
 
 Root read this as yes to the plan and to the recommended way of building
 it, and began executing it task by task on `main`. No run and no push.
+
+## Next steps written down
+
+Root built plan 2, had it reviewed, fixed the review's critical and
+important findings, and asked the author three things: fix the three map
+problems found with Dawit before the paid run (root recommended yes), then
+launch plan 3, and push `main`. The author answered, verbatim:
+
+> document the possible next steps so I can work on it in another session
+
+Found while writing them: `main` at `b8980b51` was already on GitHub,
+pushed by the author at 09:19 UTC (root ran no push in that session), and
+the Pages deploy that followed (run 40663319271) succeeded. So the push
+question is answered, and the live gallery carries plan 2's pieces. The
+other two questions are still open.
+
+Root wrote the next steps as the first section of the
+[handover](../handover.md#next-steps): the map fix, two wording fixes the
+paid run would read, a live check of the gallery, plan 3 and what its plan
+must settle, the author's review, the smaller things left from plan 2, the
+work after Stage 3, and notes on this machine for the next session.
+Documentation only: no skill change, no run, no push.
