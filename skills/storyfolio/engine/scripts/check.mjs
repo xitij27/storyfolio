@@ -13,6 +13,8 @@ const options = Object.fromEntries(process.argv.slice(2).map(arg => {
   const [key, ...rest] = arg.replace(/^--/, "").split("=");
   return [key, rest.length ? rest.join("=") : true];
 }));
+// The plain story lives at /plain-story; the person's stitched site at / has its own check.
+const checkedPath = String(options.path ?? "plain-story").replace(/^\//, "");
 const output = resolve(root, String(options.out ?? `checks/${new Date().toISOString().replace(/[:.]/g, "-")}`));
 await mkdir(output, { recursive: true });
 const require = createRequire(import.meta.url);
@@ -113,7 +115,7 @@ try {
     const directory = join(output, entry.name);
     await mkdir(directory, { recursive: true });
     const reportPath = join(directory, "report.json");
-    const args = [join(root, "scripts/shoot.mjs"), `--url=${base}?look=${encodeURIComponent(entry.look)}`, `--out=${directory}`, `--report=${reportPath}`, ...entry.flags];
+    const args = [join(root, "scripts/shoot.mjs"), `--url=${base}${checkedPath}?look=${encodeURIComponent(entry.look)}`, `--out=${directory}`, `--report=${reportPath}`, ...entry.flags];
     if (options.wait) args.push(`--wait=${options.wait}`);
     const result = await run(args, `${entry.name}.log`, 240_000);
     const report = await readFile(reportPath, "utf8").then(JSON.parse).catch(() => null);

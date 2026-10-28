@@ -15,6 +15,8 @@ The last command builds and checks a production server. Open its screenshots
 before calling a visual change done. Read `README.md` for the content
 contract and where the results are written.
 
-The plain story is a test of the engine. Replace it from the person's
-approved storyboard and confirmed facts. Keep the text complete without
-the scene, and test reduced motion, no WebGL and no JavaScript.
+The site is a stitched story (`app/page.tsx`) read from
+`content/person.ts`, `content/mix.ts` and `content/site.ts`. Write only
+confirmed facts into them. `npm run check` builds it and checks it at
+desktop and phone size, without JavaScript and without WebGL. The plain
+story at `/plain-story` is the engine for a scene of the person's own.

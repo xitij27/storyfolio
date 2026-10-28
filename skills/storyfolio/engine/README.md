@@ -1,9 +1,10 @@
 # Storyfolio engine
 
-A starting project for one scroll and one story in 3D: shared pieces for what carries on
-through the story, and a scene of its own for each chapter.
-The supplied page is a placeholder that tests the engine: one sheet whose
-picture changes by chapter. It has no design in it; replace all of `content/`.
+A starting project for a person's site: one scroll that introduces them in
+eight chapters, in 3D. `/` is their site, a stitched story read from
+`content/person.ts`, `content/mix.ts` and `content/site.ts`; the supplied
+person is made up. `/plain-story` keeps the older plain story engine, for a
+scene of the person's own.
 
 Taken from V3 at `163b8ceb302b7b4e5beeff8f1161f4cdc7663b15` and made
 independent of that site's content, paper shapes and assets. The source
@@ -22,9 +23,10 @@ npm run browsers
 npm run dev
 ```
 
-Open the local address printed by Next.js. Append `?look=dark` to choose a
-look and `?fps` to show the frame meter. The appearance switch preserves
-other query parameters, the fragment and the current scroll position.
+Open the local address printed by Next.js: `/` is the person's site. On the
+plain story (`/plain-story`), append `?look=dark` to choose a look and
+`?fps` to show the frame meter; its appearance switch preserves other query
+parameters, the fragment and the current scroll position.
 Read the frame meter on a real phone; software rendering in a headless
 browser does not measure phone performance.
 
@@ -34,7 +36,85 @@ skill after scaffolding. System fonts make builds independent of remote
 font services. Add licensed local files with `next/font/local` if needed;
 the scene starts without waiting for them and redraws faces when fonts load.
 
-## From storyboard to content
+## The person's site
+
+`/` is the person's site: one scroll through the eight chapters, each told by
+one of three worlds drawn only from the person's data: a sheet of paper (the
+CV bending into each chapter's picture), a map of their places, and a pop-up
+book. Two neighbouring chapters in one world join by that world's own move
+(the sheet folds, the camera flies over the map, the page turns); in two
+worlds, a card showing the next world grows from an element of the last and
+the camera dives into it. No scene code is written for a person.
+
+It is read from three files:
+
+| File | Holds | Set at |
+|---|---|---|
+| `content/person.ts` | The person's confirmed facts, in the shape of `stitch/person.ts`. The supplied one is made up: replace all of it. A chapter with nothing in it (no study, no quotes) is left out and its neighbours join | Stop 2 |
+| `content/mix.ts` | Which world holds each chapter, chosen to suit the person from the pieces in the library's gallery, https://xitij27.github.io/storyfolio/transitions/. As one line it reads like `map,map,book,book,sheet,sheet,book,map` (`parseMix` and `formatMix` in `stitch/mix.ts`) | Stop 2 |
+| `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), the person's own words for any chapter, and the CV's address | Stops 4 to 6 |
+
+`/preview` shows the same story and tries things without editing:
+`?mix=<line>` another mix, `?look=<id>` another look, `?person=noa` or
+`?person=amara` a sample person.
+
+The words under each chapter are written from the person's data (`captions`
+in `stitch/chapters.ts`) until the person chooses their own. Put those in
+`site.words` by chapter, such as the opening (`hello`) and the close
+(`contact`). Every word is also written out in the page's HTML, for anyone
+without the 3D and for screen readers.
+
+A project opens a window on a click: its line and tags, `more` (a paragraph)
+when it has one, and a link to `page` when it has its own page. Write a
+project's page as an ordinary Next.js page (such as
+`app/projects/<name>/page.tsx`) and give its address as `page`. The CV is a
+page too (such as a printable `app/cv/page.tsx`); its address in `site.cv`
+shows the CV button and link. Neither shows until it exists.
+
+### A world of your own
+
+When the person asks for a scene the three worlds do not have, write it as a
+world: a module in `stitch/` that implements `World` in `stitch/world.ts` for
+the chapters the mix gives it (its own scene and camera, `pose` for any point
+of the scroll, `anchor` for the element a dive's card stands on, `pick` for a
+project under the pointer). Add its id to `WORLDS` in `stitch/mix.ts` and its
+factory to `FACTORIES` in `stitch/stage.ts`; it then mixes with the others.
+Draw its diagrams flat, with the pen (Drawing figures, below).
+
+### Checking it
+
+`scripts/stitch-check.mjs` shoots a story at every chapter's hold and the
+middle of every move, with reduced motion so each shot stands exactly where
+the page is scrolled, and fails on a page error, a failed request or a blank
+picture. `--points` adds four shots of the first dive, `--at` any other
+points, `--look` a look. Run it against a production build (`npm run build`,
+then `npx next start`); open the screenshots.
+
+```bash
+node scripts/stitch-check.mjs --url=http://127.0.0.1:3000 \
+  --mix=map,map,book,book,sheet,sheet,book,map --size=390x844 --points
+```
+
+`stitch/` is also the component library's: the library carries a copy,
+which `node <skill>/scripts/sync-stitch.mjs` makes and a test keeps byte for
+byte. In the skill, change `stitch/` only here, then sync.
+
+The scroll runs at the examples' pace: a chapter takes 1.9 screens of
+scrolling (at least 1000 pixels), holds for its first 0.4, and the story
+moves at most 0.55 chapters a second however fast the reader scrolls.
+Natural Earth's land, for the globe, the map and the book's map page, is
+`stitch/land.json`; the drawing kit's maps read it from there too.
+
+## The plain story engine, for scenes of your own
+
+`/plain-story` keeps the engine this project began with: shared pieces
+carried through the story in formations, a scene of its own for each
+chapter, and the drawing kit. A site made from the mix does not need it. It
+is there for a design of the person's own that the worlds cannot hold, and
+its pen and land serve any world. `npm run check:plain` runs its browser
+matrix (Check, below).
+
+### From storyboard to content
 
 `lib/story/` contains pure, tested calculations. `components/story/` owns
 the browser and scene. The person's story belongs in `content/`:
@@ -58,7 +138,7 @@ plus framing. `layouts.ts` supplies stack, fan, ring, grid, row and seeded
 scatter; `measure` bounds their rotated faces. Depth, a custom shape's
 extent and a whole formation's turn can require extra framing room.
 
-The HTML in `app/page.tsx` follows the same beat order using `Chapter` and
+The HTML in `app/plain-story/page.tsx` follows the same beat order using `Chapter` and
 `Beat`. A `Beat` can carry a static `fallback` image or diagram. Keep one
 `h1`, stable chapter heading IDs and every factual claim in HTML. The check
 script verifies the rendered beat IDs against the content contract.
@@ -109,7 +189,7 @@ For a sketch, add a client component importing its own bundle and HTML to
 `content/sketches/index.ts`. Its key becomes `/sketch/<id>`. The initial
 registry is empty and unknown keys return 404.
 
-## Drawing figures
+### Drawing figures
 
 Draw a diagram flat, on a surface in the scene, with the pen in
 `components/story/pen.ts`; do not build it from meshes. The pen works on any
@@ -158,50 +238,6 @@ on a piece goes further forward than that.
 
 On a phone a sheet across the screen is about 320 pixels wide, so words
 smaller than about 40 units cannot be read there. Put those in the caption.
-
-## A stitched story
-
-`stitch/` tells the eight chapters in three worlds: a sheet of paper (the
-CV bending into each chapter's picture), a map of the person's places, and
-a pop-up book. A mix says which world holds each chapter. Two neighbouring
-chapters in one world join by that world's own move (the sheet folds, the
-camera flies over the map, the page turns); in two worlds, a window showing
-the next world opens in the last one and the camera dives into it. Every
-picture and word is drawn from the person's data, so no scene code is
-written for a person.
-
-- `content/person.ts` is the person, in the shape of `stitch/person.ts`.
-  The supplied one is a made-up placeholder: replace it with the confirmed
-  facts. A chapter with nothing in it (no study, no quotes) is left out and
-  its neighbours join.
-- `content/mix.ts` is the mix, one world per chapter in chapter order,
-  chosen by the agent to suit the person from the pieces in the library's
-  gallery. As one line it reads like `map,map,book,book,sheet,sheet,book,map`
-  (`parseMix` and `formatMix` in `stitch/mix.ts`).
-- `/preview` shows the story from those two files. `?mix=<line>` tries
-  another mix and `?person=noa` or `?person=amara` a sample person without
-  editing anything.
-- `scripts/stitch-check.mjs` shoots `/preview` at every chapter's hold and
-  the middle of every move, with reduced motion so each shot stands exactly
-  where the page is scrolled, and fails on a page error, a failed request
-  or a blank picture. `--points` adds four shots of the first dive, `--at`
-  any other points. Run it against a production build (`npm run build`,
-  then `npx next start`); open the screenshots.
-
-  ```bash
-  node scripts/stitch-check.mjs --url=http://127.0.0.1:3000 \
-    --mix=map,map,book,book,sheet,sheet,book,map --size=390x844 --points
-  ```
-
-`stitch/` is also the component library's: the library carries a copy,
-which `node <skill>/scripts/sync-stitch.mjs` makes and a test keeps byte for
-byte. In the skill, change `stitch/` only here, then sync.
-
-The scroll runs at the examples' pace: a chapter takes 1.9 screens of
-scrolling (at least 1000 pixels), holds for its first 0.4, and the story
-moves at most 0.55 chapters a second however fast the reader scrolls.
-Natural Earth's land, for the globe, the map and the book's map page, is
-`stitch/land.json`; the drawing kit's maps read it from there too.
 
 ## Check
 
