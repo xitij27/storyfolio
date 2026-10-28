@@ -118,11 +118,6 @@ typecheck and the build pass.
 - **Projects beyond the sixth** are counted ("and 3 more") but cannot be
   opened from the scene.
 - **System fonts** make the printed pages plainer than the examples.
-- **The book on a phone** shows the right page whole and cuts the left
-  page, whose words (the chapter's title and lines) run off the screen's
-  left edge in every chapter ([phone-amara.jpg](frames/phone-amara.jpg),
-  bottom row). The approved example frames it the same way. Found on
-  28 October, in the live check below.
 - **Software rendering only.** No physical phone, no headed browser, no
   frame-rate reading; the author approved the engine on a real phone, and
   the stitched story has not been seen there.
@@ -136,6 +131,10 @@ with playwright-core from `/var/tmp/stitch-site` and Chromium 1234:
 both sizes, no problems ([report.json](live-check/report.json),
 [desktop.jpg](live-check/desktop.jpg), [phone.jpg](live-check/phone.jpg)).
 The index has no mixer and the map's "worked" piece opens at that chapter.
+The book on a phone shows its left page whole at the start of each hold and
+then pans to the right page's picture
+([book-phone-pan.jpg](live-check/book-phone-pan.jpg)); a shot at the hold's
+middle is mid-pan, so its left page looks cut.
 
 ## Decisions made while building
 

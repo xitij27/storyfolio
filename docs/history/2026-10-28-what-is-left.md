@@ -82,8 +82,12 @@ followed (run 40628537713) is the gallery's publication. Root then made
 plan 1's Task 10 Step 3: `scripts/gallery-check.mjs` against
 https://xitij27.github.io/storyfolio at 1440x900 and 390x844 passes with
 no problems ([report and contact sheets](../../evals/engine/stitch-1/live-check/)).
-Looking at the phone frames, root found a weak spot the study had not
-listed: the book on a phone shows the right page whole and cuts the left
-page, whose words run off the screen's edge in every chapter. The approved
-example does the same. It joins item 3's list. Root then went on to item 2,
-plan 2.
+Looking at the phone frames, root first reported a weak spot: the book on
+a phone cutting its left page's words at the screen's edge. That was wrong.
+Shots of the live book at 390x844 through one chapter's hold (2.0, 2.1, 2.2,
+2.3, 2.39 and 2.6 chapters from the top,
+[book-phone-pan.jpg](../../evals/engine/stitch-1/live-check/book-phone-pan.jpg))
+show the left page whole at the start of the hold, then the camera panning
+to the right page's picture, as plan 1 meant ("the book shows its words,
+then pans to the scene"). The checkers shoot at the hold's middle, which is
+mid-pan. No weak spot is added. Root then went on to item 2, plan 2.
