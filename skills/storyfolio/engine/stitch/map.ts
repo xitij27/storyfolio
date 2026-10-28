@@ -4,10 +4,10 @@
 import * as THREE from "three";
 import { CHAPTERS, yearText, type ChapterKey } from "./chapters.ts";
 import { NOW, type Person, type Project } from "./person.ts";
-import { PALETTE as C, canvas, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
+import { PALETTE as C, canvas, dieCut, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand } from "./land.ts";
 import { mapFrame } from "./frame.ts";
-import { clamp, ease, smooth } from "./scroll.ts";
+import { clamp, ease, lerp, smooth } from "./scroll.ts";
 import { holding, type Anchor, type World, type WorldFactory, type WorldView } from "./world.ts";
 
 const FOV = 38;
@@ -69,14 +69,23 @@ export const createMap: WorldFactory = async (env, chapters) => {
   scene.add(ground);
   scene.add(new THREE.AmbientLight(0xffffff, 1.6));
   const sun = new THREE.DirectionalLight(0xffffff, 2.2);
-  sun.position.set(-4, 8, 6);
-  scene.add(sun);
+  sun.position.set(-4, 8, 6).multiplyScalar(3);
+  sun.castShadow = true;
+  sun.shadow.mapSize.set(2048, 2048);
+  const reach = Math.max(mapW, mapD) * 0.55;
+  Object.assign(sun.shadow.camera, { left: -reach, right: reach, top: reach, bottom: -reach, near: 1, far: 90 });
+  sun.shadow.bias = -0.0006; sun.shadow.normalBias = 0.03;
+  scene.add(sun, sun.target);
+  const shade = new THREE.Mesh(new THREE.PlaneGeometry(mapW, mapD), new THREE.ShadowMaterial({ opacity: 0.6 }));
+  shade.rotation.x = -Math.PI / 2; shade.position.y = 0.003; shade.receiveShadow = true;
+  scene.add(shade);
 
   // Pins and names at every place; the names keep their size on screen.
   const cityTags: { tag: THREE.Sprite; base: THREE.Vector3 }[] = [];
   for (const p of P.places) {
     const v = at(p.lat, p.lng);
     const pin = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.22, 12), new THREE.MeshStandardMaterial({ color: C.rose }));
+    pin.castShadow = true;
     pin.position.copy(v).setY(0.11);
     const ring = new THREE.Mesh(new THREE.RingGeometry(0.07, 0.1, 32), new THREE.MeshBasicMaterial({ color: C.rose, side: THREE.DoubleSide }));
     ring.rotation.x = -Math.PI / 2; ring.position.copy(v).setY(0.01);
@@ -109,8 +118,12 @@ export const createMap: WorldFactory = async (env, chapters) => {
   const standing = (pic: HTMLCanvasElement, w: number, h: number, pos: THREE.Vector3, chapter: ChapterKey, delay = 0, project: Project | null = null) => {
     const hinge = new THREE.Group();
     hinge.position.copy(pos);
-    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: tex(pic), transparent: true, side: THREE.DoubleSide }));
-    mesh.position.y = h / 2;
+    // Cut from printed card: a white edge round it, and the card's own shape in its shadow.
+    const cut = dieCut(pic, 14);
+    const cw = (w * cut.width) / pic.width, ch = (h * cut.height) / pic.height;
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(cw, ch), new THREE.MeshBasicMaterial({ map: tex(cut), transparent: true, alphaTest: 0.5, side: THREE.DoubleSide }));
+    mesh.position.y = ch / 2 - (h * 14) / pic.height;
+    mesh.castShadow = true;
     mesh.userData.project = project;
     hinge.add(mesh);
     scene.add(hinge);
@@ -155,6 +168,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
     const group = new THREE.Group();
     group.position.copy(pos);
     const body = new THREE.Mesh(new THREE.BoxGeometry(0.66, hgt, 0.5), new THREE.MeshStandardMaterial({ color: "#e6dfd0", roughness: 0.9 }));
+    body.castShadow = true;
     body.position.y = hgt / 2;
     const fh = Math.min(0.62, hgt - 0.04);
     const face = new THREE.Mesh(new THREE.PlaneGeometry(0.62, fh), new THREE.MeshBasicMaterial({
@@ -208,7 +222,10 @@ export const createMap: WorldFactory = async (env, chapters) => {
       ctx.fillStyle = C.muted; ctx.font = sans(26); ctx.fillText(q.from, 50 + ctx.measureText(q.who).width * 1.25 + 20, Math.min(y + 30, 430));
     });
     const base = where(q.place).add(new THREE.Vector3(-0.9 + n * 1.85, 2.9 + n * 0.35, -0.3 - n * 0.2));
-    const m = new THREE.Mesh(new THREE.PlaneGeometry(1.75, 0.89), new THREE.MeshBasicMaterial({ map: tex(pic), transparent: true, side: THREE.DoubleSide }));
+    const cut = dieCut(pic, 16);
+    const m = new THREE.Mesh(new THREE.PlaneGeometry((1.75 * cut.width) / pic.width, (0.89 * cut.height) / pic.height),
+      new THREE.MeshBasicMaterial({ map: tex(cut), transparent: true, alphaTest: 0.5, side: THREE.DoubleSide }));
+    m.castShadow = true;
     m.position.copy(base);
     scene.add(m);
     return { m, base };
@@ -274,7 +291,10 @@ export const createMap: WorldFactory = async (env, chapters) => {
   function pose(v: WorldView) {
     const moving = v.from !== v.to;
     // Fly: blend the two shots, rising on long journeys.
+    // Lean in on each hold; the flight between stands back.
+    const lean = lerp(0.92, 1, Math.sin(Math.PI * v.raw));
     const a = shotFor(v.from, moving ? 1 : v.local), b = shotFor(v.to, 0);
+    a.dist *= lean; b.dist *= lean;
     const target = a.target.clone().lerp(b.target, v.t);
     const pos = place(a).lerp(place(b), v.t);
     pos.y += Math.sin(Math.PI * v.t) * Math.min(a.target.distanceTo(b.target) * 0.75, 12);

@@ -4,7 +4,7 @@
 import * as THREE from "three";
 import { yearText, type ChapterKey } from "./chapters.ts";
 import { NOW, placeViews, slots, yearRange, type Person, type Project } from "./person.ts";
-import { PALETTE as C, backdrop, canvas, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
+import { PALETTE as C, backdrop, canvas, grain, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand, type Land } from "./land.ts";
 import { equirect } from "./frame.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
@@ -87,8 +87,12 @@ const ORDER: Record<ChapterKey, (U: number, V: number, c: number, r: number) => 
 };
 
 // ---------- The pictures printed on the sheet ----------
+/** A picture printed on paper: drawn, then flecked like the paper it is printed on. */
+const printed = (w: number, h: number, draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void) =>
+  canvas(w, h, (ctx) => { draw(ctx, w, h); grain(ctx, w, h, Math.round((w * h) / 150), w + h); });
+
 function cvPage(P: Person) {
-  return canvas(1024, 1448, (ctx, w) => {
+  return printed(1024, 1448, (ctx, w) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, 1448);
     const m = 84;
     ctx.fillStyle = C.ink; ctx.font = serif(80); ctx.fillText(P.name, m, 170);
@@ -115,7 +119,7 @@ function cvPage(P: Person) {
 }
 
 function globeMap(land: Land) {
-  return canvas(2048, 1024, (ctx, w, h) => {
+  return printed(2048, 1024, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     ctx.strokeStyle = "rgba(28,34,42,0.10)"; ctx.lineWidth = 2;
     for (let lng = -180; lng <= 180; lng += 15) { const [x] = equirect(lng, 0, w, h); ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
@@ -127,7 +131,7 @@ function globeMap(land: Land) {
 
 function diplomaPicture(P: Person) {
   const s = P.study[0];
-  return canvas(1500, 1000, (ctx, w, h) => {
+  return printed(1500, 1000, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     const m = w * ROLL + 40;
     ctx.strokeStyle = C.amber; ctx.lineWidth = 6; ctx.strokeRect(m, 50, w - 2 * m, h - 100);
@@ -148,7 +152,7 @@ function diplomaPicture(P: Person) {
 
 function timeline(P: Person) {
   const [y0, y1] = yearRange(P);
-  return canvas(4096, 532, (ctx, w, h) => {
+  return printed(4096, 532, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     const X = (yr: number) => 120 + ((yr - y0) / (y1 - y0)) * (w - 240), axis = 400;
     ctx.fillStyle = C.ink; ctx.fillRect(100, axis, w - 200, 4);
@@ -169,7 +173,7 @@ function timeline(P: Person) {
 }
 
 function leafletPicture(P: Person) {
-  return canvas(2048, 1024, (ctx, w, h) => {
+  return printed(2048, 1024, (ctx, w, h) => {
     const pw = w / 4;
     const { shown, more } = slots(P.skills, 4);
     shown.forEach((g, i) => {
@@ -193,7 +197,7 @@ function leafletPicture(P: Person) {
 }
 
 function wallPicture(P: Person) {
-  return canvas(2048, 1024, (ctx, w, h) => {
+  return printed(2048, 1024, (ctx, w, h) => {
     const cw = w / 3, ch = h / 2;
     const { shown, more } = slots(P.projects, 6);
     shown.forEach((p, i) => {
@@ -210,7 +214,7 @@ function wallPicture(P: Person) {
 }
 
 function quotePicture(P: Person) {
-  return canvas(2048, 1448, (ctx, w, h) => {
+  return printed(2048, 1448, (ctx, w, h) => {
     const cw = w / 3;
     const { shown, more } = slots(P.quotes, 3);
     shown.forEach((q, i) => {
@@ -228,7 +232,7 @@ function quotePicture(P: Person) {
 }
 
 function contactPage(P: Person) {
-  return canvas(1024, 1448, (ctx, w, h) => {
+  return printed(1024, 1448, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     const m = 84;
     ctx.fillStyle = C.amber; ctx.font = sans(26, 600); ctx.fillText("GET IN TOUCH", m, 200);
@@ -314,6 +318,25 @@ export const createSheet: WorldFactory = async (env, chapters) => {
 
   const sheet = new THREE.Group();
   scene.add(sheet);
+  // A lamp from the upper left, and an unseen floor just under the sheet that takes its shadow.
+  const lamp = new THREE.DirectionalLight(0xffffff, 1);
+  lamp.position.set(-3, 7, 4);
+  lamp.castShadow = true;
+  lamp.shadow.mapSize.set(2048, 2048);
+  Object.assign(lamp.shadow.camera, { left: -7, right: 7, top: 7, bottom: -7, near: 1, far: 25 });
+  lamp.shadow.bias = -0.0004; lamp.shadow.normalBias = 0.02;
+  scene.add(lamp, lamp.target);
+  // The floor is seen only as the lamp's pool of light, which the sheet's shadow falls into.
+  const pool = texture(canvas(512, 512, (ctx, w, h) => {
+    const g = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, w / 2);
+    g.addColorStop(0, "rgba(150,138,118,0.5)"); g.addColorStop(0.55, "rgba(120,110,95,0.22)"); g.addColorStop(1, "rgba(120,110,95,0)");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+  }));
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(14, 9), new THREE.MeshLambertMaterial({ map: pool, transparent: true, depthWrite: false }));
+  floor.rotation.x = -Math.PI / 2;
+  floor.receiveShadow = true;
+  scene.add(floor);
+  const bounds = new THREE.Box3();
   const wallSlots = slots(P.projects, 6).shown;
   const tiles: Tile[] = [];
   for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
@@ -328,6 +351,7 @@ export const createSheet: WorldFactory = async (env, chapters) => {
       shapes[k] = a;
     }
     const mesh = new THREE.Mesh(geo, mat) as Tile;
+    mesh.castShadow = true;
     mesh.userData = { c, r, shapes, project: wallSlots[(ROWS - 1 - r) * COLS + c] };
     sheet.add(mesh);
     tiles.push(mesh);
@@ -423,6 +447,7 @@ export const createSheet: WorldFactory = async (env, chapters) => {
         m.geometry.attributes.prog.needsUpdate = true;
         m.geometry.computeVertexNormals();
         m.geometry.computeBoundingSphere();
+        m.geometry.computeBoundingBox();
       }
     }
 
@@ -433,8 +458,10 @@ export const createSheet: WorldFactory = async (env, chapters) => {
     sheet.scale.setScalar(scale);
     sheet.position.y = !moving && from === "hello" ? 0.04 * Math.sin(time * 0.8) : 0;
     const box = FRAMES[from].box, box2 = FRAMES[to].box;
-    const d = lerp(fitDistance(box[0], box[1]), fitDistance(box2[0], box2[1]), t);
-    camera.position.set(0, 0, d);
+    // Lean in on each hold; stand back, and look a little down, while the sheet moves.
+    const turning = Math.sin(Math.PI * raw);
+    const d = lerp(fitDistance(box[0], box[1]), fitDistance(box2[0], box2[1]), t) * lerp(0.95, 1.1, turning);
+    camera.position.set(0, d * lerp(0.02, 0.09, turning), d);
     camera.lookAt(0, 0, 0);
     camera.updateMatrixWorld();
     // The timeline is long: travel along it.
@@ -442,6 +469,12 @@ export const createSheet: WorldFactory = async (env, chapters) => {
     const pan = Math.max(0, (LR - vw) / 2 + 0.4);
     const panAt = (k: ChapterKey, l: number) => (k === "worked" ? lerp(pan, -pan, l) : 0);
     sheet.position.x = lerp(panAt(from, moving ? 1 : local), panAt(to, 0), t);
+
+    // The floor stays just under the sheet's lowest point.
+    sheet.updateMatrixWorld();
+    bounds.makeEmpty();
+    for (const tile of tiles) bounds.expandByObject(tile);
+    floor.position.y = bounds.min.y - 0.12;
 
     // The places show only while the sheet is a globe.
     const g = !moving ? (from === "from" ? 1 : 0) : to === "from" ? smooth(0.8, 1, raw) : from === "from" ? 1 - smooth(0, 0.15, raw) : 0;
