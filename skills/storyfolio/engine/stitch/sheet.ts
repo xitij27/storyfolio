@@ -38,6 +38,8 @@ const diploma: Shape = (U, V) => {
 };
 
 const LR = 10, RH = 1.3;
+/** On a phone, the most of the sheet's width in view: its smallest printed words are then about 11 pixels high. */
+const READ_W = 2.2;
 const ribbon: Shape = (U, V) => [(U - 0.5) * LR, (V - 0.5) * RH, -0.45 * Math.sin((U - 0.5) * Math.PI * 1.6)];
 
 const PW = 1.5, PH = 3.0, FOLD = 0.55;
@@ -459,17 +461,25 @@ export const createSheet: WorldFactory = async (env, chapters) => {
     const scale = lerp(pa.scale, pb.scale, t);
     sheet.scale.setScalar(scale);
     sheet.position.y = !moving && from === "hello" ? 0.04 * Math.sin(time * 0.8) : 0;
-    const box = FRAMES[from].box, box2 = FRAMES[to].box;
+    // On a phone the sheet is read a part at a time: as much of its width as keeps
+    // its words readable and all of its height (the globe's words are its own).
+    const narrow = env.narrow();
+    const seen = (k: ChapterKey): [number, number] => {
+      const [w, h] = FRAMES[k].box;
+      return narrow && k !== "from" ? [Math.min(w, Math.max(READ_W, h * camera.aspect)), h] : [w, h];
+    };
+    const box = seen(from), box2 = seen(to);
     // Lean in on each hold; stand back, and look a little down, while the sheet moves.
     const turning = Math.sin(Math.PI * raw);
     const d = lerp(fitDistance(box[0], box[1]), fitDistance(box2[0], box2[1]), t) * lerp(0.95, 1.1, turning);
     camera.position.set(0, d * lerp(0.02, 0.09, turning), d);
     camera.lookAt(0, 0, 0);
     camera.updateMatrixWorld();
-    // The timeline is long: travel along it.
+    // What is wider than the view, the timeline always and on a phone the rest, is
+    // travelled across over the hold, left to right.
     const vw = 2 * d * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.aspect;
-    const pan = Math.max(0, (LR - vw) / 2 + 0.4);
-    const panAt = (k: ChapterKey, l: number) => (k === "worked" ? lerp(pan, -pan, l) : 0);
+    const pan = (k: ChapterKey) => (k === "worked" ? Math.max(0, (LR - vw) / 2 + 0.4) : narrow && k !== "from" ? Math.max(0, (FRAMES[k].box[0] - vw) / 2) : 0);
+    const panAt = (k: ChapterKey, l: number) => lerp(pan(k), -pan(k), l);
     sheet.position.x = lerp(panAt(from, moving ? 1 : local), panAt(to, 0), t);
 
     // The floor stays just under the sheet's lowest point.
