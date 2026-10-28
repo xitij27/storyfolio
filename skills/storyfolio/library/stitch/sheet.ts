@@ -514,9 +514,9 @@ export const createSheet: WorldFactory = async (env, chapters) => {
       sheet.updateMatrixWorld();
       const bb = new THREE.Box3();
       for (const tile of tiles) bb.expandByObject(tile);
+      // The card stands on the sheet's face, in front of whatever shape it holds.
       const box = FRAMES[chapter].box;
-      const height = Math.min(0.5 * box[1], (0.8 * box[0]) / camera.aspect);
-      return { position: new THREE.Vector3(0, 0, bb.max.z + 0.02), quaternion: camera.quaternion.clone(), height };
+      return { position: new THREE.Vector3(0, 0, bb.max.z + 0.02), quaternion: camera.quaternion.clone(), size: { w: box[0], h: box[1] } };
     },
     pick(ndc, chapter) {
       if (chapter !== "made") return null;

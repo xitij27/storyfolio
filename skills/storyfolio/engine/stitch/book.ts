@@ -10,7 +10,7 @@ import { dotLand, type Land } from "./land.ts";
 import type { Palette } from "./look.ts";
 import { pageFrame } from "./frame.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
-import type { Anchor, World, WorldFactory, WorldView } from "./world.ts";
+import { holding, type Anchor, type World, type WorldFactory, type WorldView } from "./world.ts";
 
 const PW = 3, PD = 4, SEG = 40, EPS = 0.006, CURL = 1.1;
 const FOV = 28;
@@ -481,17 +481,20 @@ export const createBook: WorldFactory = async (env, chapters) => {
   }
 
   const ray = new THREE.Raycaster();
-  const flat = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), -Math.PI / 2);
   const world: World = {
     id: "book",
     scene,
     camera,
     pose,
-    // The window lies on the open book, facing up: on a phone on the right page, else across the spread.
-    anchor(): Anchor {
-      const narrow = env.narrow();
-      const height = 0.9 * Math.min(PD, (narrow ? PW : 2 * PW) / camera.aspect);
-      return { position: new THREE.Vector3(narrow ? PW / 2 : 0, 0.1, 0), quaternion: flat.clone(), height };
+    anchor(chapter): Anchor {
+      pose(holding(chapter, 1));
+      // A card of its own stands up on the right page's front edge, in front of the
+      // page's other pop-ups, turned to the reader.
+      const foot = new THREE.Vector3(PW / 2, 0.1, PD / 2);
+      const seen = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.position.distanceTo(foot);
+      const size = { w: 0.75 * seen * camera.aspect, h: 0.6 * seen };
+      const turn = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.atan2(camera.position.x - foot.x, camera.position.z - foot.z));
+      return { position: foot.add(new THREE.Vector3(0, size.h / 2, 0)), quaternion: turn, size, rest: true };
     },
     pick(ndc, chapter) {
       if (chapter !== "made") return null;

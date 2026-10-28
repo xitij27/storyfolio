@@ -5,11 +5,11 @@ import * as THREE from "three";
 import type { ChapterKey } from "./chapters.ts";
 import { chaptersFor, type Person, type Project } from "./person.ts";
 import { chaptersOf, worldsOf, type Mix, type WorldId } from "./mix.ts";
-import { follow, stateAt, totalUnits, unitPx, type ScrollState } from "./scroll.ts";
+import { ease, follow, stateAt, totalUnits, unitPx, type ScrollState } from "./scroll.ts";
 import { loadLand } from "./land.ts";
 import { LOOKS, type Palette } from "./look.ts";
 import { holding, type World, type WorldFactory } from "./world.ts";
-import { diveSteps, fillPose, windowType } from "./dive.ts";
+import { diveSteps, fillPose, fitCard, windowType } from "./dive.ts";
 import { createSheet } from "./sheet.ts";
 import { createMap } from "./map.ts";
 import { createBook } from "./book.ts";
@@ -67,7 +67,8 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
   const spacer = spacerOf(canvas, o);
   const narrow = () => canvas.clientWidth / Math.max(1, canvas.clientHeight) < 0.9;
   const land = await loadLand();
-  const env = { person: o.person, palette: o.palette ?? LOOKS.night, renderer, land, narrow };
+  const palette = o.palette ?? LOOKS.night;
+  const env = { person: o.person, palette, renderer, land, narrow };
 
   const worlds = new Map<WorldId, World>();
   for (const id of worldsOf(o.mix, keys)) worlds.set(id, await FACTORIES[id]!(env, chaptersOf(o.mix, keys, id)));
@@ -77,16 +78,21 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
   const top = () => spacer.getBoundingClientRect().top + window.scrollY;
   const target = () => (window.scrollY - top()) / unit();
 
-  // The window a dive opens: the next world drawn into a picture the size of
-  // the screen, on a plane in the last world that the camera flies into.
+  // A dive's card: the next world drawn into a picture the screen's shape,
+  // printed on a card of the look's paper that grows from an element of the
+  // last world, lit and shadowed by it (with a little light of its own, so it
+  // reads as paper under a dim lamp). The camera flies into the picture.
   const half = windowType((x) => renderer.extensions.has(x)) === "half";
   const view = new THREE.WebGLRenderTarget(1, 1, { type: half ? THREE.HalfFloatType : THREE.UnsignedByteType, samples: 4 });
-  const window_ = new THREE.Mesh(
-    new THREE.PlaneGeometry(1, 1),
-    new THREE.MeshBasicMaterial({ map: view.texture, transparent: true, depthTest: false, depthWrite: false, toneMapped: false }),
-  );
-  window_.renderOrder = 1000;
-  window_.frustumCulled = false;
+  const card = new THREE.Group();
+  const hinge = new THREE.Group();
+  const paper = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshStandardMaterial({ color: palette.card, emissive: palette.card, emissiveIntensity: 0.45, roughness: 0.92, side: THREE.DoubleSide }));
+  paper.castShadow = true;
+  const picture = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: view.texture, toneMapped: false }));
+  picture.position.z = 0.004;
+  hinge.add(paper, picture);
+  card.add(hinge);
+  card.traverse((o) => { o.frustumCulled = false; });
   let aspect = 1;
 
   const resize = () => {
@@ -113,17 +119,17 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
     current = st;
     const a = keys[st.from], b = keys[st.to];
     const wa = worldAt(a);
-    window_.removeFromParent();
+    card.removeFromParent();
     if (st.from === st.to) wa.pose(holding(a, st.local, time));
     else if (o.mix[a] === o.mix[b]) wa.pose({ from: a, to: b, t: st.t, raw: st.raw, local: 1, time });
     else dive(wa, a, worldAt(b), b, st.raw, time);
     renderer.setRenderTarget(null);
     renderer.render(wa.scene, wa.camera);
-    window_.removeFromParent();
+    card.removeFromParent();
     o.onState?.(st, keys);
   }
 
-  const p0 = new THREE.Vector3(), q0 = new THREE.Quaternion(), normal = new THREE.Vector3();
+  const p0 = new THREE.Vector3(), q0 = new THREE.Quaternion(), normal = new THREE.Vector3(), up = new THREE.Vector3();
   /** Poses a dive from world A holding chapter a into world B at chapter b, ready to draw A. */
   function dive(wa: World, a: ChapterKey, wb: World, b: ChapterKey, raw: number, time: number) {
     // B as it will first be seen, into the window's picture.
@@ -131,17 +137,24 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
     renderer.setRenderTarget(view);
     renderer.render(wb.scene, wb.camera);
     renderer.setRenderTarget(null);
-    // A holds; the window opens at its anchor, and the camera flies into it.
+    // A holds; the card grows from its element, and the camera flies into its picture.
     const anchor = wa.anchor(a);
     wa.pose(holding(a, 1, time));
     const { fade, fly } = diveSteps(raw);
-    window_.position.copy(anchor.position);
-    window_.quaternion.copy(anchor.quaternion);
-    window_.scale.set(anchor.height * aspect, anchor.height, 1);
-    window_.material.opacity = fade;
-    wa.scene.add(window_);
+    const fit = fitCard(anchor.size, aspect);
+    paper.scale.set(fit.w, fit.h, 1);
+    picture.scale.set(fit.picture.w, fit.picture.h, 1);
+    paper.position.y = picture.position.y = fit.h / 2;
+    up.set(0, 1, 0).applyQuaternion(anchor.quaternion);
+    // The card's lower edge: centred on the element, or standing on its lower edge.
+    card.position.copy(anchor.position).addScaledVector(up, -(anchor.rest ? anchor.size.h : fit.h) / 2);
+    card.quaternion.copy(anchor.quaternion);
+    hinge.scale.setScalar(Math.max(ease(fade), 1e-3));
+    card.visible = fade > 0;
+    wa.scene.add(card);
+    const middle = card.position.clone().addScaledVector(up, fit.h / 2);
     normal.set(0, 0, 1).applyQuaternion(anchor.quaternion);
-    const end = fillPose({ position: anchor.position.toArray(), normal: normal.toArray() }, wa.camera.fov, anchor.height);
+    const end = fillPose({ position: middle.toArray(), normal: normal.toArray() }, wa.camera.fov, fit.picture.h);
     p0.copy(wa.camera.position); q0.copy(wa.camera.quaternion);
     wa.camera.position.lerpVectors(p0, new THREE.Vector3(...end), fly);
     wa.camera.quaternion.slerpQuaternions(q0, anchor.quaternion, fly);
@@ -208,8 +221,7 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
       canvas.removeEventListener("mousemove", onMove);
       for (const world of worlds.values()) world.dispose();
       view.dispose();
-      window_.geometry.dispose();
-      window_.material.dispose();
+      for (const m of [paper, picture]) { m.geometry.dispose(); m.material.dispose(); }
       renderer.dispose();
       if (window.__stitch === probe) delete window.__stitch;
     },

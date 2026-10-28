@@ -353,8 +353,16 @@ export const createMap: WorldFactory = async (env, chapters) => {
     camera,
     pose,
     anchor(chapter): Anchor {
+      // The card stands on the ground in front of the chapter's place, facing the
+      // camera, as tall as about half of what the camera sees there.
       pose(holding(chapter, 1));
-      return { position: shotFor(chapter, 1).target, quaternion: camera.quaternion.clone(), height: 1.2 };
+      const shot = shotFor(chapter, 1);
+      const toward = place(shot).sub(shot.target).setY(0).normalize();
+      const foot = shot.target.clone().addScaledVector(toward, 0.3 * shot.dist).setY(0);
+      const seen = 2 * Math.tan(THREE.MathUtils.degToRad(FOV / 2)) * camera.position.distanceTo(foot);
+      const size = { w: 0.75 * seen * camera.aspect, h: 0.6 * seen };
+      const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion);
+      return { position: foot.addScaledVector(up, size.h / 2), quaternion: camera.quaternion.clone(), size, rest: true };
     },
     pick(ndc, chapter) {
       if (chapter !== "made") return null;

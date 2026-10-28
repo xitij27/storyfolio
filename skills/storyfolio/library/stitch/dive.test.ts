@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { diveSteps, fillPose } from "./dive.ts";
+import { diveSteps, fillPose, fitCard } from "./dive.ts";
 import { fillDistance } from "./frame.ts";
 
 test("the dive fades in the window, then flies", () => {
@@ -32,4 +32,18 @@ test("the window's picture is half float only where the GPU can draw into it", a
   assert.equal(windowType((x) => x === "EXT_color_buffer_float"), "half");
   assert.equal(windowType((x) => x === "EXT_color_buffer_half_float"), "half");
   assert.equal(windowType(() => false), "byte");
+});
+
+test("fitCard fits a wide picture to a tall element by its width", () => {
+  const c = fitCard({ w: 2, h: 3 }, 16 / 9);
+  assert.ok(c.w <= 0.8 * 2 + 1e-9 && c.h <= 0.8 * 3 + 1e-9);
+  assert.ok(Math.abs(c.picture.w / c.picture.h - 16 / 9) < 1e-9);
+  assert.ok(Math.abs(c.w - 0.8 * 2) < 1e-9);
+});
+
+test("fitCard fits a tall picture to a wide element by its height, with an even border", () => {
+  const c = fitCard({ w: 4, h: 1 }, 390 / 844);
+  assert.ok(Math.abs(c.h - 0.8) < 1e-9);
+  assert.ok(Math.abs((c.h - c.picture.h) / 2 - 0.06 * c.h) < 1e-9);
+  assert.ok(Math.abs((c.w - c.picture.w) / 2 - 0.06 * c.h) < 1e-9);
 });
