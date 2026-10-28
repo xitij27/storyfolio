@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 // The data is checked where it lies, so a swapped latitude and longitude cannot pass.
-const data: { land: number[][]; borders: number[][] } = JSON.parse(readFileSync(new URL("./land.json", import.meta.url), "utf8"));
+const data: { land: number[][]; borders: number[][] } = JSON.parse(readFileSync(new URL("../../stitch/land.json", import.meta.url), "utf8"));
 
 function inside(lng: number, lat: number, ring: number[]): boolean {
   let within = false;

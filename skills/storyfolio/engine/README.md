@@ -132,7 +132,7 @@ between two points, a share of a line by its length (`along`), and the
 `share` of a value that one step of a scroll takes.
 
 `map` draws Natural Earth's land and borders at 1:50 million (public
-domain), from `components/story/land.json`. It is a megabyte, fetched the
+domain), from `stitch/land.json`. It is a megabyte, fetched the
 first time a map is drawn, and the map is drawn again when it arrives. Give
 it the places' real coordinates. Where two places are too close to tell
 apart, draw a second map of them at a larger scale beside the first.

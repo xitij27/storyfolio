@@ -42,12 +42,13 @@ software WebGL. They are sketches of movement, not finished design.
 ## How to run it
 
 The page expects its modules at `/files/` and the engine's Natural Earth
-land (`skills/storyfolio/engine/components/story/land.json`, not copied
-here) at `/files/land.json`. `shots.mjs` serves it that way:
+land (`skills/storyfolio/engine/stitch/land.json`, not copied here; it lay
+in `components/story/` until 28 October) at `/files/land.json`. `shots.mjs`
+serves it that way:
 
 ```bash
 node shots.mjs evals/engine/transitions-2/examples \
-  skills/storyfolio/engine/components/story/land.json <outDir> sheet/noa 1440 900
+  skills/storyfolio/engine/stitch/land.json <outDir> sheet/noa 1440 900
 ```
 
 It needs `playwright-core` (1.56.1 was used) and a Chromium; it uses

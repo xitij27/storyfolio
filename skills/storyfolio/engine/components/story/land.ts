@@ -28,7 +28,7 @@ function line(points: number[]): Line {
 export function getLand(): Land | null {
   if (!asked) {
     asked = true;
-    import("./land.json")
+    import("../../stitch/land.json")
       .then(({ default: data }) => {
         land = { land: data.land.map(line), borders: data.borders.map(line) };
         for (const listener of listeners) listener();
