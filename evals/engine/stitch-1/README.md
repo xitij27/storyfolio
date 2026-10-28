@@ -105,6 +105,50 @@ typecheck and the build pass.
   frame-rate reading; the author approved the engine on a real phone, and
   the stitched story has not been seen there.
 
+## Decisions made while building
+
+Where the plan was silent, wrong or contradicted by what the shots showed,
+root decided and went on. Each line says what was decided, why, and what it
+costs if wrong.
+
+- Setup: no worktree, work on main; AGENTS.md says "Commit on main" and the user's instructions override the skill; cost if wrong: none, commits are local and unpushed.
+- Pre-flight (T3 to T5): World.anchor returns {position: Vector3, quaternion, height}; fillPose takes {position: [3], normal: [3]} shapes differ; stage converts, normal = (0,0,1) rotated by the anchor quaternion; fillPose stays pure as the plan says; cost if wrong: one adapter
+- Pre-flight (T1 internal): placeViews: example formula gives 1.7 for a single place (far = 0); plan says zoom 1 special-case one place to zoom 1, as the plan's interface says
+- Pre-flight (T1 internal): yearRange: examples use min(study start, work starts) to ceil(NOW) floor the start year (axis ticks are whole years), widen the start back so the span is at least 2
+- Task 1: captions returns Partial<Record<ChapterKey,string>> holding only the keys asked for, not Record; writing a caption for an absent chapter is where undefined would be drawn (Review Focus 3, 5); cost if wrong: callers index with a fallback
+- Task 1: added scroll.ts helpers clamp, lerp, smooth, ease, unitPx and chapters.ts titleOf, person.ts PROJECT_KINDS; the worlds need them and the plan lists five modules only; cost if wrong: none
+- Task 2: grain takes a seed and uses the repeatable rand instead of Math.random; a picture should not change between visits or shots; cost if wrong: none, it looks the same
+- Task 2: mapFrame also returns spanX and spanZ, and both frames are finite for no places; map.ts needs the spread for its padding; zero places would give NaN; cost if wrong: none
+- Task 2: PALETTE gains card (#fbf7ee, book.js CARD); dieCut needs it; cost if wrong: none
+- Task 3: checks run against a production build (next build, next start), not next dev; the dev server's live-reload socket fails here and the story never mounted; cost if wrong: none, a production build is what ships
+- Task 3: stitch-check takes Chromium from CHROMIUM when set (this machine has build 1234, playwright-core 1.64 wants 1248); no download needed; cost if wrong: none
+- Task 3: the blank test counts pixels whose channels differ from the corner by more than 90 in sum, sampled from the WebGL buffer right after a draw; the dark gradient backdrop alone differs from its corner by up to 72, so "differs at all" would never find a blank; cost if wrong: a nearly-black scene passes
+- Task 3: mountStitch takes an optional spacer element; the React host passes its own; the host owns the page's layout; cost if wrong: none
+- Task 3: the React host also writes every chapter's words out in full (screen readers; shown without JavaScript or WebGL); the engine's AGENTS.md asks for the text to be complete without the scene; cost if wrong: a little markup
+- Task 3: anchor height stays the framing box's height as the plan says; revisit in Task 5 if the dive reads as a crossfade
+- Task 4: on a narrow screen the hello sign, diploma and contact card are centred and fitted to the width, and the quotes are read one at a time (camera travels bubble to bubble over the hold, the others fade to 4 per cent); the plan's own phone check (sign, diploma, each bubble in view) failed with the example's 1.7x pull-back; cost if wrong: the phone map differs from the example's phone framing
+- Task 4: the route stays drawn while moving out of "from"; the example dropped it to nothing for that move and brought it back at half opacity, a vanish at a chapter's edge; cost if wrong: none
+- Task 4: buildings rise with "worked" if the map holds it, else with "good"; skills with no jobs stand as a stack of tags at home; camera targets of an empty list fall back to home; skills sit on job buildings, and an empty centroid is NaN; cost if wrong: an odd-looking good chapter for someone with no jobs
+- Task 4: the made chapter's camera follows the plates' own positions by year, not each place plus a fixed offset; with several projects at one place the example's camera stayed on the first; cost if wrong: none
+- Task 4: stitch-check gains --at=LIST for extra points; needed to see each quote on a phone; Task 5's --points uses the same path; cost if wrong: none
+- Task 5: the sheet's anchor is half the chapter's picture high (and at most 0.8 of its width), on the camera's axis at the front of the sheet; at the framing box's full height the window already filled the view at the hold, so the dive was a crossfade, a swap by another name (spec anti-goal); cost if wrong: the window looks small on the sheet
+- Task 5: the window is drawn over the scene (no depth test); an anchor can lie inside a shape (the globe), and it fades in, so nothing pops; cost if wrong: on a busy hold the window floats in front of things nearer the camera
+- Task 5: "scrolling back up plays it in reverse" was checked headless: poses are stateless, and a shot of a point taken after scrolling to the end is pixel-identical to the shot taken on the way down (max diff 0); no headed browser here; cost if wrong: none for stateless poses
+- Task 6: the book's window lies on the right page on a phone and across the whole spread on a wide screen, 0.9 of whichever fits; a screen-shaped window "as high as the page is deep" is twice the page's width on a desktop; cost if wrong: the window covers the left page's words on desktop while it fades in
+- Task 6: the caption box hides during book chapters; the example did the same (its left page carries the words; the box covered it on a phone); cost if wrong: a reader of a mixed site sees the caption come and go
+- Task 6: desk, page edges and grain use the seeded rand, not Math.random; repeatable pictures; cost if wrong: none
+- Task 6: the stage passes the frame's clock into a dive (B posed at the same time; A re-posed at that time after its anchor); the book sways with time, and without it the seam frames would not match; cost if wrong: none
+- Task 6: the left page caps long lists (6 places, 2 studies, 5 jobs, 6 skill groups) with "And N more." and each wrapped line at 4 lines; names and titles on cards are fitted with fillText's max width; Review Focus 3; cost if wrong: a very long list reads as cut short
+- Task 7: the sheet's unseen floor is a dim pool of lamplight (a lit, fading radial texture) rather than a bare ShadowMaterial; a black shadow on the near-black backdrop could not be seen in the shots; cost if wrong: the sheet now stands on a faint warm pool the example did not have
+- Task 7: "no frame darker overall than the book's" was judged as "the finish darkens no frame": the map's ground and the sheet's backdrop are dark by design (approved), so their frames (darkest 34 and 59 mean grey) are darker than the book's (89) before and after; the finish changed mean brightness by -0.3 to +10 on the map, and on the sheet only by framing (holds +6 to +15 from leaning in, moves -6 to -21 from standing back); cost if wrong: the author may want lighter worlds
+- Task 8: the static export puts pages at out/transitions/..., not out/storyfolio/transitions/... (the base path is in links only); step 1 checked out/transitions/mix/; cost if wrong: none
+- Task 8: added scripts/gallery-check.mjs to the library (index, whole examples, a shared mix, sideways scroll, Copy, person switch); step 3's checks, kept so Task 10 runs them against the live site; cost if wrong: none
+- Task 8: piece-shots.mjs and gallery-check.mjs load playwright-core from PLAYWRIGHT_CORE (the library has no such dependency, and the plan forbids a new one); cost if wrong: one environment variable to set
+- Task 8: gallery-check ignores requests that fail with ERR_ABORTED; Next.js prefetches link targets and navigating on cancels them; a missing file still shows as an HTTP error; cost if wrong: a cancelled real request is missed
+- Task 8: the library index's button reads "Transitions gallery" instead of "Transitions study"; the page is now the gallery; cost if wrong: none
+- Task 9: rendered an edge person (one place, no study, no quotes, one job inside one year, nine projects) through all three worlds and a mix, in the scaffolded copy only, and kept its file as evals/engine/stitch-1/edge-person.ts; Review Focus 1, 3 and 5 had unit tests but no browser render; cost if wrong: none
+- Task 9: the study catalogue also gains rows for transitions-1 and -2, which earlier sessions left out; cost if wrong: none
+
 ## Review
 
 Root reviewed the whole change against the plan and its review focus

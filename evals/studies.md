@@ -57,7 +57,7 @@ its review criteria and independent runtime observations are separate.
 | [drawing-kit-1](engine/drawing-kit-1/README.md) | Diagram reference, craft rules and engine drawing kit (pen, `Figure`, Natural Earth map), shown drawing five of Dawit Bekele's diagrams at desktop and phone sizes. Engine check 15/15, 362 tests. No agent run; the person test rerun waits for the author |
 | [transitions-1](engine/transitions-1/README.md) | One seam (a data pipeline becoming a route on a map) joined four ways: today's swap, line morph, hand-off, camera dive. Shown on Pages; no agent run |
 | [transitions-2](engine/transitions-2/README.md) | Three examples through all eight chapters (one sheet, one map, a pop-up book), drawn from a person's data with two made-up people; slowed and the book remade after the author's review. No agent run |
-| [stitch-1](engine/stitch-1/README.md) | Plan 1 of the transitions design: the three examples as worlds in the engine's `stitch/`, joined within a world or by a dive, previewed at `/preview`, and a gallery with a mixer in the library. stitch-check passes for every whole world, an all-dive mix, a mixed site and an edge person, both people, 1440x900 and 390x844; gallery-check passes on the export. 395 tests. No agent run; not yet published
+| [stitch-1](engine/stitch-1/README.md) | Plan 1 of the transitions design: the three examples as worlds in the engine's `stitch/`, joined within a world or by a dive, previewed at `/preview`, and a gallery with a mixer in the library. stitch-check passes for every whole world, an all-dive mix, a mixed site and an edge person, both people, 1440x900 and 390x844; gallery-check passes on the export. 396 tests. No agent run; not yet published
 
 ## Cases and comparison rules
 
