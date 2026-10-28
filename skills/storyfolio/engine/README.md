@@ -86,9 +86,11 @@ Draw its diagrams flat, with the pen (Drawing figures, below).
 `scripts/stitch-check.mjs` shoots a story at every chapter's hold and the
 middle of every move, with reduced motion so each shot stands exactly where
 the page is scrolled, and fails on a page error, a failed request or a blank
-picture. `--points` adds four shots of the first dive, `--at` any other
-points, `--look` a look. Run it against a production build (`npm run build`,
-then `npx next start`); open the screenshots.
+picture. `--path=/` opens the person's site instead of `/preview`;
+`--points` adds four shots of the first dive, `--at` any other points,
+`--look` a look. `npm run check` runs it for you; to run it alone, use a
+production build (`npm run build`, then `npx next start`) and open the
+screenshots.
 
 ```bash
 node scripts/stitch-check.mjs --url=http://127.0.0.1:3000 \
@@ -248,8 +250,21 @@ npm run lint
 npm run check
 ```
 
-`check` builds, starts its own production server on a free local port,
-runs the browser matrix and stops only that process group. It writes a
+`check` checks the person's site at `/`. It builds, starts its own
+production server on a free local port, shoots the story at every
+chapter's hold and move at 1440x900 and 390x844 (the words hidden, and
+once on the phone with them), loads it without JavaScript and without
+WebGL and looks for the name and every chapter's title, and fetches every
+page of the site the story links to (the CV, each project's page). It
+writes `report.json`, logs and shots under `checks/site/<timestamp>/` and
+fails on a page error, a failed request, a blank picture, missing words or
+a link that does not answer. Open the shots: a pass does not replace
+looking. `CHROMIUM` names a Chromium to start instead of playwright-core's
+own.
+
+`check:plain` checks the plain story at `/plain-story`. It builds, starts
+its own production server on a free local port, runs the browser matrix
+and stops only that process group. It writes a
 manifest, logs, reports and screenshots under `checks/<timestamp>/` and
 returns a failure exit code for failed checks. `PLAYWRIGHT_BROWSERS_PATH`
 selects an optional shared browser cache. `PLAYWRIGHT_CORE` is an optional
@@ -263,7 +278,7 @@ beat's rest; reduced-motion captures also check that a stationary scene
 stays still. Open every screenshot for overlap, clipping, legibility and
 framing. Automatic passes do not replace visual review.
 
-For a focused investigation use `npm run check -- --only=light-phone`.
+For a focused investigation use `npm run check:plain -- --only=light-phone`.
 `--skip-build` checks a previously built app and is diagnostic only.
 Neither establishes a fresh full acceptance run. `scripts/shoot.mjs`
 documents individual screenshots, blocked requests, look switching,

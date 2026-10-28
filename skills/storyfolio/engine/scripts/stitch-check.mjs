@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /*
   Checks a stitched story on the locally running site. It opens
-  /preview with a mix and a person, stops at the middle of every chapter's
-  hold and at two points of every move, saves a screenshot of each, and
+  a page with a story (/preview by default, with a mix, person and look if
+  given), stops at the middle of every chapter's hold and at two points of
+  every move, saves a screenshot of each, and
   fails on a page error, a failed request or a blank picture.
 
     node scripts/stitch-check.mjs --url http://127.0.0.1:3000 \
@@ -11,7 +12,8 @@
 
   Options
     --url=URL       the site's address (required)
-    --mix=TEXT      eight world ids in chapter order (required)
+    --path=PATH     the page to open, default /preview; / is the person's site
+    --mix=TEXT      eight world ids in chapter order; default the page's own
     --person=KEY    a sample person, noa or amara; default the site's own
     --look=ID       a look, night, daylight or blueprint; default the page's own
     --size=WxH      viewport, default 1440x900
@@ -48,7 +50,7 @@ function usage(message) {
   console.error(`${message}\nSee the comment at the top of scripts/stitch-check.mjs.`);
   process.exit(2);
 }
-if (!options.url || !options.mix) usage("--url and --mix are required.");
+if (!options.url) usage("--url is required.");
 const [width, height] = String(options.size ?? "1440x900").split("x").map(Number);
 if (![width, height].every((n) => Number.isFinite(n) && n > 0)) usage("--size must be positive WxH");
 const out = path.resolve(String(options.out ?? "checks/stitch"));
@@ -70,10 +72,12 @@ page.on("console", (m) => { if (m.type() === "error" && !m.text().startsWith("Fa
 page.on("requestfailed", (r) => problems.push(`request failed: ${r.url()} ${r.failure()?.errorText ?? ""}`));
 page.on("response", (r) => { if (r.status() >= 400) problems.push(`HTTP ${r.status()}: ${r.url()}`); });
 
-const query = new URLSearchParams({ mix: String(options.mix) });
+const query = new URLSearchParams();
+if (options.mix && options.mix !== true) query.set("mix", String(options.mix));
 if (options.person && options.person !== true) query.set("person", String(options.person));
 if (options.look && options.look !== true) query.set("look", String(options.look));
-const address = `${String(options.url).replace(/\/$/, "")}/preview?${query}`;
+const where = `/${String(options.path && options.path !== true ? options.path : "/preview").replace(/^\/+/, "")}`;
+const address = `${String(options.url).replace(/\/$/, "")}${where}${query.size ? `?${query}` : ""}`;
 const report = { address, size: `${width}x${height}`, shots: [], problems };
 
 async function finish(code) {
@@ -92,7 +96,7 @@ try {
 const error = await page.evaluate(() => window.__stitch.error ?? null);
 if (error) { problems.push(`the story failed: ${error}`); await finish(1); }
 if (!options.words) await page.evaluate(() => document.querySelector(".stitch")?.classList.add("nowords"));
-const { keys } = await page.evaluate(() => ({ keys: window.__stitch.keys }));
+const { keys, mix: shown } = await page.evaluate(() => ({ keys: window.__stitch.keys, mix: window.__stitch.mix }));
 
 async function shoot(name, at) {
   await page.evaluate((s) => window.scrollTo({ top: window.__stitch.top() + s * window.__stitch.unit(), behavior: "instant" }), at);
@@ -112,7 +116,7 @@ for (let k = 0; k < keys.length; k++) {
   if (k + 1 < keys.length) await shoot(`${num}-${keys[k]}-move`, k + 0.7);
 }
 if (options.points) {
-  const mix = String(options.mix).split(",").map((x) => x.trim());
+  const mix = shown.split(",");
   const order = ["hello", "from", "studied", "worked", "good", "made", "say", "contact"];
   const k = keys.findIndex((key, i) => i + 1 < keys.length && mix[order.indexOf(key)] !== mix[order.indexOf(keys[i + 1])]);
   if (k < 0) problems.push("--points: this mix has no move between two worlds");

@@ -4,7 +4,7 @@
 import * as THREE from "three";
 import type { ChapterKey } from "./chapters.ts";
 import { chaptersFor, type Person, type Project } from "./person.ts";
-import { chaptersOf, worldsOf, type Mix, type WorldId } from "./mix.ts";
+import { chaptersOf, formatMix, worldsOf, type Mix, type WorldId } from "./mix.ts";
 import { ease, follow, stateAt, totalUnits, unitPx, type ScrollState } from "./scroll.ts";
 import { loadLand } from "./land.ts";
 import { LOOKS, type Palette } from "./look.ts";
@@ -30,14 +30,14 @@ export type Stitch = { dispose(): void; goTo(index: number, instant?: boolean): 
 
 /** What scripts/stitch-check.mjs reads. One story per page. */
 type Probe = {
-  ready: boolean; error?: string; keys: ChapterKey[];
+  ready: boolean; error?: string; keys: ChapterKey[]; mix: string;
   unit(): number; top(): number; sample(): number; state(): ScrollState | null;
 };
 declare global { interface Window { __stitch?: Probe } }
 
 export async function mountStitch(canvas: HTMLCanvasElement, o: StitchOptions): Promise<Stitch> {
   const keys = chaptersFor(o.person);
-  const probe: Probe = { ready: false, keys, unit: () => unitPx(window.innerHeight), top: () => 0, sample: () => 0, state: () => null };
+  const probe: Probe = { ready: false, keys, mix: formatMix(o.mix), unit: () => unitPx(window.innerHeight), top: () => 0, sample: () => 0, state: () => null };
   window.__stitch = probe;
   try {
     return await mount(canvas, o, keys, probe);
