@@ -530,7 +530,8 @@ export const createSheet: WorldFactory = async (env, chapters) => {
     },
     pick(ndc, chapter) {
       if (chapter !== "made") return null;
-      pose(holding(chapter, 0.5));
+      // Against the pose last drawn: on a phone the wall pans across the hold.
+      scene.updateMatrixWorld();
       ray.setFromCamera(ndc, camera);
       const hit = ray.intersectObjects(tiles, false)[0];
       return hit ? (hit.object as Tile).userData.project : null;

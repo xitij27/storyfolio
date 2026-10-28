@@ -43,6 +43,30 @@ export function localLinks(hrefs) {
   return out;
 }
 
+const flat = (s) => String(s).replace(/\s+/g, " ").trim();
+
+/**
+ * What a page's words and links leave out of what it must show without its 3D
+ * (the story writes that into the page as JSON), each named; empty when
+ * nothing is missing.
+ */
+export function missingFromPage(wanted, text, hrefs) {
+  const all = flat(text), has = (s) => all.includes(flat(s));
+  const out = [];
+  if (!has(wanted.name)) out.push("the name");
+  for (const w of wanted.words) if (!has(w)) out.push(`the words "${flat(w).slice(0, 40)}"`);
+  for (const p of wanted.projects) {
+    for (const part of ["title", "line", "more"]) if (p[part] && !has(p[part])) out.push(`the project "${p.title}": its ${part}`);
+    if (p.page && !hrefs.includes(p.page)) out.push(`the project "${p.title}": its page link`);
+  }
+  if (wanted.cv && !hrefs.includes(wanted.cv)) out.push("the CV link");
+  return out;
+}
+
+const ENTITIES = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#x27;": "'", "&#39;": "'" };
+/** A page's title, from its HTML. */
+export const pageTitle = (html) => (/<title[^>]*>([^<]*)<\/title>/i.exec(html)?.[1] ?? "").replace(/&[#\w]+;/g, (e) => ENTITIES[e] ?? e).trim();
+
 async function main() {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
   const options = Object.fromEntries(process.argv.slice(2).map((arg) => {
@@ -120,9 +144,11 @@ async function main() {
         const box = await text.boundingBox();
         const found = { visible: Boolean(box && box.height > 40), name: await page.locator(".stitch .text h1").innerText().catch(() => ""), titles: await page.locator(".stitch .text h2").allInnerTexts() };
         const hrefs = await page.locator("a[href]").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
+        const wanted = JSON.parse(await page.locator("script[data-stitch-expect]").textContent().catch(() => "null") || "null");
+        const words = await text.innerText().catch(() => "");
         await page.screenshot({ path: join(out, `${name}.png`), fullPage: true });
         for (const p of seen) problems.push(`${name}: ${p}`);
-        return { found, hrefs };
+        return { found, hrefs, wanted, words };
       } finally { await browser.close(); }
     };
 
@@ -136,21 +162,31 @@ async function main() {
         return { titles: await page.locator(".stitch .rail span").allInnerTexts() };
       } finally { await browser.close(); }
     })();
-    const expect = (name, found) => {
+    const expect = (name, seen) => {
+      const { found, wanted } = seen;
       if (!found.visible) problems.push(`${name}: the words are not shown`);
       if (!found.name.trim()) problems.push(`${name}: no name`);
       for (const t of told.titles) if (!found.titles.includes(t)) problems.push(`${name}: the chapter "${t}" is missing`);
+      if (!wanted) problems.push(`${name}: the page does not say what it must show (no data-stitch-expect)`);
+      else for (const m of missingFromPage(wanted, seen.words, seen.hrefs)) problems.push(`${name}: ${m} is missing`);
     };
 
     console.log("Loading it without JavaScript and without WebGL");
     const noJs = await browse("no-javascript", ["--no-sandbox"], { javaScriptEnabled: false }, async () => {});
     report.noJavaScript = noJs.found;
-    expect("no JavaScript", noJs.found);
+    expect("no JavaScript", noJs);
     const noGl = await browse("no-webgl", ["--no-sandbox", "--disable-3d-apis"], {}, async (page) => {
       await page.waitForSelector('.stitch[data-scene="off"]', { timeout: 30000 }).catch(() => problems.push("no WebGL: the story never gave way to its words"));
     });
     report.noWebGL = noGl.found;
-    expect("no WebGL", noGl.found);
+    expect("no WebGL", noGl);
+
+    // A page without a title of its own, such as the missing-page page, carries the person's name.
+    const missing = await fetch(`${base}/storyfolio-check-no-such-page`);
+    const missingTitle = pageTitle(await missing.text());
+    report.missingPage = { status: missing.status, title: missingTitle };
+    if (missing.status !== 404) problems.push(`an address that is not there answers ${missing.status}, not 404`);
+    if (noJs.wanted && !missingTitle.includes(noJs.wanted.name)) problems.push(`the missing-page page is titled "${missingTitle}", without the person's name`);
 
     for (const path of localLinks(noJs.hrefs)) {
       const status = await fetch(`${base}${path}`).then((r) => r.status).catch(() => 0);

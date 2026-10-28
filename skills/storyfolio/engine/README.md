@@ -52,7 +52,7 @@ It is read from three files:
 |---|---|---|
 | `content/person.ts` | The person's confirmed facts, in the shape of `stitch/person.ts`. The supplied one is made up: replace all of it. A chapter with nothing in it (no study, no quotes) is left out and its neighbours join | Stop 2 |
 | `content/mix.ts` | Which world holds each chapter, chosen to suit the person from the pieces in the library's gallery, https://xitij27.github.io/storyfolio/transitions/. As one line it reads like `map,map,book,book,sheet,sheet,book,map` (`parseMix` and `formatMix` in `stitch/mix.ts`) | Stop 2 |
-| `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), the person's own words for any chapter, and the CV's address | Stops 4 to 6 |
+| `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), the person's own words for any chapter, the CV's address, and the site's language | Stops 4 to 6 |
 
 `/preview` shows the same story and tries things without editing:
 `?mix=<line>` another mix, `?look=<id>` another look, `?person=noa` or
@@ -61,8 +61,11 @@ It is read from three files:
 The words under each chapter are written from the person's data (`captions`
 in `stitch/chapters.ts`) until the person chooses their own. Put those in
 `site.words` by chapter, such as the opening (`hello`) and the close
-(`contact`). Every word is also written out in the page's HTML, for anyone
-without the 3D and for screen readers.
+(`contact`); a world that prints a chapter's words, such as the book's left
+page, prints theirs. Every word, each project's line and `more`, and the
+CV and project links are also written out in the page's HTML, for anyone
+without the 3D and for screen readers. Every page is titled with the
+person's name unless it gives a title of its own.
 
 A project opens a window on a click: its line and tags, `more` (a paragraph)
 when it has one, and a link to `page` when it has its own page. Write a
@@ -254,8 +257,11 @@ npm run check
 production server on a free local port, shoots the story at every
 chapter's hold and move at 1440x900 and 390x844 (the words hidden, and
 once on the phone with them), loads it without JavaScript and without
-WebGL and looks for the name and every chapter's title, and fetches every
-page of the site the story links to (the CV, each project's page). It
+WebGL and looks for the name, every chapter's title and words, each
+project's line, `more` and page link, and the CV link, fetches every page
+of the site the story links to (the CV, each project's page), and checks
+that an address that is not there answers 404 with the person's name in
+its title. It
 writes `report.json`, logs and shots under `checks/site/<timestamp>/` and
 fails on a page error, a failed request, a blank picture, missing words or
 a link that does not answer. Open the shots: a pass does not replace

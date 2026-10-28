@@ -9,6 +9,7 @@ import { backdrop, canvas, dieCut, grain, miniPicture, rand, rrect, sans, serif,
 import { dotLand, type Land } from "./land.ts";
 import type { Palette } from "./look.ts";
 import { pageFrame } from "./frame.ts";
+import { pageLines } from "./pages.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
 import { holding, type Anchor, type World, type WorldFactory, type WorldView } from "./world.ts";
 
@@ -17,29 +18,7 @@ const FOV = 28;
 const PX = 1024, PY = Math.round((1024 * PD) / PW);
 
 // ---------- The pages ----------
-/** The words of one chapter, as lines for the left page. */
-function bodyOf(P: Person, k: ChapterKey): string[] {
-  const more = (n: number) => (n ? [`And ${n} more.`] : []);
-  switch (k) {
-    case "hello": return [P.name, P.role, P.line, P.seeking + "."];
-    case "from": return P.places.slice(0, 6).map((p) => `${p.name}, where ${P.first} ${p.what}.`).concat(more(Math.max(0, P.places.length - 6)));
-    case "studied": return P.study.slice(0, 2).flatMap((s) => [`${s.degree} in ${s.field}.`, `${s.place}, ${s.from} to ${s.to}.`, ...(s.note ? [s.note + "."] : [])]).concat(more(Math.max(0, P.study.length - 2)));
-    case "worked": return P.work.slice(0, 5).map((w) => `${w.org}, ${w.place}, ${yearText(w)}. ${w.role}: ${w.did.charAt(0).toLowerCase()}${w.did.slice(1)}.`).concat(more(Math.max(0, P.work.length - 5)));
-    case "good": return P.skills.slice(0, 6).map((g) => `${g.group}: ${g.items.join(", ")}.`).concat(more(Math.max(0, P.skills.length - 6)));
-    case "made": {
-      const s = slots(P.projects, 6);
-      return [`${P.projects.length} ${P.projects.length === 1 ? "project" : "projects"}. Open any card on the right to read about it.`,
-        ...s.shown.filter((p): p is Project => !!p).map((p) => p.title), ...more(s.more)];
-    }
-    case "say": {
-      const s = slots(P.quotes, 3);
-      return [...s.shown.filter((q) => !!q).map((q) => `${q!.who}, ${q!.from}.`), ...more(s.more)];
-    }
-    case "contact": return [P.contact.email, P.seeking + ".", P.contact.links.join(", ") + "."];
-  }
-}
-
-function leftPage(P: Person, C: Palette, k: ChapterKey, number: number) {
+function leftPage(P: Person, C: Palette, k: ChapterKey, number: number, words: Partial<Record<ChapterKey, string>>) {
   return canvas(PX, PY, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     grain(ctx, w, h, 9000, number * 7 + 1);
@@ -51,12 +30,14 @@ function leftPage(P: Person, C: Palette, k: ChapterKey, number: number) {
     ctx.fillStyle = C.ink; ctx.font = serif(96); let y = wrap(ctx, titleOf(k), m, 320, w - 2 * m, 104, 2);
     ctx.fillStyle = C.amber; ctx.fillRect(m, y + 6, 90, 6);
     y += 110;
-    bodyOf(P, k).forEach((line, i) => {
+    // The person's own words are one paragraph in the body's type, given room to be read whole.
+    const own = Boolean(words[k]?.trim());
+    pageLines(P, k, words[k]).forEach((line, i) => {
       if (y > h - 180) return;
-      const lead = i === 0 && k === "hello";
+      const lead = !own && i === 0 && k === "hello";
       ctx.fillStyle = lead ? C.ink : "#3a424c";
       ctx.font = lead ? serif(58) : serif(40, 400);
-      y = wrap(ctx, line, m, y, w - 2 * m, lead ? 66 : 56, 4) + 24;
+      y = wrap(ctx, line, m, y, w - 2 * m, lead ? 66 : 56, own ? 12 : 4) + 24;
     });
     ctx.fillStyle = C.muted; ctx.font = serif(30, 400, "italic"); ctx.textAlign = "center"; ctx.fillText(String(number * 2 - 1), w / 2, h - 86);
   });
@@ -377,7 +358,7 @@ export const createBook: WorldFactory = async (env, chapters) => {
 
   // The inside of the front cover carries the first chapter's words.
   const insideGeo = sheetGeometries().front;
-  const inside = new THREE.Mesh(insideGeo, new THREE.MeshLambertMaterial({ map: tex(leftPage(P, C, chapters[0], numberOf(chapters[0]))), side: THREE.BackSide }));
+  const inside = new THREE.Mesh(insideGeo, new THREE.MeshLambertMaterial({ map: tex(leftPage(P, C, chapters[0], numberOf(chapters[0]), env.words)), side: THREE.BackSide }));
   inside.receiveShadow = true;
   scene.add(inside);
   {
@@ -395,7 +376,7 @@ export const createBook: WorldFactory = async (env, chapters) => {
     const { front, back } = sheetGeometries();
     const next = chapters[j + 1];
     const f = new THREE.Mesh(front, new THREE.MeshLambertMaterial({ map: tex(rightPage(P, C, k, numberOf(k), env.land)), side: THREE.FrontSide }));
-    const b = new THREE.Mesh(back, new THREE.MeshLambertMaterial({ map: tex(next ? leftPage(P, C, next, numberOf(next)) : blank), side: THREE.BackSide }));
+    const b = new THREE.Mesh(back, new THREE.MeshLambertMaterial({ map: tex(next ? leftPage(P, C, next, numberOf(next), env.words) : blank), side: THREE.BackSide }));
     f.castShadow = true; f.receiveShadow = b.receiveShadow = true;
     f.material.shadowSide = THREE.DoubleSide;
     scene.add(f, b);

@@ -4,4 +4,5 @@
 import type { ChapterKey } from "./chapters.ts";
 import type { LookId } from "./look.ts";
 
-export type SiteChoices = { look: LookId; words: Partial<Record<ChapterKey, string>>; cv?: string };
+/** `lang` is the site's language as an HTML lang code, English (`en`) when not given. */
+export type SiteChoices = { look: LookId; words: Partial<Record<ChapterKey, string>>; cv?: string; lang?: string };

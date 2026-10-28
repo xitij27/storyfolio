@@ -117,6 +117,56 @@ says what was decided, why, and what it costs if wrong.
 - Task 5: `check:plain` was verified (15 of 15) with the scratch copy's `shoot.mjs` launching `CHROMIUM` (Chromium 1234), since playwright-core 1.64 wants headless shell 1248, not installed here; the repository's `shoot.mjs` is unchanged; cost if wrong: none, an environment variance.
 - Task 8: the sheet's "yours to download" clause removed (finding 7), though it failed no check, against the plan's "fix only what fails a check": it is a claim the skill's first rule forbids; no unit test covers words drawn on a canvas, so it was checked in the shots; cost if wrong: the sheet's close loses a clause.
 
+## The final review, and what it changed
+
+After Task 9 one fresh reviewer read the whole change (12f6c5f7..659f2110)
+against the plan and the design: 2 critical, 4 important and 8 minor
+findings. Root confirmed each and fixed the critical and important ones in
+one pass, each shown failing first:
+
+- **Chosen words never showed in a book chapter** (the book hides the
+  caption and printed lines from data). The book's left page now carries
+  the person's own words for that chapter, in the body's type and whole
+  (`stitch/pages.ts`, tested in `pages.test.ts`; seen on Dawit's hello and
+  contact in the book).
+- **On a phone, tapping a project on the sheet's wall opened another
+  one:** picking re-posed the wall at the middle of the hold, which Task
+  3's pan made wrong. It now picks against the pose last drawn. A browser
+  check tapped the top-left plate early in the hold: "Photo colouriser"
+  opened before, "Train delay forecaster" after.
+- **In daylight the rail was unreadable over the book's dark desk:** the
+  rail's words, its dots and the hint now carry a halo in the caption
+  glass's colour (night's labels over light paper read better too). Seen in
+  shots before and after; a stylesheet has no unit test.
+- **A project's `more` was missing without the 3D,** and **`npm run check`
+  looked only for the name and chapter titles:** the text written out for
+  anyone without the 3D now carries `more`; the story writes into the page
+  what it must show (`data-stitch-expect`), and the check looks for every
+  chapter's words, every project's title, line, `more` and page link, and
+  the CV link (`missingFromPage`, tested; it failed on Dawit's site before
+  the story wrote what it must show).
+- **Pages without their own title showed the placeholder "Storyfolio |
+  Placeholder":** the layout now titles every page with the person's name
+  and describes it by their role, in `site.lang` (English by default). The
+  check now asks an address that is not there for 404 and the person's
+  name in its title (`pageTitle`, tested; it failed on "Storyfolio |
+  Placeholder" before).
+
+After the pass, `npm run check` passes on Dawit's site and on the
+placeholder person; 411 + 4 repository tests pass.
+
+Left for the author (minor): `site.cv` is not checked as an address, as a
+project's `page` is; `/preview?person=noa` shows the owner's CV button;
+the project window's "More about" link and daylight's chapter number are
+below 4.5:1 contrast at small sizes; the phone reading width is in world
+units and "narrow" is an aspect below 0.9, so very small phones, portrait
+tablets and landscape phones are framed less well; the frames above
+predate finding 7's fix (the daylight phone frame still shows "yours to
+download"); concept.md's test section still says "each concept" and "The
+through-line" is not visibly scoped to a scene of one's own; when the CV is
+built is said as stop 6 in `content/site.ts` and stop 5 in the skill;
+`/plain-story` ships unlinked on every person's site.
+
 ## To make it again
 
 ```bash

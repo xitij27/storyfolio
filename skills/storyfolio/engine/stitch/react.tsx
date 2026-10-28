@@ -31,6 +31,7 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
   const keys = useMemo(() => chaptersFor(person), [person]);
   const words = useMemo(() => wordsFor(person, keys, chosen), [person, keys, chosen]);
   const mixText = formatMix(mix);
+  const chosenText = JSON.stringify(chosen ?? {});
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
   const capRef = useRef<HTMLDivElement>(null);
@@ -57,7 +58,7 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
       if (ctaRef.current) { ctaRef.current.style.opacity = cta.toFixed(3); ctaRef.current.style.pointerEvents = cta > 0.5 ? "auto" : "none"; }
     };
     import("./stage.ts")
-      .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, palette: LOOKS[look], spacer, onState, onProject: setProject }))
+      .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, palette: LOOKS[look], words: JSON.parse(chosenText), spacer, onState, onProject: setProject }))
       .then((h) => {
         if (!alive) { h.dispose(); return; }
         handle.current = h;
@@ -67,7 +68,7 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
       })
       .catch((e) => { console.error(e); if (alive) setScene("off"); });
     return () => { alive = false; handle.current?.dispose(); handle.current = null; };
-  }, [person, mixText, keys, start, look]);
+  }, [person, mixText, keys, start, look, chosenText]);
 
   useEffect(() => {
     if (!project) return;
@@ -101,6 +102,7 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
         {cv && <a href={cv}>CV</a>}
       </div>
       <Chapters person={person} keys={keys} words={words} cv={cv} />
+      <Expected person={person} words={words} cv={cv} />
       {project && <ProjectWindow project={project} palette={palette} onClose={() => setProject(null)} />}
     </div>
   );
@@ -115,13 +117,24 @@ function Chapters({ person, keys, words, cv }: { person: Person; keys: ChapterKe
         <article key={k}>
           <h2>{titleOf(k)}</h2>
           <p>{words[k]}</p>
-          {k === "made" && <ul>{person.projects.map((p) => <li key={p.title}><b>{p.page ? <a href={p.page}>{p.title}</a> : p.title}</b>. {p.line}</li>)}</ul>}
+          {k === "made" && <ul>{person.projects.map((p) => <li key={p.title}><b>{p.page ? <a href={p.page}>{p.title}</a> : p.title}</b>. {p.line}{p.more && <> {p.more}</>}</li>)}</ul>}
           {k === "say" && <ul>{person.quotes.map((q) => <li key={q.who}>&ldquo;{q.text}&rdquo; {q.who}, {q.from}</li>)}</ul>}
           {k === "contact" && <p><a href={`mailto:${person.contact.email}`}>{person.contact.email}</a>{cv && <>. <a href={cv}>CV</a></>}</p>}
         </article>
       ))}
     </section>
   );
+}
+
+/** What the page must show without its 3D, as JSON for scripts/site-check.mjs to look for. */
+function Expected({ person, words, cv }: { person: Person; words: Partial<Record<ChapterKey, string>>; cv?: string }) {
+  const wanted = {
+    name: person.name,
+    words: Object.values(words),
+    projects: person.projects.map(({ title, line, more, page }) => ({ title, line, more, page })),
+    cv,
+  };
+  return <script type="application/json" data-stitch-expect dangerouslySetInnerHTML={{ __html: JSON.stringify(wanted).replace(/</g, "\\u003c") }} />;
 }
 
 function ProjectWindow({ project, palette, onClose }: { project: Project; palette: Palette; onClose: () => void }) {

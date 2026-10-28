@@ -15,7 +15,9 @@
 .stitch .rail { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 6px; }
 .stitch .rail button { pointer-events: auto; display: flex; align-items: center; justify-content: flex-end; gap: 10px; background: none; border: 0;
   color: var(--st-muted); font: 500 13px var(--st-sans); cursor: pointer; padding: 3px 0; flex-direction: row-reverse; }
-.stitch .rail i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.5; }
+/* A halo in the caption glass's colour keeps the rail and hint readable over any world, such as the book's dark desk in a light look. */
+.stitch .rail button, .stitch .hint { text-shadow: 0 0 3px var(--st-glass), 0 0 8px var(--st-glass), 0 0 14px var(--st-glass); }
+.stitch .rail i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.5; box-shadow: 0 0 0 2px var(--st-glass); }
 .stitch .rail button.on { color: var(--st-ink); }
 .stitch .rail button.on i { background: var(--st-amber); opacity: 1; transform: scale(1.4); }
 .stitch .cap { position: absolute; left: 24px; bottom: 28px; max-width: 430px; padding: 18px 20px; border-radius: 14px;

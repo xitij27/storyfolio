@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
 import { StitchedStory } from "@/stitch/react";
 import { person } from "@/content/person";
 import { mix } from "@/content/mix";
 import { site } from "@/content/site";
-
-export const metadata: Metadata = { title: person.name, description: `${person.role}. ${person.line}` };
 
 // The person's site: their story stitched from the worlds in content/mix.ts,
 // in the look, words and CV of content/site.ts.

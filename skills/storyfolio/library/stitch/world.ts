@@ -6,7 +6,8 @@ import type { Person, Project } from "./person.ts";
 import type { Land } from "./land.ts";
 import type { Palette } from "./look.ts";
 
-export type WorldEnv = { person: Person; palette: Palette; renderer: THREE.WebGLRenderer; land: Land; narrow: () => boolean };
+/** `words` are the person's own words for any chapter, which a world that prints a chapter's words uses in place of its own. */
+export type WorldEnv = { person: Person; palette: Palette; words: Partial<Record<ChapterKey, string>>; renderer: THREE.WebGLRenderer; land: Land; narrow: () => boolean };
 
 /** Where the story stands inside one world: chapter keys, the eased move t, its raw share, the hold's share and the clock. */
 export type WorldView = { from: ChapterKey; to: ChapterKey; t: number; raw: number; local: number; time: number };
