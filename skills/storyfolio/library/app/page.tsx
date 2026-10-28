@@ -17,7 +17,7 @@ export default function Index() {
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/transitions/" className="inline-flex h-11 items-center rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground hover:bg-primary/85">
-            Transitions study
+            Transitions gallery
           </Link>
           <Link href="/template/" className="inline-flex h-11 items-center rounded-lg border border-border px-5 text-sm font-medium hover:bg-muted">
             See a whole page made of them
