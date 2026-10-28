@@ -4,7 +4,7 @@
 import * as THREE from "three";
 import { yearText, type ChapterKey } from "./chapters.ts";
 import { NOW, placeViews, slots, yearRange, type Person, type Project } from "./person.ts";
-import { PALETTE as C, canvas, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
+import { PALETTE as C, backdrop, canvas, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand, type Land } from "./land.ts";
 import { equirect } from "./frame.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
@@ -247,15 +247,6 @@ const PICTURES: Record<ChapterKey, (P: Person, land: Land) => HTMLCanvasElement>
   hello: cvPage, from: (P, land) => globeMap(land), studied: diplomaPicture, worked: timeline,
   good: leafletPicture, made: wallPicture, say: quotePicture, contact: contactPage,
 };
-
-/** The examples' dark backdrop, as a picture behind the world. */
-export function backdrop(): HTMLCanvasElement {
-  return canvas(1024, 640, (ctx, w, h) => {
-    const g = ctx.createRadialGradient(w / 2, h * 0.38, 0, w / 2, h * 0.38, w * 0.62);
-    g.addColorStop(0, "#1d252e"); g.addColorStop(0.55, "#10151b"); g.addColorStop(1, "#0a0d11");
-    ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
-  });
-}
 
 // ---------- The sheet ----------
 const VERT = `

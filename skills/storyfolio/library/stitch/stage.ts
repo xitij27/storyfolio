@@ -11,8 +11,9 @@ import { holding, type World, type WorldFactory } from "./world.ts";
 import { diveSteps, fillPose } from "./dive.ts";
 import { createSheet } from "./sheet.ts";
 import { createMap } from "./map.ts";
+import { createBook } from "./book.ts";
 
-const FACTORIES: Partial<Record<WorldId, WorldFactory>> = { sheet: createSheet, map: createMap };
+const FACTORIES: Partial<Record<WorldId, WorldFactory>> = { sheet: createSheet, map: createMap, book: createBook };
 
 export type StitchOptions = {
   person: Person;
@@ -111,7 +112,7 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
     window_.removeFromParent();
     if (st.from === st.to) wa.pose(holding(a, st.local, time));
     else if (o.mix[a] === o.mix[b]) wa.pose({ from: a, to: b, t: st.t, raw: st.raw, local: 1, time });
-    else dive(wa, a, worldAt(b), b, st.raw);
+    else dive(wa, a, worldAt(b), b, st.raw, time);
     renderer.setRenderTarget(null);
     renderer.render(wa.scene, wa.camera);
     window_.removeFromParent();
@@ -120,14 +121,15 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
 
   const p0 = new THREE.Vector3(), q0 = new THREE.Quaternion(), normal = new THREE.Vector3();
   /** Poses a dive from world A holding chapter a into world B at chapter b, ready to draw A. */
-  function dive(wa: World, a: ChapterKey, wb: World, b: ChapterKey, raw: number) {
+  function dive(wa: World, a: ChapterKey, wb: World, b: ChapterKey, raw: number, time: number) {
     // B as it will first be seen, into the window's picture.
-    wb.pose(holding(b, 0));
+    wb.pose(holding(b, 0, time));
     renderer.setRenderTarget(view);
     renderer.render(wb.scene, wb.camera);
     renderer.setRenderTarget(null);
     // A holds; the window opens at its anchor, and the camera flies into it.
     const anchor = wa.anchor(a);
+    wa.pose(holding(a, 1, time));
     const { fade, fly } = diveSteps(raw);
     window_.position.copy(anchor.position);
     window_.quaternion.copy(anchor.quaternion);

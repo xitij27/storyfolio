@@ -68,7 +68,7 @@ export function StitchedStory({ person, mix, showWords = true }: { person: Perso
             </button>
           ))}
         </nav>
-        <div ref={capRef} className="cap" aria-live="polite">
+        <div ref={capRef} className={`cap${mix[key] === "book" ? " inbook" : ""}`} aria-live="polite">
           <div className="num">{String(near + 1).padStart(2, "0")}</div>
           <h2>{titleOf(key)}</h2>
           <p>{words[key]}</p>

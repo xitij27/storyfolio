@@ -24,6 +24,8 @@
 .stitch .hint { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: var(--st-muted); font-size: 13px; letter-spacing: 0.1em;
   text-transform: uppercase; transition: opacity 0.4s; }
 .stitch.nowords .cap, .stitch.nowords .rail span, .stitch.nowords .hint { display: none; }
+/* In the book the left page carries the chapter's words. */
+.stitch .cap.inbook { display: none; }
 
 .stitch .cta { position: fixed; z-index: 3; left: 50%; bottom: 34px; transform: translateX(-50%); display: flex; gap: 10px; opacity: 0; pointer-events: none; }
 .stitch .cta a { border-radius: 999px; padding: 12px 20px; font: 600 15px var(--st-sans); text-decoration: none; background: var(--st-amber); color: #11161c; white-space: nowrap; }

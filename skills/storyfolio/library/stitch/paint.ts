@@ -171,3 +171,12 @@ export function label(text: string, { size = 40, color = C.ink, bg = null as str
   sprite.scale.set((height * w) / h, height, 1);
   return sprite;
 }
+
+/** The examples' dark backdrop, as a picture behind a world. */
+export function backdrop(): HTMLCanvasElement {
+  return canvas(1024, 640, (ctx, w, h) => {
+    const g = ctx.createRadialGradient(w / 2, h * 0.38, 0, w / 2, h * 0.38, w * 0.62);
+    g.addColorStop(0, "#1d252e"); g.addColorStop(0.55, "#10151b"); g.addColorStop(1, "#0a0d11");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+  });
+}
