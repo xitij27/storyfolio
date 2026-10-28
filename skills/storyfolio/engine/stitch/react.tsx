@@ -2,18 +2,27 @@
 // A stitched story on a page: the 3D behind, the chapter's words, the
 // chapter rail, the contact buttons and a project window. The words are
 // also written out in full for anyone without the 3D.
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { captions, titleOf, type ChapterKey } from "./chapters.ts";
 import { chaptersFor, type Person, type Project } from "./person.ts";
 import { formatMix, parseMix, type Mix } from "./mix.ts";
+import { LOOKS, uiColours, type LookId, type Palette } from "./look.ts";
 import { miniPicture, canvas as paintCanvas } from "./paint.ts";
 import { smooth, type ScrollState } from "./scroll.ts";
 import "./stitch.css";
 
 type Handle = { dispose(): void; goTo(index: number, instant?: boolean): void };
 
+/** The custom properties stitch.css colours the words, rail, caption and buttons with. */
+function lookStyle(p: Palette): CSSProperties {
+  const ui = uiColours(p);
+  return { "--st-bg": p.bg, "--st-ink": ui.text, "--st-soft": ui.soft, "--st-muted": ui.muted, "--st-glass": ui.glass,
+    "--st-line": ui.line, "--st-on-ink": ui.onText, "--st-amber": p.amber } as CSSProperties;
+}
+
 /** `start` opens the story at that chapter when the page is at its top, as a link to one chapter's piece does. */
-export function StitchedStory({ person, mix, showWords = true, start }: { person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey }) {
+export function StitchedStory({ person, mix, showWords = true, start, look = "night" }: { person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId }) {
+  const palette = LOOKS[look];
   const keys = useMemo(() => chaptersFor(person), [person]);
   const words = useMemo(() => captions(person, keys), [person, keys]);
   const mixText = formatMix(mix);
@@ -43,7 +52,7 @@ export function StitchedStory({ person, mix, showWords = true, start }: { person
       if (ctaRef.current) { ctaRef.current.style.opacity = cta.toFixed(3); ctaRef.current.style.pointerEvents = cta > 0.5 ? "auto" : "none"; }
     };
     import("./stage.ts")
-      .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, spacer, onState, onProject: setProject }))
+      .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, palette: LOOKS[look], spacer, onState, onProject: setProject }))
       .then((h) => {
         if (!alive) { h.dispose(); return; }
         handle.current = h;
@@ -53,7 +62,7 @@ export function StitchedStory({ person, mix, showWords = true, start }: { person
       })
       .catch((e) => { console.error(e); if (alive) setScene("off"); });
     return () => { alive = false; handle.current?.dispose(); handle.current = null; };
-  }, [person, mixText, keys, start]);
+  }, [person, mixText, keys, start, look]);
 
   useEffect(() => {
     if (!project) return;
@@ -64,7 +73,7 @@ export function StitchedStory({ person, mix, showWords = true, start }: { person
 
   const key = keys[near];
   return (
-    <div className={`stitch${showWords ? "" : " nowords"}`} data-scene={scene}>
+    <div className={`stitch${showWords ? "" : " nowords"}`} data-scene={scene} style={lookStyle(palette)}>
       <canvas ref={canvasRef} className="gl" aria-hidden="true" />
       <div ref={spacerRef} className="spacer" />
       <div className="ui">
@@ -87,7 +96,7 @@ export function StitchedStory({ person, mix, showWords = true, start }: { person
         <a href="#" onClick={(e) => e.preventDefault()}>Download CV</a>
       </div>
       <Chapters person={person} keys={keys} words={words} />
-      {project && <ProjectWindow person={person} project={project} onClose={() => setProject(null)} />}
+      {project && <ProjectWindow person={person} project={project} palette={palette} onClose={() => setProject(null)} />}
     </div>
   );
 }
@@ -110,14 +119,14 @@ function Chapters({ person, keys, words }: { person: Person; keys: ChapterKey[];
   );
 }
 
-function ProjectWindow({ person, project, onClose }: { person: Person; project: Project; onClose: () => void }) {
+function ProjectWindow({ person, project, palette, onClose }: { person: Person; project: Project; palette: Palette; onClose: () => void }) {
   const pic = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = pic.current;
     if (!el) return;
-    const c = paintCanvas(800, 420, (ctx, w, h) => miniPicture(ctx, project.kind, 0, 0, w, h, project.title.length));
+    const c = paintCanvas(800, 420, (ctx, w, h) => miniPicture(ctx, palette, project.kind, 0, 0, w, h, project.title.length));
     el.replaceChildren(c);
-  }, [project]);
+  }, [project, palette]);
   return (
     <div className="modal open" role="dialog" aria-modal="true" aria-label={project.title} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
       <div className="sheet">

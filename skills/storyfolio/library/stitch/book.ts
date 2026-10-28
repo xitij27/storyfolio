@@ -5,8 +5,9 @@
 import * as THREE from "three";
 import { titleOf, yearText, type ChapterKey } from "./chapters.ts";
 import { NOW, chaptersFor, slots, type Person, type Project } from "./person.ts";
-import { PALETTE as C, backdrop, canvas, dieCut, grain, miniPicture, rand, rrect, sans, serif, texture, wrap } from "./paint.ts";
+import { backdrop, canvas, dieCut, grain, miniPicture, rand, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand, type Land } from "./land.ts";
+import type { Palette } from "./look.ts";
 import { pageFrame } from "./frame.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
 import type { Anchor, World, WorldFactory, WorldView } from "./world.ts";
@@ -38,7 +39,7 @@ function bodyOf(P: Person, k: ChapterKey): string[] {
   }
 }
 
-function leftPage(P: Person, k: ChapterKey, number: number) {
+function leftPage(P: Person, C: Palette, k: ChapterKey, number: number) {
   return canvas(PX, PY, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     grain(ctx, w, h, 9000, number * 7 + 1);
@@ -65,7 +66,7 @@ const GROUNDS: Record<ChapterKey, string> = {
   hello: "#efe3c8", from: "#e7e0d1", studied: "#dfe8df", worked: "#e9e2d2", good: "#efe3c8", made: "#e9e2d2", say: "#ece4d6", contact: "#efe3c8",
 };
 
-function rightPage(P: Person, k: ChapterKey, number: number, land: Land) {
+function rightPage(P: Person, C: Palette, k: ChapterKey, number: number, land: Land) {
   return canvas(PX, PY, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     grain(ctx, w, h, 9000, number * 7 + 2);
@@ -102,12 +103,12 @@ function tree(ctx: CanvasRenderingContext2D, x: number, base: number, s: number,
   ctx.beginPath(); ctx.arc(x + s * 0.27, base - s * 0.58, s * 0.3, 0, Math.PI * 2); ctx.fill();
 }
 
-function scenes(P: Person, own: Set<ChapterKey>): Pop[] {
+function scenes(P: Person, C: Palette, own: Set<ChapterKey>): Pop[] {
   const list: Pop[] = [];
   const add = (chapter: ChapterKey, w0: number, h0: number, draw: Draw, w: number, s: number, z: number, o: { delay?: number; edge?: number; project?: Project } = {}) => {
     if (!own.has(chapter)) return;
     const pic = canvas(w0, h0, draw);
-    const card = dieCut(pic, o.edge ?? 12);
+    const card = dieCut(pic, C, o.edge ?? 12);
     list.push({ chapter, pic: card, w: (w * card.width) / pic.width, h: (w * card.height) / pic.width, s, z, delay: o.delay ?? 0, project: o.project ?? null });
   };
 
@@ -234,7 +235,7 @@ function scenes(P: Person, own: Set<ChapterKey>): Pop[] {
     if (!p) return;
     add("made", 700, 620, (ctx, w, h) => {
       ctx.fillStyle = "#fbf8f1"; rrect(ctx, 0, 0, w, h, 18); ctx.fill();
-      miniPicture(ctx, p.kind, 22, 22, w - 44, 340, i + 3);
+      miniPicture(ctx, C, p.kind, 22, 22, w - 44, 340, i + 3);
       ctx.fillStyle = C.ink; ctx.font = serif(50); wrap(ctx, p.title, 28, 440, w - 56, 54, 2);
       ctx.fillStyle = C.amber; ctx.font = sans(28, 600); ctx.fillText(`${p.place.toUpperCase()}  ${p.year}`, 28, h - 28);
     }, 0.9, 0.55 + (i % 3) * 0.95, i < 3 ? -0.75 : 0.75, { delay: (i % 3) * 0.08, project: p });
@@ -330,14 +331,14 @@ function sheetGeometries() {
 }
 
 export const createBook: WorldFactory = async (env, chapters) => {
-  const P = env.person;
+  const P = env.person, C = env.palette;
   const own = new Set(chapters);
   const N = chapters.length;
   const site = chaptersFor(P);
   const numberOf = (k: ChapterKey) => site.indexOf(k) + 1;
   const tex = (el: HTMLCanvasElement) => texture(el, env.renderer);
   const scene = new THREE.Scene();
-  const bg = texture(backdrop());
+  const bg = texture(backdrop(C));
   scene.background = bg;
   const camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 200);
 
@@ -376,7 +377,7 @@ export const createBook: WorldFactory = async (env, chapters) => {
 
   // The inside of the front cover carries the first chapter's words.
   const insideGeo = sheetGeometries().front;
-  const inside = new THREE.Mesh(insideGeo, new THREE.MeshLambertMaterial({ map: tex(leftPage(P, chapters[0], numberOf(chapters[0]))), side: THREE.BackSide }));
+  const inside = new THREE.Mesh(insideGeo, new THREE.MeshLambertMaterial({ map: tex(leftPage(P, C, chapters[0], numberOf(chapters[0]))), side: THREE.BackSide }));
   inside.receiveShadow = true;
   scene.add(inside);
   {
@@ -393,8 +394,8 @@ export const createBook: WorldFactory = async (env, chapters) => {
   const sheets = chapters.map((k, j) => {
     const { front, back } = sheetGeometries();
     const next = chapters[j + 1];
-    const f = new THREE.Mesh(front, new THREE.MeshLambertMaterial({ map: tex(rightPage(P, k, numberOf(k), env.land)), side: THREE.FrontSide }));
-    const b = new THREE.Mesh(back, new THREE.MeshLambertMaterial({ map: tex(next ? leftPage(P, next, numberOf(next)) : blank), side: THREE.BackSide }));
+    const f = new THREE.Mesh(front, new THREE.MeshLambertMaterial({ map: tex(rightPage(P, C, k, numberOf(k), env.land)), side: THREE.FrontSide }));
+    const b = new THREE.Mesh(back, new THREE.MeshLambertMaterial({ map: tex(next ? leftPage(P, C, next, numberOf(next)) : blank), side: THREE.BackSide }));
     f.castShadow = true; f.receiveShadow = b.receiveShadow = true;
     f.material.shadowSide = THREE.DoubleSide;
     scene.add(f, b);
@@ -402,7 +403,7 @@ export const createBook: WorldFactory = async (env, chapters) => {
   });
 
   // The scenes: each card hinged to its chapter's page.
-  const pops = scenes(P, own).map((it) => {
+  const pops = scenes(P, C, own).map((it) => {
     const g = new THREE.PlaneGeometry(it.w, it.h);
     g.translate(0, it.h / 2 - 0.012, 0);
     const m = new THREE.Mesh(g, new THREE.MeshLambertMaterial({ map: tex(it.pic), transparent: true, alphaTest: 0.5, side: THREE.DoubleSide }));

@@ -4,8 +4,9 @@
 import * as THREE from "three";
 import { yearText, type ChapterKey } from "./chapters.ts";
 import { NOW, placeViews, slots, yearRange, type Person, type Project } from "./person.ts";
-import { PALETTE as C, backdrop, canvas, grain, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
+import { backdrop, canvas, grain, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand, type Land } from "./land.ts";
+import type { Palette } from "./look.ts";
 import { equirect } from "./frame.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
 import { holding, type Anchor, type World, type WorldFactory, type WorldView } from "./world.ts";
@@ -91,7 +92,7 @@ const ORDER: Record<ChapterKey, (U: number, V: number, c: number, r: number) => 
 const printed = (w: number, h: number, draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void) =>
   canvas(w, h, (ctx) => { draw(ctx, w, h); grain(ctx, w, h, Math.round((w * h) / 150), w + h); });
 
-function cvPage(P: Person) {
+function cvPage(P: Person, C: Palette) {
   return printed(1024, 1448, (ctx, w) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, 1448);
     const m = 84;
@@ -118,7 +119,7 @@ function cvPage(P: Person) {
   });
 }
 
-function globeMap(land: Land) {
+function globeMap(land: Land, C: Palette) {
   return printed(2048, 1024, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     ctx.strokeStyle = "rgba(28,34,42,0.10)"; ctx.lineWidth = 2;
@@ -129,7 +130,7 @@ function globeMap(land: Land) {
   });
 }
 
-function diplomaPicture(P: Person) {
+function diplomaPicture(P: Person, C: Palette) {
   const s = P.study[0];
   return printed(1500, 1000, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
@@ -150,7 +151,7 @@ function diplomaPicture(P: Person) {
   });
 }
 
-function timeline(P: Person) {
+function timeline(P: Person, C: Palette) {
   const [y0, y1] = yearRange(P);
   return printed(4096, 532, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
@@ -172,7 +173,7 @@ function timeline(P: Person) {
   });
 }
 
-function leafletPicture(P: Person) {
+function leafletPicture(P: Person, C: Palette) {
   return printed(2048, 1024, (ctx, w, h) => {
     const pw = w / 4;
     const { shown, more } = slots(P.skills, 4);
@@ -196,7 +197,7 @@ function leafletPicture(P: Person) {
   });
 }
 
-function wallPicture(P: Person) {
+function wallPicture(P: Person, C: Palette) {
   return printed(2048, 1024, (ctx, w, h) => {
     const cw = w / 3, ch = h / 2;
     const { shown, more } = slots(P.projects, 6);
@@ -204,7 +205,7 @@ function wallPicture(P: Person) {
       const x = (i % 3) * cw, y = Math.floor(i / 3) * ch;
       ctx.fillStyle = C.paper; ctx.fillRect(x, y, cw, ch);
       if (!p) return;
-      miniPicture(ctx, p.kind, x + 28, y + 28, cw - 56, ch * 0.5, i + 3);
+      miniPicture(ctx, C, p.kind, x + 28, y + 28, cw - 56, ch * 0.5, i + 3);
       ctx.fillStyle = C.ink; ctx.font = serif(40); ctx.fillText(p.title, x + 30, y + ch * 0.5 + 92);
       ctx.fillStyle = C.muted; ctx.font = sans(24); wrap(ctx, p.line, x + 30, y + ch * 0.5 + 134, cw - 60, 30, 2);
       ctx.fillStyle = C.amber; ctx.font = sans(22, 600); ctx.fillText(`${p.place.toUpperCase()}  ${p.year}`, x + 30, y + ch - 30);
@@ -213,7 +214,7 @@ function wallPicture(P: Person) {
   });
 }
 
-function quotePicture(P: Person) {
+function quotePicture(P: Person, C: Palette) {
   return printed(2048, 1448, (ctx, w, h) => {
     const cw = w / 3;
     const { shown, more } = slots(P.quotes, 3);
@@ -231,7 +232,7 @@ function quotePicture(P: Person) {
   });
 }
 
-function contactPage(P: Person) {
+function contactPage(P: Person, C: Palette) {
   return printed(1024, 1448, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     const m = 84;
@@ -247,9 +248,10 @@ function contactPage(P: Person) {
   });
 }
 
-const PICTURES: Record<ChapterKey, (P: Person, land: Land) => HTMLCanvasElement> = {
-  hello: cvPage, from: (P, land) => globeMap(land), studied: diplomaPicture, worked: timeline,
-  good: leafletPicture, made: wallPicture, say: quotePicture, contact: contactPage,
+const PICTURES: Record<ChapterKey, (P: Person, land: Land, C: Palette) => HTMLCanvasElement> = {
+  hello: (P, land, C) => cvPage(P, C), from: (P, land, C) => globeMap(land, C), studied: (P, land, C) => diplomaPicture(P, C),
+  worked: (P, land, C) => timeline(P, C), good: (P, land, C) => leafletPicture(P, C), made: (P, land, C) => wallPicture(P, C),
+  say: (P, land, C) => quotePicture(P, C), contact: (P, land, C) => contactPage(P, C),
 };
 
 // ---------- The sheet ----------
@@ -301,15 +303,15 @@ type Tile = THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial> & {
 };
 
 export const createSheet: WorldFactory = async (env, chapters) => {
-  const P = env.person;
+  const P = env.person, C = env.palette;
   const own = new Set(chapters);
   const scene = new THREE.Scene();
-  const bg = texture(backdrop());
+  const bg = texture(backdrop(C));
   scene.background = bg;
   const camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 200);
 
   const tex: Partial<Record<ChapterKey, THREE.Texture>> = {};
-  for (const k of chapters) tex[k] = texture(PICTURES[k](P, env.land), env.renderer);
+  for (const k of chapters) tex[k] = texture(PICTURES[k](P, env.land, C), env.renderer);
   const first = tex[chapters[0]]!;
   const mat = new THREE.ShaderMaterial({
     vertexShader: VERT, fragmentShader: FRAG, side: THREE.DoubleSide,

@@ -2,20 +2,7 @@
 // share. Browser only.
 import * as THREE from "three";
 
-export const PALETTE = {
-  bg: "#0f1318",
-  paper: "#f2ede2",
-  paperDark: "#e3dccd",
-  card: "#fbf7ee",
-  ink: "#1c222a",
-  muted: "#6d7782",
-  amber: "#e9a23b",
-  teal: "#3fa796",
-  rose: "#d8665a",
-  blue: "#4c7fd1",
-  line: "#c9c1b0",
-};
-const C = PALETTE;
+import { groundTones, type Palette } from "./look.ts";
 
 /** System fonts, so a site builds with no remote fonts. */
 export const serif = (size: number, weight = 600, style = "") => `${style} ${weight} ${size}px Georgia, "Times New Roman", serif`;
@@ -69,7 +56,7 @@ export function rrect(ctx: CanvasRenderingContext2D, x: number, y: number, w: nu
 export const rand = (seed: number, i: number) => { const v = Math.sin(seed * 91.7 + i * 12.9898) * 43758.5453; return v - Math.floor(v); };
 
 /** A small drawing that stands for a project, by its kind. */
-export function miniPicture(ctx: CanvasRenderingContext2D, kind: string, x: number, y: number, w: number, h: number, seed = 1) {
+export function miniPicture(ctx: CanvasRenderingContext2D, C: Palette, kind: string, x: number, y: number, w: number, h: number, seed = 1) {
   ctx.save();
   ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
   ctx.fillStyle = "#e8e2d4"; ctx.fillRect(x, y, w, h);
@@ -142,7 +129,7 @@ export function grain(ctx: CanvasRenderingContext2D, w: number, h: number, n = 9
 export type DieCut = HTMLCanvasElement & { edge: number };
 
 /** A cut-out with a white card edge round it, as if die-cut from printed card. */
-export function dieCut(src: HTMLCanvasElement, r = 12): DieCut {
+export function dieCut(src: HTMLCanvasElement, C: Palette, r = 12): DieCut {
   const sil = canvas(src.width, src.height, (c) => {
     c.drawImage(src, 0, 0);
     c.globalCompositeOperation = "source-in";
@@ -158,7 +145,7 @@ export function dieCut(src: HTMLCanvasElement, r = 12): DieCut {
 }
 
 /** A flat label that always faces the camera. */
-export function label(text: string, { size = 40, color = C.ink, bg = null as string | null, font = "", pad = 14, height = 0.22 } = {}): THREE.Sprite {
+export function label(text: string, { size = 40, color = "#ffffff", bg = null as string | null, font = "", pad = 14, height = 0.22 } = {}): THREE.Sprite {
   const f = font || sans(size, 600);
   const probe = document.createElement("canvas").getContext("2d")!;
   probe.font = f;
@@ -172,11 +159,12 @@ export function label(text: string, { size = 40, color = C.ink, bg = null as str
   return sprite;
 }
 
-/** The examples' dark backdrop, as a picture behind a world. */
-export function backdrop(): HTMLCanvasElement {
+/** The backdrop behind a world, darker towards its edges, in the look's ground. */
+export function backdrop(C: Palette): HTMLCanvasElement {
+  const t = groundTones(C);
   return canvas(1024, 640, (ctx, w, h) => {
     const g = ctx.createRadialGradient(w / 2, h * 0.38, 0, w / 2, h * 0.38, w * 0.62);
-    g.addColorStop(0, "#1d252e"); g.addColorStop(0.55, "#10151b"); g.addColorStop(1, "#0a0d11");
+    g.addColorStop(0, t.centre); g.addColorStop(0.55, t.middle); g.addColorStop(1, t.edge);
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
   });
 }

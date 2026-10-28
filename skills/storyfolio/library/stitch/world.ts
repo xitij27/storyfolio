@@ -4,8 +4,9 @@ import type { ChapterKey } from "./chapters.ts";
 import type { WorldId } from "./mix.ts";
 import type { Person, Project } from "./person.ts";
 import type { Land } from "./land.ts";
+import type { Palette } from "./look.ts";
 
-export type WorldEnv = { person: Person; renderer: THREE.WebGLRenderer; land: Land; narrow: () => boolean };
+export type WorldEnv = { person: Person; palette: Palette; renderer: THREE.WebGLRenderer; land: Land; narrow: () => boolean };
 
 /** Where the story stands inside one world: chapter keys, the eased move t, its raw share, the hold's share and the clock. */
 export type WorldView = { from: ChapterKey; to: ChapterKey; t: number; raw: number; local: number; time: number };

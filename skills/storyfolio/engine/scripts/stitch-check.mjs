@@ -6,13 +6,14 @@
   fails on a page error, a failed request or a blank picture.
 
     node scripts/stitch-check.mjs --url http://127.0.0.1:3000 \
-      --mix sheet,map,book,book,sheet,sheet,map,map [--person noa] \
+      --mix sheet,map,book,book,sheet,sheet,map,map [--person noa] [--look daylight] \
       [--size 1440x900] [--out checks/stitch] [--points] [--words]
 
   Options
     --url=URL       the site's address (required)
     --mix=TEXT      eight world ids in chapter order (required)
     --person=KEY    a sample person, noa or amara; default the site's own
+    --look=ID       a look, night, daylight or blueprint; default the page's own
     --size=WxH      viewport, default 1440x900
     --out=DIR       where report.json and the PNGs go, default checks/stitch
     --points        also shoot the first move between two worlds at raw
@@ -71,6 +72,7 @@ page.on("response", (r) => { if (r.status() >= 400) problems.push(`HTTP ${r.stat
 
 const query = new URLSearchParams({ mix: String(options.mix) });
 if (options.person && options.person !== true) query.set("person", String(options.person));
+if (options.look && options.look !== true) query.set("look", String(options.look));
 const address = `${String(options.url).replace(/\/$/, "")}/preview?${query}`;
 const report = { address, size: `${width}x${height}`, shots: [], problems };
 

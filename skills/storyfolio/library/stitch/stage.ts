@@ -7,6 +7,7 @@ import { chaptersFor, type Person, type Project } from "./person.ts";
 import { chaptersOf, worldsOf, type Mix, type WorldId } from "./mix.ts";
 import { follow, stateAt, totalUnits, unitPx, type ScrollState } from "./scroll.ts";
 import { loadLand } from "./land.ts";
+import { LOOKS, type Palette } from "./look.ts";
 import { holding, type World, type WorldFactory } from "./world.ts";
 import { diveSteps, fillPose, windowType } from "./dive.ts";
 import { createSheet } from "./sheet.ts";
@@ -18,6 +19,8 @@ const FACTORIES: Partial<Record<WorldId, WorldFactory>> = { sheet: createSheet, 
 export type StitchOptions = {
   person: Person;
   mix: Mix;
+  /** The look's colours; night when not given. */
+  palette?: Palette;
   /** The element whose height is the story's scrolling; made after the canvas when not given. */
   spacer?: HTMLElement;
   onState?: (st: ScrollState, keys: ChapterKey[]) => void;
@@ -64,7 +67,7 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
   const spacer = spacerOf(canvas, o);
   const narrow = () => canvas.clientWidth / Math.max(1, canvas.clientHeight) < 0.9;
   const land = await loadLand();
-  const env = { person: o.person, renderer, land, narrow };
+  const env = { person: o.person, palette: o.palette ?? LOOKS.night, renderer, land, narrow };
 
   const worlds = new Map<WorldId, World>();
   for (const id of worldsOf(o.mix, keys)) worlds.set(id, await FACTORIES[id]!(env, chaptersOf(o.mix, keys, id)));

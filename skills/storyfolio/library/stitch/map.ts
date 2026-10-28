@@ -4,17 +4,17 @@
 import * as THREE from "three";
 import { CHAPTERS, yearText, type ChapterKey } from "./chapters.ts";
 import { NOW, type Person, type Project } from "./person.ts";
-import { PALETTE as C, canvas, dieCut, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
+import { canvas, dieCut, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand } from "./land.ts";
+import { groundTones, rgba, type Palette } from "./look.ts";
 import { mapFrame } from "./frame.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
 import { holding, type Anchor, type World, type WorldFactory, type WorldView } from "./world.ts";
 
 const FOV = 38;
-const GROUND = "#151c23";
 const order = (k: ChapterKey) => CHAPTERS.findIndex((c) => c.key === k);
 
-function card(w: number, h: number, draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void, radius = 28) {
+function card(C: Palette, w: number, h: number, draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void, radius = 28) {
   return canvas(w, h, (ctx) => {
     ctx.fillStyle = C.paper; rrect(ctx, 0, 0, w, h, radius); ctx.fill();
     draw(ctx, w, h);
@@ -29,11 +29,11 @@ type Shot = {
 };
 
 export const createMap: WorldFactory = async (env, chapters) => {
-  const P: Person = env.person;
+  const P: Person = env.person, C = env.palette, tones = groundTones(C);
   const own = new Set(chapters);
   const tex = (el: HTMLCanvasElement) => texture(el, env.renderer);
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(GROUND);
+  scene.background = new THREE.Color(tones.map);
   const camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 200);
 
   // ---------- The map ----------
@@ -54,14 +54,14 @@ export const createMap: WorldFactory = async (env, chapters) => {
       const v = at(lat, lng);
       return [((v.x + padX) / mapW) * w, ((v.z + padZ) / mapD) * h];
     };
-    ctx.fillStyle = GROUND; ctx.fillRect(0, 0, w, h);
-    ctx.strokeStyle = "rgba(255,255,255,0.05)"; ctx.lineWidth = 2;
+    ctx.fillStyle = tones.map; ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = tones.grid; ctx.lineWidth = 2;
     for (let lng = -180; lng <= 180; lng += 5) { const [x] = project(lng, f.lat0); ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
     for (let lat = -80; lat <= 80; lat += 5) { const [, y] = project(f.lng0, lat); ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
-    dotLand(ctx, env.land, project, w, h, 11, 3.2, "rgba(150,178,186,0.55)");
+    dotLand(ctx, env.land, project, w, h, 11, 3.2, tones.land);
     // Fade the edges into the ground's own colour.
     const g = ctx.createRadialGradient(w / 2, h / 2, Math.min(w, h) * 0.3, w / 2, h / 2, Math.max(w, h) * 0.62);
-    g.addColorStop(0, "rgba(21,28,35,0)"); g.addColorStop(1, "rgba(21,28,35,1)");
+    g.addColorStop(0, rgba(tones.map, 0)); g.addColorStop(1, rgba(tones.map, 1));
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
   });
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(mapW, mapD), new THREE.MeshBasicMaterial({ map: tex(mapPic), depthWrite: false }));
@@ -119,7 +119,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
     const hinge = new THREE.Group();
     hinge.position.copy(pos);
     // Cut from printed card: a white edge round it, and the card's own shape in its shadow.
-    const cut = dieCut(pic, 14);
+    const cut = dieCut(pic, C, 14);
     const cw = (w * cut.width) / pic.width, ch = (h * cut.height) / pic.height;
     const mesh = new THREE.Mesh(new THREE.PlaneGeometry(cw, ch), new THREE.MeshBasicMaterial({ map: tex(cut), transparent: true, alphaTest: 0.5, side: THREE.DoubleSide }));
     mesh.position.y = ch / 2 - (h * 14) / pic.height;
@@ -134,7 +134,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
 
   // Hello: a sign where they live now.
   const signAt = homeV.clone().add(new THREE.Vector3(-1.0, 0, -0.3));
-  if (own.has("hello")) standing(card(1000, 760, (ctx, w) => {
+  if (own.has("hello")) standing(card(C, 1000, 760, (ctx, w) => {
     ctx.fillStyle = C.amber; ctx.font = sans(34, 600); ctx.fillText("HELLO, I'M", 64, 120);
     ctx.fillStyle = C.ink; ctx.font = serif(92); wrap(ctx, P.name, 64, 230, w - 128, 100, 2);
     ctx.fillStyle = C.muted; ctx.font = sans(36, 600); ctx.fillText(P.role.toUpperCase(), 64, 470);
@@ -145,7 +145,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
   // Studied: the diploma at the school.
   const s0 = P.study[0];
   const diplomaAt = (s0 ? where(s0.place) : homeV.clone()).add(new THREE.Vector3(-0.75, 0, 0.1));
-  if (own.has("studied") && s0) standing(card(1000, 700, (ctx, w) => {
+  if (own.has("studied") && s0) standing(card(C, 1000, 700, (ctx, w) => {
     ctx.strokeStyle = C.amber; ctx.lineWidth = 6; ctx.strokeRect(30, 30, w - 60, 640);
     ctx.textAlign = "center";
     ctx.fillStyle = C.muted; ctx.font = sans(30, 600); ctx.fillText(`${s0.place.toUpperCase()}  ·  ${s0.from} TO ${s0.to}`, w / 2, 120);
@@ -172,7 +172,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
     body.position.y = hgt / 2;
     const fh = Math.min(0.62, hgt - 0.04);
     const face = new THREE.Mesh(new THREE.PlaneGeometry(0.62, fh), new THREE.MeshBasicMaterial({
-      map: tex(card(620, 620, (ctx, cw) => {
+      map: tex(card(C, 620, 620, (ctx, cw) => {
         ctx.fillStyle = C.ink; ctx.font = serif(64); wrap(ctx, w.org, 40, 100, cw - 80, 70, 2);
         ctx.fillStyle = C.muted; ctx.font = sans(40); wrap(ctx, w.role, 40, 300, cw - 80, 48, 2);
         ctx.fillStyle = C.amber; ctx.font = sans(44, 600); ctx.fillText(yearText(w), 40, 540);
@@ -201,8 +201,8 @@ export const createMap: WorldFactory = async (env, chapters) => {
   const madeAt: Record<string, number> = {};
   const plates = own.has("made") ? P.projects.map((p, i) => {
     const n = (madeAt[p.place] = (madeAt[p.place] ?? 0) + 1) - 1;
-    const pic = card(800, 640, (ctx, w, h) => {
-      miniPicture(ctx, p.kind, 28, 28, w - 56, 330, i + 3);
+    const pic = card(C, 800, 640, (ctx, w, h) => {
+      miniPicture(ctx, C, p.kind, 28, 28, w - 56, 330, i + 3);
       ctx.fillStyle = C.ink; ctx.font = serif(52); ctx.fillText(p.title, 34, 440);
       ctx.fillStyle = C.muted; ctx.font = sans(30); wrap(ctx, p.line, 34, 492, w - 68, 36, 2);
       ctx.fillStyle = C.amber; ctx.font = sans(28, 600); ctx.fillText(`${p.year}`, 34, h - 30);
@@ -222,7 +222,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
       ctx.fillStyle = C.muted; ctx.font = sans(26); ctx.fillText(q.from, 50 + ctx.measureText(q.who).width * 1.25 + 20, Math.min(y + 30, 430));
     });
     const base = where(q.place).add(new THREE.Vector3(-0.9 + n * 1.85, 2.9 + n * 0.35, -0.3 - n * 0.2));
-    const cut = dieCut(pic, 16);
+    const cut = dieCut(pic, C, 16);
     const m = new THREE.Mesh(new THREE.PlaneGeometry((1.75 * cut.width) / pic.width, (0.89 * cut.height) / pic.height),
       new THREE.MeshBasicMaterial({ map: tex(cut), transparent: true, alphaTest: 0.5, side: THREE.DoubleSide }));
     m.castShadow = true;
@@ -233,7 +233,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
 
   // Contact: back home, a card to write to them.
   const contactAt = homeV.clone().add(new THREE.Vector3(1.55, 0, -0.25));
-  if (own.has("contact")) standing(card(1000, 700, (ctx, w) => {
+  if (own.has("contact")) standing(card(C, 1000, 700, (ctx, w) => {
     ctx.fillStyle = C.amber; ctx.font = sans(34, 600); ctx.fillText("GET IN TOUCH", 64, 120);
     ctx.fillStyle = C.ink; ctx.font = serif(80); ctx.fillText(`Write to ${P.first}`, 64, 240);
     ctx.font = serif(48, 400); ctx.fillText(P.contact.email, 64, 340);
