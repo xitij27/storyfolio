@@ -105,6 +105,22 @@ typecheck and the build pass.
   frame-rate reading; the author approved the engine on a real phone, and
   the stitched story has not been seen there.
 
+## Review
+
+Root reviewed the whole change against the plan and its review focus
+(self-review: the session's instructions start no helper agents unless the
+author asks). One fix was made, test first: the dive's window was drawn
+into a half-float picture with no fallback, which a phone GPU without
+`EXT_color_buffer_float` or `EXT_color_buffer_half_float` cannot draw into,
+so every dive there would show a dark window; `windowType` in `dive.ts` now
+falls back to plain bytes, and the all-dive mix passes again. Left as
+minor: quick mixer clicks briefly start a second renderer on the same
+canvas while the first is still loading (two clicks 80 ms apart settled
+on the right picture, no glitch seen); `window.__stitch`, the check's hook,
+is present in every site; the project window does not move focus into
+itself; the engine's full browser matrix (`npm run check`) was not run,
+because it starts playwright's own Chromium 1248, which this machine lacks.
+
 ## How to make the shots again
 
 From a scaffolded copy with `npm ci` done (`npm run browsers` there wants

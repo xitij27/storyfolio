@@ -19,3 +19,8 @@ export function fillPose(anchor: { position: V3; normal: V3 }, fovDeg: number, h
   const d = fillDistance(fovDeg, height);
   return [x + (a / len) * d, y + (b / len) * d, z + (c / len) * d];
 }
+
+/** The window's picture: half float where the GPU can draw into it, which keeps dark scenes smooth; plain bytes elsewhere. */
+export function windowType(has: (extension: string) => boolean): "half" | "byte" {
+  return has("EXT_color_buffer_float") || has("EXT_color_buffer_half_float") ? "half" : "byte";
+}

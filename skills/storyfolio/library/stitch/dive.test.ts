@@ -26,3 +26,10 @@ test("the fill pose stands on the anchor's normal at the fill distance", () => {
   const up = fillPose({ position: [0, 0, 0], normal: [0, 2, 0] }, 35, 1);
   assert.ok(Math.abs(up[1] - fillDistance(35, 1)) < 1e-9, "the normal is made unit length");
 });
+
+test("the window's picture is half float only where the GPU can draw into it", async () => {
+  const { windowType } = await import("./dive.ts");
+  assert.equal(windowType((x) => x === "EXT_color_buffer_float"), "half");
+  assert.equal(windowType((x) => x === "EXT_color_buffer_half_float"), "half");
+  assert.equal(windowType(() => false), "byte");
+});

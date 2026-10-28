@@ -8,7 +8,7 @@ import { chaptersOf, worldsOf, type Mix, type WorldId } from "./mix.ts";
 import { follow, stateAt, totalUnits, unitPx, type ScrollState } from "./scroll.ts";
 import { loadLand } from "./land.ts";
 import { holding, type World, type WorldFactory } from "./world.ts";
-import { diveSteps, fillPose } from "./dive.ts";
+import { diveSteps, fillPose, windowType } from "./dive.ts";
 import { createSheet } from "./sheet.ts";
 import { createMap } from "./map.ts";
 import { createBook } from "./book.ts";
@@ -76,7 +76,8 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
 
   // The window a dive opens: the next world drawn into a picture the size of
   // the screen, on a plane in the last world that the camera flies into.
-  const view = new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: 4 });
+  const half = windowType((x) => renderer.extensions.has(x)) === "half";
+  const view = new THREE.WebGLRenderTarget(1, 1, { type: half ? THREE.HalfFloatType : THREE.UnsignedByteType, samples: 4 });
   const window_ = new THREE.Mesh(
     new THREE.PlaneGeometry(1, 1),
     new THREE.MeshBasicMaterial({ map: view.texture, transparent: true, depthTest: false, depthWrite: false, toneMapped: false }),
