@@ -110,3 +110,16 @@ with its calls marked, and asked the author to approve it or say what to
 change. The author answered, verbatim:
 
 > Yes, this is right.
+
+## 28 October: plan 1 goes ahead
+
+Root wrote [plan 1 of 3](../superpowers/plans/2026-10-27-stitch-pieces-and-gallery.md)
+(the pieces, the dive between worlds, the preview page and the gallery) and
+left it for the author's review. In a new session on 28 October the author
+wrote, verbatim:
+
+> continue with the development
+
+Root read this as the go-ahead for plan 1 and began executing it, task by
+task, on `main`. Publishing the gallery (Task 10) still waits for the
+author's word to push, and no paid run is made.
