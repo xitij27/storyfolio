@@ -70,3 +70,20 @@ Stage 3 of 4 is still open. The transitions work is how it now closes.
 - Go ahead with plan 2?
 - Which of the comparisons and Stage 1 closers in item 6 to run, and
   which to defer.
+
+## The author's answer
+
+The author answered, verbatim:
+
+> Yes, I pushed to main. Let us proceed with the next step.
+
+So the author pushed `main` at `083a24a0` themselves, and the deploy that
+followed (run 40628537713) is the gallery's publication. Root then made
+plan 1's Task 10 Step 3: `scripts/gallery-check.mjs` against
+https://xitij27.github.io/storyfolio at 1440x900 and 390x844 passes with
+no problems ([report and contact sheets](../../evals/engine/stitch-1/live-check/)).
+Looking at the phone frames, root found a weak spot the study had not
+listed: the book on a phone shows the right page whole and cuts the left
+page, whose words run off the screen's edge in every chapter. The approved
+example does the same. It joins item 3's list. Root then went on to item 2,
+plan 2.
