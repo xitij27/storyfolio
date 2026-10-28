@@ -91,3 +91,15 @@ show the left page whole at the start of the hold, then the camera panning
 to the right page's picture, as plan 1 meant ("the book shows its words,
 then pans to the scene"). The checkers shoot at the hold's middle, which is
 mid-pan. No weak spot is added. Root then went on to item 2, plan 2.
+
+## Plan 2 goes ahead
+
+Root wrote [plan 2](../superpowers/plans/2026-10-28-the-site-from-the-pieces.md),
+asked the author whether it captured what they wanted, and recommended that
+root build it in the same session with one review at the end. The author
+answered, verbatim:
+
+> okay what next
+
+Root read this as yes to the plan and to the recommended way of building
+it, and began executing it task by task on `main`. No run and no push.
