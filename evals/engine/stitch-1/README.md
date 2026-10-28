@@ -8,6 +8,23 @@ executed on the author's "continue with the development"
 No agent run and no paid run: this is the engine and library work the
 person test will use. Nothing is published yet.
 
+## Change after the author saw it
+
+Later on 28 October the author said: "No need to make the mixer. The AI
+ahent will mix stuff themselves"
+([record](../../../docs/history/2026-10-27-transition-examples-request.md#28-october-later-no-mixer)).
+The mixer page (`/transitions/mix/`) and the index's "Mix your own"
+section were removed; each chapter's pictures now open that whole example
+at that chapter (`?c=<chapter>`, through a new `start` on `StitchedStory`
+and an instant `goTo`). Making that work found that a page whose CSS
+scrolls smoothly turned the jump into a smooth scroll that stopped near the
+top; the stage now asks for "instant". `gallery-check.mjs` was rewritten
+first and failed (the index still linked to a mixer; no piece link opened
+at its chapter), then passed at both sizes. The sections below describe the
+gallery as first built, with the mixer, and its checks then;
+[gallery-desktop.jpg](frames/gallery-desktop.jpg) and
+[gallery-phone.jpg](frames/gallery-phone.jpg) now show it without.
+
 ## What was built
 
 The three examples of [transitions 2](../transitions-2/README.md) (one

@@ -123,3 +123,18 @@ wrote, verbatim:
 Root read this as the go-ahead for plan 1 and began executing it, task by
 task, on `main`. Publishing the gallery (Task 10) still waits for the
 author's word to push, and no paid run is made.
+
+## 28 October (later): no mixer
+
+Root reported plan 1 built (the worlds, the dive between them, `/preview`,
+and a gallery with a mixer whose copyable line a person would send to the
+agent) and asked whether to push `main` so the gallery goes live. The
+author answered, verbatim:
+
+> No need to make the mixer. The AI ahent will mix stuff themselves
+
+So the gallery is for looking at the pieces, and the agent chooses and
+writes the mix itself; the person says in words what they would change.
+Root removes the mixer page and the index's "Mix your own" section, and
+each chapter's pictures open that whole example at that chapter. The
+question of pushing was not answered and is asked again.

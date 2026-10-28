@@ -1,12 +1,13 @@
 "use client";
-/* A stitched story in the gallery: a bar to go back, switch person and hide the words, over the story itself. */
+/* A whole example in the gallery: a bar to go back, switch person and hide the words, over the story itself. */
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 
 import { StitchedStory } from "@/stitch/react";
 import { SAMPLE_PEOPLE } from "@/stitch/people";
 import type { Mix } from "@/stitch/mix";
+import { CHAPTERS } from "@/stitch/chapters";
 
 export type PersonKey = keyof typeof SAMPLE_PEOPLE;
 const KEYS = Object.keys(SAMPLE_PEOPLE) as PersonKey[];
@@ -26,8 +27,8 @@ export function useQuery() {
   };
 }
 
-export function GalleryBar({ title, how, showWords, onWords, children }: {
-  title: string; how: string; showWords: boolean; onWords: (show: boolean) => void; children?: ReactNode;
+export function GalleryBar({ title, how, showWords, onWords }: {
+  title: string; how: string; showWords: boolean; onWords: (show: boolean) => void;
 }) {
   const person = usePersonKey();
   const setQuery = useQuery();
@@ -62,19 +63,20 @@ export function GalleryBar({ title, how, showWords, onWords, children }: {
           </button>
         </div>
       </div>
-      {children}
     </header>
   );
 }
 
-/** The bar and the story, for a fixed mix or one the page chooses. */
-export function GalleryStory({ title, how, mix, children }: { title: string; how: string; mix: Mix; children?: ReactNode }) {
+/** The bar and the story. `?c=<chapter>` opens it at that chapter, as each piece's picture on the index does. */
+export function GalleryStory({ title, how, mix }: { title: string; how: string; mix: Mix }) {
   const person = usePersonKey();
+  const asked = useSearchParams().get("c");
+  const start = CHAPTERS.find((c) => c.key === asked)?.key;
   const [showWords, setShowWords] = useState(true);
   return (
     <>
-      <GalleryBar title={title} how={how} showWords={showWords} onWords={setShowWords}>{children}</GalleryBar>
-      <StitchedStory person={SAMPLE_PEOPLE[person]} mix={mix} showWords={showWords} />
+      <GalleryBar title={title} how={how} showWords={showWords} onWords={setShowWords} />
+      <StitchedStory person={SAMPLE_PEOPLE[person]} mix={mix} showWords={showWords} start={start} />
     </>
   );
 }

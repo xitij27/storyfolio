@@ -37,7 +37,7 @@ for (const world of ["sheet", "map", "book"]) {
   await page.addStyleTag({ content: "header { display: none !important } .stitch .cap, .stitch .rail, .stitch .hint, .stitch .cta { display: none !important }" });
   const keys = await page.evaluate(() => window.__stitch.keys);
   for (let k = 0; k < keys.length; k++) {
-    await page.evaluate((s) => window.scrollTo(0, window.__stitch.top() + s * window.__stitch.unit()), k + 0.2);
+    await page.evaluate((s) => window.scrollTo({ top: window.__stitch.top() + s * window.__stitch.unit(), behavior: "instant" }), k + 0.2);
     await page.waitForTimeout(500);
     await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
     await page.screenshot({ path: path.join(out, `${world}-${keys[k]}.jpg`), type: "jpeg", quality: 82 });

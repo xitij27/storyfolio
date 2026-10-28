@@ -23,7 +23,7 @@ export type StitchOptions = {
   onState?: (st: ScrollState, keys: ChapterKey[]) => void;
   onProject?: (p: Project) => void;
 };
-export type Stitch = { dispose(): void; goTo(index: number): void };
+export type Stitch = { dispose(): void; goTo(index: number, instant?: boolean): void };
 
 /** What scripts/stitch-check.mjs reads. One story per page. */
 type Probe = {
@@ -193,8 +193,10 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
   probe.ready = true;
 
   return {
-    goTo(index: number) {
-      window.scrollTo({ top: top() + index * unit(), behavior: motion.matches ? "auto" : "smooth" });
+    goTo(index: number, instant = false) {
+      // "instant", not "auto": a page whose CSS scrolls smoothly would turn "auto" into a smooth scroll.
+      window.scrollTo({ top: top() + index * unit(), behavior: instant || motion.matches ? "instant" : "smooth" });
+      if (instant) shown = Math.max(0, target());
     },
     dispose() {
       cancelAnimationFrame(raf);

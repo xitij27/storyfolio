@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { asset } from "@/content/sample";
-import { PIECES, WORLDS, mixWith, picture } from "@/components/transitions/pieces";
+import { PIECES, WORLDS, picture } from "@/components/transitions/pieces";
 import { WAYS } from "@/components/transitions/ways";
 import { CHAPTERS } from "@/stitch/chapters";
 
 export const metadata: Metadata = {
   title: "Transitions",
-  description: "Three worlds a portfolio can be told in, every chapter of each, and a mixer to stitch your own from them.",
+  description: "Three worlds a portfolio can be told in, and every chapter of each.",
 };
 
 const card =
@@ -26,7 +26,8 @@ export default function Transitions() {
         <p className="mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
           A portfolio told in eight chapters, in three worlds: a sheet of paper, a map, a pop-up book. Every picture and
           word comes from the person&apos;s details, so any of them fits anyone with their own words and places. Watch
-          each one whole, try a world in a single chapter, or mix your own. The two people are made up.
+          each one whole, or open any chapter&apos;s piece. The agent building a site chooses pieces from all three to
+          suit the person, and shows the mix moving; say what you would change. The two people are made up.
         </p>
       </header>
 
@@ -49,28 +50,16 @@ export default function Transitions() {
         </ul>
       </section>
 
-      <section aria-labelledby="mix" className="border-t border-border/60 py-12">
-        <h2 id="mix" className="font-heading text-2xl font-bold">Mix your own</h2>
-        <p className="mt-2 max-w-2xl text-pretty text-muted-foreground">
-          Choose the world for each chapter and watch the whole site move. Two chapters in different worlds join by the
-          camera diving into a window that holds the next one. The mixer gives you one line to send to the agent
-          building your site.
-        </p>
-        <Link href="/transitions/mix/" className="mt-6 inline-flex h-11 items-center rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground hover:bg-primary/85">
-          Open the mixer
-        </Link>
-      </section>
-
       <section aria-labelledby="pieces" className="border-t border-border/60 py-12">
         <h2 id="pieces" className="font-heading text-2xl font-bold">Chapter by chapter</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Each world&apos;s piece for each chapter. Open one to see it in a site, with the sheet everywhere else.</p>
+        <p className="mt-2 text-sm text-muted-foreground">Each world&apos;s piece for each chapter. Open one to see it in its example, at that chapter.</p>
         {CHAPTERS.map((c, i) => (
           <div key={c.key} className="mt-10">
             <h3 className="font-heading text-lg font-semibold"><span className="mr-2 font-mono text-sm text-brand">{i + 1}</span>{c.title}</h3>
             <ul className="mt-3 grid gap-3 sm:grid-cols-3">
               {WORLDS.map((w) => (
                 <li key={w.id}>
-                  <Link href={`/transitions/mix/?m=${mixWith(w.id, c.key)}`} className={card}>
+                  <Link href={`/transitions/whole/${w.id}/?c=${c.key}`} className={card}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={asset(picture(w.id, c.key))} width={960} height={600} alt={`${w.name}: ${PIECES[w.id][c.key]}`} loading="lazy" className="aspect-[8/5] w-full object-cover" />
                     <span className="px-4 py-3 text-sm">

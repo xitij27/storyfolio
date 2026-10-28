@@ -188,3 +188,15 @@ answer.
   fixture's fixed answer at stop 2 swaps one piece for another from the
   gallery, so that path is tried (root's call).
 - The author's review, on desktop and a phone, decides.
+
+## Amendment, 28 October 2026
+
+Plan 1 built a mixer in the gallery: a world for each chapter and a line
+to copy and send to the agent. The author, seeing it reported: "No need to
+make the mixer. The AI ahent will mix stuff themselves"
+([record](../../history/2026-10-27-transition-examples-request.md#28-october-later-no-mixer)).
+So the gallery shows the whole examples and each chapter's pieces, each
+piece opening its example at that chapter; the agent chooses and writes the
+mix, and the person says in words what to change after seeing it moving.
+The gallery no longer shows a dive between two worlds; the person first
+sees one in the agent's preview.

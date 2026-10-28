@@ -93,7 +93,7 @@ if (!options.words) await page.evaluate(() => document.querySelector(".stitch")?
 const { keys } = await page.evaluate(() => ({ keys: window.__stitch.keys }));
 
 async function shoot(name, at) {
-  await page.evaluate((s) => window.scrollTo(0, window.__stitch.top() + s * window.__stitch.unit()), at);
+  await page.evaluate((s) => window.scrollTo({ top: window.__stitch.top() + s * window.__stitch.unit(), behavior: "instant" }), at);
   await page.waitForTimeout(settle);
   await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
   const sample = await page.evaluate(() => window.__stitch.sample());

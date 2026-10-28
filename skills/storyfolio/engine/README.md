@@ -174,10 +174,10 @@ written for a person.
   The supplied one is a made-up placeholder: replace it with the confirmed
   facts. A chapter with nothing in it (no study, no quotes) is left out and
   its neighbours join.
-- `content/mix.ts` is the mix, one world per chapter in chapter order. The
-  gallery's mixer writes it as one line, such as
-  `map,map,book,book,sheet,sheet,book,map`; `parseMix` in `stitch/mix.ts`
-  reads it.
+- `content/mix.ts` is the mix, one world per chapter in chapter order,
+  chosen by the agent to suit the person from the pieces in the library's
+  gallery. As one line it reads like `map,map,book,book,sheet,sheet,book,map`
+  (`parseMix` and `formatMix` in `stitch/mix.ts`).
 - `/preview` shows the story from those two files. `?mix=<line>` tries
   another mix and `?person=noa` or `?person=amara` a sample person without
   editing anything.

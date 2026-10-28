@@ -1,6 +1,6 @@
 /* The three worlds of the transitions gallery, and the piece each one gives every chapter. */
 import type { ChapterKey } from "@/stitch/chapters";
-import { WHOLE, formatMix, type Mix, type WorldId } from "@/stitch/mix";
+import type { WorldId } from "@/stitch/mix";
 
 export const WORLDS: readonly { id: WorldId; name: string; how: string; joins: string }[] = [
   {
@@ -22,13 +22,6 @@ export const WORLDS: readonly { id: WorldId; name: string; how: string; joins: s
     joins: "Its chapters join by turning the page, which folds one scene flat and raises the next.",
   },
 ];
-
-export const worldName = (id: WorldId) => WORLDS.find((w) => w.id === id)!.name;
-
-/** Short names for the mixer's buttons. */
-export const SHORT: Record<ChapterKey, string> = {
-  hello: "Hello", from: "From", studied: "Studied", worked: "Worked", good: "Good at", made: "Made", say: "Others say", contact: "Contact",
-};
 
 /** What each world shows in each chapter. */
 export const PIECES: Record<WorldId, Record<ChapterKey, string>> = {
@@ -63,11 +56,5 @@ export const PIECES: Record<WorldId, Record<ChapterKey, string>> = {
     contact: "An envelope with the email",
   },
 };
-
-/** One world in one chapter, the sheet everywhere else: how a piece is tried on its own. */
-export function mixWith(world: WorldId, chapter: ChapterKey): string {
-  const m: Mix = { ...WHOLE.sheet, [chapter]: world };
-  return formatMix(m);
-}
 
 export const picture = (world: WorldId, chapter: ChapterKey) => `/transitions/pieces/${world}-${chapter}.jpg`;

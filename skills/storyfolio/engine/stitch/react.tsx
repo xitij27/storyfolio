@@ -10,9 +10,10 @@ import { miniPicture, canvas as paintCanvas } from "./paint.ts";
 import { smooth, type ScrollState } from "./scroll.ts";
 import "./stitch.css";
 
-type Handle = { dispose(): void; goTo(index: number): void };
+type Handle = { dispose(): void; goTo(index: number, instant?: boolean): void };
 
-export function StitchedStory({ person, mix, showWords = true }: { person: Person; mix: Mix; showWords?: boolean }) {
+/** `start` opens the story at that chapter when the page is at its top, as a link to one chapter's piece does. */
+export function StitchedStory({ person, mix, showWords = true, start }: { person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey }) {
   const keys = useMemo(() => chaptersFor(person), [person]);
   const words = useMemo(() => captions(person, keys), [person, keys]);
   const mixText = formatMix(mix);
@@ -43,10 +44,16 @@ export function StitchedStory({ person, mix, showWords = true }: { person: Perso
     };
     import("./stage.ts")
       .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, spacer, onState, onProject: setProject }))
-      .then((h) => { if (alive) { handle.current = h; setScene("on"); } else h.dispose(); })
+      .then((h) => {
+        if (!alive) { h.dispose(); return; }
+        handle.current = h;
+        setScene("on");
+        const at = start ? keys.indexOf(start) : -1;
+        if (at > 0 && window.scrollY < 2) h.goTo(at, true);
+      })
       .catch((e) => { console.error(e); if (alive) setScene("off"); });
     return () => { alive = false; handle.current?.dispose(); handle.current = null; };
-  }, [person, mixText, keys]);
+  }, [person, mixText, keys, start]);
 
   useEffect(() => {
     if (!project) return;

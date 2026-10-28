@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /*
   Checks the transitions gallery of a running build, local or live, at a
-  desktop and a phone size: the index, each whole example and a shared mix
-  link open with no page error and no failed request, nothing scrolls
-  sideways, the mixer's copy button puts the mix line on the clipboard,
-  and switching person changes the words and places and not the mix.
+  desktop and a phone size: the index and each whole example open with no
+  page error and no failed request, nothing scrolls sideways, a piece's
+  picture opens its example at that chapter, and switching person changes
+  the words and places and keeps the chapter.
 
     PLAYWRIGHT_CORE=<path to a playwright-core install> \
       node scripts/gallery-check.mjs --url=https://xitij27.github.io/storyfolio [--out=dir]
@@ -27,20 +27,18 @@ const browser = await chromium.launch({
   ...(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}),
   args: ["--no-sandbox", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"],
 });
-const MIX = "map,map,book,book,sheet,sheet,book,map";
 const pages = [
   ["index", "/transitions/"],
   ["whole-sheet", "/transitions/whole/sheet/"],
   ["whole-map", "/transitions/whole/map/?p=amara"],
   ["whole-book", "/transitions/whole/book/"],
-  ["mix", `/transitions/mix/?m=${MIX}&p=noa`],
+  ["piece", "/transitions/whole/book/?c=made"],
 ];
 const report = { base, sizes: [], problems: [] };
 const problems = report.problems;
 
 for (const [w, h] of [[1440, 900], [390, 844]]) {
   const context = await browser.newContext({ viewport: { width: w, height: h }, reducedMotion: "reduce" });
-  await context.grantPermissions(["clipboard-read", "clipboard-write"], { origin: new URL(base).origin });
   const page = await context.newPage();
   const where = () => `${w}x${h} ${page.url()}`;
   page.on("pageerror", (e) => problems.push(`${where()} page error: ${e.message}`));
@@ -54,7 +52,7 @@ for (const [w, h] of [[1440, 900], [390, 844]]) {
       await page.waitForFunction(() => window.__stitch?.ready || window.__stitch?.error, null, { timeout: 60000 }).catch(() => problems.push(`${where()} never ready`));
       const error = await page.evaluate(() => window.__stitch?.error ?? null);
       if (error) problems.push(`${where()} story failed: ${error}`);
-      await page.evaluate(() => window.scrollTo(0, window.__stitch.top() + 2.2 * window.__stitch.unit()));
+      await page.evaluate(() => window.scrollTo({ top: window.__stitch.top() + 2.2 * window.__stitch.unit(), behavior: "instant" }));
       await page.waitForTimeout(600);
     } else {
       await page.waitForTimeout(800);
@@ -65,28 +63,34 @@ for (const [w, h] of [[1440, 900], [390, 844]]) {
     size.pages.push({ name, route, sideways });
   }
 
-  // The mixer: the copy button puts the line on the clipboard.
-  await page.goto(`${base}/transitions/mix/?m=${MIX}&p=noa`, { waitUntil: "load" });
-  await page.waitForFunction(() => window.__stitch?.ready, null, { timeout: 60000 });
-  await page.getByRole("button", { name: "Copy" }).click();
-  const copied = await page.evaluate(() => navigator.clipboard.readText());
-  if (copied !== MIX) problems.push(`${where()} copy gave "${copied}", not "${MIX}"`);
+  // The index has no mixer, and a piece's picture opens its example at that chapter.
+  await page.goto(`${base}/transitions/`, { waitUntil: "load" });
+  if (await page.locator('a[href*="/transitions/mix"]').count()) problems.push(`${where()} the index still links to a mixer`);
+  const piece = page.locator('a[href*="/transitions/whole/map/?c=worked"]');
+  if (!(await piece.count())) {
+    problems.push(`${where()} the index has no link to the map's "worked" piece`);
+    report.sizes.push(size);
+    await context.close();
+    continue;
+  } else {
+    await piece.first().click();
+    await page.waitForFunction(() => window.__stitch?.ready, null, { timeout: 60000 });
+    await page.waitForTimeout(600);
+    const at = await page.evaluate(() => { const st = window.__stitch.state(); return st && window.__stitch.keys[st.from]; });
+    if (at !== "worked") problems.push(`${where()} the map's "worked" piece opened at ${at}`);
+  }
 
-  // A chapter button turns that chapter to the next world, and the line and the address follow.
-  await page.getByRole("button", { name: /^Hello: One map/ }).click();
-  await page.waitForFunction(() => location.search.includes("m=book%2Cmap") || location.search.includes("m=book,map"), null, { timeout: 10000 })
-    .catch(() => problems.push(`${where()} the Hello button did not change the mix in the address: ${page.url()}`));
-
-  // Switching person changes the words, not the mix.
-  await page.waitForFunction(() => window.__stitch?.ready, null, { timeout: 60000 });
-  const before = await page.evaluate(() => ({ text: document.querySelector(".stitch .text")?.textContent ?? "", m: new URLSearchParams(location.search).get("m") }));
+  // Switching person changes the words, and the story stays at its chapter.
+  const before = await page.evaluate(() => ({ text: document.querySelector(".stitch .text")?.textContent ?? "", c: new URLSearchParams(location.search).get("c") }));
   await page.getByRole("button", { name: "Amara" }).click();
   await page.waitForFunction((t) => (document.querySelector(".stitch .text")?.textContent ?? "") !== t, before.text, { timeout: 10000 })
     .catch(() => problems.push(`${where()} switching person did not change the words`));
-  const after = await page.evaluate(() => ({ text: document.querySelector(".stitch .text")?.textContent ?? "", m: new URLSearchParams(location.search).get("m") }));
-  if (after.m !== before.m) problems.push(`${where()} switching person changed the mix from ${before.m} to ${after.m}`);
+  await page.waitForFunction(() => window.__stitch?.ready, null, { timeout: 60000 });
+  await page.waitForTimeout(600);
+  const after = await page.evaluate(() => ({ text: document.querySelector(".stitch .text")?.textContent ?? "", c: new URLSearchParams(location.search).get("c"),
+    at: (() => { const st = window.__stitch.state(); return st && window.__stitch.keys[st.from]; })() }));
   if (!after.text.includes("Amara Okafor")) problems.push(`${where()} the words are not Amara's after the switch`);
-  size.copied = copied;
+  if (after.at !== "worked") problems.push(`${where()} after switching person the story is at ${after.at}, not worked`);
   report.sizes.push(size);
   await context.close();
 }

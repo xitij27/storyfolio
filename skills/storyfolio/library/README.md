@@ -62,17 +62,15 @@ through `asset()` in `content/sample.ts`.
 
 `/transitions/` shows how one chapter of a site becomes the next, in three
 worlds: one sheet, one map, a pop-up book. It has the three whole examples
-(`/transitions/whole/<world>/`), the mixer (`/transitions/mix/`), each
-chapter's three pieces as pictures (each opens that piece in a site, with
-the sheet elsewhere), and the earlier study of one seam joined four ways,
-whose swap is marked as not to use. A bar over every story switches between
-the two made-up people and hides the words.
+(`/transitions/whole/<world>/`), each chapter's three pieces as pictures
+(each opens its example at that chapter, `?c=<chapter>`), and the earlier
+study of one seam joined four ways, whose swap is marked as not to use. A
+bar over every story switches between the two made-up people and hides the
+words.
 
-The mixer turns each chapter to the next world and shows the whole mix as
-one line, such as `map,map,book,book,sheet,sheet,book,map`, with a copy
-button: the line a person sends to the agent building their site, which
-puts it in the site's `content/mix.ts`. The address keeps `?m=` and `?p=`,
-so a mix can be shared.
+There is no mixer: the agent building a site chooses the pieces for each
+chapter and shows the mix moving; a person looks here for ideas and says
+in words what they would change (the author, 28 October).
 
 The worlds are `stitch/`, a copy of the engine's (see the engine's README,
 "A stitched story"). Do not edit it here: change the engine's and run
@@ -83,7 +81,7 @@ skill fails when the two differ.
 `public/transitions/pieces/` from a running build; run it again when a
 world changes. `scripts/gallery-check.mjs` checks a build, local or live,
 at desktop and phone sizes: no page error or failed request, no sideways
-scroll, the copy button, and the person switch keeping the mix. Both need a
+scroll, a piece opening at its chapter, and the person switch. Both need a
 `playwright-core` (`PLAYWRIGHT_CORE`, such as an engine copy's), which the
 library does not install.
 
