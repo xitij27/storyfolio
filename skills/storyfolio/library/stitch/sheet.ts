@@ -481,11 +481,16 @@ export const createSheet: WorldFactory = async (env, chapters) => {
     scene,
     camera,
     pose,
+    // The window opens at the front of the sheet, where the camera looks, half as high as the
+    // chapter's picture, so it reads as a window in the picture before the camera flies in.
     anchor(chapter): Anchor {
       pose(holding(chapter, 1));
       sheet.updateMatrixWorld();
+      const bb = new THREE.Box3();
+      for (const tile of tiles) bb.expandByObject(tile);
       const box = FRAMES[chapter].box;
-      return { position: sheet.position.clone(), quaternion: camera.quaternion.clone(), height: box[1] };
+      const height = Math.min(0.5 * box[1], (0.8 * box[0]) / camera.aspect);
+      return { position: new THREE.Vector3(0, 0, bb.max.z + 0.02), quaternion: camera.quaternion.clone(), height };
     },
     pick(ndc, chapter) {
       if (chapter !== "made") return null;

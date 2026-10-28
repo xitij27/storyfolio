@@ -1,6 +1,6 @@
 // The stage: follows the scroll, builds the worlds a mix uses, and each
 // frame draws the world that holds the story. Two chapters in one world
-// join by that world's own move. Browser only.
+// join by that world's own move; in two worlds, by a dive. Browser only.
 import * as THREE from "three";
 import type { ChapterKey } from "./chapters.ts";
 import { chaptersFor, type Person, type Project } from "./person.ts";
@@ -8,6 +8,7 @@ import { chaptersOf, worldsOf, type Mix, type WorldId } from "./mix.ts";
 import { follow, stateAt, totalUnits, unitPx, type ScrollState } from "./scroll.ts";
 import { loadLand } from "./land.ts";
 import { holding, type World, type WorldFactory } from "./world.ts";
+import { diveSteps, fillPose } from "./dive.ts";
 import { createSheet } from "./sheet.ts";
 import { createMap } from "./map.ts";
 
@@ -72,10 +73,24 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
   const top = () => spacer.getBoundingClientRect().top + window.scrollY;
   const target = () => (window.scrollY - top()) / unit();
 
+  // The window a dive opens: the next world drawn into a picture the size of
+  // the screen, on a plane in the last world that the camera flies into.
+  const view = new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: 4 });
+  const window_ = new THREE.Mesh(
+    new THREE.PlaneGeometry(1, 1),
+    new THREE.MeshBasicMaterial({ map: view.texture, transparent: true, depthTest: false, depthWrite: false, toneMapped: false }),
+  );
+  window_.renderOrder = 1000;
+  window_.frustumCulled = false;
+  let aspect = 1;
+
   const resize = () => {
     const w = canvas.clientWidth || window.innerWidth, h = canvas.clientHeight || window.innerHeight;
     renderer.setSize(w, h, false);
-    for (const world of worlds.values()) world.resize(w / h);
+    aspect = w / h;
+    const size = renderer.getDrawingBufferSize(new THREE.Vector2());
+    view.setSize(size.x, size.y);
+    for (const world of worlds.values()) world.resize(aspect);
     spacer.style.height = `${totalUnits(n) * unit() + window.innerHeight}px`;
   };
   resize();
@@ -93,12 +108,38 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
     current = st;
     const a = keys[st.from], b = keys[st.to];
     const wa = worldAt(a);
+    window_.removeFromParent();
     if (st.from === st.to) wa.pose(holding(a, st.local, time));
     else if (o.mix[a] === o.mix[b]) wa.pose({ from: a, to: b, t: st.t, raw: st.raw, local: 1, time });
-    else wa.pose(holding(a, 1, time));
+    else dive(wa, a, worldAt(b), b, st.raw);
     renderer.setRenderTarget(null);
     renderer.render(wa.scene, wa.camera);
+    window_.removeFromParent();
     o.onState?.(st, keys);
+  }
+
+  const p0 = new THREE.Vector3(), q0 = new THREE.Quaternion(), normal = new THREE.Vector3();
+  /** Poses a dive from world A holding chapter a into world B at chapter b, ready to draw A. */
+  function dive(wa: World, a: ChapterKey, wb: World, b: ChapterKey, raw: number) {
+    // B as it will first be seen, into the window's picture.
+    wb.pose(holding(b, 0));
+    renderer.setRenderTarget(view);
+    renderer.render(wb.scene, wb.camera);
+    renderer.setRenderTarget(null);
+    // A holds; the window opens at its anchor, and the camera flies into it.
+    const anchor = wa.anchor(a);
+    const { fade, fly } = diveSteps(raw);
+    window_.position.copy(anchor.position);
+    window_.quaternion.copy(anchor.quaternion);
+    window_.scale.set(anchor.height * aspect, anchor.height, 1);
+    window_.material.opacity = fade;
+    wa.scene.add(window_);
+    normal.set(0, 0, 1).applyQuaternion(anchor.quaternion);
+    const end = fillPose({ position: anchor.position.toArray(), normal: normal.toArray() }, wa.camera.fov, anchor.height);
+    p0.copy(wa.camera.position); q0.copy(wa.camera.quaternion);
+    wa.camera.position.lerpVectors(p0, new THREE.Vector3(...end), fly);
+    wa.camera.quaternion.slerpQuaternions(q0, anchor.quaternion, fly);
+    wa.camera.updateMatrixWorld();
   }
 
   let raf = 0;
@@ -158,6 +199,9 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
       canvas.removeEventListener("click", onClick);
       canvas.removeEventListener("mousemove", onMove);
       for (const world of worlds.values()) world.dispose();
+      view.dispose();
+      window_.geometry.dispose();
+      window_.material.dispose();
       renderer.dispose();
       if (window.__stitch === probe) delete window.__stitch;
     },
