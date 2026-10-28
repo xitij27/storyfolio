@@ -3,7 +3,7 @@
 // chapter rail, the contact buttons and a project window. The words are
 // also written out in full for anyone without the 3D.
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { captions, titleOf, type ChapterKey } from "./chapters.ts";
+import { titleOf, wordsFor, type ChapterKey } from "./chapters.ts";
 import { chaptersFor, type Person, type Project } from "./person.ts";
 import { formatMix, parseMix, type Mix } from "./mix.ts";
 import { LOOKS, uiColours, type LookId, type Palette } from "./look.ts";
@@ -20,11 +20,16 @@ function lookStyle(p: Palette): CSSProperties {
     "--st-line": ui.line, "--st-on-ink": ui.onText, "--st-amber": p.amber } as CSSProperties;
 }
 
-/** `start` opens the story at that chapter when the page is at its top, as a link to one chapter's piece does. */
-export function StitchedStory({ person, mix, showWords = true, start, look = "night" }: { person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId }) {
+/**
+ * `start` opens the story at that chapter when the page is at its top, as a link to one chapter's piece does.
+ * `words` are the person's own words for any chapter; `cv` is where their CV is, and its button shows only with it.
+ */
+export function StitchedStory({ person, mix, showWords = true, start, look = "night", words: chosen, cv }: {
+  person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId; words?: Partial<Record<ChapterKey, string>>; cv?: string;
+}) {
   const palette = LOOKS[look];
   const keys = useMemo(() => chaptersFor(person), [person]);
-  const words = useMemo(() => captions(person, keys), [person, keys]);
+  const words = useMemo(() => wordsFor(person, keys, chosen), [person, keys, chosen]);
   const mixText = formatMix(mix);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
@@ -93,16 +98,16 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
       </div>
       <div ref={ctaRef} className="cta">
         <a href={`mailto:${person.contact.email}`}>Email {person.first}</a>
-        <a href="#" onClick={(e) => e.preventDefault()}>Download CV</a>
+        {cv && <a href={cv}>CV</a>}
       </div>
-      <Chapters person={person} keys={keys} words={words} />
-      {project && <ProjectWindow person={person} project={project} palette={palette} onClose={() => setProject(null)} />}
+      <Chapters person={person} keys={keys} words={words} cv={cv} />
+      {project && <ProjectWindow project={project} palette={palette} onClose={() => setProject(null)} />}
     </div>
   );
 }
 
 /** Every chapter's words in order, shown when there is no 3D and read by screen readers. */
-function Chapters({ person, keys, words }: { person: Person; keys: ChapterKey[]; words: Partial<Record<ChapterKey, string>> }) {
+function Chapters({ person, keys, words, cv }: { person: Person; keys: ChapterKey[]; words: Partial<Record<ChapterKey, string>>; cv?: string }) {
   return (
     <section className="text" aria-label={`${person.name}, in words`}>
       <h1>{person.name}</h1>
@@ -110,16 +115,16 @@ function Chapters({ person, keys, words }: { person: Person; keys: ChapterKey[];
         <article key={k}>
           <h2>{titleOf(k)}</h2>
           <p>{words[k]}</p>
-          {k === "made" && <ul>{person.projects.map((p) => <li key={p.title}><b>{p.title}</b>. {p.line}</li>)}</ul>}
+          {k === "made" && <ul>{person.projects.map((p) => <li key={p.title}><b>{p.page ? <a href={p.page}>{p.title}</a> : p.title}</b>. {p.line}</li>)}</ul>}
           {k === "say" && <ul>{person.quotes.map((q) => <li key={q.who}>&ldquo;{q.text}&rdquo; {q.who}, {q.from}</li>)}</ul>}
-          {k === "contact" && <p><a href={`mailto:${person.contact.email}`}>{person.contact.email}</a></p>}
+          {k === "contact" && <p><a href={`mailto:${person.contact.email}`}>{person.contact.email}</a>{cv && <>. <a href={cv}>CV</a></>}</p>}
         </article>
       ))}
     </section>
   );
 }
 
-function ProjectWindow({ person, project, palette, onClose }: { person: Person; project: Project; palette: Palette; onClose: () => void }) {
+function ProjectWindow({ project, palette, onClose }: { project: Project; palette: Palette; onClose: () => void }) {
   const pic = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = pic.current;
@@ -136,7 +141,8 @@ function ProjectWindow({ person, project, palette, onClose }: { person: Person; 
           <div className="eyebrow">{project.place}, {project.year}</div>
           <h3>{project.title}</h3>
           <p>{project.line}</p>
-          <p className="more">This is where the project&apos;s own page would be: the problem, how {person.first} went about it, what it used and what came of it.</p>
+          {project.more && <p>{project.more}</p>}
+          {project.page && <p><a className="more" href={project.page}>More about {project.title}</a></p>}
           <div className="tags">{project.tags.map((t) => <span key={t}>{t}</span>)}</div>
         </div>
       </div>

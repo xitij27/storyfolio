@@ -42,3 +42,13 @@ export function captions(p: Person, keys: readonly ChapterKey[]): Partial<Record
   for (const k of keys) out[k] = write[k]();
   return out;
 }
+
+/** The words under each chapter: the person's own where they chose some, else written from their data. */
+export function wordsFor(p: Person, keys: readonly ChapterKey[], chosen: Partial<Record<ChapterKey, string>> = {}): Partial<Record<ChapterKey, string>> {
+  const out = captions(p, keys);
+  for (const k of keys) {
+    const own = chosen[k]?.trim();
+    if (own) out[k] = own;
+  }
+  return out;
+}

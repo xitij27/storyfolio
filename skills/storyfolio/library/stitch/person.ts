@@ -8,7 +8,8 @@ export type Work = { org: string; role: string; place: string; from: number; to:
 export type SkillGroup = { group: string; items: string[] };
 export const PROJECT_KINDS = ["chart", "photo", "maze", "route", "bars", "list"] as const;
 export type ProjectKind = (typeof PROJECT_KINDS)[number];
-export type Project = { title: string; line: string; tags: string[]; place: string; year: number; kind: ProjectKind };
+/** `more` is a paragraph its window shows; `page` the address of its own page, on this site ("/...") or another ("https://..."). */
+export type Project = { title: string; line: string; tags: string[]; place: string; year: number; kind: ProjectKind; more?: string; page?: string };
 export type Quote = { text: string; who: string; from: string; place: string };
 export type Contact = { email: string; links: string[] };
 export type Person = {
@@ -43,6 +44,7 @@ export function checkPerson(p: Person): string[] {
   }
   for (const x of p.projects ?? []) {
     if (!(PROJECT_KINDS as readonly string[]).includes(x.kind)) errs.push(`The project ${x.title} has the unknown kind ${x.kind}.`);
+    if (x.page != null && !/^(\/|https:\/\/)/.test(x.page)) errs.push(`The project ${x.title} has a page that is not an address.`);
   }
   return errs;
 }
