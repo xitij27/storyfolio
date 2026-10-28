@@ -246,7 +246,7 @@ function contactPage(P: Person, C: Palette) {
     ctx.fillStyle = C.ink; ctx.font = sans(34, 600);
     P.contact.links.slice(0, 6).forEach((l, i) => ctx.fillText(`${l}  →`, m, 710 + i * 70));
     ctx.fillStyle = C.muted; ctx.font = serif(30, 400, "italic");
-    wrap(ctx, `This sheet is ${P.first}'s CV. It folded into every picture above, and it is yours to download.`, m, h - 200, w - 2 * m, 42);
+    wrap(ctx, `This sheet is ${P.first}'s CV. It folded into every picture above.`, m, h - 200, w - 2 * m, 42);
   });
 }
 
