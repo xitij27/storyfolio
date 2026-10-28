@@ -159,6 +159,50 @@ on a piece goes further forward than that.
 On a phone a sheet across the screen is about 320 pixels wide, so words
 smaller than about 40 units cannot be read there. Put those in the caption.
 
+## A stitched story
+
+`stitch/` tells the eight chapters in three worlds: a sheet of paper (the
+CV bending into each chapter's picture), a map of the person's places, and
+a pop-up book. A mix says which world holds each chapter. Two neighbouring
+chapters in one world join by that world's own move (the sheet folds, the
+camera flies over the map, the page turns); in two worlds, a window showing
+the next world opens in the last one and the camera dives into it. Every
+picture and word is drawn from the person's data, so no scene code is
+written for a person.
+
+- `content/person.ts` is the person, in the shape of `stitch/person.ts`.
+  The supplied one is a made-up placeholder: replace it with the confirmed
+  facts. A chapter with nothing in it (no study, no quotes) is left out and
+  its neighbours join.
+- `content/mix.ts` is the mix, one world per chapter in chapter order. The
+  gallery's mixer writes it as one line, such as
+  `map,map,book,book,sheet,sheet,book,map`; `parseMix` in `stitch/mix.ts`
+  reads it.
+- `/preview` shows the story from those two files. `?mix=<line>` tries
+  another mix and `?person=noa` or `?person=amara` a sample person without
+  editing anything.
+- `scripts/stitch-check.mjs` shoots `/preview` at every chapter's hold and
+  the middle of every move, with reduced motion so each shot stands exactly
+  where the page is scrolled, and fails on a page error, a failed request
+  or a blank picture. `--points` adds four shots of the first dive, `--at`
+  any other points. Run it against a production build (`npm run build`,
+  then `npx next start`); open the screenshots.
+
+  ```bash
+  node scripts/stitch-check.mjs --url=http://127.0.0.1:3000 \
+    --mix=map,map,book,book,sheet,sheet,book,map --size=390x844 --points
+  ```
+
+`stitch/` is also the component library's: the library carries a copy,
+which `node <skill>/scripts/sync-stitch.mjs` makes and a test keeps byte for
+byte. In the skill, change `stitch/` only here, then sync.
+
+The scroll runs at the examples' pace: a chapter takes 1.9 screens of
+scrolling (at least 1000 pixels), holds for its first 0.4, and the story
+moves at most 0.55 chapters a second however fast the reader scrolls.
+Natural Earth's land, for the globe, the map and the book's map page, is
+`stitch/land.json`; the drawing kit's maps read it from there too.
+
 ## Check
 
 ```bash

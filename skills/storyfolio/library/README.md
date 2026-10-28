@@ -58,6 +58,35 @@ BASE_PATH=/storyfolio npm run build   # the static site in out/, as Pages serves
 Plain image addresses (an `<img>`, a texture) need the base path, so they go
 through `asset()` in `content/sample.ts`.
 
+## The transitions gallery
+
+`/transitions/` shows how one chapter of a site becomes the next, in three
+worlds: one sheet, one map, a pop-up book. It has the three whole examples
+(`/transitions/whole/<world>/`), the mixer (`/transitions/mix/`), each
+chapter's three pieces as pictures (each opens that piece in a site, with
+the sheet elsewhere), and the earlier study of one seam joined four ways,
+whose swap is marked as not to use. A bar over every story switches between
+the two made-up people and hides the words.
+
+The mixer turns each chapter to the next world and shows the whole mix as
+one line, such as `map,map,book,book,sheet,sheet,book,map`, with a copy
+button: the line a person sends to the agent building their site, which
+puts it in the site's `content/mix.ts`. The address keeps `?m=` and `?p=`,
+so a mix can be shared.
+
+The worlds are `stitch/`, a copy of the engine's (see the engine's README,
+"A stitched story"). Do not edit it here: change the engine's and run
+`node ../scripts/sync-stitch.mjs`; `scripts/stitch-copy.test.mjs` in the
+skill fails when the two differ.
+
+`scripts/piece-shots.mjs` made the 24 pictures in
+`public/transitions/pieces/` from a running build; run it again when a
+world changes. `scripts/gallery-check.mjs` checks a build, local or live,
+at desktop and phone sizes: no page error or failed request, no sideways
+scroll, the copy button, and the person switch keeping the mix. Both need a
+`playwright-core` (`PLAYWRIGHT_CORE`, such as an engine copy's), which the
+library does not install.
+
 ## The globe's land
 
 `content/land.ts` holds one bit for each of 12,000 dots spread evenly over
