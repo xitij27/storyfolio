@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+/*
+  The tokens and effects the library's pieces use, from the author's
+  portfolio. System fonts, so nothing waits on a font service.
+*/
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --color-brand: var(--brand);
+  --color-brand-2: var(--brand-2);
+  --color-brand-3: var(--brand-3);
+  --color-paper-bg: var(--paper-bg);
+  --color-paper-ink: var(--paper-ink);
+  --color-paper-muted: var(--paper-muted);
+  --color-paper-faint: var(--paper-faint);
+  --color-paper-accent: var(--paper-accent);
+  --color-paper-rule: var(--paper-rule);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --radius: 0.7rem;
+  --page-gutter: 1rem;
+  --brand: oklch(0.58 0.2 274);
+  --brand-2: oklch(0.62 0.22 310);
+  --brand-3: oklch(0.72 0.15 210);
+  /* The V3 paper's night look; [data-look] below swaps it. */
+  --paper-bg: #0c1018;
+  --paper-ink: #f4f6fb;
+  --paper-muted: #a9b2c7;
+  --paper-faint: #77829b;
+  --paper-accent: #f2b84b;
+  --paper-rule: rgb(255 255 255 / 0.14);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --brand: oklch(0.68 0.19 274);
+  --brand-2: oklch(0.72 0.2 310);
+  --brand-3: oklch(0.8 0.14 205);
+}
+
+[data-look="paper"] {
+  --paper-bg: #f4efe4;
+  --paper-ink: #1d1a16;
+  --paper-muted: #5d564b;
+  --paper-faint: #8c8578;
+  --paper-accent: #b4442c;
+  --paper-rule: rgb(0 0 0 / 0.15);
+}
+[data-look="blueprint"] {
+  --paper-bg: #0f2a4a;
+  --paper-ink: #e8f1ff;
+  --paper-muted: #9fb8da;
+  --paper-faint: #6f8db5;
+  --paper-accent: #ffd166;
+  --paper-rule: rgb(255 255 255 / 0.2);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --page-gutter: 1.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background font-sans text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: color-mix(in oklch, var(--brand) 20%, transparent);
+  }
+  ::selection {
+    background-color: color-mix(in oklch, var(--brand) 30%, transparent);
+  }
+}
+
+/* The page column's side padding, which grows to the notch on a phone in landscape. */
+@utility px-page {
+  padding-left: max(var(--page-gutter), env(safe-area-inset-left));
+  padding-right: max(var(--page-gutter), env(safe-area-inset-right));
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(100deg, var(--brand), var(--brand-2) 55%, var(--brand-3));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+/* One period is one copy of the testimonial list plus half its gap (gap-5). */
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - 0.625rem));
+  }
+}
+
+/* Hero entrance, in CSS so it runs straight from the server HTML. Each line sets --i. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+.rise-in {
+  animation: rise-in 450ms var(--ease-out-quint) both;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+/*
+  Experience spine: as an entry scrolls past the middle of the screen its
+  logo comes into colour and its stretch of the spine draws down to the
+  next. Browsers without scroll-driven animations show the finished spine.
+*/
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .exp-entry {
+      view-timeline: --exp block;
+    }
+    .exp-entry .exp-logo {
+      animation: exp-light linear both;
+      animation-timeline: --exp;
+      animation-range: cover 12% cover 28%;
+    }
+    .exp-entry .exp-spine {
+      transform-origin: top;
+      animation: exp-draw linear both;
+      animation-timeline: --exp;
+      animation-range: cover 35% cover 65%;
+    }
+  }
+}
+@keyframes exp-light {
+  from {
+    opacity: 0.4;
+    filter: grayscale(1);
+  }
+}
+@keyframes exp-draw {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+/* Canvas figures read their colours from here: canvas cannot resolve oklch through var(). */
+.fig {
+  --fig-paper: #262626;
+  --fig-ink: #fafafa;
+  --fig-ink-2: #a1a1a1;
+  --fig-rule: #454545;
+  --fig-rule-2: #333333;
+  --fig-trace: #7689ff;
+  --fig-signal: #cb7aff;
+}
+
+/* Ripple grid: each cell lights after a delay set by its distance from the click. */
+@keyframes ripple-cell {
+  40% {
+    background-color: color-mix(in oklch, var(--brand) 35%, transparent);
+    transform: scale(0.92);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ripple-cell {
+    animation: ripple-cell 700ms var(--ease-out-quint) both;
+    animation-delay: calc(var(--d, 0) * 55ms);
+  }
+}
