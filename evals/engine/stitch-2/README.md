@@ -170,6 +170,21 @@ through-line" is not visibly scoped to a scene of one's own; when the CV is
 built is said as stop 6 in `content/site.ts` and stop 5 in the skill;
 `/plain-story` ships unlinked on every person's site.
 
+## Live check, 31 October
+
+The author pushed `main` at `b8980b51` on 28 October, and the Pages deploy
+that followed (run 40663319271) published plan 2's pieces. On the author's
+"yes" ([record](../../../docs/history/2026-10-31-fix-the-map.md#steps-2-and-3-then-plan-3)),
+root ran the library's `scripts/gallery-check.mjs
+--url=https://xitij27.github.io/storyfolio` with playwright-core from
+`/var/tmp/stitch-3-site` and its Chromium headless shell 1248: both sizes,
+0 problems ([report.json](live-check/report.json),
+[desktop.jpg](live-check/desktop.jpg), [phone.jpg](live-check/phone.jpg)).
+The index says the agent chooses pieces from all three worlds and shows
+the mix moving. The book on a phone is shot mid-pan, as on 28 October. The
+live gallery does not yet carry the map fix of 31 October
+([stitch-3](../stitch-3/README.md)), which is not pushed.
+
 ## To make it again
 
 ```bash

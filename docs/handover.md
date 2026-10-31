@@ -25,7 +25,8 @@ person test and the author's review of its site.
 
 **Waiting on the author.** The author said yes to fixing the map first
 ([record](history/2026-10-31-fix-the-map.md)). Still open: launch plan 3
-(step 4)? Root recommends steps 2 and 3 first (small, free).
+(step 4)? The author said yes on 31 October, after steps 2 and 3, which are
+done ([record](history/2026-10-31-fix-the-map.md#steps-2-and-3-then-plan-3)).
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -88,7 +89,10 @@ them could steer it wrong:
 These correct words already there and add no instruction, so they need no
 run of their own. Plan 3 is their test.
 
-### 3. Check the live gallery after the 28 October push (free)
+### 3. ~~Check the live gallery after the 28 October push~~ (done 31 October)
+
+Both sizes, 0 problems ([stitch-2, live check](../evals/engine/stitch-2/README.md#live-check-31-october)).
+What follows is the step as it was written.
 
 The push also published the library with plan 2's pieces (18 files: the
 looks, the dive's card, the project window). Run
