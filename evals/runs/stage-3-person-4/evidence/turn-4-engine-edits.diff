@@ -1,0 +1,301 @@
+### stitch/map.ts
+6c6
+< import { NOW, type Person, type Project } from "./person.ts";
+---
+> import { NOW, studyLocation, type Person, type Project } from "./person.ts";
+50,53d49
+<   const where = (name: string) => {
+<     const p = P.places.find((x) => x.name === name) ?? home;
+<     return p ? at(p.lat, p.lng) : new THREE.Vector3();
+<   };
+170c166
+<     ctx.fillStyle = C.muted; ctx.font = sans(36, 600); ctx.fillText(P.role.toUpperCase(), 64, 470);
+---
+>     ctx.fillStyle = C.muted; ctx.font = sans(32, 600); wrap(ctx, P.role.toUpperCase(), 64, 425, w - 128, 40, 2);
+177c173,174
+<   const diplomaAt = (s0 ? where(s0.place) : homeV.clone()).add(new THREE.Vector3(-0.75, 0, 0.1));
+---
+>   const studyCity = s0 ? studyLocation(P, s0) : null;
+>   const diplomaAt = (studyCity ? at(studyCity.lat, studyCity.lng) : homeV.clone()).add(new THREE.Vector3(-0.75, 0, 0.1));
+181,182c178,180
+<     ctx.fillStyle = C.muted; ctx.font = sans(30, 600); ctx.fillText(`${s0.place.toUpperCase()}  ·  ${s0.from} TO ${s0.to}`, w / 2, 120);
+<     ctx.fillStyle = C.ink; ctx.font = serif(46); ctx.fillText(P.name, w / 2, 220);
+---
+>     ctx.fillStyle = C.muted; ctx.font = sans(30, 600); wrap(ctx, s0.place.toUpperCase(), w / 2, 95, w - 120, 38, 2);
+>     ctx.font = sans(28); ctx.fillText(`${s0.from} TO ${s0.to}`, w / 2, 170);
+>     ctx.fillStyle = C.ink; ctx.font = serif(46); ctx.fillText(P.name, w / 2, 245);
+208,209c206,207
+<         ctx.fillStyle = C.ink; ctx.font = serif(64); wrap(ctx, w.org, 40, 100, cw - 80, 70, 2);
+<         ctx.fillStyle = C.muted; ctx.font = sans(40); wrap(ctx, w.role, 40, 300, cw - 80, 48, 2);
+---
+>         ctx.fillStyle = C.ink; ctx.font = serif(55); wrap(ctx, w.org, 40, 90, cw - 80, 65, 3);
+>         ctx.fillStyle = C.muted; ctx.font = sans(40); wrap(ctx, w.role, 40, 330, cw - 80, 48, 3);
+279c277,279
+<   const madeOrder = [...plates].sort((a, b) => a.year - b.year).map((p) => p.item.hinge.position.clone());
+---
+>   const currentTools = buildings[buildings.length - 1];
+>   const toolsTarget = () => currentTools ? currentTools.pos.clone().setY(currentTools.hgt + 0.4) : homeV.clone().setY(0.9);
+>   const madeOrder = plates.map((p) => p.item.hinge.position.clone());
+307c307
+<     studied: () => ({ target: (s0 ? where(s0.place) : homeV.clone()).add(new THREE.Vector3(-0.5, 0.45, 0)), dist: 3.2, pitch: 0.3,
+---
+>     studied: () => ({ target: (studyCity ? at(studyCity.lat, studyCity.lng) : homeV.clone()).add(new THREE.Vector3(-0.5, 0.45, 0)), dist: 3.2, pitch: 0.3,
+309,311c309,314
+<     worked: (l) => ({ target: along(workOrder, l).add(new THREE.Vector3(0.5, 0.7, 0)), dist: 4.4, pitch: 0.36 }),
+<     good: () => ({ target: centroid(buildings.map((b) => b.pos.clone())).add(new THREE.Vector3(0.3, 1.1, 0)), dist: 5.2 + buildings.length * 0.3, pitch: 0.42 }),
+<     made: (l) => ({ target: along(madeOrder, l).add(new THREE.Vector3(0, 0.4, 0)), dist: 3.6, pitch: 0.34 }),
+---
+>     worked: (l) => ({ target: along(workOrder, l).add(new THREE.Vector3(0.2, 0.8, -0.2)), dist: 4.0, pitch: 0.22,
+>       phone: { target: along(workOrder, l).add(new THREE.Vector3(0.2, 0.9, -0.3)), width: 1.7 } }),
+>     good: () => ({ target: toolsTarget(), dist: 4.0, pitch: 0.18,
+>       phone: { target: toolsTarget(), width: 1.8 } }),
+>     made: (l) => ({ target: along(madeOrder, l).add(new THREE.Vector3(0, 0.4, 0)), dist: 3.6, pitch: 0.22,
+>       phone: { target: along(madeOrder, l).add(new THREE.Vector3(0, 0.38, 0)), width: 1.12 } }),
+390c393
+<       route.material.opacity = now <= fromAt ? 1 : 0.5;
+---
+>       route.material.opacity = now <= fromAt ? 1 : 0.14;
+### stitch/person.ts
+6c6
+< export type Study = { degree: string; field: string; place: string; from: number; to: number; note?: string };
+---
+> export type Study = { degree: string; field: string; place: string; city?: string; from: number; to: number; note?: string };
+29a30,34
+> /** An education institution is a label; its city is a separate geographic fact. */
+> export function studyLocation(p: Person, study: Study): Place | null {
+>   return p.places.find(place => place.name === (study.city ?? study.place)) ?? null;
+> }
+> 
+43a49,51
+>   }
+>   for (const study of p.study ?? []) {
+>     if (study.city && !studyLocation(p, study)) errs.push(`The study city ${study.city} is not in the person's places.`);
+### stitch/stage.ts
+70c70
+<   const narrow = () => canvas.clientWidth / Math.max(1, canvas.clientHeight) < 0.9;
+---
+>   const narrow = () => canvas.clientWidth <= 720 || canvas.clientWidth / Math.max(1, canvas.clientHeight) < 0.9;
+110a111,112
+>   const resizeObserver = new ResizeObserver(resize);
+>   resizeObserver.observe(canvas);
+221a224
+>       resizeObserver.disconnect();
+### stitch/react.tsx
+39c39,40
+<   const ctaRef = useRef<HTMLDivElement>(null);
+---
+>   const rootRef = useRef<HTMLDivElement>(null);
+>   const headerRef = useRef<HTMLElement>(null);
+44a46
+>   const [textOnly, setTextOnly] = useState(false);
+48c50
+<     if (!canvas || !spacer) return;
+---
+>     if (!canvas || !spacer || textOnly) return;
+50d51
+<     const last = keys.length - 1;
+57,58c58
+<       const cta = st.from === last ? 1 : st.to === last ? smooth(0.7, 1, st.raw) : 0;
+<       if (ctaRef.current) { ctaRef.current.style.opacity = cta.toFixed(3); ctaRef.current.style.pointerEvents = cta > 0.5 ? "auto" : "none"; }
+---
+> 
+59a60,61
+>     const onContextLost = (event: Event) => { event.preventDefault(); if (alive) setScene("off"); };
+>     canvas.addEventListener("webglcontextlost", onContextLost);
+66,67c68,69
+<         const at = start ? keys.indexOf(start) : -1;
+<         if (at > 0 && window.scrollY < 2) h.goTo(at, true);
+---
+>         const at = keys.indexOf((window.location.hash.slice(1) || start) as ChapterKey);
+>         if (at >= 0) h.goTo(at, true);
+70,71c72,94
+<     return () => { alive = false; handle.current?.dispose(); handle.current = null; };
+<   }, [person, mixText, keys, start, look, chosenText]);
+---
+>     return () => { alive = false; canvas.removeEventListener("webglcontextlost", onContextLost); handle.current?.dispose(); handle.current = null; };
+>   }, [person, mixText, keys, start, look, chosenText, textOnly]);
+> 
+>   useEffect(() => {
+>     const syncHash = () => {
+>       const index = keys.indexOf(window.location.hash.slice(1) as ChapterKey);
+>       if (index >= 0) handle.current?.goTo(index, true);
+>     };
+>     window.addEventListener("hashchange", syncHash);
+>     return () => window.removeEventListener("hashchange", syncHash);
+>   }, [keys]);
+> 
+>   useEffect(() => {
+>     const cap = capRef.current, root = rootRef.current, header = headerRef.current;
+>     if (!cap || !root) return;
+>     const fit = () => {
+>       root.style.setProperty("--caption-height", `${cap.offsetHeight + 24}px`);
+>       if (header) root.style.setProperty("--header-height", `${header.offsetHeight}px`);
+>     };
+>     const observer = new ResizeObserver(fit);
+>     observer.observe(cap); if (header) observer.observe(header); fit();
+>     return () => observer.disconnect();
+>   }, []);
+74,78c97,108
+<     if (!project) return;
+<     const close = (e: KeyboardEvent) => { if (e.key === "Escape") setProject(null); };
+<     window.addEventListener("keydown", close);
+<     return () => window.removeEventListener("keydown", close);
+<   }, [project]);
+---
+>     if (textOnly) {
+>       document.getElementById("story-text")?.focus();
+>       window.scrollTo(0, 0);
+>     }
+>   }, [textOnly]);
+> 
+>   const jump = (event: React.MouseEvent<HTMLAnchorElement>, chapter: ChapterKey) => {
+>     if (scene !== "on" || textOnly || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+>     event.preventDefault();
+>     window.history.pushState(null, "", `#${chapter}`);
+>     handle.current?.goTo(keys.indexOf(chapter));
+>   };
+82c112,118
+<     <div className={`stitch${showWords ? "" : " nowords"}`} data-scene={scene} style={lookStyle(palette)}>
+---
+>     <div ref={rootRef} className={`stitch${showWords ? "" : " nowords"}`} data-scene={textOnly ? "off" : scene} style={lookStyle(palette)}>
+>       <header ref={headerRef} className="topbar">
+>         <a className="brand" href="#hello" onClick={e => jump(e, "hello")}>{person.name}</a>
+>         <nav aria-label="Main"><a href="#made" onClick={e => jump(e, "made")}>Work</a><a href="#contact" onClick={e => jump(e, "contact")}>Contact</a>{cv && <a href={cv}>CV</a>}
+>           {!textOnly && <a href="#story-text" onClick={event => { event.preventDefault(); setTextOnly(true); }}>Read text</a>}
+>         </nav>
+>       </header>
+88c124
+<             <button key={k} type="button" className={i === near ? "on" : ""} onClick={() => handle.current?.goTo(i)}>
+---
+>             <a key={k} href={`#${k}`} aria-label={titleOf(k)} aria-current={i === near ? "step" : undefined} className={i === near ? "on" : ""} onClick={e => jump(e, k)}>
+90c126
+<             </button>
+---
+>             </a>
+96a133,136
+>           {key === "hello" && <p className="proof">310 services · 14 waves · 26 months.<br />Order API availability: 99.98% over those 26 months.</p>}
+>           {key === "good" && <p className="tools">Runbook · cutover checklist · rollback plan. Postgres, replication and checksums; SLO-based alerting. Learning: Google SRE book; Release It! by Michael Nygard.</p>}
+>           {key === "made" && <div className="project-links" aria-label="Open a work item">{person.projects.map(p => <button key={p.title} type="button" onClick={() => setProject(p)} aria-label={`${p.title}. ${p.line}`}>{p.title}</button>)}</div>}
+>           {key === "contact" && <div className="actions"><a href={`mailto:${person.contact.email}`}>Email {person.first}</a>{cv && <a href={cv}>Printable CV</a>}</div>}
+100,103d139
+<       <div ref={ctaRef} className="cta">
+<         <a href={`mailto:${person.contact.email}`}>Email {person.first}</a>
+<         {cv && <a href={cv}>CV</a>}
+<       </div>
+114c150
+<     <section className="text" aria-label={`${person.name}, in words`}>
+---
+>     <section id="story-text" tabIndex={-1} className="text" aria-label={`${person.name}, in words`}>
+117c153
+<         <article key={k}>
+---
+>         <article key={k} id={k}>
+119a156,159
+>           {k === "hello" && <p>310 services, 14 waves, 26 months. Measured order API availability: 99.98% over those 26 months.</p>}
+>           {k === "studied" && person.study.map(s => <p key={s.place}>{s.place}, {s.city}. {s.note}</p>)}
+>           {k === "worked" && person.work.map(w => <p key={w.org}><strong>{w.org}</strong>: {w.did}</p>)}
+>           {k === "good" && person.skills.map(g => <p key={g.group}><strong>{g.group}</strong>: {g.items.join(", ")}</p>)}
+141a182
+>   const dialog = useRef<HTMLDialogElement>(null);
+143,145c184,189
+<     const el = pic.current;
+<     if (!el) return;
+<     const c = paintCanvas(800, 420, (ctx, w, h) => miniPicture(ctx, palette, project.kind, 0, 0, w, h, project.title.length));
+---
+>     const el = pic.current, modal = dialog.current;
+>     if (!el || !modal) return;
+>     const returnTo = document.activeElement as HTMLElement | null;
+>     const overflow = document.body.style.overflow;
+>     document.body.style.overflow = "hidden";
+>     const c = paintCanvas(800, 300, (ctx, w, h) => miniPicture(ctx, palette, project.kind, 0, 0, w, h, project.title.length));
+146a191,196
+>     modal.showModal();
+>     return () => {
+>       modal.close();
+>       document.body.style.overflow = overflow;
+>       returnTo?.focus({ preventScroll: true });
+>     };
+149c199,205
+<     <div className="modal open" role="dialog" aria-modal="true" aria-label={project.title} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+---
+>     <dialog ref={dialog} className="modal" aria-label={project.title} onKeyDown={event => {
+>       if (event.key !== "Tab") return;
+>       const focusable = Array.from(event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], [tabindex="0"]'));
+>       const first = focusable[0], last = focusable[focusable.length - 1];
+>       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+>       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+>     }} onCancel={e => { e.preventDefault(); onClose(); }} onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
+151,152c207,208
+<         <button type="button" data-close aria-label="Close" onClick={onClose}>&times;</button>
+<         <div className="pic" ref={pic} />
+---
+>         <button type="button" data-close aria-label="Close" onClick={onClose} autoFocus>&times;</button>
+>         <div className="pic" ref={pic} aria-hidden="true" />
+154c210
+<           <div className="eyebrow">{project.place}, {project.year}</div>
+---
+>           <div className="eyebrow">{project.year} · Illustration</div>
+159c215
+<           <div className="tags">{project.tags.map((t) => <span key={t}>{t}</span>)}</div>
+---
+>           <div className="tags">{project.tags.map(t => <span key={t}>{t}</span>)}</div>
+162c218
+<     </div>
+---
+>     </dialog>
+### stitch/stitch.css
+71a72,125
+> 
+> /* Approved finishing requirements: regular navigation, readable captions,
+>    keyboard project entry and room for the map between header and caption. */
+> .stitch .topbar { position: fixed; inset: 0 0 auto; z-index: 4; min-height: 60px; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 18px; background: var(--st-glass); border-bottom: 1px solid var(--st-line); backdrop-filter: blur(10px); }
+> .stitch .topbar a { text-decoration: none; font-size: 14px; }
+> .stitch .topbar .brand { font-family: var(--st-serif); font-size: 20px; white-space: nowrap; }
+> .stitch .topbar nav { display: flex; flex-wrap: wrap; gap: 20px; }
+> .stitch .gl { top: var(--header-height, 64px); height: max(160px, calc(100dvh - var(--header-height, 64px) - var(--caption-height, 190px))); }
+> .stitch .cap { bottom: 12px; left: 24px; max-width: 540px; max-height: 42dvh; overflow: auto; padding: 12px 16px; }
+> .stitch .cap h2 { font-size: 23px; }
+> .stitch .proof { margin-top: 8px !important; font-size: 13px !important; }
+> .stitch .tools { margin-top: 8px !important; font-size: 13px !important; }
+> .stitch .hint { bottom: 14px; right: 28px; left: auto; transform: none; }
+> .stitch .rail a { pointer-events: auto; display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex-direction: row-reverse; min-height: 32px; padding: 3px 4px; text-decoration: none; font: 500 13px var(--st-sans); color: var(--st-muted); text-shadow: 0 0 6px var(--st-bg), 0 0 12px var(--st-bg); }
+> .stitch .rail a.on { color: var(--st-ink); }
+> .stitch .rail a.on i { background: var(--st-amber); opacity: 1; transform: scale(1.4); }
+> .stitch .rail { top: 42%; }
+> .stitch a:focus-visible, .stitch button:focus-visible { outline: 3px solid var(--st-amber); outline-offset: 3px; }
+> .stitch .project-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+> .stitch .project-links button, .stitch .actions a { border: 1px solid var(--st-line); border-radius: 6px; padding: 8px 10px; min-height: 38px; color: var(--st-ink); background: var(--st-bg); font: 500 13px var(--st-sans); cursor: pointer; text-decoration: none; }
+> .stitch .actions { display: flex; gap: 8px; margin-top: 12px; }
+> .stitch .actions a:first-child { background: var(--st-amber); color: #11161c; }
+> .stitch dialog.modal { width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; }
+> .stitch dialog.modal:not([open]) { display: none; }
+> .stitch dialog.modal::backdrop { background: rgba(5,7,10,.65); }
+> .stitch .modal .sheet { max-height: calc(100dvh - 32px); }
+> .stitch .modal [data-close] { width: 44px; height: 44px; }
+> .stitch .text { padding-top: 92px; }
+> .stitch .text article { scroll-margin-top: 84px; }
+> .stitch[data-scene="off"] .topbar { position: sticky; }
+> .stitch[data-scene="off"] .text { padding-top: 30px; }
+> @media (max-width: 720px) {
+>   .stitch .topbar { padding: 10px 12px; gap: 8px; min-height: 64px; }
+>   .stitch .topbar .brand { font-size: 17px; }
+>   .stitch .topbar nav { column-gap: 12px; row-gap: 4px; justify-content: flex-end; }
+>   .stitch .topbar a { font-size: 12px; min-height: 24px; display: inline-flex; align-items: center; }
+>   .stitch .cap { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+>   .stitch .cap h2 { font-size: 20px; }
+>   .stitch .rail { right: 1px; }
+>   .stitch .rail a { min-height: 44px; width: 32px; }
+>   .stitch .hint { display: none; }
+> }
+> @media (scripting: none) {
+>   .stitch .topbar { position: sticky; }
+>   .stitch .topbar a[href="#story-text"] { display: none; }
+>   .stitch .spacer { display: none; }
+> }
+> .stitch .cap { pointer-events: auto; }
+> @media (max-width: 360px) {
+>   .stitch .project-links { gap: 4px; }
+>   .stitch .project-links button { font-size: 12px; padding: 6px 8px; min-height: 36px; }
+> }
+> .stitch .modal .eyebrow { color: #80500b; }
+> .stitch .modal button:focus-visible { outline-color: #80500b; }

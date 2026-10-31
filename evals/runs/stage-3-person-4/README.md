@@ -12,8 +12,8 @@ Approved by the author's "Launch with those (Recommended)" on 31 October
 | 1 | Read | passed: questions only, no concept (124 s, about 35,200 uncached tokens) |
 | 2 | Concept (one world) | passed: the whole sheet, pieces unchanged, nothing over the scene (403 s, about 114,400 uncached tokens) |
 | 3 | Switch world, then storyboard | passed: switched to the map and recorded; storyboard written (193 s, about 155,300 uncached tokens) |
-| 4 | Look | running |
-| 5 | Words | |
+| 4 | Look | recorded: no looks shown (night kept), built ahead; edited the pieces to fix engine faults and add navigation (1,193 s, about 563,400 uncached tokens) |
+| 5 | Words | running |
 | 6 | Finish | |
 
 ## Where the run lives
