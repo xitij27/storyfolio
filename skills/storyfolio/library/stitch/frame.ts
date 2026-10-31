@@ -1,5 +1,6 @@
-// Where places fall on the worlds' flat things: a whole-world picture, the
-// map's ground and the book's page. Pure, so it is tested without a browser.
+// Where places fall on the worlds' flat things (a whole-world picture, the
+// map's ground and the book's page) and how far a camera stands to see them.
+// Pure, so it is tested without a browser.
 import type { Place } from "./person.ts";
 
 /** A whole-world picture w wide and h high: longitude across, latitude down. */
@@ -38,3 +39,33 @@ export function pageFrame(places: readonly Place[], pw: number): (lat: number, l
 
 /** How far a camera with this vertical field of view stands from a plane this high to fill its view. */
 export const fillDistance = (fovDeg: number, height: number): number => height / 2 / Math.tan(((fovDeg / 2) * Math.PI) / 180);
+
+/**
+ * How far back a camera looking at the origin from `pitch` radians above the
+ * ground stands so every point ([x east, y up, z south]) falls within
+ * `margin` of the middle of its view (1 is the view's edge).
+ */
+export function fitDistance(points: readonly (readonly number[])[], pitch: number, fovDeg: number, aspect: number, margin: number): number {
+  const tanV = Math.tan(((fovDeg / 2) * Math.PI) / 180) * margin, tanH = tanV * aspect;
+  const sin = Math.sin(pitch), cos = Math.cos(pitch);
+  let d = 0;
+  for (const [x, y, z] of points) {
+    const near = y * sin + z * cos, up = y * cos - z * sin;
+    d = Math.max(d, near + Math.abs(x) / tanH, near + Math.abs(up) / tanV);
+  }
+  return d;
+}
+
+/** Places on the ground closer than `gap` share a spot: each one's spot is the first place of its group. */
+export function spots(points: readonly (readonly number[])[], gap: number): number[] {
+  const spot = points.map((_, i) => i);
+  points.forEach(([x, z], i) => points.slice(0, i).forEach(([x2, z2], j) => {
+    if (Math.hypot(x - x2, z - z2) >= gap) return;
+    const from = Math.max(spot[i], spot[j]), to = Math.min(spot[i], spot[j]);
+    spot.forEach((s, k) => { if (s === from) spot[k] = to; });
+  }));
+  return spot;
+}
+
+/** How tall a job of `years` stands on the map: 0.32 a year, the longest job (`longest` years) no taller than 1.65. */
+export const rise = (years: number, longest: number): number => 0.35 + years * Math.min(0.32, 1.3 / Math.max(longest, 1e-9));

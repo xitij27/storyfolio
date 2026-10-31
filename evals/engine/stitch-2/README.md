@@ -99,6 +99,9 @@ the map's ground) and land on the next world's hold. All three looks read.
 Root's recommendation: fix 1 to 3 in the map before plan 3's paid run,
 since the rerun is on Dawit; 4 to 6 can wait for the author's review.
 
+Findings 1 to 3 were fixed on 31 October, on the author's word:
+[stitch-3](../stitch-3/README.md).
+
 ## Decisions made while building plan 2
 
 Where the plan was silent or wrong, root decided and went on. Each line

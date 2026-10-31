@@ -7,12 +7,14 @@ import { NOW, type Person, type Project } from "./person.ts";
 import { canvas, dieCut, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand } from "./land.ts";
 import { groundTones, rgba, type Palette } from "./look.ts";
-import { mapFrame } from "./frame.ts";
+import { fitDistance, mapFrame, rise, spots } from "./frame.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
 import { holding, type Anchor, type World, type WorldFactory, type WorldView } from "./world.ts";
 
 const FOV = 38;
 const order = (k: ChapterKey) => CHAPTERS.findIndex((c) => c.key === k);
+/** How much a place's name grows seen from this far, to keep its size on screen. */
+const grow = (d: number) => Math.max(1, d / 4);
 
 function card(C: Palette, w: number, h: number, draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void, radius = 28) {
   return canvas(w, h, (ctx) => {
@@ -26,7 +28,11 @@ type Shot = {
   target: THREE.Vector3; dist: number; pitch: number;
   /** On a narrow screen: what to centre and how wide it is, so it fills the width instead. */
   phone?: { target: THREE.Vector3; width: number; back?: number };
+  /** Already fitted to this screen's shape, so a narrow screen takes it as it is. */
+  fitted?: boolean;
 };
+/** A place's name: where it stands, its own size, and how many names of its spot stand below it. */
+type CityTag = { tag: THREE.Sprite; base: THREE.Vector3; foot: THREE.Vector3; stack: number };
 
 export const createMap: WorldFactory = async (env, chapters) => {
   const P: Person = env.person, C = env.palette, tones = groundTones(C);
@@ -45,6 +51,15 @@ export const createMap: WorldFactory = async (env, chapters) => {
     const p = P.places.find((x) => x.name === name) ?? home;
     return p ? at(p.lat, p.lng) : new THREE.Vector3();
   };
+  // Places closer than a unit share one spot: their names stack, and what stands there stands in one row.
+  const spotOf = spots(P.places.map((p) => f.at(p.lat, p.lng)), 1);
+  const spotIndex = (name: string) => {
+    const i = P.places.findIndex((x) => x.name === name);
+    return spotOf[i < 0 ? P.places.length - 1 : i] ?? -1;
+  };
+  const spotAt = (name: string) => { const p = P.places[spotIndex(name)]; return p ? at(p.lat, p.lng) : new THREE.Vector3(); };
+  /** Counts what stands at each spot, so the next thing there stands beside the last. */
+  const turns = () => { const n: Record<number, number> = {}; return (name: string) => { const s = spotIndex(name); return (n[s] = (n[s] ?? 0) + 1) - 1; }; };
 
   const padX = (f.spanX * f.k) / 2 + 9, padZ = (f.spanZ * f.k) / 2 + 7;
   const mapW = padX * 2, mapD = padZ * 2;
@@ -63,6 +78,13 @@ export const createMap: WorldFactory = async (env, chapters) => {
     const g = ctx.createRadialGradient(w / 2, h / 2, Math.min(w, h) * 0.3, w / 2, h / 2, Math.max(w, h) * 0.62);
     g.addColorStop(0, rgba(tones.map, 0)); g.addColorStop(1, rgba(tones.map, 1));
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+    // And wholly at each edge over its last 4 units, so a camera far back never sees where the ground ends.
+    const fx = (4 / mapW) * w, fz = (4 / mapD) * h;
+    for (const [x0, y0, x1, y1, rx, ry, rw, rh] of [[fx, 0, 0, 0, 0, 0, fx, h], [w - fx, 0, w, 0, w - fx, 0, fx, h], [0, fz, 0, 0, 0, 0, w, fz], [0, h - fz, 0, h, 0, h - fz, w, fz]]) {
+      const e = ctx.createLinearGradient(x0, y0, x1, y1);
+      e.addColorStop(0, rgba(tones.map, 0)); e.addColorStop(1, rgba(tones.map, 1));
+      ctx.fillStyle = e; ctx.fillRect(rx, ry, rw, rh);
+    }
   });
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(mapW, mapD), new THREE.MeshBasicMaterial({ map: tex(mapPic), depthWrite: false }));
   ground.rotation.x = -Math.PI / 2;
@@ -81,8 +103,8 @@ export const createMap: WorldFactory = async (env, chapters) => {
   scene.add(shade);
 
   // Pins and names at every place; the names keep their size on screen.
-  const cityTags: { tag: THREE.Sprite; base: THREE.Vector3 }[] = [];
-  for (const p of P.places) {
+  const cityTags: CityTag[] = [];
+  for (const [i, p] of P.places.entries()) {
     const v = at(p.lat, p.lng);
     const pin = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.22, 12), new THREE.MeshStandardMaterial({ color: C.rose }));
     pin.castShadow = true;
@@ -90,11 +112,19 @@ export const createMap: WorldFactory = async (env, chapters) => {
     const ring = new THREE.Mesh(new THREE.RingGeometry(0.07, 0.1, 32), new THREE.MeshBasicMaterial({ color: C.rose, side: THREE.DoubleSide }));
     ring.rotation.x = -Math.PI / 2; ring.position.copy(v).setY(0.01);
     const tag = label(p.name, { size: 40, color: "#fff", bg: "rgba(20,26,32,0.85)", height: 0.16 });
-    tag.position.copy(v).add(new THREE.Vector3(0, 0.34, 0));
+    const foot = v.clone().add(new THREE.Vector3(0, 0.34, 0));
+    tag.position.copy(foot);
     tag.center.set(0.5, 0);
     scene.add(pin, ring, tag);
-    cityTags.push({ tag, base: tag.scale.clone() });
+    // Names of one spot stack, the southernmost (nearest the camera) lowest.
+    const stack = P.places.filter((q, j) => j !== i && spotOf[j] === spotOf[i] && (q.lat < p.lat || (q.lat === p.lat && j < i))).length;
+    cityTags.push({ tag, base: tag.scale.clone(), foot, stack });
   }
+  /** A name seen from `eye`, `up` being the screen's up: its size (on a narrow screen, kept to its width), and its foot, stacked above the names below it. */
+  const tagSeen = ({ base, foot, stack }: CityTag, eye: THREE.Vector3, up: THREE.Vector3) => {
+    const s = grow(eye.distanceTo(foot)) * Math.min(1, camera.aspect / 0.9);
+    return { s, pos: foot.clone().addScaledVector(up, stack * base.y * s * 1.2) };
+  };
 
   // The route between the places, drawn as the reader scrolls.
   let route: THREE.Mesh<THREE.TubeGeometry, THREE.MeshBasicMaterial> | null = null;
@@ -159,12 +189,14 @@ export const createMap: WorldFactory = async (env, chapters) => {
   // Worked: a building for each job, as tall as the years. Good at: what each job used, on its roof.
   // The buildings rise with the first of the two chapters this map holds.
   const buildingsChapter: ChapterKey | null = own.has("worked") ? "worked" : own.has("good") ? "good" : null;
-  const atPlace: Record<string, number> = {};
+  const buildingTurn = turns();
+  const longest = Math.max(0, ...P.work.map((w) => (w.to ?? NOW) - w.from));
   const buildings = (buildingsChapter ? P.work : []).map((w) => {
-    const n = (atPlace[w.place] = (atPlace[w.place] ?? 0) + 1) - 1;
-    const years = (w.to ?? NOW) - w.from;
-    const hgt = 0.35 + years * 0.32;
-    const pos = where(w.place).add(new THREE.Vector3(0.2 + n * 0.78, 0, -0.45));
+    const n = buildingTurn(w.place);
+    const hgt = rise((w.to ?? NOW) - w.from, longest);
+    // Where the camera looks for this job; the building stands just behind and to the east.
+    const foot = spotAt(w.place).add(new THREE.Vector3(n * 0.78, 0, 0));
+    const pos = foot.clone().add(new THREE.Vector3(0.2, 0, -0.45));
     const group = new THREE.Group();
     group.position.copy(pos);
     const body = new THREE.Mesh(new THREE.BoxGeometry(0.66, hgt, 0.5), new THREE.MeshStandardMaterial({ color: "#e6dfd0", roughness: 0.9 }));
@@ -187,7 +219,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
       group.add(t);
       return t;
     }) : [];
-    return { group, hgt, tags, pos };
+    return { group, hgt, tags, pos, foot, from: w.from };
   });
   // Someone with skills and no jobs: the skills stand in a stack at home.
   const looseTags = own.has("good") && !buildings.length ? P.skills.flatMap((g) => g.items).slice(0, 10).map((u, j) => {
@@ -198,22 +230,22 @@ export const createMap: WorldFactory = async (env, chapters) => {
   }) : [];
 
   // Made: every project where it was made.
-  const madeAt: Record<string, number> = {};
+  const plateTurn = turns();
   const plates = own.has("made") ? P.projects.map((p, i) => {
-    const n = (madeAt[p.place] = (madeAt[p.place] ?? 0) + 1) - 1;
+    const n = plateTurn(p.place);
     const pic = card(C, 800, 640, (ctx, w, h) => {
       miniPicture(ctx, C, p.kind, 28, 28, w - 56, 330, i + 3);
       ctx.fillStyle = C.ink; ctx.font = serif(52); ctx.fillText(p.title, 34, 440);
       ctx.fillStyle = C.muted; ctx.font = sans(30); wrap(ctx, p.line, 34, 492, w - 68, 36, 2);
       ctx.fillStyle = C.amber; ctx.font = sans(28, 600); ctx.fillText(`${p.year}`, 34, h - 30);
     }, 10);
-    return { item: standing(pic, 0.9, 0.72, where(p.place).add(new THREE.Vector3(-0.9 + n * 1.0, 0, 0.75)), "made", n * 0.12, p), year: p.year };
+    return { item: standing(pic, 0.9, 0.72, spotAt(p.place).add(new THREE.Vector3(-0.9 + n * 1.0, 0, 0.75)), "made", n * 0.12, p), year: p.year };
   }) : [];
 
   // Others say: every quote, floating where those people worked with them.
-  const saidAt: Record<string, number> = {};
+  const saidTurn = turns();
   const bubbles = own.has("say") ? P.quotes.map((q) => {
-    const n = (saidAt[q.place] = (saidAt[q.place] ?? 0) + 1) - 1;
+    const n = saidTurn(q.place);
     const pic = canvas(1100, 560, (ctx, w) => {
       ctx.fillStyle = C.paper; rrect(ctx, 0, 0, w, 470, 40); ctx.fill();
       ctx.beginPath(); ctx.moveTo(120, 460); ctx.lineTo(90, 560); ctx.lineTo(220, 460); ctx.fill();
@@ -221,7 +253,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
       ctx.fillStyle = C.ink; ctx.font = sans(30, 600); ctx.fillText(q.who, 50, Math.min(y + 30, 430));
       ctx.fillStyle = C.muted; ctx.font = sans(26); ctx.fillText(q.from, 50 + ctx.measureText(q.who).width * 1.25 + 20, Math.min(y + 30, 430));
     });
-    const base = where(q.place).add(new THREE.Vector3(-0.9 + n * 1.85, 2.9 + n * 0.35, -0.3 - n * 0.2));
+    const base = spotAt(q.place).add(new THREE.Vector3(-0.9 + n * 1.85, 2.9 + n * 0.35, -0.3 - n * 0.2));
     const cut = dieCut(pic, C, 16);
     const m = new THREE.Mesh(new THREE.PlaneGeometry((1.75 * cut.width) / pic.width, (0.89 * cut.height) / pic.height),
       new THREE.MeshBasicMaterial({ map: tex(cut), transparent: true, alphaTest: 0.5, side: THREE.DoubleSide }));
@@ -243,7 +275,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
 
   // ---------- The camera, chapter by chapter ----------
   const centroid = (vs: THREE.Vector3[]) => vs.length ? vs.reduce((a, v) => a.add(v), new THREE.Vector3()).multiplyScalar(1 / vs.length) : homeV.clone();
-  const workOrder = [...P.work].sort((a, b) => a.from - b.from).map((w) => where(w.place));
+  const workOrder = [...buildings].sort((a, b) => a.from - b.from).map((b) => b.foot.clone());
   const madeOrder = [...plates].sort((a, b) => a.year - b.year).map((p) => p.item.hinge.position.clone());
   const along = (pts: THREE.Vector3[], local: number) => {
     if (!pts.length) return homeV.clone();
@@ -251,13 +283,27 @@ export const createMap: WorldFactory = async (env, chapters) => {
     const s = clamp(local) * (pts.length - 1), i = Math.min(pts.length - 2, Math.floor(s));
     return pts[i].clone().lerp(pts[i + 1], ease(s - i));
   };
-  const allSpan = Math.max(f.spanX, f.spanZ) * f.k;
-  const places = P.places.map((p) => at(p.lat, p.lng));
+  /** "Where from": every pin and name in view on this screen, seen from `pitch`, looking at the middle of the places' span (the map's middle). */
+  const fromDistance = (pitch: number) => {
+    const up = new THREE.Vector3(0, Math.cos(pitch), -Math.sin(pitch)), back = new THREE.Vector3(0, Math.sin(pitch), Math.cos(pitch));
+    // The names grow with the distance, so fit them as seen from the last fit; from the far end, each fit is still wide enough.
+    let dist = 200;
+    for (let i = 0; i < 4; i++) {
+      const eye = back.clone().multiplyScalar(dist);
+      const pts = cityTags.flatMap((t) => {
+        const { s, pos } = tagSeen(t, eye, up), w = (t.base.x * s) / 2, top = pos.addScaledVector(up, t.base.y * s);
+        return [[t.foot.x, 0, t.foot.z], [top.x - w, top.y, top.z], [top.x + w, top.y, top.z]];
+      });
+      dist = Math.max(4, fitDistance(pts, pitch, FOV, camera.aspect, 0.85));
+    }
+    return dist;
+  };
   // Each shot: what to look at, how far, how high (radians above the ground).
   const SHOTS: Record<ChapterKey, (l: number) => Shot> = {
     hello: () => ({ target: homeV.clone().add(new THREE.Vector3(-0.55, 0.55, 0)), dist: 3.6, pitch: 0.22,
       phone: { target: signAt.clone().setY(0.57), width: 1.5 } }),
-    from: (l) => ({ target: centroid(places), dist: allSpan * 0.95 + 4 - l * 1.5, pitch: 0.95 }),
+    // Drifting in over the hold, never nearer than the fit once the lean in (to 0.92) is taken.
+    from: (l) => ({ target: new THREE.Vector3(), dist: (fromDistance(0.95) / 0.92) * (1.12 - 0.12 * l), pitch: 0.95, fitted: true }),
     studied: () => ({ target: (s0 ? where(s0.place) : homeV.clone()).add(new THREE.Vector3(-0.5, 0.45, 0)), dist: 3.2, pitch: 0.3,
       phone: { target: diplomaAt.clone().setY(0.42), width: 1.2 } }),
     worked: (l) => ({ target: along(workOrder, l).add(new THREE.Vector3(0.5, 0.7, 0)), dist: 4.4, pitch: 0.36 }),
@@ -272,7 +318,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
   /** A chapter's shot for this screen: on a narrow one, its card centred and as wide as the view, or simply further back. */
   const shotFor = (k: ChapterKey, l: number): Shot => {
     const s = SHOTS[k](l);
-    if (!env.narrow()) return s;
+    if (!env.narrow() || s.fitted) return s;
     if (!s.phone) return { ...s, dist: s.dist * 1.7 };
     const fit = (s.phone.width / 2) * 1.15 / (Math.tan(THREE.MathUtils.degToRad(FOV / 2)) * camera.aspect);
     return { target: s.phone.target, dist: fit + (s.phone.back ?? 0), pitch: s.pitch };
@@ -343,7 +389,12 @@ export const createMap: WorldFactory = async (env, chapters) => {
       route.geometry.setDrawRange(0, Math.floor((route.geometry.index!.count / 6) * shown) * 6);
       route.material.opacity = now <= fromAt ? 1 : 0.5;
     }
-    for (const { tag, base } of cityTags) tag.scale.copy(base).multiplyScalar(clamp(camera.position.distanceTo(tag.position) / 4, 1, 5));
+    const screenUp = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion);
+    for (const t of cityTags) {
+      const { s, pos } = tagSeen(t, camera.position, screenUp);
+      t.tag.scale.copy(t.base).multiplyScalar(s);
+      t.tag.position.copy(pos);
+    }
   }
 
   const ray = new THREE.Raycaster();

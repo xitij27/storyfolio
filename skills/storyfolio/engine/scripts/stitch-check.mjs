@@ -28,8 +28,10 @@
     --wait=MS       settle time after each scroll, default 500
 
   Shots are taken with reduced motion, so the story stands exactly where
-  the page is scrolled. A shot is blank when fewer than 1 per cent of
-  sampled pixels of the 3D differ clearly from its corner pixel.
+  the page is scrolled. A shot is blank when fewer than 0.5 per cent of
+  sampled pixels of the 3D differ clearly from its corner pixel. A failed
+  draw is near 0; the map's dim ground does not count, so a phone's view of
+  places far apart can be under 1 per cent and still drawn.
 
   Chromium comes from playwright-core (npm run browsers). CHROMIUM names
   another Chromium to start instead.
@@ -107,7 +109,7 @@ async function shoot(name, at) {
   await page.screenshot({ path: path.join(out, file) });
   const state = await page.evaluate(() => window.__stitch.state());
   report.shots.push({ name, at, file, drawn: sample, state });
-  if (sample < 0.01) problems.push(`${name} is blank (${(sample * 100).toFixed(2)} per cent drawn)`);
+  if (sample < 0.005) problems.push(`${name} is blank (${(sample * 100).toFixed(2)} per cent drawn)`);
 }
 
 for (let k = 0; k < keys.length; k++) {

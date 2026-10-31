@@ -1,6 +1,6 @@
 # Handover
 
-Current state as of 28 October 2026. Start with this page and
+Current state as of 31 October 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
@@ -17,18 +17,23 @@ the stitched story at `/`, in three looks (night, daylight, blueprint),
 with the person's own words, a CV link and project detail, and `npm run
 check` checks it ([study](../evals/engine/stitch-2/README.md)). `main` at
 `b8980b51` is on GitHub: the author pushed it at 09:19 UTC on 28 October,
-and the Pages deploy that followed (run 40663319271) succeeded. 415 tests
-pass and `check-skill` is ok. Stage 3 of 4 is still open. It closes with
-plan 3's person test and the author's review of its site.
+and the Pages deploy that followed (run 40663319271) succeeded. On 31
+October the map was fixed for Dawit's places (step 1,
+[stitch-3](../evals/engine/stitch-3/README.md)); 418 tests pass and
+`check-skill` is ok. Stage 3 of 4 is still open. It closes with plan 3's
+person test and the author's review of its site.
 
-**Waiting on the author.** Two questions from the end of plan 2 are not
-answered yet:
+**Waiting on the author.** The author said yes to fixing the map first
+([record](history/2026-10-31-fix-the-map.md)). Still open: launch plan 3
+(step 4)? Root recommends steps 2 and 3 first (small, free).
 
-- Fix the three map problems (step 1) before the paid run? Root
-  recommends yes.
-- Then launch plan 3 (step 4)?
+### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
-### 1. Fix the map for Dawit's places (no paid run; recommended first)
+Done on the author's word: every place is in "where from" at both sizes,
+close places stack their names and stand in one row, and the tallest
+building stays in the frame. How, the checks, and what is left for the
+author's review: [stitch-3](../evals/engine/stitch-3/README.md). What
+follows is the step as it was written.
 
 The no-model dry run on Dawit found three things the map gets wrong with
 his data ([stitch-2, findings 1 to 3](../evals/engine/stitch-2/README.md#what-the-pieces-get-wrong-or-cannot-show-for-the-author)).
@@ -154,6 +159,10 @@ six are small fixes; the last three are for the author's review to weigh.
   project shown working" is not in the pieces.
 - A long "looking for" line is cut after two lines on the sheet's contact
   page.
+- From the map fix ([stitch-3, left for the author](../evals/engine/stitch-3/README.md#left-for-the-authors-review)):
+  the hello sign covers the home's name in "where from" when hello is on
+  the map; a phone's overview of places far apart (Noa's) is a small strip;
+  names on a phone are about half their desktop size.
 
 ### 7. After Stage 3
 
@@ -173,9 +182,20 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   author's word.
 - Node 24.14 runs the `.ts` tests. `npm test` (415) and
   `node evals/check-skill.mjs` pass before each commit. On the WSL machine
-  (31 October), `/usr/bin/node` is 22.22.1, which cannot load `.ts` even
-  with `--experimental-strip-types`: 227 of the JavaScript tests pass and
-  26 `.ts` files fail to load. Install Node 24 there before engine work.
+  (31 October), `/usr/bin/node` is Ubuntu's 22.22.1, built without
+  TypeScript support, so the 26 `.ts` test files cannot load. Node 24.14.0
+  is installed there in `~/.local/opt/node-v24.14.0-linux-x64`: put its
+  `bin` first on `PATH`.
+- On the WSL machine there is no sudo. `npm run browsers` installed
+  playwright-core's Chromium headless shell 1248 in `~/.cache/ms-playwright`;
+  the three libraries it lacks (libnspr4, libnss3, libasound2t64) were
+  fetched with `apt-get download` and unpacked in `/var/tmp/chromium-libs`.
+  Set `LD_LIBRARY_PATH=/var/tmp/chromium-libs/root/usr/lib/x86_64-linux-gnu`
+  for any check that starts it. Python's PIL makes contact sheets there
+  (run without `-I`, which hides the user's packages). From stitch-3:
+  Dawit's site in `/var/tmp/stitch-3-site` (port 3121) and the engine before
+  the fix in `/var/tmp/stitch-3-before` (port 3122); a restart loses the
+  servers.
 - Browser: Chromium 1234 at
   `~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome`, named by
   `CHROMIUM`. playwright-core 1.64 wants 1248, which is not installed
@@ -194,7 +214,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 28 October (README and About): **on the author's "update the readme and about sections for this repo", the README describes the skill as it now is and the GitHub About is set** ([record](history/2026-10-28-readme-and-about.md)). The README has a new picture (four chapters of the made-up Noa's site across the sheet, the map and the book), the status as of 28 October, the six stops, the eight chapters and three worlds, and what a person leaves with (the site and `docs/story/`). The About has a new description, the gallery as its website and 12 topics; it changed on GitHub at once. The README reaches GitHub with the next push, on the author's word. Found on 31 October, when the author asked again what is left: GitHub's `main` is at `bf8580b0`, so the README is pushed, and none of the next steps above had been started.
+Latest, 31 October (the map fixed): **on the author's "yes fix the map before the paid run.", the map now frames every place in "where from", stacks close places' names and stands their buildings in one row, and keeps the tallest building in the frame** ([record](history/2026-10-31-fix-the-map.md), [study](../evals/engine/stitch-3/README.md)). Three pure helpers in `stitch/frame.ts` (`fitDistance`, `spots`, `rise`), each tested first. "Where from" looks at the middle of the places' span and stands back as far as every pin and name needs on this screen's shape; before, it looked at their average and stood a fixed distance back, which also left out Noa's Montreal and Amara's Enugu. The shots then showed three new faults, each fixed: the ground's edge seen from far back (it now fades wholly), names too small on the phone overview (they now keep their size on screen at any distance) and stacked names covering a card on a phone (on a narrow screen names keep to its width). `stitch-check` now calls a shot blank under 0.5 per cent drawn, not 1: Noa's phone overview is drawn at 0.71 to 1.45 per cent, since the map's dim ground does not count. 418 tests; `npm run check` on Dawit's site passes; the sample people pass at both sizes. Left for the author's review: the hello sign covering the home's name, a small strip for places far apart on a phone, names about half size on a phone. On this machine, Node 24 and Chromium's libraries were installed without root (see "For the next session"). No run, no push.
+
+Earlier, 28 October (README and About): **on the author's "update the readme and about sections for this repo", the README describes the skill as it now is and the GitHub About is set** ([record](history/2026-10-28-readme-and-about.md)). The README has a new picture (four chapters of the made-up Noa's site across the sheet, the map and the book), the status as of 28 October, the six stops, the eight chapters and three worlds, and what a person leaves with (the site and `docs/story/`). The About has a new description, the gallery as its website and 12 topics; it changed on GitHub at once. The README reaches GitHub with the next push, on the author's word. Found on 31 October, when the author asked again what is left: GitHub's `main` is at `bf8580b0`, so the README is pushed, and none of the next steps above had been started.
 
 Earlier, 28 October (next steps): **the author asked for the next steps to be written down, to work on them in another session; they are the section above** ([record](history/2026-10-28-what-is-left.md#next-steps-written-down)). Found while writing them: `main` at `b8980b51` is on GitHub, pushed by the author at 09:19 UTC (root did not push), and the Pages deploy (run 40663319271) succeeded, so the live gallery carries plan 2's pieces. Not yet answered: fix the map first, and launch plan 3.
 

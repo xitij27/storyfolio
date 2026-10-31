@@ -26,3 +26,10 @@ To run the tests on this machine, root installed the official Node
 24.14.0 (checked against nodejs.org's SHA-256 list) in
 `~/.local/opt/node-v24.14.0-linux-x64`, outside the system packages. With
 it first on `PATH`, all 415 tests pass.
+
+## Done
+
+Root fixed the three problems and three more the shots showed on the way,
+and recorded how and what was checked in
+[stitch-3](../../evals/engine/stitch-3/README.md). No run and no push.
+Plan 3 still waits for the author's word.
