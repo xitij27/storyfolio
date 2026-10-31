@@ -53,3 +53,22 @@ author answered, verbatim:
 
 Root reads this as yes to one world per site and to the changes proposed
 with it. A further paid run still needs the author's word.
+
+## The person test again, and a push
+
+Root changed the skill to one world per site and asked two questions. The
+author's answers, as chosen:
+
+- "Next step: run the person test again on the new one-world skill. It is
+  paid (likely 1 to 1.5 million uncached tokens) and takes about 1 to 2
+  hours of agent time. Launch it with these changes from the last run:
+  turn 3 switches the whole world, 45 minutes per turn (180 in all), and a
+  2 million uncached-token limit?" Answer: "Launch with those
+  (Recommended)".
+- "Push today's commits to GitHub? That publishes the map fix, the
+  one-world skill and the gallery's new front-page text on GitHub Pages.
+  The repository is public." Answer: "Push now".
+
+Found when pushing: GitHub's `main` was already at `533b0b05` (the
+one-world commit), pushed from the author's side; root pushed only this
+record after it.
