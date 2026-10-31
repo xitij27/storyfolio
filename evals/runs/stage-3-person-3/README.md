@@ -18,8 +18,8 @@ raised ([amendment](protocol.md#amendment-31-october-repetition-2)).
 | 1 | Read | passed: questions only, no concept (86 s, about 30,700 uncached tokens) |
 | 2 | Concept (one mix) | passed: sheet,map,sheet x5, running, reasons in concepts.md (430 s, about 129,000 uncached tokens) |
 | 3 | Swap, then storyboard | passed: worked swapped to the book and recorded; storyboard written (233 s, about 171,000 uncached tokens) |
-| 4 | Look | running |
-| 5 | Words | |
+| 4 | Look | recorded: three looks running, Blueprint recommended; the agent edited the pieces' camera code (1,253 s, about 344,600 uncached tokens) |
+| 5 | Words | running |
 | 6 | Finish | |
 
 ## Where the run lives

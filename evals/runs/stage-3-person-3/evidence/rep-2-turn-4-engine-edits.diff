@@ -1,0 +1,122 @@
+41,42d40
+< /** On a phone, the most of the sheet's width in view: its smallest printed words are then about 11 pixels high. */
+< const READ_W = 2.2;
+249c247
+<     wrap(ctx, `This sheet is ${P.first}'s CV. It folded into every picture above.`, m, h - 200, w - 2 * m, 42);
+---
+>     wrap(ctx, "An illustrated overview. Full details open from the work index.", m, h - 200, w - 2 * m, 42);
+464,465c462,463
+<     // On a phone the sheet is read a part at a time: as much of its width as keeps
+<     // its words readable and all of its height (the globe's words are its own).
+---
+>     // Keep the entire document in view; readable HTML carries its small labels.
+>     // Reserve vertical space for ordinary navigation and chapter captions.
+469c467,468
+<       return narrow && k !== "from" ? [Math.min(w, Math.max(READ_W, h * camera.aspect)), h] : [w, h];
+---
+>       const band = Math.max(220, window.innerHeight - (narrow ? 370 : 300));
+>       return [w * 1.12, h * Math.max(1.12, window.innerHeight / band)];
+474c473
+<     const d = lerp(fitDistance(box[0], box[1]), fitDistance(box2[0], box2[1]), t) * lerp(0.95, 1.1, turning);
+---
+>     const d = lerp(fitDistance(box[0], box[1]), fitDistance(box2[0], box2[1]), t) * lerp(1.04, 1.1, turning);
+481c480
+<     const pan = (k: ChapterKey) => (k === "worked" ? Math.max(0, (LR - vw) / 2 + 0.4) : narrow && k !== "from" ? Math.max(0, (FRAMES[k].box[0] - vw) / 2) : 0);
+---
+>     const pan = (k: ChapterKey) => k === "worked" ? Math.max(0, (LR - vw) / 2 + 0.4) : 0;
+419d418
+<     const moving = i.from !== i.to;
+450,451c449
+<     // Lean in on each open spread; stand back while a page turns. On a phone, read the
+<     // words on the left page first, then pan to the scene on the right.
+---
+>     // Frame the whole spread, leaving space for the readable HTML caption.
+454c452
+<     const x = narrow ? (moving ? lerp(PW / 2, -PW / 2, v.t) : lerp(-PW / 2, PW / 2, smooth(0.3, 0.7, v.local))) : lerp(0.35, 0, turning);
+---
+>     const x = lerp(0.35, 0, turning);
+456c454,455
+<     const d = fitDistance(narrow ? PW + 0.5 : lerp(2 * PW + 0.5, 2 * PW + 1.8, turning), PD + 1.7);
+---
+>     const band = Math.max(220, window.innerHeight - (narrow ? 370 : 300));
+>     const d = fitDistance(lerp(2 * PW + 0.8, 2 * PW + 1.8, turning), (PD + 1.7) * Math.max(1, window.innerHeight / band));
+306c306
+<     from: (l) => ({ target: new THREE.Vector3(), dist: (fromDistance(0.95) / 0.92) * (1.12 - 0.12 * l), pitch: 0.95, fitted: true }),
+---
+>     from: (l) => ({ target: new THREE.Vector3(), dist: (fromDistance(0.95) / 0.92) * (1.12 - 0.12 * l) * (window.innerHeight < 750 && camera.aspect >= 0.9 ? 1.7 : 1), pitch: 0.95, fitted: true }),
+171c171
+<     draw(shown, now / 1000);
+---
+>     draw(shown, motion.matches ? 0 : now / 1000);
+191c191
+<     draw(shown, performance.now() / 1000);
+---
+>     draw(shown, motion.matches ? 0 : performance.now() / 1000);
+209c209
+<   draw(shown, performance.now() / 1000);
+---
+>   draw(shown, motion.matches ? 0 : performance.now() / 1000);
+27,28c27,28
+< export function StitchedStory({ person, mix, showWords = true, start, look = "night", words: chosen, cv }: {
+<   person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId; words?: Partial<Record<ChapterKey, string>>; cv?: string;
+---
+> export function StitchedStory({ person, mix, showWords = true, start, look = "night", words: chosen, cv, textOnly = false }: {
+>   person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId; words?: Partial<Record<ChapterKey, string>>; cv?: string; textOnly?: boolean;
+41a42
+>   const initialAnchorHandled = useRef(false);
+48c49
+<     if (!canvas || !spacer) return;
+---
+>     if (!canvas || !spacer || textOnly) return;
+51a53
+>       if (!alive) return;
+66,67c68,71
+<         const at = start ? keys.indexOf(start) : -1;
+<         if (at > 0 && window.scrollY < 2) h.goTo(at, true);
+---
+>         const hash = decodeURIComponent(window.location.hash.slice(1));
+>         const at = start ? keys.indexOf(start) : keys.indexOf(hash as ChapterKey);
+>         if (!initialAnchorHandled.current && at >= 0) h.goTo(at, true);
+>         initialAnchorHandled.current = true;
+71c75,89
+<   }, [person, mixText, keys, start, look, chosenText]);
+---
+>   }, [person, mixText, keys, start, look, chosenText, textOnly]);
+> 
+>   useEffect(() => {
+>     const navigate = (event: MouseEvent) => {
+>       const anchor = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("a[data-chapter-link]") : null;
+>       if (!anchor || textOnly || scene !== "on" || !handle.current || event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+>       const index = keys.indexOf(anchor.dataset.chapterLink as ChapterKey);
+>       if (index < 0) return;
+>       event.preventDefault();
+>       window.history.replaceState(null, "", anchor.hash);
+>       handle.current.goTo(index);
+>     };
+>     document.addEventListener("click", navigate);
+>     return () => document.removeEventListener("click", navigate);
+>   }, [keys, scene, textOnly]);
+82c100
+<     <div className={`stitch${showWords ? "" : " nowords"}`} data-scene={scene} style={lookStyle(palette)}>
+---
+>     <div className={`stitch${showWords ? "" : " nowords"}`} data-scene={textOnly ? "off" : scene} data-chapter={key} style={lookStyle(palette)}>
+88c106
+<             <button key={k} type="button" className={i === near ? "on" : ""} onClick={() => handle.current?.goTo(i)}>
+---
+>             <a key={k} href={`#${k}`} data-chapter-link={k} className={i === near ? "on" : ""} aria-current={i === near ? "step" : undefined}>
+90c108
+<             </button>
+---
+>             </a>
+100c118
+<       <div ref={ctaRef} className="cta">
+---
+>       <div ref={ctaRef} className="cta" inert={key !== "contact"}>
+117c135
+<         <article key={k}>
+---
+>         <article key={k} id={k}>
+119a138,140
+>           {k === "studied" && person.study.map((study) => <p key={study.degree}>{study.note}</p>)}
+>           {k === "worked" && <ul>{person.work.map((job) => <li key={job.org}><b>{job.role}, {job.org}</b>. {job.did}</li>)}</ul>}
+>           {k === "good" && <ul>{person.skills.map((group) => <li key={group.group}>{group.group}: {group.items.join(", ")}</li>)}</ul>}
