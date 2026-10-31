@@ -15,8 +15,8 @@ raised ([amendment](protocol.md#amendment-31-october-repetition-2)).
 
 | Turn | Stop | Repetition 2 |
 |---|---|---|
-| 1 | Read | |
-| 2 | Concept (one mix) | |
+| 1 | Read | passed: questions only, no concept (86 s, about 30,700 uncached tokens) |
+| 2 | Concept (one mix) | running |
 | 3 | Swap, then storyboard | |
 | 4 | Look | |
 | 5 | Words | |
