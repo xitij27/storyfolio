@@ -33,11 +33,11 @@ stop 2 chooses one world and shows it running, the person may choose
 another; a chapter in another world (a dive) only when the person asks;
 the pieces used as they are, nothing over the scene. The sheet's closing
 sentence is now true in a mix. The gallery's index text changed too and
-reaches GitHub Pages only with a push, on the author's word. Open: the
-person test again, which is paid and needs the author's word. Before it,
-its protocol must settle turn 3's answer (switch the world, not one
-chapter) and the time per turn (turn 4 took 21 minutes, 7 of the agent's
-full checks; turn 5 ran past 30).
+reaches GitHub Pages only with a push, on the author's word. The author
+then said to run the person test again with longer bounds and to push
+(pushed at `1d650eee`): person test 4 is under way
+([stage-3-person-4](../evals/runs/stage-3-person-4/README.md),
+[protocol](../evals/runs/stage-3-person-4/protocol.md)).
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
