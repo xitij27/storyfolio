@@ -23,10 +23,17 @@ October the map was fixed for Dawit's places (step 1,
 `check-skill` is ok. Stage 3 of 4 is still open. It closes with plan 3's
 person test and the author's review of its site.
 
-**Waiting on the author.** The author said yes to fixing the map first
-([record](history/2026-10-31-fix-the-map.md)). Still open: launch plan 3
-(step 4)? The author said yes on 31 October, after steps 2 and 3, which are
-done ([record](history/2026-10-31-fix-the-map.md#steps-2-and-3-then-plan-3)).
+**Waiting on the author.** Plan 3's person test ran on 31 October
+([stage-3-person-3](../evals/runs/stage-3-person-3/README.md)). Repetition
+1 stopped on the runner's 400-file snapshot bound after turn 2; repetition
+2 passed the gates for turns 1 to 3 (one mix from the pieces, running; the
+swap made and recorded; a storyboard), built three looks in turn 4 (and
+edited the pieces' own code), then was stopped by the 30-minute turn bound
+in turn 5, before showing the wording. The runner sends no sixth turn.
+Root serves the site as turn 5 left it on 127.0.0.1:3130 (from
+`/var/tmp/p3-review-t5`); `npm run check` passes. Open: does the author
+review that site now (free; root's recommendation), and is any further
+paid repetition wanted, after fixing what the run showed or as it is?
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
