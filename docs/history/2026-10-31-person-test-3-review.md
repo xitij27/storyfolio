@@ -37,3 +37,19 @@ So Stage 3 does not close on this site.
   the engine's caption card at the bottom left and its chapter rail at the
   bottom right. The agent also framed each document whole and smaller to
   leave room for them (turn 4).
+
+## One world, compared
+
+Root showed the author Dawit's site in one world on the unchanged engine,
+with no agent changes and no added boxes: every chapter on the map
+(`/preview?mix=map,map,map,map,map,map,map,map`) and every chapter on the
+sheet (`/preview?mix=sheet,sheet,sheet,sheet,sheet,sheet,sheet,sheet`),
+and proposed, if one world read better: one world per site, the person
+switching world rather than mixing; one place for the words, nothing over
+the scene; the pieces used as they are; then the person test again. The
+author answered, verbatim:
+
+> yes both of them look good now
+
+Root reads this as yes to one world per site and to the changes proposed
+with it. A further paid run still needs the author's word.
