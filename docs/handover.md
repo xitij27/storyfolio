@@ -219,6 +219,12 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   Dawit's site in `/var/tmp/stitch-3-site` (port 3121) and the engine before
   the fix in `/var/tmp/stitch-3-before` (port 3122); a restart loses the
   servers.
+- On the WSL machine, a browser on Windows does not reach a WSL server at
+  `127.0.0.1` (connection refused; there is no `.wslconfig`, and WSL's
+  localhost forwarding does not work here). Give the author the WSL address
+  instead (`ip -4 addr show eth0`, 172.22.209.33 on 31 October; it can change
+  when WSL restarts). A phone needs a Windows port proxy and firewall rule,
+  or `networkingMode=mirrored` in `.wslconfig`.
 - Browser: Chromium 1234 at
   `~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome`, named by
   `CHROMIUM`. playwright-core 1.64 wants 1248, which is not installed
