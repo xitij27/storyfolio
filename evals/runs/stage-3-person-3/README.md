@@ -7,10 +7,16 @@ Approved by the author's "yes" on 31 October
 
 ## Progress
 
-| Turn | Stop | State |
+Repetition 1 (cohort `codex-person-3`) passed turn 1's gate and finished
+turn 2, but the runner could not capture turn 2 (400-file snapshot bound):
+[disposition](rep-1-turn-2-disposition.md). Repetition 2 (cohort
+`codex-person-3b`, `--rep 2`) starts again from turn 1 with the bound
+raised ([amendment](protocol.md#amendment-31-october-repetition-2)).
+
+| Turn | Stop | Repetition 2 |
 |---|---|---|
-| 1 | Read | passed its gate: questions only, no concept (116 s, about 55,500 uncached tokens) |
-| 2 | Concept (one mix) | running |
+| 1 | Read | |
+| 2 | Concept (one mix) | |
 | 3 | Swap, then storyboard | |
 | 4 | Look | |
 | 5 | Words | |
@@ -22,9 +28,9 @@ On the WSL machine, as user `kshitij`, from the clone at
 `/home/kshitij/projects/storyfolio`:
 
 - the frozen inputs, setup and each turn's prompt, reply and event stream:
-  `evals/runs/codex-person-3/full-journey-3/baseline-1/` (committed);
+  `evals/runs/codex-person-3b/full-journey-3/baseline-2/` (committed);
 - the agent's workspace:
-  `/var/tmp/storyfolio-person-3/storyfolio-evals/build-full-journey-3-CmAuEI`;
+  under `/var/tmp/storyfolio-person-3/storyfolio-evals/`, named in that folder's `meta.json`;
 - the agent's conversation: the Codex session named by `sessionId` in each
   turn's `result.json`, in `~/.codex/sessions/` (not committed: it holds
   account identifiers and this repository is public);
@@ -36,8 +42,8 @@ On the WSL machine, as user `kshitij`, from the clone at
 
 ## To run the next turn
 
-Write `gates/after-N.json` after reading turn N (its `previousTurnDigest` is
-the SHA-256 of `evals/runs/codex-person-3/full-journey-3/baseline-1/turns/0N/result.json`),
+Write `gates/rep-2-after-N.json` after reading turn N (its `previousTurnDigest` is
+the SHA-256 of `evals/runs/codex-person-3b/full-journey-3/baseline-2/turns/0N/result.json`),
 then from the repository root:
 
 ```bash
@@ -48,9 +54,9 @@ export PATH=$HOME/.local/opt/node-v24.14.0-linux-x64/bin:$PATH \
   TMPDIR=/var/tmp/storyfolio-person-3
 unset NEXT_TELEMETRY_DISABLED
 node evals/codex-build-run.mjs --case evals/runs/stage-3-person-3/case.json \
-  --cohort codex-person-3 --capabilities evals/builds/local-capabilities.json \
-  --turn N+1 --gate evals/runs/stage-3-person-3/gates/after-N.json \
-  > evals/runs/stage-3-person-3/turn-N+1.log 2>&1
+  --cohort codex-person-3b --rep 2 --capabilities evals/builds/local-capabilities.json \
+  --turn N+1 --gate evals/runs/stage-3-person-3/gates/rep-2-after-N.json \
+  > evals/runs/stage-3-person-3/rep-2-turn-N+1.log 2>&1
 ```
 
 If it stops with "source inventory differs" (no model call is made), a

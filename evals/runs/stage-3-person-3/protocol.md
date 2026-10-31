@@ -67,3 +67,15 @@ prompt, and writes `gates/after-N.json`.
 
 A check folder the agent leaves outside the snapshot roots is moved out
 intact with its hashes, as in `stage-3-person-1`.
+
+## Amendment, 31 October: repetition 2
+
+Repetition 1 (cohort `codex-person-3`) passed turn 1's gate, then its turn
+2 capture failed on the runner's 400-file snapshot bound, a tooling failure
+outside the agent ([disposition](rep-1-turn-2-disposition.md)). Before
+repetition 2 the case's `snapshot` raises only the bounds: `maxFiles` 1500
+and `maxBytes` 64 MB (`maxFileBytes` stays 2 MB). Repetition 1's case is
+frozen in `evals/runs/codex-person-3/inputs/case.json`. A changed case
+needs a new cohort: repetition 2 is cohort `codex-person-3b`, `--rep 2`.
+Everything else in this protocol holds unchanged, and repetition 2 starts
+again from turn 1.
