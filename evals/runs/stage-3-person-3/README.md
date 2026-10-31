@@ -17,8 +17,8 @@ raised ([amendment](protocol.md#amendment-31-october-repetition-2)).
 |---|---|---|
 | 1 | Read | passed: questions only, no concept (86 s, about 30,700 uncached tokens) |
 | 2 | Concept (one mix) | passed: sheet,map,sheet x5, running, reasons in concepts.md (430 s, about 129,000 uncached tokens) |
-| 3 | Swap, then storyboard | running |
-| 4 | Look | |
+| 3 | Swap, then storyboard | passed: worked swapped to the book and recorded; storyboard written (233 s, about 171,000 uncached tokens) |
+| 4 | Look | running |
 | 5 | Words | |
 | 6 | Finish | |
 
