@@ -24,16 +24,17 @@ October the map was fixed for Dawit's places (step 1,
 person test and the author's review of its site.
 
 **Waiting on the author.** Plan 3's person test ran on 31 October
-([stage-3-person-3](../evals/runs/stage-3-person-3/README.md)). Repetition
-1 stopped on the runner's 400-file snapshot bound after turn 2; repetition
-2 passed the gates for turns 1 to 3 (one mix from the pieces, running; the
-swap made and recorded; a storyboard), built three looks in turn 4 (and
-edited the pieces' own code), then was stopped by the 30-minute turn bound
-in turn 5, before showing the wording. The runner sends no sixth turn.
-Root serves the site as turn 5 left it on 127.0.0.1:3130 (from
-`/var/tmp/p3-review-t5`); `npm run check` passes. Open: does the author
-review that site now (free; root's recommendation), and is any further
-paid repetition wanted, after fixing what the run showed or as it is?
+([stage-3-person-3](../evals/runs/stage-3-person-3/README.md)) and stopped
+after five of six turns (turn 5 ran past its 30-minute bound). The author
+reviewed the site as it stood: "No this looks terrible. The transitions
+dont seem to have any cohesion. It just pops out of no where. The content
+is also organized in weird places as shown in the picture. This is not a
+good portfolio website" ([record](history/2026-10-31-person-test-3-review.md)).
+Stage 3 stays open. Root's reading: the joins between worlds (a framed card
+of the next world growing on the current object) are the "pops", four of
+six joins in that mix; and the agent's fixed boxes with the engine's caption
+card and rail scatter the text. Root showed the author Dawit's site in one
+world on the unchanged engine for comparison and asked which way to go.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -243,7 +244,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 31 October (the map fixed): **on the author's "yes fix the map before the paid run.", the map now frames every place in "where from", stacks close places' names and stands their buildings in one row, and keeps the tallest building in the frame** ([record](history/2026-10-31-fix-the-map.md), [study](../evals/engine/stitch-3/README.md)). Three pure helpers in `stitch/frame.ts` (`fitDistance`, `spots`, `rise`), each tested first. "Where from" looks at the middle of the places' span and stands back as far as every pin and name needs on this screen's shape; before, it looked at their average and stood a fixed distance back, which also left out Noa's Montreal and Amara's Enugu. The shots then showed three new faults, each fixed: the ground's edge seen from far back (it now fades wholly), names too small on the phone overview (they now keep their size on screen at any distance) and stacked names covering a card on a phone (on a narrow screen names keep to its width). `stitch-check` now calls a shot blank under 0.5 per cent drawn, not 1: Noa's phone overview is drawn at 0.71 to 1.45 per cent, since the map's dim ground does not count. 418 tests; `npm run check` on Dawit's site passes; the sample people pass at both sizes. Left for the author's review: the hello sign covering the home's name, a small strip for places far apart on a phone, names about half size on a phone. On this machine, Node 24 and Chromium's libraries were installed without root (see "For the next session"). No run, no push.
+Latest, 31 October (person test 3): **plan 3's person test stopped after five turns, and the author found its site "terrible": no cohesion between chapters, things popping in, text in odd places** ([run](../evals/runs/stage-3-person-3/README.md), [review](history/2026-10-31-person-test-3-review.md)). Repetition 1 stopped on the runner's 400-file snapshot bound; repetition 2 passed turns 1 to 3 (one mix from the pieces, running, reasons, the gallery; the swap made and recorded; a storyboard), built three looks in turn 4 while editing the pieces' own phone framing, and ran past turn 5's 30-minute bound before showing the wording. Root's findings: the dives between worlds read as pictures popping in through a window; the agent's fixed boxes and the engine's caption card and rail scatter the text; the sheet's contact sentence is false in a mixed site. Cost known: about 860,000 uncached tokens, turn 5's unknown.
+
+Earlier, 31 October (the map fixed): **on the author's "yes fix the map before the paid run.", the map now frames every place in "where from", stacks close places' names and stands their buildings in one row, and keeps the tallest building in the frame** ([record](history/2026-10-31-fix-the-map.md), [study](../evals/engine/stitch-3/README.md)). Three pure helpers in `stitch/frame.ts` (`fitDistance`, `spots`, `rise`), each tested first. "Where from" looks at the middle of the places' span and stands back as far as every pin and name needs on this screen's shape; before, it looked at their average and stood a fixed distance back, which also left out Noa's Montreal and Amara's Enugu. The shots then showed three new faults, each fixed: the ground's edge seen from far back (it now fades wholly), names too small on the phone overview (they now keep their size on screen at any distance) and stacked names covering a card on a phone (on a narrow screen names keep to its width). `stitch-check` now calls a shot blank under 0.5 per cent drawn, not 1: Noa's phone overview is drawn at 0.71 to 1.45 per cent, since the map's dim ground does not count. 418 tests; `npm run check` on Dawit's site passes; the sample people pass at both sizes. Left for the author's review: the hello sign covering the home's name, a small strip for places far apart on a phone, names about half size on a phone. On this machine, Node 24 and Chromium's libraries were installed without root (see "For the next session"). No run, no push.
 
 Earlier, 28 October (README and About): **on the author's "update the readme and about sections for this repo", the README describes the skill as it now is and the GitHub About is set** ([record](history/2026-10-28-readme-and-about.md)). The README has a new picture (four chapters of the made-up Noa's site across the sheet, the map and the book), the status as of 28 October, the six stops, the eight chapters and three worlds, and what a person leaves with (the site and `docs/story/`). The About has a new description, the gallery as its website and 12 topics; it changed on GitHub at once. The README reaches GitHub with the next push, on the author's word. Found on 31 October, when the author asked again what is left: GitHub's `main` is at `bf8580b0`, so the README is pushed, and none of the next steps above had been started.
 

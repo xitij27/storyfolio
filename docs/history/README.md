@@ -3,7 +3,9 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author direction: [31 October, fix the map before the paid run](2026-10-31-fix-the-map.md).
+Newest author verdict: [31 October, person test 3's site: "This is not a good portfolio website"](2026-10-31-person-test-3-review.md).
+
+Earlier author direction: [31 October, fix the map before the paid run](2026-10-31-fix-the-map.md).
 
 Earlier author request: [28 October, update the README and the repository's About](2026-10-28-readme-and-about.md).
 
