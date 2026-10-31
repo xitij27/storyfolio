@@ -9,8 +9,8 @@ Approved by the author's "Launch with those (Recommended)" on 31 October
 
 | Turn | Stop | State |
 |---|---|---|
-| 1 | Read | |
-| 2 | Concept (one world) | |
+| 1 | Read | passed: questions only, no concept (124 s, about 35,200 uncached tokens) |
+| 2 | Concept (one world) | running |
 | 3 | Switch world, then storyboard | |
 | 4 | Look | |
 | 5 | Words | |
