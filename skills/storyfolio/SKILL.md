@@ -16,7 +16,7 @@ Between stops you work by yourself. At each stop the person decides one thing. Y
 | Stop | First open | You put to the person | You go on when |
 |---|---|---|---|
 | 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. No concept or design | They have answered, and `docs/story/facts.md` holds their answers |
-| 2. Concept | `references/concept.md`, `references/diagrams.md` | One mix of gallery pieces, running for a requested build, and why | They have accepted it or said what to change, and `docs/story/concepts.md` records it |
+| 2. Concept | `references/concept.md`, `references/diagrams.md` | One world of gallery pieces, running for a requested build, and why | They have accepted it or said what to change, and `docs/story/concepts.md` records it |
 | 3. Storyboard | `references/storyboard.md` | The script of the whole page | They have said yes to it |
 | 4. Look | `references/building.md`, `engine/README.md` | The whole site in two or three looks | They have chosen a look |
 | 5. Words | `references/building.md` | Pages that open on a click, and three whole-beat wording versions | They have chosen the wording |
@@ -44,7 +44,7 @@ In the person's own folder, so that a later session can go on from the files alo
 | File | Holds |
 |---|---|
 | `docs/story/facts.md` | The fact sheet, each fact with where it came from, and the person's answers |
-| `docs/story/concepts.md` | The mix, why each piece, and their answer |
+| `docs/story/concepts.md` | The world, why, and their answer |
 | `docs/story/storyboard.md` | The script |
 | `docs/story/decided-for-you.md` | What you decided without asking |
 | `docs/story/handover.md` | What exists, what the person has said, what is next |

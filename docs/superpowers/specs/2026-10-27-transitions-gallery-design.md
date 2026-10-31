@@ -200,3 +200,28 @@ piece opening its example at that chapter; the agent chooses and writes the
 mix, and the person says in words what to change after seeing it moving.
 The gallery no longer shows a dive between two worlds; the person first
 sees one in the agent's preview.
+
+## Amendment, 31 October 2026: one world per site
+
+Person test 3 built Dawit's site from a mix (sheet, map, sheet, book,
+sheet, sheet, sheet). The author reviewed it: "No this looks terrible. The
+transitions dont seem to have any cohesion. It just pops out of no where.
+The content is also organized in weird places as shown in the picture.
+This is not a good portfolio website"
+([record](../../history/2026-10-31-person-test-3-review.md)). Four of its
+six joins were dives, each a framed card of the next world growing on the
+current object: a picture swapped in, not one picture becoming the next,
+so the goal above for joins between examples was not met. Shown the same
+person in one world on the unchanged engine (every chapter on the map, and
+every chapter on the sheet), the author answered "yes both of them look
+good now".
+
+So a site is told in one world, its chapters joined by that world's own
+move. The agent chooses the world that shows the most of the person and
+shows it running; the person may choose another world in the gallery, ask
+for changes, suggest a component or describe a design of their own. A
+chapter in another world, with its dive, only when the person asks. The
+pieces are used as they are: the agent leaves `stitch/` and the page
+around the story unchanged and puts nothing over the scene (in person test
+3 it added fixed boxes over the scene and changed the pieces' phone
+framing). The dives stay in the engine for a person who asks for a mix.

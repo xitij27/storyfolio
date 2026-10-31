@@ -1,6 +1,6 @@
 # The concept
 
-The second stop: from the fact sheet to one mix of ready pieces, shown running, which the person accepts or changes.
+The second stop: from the fact sheet to one world of ready pieces, shown running, which the person accepts or changes.
 
 ## What the site is
 
@@ -21,25 +21,25 @@ Everything on the scroll is brief. More opens on a click: a project's window or 
 
 ## The pieces
 
-Three worlds can tell any chapter, each drawn only from the person's data: a sheet of paper that bends into each chapter's picture, a map of their places, and a pop-up book. A mix says which world holds each chapter. Two chapters in one world join by its own move; in two, the camera dives from one into the next. All of them run in the gallery, with two made-up people: https://xitij27.github.io/storyfolio/transitions/
+Three worlds can each tell every chapter, drawn only from the person's data: a sheet of paper that bends into each chapter's picture, a map of their places, and a pop-up book. Tell the whole site in one world: each chapter then grows out of the last by that world's own move. Put a chapter in another world only when the person asks; the dive that joins it reads as a picture popping in. All three run in the gallery, with two made-up people: https://xitij27.github.io/storyfolio/transitions/
 
-Use the pieces as they are, with only the person's data in them. Write a scene only when the person asks for one.
+Use the pieces as they are, with only the person's data in them: leave `stitch/` and the page around the story unchanged, and put nothing over the scene. Write a scene only when the person asks for one.
 
-## Choosing the mix
+## Choosing the world
 
-For each chapter, choose the piece that shows the most of this person with the captions hidden, given what their facts hold: how many places, jobs and projects, and whether anyone is quoted. Write a line for each choice saying why, from the fact sheet.
+Choose the world that shows the most of this person with the captions hidden, given what their facts hold: how many places, jobs and projects, and whether anyone is quoted. Write why, and a line for each chapter on what it shows of them, from the fact sheet.
 
 ## Showing it
 
-For a requested build, scaffold the site and fill it as `engine/README.md` says under "The person's site": their confirmed facts, and nothing else, in `content/person.ts`, and the mix in `content/mix.ts`. Answer the Person, Backdrop, Honesty and Thirty seconds tests below for it. Check it at desktop and phone size and look at every picture. Nobody can picture a mix from words, so give the person its address to scroll. For a planning-only request, give the mix in words with the gallery's address.
+For a requested build, scaffold the site and fill it as `engine/README.md` says under "The person's site": their confirmed facts, and nothing else, in `content/person.ts`, and the world in `content/mix.ts` (such as `WHOLE.map`). Answer the Person, Backdrop, Honesty and Thirty seconds tests below for it. Check it at desktop and phone size and look at every picture. Nobody can picture a site from words, so give the person its address to scroll. For a planning-only request, give the world in words with the gallery's address.
 
 Put to them, in this order:
 
-1. the mix, and the line on why each piece;
-2. what of their facts each piece shows, and what it leaves out;
-3. the gallery's address, and that they can swap any piece for another there, ask for changes, suggest a new component, or describe a design of their own.
+1. the world, and why;
+2. what of their facts each chapter shows, and what it leaves out;
+3. the gallery's address, and that they can choose another world there, ask for changes, suggest a new component, or describe a design of their own.
 
-Write the mix, the reasons and their answer to `docs/story/concepts.md`.
+Write the world, the reasons and their answer to `docs/story/concepts.md`.
 
 ## A scene of your own
 
@@ -81,7 +81,7 @@ Where the person has pictures of their own work, the scenes show them. Where the
 
 ## Test each one before you show it
 
-Write your answer to each test that applies: for a mix, the four that "Showing it" names; for a scene of your own, all of them. Rework what fails.
+Write your answer to each test that applies: for the pieces, the four that "Showing it" names; for a scene of your own, all of them. Rework what fails.
 
 | Test | Ask |
 |---|---|

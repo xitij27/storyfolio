@@ -2,7 +2,7 @@
 
 ## The look
 
-Show the person's site in two or three looks: for the mix, the engine's looks at `/preview?look=`; for scenes of your own, the opening, one middle chapter and the ending, built in each. Let the person scroll them, ask which they choose, and stop for their answer before building on. An unanswered question in this turn is not a refusal to choose or permission to choose for them.
+Show the person's site in two or three looks: for the pieces, the engine's looks at `/preview?look=`; for scenes of your own, the opening, one middle chapter and the ending, built in each. Let the person scroll them, ask which they choose, and stop for their answer before building on. An unanswered question in this turn is not a refusal to choose or permission to choose for them.
 
 ## What opens on a click, and the words
 

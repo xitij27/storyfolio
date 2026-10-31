@@ -51,11 +51,11 @@ It is read from three files:
 | File | Holds | Set at |
 |---|---|---|
 | `content/person.ts` | The person's confirmed facts, in the shape of `stitch/person.ts`. The supplied one is made up: replace all of it. A chapter with nothing in it (no study, no quotes) is left out and its neighbours join | Stop 2 |
-| `content/mix.ts` | Which world holds each chapter, chosen to suit the person from the pieces in the library's gallery, https://xitij27.github.io/storyfolio/transitions/. As one line it reads like `map,map,book,book,sheet,sheet,book,map` (`parseMix` and `formatMix` in `stitch/mix.ts`) | Stop 2 |
+| `content/mix.ts` | The world that tells every chapter, chosen to suit the person from the library's gallery, https://xitij27.github.io/storyfolio/transitions/: `WHOLE.sheet`, `WHOLE.map` or `WHOLE.book` (`stitch/mix.ts`). As one line, `map,map,map,map,map,map,map,map`. A chapter put in another world is joined by a dive, which reads as a picture popping in: only when the person asks | Stop 2 |
 | `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), the person's own words for any chapter, the CV's address, and the site's language | Stops 4 to 6 |
 
 `/preview` shows the same story and tries things without editing:
-`?mix=<line>` another mix, `?look=<id>` another look, `?person=noa` or
+`?mix=<line>` another world, `?look=<id>` another look, `?person=noa` or
 `?person=amara` a sample person.
 
 The words under each chapter are written from the person's data (`captions`
@@ -97,12 +97,13 @@ screenshots.
 
 ```bash
 node scripts/stitch-check.mjs --url=http://127.0.0.1:3000 \
-  --mix=map,map,book,book,sheet,sheet,book,map --size=390x844 --points
+  --mix=map,map,map,map,map,map,map,map --size=390x844
 ```
 
-`stitch/` is also the component library's: the library carries a copy,
-which `node <skill>/scripts/sync-stitch.mjs` makes and a test keeps byte for
-byte. In the skill, change `stitch/` only here, then sync.
+In a person's site, use `stitch/` as it is: its pieces are the component
+library's, the ones the gallery shows. Working on the skill itself, change
+`stitch/` only here, then run `node <skill>/scripts/sync-stitch.mjs` to copy
+it to the library (a test keeps the copy byte for byte).
 
 The scroll runs at the examples' pace: a chapter takes 1.9 screens of
 scrolling (at least 1000 pixels), holds for its first 0.4, and the story
@@ -114,7 +115,7 @@ Natural Earth's land, for the globe, the map and the book's map page, is
 
 `/plain-story` keeps the engine this project began with: shared pieces
 carried through the story in formations, a scene of its own for each
-chapter, and the drawing kit. A site made from the mix does not need it. It
+chapter, and the drawing kit. A site made from the pieces does not need it. It
 is there for a design of the person's own that the worlds cannot hold, and
 its pen and land serve any world. `npm run check:plain` runs its browser
 matrix (Check, below).

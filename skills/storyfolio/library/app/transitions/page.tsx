@@ -26,8 +26,8 @@ export default function Transitions() {
         <p className="mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
           A portfolio told in eight chapters, in three worlds: a sheet of paper, a map, a pop-up book. Every picture and
           word comes from the person&apos;s details, so any of them fits anyone with their own words and places. Watch
-          each one whole, or open any chapter&apos;s piece. The agent building a site chooses pieces from all three to
-          suit the person, and shows the mix moving; say what you would change. The two people are made up.
+          each one whole, or open any chapter&apos;s piece. The agent building a site chooses the world that suits the
+          person and shows it moving; say what you would change. The two people are made up.
         </p>
       </header>
 

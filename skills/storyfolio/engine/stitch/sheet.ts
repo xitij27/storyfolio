@@ -3,7 +3,7 @@
 // word on it is drawn from the person's data. Browser only.
 import * as THREE from "three";
 import { yearText, type ChapterKey } from "./chapters.ts";
-import { NOW, placeViews, slots, yearRange, type Person, type Project } from "./person.ts";
+import { NOW, chaptersFor, placeViews, slots, yearRange, type Person, type Project } from "./person.ts";
 import { backdrop, canvas, grain, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand, type Land } from "./land.ts";
 import type { Palette } from "./look.ts";
@@ -234,7 +234,7 @@ function quotePicture(P: Person, C: Palette) {
   });
 }
 
-function contactPage(P: Person, C: Palette) {
+function contactPage(P: Person, C: Palette, whole: boolean) {
   return printed(1024, 1448, (ctx, w, h) => {
     ctx.fillStyle = C.paper; ctx.fillRect(0, 0, w, h);
     const m = 84;
@@ -246,14 +246,15 @@ function contactPage(P: Person, C: Palette) {
     ctx.fillStyle = C.ink; ctx.font = sans(34, 600);
     P.contact.links.slice(0, 6).forEach((l, i) => ctx.fillText(`${l}  →`, m, 710 + i * 70));
     ctx.fillStyle = C.muted; ctx.font = serif(30, 400, "italic");
-    wrap(ctx, `This sheet is ${P.first}'s CV. It folded into every picture above.`, m, h - 200, w - 2 * m, 42);
+    // Only a story told wholly on the sheet folded into every picture.
+    wrap(ctx, `This sheet is ${P.first}'s CV.${whole ? " It folded into every picture above." : ""}`, m, h - 200, w - 2 * m, 42);
   });
 }
 
-const PICTURES: Record<ChapterKey, (P: Person, land: Land, C: Palette) => HTMLCanvasElement> = {
+const PICTURES: Record<ChapterKey, (P: Person, land: Land, C: Palette, whole: boolean) => HTMLCanvasElement> = {
   hello: (P, land, C) => cvPage(P, C), from: (P, land, C) => globeMap(land, C), studied: (P, land, C) => diplomaPicture(P, C),
   worked: (P, land, C) => timeline(P, C), good: (P, land, C) => leafletPicture(P, C), made: (P, land, C) => wallPicture(P, C),
-  say: (P, land, C) => quotePicture(P, C), contact: (P, land, C) => contactPage(P, C),
+  say: (P, land, C) => quotePicture(P, C), contact: (P, land, C, whole) => contactPage(P, C, whole),
 };
 
 // ---------- The sheet ----------
@@ -313,7 +314,8 @@ export const createSheet: WorldFactory = async (env, chapters) => {
   const camera = new THREE.PerspectiveCamera(FOV, 1, 0.05, 200);
 
   const tex: Partial<Record<ChapterKey, THREE.Texture>> = {};
-  for (const k of chapters) tex[k] = texture(PICTURES[k](P, env.land, C), env.renderer);
+  const whole = chaptersFor(P).every((k) => own.has(k));
+  for (const k of chapters) tex[k] = texture(PICTURES[k](P, env.land, C, whole), env.renderer);
   const first = tex[chapters[0]]!;
   const mat = new THREE.ShaderMaterial({
     vertexShader: VERT, fragmentShader: FRAG, side: THREE.DoubleSide,

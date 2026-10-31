@@ -11,7 +11,7 @@ A row to a chapter:
 | Chapter | Its name | What it holds, from the concept's list | What it tells, in a few words | What its scene pictures | How it grows out of the last | What you can touch |
 |---|---|---|---|---|---|---|
 
-For a site made from the mix, a chapter's scene is its piece, and it grows out of the last by its world's move or a dive: say which, and what of the fact sheet it shows.
+For a site made from the pieces, a chapter's scene is its piece, and it grows out of the last by its world's move: say what of the fact sheet it shows.
 
 ## The beats
 
@@ -19,7 +19,7 @@ Under each chapter, a row to a beat. A beat is one settled state of the scene an
 
 A full story normally has twelve to twenty-two meaningful beats. Add up their screen heights, state the total, and trim repetition. Do not pad or invent facts to reach the range. If the confirmed material calls for a shorter story, propose that exception explicitly for the person's approval.
 
-From the mix, a chapter is one beat of 1.9 screens, and the range does not apply.
+From the pieces, a chapter is one beat of 1.9 screens, and the range does not apply.
 
 | Beat | Screens | What the scene shows | The pictures and words in it | What its caption stands on |
 |---|---|---|---|---|
@@ -54,7 +54,7 @@ Say what a visitor gets in each case. The text is ordinary HTML over the scene, 
 
 ## The look and the type
 
-Both come from the world's materials: plates are ceramic on linen, a status page is dark glass, a paper is white with dark ink. Name two or three looks, each as its ground, its ink, one accent, and its surfaces. The person picks by scrolling, once it is built. For the mix, name two or three of the engine's looks (`stitch/look.ts`); its type is the pieces'.
+Both come from the world's materials: plates are ceramic on linen, a status page is dark glass, a paper is white with dark ink. Name two or three looks, each as its ground, its ink, one accent, and its surfaces. The person picks by scrolling, once it is built. For the pieces, name two or three of the engine's looks (`stitch/look.ts`); its type is the pieces'.
 
 Two typefaces: one for the text, and one for what is printed in the scenes, which belongs to the object.
 
