@@ -19,8 +19,8 @@ raised ([amendment](protocol.md#amendment-31-october-repetition-2)).
 | 2 | Concept (one mix) | passed: sheet,map,sheet x5, running, reasons in concepts.md (430 s, about 129,000 uncached tokens) |
 | 3 | Swap, then storyboard | passed: worked swapped to the book and recorded; storyboard written (233 s, about 171,000 uncached tokens) |
 | 4 | Look | recorded: three looks running, Blueprint recommended; the agent edited the pieces' camera code (1,253 s, about 344,600 uncached tokens) |
-| 5 | Words | running |
-| 6 | Finish | |
+| 5 | Words | stopped at the 30-minute bound before showing the wording: [disposition](rep-2-turn-5-disposition.md) |
+| 6 | Finish | not sent: the runner sends no turn after an incomplete one |
 
 ## Where the run lives
 

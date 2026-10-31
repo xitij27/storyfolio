@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { PageShell } from "@/components/work/page-shell";
+export default function NotFound(){return <PageShell><div className="document-kicker">404 / Dawit Bekele</div><h1>This address isn’t here.</h1><p className="document-lead">Use the story, work index or CV to find your way back.</p><nav className="missing-links" aria-label="Find a page"><Link prefetch={false} href="/">Start the story →</Link><Link prefetch={false} href="/work">Browse the work →</Link><Link prefetch={false} href="/cv">Read the CV →</Link><a href="mailto:dawit@example.com">Email Dawit ↗</a></nav></PageShell>}
