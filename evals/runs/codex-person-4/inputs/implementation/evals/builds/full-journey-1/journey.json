@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "documentKind": "prospective-full-journey-fixture",
+  "id": "full-journey-1",
+  "launchable": false,
+  "runnerStatus": "Prospective schema-3 extension is under review; no launchable case, adapter validation or readiness is claimed here.",
+  "workspaceRoot": "evals/builds/full-journey-1/workspace",
+  "setupIntent": "fixture-only, no existing root application",
+  "files": [
+    "material/asset-notes.md",
+    "material/cv.md",
+    "material/external-helper-catalog.json",
+    "material/lab-notes.md",
+    "material/runtime-resources.json",
+    "public/assets/bring-up-fixture.svg",
+    "public/assets/power-states.svg"
+  ],
+  "prompts": [
+    "evals/builds/full-journey-1/prompts/turn1.md",
+    "evals/builds/full-journey-1/prompts/turn2.md",
+    "evals/builds/full-journey-1/prompts/turn3.md",
+    "evals/builds/full-journey-1/prompts/turn4.md",
+    "evals/builds/full-journey-1/prompts/turn5.md",
+    "evals/builds/full-journey-1/prompts/turn6.md"
+  ],
+  "requestedStops": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "refusalTurns": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "bounds": {
+    "maxTurns": 6,
+    "turnTimeoutMs": 900000,
+    "maxActorWallMs": 5400000,
+    "automaticRetries": 0
+  },
+  "coordinatorCriteria": "evals/builds/full-journey-1/criteria.md",
+  "protocol": "evals/builds/full-journey-1/protocol.md",
+  "pendingBeforeLaunch": [
+    "supported runner adapter and its tests",
+    "equal-arm freeze of the reviewed optional-skill catalog and supplied runtime resource data",
+    "actual environment capability evidence",
+    "frozen independent gate and full-site measurement",
+    "root invocation and cost-control record",
+    "complete input freeze and readiness audit"
+  ]
+}
