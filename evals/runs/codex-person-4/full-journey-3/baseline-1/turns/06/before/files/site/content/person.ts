@@ -1,0 +1,51 @@
+import type { Person } from "@/stitch/person";
+
+// Confirmed facts: ../docs/story/facts.md. All scene pictures are illustrations.
+export const person: Person = {
+  name: "Dawit Bekele", first: "Dawit",
+  role: "Migrations, databases, reliability",
+  line: "Runbook, cutover checklist, rollback plan. Illustration.",
+  seeking: "Going independent in 2027. Write to me about a migration or a conference talk",
+  places: [
+    { name: "Addis Ababa", lat: 9.03, lng: 38.74, what: "study 2009–2013; work to 2016" },
+    { name: "Amsterdam", lat: 52.37, lng: 4.90, what: "moved in 2016" },
+    { name: "Rotterdam", lat: 51.92, lng: 4.48, what: "moved in 2020" },
+  ],
+  study: [{ degree: "BSc", field: "Electrical Engineering", place: "Entoto Technical University", city: "Addis Ababa", from: 2009, to: 2013,
+    note: "Feeder-load logger: one sample per second to an SD card." }],
+  work: [
+    { org: "Entoto Technical University Library", role: "Library systems", place: "Addis Ababa", from: 2013, to: 2016,
+      did: "Ran the library catalogue. In 2014 I dropped a table; that outage is why I care about rollbacks. Added point-in-time recovery and, in 2015, a replica.", uses: ["Debian", "Perl", "MySQL"] },
+    { org: "Lumen Pay", role: "Site Reliability Engineer", place: "Amsterdam", from: 2016 + 2/12, to: 2020 + 6/12,
+      did: "Card payment systems.", uses: [] },
+    { org: "Kestrel Freight", role: "Migration planning and on-call", place: "Rotterdam", from: 2020 + 7/12, to: null,
+      did: "Wrote and sequenced the data-centre exit plan. Led the orders database upgrade with one database engineer. Wrote the first migration runbook and still own it; 40 teams use it.", uses: ["Go", "Postgres", "Kubernetes", "Terraform"] },
+  ],
+  skills: [
+    { group: "Migration planning", items: ["Runbook", "Cutover checklist", "Rollback plan"] },
+    { group: "Databases", items: ["Postgres", "Logical replication", "Dual writes", "Checksums"] },
+    { group: "Reliability", items: ["SLOs", "On-call", "Google SRE book", "Release It!"] },
+  ],
+  projects: [
+    { title: "Data-centre exit", line: "310 services, 14 waves, 26 months. Order API availability: 99.98% over the programme.",
+      tags: ["Illustration", "Migration"], place: "Rotterdam", year: 2022, kind: "list",
+      more: "Kestrel Freight, August 2020–October 2022. I wrote and sequenced the plan; about 60 engineers across teams delivered it. Dependency maps and rehearsed rollbacks preceded shadow reads, dual writes and weighted routing at 1%, 10%, 50% and 100%. Each service was watched against its SLO, then soaked for two weeks. Both data centres closed on schedule. Measured order API availability over the 26 months was 99.98%; there were two internal incidents, each under ten minutes." },
+    { title: "Orders database", line: "A 4 TB Postgres 11 → 15 upgrade, with no maintenance window.",
+      tags: ["Illustration", "Postgres"], place: "Rotterdam", year: 2022, kind: "list",
+      more: "Kestrel Freight, 2022. I led this with one database engineer. Logical replication fed a new Postgres 15 cluster; the order service wrote to both through ferry. Hourly checksums compared the clusters for three weeks. Reads moved before writes; the old cluster stayed warm for a month as the way back. The upgrade had no maintenance window." },
+    { title: "Migration runbook", line: "Six stages with exit checks. I wrote the first version; 40 teams use it.",
+      tags: ["Illustration", "Exit checks"], place: "Rotterdam", year: 2021, kind: "list",
+      more: "I wrote the first version in 2021 and still own it. Preflight, shadow, dual write, cutover, soak and decommission each have an exit check. A service cannot enter a stage until the previous stage's check passes. The runbook is used by 40 teams." },
+    { title: "On-call", line: "We reduced weekly pages from 85 to 22 over about a year.",
+      tags: ["Illustration", "Team of nine"], place: "Rotterdam", year: 2022, kind: "list",
+      more: "In 2021–2022 the nine of us on the platform rota reviewed every alert. Half the work was deleting alerts nobody needed. We replaced threshold alerts with SLO burn-rate alerts on the services that mattered. Pages fell from 85 to 22 a week over about a year. This is our team's result." },
+    { title: "ferry", line: "Maintainer since 2022; author of the cutover command.",
+      tags: ["Illustration", "Go CLI"], place: "Rotterdam", year: 2022, kind: "list",
+      more: "A former colleague created ferry in 2019. I have maintained this Go command-line tool for dual-write cutovers since 2022 and wrote its cutover command. It checks replication lag and checksum parity, switches the write target and keeps the old target ready as a fallback for a set window." },
+    { title: "Boring Migrations", line: "SRE North 2024. Thirty minutes on runbooks, rollback rehearsals and exit checks.",
+      tags: ["Illustration", "Talk"], place: "Rotterdam", year: 2024, kind: "list",
+      more: "I open with my first production outage: in 2014 at the university library I ran a cleanup script against production instead of staging and dropped a table. The catalogue was down six hours. We restored from the night's dump and re-entered a day of loans from paper slips. It is why I care about rollbacks. The talk covers the runbook, rehearsed rollback and exit checks." },
+  ],
+  quotes: [],
+  contact: { email: "dawit@example.com", links: [] },
+};

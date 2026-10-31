@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "../components/story/story.css";
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, select { font: inherit; }
+.missing-page { min-height: 100dvh; background: #0f1318; color: #ece6d9; padding: clamp(40px, 12vw, 160px) clamp(24px, 9vw, 120px); }
+.missing-page .eyebrow { color: #e9a23b; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+.missing-page h1 { font: 600 clamp(38px, 6vw, 74px)/1.1 Georgia, serif; max-width: 800px; margin: 24px 0; }
+.missing-page p { max-width: 520px; line-height: 1.6; color: #c9cfd5; }
+.missing-page nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.missing-page a { padding: 12px 18px; border: 1px solid #6d7782; border-radius: 6px; text-decoration: none; }
+.missing-page a:focus-visible { outline: 3px solid #e9a23b; outline-offset: 4px; }
+.wording-review { background: #0f1318; color: #ece6d9; min-height: 100vh; padding: 32px clamp(18px, 4vw, 64px) 64px; }
+.wording-review > p { max-width: 740px; line-height: 1.6; color: #c9cfd5; }
+.wording-review h1 { font: 600 clamp(32px, 4vw, 52px)/1.15 Georgia, serif; max-width: 850px; margin: 20px 0; }
+.wording-review .review-kicker { color: #e9a23b; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; margin-top: 32px; }
+.wording-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 36px; }
+.wording-option { border: 1px solid #566370; border-radius: 12px; padding: 20px; }
+.wording-option h2 { font-size: 19px; color: #e9a23b; margin: 0 0 12px; }
+.wording-option h3 { font: 600 26px Georgia,serif; margin: 28px 0 14px; }
+.wording-option p { font-size: 14px; line-height: 1.55; }
+.wording-option .review-fixed { font-size: 11px; color: #9aa4ae; }
+.wording-option .review-scene { padding: 22px; border-radius: 8px; background: #f2ede2; color: #1c222a; }
+.review-scene strong { font: 600 29px Georgia,serif; }
+.review-scene p:first-child { font-size: 11px; text-transform: uppercase; color: #6d532e; }
+.review-scene small { font-size: 12px; }
+.wording-option .review-caption { margin-top: 12px; padding: 16px; border: 1px solid #566370; border-radius: 8px; }
+.review-caption > span { color: #e9a23b; font-size: 12px; }
+.review-proof { font-size: 12px !important; color: #c9cfd5; }
+.review-controls { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+.wording-review a:focus-visible { outline: 3px solid #e9a23b; outline-offset: 3px; }
+@media(max-width:1000px) { .wording-grid { grid-template-columns: 1fr; max-width: 640px; } }

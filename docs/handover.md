@@ -35,9 +35,15 @@ the pieces used as they are, nothing over the scene. The sheet's closing
 sentence is now true in a mix. The gallery's index text changed too and
 reaches GitHub Pages only with a push, on the author's word. The author
 then said to run the person test again with longer bounds and to push
-(pushed at `1d650eee`): person test 4 is under way
+(pushed at `1d650eee`): person test 4 ran all six turns
 ([stage-3-person-4](../evals/runs/stage-3-person-4/README.md),
-[protocol](../evals/runs/stage-3-person-4/protocol.md)).
+[final review](../evals/runs/stage-3-person-4/final-review/README.md)): one
+world (the sheet, switched to the map at turn 3), 43 minutes. Root serves
+the finished site at http://172.22.209.33:3140/ (from `/var/tmp/p4-final-site`).
+Open: the author's desktop and phone review of it, which closes Stage 3 or
+not. After it, take the agent's sound engine fixes from turn 4 into the
+engine (a study's city, the camera for "good at", a navigation bar and a
+caption band) and fix the crowding at home on the map.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -247,7 +253,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 31 October (one world per site): **on the author's "yes both of them look good now", after seeing Dawit's site in one world, a site is told in one world** ([record](history/2026-10-31-person-test-3-review.md#one-world-compared), [design amendment](superpowers/specs/2026-10-27-transitions-gallery-design.md#amendment-31-october-2026-one-world-per-site)). `concept.md` (stop 2 chooses a world, shows it running, offers another; a dive only on the person's asking; the pieces as they are, `stitch/` and the page around the story unchanged, nothing over the scene), `SKILL.md`'s stop 2 and record rows, `storyboard.md`, `building.md`, the engine README and `content/mix.ts` (one-world examples; use `stitch/` as it is in a person's site), the gallery's index text, and `stitch/sheet.ts` ("It folded into every picture above" only when the sheet holds every chapter). 418 tests; `check-skill` ok. No run, no push.
+Latest, 31 October (person test 4): **the person test on the one-world skill ran all six turns; root's check passes and the site waits for the author's review** ([run](../evals/runs/stage-3-person-4/README.md), [final review](../evals/runs/stage-3-person-4/final-review/README.md)). Stop 2 chose one world (the sheet) with the pieces untouched; turn 3 switched to the map; turn 4 skipped the looks and edited `stitch/` to fix engine faults and add the navigation Dawit asked for; turns 5 and 6 showed and applied the wording. Seams met (one world, camera flights only); no working project; home crowded on the map. 43 minutes; about 2.1 million uncached tokens as reported, likely overstated by resumed counters.
+
+Earlier, 31 October (one world per site): **on the author's "yes both of them look good now", after seeing Dawit's site in one world, a site is told in one world** ([record](history/2026-10-31-person-test-3-review.md#one-world-compared), [design amendment](superpowers/specs/2026-10-27-transitions-gallery-design.md#amendment-31-october-2026-one-world-per-site)). `concept.md` (stop 2 chooses a world, shows it running, offers another; a dive only on the person's asking; the pieces as they are, `stitch/` and the page around the story unchanged, nothing over the scene), `SKILL.md`'s stop 2 and record rows, `storyboard.md`, `building.md`, the engine README and `content/mix.ts` (one-world examples; use `stitch/` as it is in a person's site), the gallery's index text, and `stitch/sheet.ts` ("It folded into every picture above" only when the sheet holds every chapter). 418 tests; `check-skill` ok. No run, no push.
 
 Earlier, 31 October (person test 3): **plan 3's person test stopped after five turns, and the author found its site "terrible": no cohesion between chapters, things popping in, text in odd places** ([run](../evals/runs/stage-3-person-3/README.md), [review](history/2026-10-31-person-test-3-review.md)). Repetition 1 stopped on the runner's 400-file snapshot bound; repetition 2 passed turns 1 to 3 (one mix from the pieces, running, reasons, the gallery; the swap made and recorded; a storyboard), built three looks in turn 4 while editing the pieces' own phone framing, and ran past turn 5's 30-minute bound before showing the wording. Root's findings: the dives between worlds read as pictures popping in through a window; the agent's fixed boxes and the engine's caption card and rail scatter the text; the sheet's contact sentence is false in a mixed site. Cost known: about 860,000 uncached tokens, turn 5's unknown.
 

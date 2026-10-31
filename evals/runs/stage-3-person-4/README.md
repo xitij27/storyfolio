@@ -14,7 +14,7 @@ Approved by the author's "Launch with those (Recommended)" on 31 October
 | 3 | Switch world, then storyboard | passed: switched to the map and recorded; storyboard written (193 s, about 155,300 uncached tokens) |
 | 4 | Look | recorded: no looks shown (night kept), built ahead; edited the pieces to fix engine faults and add navigation (1,193 s, about 563,400 uncached tokens) |
 | 5 | Words | recorded: night set, three opening and closing versions shown, version 1 recommended (139 s, about 585,900 uncached tokens) |
-| 6 | Finish | running |
+| 6 | Finish | done: wording applied, checks pass, the author's review pending (500 s); root's [final review](final-review/README.md) |
 
 ## Where the run lives
 
