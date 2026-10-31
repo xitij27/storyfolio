@@ -33,3 +33,16 @@ Root fixed the three problems and three more the shots showed on the way,
 and recorded how and what was checked in
 [stitch-3](../../evals/engine/stitch-3/README.md). No run and no push.
 Plan 3 still waits for the author's word.
+
+## Steps 2 and 3, then plan 3
+
+Root reported the fix and recommended the two wording fixes (step 2) and
+the live gallery check (step 3) next, both small and free, and asked:
+"Shall I do those, and then launch plan 3, the paid person test?" The
+author answered, verbatim:
+
+> yes
+
+Root reads this as yes to steps 2 and 3, and then to plan 3: writing it,
+and launching its paid run on person test 2's fixture as the handover's
+step 4 describes.

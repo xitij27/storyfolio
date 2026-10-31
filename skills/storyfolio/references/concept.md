@@ -55,7 +55,7 @@ When the person asks for a new component or describes a design of their own, bui
 
 ## The through-line
 
-One world ties the chapters together, and it looks like the person's field to a colleague at a glance: the systems someone runs, the instruments someone builds with, a cook's kitchen. Paper is for people whose work is paper. Within that world, something that can change shape becomes each chapter's picture.
+In a scene of your own, one world ties the chapters together, and it looks like the person's field to a colleague at a glance: the systems someone runs, the instruments someone builds with, a cook's kitchen. Paper is for people whose work is paper. Within that world, something that can change shape becomes each chapter's picture.
 
 The site this skill came from belongs to a researcher, and its object is a paper's nine pages. The front pages of the papers they learned from hang in the air and fly in to pile up as the paper. The pages bend into the gores of a paper globe for where they have lived. They lie as a desk where scattered data points gather into clusters, for how they work. A maze is printed across them as a floor and solved as the reader scrolls. One photograph spans all nine, grey on one side of a seam and colour on the other. They hang as a wall of plates, a plate for each project, each opening its window.
 
@@ -81,7 +81,7 @@ Where the person has pictures of their own work, the scenes show them. Where the
 
 ## Test each one before you show it
 
-Write each concept's answer to every test. Rework or drop one that fails.
+Write your answer to each test that applies: for a mix, the four that "Showing it" names; for a scene of your own, all of them. Rework what fails.
 
 | Test | Ask |
 |---|---|

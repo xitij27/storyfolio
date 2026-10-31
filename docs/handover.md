@@ -64,7 +64,14 @@ matches (a test fails otherwise), `npm test`, `node evals/check-skill.mjs`,
 and `npm run check` on Dawit's site. Record it as a new study,
 `evals/engine/stitch-3/`, and in this handover.
 
-### 2. Two wording fixes the paid run would read (small; recommended before plan 3)
+### 2. ~~Two wording fixes the paid run would read~~ (done 31 October)
+
+Done on the author's "yes" ([record](history/2026-10-31-fix-the-map.md#steps-2-and-3-then-plan-3)):
+`concept.md`'s tests now say which apply (four for a mix, all for a scene
+of the person's own), its through-line says it is for a scene of their
+own, and `content/site.ts` and `stitch/site.ts` say the CV is built at
+stop 5, as `SKILL.md` and `building.md` do. What follows is the step as
+it was written.
 
 Found by plan 2's final review. An agent in plan 3 reads both, so leaving
 them could steer it wrong:
