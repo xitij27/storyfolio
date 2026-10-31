@@ -103,6 +103,11 @@ look at the frames, and record the result in the stitch-2 study.
 
 ### 4. Plan 3: the person test (paid; on the author's word)
 
+**Under way since 31 October** on the author's "yes": [plan 3](superpowers/plans/2026-10-31-person-test-3.md),
+[protocol](../evals/runs/stage-3-person-3/protocol.md), and where the run
+lives and how to run its next turn: [stage-3-person-3](../evals/runs/stage-3-person-3/README.md).
+What follows is the step as it was written.
+
 Run person test 2's fixture, `evals/builds/full-journey-3` (Dawit), again
 with the changed skill, to see whether a fresh agent now builds his site
 from the pieces. It is the main test of the transitions work, and its site
