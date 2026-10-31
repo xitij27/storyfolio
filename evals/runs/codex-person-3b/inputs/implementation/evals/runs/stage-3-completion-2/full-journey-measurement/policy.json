@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "measurement": "full-journey",
+  "trustedDependencies": {
+    "root": "/tmp/storyfolio-build-capability-20261011",
+    "nextVersion": "16.3.8",
+    "nextCliSha256": "e4c6cfdeac3c9e4e260d2a622d6af9565c49d8017c3d55e8dade07ed58fbe9de",
+    "playwrightEntrypointSha256": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b"
+  },
+  "viewports": { "desktop": { "width": 1440, "height": 900 }, "phone": { "width": 390, "height": 844 }, "short": { "width": 1280, "height": 720 } },
+  "conceptCount": 3,
+  "lookCount": { "min": 2, "max": 3 },
+  "finalBeatCount": { "min": 12, "max": 22 },
+  "boundsMs": { "concepts": 900000, "looks": 900000, "build": 300000, "animatedMode": 1500000, "staticMode": 900000, "auxiliary": 300000 },
+  "shutdownGraceMs": 5000,
+  "focusOnlyAllowance": "At most one source-bound document-start skip to the main story; actual sequential-Tab focus and target response remain required.",
+  "immutableBuildExclusions": ["cache", "trace", "trace-build", "diagnostics", "dev"],
+  "limits": ["No automatic material-look, semantic, full-journey or author-acceptance pass", "All source-defined alternatives and final beats remain in coverage, including excess or broken ones", "No automatic retry or omitted-mode exemption", "Build exclusions apply only to generated runtime cache/trace evidence, not application source"]
+}
