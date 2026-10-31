@@ -172,7 +172,10 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 - Read [AGENTS.md](../AGENTS.md) first. A push and any paid run need the
   author's word.
 - Node 24.14 runs the `.ts` tests. `npm test` (415) and
-  `node evals/check-skill.mjs` pass before each commit.
+  `node evals/check-skill.mjs` pass before each commit. On the WSL machine
+  (31 October), `/usr/bin/node` is 22.22.1, which cannot load `.ts` even
+  with `--experimental-strip-types`: 227 of the JavaScript tests pass and
+  26 `.ts` files fail to load. Install Node 24 there before engine work.
 - Browser: Chromium 1234 at
   `~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome`, named by
   `CHROMIUM`. playwright-core 1.64 wants 1248, which is not installed
@@ -191,7 +194,7 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 28 October (README and About): **on the author's "update the readme and about sections for this repo", the README describes the skill as it now is and the GitHub About is set** ([record](history/2026-10-28-readme-and-about.md)). The README has a new picture (four chapters of the made-up Noa's site across the sheet, the map and the book), the status as of 28 October, the six stops, the eight chapters and three worlds, and what a person leaves with (the site and `docs/story/`). The About has a new description, the gallery as its website and 12 topics; it changed on GitHub at once. The README reaches GitHub with the next push, on the author's word.
+Latest, 28 October (README and About): **on the author's "update the readme and about sections for this repo", the README describes the skill as it now is and the GitHub About is set** ([record](history/2026-10-28-readme-and-about.md)). The README has a new picture (four chapters of the made-up Noa's site across the sheet, the map and the book), the status as of 28 October, the six stops, the eight chapters and three worlds, and what a person leaves with (the site and `docs/story/`). The About has a new description, the gallery as its website and 12 topics; it changed on GitHub at once. The README reaches GitHub with the next push, on the author's word. Found on 31 October, when the author asked again what is left: GitHub's `main` is at `bf8580b0`, so the README is pushed, and none of the next steps above had been started.
 
 Earlier, 28 October (next steps): **the author asked for the next steps to be written down, to work on them in another session; they are the section above** ([record](history/2026-10-28-what-is-left.md#next-steps-written-down)). Found while writing them: `main` at `b8980b51` is on GitHub, pushed by the author at 09:19 UTC (root did not push), and the Pages deploy (run 40663319271) succeeded, so the live gallery carries plan 2's pieces. Not yet answered: fix the map first, and launch plan 3.
 
