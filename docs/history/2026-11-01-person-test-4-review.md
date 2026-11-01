@@ -35,3 +35,13 @@ one sheet that curls into a globe, flattens into the diploma, curves into
 the timeline, folds into the leaflet, tiles into the wall of six projects
 and comes back whole as the contact page. Root asked the author whether
 that flows, and what "wow" means to them, with a site or two that has it.
+
+## The author's answer
+
+> cool transitions mean wow. yes the sheet version is definitely better
+> although it still doesnt feel there yet
+
+So the work goes on from the sheet: its transitions are what must become
+cool. The author's earlier direction stands: they judge examples rather
+than answer technical questions ("come up with those stuff and then I can
+provide my opinion", [27 October](2026-10-27-transition-examples-request.md)).
