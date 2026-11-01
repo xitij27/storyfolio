@@ -45,3 +45,15 @@ So the work goes on from the sheet: its transitions are what must become
 cool. The author's earlier direction stands: they judge examples rather
 than answer technical questions ("come up with those stuff and then I can
 provide my opinion", [27 October](2026-10-27-transition-examples-request.md)).
+
+## Two moves for the sheet, judged
+
+Root built two more ways for the sheet to move between chapters
+([study](../../evals/engine/sheet-moves-1/README.md)): `fold` (a pleated
+fan that turns and opens into the next shape) and `swing` (the camera
+sweeping round a higher wave), and gave the author the three addresses on
+Dawit's facts, today's `slide` among them. The author answered, verbatim:
+
+> yes these look cool
+
+Root then asked which should become the sheet's own.
