@@ -18,7 +18,7 @@ Between stops you work by yourself. At each stop the person decides one thing. Y
 | 1. Read | `references/reading-a-profile.md` | What you found, as facts to confirm and questions to answer. No concept or design | They have answered, and `docs/story/facts.md` holds their answers |
 | 2. Concept | `references/concept.md`, `references/diagrams.md` | One world of gallery pieces, running for a requested build, and why | They have accepted it or said what to change, and `docs/story/concepts.md` records it |
 | 3. Storyboard | `references/storyboard.md` | The script of the whole page | They have said yes to it |
-| 4. Look | `references/building.md`, `engine/README.md` | The whole site in two or three looks | They have chosen a look |
+| 4. Look | `references/building.md`, `engine/README.md` | The whole site in two or three looks and moves | They have chosen a look |
 | 5. Words | `references/building.md` | Pages that open on a click, and three whole-beat wording versions | They have chosen the wording |
 | 6. Finish | `engine/README.md` | The checked site and what still needs their review | Their actual review is recorded |
 

@@ -4,6 +4,8 @@ import type { SiteChoices } from "@/stitch/site";
 export const site: SiteChoices = {
   // The look they chose at stop 4: night, daylight or blueprint (stitch/look.ts).
   look: "night",
+  // How the sheet moves between chapters, chosen at stop 4: fold, swing or slide (stitch/world.ts).
+  move: "swing",
   // Their own words for any chapter, chosen at stop 5, such as { hello: "...", contact: "..." }.
   // A chapter without them shows words written from content/person.ts.
   words: {},

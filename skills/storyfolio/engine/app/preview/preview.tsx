@@ -15,6 +15,6 @@ export function Preview() {
   const who = asked === "noa" || asked === "amara" ? SAMPLE_PEOPLE[asked] : person;
   const chosen = parseMix(params.get("mix") ?? "") ?? mix;
   const look = parseLook(params.get("look")) ?? site.look;
-  const move = parseMove(params.get("move")) ?? undefined;
+  const move = parseMove(params.get("move")) ?? site.move;
   return <StitchedStory person={who} mix={chosen} look={look} move={move} words={who === person ? site.words : undefined} cv={site.cv} />;
 }

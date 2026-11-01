@@ -23,27 +23,16 @@ October the map was fixed for Dawit's places (step 1,
 `check-skill` is ok. Stage 3 of 4 is still open. It closes with plan 3's
 person test and the author's review of its site.
 
-**Waiting on the author.** Plan 3's person test stopped after five of six
-turns, and the author found its site "terrible": no cohesion, things
-popping in, text in odd places ([record](history/2026-10-31-person-test-3-review.md)).
-Shown Dawit's site in one world on the unchanged engine, the author said
-"yes both of them look good now". So on 31 October the skill moved to one
-world per site ([design amendment](superpowers/specs/2026-10-27-transitions-gallery-design.md#amendment-31-october-2026-one-world-per-site)):
-stop 2 chooses one world and shows it running, the person may choose
-another; a chapter in another world (a dive) only when the person asks;
-the pieces used as they are, nothing over the scene. The sheet's closing
-sentence is now true in a mix. The gallery's index text changed too and
-reaches GitHub Pages only with a push, on the author's word. The author
-then said to run the person test again with longer bounds and to push
-(pushed at `1d650eee`): person test 4 ran all six turns
-([stage-3-person-4](../evals/runs/stage-3-person-4/README.md),
-[final review](../evals/runs/stage-3-person-4/final-review/README.md)): one
-world (the sheet, switched to the map at turn 3), 43 minutes. Root serves
-the finished site at http://172.22.209.33:3140/ (from `/var/tmp/p4-final-site`).
-Open: the author's desktop and phone review of it, which closes Stage 3 or
-not. After it, take the agent's sound engine fixes from turn 4 into the
-engine (a study's city, the camera for "good at", a navigation bar and a
-caption band) and fix the crowding at home on the map.
+**Waiting on the author.** Person test 4's map site had no flow or wow
+for the author; the same site on the sheet was "definitely better" but "not
+there yet", and "cool transitions mean wow". On 1 November the sheet gained
+two moves the author found cool, and the person picks one at the look stop
+([record](history/2026-11-01-person-test-4-review.md)). Stage 3 stays open.
+Next, on the author's word: the person test again with the moves (paid),
+and a push. Also open from the run: take the agent's sound engine fixes
+from person test 4's turn 4 into the engine (a study's city, the camera for
+"good at", a navigation bar and a caption band), and the map's crowding at
+home.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -253,7 +242,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 31 October (person test 4): **the person test on the one-world skill ran all six turns; root's check passes and the site waits for the author's review** ([run](../evals/runs/stage-3-person-4/README.md), [final review](../evals/runs/stage-3-person-4/final-review/README.md)). Stop 2 chose one world (the sheet) with the pieces untouched; turn 3 switched to the map; turn 4 skipped the looks and edited `stitch/` to fix engine faults and add the navigation Dawit asked for; turns 5 and 6 showed and applied the wording. Seams met (one world, camera flights only); no working project; home crowded on the map. 43 minutes; about 2.1 million uncached tokens as reported, likely overstated by resumed counters.
+Latest, 1 November (the sheet's moves): **the author found person test 4's map site without flow or wow ("cool transitions mean wow"), preferred the same site on the sheet, and found two new moves for the sheet cool; the person now picks the sheet's move at the look stop** ([record](history/2026-11-01-person-test-4-review.md), [plan](superpowers/plans/2026-11-01-sheet-transitions.md), [study](../evals/engine/sheet-moves-1/README.md)). `fold` (a pleated fan that turns and opens into the next shape) and `swing` (the camera sweeping round a higher wave) beside `slide`; `content/site.ts` holds `move`, a new site starting with `swing`; `building.md` and `SKILL.md`'s stop 4 offer the moves. 419 tests; `check-skill` ok; a fresh scaffold passes `npm run check`. No run; not pushed.
+
+Earlier, 31 October (person test 4): **the person test on the one-world skill ran all six turns; root's check passes and the site waits for the author's review** ([run](../evals/runs/stage-3-person-4/README.md), [final review](../evals/runs/stage-3-person-4/final-review/README.md)). Stop 2 chose one world (the sheet) with the pieces untouched; turn 3 switched to the map; turn 4 skipped the looks and edited `stitch/` to fix engine faults and add the navigation Dawit asked for; turns 5 and 6 showed and applied the wording. Seams met (one world, camera flights only); no working project; home crowded on the map. 43 minutes; about 2.1 million uncached tokens as reported, likely overstated by resumed counters.
 
 Earlier, 31 October (one world per site): **on the author's "yes both of them look good now", after seeing Dawit's site in one world, a site is told in one world** ([record](history/2026-10-31-person-test-3-review.md#one-world-compared), [design amendment](superpowers/specs/2026-10-27-transitions-gallery-design.md#amendment-31-october-2026-one-world-per-site)). `concept.md` (stop 2 chooses a world, shows it running, offers another; a dive only on the person's asking; the pieces as they are, `stitch/` and the page around the story unchanged, nothing over the scene), `SKILL.md`'s stop 2 and record rows, `storyboard.md`, `building.md`, the engine README and `content/mix.ts` (one-world examples; use `stitch/` as it is in a person's site), the gallery's index text, and `stitch/sheet.ts` ("It folded into every picture above" only when the sheet holds every chapter). 418 tests; `check-skill` ok. No run, no push.
 

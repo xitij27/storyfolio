@@ -40,3 +40,16 @@ Root shoots each style's moves at desktop and phone size on Dawit's facts
 and looks at them, then gives the author the three addresses to scroll.
 The author's choice, or what they say to change, decides which becomes the
 sheet's. No paid run until then.
+
+## The author's choice
+
+The author found both new moves cool ("yes these look cool") and chose
+that the person picks: the agent shows the moves at the look stop, next to
+the colour looks ([record](../../history/2026-11-01-person-test-4-review.md#two-moves-for-the-sheet-judged)).
+So `content/site.ts` holds `move` (`fold`, `swing` or `slide`), the site and
+`/preview` use it, `/preview?move=` tries another, and `building.md`'s look
+stop and `SKILL.md`'s stop 4 row say to show the moves and let the person
+choose one. Root's call: a new site starts with `swing`, so the site shown
+at stop 2 already moves with the camera; `slide` stays the engine's own
+default (the gallery's). A fresh scaffold passes typecheck, lint and
+`npm run check`.

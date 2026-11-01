@@ -57,3 +57,12 @@ Dawit's facts, today's `slide` among them. The author answered, verbatim:
 > yes these look cool
 
 Root then asked which should become the sheet's own.
+
+Root asked: "Both new moves look cool to you. Which should the sheet use by
+default on every person's site?" with four options (both in turn, fold
+everywhere, swing everywhere, the person picks). The author chose:
+
+> The person picks
+
+with its description: "The agent shows the moves at the look stop, next to
+the colour looks, and the person chooses."

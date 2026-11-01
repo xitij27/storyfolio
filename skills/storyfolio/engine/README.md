@@ -52,7 +52,7 @@ It is read from three files:
 |---|---|---|
 | `content/person.ts` | The person's confirmed facts, in the shape of `stitch/person.ts`. The supplied one is made up: replace all of it. A chapter with nothing in it (no study, no quotes) is left out and its neighbours join | Stop 2 |
 | `content/mix.ts` | The world that tells every chapter, chosen to suit the person from the library's gallery, https://xitij27.github.io/storyfolio/transitions/: `WHOLE.sheet`, `WHOLE.map` or `WHOLE.book` (`stitch/mix.ts`). As one line, `map,map,map,map,map,map,map,map`. A chapter put in another world is joined by a dive, which reads as a picture popping in: only when the person asks | Stop 2 |
-| `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), the person's own words for any chapter, the CV's address, and the site's language | Stops 4 to 6 |
+| `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), how the sheet moves between chapters (`fold`, `swing` or `slide`), the person's own words for any chapter, the CV's address, and the site's language | Stops 4 to 6 |
 
 `/preview` shows the same story and tries things without editing:
 `?mix=<line>` another world, `?look=<id>` another look, `?move=fold` or
