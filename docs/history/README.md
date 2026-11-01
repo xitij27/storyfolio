@@ -3,7 +3,9 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author verdict: [31 October, person test 3's site: "This is not a good portfolio website"](2026-10-31-person-test-3-review.md).
+Newest author verdict: [1 November, person test 4's map site: no flow, not rich in transitions, no wow factor](2026-11-01-person-test-4-review.md).
+
+Earlier author verdict: [31 October, person test 3's site: "This is not a good portfolio website"](2026-10-31-person-test-3-review.md).
 
 Earlier author direction: [31 October, fix the map before the paid run](2026-10-31-fix-the-map.md).
 
