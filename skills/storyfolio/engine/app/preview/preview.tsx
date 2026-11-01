@@ -3,6 +3,7 @@ import { useSearchParams } from "next/navigation";
 import { StitchedStory } from "@/stitch/react";
 import { parseMix } from "@/stitch/mix";
 import { parseLook } from "@/stitch/look";
+import { parseMove } from "@/stitch/world";
 import { SAMPLE_PEOPLE } from "@/stitch/people";
 import { person } from "@/content/person";
 import { mix } from "@/content/mix";
@@ -14,5 +15,6 @@ export function Preview() {
   const who = asked === "noa" || asked === "amara" ? SAMPLE_PEOPLE[asked] : person;
   const chosen = parseMix(params.get("mix") ?? "") ?? mix;
   const look = parseLook(params.get("look")) ?? site.look;
-  return <StitchedStory person={who} mix={chosen} look={look} words={who === person ? site.words : undefined} cv={site.cv} />;
+  const move = parseMove(params.get("move")) ?? undefined;
+  return <StitchedStory person={who} mix={chosen} look={look} move={move} words={who === person ? site.words : undefined} cv={site.cv} />;
 }

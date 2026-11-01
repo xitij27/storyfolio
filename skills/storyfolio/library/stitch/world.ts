@@ -6,8 +6,13 @@ import type { Person, Project } from "./person.ts";
 import type { Land } from "./land.ts";
 import type { Palette } from "./look.ts";
 
+/** How the sheet moves between two chapters: `slide` (its shapes blend), `fold` (it folds up and opens) or `swing` (the camera sweeps round it). */
+export const MOVES = ["slide", "fold", "swing"] as const;
+export type Move = (typeof MOVES)[number];
+export const parseMove = (text: string | null): Move | null => (MOVES as readonly string[]).includes(text ?? "") ? (text as Move) : null;
+
 /** `words` are the person's own words for any chapter, which a world that prints a chapter's words uses in place of its own. */
-export type WorldEnv = { person: Person; palette: Palette; words: Partial<Record<ChapterKey, string>>; renderer: THREE.WebGLRenderer; land: Land; narrow: () => boolean };
+export type WorldEnv = { person: Person; palette: Palette; words: Partial<Record<ChapterKey, string>>; renderer: THREE.WebGLRenderer; land: Land; narrow: () => boolean; move?: Move };
 
 /** Where the story stands inside one world: chapter keys, the eased move t, its raw share, the hold's share and the clock. */
 export type WorldView = { from: ChapterKey; to: ChapterKey; t: number; raw: number; local: number; time: number };

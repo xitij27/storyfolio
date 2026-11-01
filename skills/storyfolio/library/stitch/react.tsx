@@ -9,6 +9,7 @@ import { formatMix, parseMix, type Mix } from "./mix.ts";
 import { LOOKS, uiColours, type LookId, type Palette } from "./look.ts";
 import { miniPicture, canvas as paintCanvas } from "./paint.ts";
 import { smooth, type ScrollState } from "./scroll.ts";
+import type { Move } from "./world.ts";
 import "./stitch.css";
 
 type Handle = { dispose(): void; goTo(index: number, instant?: boolean): void };
@@ -24,8 +25,8 @@ function lookStyle(p: Palette): CSSProperties {
  * `start` opens the story at that chapter when the page is at its top, as a link to one chapter's piece does.
  * `words` are the person's own words for any chapter; `cv` is where their CV is, and its button shows only with it.
  */
-export function StitchedStory({ person, mix, showWords = true, start, look = "night", words: chosen, cv }: {
-  person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId; words?: Partial<Record<ChapterKey, string>>; cv?: string;
+export function StitchedStory({ person, mix, showWords = true, start, look = "night", words: chosen, cv, move }: {
+  person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId; words?: Partial<Record<ChapterKey, string>>; cv?: string; move?: Move;
 }) {
   const palette = LOOKS[look];
   const keys = useMemo(() => chaptersFor(person), [person]);
@@ -58,7 +59,7 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
       if (ctaRef.current) { ctaRef.current.style.opacity = cta.toFixed(3); ctaRef.current.style.pointerEvents = cta > 0.5 ? "auto" : "none"; }
     };
     import("./stage.ts")
-      .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, palette: LOOKS[look], words: JSON.parse(chosenText), spacer, onState, onProject: setProject }))
+      .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, palette: LOOKS[look], words: JSON.parse(chosenText), move, spacer, onState, onProject: setProject }))
       .then((h) => {
         if (!alive) { h.dispose(); return; }
         handle.current = h;
@@ -68,7 +69,7 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
       })
       .catch((e) => { console.error(e); if (alive) setScene("off"); });
     return () => { alive = false; handle.current?.dispose(); handle.current = null; };
-  }, [person, mixText, keys, start, look, chosenText]);
+  }, [person, mixText, keys, start, look, chosenText, move]);
 
   useEffect(() => {
     if (!project) return;

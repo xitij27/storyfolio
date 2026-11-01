@@ -8,6 +8,7 @@ import { backdrop, canvas, grain, label, miniPicture, rrect, sans, serif, textur
 import { dotLand, type Land } from "./land.ts";
 import type { Palette } from "./look.ts";
 import { equirect } from "./frame.ts";
+import { fan } from "./fold.ts";
 import { clamp, ease, lerp, smooth } from "./scroll.ts";
 import { holding, type Anchor, type World, type WorldFactory, type WorldView } from "./world.ts";
 
@@ -64,6 +65,9 @@ const cards: Shape = (U, V, c) => {
   return [(c - 1) * 2.35 + xl * Math.cos(tilt) - yl * Math.sin(tilt), xl * Math.sin(tilt) + yl * Math.cos(tilt),
     0.07 * Math.sin(Math.PI * lu) + (c === 1 ? 0.18 : 0)];
 };
+
+// Folded up between two chapters, when the sheet moves by folding.
+const packet: Shape = (U, V) => fan(U, V, W, H * 0.96, 6, 1.1);
 
 const SHAPES: Record<ChapterKey, Shape> = { hello: page, from: globe, studied: diploma, worked: ribbon, good: leaflet, made: wall, say: cards, contact: page };
 // How each chapter is framed: the box to fit, and how the sheet is turned.
@@ -266,7 +270,7 @@ void main() {
   gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 }`;
 const FRAG = `
-uniform sampler2D A; uniform sampler2D B; uniform vec3 back;
+uniform sampler2D A; uniform sampler2D B; uniform vec3 back; uniform float soft;
 varying vec2 vUv; varying float vProg; varying vec3 vN;
 void main() {
   vec3 n = normalize(vN);
@@ -274,7 +278,7 @@ void main() {
   float d = max(dot(n, normalize(vec3(-0.35, 0.55, 0.85))), 0.0);
   float light = 0.58 + 0.46 * d;
   vec3 a = texture2D(A, vUv).rgb, b = texture2D(B, vUv).rgb;
-  vec3 col = gl_FrontFacing ? mix(a, b, smoothstep(0.38, 0.62, vProg)) : back;
+  vec3 col = gl_FrontFacing ? mix(a, b, smoothstep(0.5 - soft, 0.5 + soft, vProg)) : back;
   gl_FragColor = vec4(col * light, 1.0);
   #include <colorspace_fragment>
 }`;
@@ -302,11 +306,11 @@ const toV = (lat: number, lng: number, rad: number) => {
 };
 
 type Tile = THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial> & {
-  userData: { c: number; r: number; shapes: Partial<Record<ChapterKey, Float32Array>>; project: Project | null };
+  userData: { c: number; r: number; shapes: Partial<Record<ChapterKey, Float32Array>>; folded: Float32Array; project: Project | null };
 };
 
 export const createSheet: WorldFactory = async (env, chapters) => {
-  const P = env.person, C = env.palette;
+  const P = env.person, C = env.palette, style = env.move ?? "slide";
   const own = new Set(chapters);
   const scene = new THREE.Scene();
   const bg = texture(backdrop(C));
@@ -319,7 +323,7 @@ export const createSheet: WorldFactory = async (env, chapters) => {
   const first = tex[chapters[0]]!;
   const mat = new THREE.ShaderMaterial({
     vertexShader: VERT, fragmentShader: FRAG, side: THREE.DoubleSide,
-    uniforms: { A: { value: first }, B: { value: first }, back: { value: new THREE.Color(C.paperDark) } },
+    uniforms: { A: { value: first }, B: { value: first }, back: { value: new THREE.Color(C.paperDark) }, soft: { value: 0.12 } },
   });
 
   const sheet = new THREE.Group();
@@ -356,9 +360,11 @@ export const createSheet: WorldFactory = async (env, chapters) => {
       for (let i = 0; i < n; i++) a.set(SHAPES[k](uv[i * 2], uv[i * 2 + 1], c, r), i * 3);
       shapes[k] = a;
     }
+    const folded = new Float32Array(n * 3);
+    for (let i = 0; i < n; i++) folded.set(packet(uv[i * 2], uv[i * 2 + 1], c, r), i * 3);
     const mesh = new THREE.Mesh(geo, mat) as Tile;
     mesh.castShadow = true;
-    mesh.userData = { c, r, shapes, project: wallSlots[(ROWS - 1 - r) * COLS + c] };
+    mesh.userData = { c, r, shapes, folded, project: wallSlots[(ROWS - 1 - r) * COLS + c] };
     sheet.add(mesh);
     tiles.push(mesh);
   }
@@ -434,17 +440,28 @@ export const createSheet: WorldFactory = async (env, chapters) => {
       shaped = sig;
       mat.uniforms.A.value = tex[from];
       mat.uniforms.B.value = tex[to];
+      // A swing changes the picture at the wave's edge; a slide and a fold blend it.
+      mat.uniforms.soft.value = style === "swing" ? 0.015 : 0.12;
       const order = ORDER[from];
       for (const m of tiles) {
-        const { c, r, shapes } = m.userData;
+        const { c, r, shapes, folded } = m.userData;
         const a = shapes[from]!, b = shapes[to]!;
         const pos = m.geometry.attributes.position.array as Float32Array;
         const prog = m.geometry.attributes.prog.array as Float32Array;
         const uv = m.geometry.attributes.uv.array as Float32Array;
         for (let k = 0; k < prog.length; k++) {
-          const p = moving ? ease(clamp(raw * 1.7 - 0.7 * order(uv[k * 2], uv[k * 2 + 1], c, r))) : 0;
+          const o = order(uv[k * 2], uv[k * 2 + 1], c, r);
+          if (style === "fold") {
+            // Into the packet over the first half of the move, out of it into the next shape over the second.
+            const q = moving ? ease(clamp(raw * 1.15 - 0.15 * o)) : 0;
+            prog[k] = q;
+            const [p0, p1, s] = q < 0.5 ? [a, folded, ease(q * 2)] : [folded, b, ease(q * 2 - 1)];
+            for (let j = 0; j < 3; j++) pos[k * 3 + j] = lerp(p0[k * 3 + j], p1[k * 3 + j], s);
+            continue;
+          }
+          const p = moving ? ease(clamp(raw * 1.7 - 0.7 * o)) : 0;
           prog[k] = p;
-          const lift = 0.45 * Math.sin(Math.PI * p);
+          const lift = (style === "swing" ? 0.9 : 0.45) * Math.sin(Math.PI * p);
           pos[k * 3] = lerp(a[k * 3], b[k * 3], p);
           pos[k * 3 + 1] = lerp(a[k * 3 + 1], b[k * 3 + 1], p);
           pos[k * 3 + 2] = lerp(a[k * 3 + 2], b[k * 3 + 2], p) + lift;
@@ -459,7 +476,9 @@ export const createSheet: WorldFactory = async (env, chapters) => {
 
     // Turn and frame the sheet.
     const pa = poseOf(from, moving ? 1 : local), pb = poseOf(to, 0);
-    sheet.rotation.set(lerp(pa.rot[0], pb.rot[0], t), lerp(pa.rot[1], pb.rot[1], t), lerp(pa.rot[2], pb.rot[2], t));
+    // Folded, the packet turns once about its spine.
+    const spin = style === "fold" && moving ? 2 * Math.PI * smooth(0.3, 0.7, raw) : 0;
+    sheet.rotation.set(lerp(pa.rot[0], pb.rot[0], t), lerp(pa.rot[1], pb.rot[1], t) + spin, lerp(pa.rot[2], pb.rot[2], t));
     const scale = lerp(pa.scale, pb.scale, t);
     sheet.scale.setScalar(scale);
     sheet.position.y = !moving && from === "hello" ? 0.04 * Math.sin(time * 0.8) : 0;
@@ -473,8 +492,20 @@ export const createSheet: WorldFactory = async (env, chapters) => {
     const box = seen(from), box2 = seen(to);
     // Lean in on each hold; stand back, and look a little down, while the sheet moves.
     const turning = Math.sin(Math.PI * raw);
-    const d = lerp(fitDistance(box[0], box[1]), fitDistance(box2[0], box2[1]), t) * lerp(0.95, 1.1, turning);
-    camera.position.set(0, d * lerp(0.02, 0.09, turning), d);
+    const between = lerp(fitDistance(box[0], box[1]), fitDistance(box2[0], box2[1]), t);
+    let d = between * lerp(0.95, 1.1, turning), side = 0, rise = lerp(0.02, 0.09, turning);
+    if (style === "fold") {
+      // Push in on the folded packet, pull back as it opens.
+      const shut = smooth(0.15, 0.5, raw) * (1 - smooth(0.5, 0.85, raw));
+      d = lerp(between, fitDistance(2.2, H * 1.08), shut);
+      rise = lerp(rise, 0.22, shut);
+    } else if (style === "swing") {
+      // Sweep round the sheet and rise, to one side and the other chapter by chapter.
+      d = between * lerp(1, 1.3, turning);
+      side = (chapters.indexOf(from) % 2 ? -1 : 1) * 0.75 * turning;
+      rise = lerp(0.02, 0.32, turning);
+    }
+    camera.position.set(Math.sin(side) * d, d * rise, Math.cos(side) * d);
     camera.lookAt(0, 0, 0);
     camera.updateMatrixWorld();
     // What is wider than the view, the timeline always and on a phone the rest, is

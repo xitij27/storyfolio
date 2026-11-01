@@ -55,8 +55,9 @@ It is read from three files:
 | `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), the person's own words for any chapter, the CV's address, and the site's language | Stops 4 to 6 |
 
 `/preview` shows the same story and tries things without editing:
-`?mix=<line>` another world, `?look=<id>` another look, `?person=noa` or
-`?person=amara` a sample person.
+`?mix=<line>` another world, `?look=<id>` another look, `?move=fold` or
+`?move=swing` another way for the sheet to move between chapters (`slide`
+is the default), `?person=noa` or `?person=amara` a sample person.
 
 The words under each chapter are written from the person's data (`captions`
 in `stitch/chapters.ts`) until the person chooses their own. Put those in

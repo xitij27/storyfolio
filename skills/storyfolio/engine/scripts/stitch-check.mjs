@@ -16,6 +16,7 @@
     --mix=TEXT      eight world ids in chapter order; default the page's own
     --person=KEY    a sample person, noa or amara; default the site's own
     --look=ID       a look, night, daylight or blueprint; default the page's own
+    --move=ID       how the sheet moves, slide, fold or swing; default slide
     --size=WxH      viewport, default 1440x900
     --out=DIR       where report.json and the PNGs go, default checks/stitch
     --points        also shoot the first move between two worlds at raw
@@ -78,6 +79,7 @@ const query = new URLSearchParams();
 if (options.mix && options.mix !== true) query.set("mix", String(options.mix));
 if (options.person && options.person !== true) query.set("person", String(options.person));
 if (options.look && options.look !== true) query.set("look", String(options.look));
+if (options.move && options.move !== true) query.set("move", String(options.move));
 const where = `/${String(options.path && options.path !== true ? options.path : "/preview").replace(/^\/+/, "")}`;
 const address = `${String(options.url).replace(/\/$/, "")}${where}${query.size ? `?${query}` : ""}`;
 const report = { address, size: `${width}x${height}`, shots: [], problems };
