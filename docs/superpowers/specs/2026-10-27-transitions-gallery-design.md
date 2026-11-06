@@ -225,3 +225,16 @@ pieces are used as they are: the agent leaves `stitch/` and the page
 around the story unchanged and puts nothing over the scene (in person test
 3 it added fixed boxes over the scene and changed the pieces' phone
 framing). The dives stay in the engine for a person who asks for a mix.
+
+## Amendment, 6 November 2026: the gallery is the front page
+
+On the author's "you can do everything with the recommendation suggests"
+([record](../../history/2026-11-06-site-and-readme-direction.md), after the
+[review of the site and README](../plans/2026-11-06-site-and-readme-review.md)),
+the non-goal "changing the component library's static sections, beyond
+linking to the gallery" no longer holds for the index. The gallery is now
+the Pages site's front page and is still served at `/transitions/`; the
+older pieces' index moved to `/pieces/`. The front page opens on a
+recording of the sheet's fold, the chapters are one table of chapters by
+worlds, and the bar over a whole example picks the sheet's move. The
+pieces themselves, their demos and their files are unchanged.

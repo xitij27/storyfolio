@@ -12,7 +12,7 @@ export function Skills() {
 
   return (
     <Section id="skills" className="bg-muted/20">
-      <SectionHeading eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
+      <SectionHeading title={t.title} subtitle={t.subtitle} />
       <SkillGroups evidence={evidence} periods={periods} />
     </Section>
   );

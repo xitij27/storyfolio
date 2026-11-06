@@ -36,26 +36,19 @@ export function Contact() {
 
   return (
     <Section id="contact">
-      <div className="relative overflow-hidden rounded-3xl bg-slate-900 p-1">
-        <div className="relative overflow-hidden rounded-[1.68rem] bg-slate-950 p-8 text-center shadow-sm sm:p-14">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-0 -top-24 mx-auto h-48 w-2/3 rounded-full bg-gradient-to-r from-brand via-brand-2 to-brand-3 opacity-20 blur-3xl"
-          />
-
-          <div className="relative">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium tracking-wide text-brand uppercase">
-              {t.eyebrow}
-            </span>
-            <h2 className="mx-auto mt-4 max-w-xl font-heading text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl">
+      <div className="border-t border-border pt-12 sm:pt-16">
+        <div className="grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-6">
+            <h2 className="font-heading text-5xl leading-[1.04] font-semibold text-balance sm:text-6xl">
               {t.title}
             </h2>
-            <p className="mx-auto mt-3 max-w-lg text-pretty text-slate-300">
+            <p className="mt-4 max-w-lg text-lg text-pretty text-muted-foreground">
               {t.subtitle}
             </p>
+          </div>
 
-            <div className="mt-8 flex flex-col items-center gap-5">
-              <div className="flex flex-col items-center gap-3 sm:flex-row">
+            <div className="flex flex-col items-start gap-6 lg:col-span-6 lg:justify-end">
+              <div className="flex flex-col items-start gap-3 sm:flex-row">
                 <a
                   href={`mailto:${EMAIL}`}
                   className={cn(buttonVariants({ size: "lg" }), "h-11 px-6 text-sm")}
@@ -68,7 +61,7 @@ export function Contact() {
                   onClick={copyEmail}
                   className={cn(
                     buttonVariants({ variant: "outline", size: "lg" }),
-                    "h-11 px-5 font-mono text-sm",
+                    "h-11 px-5 text-sm",
                   )}
                 >
                   <span className="relative grid size-4 place-items-center">
@@ -101,8 +94,8 @@ export function Contact() {
                 {copied ? t.copied : ""}
               </span>
 
-              <div className="flex flex-col items-center gap-3">
-                <span className="text-xs text-slate-400">{t.or}</span>
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-muted-foreground">{t.or}</span>
                 <div className="flex items-center gap-2">
                   {person.socials
                     .filter((s) => s.id !== "email")
@@ -123,7 +116,6 @@ export function Contact() {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </Section>

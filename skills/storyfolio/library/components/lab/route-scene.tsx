@@ -14,7 +14,7 @@ import { facing, type Place } from "@/lib/globe";
   the sketch was made at.
 */
 
-const COLOURS: GlobeColours = { globe: "#141b2b", land: "#e3ecff", arc: "#f2b84b", glow: "#8fa6ff" };
+const COLOURS: GlobeColours = { globe: "#16202b", land: "#ece6d9", arc: "#e9a23b", glow: "#3a4a5c" };
 
 const smoothstep = (x: number, a: number, b: number) => {
   const t = Math.min(1, Math.max(0, (x - a) / (b - a)));

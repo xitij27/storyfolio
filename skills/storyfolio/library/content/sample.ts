@@ -67,7 +67,6 @@ export const person = {
   ] satisfies Social[],
 
   hero: {
-    greeting: "Hello, I'm",
     roles: ["Research Engineer", "Data Engineer", "Map Enthusiast"],
     tagline: "I build the software that turns messy transit data into forecasts people plan their day around.",
     cta: "View my work",
@@ -76,20 +75,18 @@ export const person = {
   },
 
   about: {
-    eyebrow: "About me",
-    title: "Introduction",
+    title: "About me",
     portraitAlt: "A drawn portrait of Noa",
     body: "I grew up in Gothenburg, studied computer science in Delft and have worked in Zurich since. I like the part of a project where research meets engineering: finding out what the data can really say, then building something that keeps saying it reliably. I now live in Montreal.",
     years: 3,
-    stats: { experience: "Experience", completed: "Completed", workedIn: "Worked in" },
+    stats: { experience: "years at work", completed: "projects", workedIn: "places of work" },
   },
   places: PLACES,
   /** The order the person moved in; the globe draws an arc between each pair. */
   journey: [PLACES.gothenburg, PLACES.delft, PLACES.zurich, PLACES.montreal],
 
   skills: {
-    eyebrow: "Toolbox",
-    title: "Technologies I work with",
+    title: "Tools, and where I used them",
     subtitle: "Each one counts the roles and projects it shows up in.",
     hint: "Pick one to see where it shows up.",
     rolesHeading: "Roles",
@@ -103,10 +100,9 @@ export const person = {
   ] satisfies SkillGroup[],
 
   experience: {
-    eyebrow: "Career",
     title: "Where I've worked",
     subtitle: "A research lab, a startup and an internship.",
-    orgTypes: { mnc: "MNC", startup: "Startup", "research-lab": "Research Lab" } satisfies Record<OrgType, string>,
+    orgTypes: { mnc: "a large company", startup: "a startup", "research-lab": "a research lab" } satisfies Record<OrgType, string>,
     showMore: "Show more",
     showLess: "Show less",
     present: "Present",
@@ -154,7 +150,6 @@ export const person = {
   ] satisfies Experience[],
 
   projects: {
-    eyebrow: "Portfolio",
     title: "Selected projects",
     subtitle: "Coursework, research and things built for fun.",
     all: "All",
@@ -250,7 +245,6 @@ export const person = {
   ] satisfies Project[],
 
   testimonials: {
-    eyebrow: "Testimonials",
     title: "What people say",
     subtitle: "From people Noa has worked with.",
     pause: "Pause testimonials",
@@ -263,8 +257,7 @@ export const person = {
   ] satisfies Testimonial[],
 
   contact: {
-    eyebrow: "Contact",
-    title: "Let's build something together",
+    title: "Write to Noa",
     subtitle: "I'm open to research engineering roles and interesting data. The fastest way to reach me is email.",
     emailCta: "Email me",
     or: "or find me on",

@@ -20,9 +20,9 @@ const Frame = ({ children }: { children: React.ReactNode }) => (
 export function RotatingTextDemo() {
   return (
     <Frame>
-      <h2 className="text-center font-heading text-4xl font-bold tracking-tight sm:text-6xl">
+      <h2 className="text-center font-heading text-4xl leading-tight font-semibold sm:text-6xl">
         {person.name} is a <br />
-        <RotatingText words={person.hero.roles} className="text-gradient" />
+        <RotatingText words={person.hero.roles} />
       </h2>
     </Frame>
   );
@@ -32,7 +32,7 @@ export function PixelPortraitDemo() {
   return (
     <Frame>
       <div className="flex flex-col items-center gap-6">
-        <PixelPortrait src={person.portrait} alt={person.about.portraitAlt} size={240} cell={5} tint="#8b7cf6" className="border border-border/60 shadow-xl" />
+        <PixelPortrait src={person.portrait} alt={person.about.portraitAlt} size={240} cell={5} tint="#e9a23b" className="border border-border" />
         <p className="text-sm text-muted-foreground">Move the pointer over the portrait.</p>
       </div>
     </Frame>
@@ -64,9 +64,9 @@ export function GooeySearchDemo() {
     <Frame>
       <div className="flex w-full max-w-md flex-col items-end gap-6">
         <GooeySearch value={search} onValueChange={setSearch} placeholder="Search projects" ariaLabel="Search projects" width={220} />
-        <ul className="w-full space-y-2" aria-live="polite">
+        <ul className="w-full divide-y divide-border border-y border-border" aria-live="polite">
           {found.map((p) => (
-            <li key={p.id} className="rounded-lg border border-border/60 bg-card px-4 py-2 text-sm">{p.title}</li>
+            <li key={p.id} className="py-3">{p.title}</li>
           ))}
         </ul>
       </div>
@@ -91,7 +91,7 @@ export function RippleGridDemo() {
     <section className="relative isolate grid h-[70dvh] place-items-center overflow-hidden">
       <RippleGrid />
       <div className="pointer-events-none relative text-center">
-        <h2 className="font-heading text-4xl font-bold tracking-tight">{person.contact.title}</h2>
+        <h2 className="font-heading text-5xl font-semibold">{person.contact.title}</h2>
         <p className="mt-3 text-muted-foreground">Click anywhere on the grid.</p>
       </div>
     </section>

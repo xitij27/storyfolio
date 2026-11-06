@@ -18,7 +18,8 @@ export type ExpandingCard = {
   slides: CardSlide[];
   categoryLabel: string;
   /** Tailwind gradient stops, "from-indigo-500 to-violet-500". */
-  accentClassName: string;
+  /** Shown when the card has no picture: a drawing of the work, never a coloured block. */
+  cover?: ReactNode;
   highlights: string[];
   tags: string[];
   links: CardLink[];
@@ -76,8 +77,8 @@ function Cover({ card, picture, small }: { card: ExpandingCard; picture?: string
     // eslint-disable-next-line @next/next/no-img-element
     <img src={picture} alt="" className={cn("w-full object-cover", small ? "aspect-[16/9]" : "h-full")} />
   ) : (
-    <span className={cn("grid w-full place-items-center bg-gradient-to-br p-6 text-center font-heading font-bold text-white", card.accentClassName, small ? "aspect-[16/9] text-xl" : "h-full text-3xl")}>
-      {card.title}
+    <span className={cn("block w-full bg-muted [&>canvas]:block [&>canvas]:size-full", small ? "aspect-[16/9]" : "h-full")}>
+      {card.cover}
     </span>
   );
 }
@@ -107,13 +108,13 @@ export function CardWindow({ card, labels, onClose }: { card: ExpandingCard; lab
       onClose={onClose}
       // A click on the backdrop lands on the dialog itself, outside the panel.
       onClick={(event) => event.target === dialog.current && dialog.current?.close()}
-      className="m-auto max-h-[92dvh] w-[min(42rem,calc(100vw-2rem))] overflow-visible bg-transparent p-0 text-foreground backdrop:bg-black/55 backdrop:backdrop-blur-sm"
+      className="m-auto max-h-[92dvh] w-[min(42rem,calc(100vw-2rem))] overflow-visible bg-transparent p-0 text-foreground backdrop:bg-black/65"
     >
       <motion.div
         initial={reduce ? { opacity: 0 } : { opacity: 0, y: 16, scale: 0.97 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.3, ease: EASE_OUT }}
-        className="relative max-h-[92dvh] overflow-y-auto rounded-2xl border border-border/60 bg-card shadow-2xl"
+        className="relative max-h-[92dvh] overflow-y-auto rounded-2xl border border-border bg-card"
       >
         <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl bg-muted">
           {current?.type === "node" ? current.node : <Cover card={card} picture={current?.type === "image" ? current.src : undefined} />}

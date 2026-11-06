@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 /*
-  Checks the transitions gallery of a running build, local or live, at a
-  desktop and a phone size: the index and each whole example open with no
-  page error and no failed request, nothing scrolls sideways, a piece's
-  picture opens its example at that chapter, and switching person changes
-  the words and places and keeps the chapter.
+  Checks the gallery of a running build, local or live, at a desktop and a
+  phone size: the front page, its first address (/transitions/), the pieces
+  index and each whole example open with no page error and no failed
+  request, nothing scrolls sideways, a piece's picture opens its example at
+  that chapter (on a phone, after choosing its world above the table),
+  switching person changes the words and places and keeps the chapter, and
+  the sheet's move switch puts the move in the address.
 
     PLAYWRIGHT_CORE=<path to a playwright-core install> \
       node scripts/gallery-check.mjs --url=https://xitij27.github.io/storyfolio [--out=dir]
@@ -28,7 +30,9 @@ const browser = await chromium.launch({
   args: ["--no-sandbox", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"],
 });
 const pages = [
+  ["front", "/"],
   ["index", "/transitions/"],
+  ["pieces", "/pieces/"],
   ["whole-sheet", "/transitions/whole/sheet/"],
   ["whole-map", "/transitions/whole/map/?p=amara"],
   ["whole-book", "/transitions/whole/book/"],
@@ -48,7 +52,7 @@ for (const [w, h] of [[1440, 900], [390, 844]]) {
   const size = { size: `${w}x${h}`, pages: [] };
   for (const [name, route] of pages) {
     await page.goto(base + route, { waitUntil: "load" });
-    if (name !== "index") {
+    if (route.includes("/whole/")) {
       await page.waitForFunction(() => window.__stitch?.ready || window.__stitch?.error, null, { timeout: 60000 }).catch(() => problems.push(`${where()} never ready`));
       const error = await page.evaluate(() => window.__stitch?.error ?? null);
       if (error) problems.push(`${where()} story failed: ${error}`);
@@ -66,6 +70,9 @@ for (const [w, h] of [[1440, 900], [390, 844]]) {
   // The index has no mixer, and a piece's picture opens its example at that chapter.
   await page.goto(`${base}/transitions/`, { waitUntil: "load" });
   if (await page.locator('a[href*="/transitions/mix"]').count()) problems.push(`${where()} the index still links to a mixer`);
+  // On a phone the table shows one world at a time: choose the map first.
+  const mapTab = page.getByRole("group", { name: "World" }).getByRole("button", { name: "One map" });
+  if (await mapTab.isVisible().catch(() => false)) await mapTab.click();
   const piece = page.locator('a[href*="/transitions/whole/map/?c=worked"]');
   if (!(await piece.count())) {
     problems.push(`${where()} the index has no link to the map's "worked" piece`);
@@ -91,6 +98,15 @@ for (const [w, h] of [[1440, 900], [390, 844]]) {
     at: (() => { const st = window.__stitch.state(); return st && window.__stitch.keys[st.from]; })() }));
   if (!after.text.includes("Amara Okafor")) problems.push(`${where()} the words are not Amara's after the switch`);
   if (after.at !== "worked") problems.push(`${where()} after switching person the story is at ${after.at}, not worked`);
+
+  // The sheet's move switch: choosing a move puts it in the address and the story comes back ready.
+  await page.goto(`${base}/transitions/whole/sheet/`, { waitUntil: "load" });
+  await page.waitForFunction(() => window.__stitch?.ready, null, { timeout: 60000 });
+  await page.getByRole("group", { name: "Move" }).getByRole("button", { name: "fold" }).click();
+  await page.waitForFunction(() => new URLSearchParams(location.search).get("m") === "fold", null, { timeout: 10000 })
+    .catch(() => problems.push(`${where()} choosing the fold did not put it in the address`));
+  await page.waitForFunction(() => window.__stitch?.ready, null, { timeout: 60000 })
+    .catch(() => problems.push(`${where()} the sheet was not ready after choosing the fold`));
   report.sizes.push(size);
   await context.close();
 }

@@ -16,7 +16,8 @@ import { arcPoints, facing, landDots, toVector, type Place } from "@/lib/globe";
 */
 
 export type GlobeColours = { globe: string; land: string; arc: string; glow: string };
-export const NIGHT: GlobeColours = { globe: "#1d1442", land: "#e9e4ff", arc: "#f2b84b", glow: "#a78bfa" };
+// The story's night: a slate sphere, paper-ink land, the amber route, and a rim barely lighter than the sphere, not a coloured halo.
+export const NIGHT: GlobeColours = { globe: "#16202b", land: "#ece6d9", arc: "#e9a23b", glow: "#3a4a5c" };
 
 const DOTS = landDots(LAND);
 

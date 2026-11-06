@@ -3,8 +3,8 @@
 export const WAYS = [
   {
     id: "swap",
-    name: "Today's swap",
-    watch: "What the engine does now. The pipeline shrinks away while the map grows in at the same place: nothing in one becomes part of the other.",
+    name: "The old swap",
+    watch: "What the engine did before the worlds, kept to compare. The pipeline shrinks away while the map grows in at the same place: nothing in one becomes part of the other.",
   },
   {
     id: "line",

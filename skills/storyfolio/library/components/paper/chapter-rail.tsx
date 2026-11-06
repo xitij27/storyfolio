@@ -42,7 +42,7 @@ export function ChapterRail({ label, items }: { label: string; items: RailItem[]
             <a
               href={`#${item.id}`}
               aria-current={active === item.id ? "location" : undefined}
-              className="group flex min-h-9 items-center gap-3 rounded-sm px-2 font-mono text-xs text-paper-faint outline-none hover:text-paper-ink focus-visible:ring-2 focus-visible:ring-paper-accent aria-[current]:text-paper-ink"
+              className="group flex min-h-9 items-center gap-3 rounded-sm px-2 text-sm text-paper-faint tabular-nums outline-none hover:text-paper-ink focus-visible:ring-2 focus-visible:ring-paper-accent aria-[current]:text-paper-ink"
             >
               <span className="opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 group-aria-[current]:opacity-100">
                 {item.label}

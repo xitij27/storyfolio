@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 export default function Template() {
   return (
     <>
-      <Link href="/" className="fixed top-3 left-3 z-50 rounded-full border border-border/60 bg-background/80 px-3 py-1.5 text-xs backdrop-blur hover:bg-muted">
-        ← Library
+      <Link href="/pieces/" className="fixed top-3 left-3 z-50 rounded-full border border-border bg-background px-3 py-1.5 text-xs hover:bg-muted">
+        All pieces
       </Link>
       <main>
         <Hero />

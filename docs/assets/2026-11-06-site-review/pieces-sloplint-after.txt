@@ -1,0 +1,28 @@
+skills/storyfolio/library/components/sections/about.tsx
+  WAIVED 26b :1 no :disabled styling anywhere
+sloplint: 0 FAIL, 0 WARN, 1 WAIVED across 34 file(s).
+render tier: 15 screenshots in /tmp/claude-1000/-home-kshitij-parashar-Downloads-projects-storyfolio/ea17bd12-833d-44de-ab7b-167ce05f08dd/scratchpad/after2/.hallmark/shots (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:3200/storyfolio/p/projects/
+  REFLEX 39b :1 [1440px] control height outside 44 to 52px: button.rounded-full 34px, button.rounded-full 34px, button.rounded-full 34px | fix: Marketing controls stand 44 to 52px; app UI 32 to 40px with a 44px hit target
+  REFLEX 44c :1 [1440px] hero ends at 289px of a 900px screen | fix: Fill the first screen with the visual or the headline, not with copy
+  WARN F18 :1 [375px] slot "button" renders at 117 x 32px on a phone | fix: The slot collapsed: give it width: 100% and an aspect-ratio in the stacked layout
+  WARN F18 :1 [1440px] slot "button" renders at 117 x 32px | fix: The slot collapsed: give it a width from its track and a real aspect-ratio, never a percentage of a shrink-to-fit parent
+  WAIVED 77 :1 [1440px] 1 thin section: "Use it" (73% wide, no mass)
+  DISMISSED 77 :1 [1440px] 2 sections, hero and footer included
+  NOTE 58 :1 [1440px] 130 words on one screen (from y=850) | fix: One idea per screen: cut to about 80 words, make the section an object
+http://127.0.0.1:3200/storyfolio/p/about/
+  REFLEX 44c :1 [1440px] hero ends at 261px of a 900px screen
+  WAIVED 77 :1 [1440px] 1 thin section: "Use it" (73% wide, no mass)
+  DISMISSED 77 :1 [1440px] 2 sections, hero and footer included
+http://127.0.0.1:3200/storyfolio/pieces/
+  REFLEX 44c :1 [1440px] hero ends at 434px of a 900px screen
+  WAIVED 77 :1 [1440px] 3 thin sections: "Good at" (100% wide, no mass); "Others say" (100% wide, no mass); "Contact" (100% wide, no m…
+  DISMISSED 59 :1 [1440px] 10 sections
+  NOTE 58 :1 [1440px] 162 words on one screen (from y=1850)
+  NOTE 58 :1 [1440px] hero carries 3 text blocks before its actions | fix: Headline, one sentence, actions; delete the rest
+skills/storyfolio/library/components/gallery/chapter-table.tsx
+  WAIVED 26b :1 no :disabled styling anywhere
+  DISMISSED 28a :63 lazy-loaded first image (likely LCP)
+skills/storyfolio/library/app/pieces/page.tsx
+  NOTE 58 :39 hero paragraph runs 14 words | fix: One sentence, twelve words or fewer
+sloplint: 0 FAIL, 4 REFLEX, 2 WARN, 4 WAIVED, 4 DISMISSED, 4 NOTE across 41 file(s) and 3 URL(s).

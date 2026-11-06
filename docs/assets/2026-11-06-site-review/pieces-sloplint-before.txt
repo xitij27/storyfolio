@@ -1,0 +1,72 @@
+skills/storyfolio/library/app/globals.css
+  FAIL 2a :304 purple-to-blue gradient text on .text-gradient | fix: One anchor hue, solid ink
+  FAIL 48 :132 oklch literal oklch(0.145 0 0) outside tokens (--background on .dark) | fix: Lift the value into the token block
+  FAIL 48 :133 oklch literal oklch(0.985 0 0) outside tokens (--foreground on .dark)
+  FAIL 48 :134 oklch literal oklch(0.205 0 0) outside tokens (--card on .dark)
+  FAIL 48 :135 oklch literal oklch(0.985 0 0) outside tokens (--card-foreground on .dark)
+  FAIL 48 :136 oklch literal oklch(0.922 0 0) outside tokens (--primary on .dark)
+  FAIL 48 :137 oklch literal oklch(0.205 0 0) outside tokens (--primary-foreground on .dark)
+  FAIL 48 :138 oklch literal oklch(0.269 0 0) outside tokens (--secondary on .dark)
+  FAIL 48 :139 oklch literal oklch(0.985 0 0) outside tokens (--secondary-foreground on .dark)
+  FAIL 48 :140 oklch literal oklch(0.269 0 0) outside tokens (--muted on .dark)
+  FAIL 48 :141 oklch literal oklch(0.708 0 0) outside tokens (--muted-foreground on .dark)
+  FAIL 48 :142 oklch literal oklch(0.269 0 0) outside tokens (--accent on .dark)
+  FAIL 48 :143 oklch literal oklch(0.985 0 0) outside tokens (--accent-foreground on .dark)
+  FAIL 48 :144 oklch literal oklch(0.704 0.191 22.216) outside tokens (--destructive on .dark)
+  FAIL 48 :145 oklch literal oklch(1 0 0 / 10%) outside tokens (--border on .dark)
+  FAIL 48 :146 oklch literal oklch(1 0 0 / 15%) outside tokens (--input on .dark)
+  FAIL 48 :147 oklch literal oklch(0.556 0 0) outside tokens (--ring on .dark)
+  FAIL 48 :148 oklch literal oklch(0.68 0.19 274) outside tokens (--brand on .dark)
+  FAIL 48 :149 oklch literal oklch(0.72 0.2 310) outside tokens (--brand-2 on .dark)
+  FAIL 48 :150 oklch literal oklch(0.8 0.14 205) outside tokens (--brand-3 on .dark)
+  FAIL 48 :154 colour literal #f4efe4 outside tokens (--paper-bg on [data-look="paper"])
+  FAIL 48 :155 colour literal #1d1a16 outside tokens (--paper-ink on [data-look="paper"])
+  FAIL 48 :156 colour literal #5d564b outside tokens (--paper-muted on [data-look="paper"])
+  FAIL 48 :157 colour literal #8c8578 outside tokens (--paper-faint on [data-look="paper"])
+  FAIL 48 :158 colour literal #b4442c outside tokens (--paper-accent on [data-look="paper"])
+  FAIL 48 :159 colour literal rgb(0 0 0 / 0.15) outside tokens (--paper-rule on [data-look="paper"])
+  FAIL 48 :162 colour literal #0f2a4a outside tokens (--paper-bg on [data-look="blueprint"])
+  FAIL 48 :163 colour literal #e8f1ff outside tokens (--paper-ink on [data-look="blueprint"])
+  FAIL 48 :164 colour literal #9fb8da outside tokens (--paper-muted on [data-look="blueprint"])
+  FAIL 48 :165 colour literal #6f8db5 outside tokens (--paper-faint on [data-look="blueprint"])
+  FAIL 48 :166 colour literal #ffd166 outside tokens (--paper-accent on [data-look="blueprint"])
+  FAIL 48 :167 colour literal rgb(255 255 255 / 0.2) outside tokens (--paper-rule on [data-look="blueprint"])
+  FAIL 48 :366 colour literal #262626 outside tokens (--fig-paper on .fig)
+  FAIL 48 :367 colour literal #fafafa outside tokens (--fig-ink on .fig)
+  FAIL 48 :368 colour literal #a1a1a1 outside tokens (--fig-ink-2 on .fig)
+  FAIL 48 :369 colour literal #454545 outside tokens (--fig-rule on .fig)
+  FAIL 48 :370 colour literal #333333 outside tokens (--fig-rule-2 on .fig)
+  FAIL 48 :371 colour literal #7689ff outside tokens (--fig-trace on .fig)
+  FAIL 48 :372 colour literal #cb7aff outside tokens (--fig-signal on .fig)
+  REFLEX 1 :32 display font "system-ui" (--font-heading) | fix: Pick a display face from the typography catalog
+skills/storyfolio/library/components/sections/contact.tsx
+  FAIL 2a :41 purple-to-blue gradient (from-brand via-brand-2 to-brand-3) on <div class="pointer-events-none absolute in…">
+  FAIL 54 :47 eyebrow before <h2> (uppercase at 12px) | fix: Cut it; open the section another way (craft.md, Opening a section)
+  WARN 29 :41 blurred orb: blur-3xl on a filled absolute element on <div class="pointer-events-none absolute in…"> | fix: Solid or grained surface; elevation by lightness, shadows with offset and blur
+skills/storyfolio/library/components/sections/experience-timeline.tsx
+  FAIL 2a :142 purple-to-blue gradient (from-brand to-brand-3) on <span class="grid size-full place-items-cent…">
+skills/storyfolio/library/components/sections/skill-groups.tsx
+  FAIL 2a :61 purple-to-blue gradient (from-brand/15 to-brand-3/15) on <span class="grid size-10 place-items-center…">
+skills/storyfolio/library/components/sections/testimonials.tsx
+  FAIL 2a :119 purple-to-blue gradient (from-brand to-brand-3) on <span class="relative grid size-10 shrink-0 …">
+skills/storyfolio/library/components/lab/scroll-stage.tsx
+  FAIL 48 :64 colour literal bg-[#0c1018] in a class on <section class="relative bg-[#0c1018] text-white"> | fix: Lift the value into the token block (@theme or :root) and use its utility name
+skills/storyfolio/library/components/pieces/typed-terminal.tsx
+  FAIL 48 :67 colour literal bg-[#0d1117] in a class on <div class="overflow-hidden rounded-xl bord…">
+  FAIL 48 :69 colour literal bg-[#ff5f57] in a class on <span class="size-3 rounded-full bg-[#ff5f57]">
+  FAIL 48 :70 colour literal bg-[#febc2e] in a class on <span class="size-3 rounded-full bg-[#febc2e]">
+  FAIL 48 :71 colour literal bg-[#28c840] in a class on <span class="size-3 rounded-full bg-[#28c840]">
+skills/storyfolio/library/demos/three.tsx
+  FAIL 48 :38 colour literal bg-[#0c1018] in a class on <div class="h-[30dvh] bg-[#0c1018]">
+skills/storyfolio/library/components/sections/section-heading.tsx
+  FAIL 54 :21 eyebrow before <h2> (uppercase at 12px)
+skills/storyfolio/library/demos/sections.tsx
+  REFLEX 64 :86 font-mono on "The look is in the addr…" at 14px (<div class="flex items-center gap-3 border-…">) | fix: Labels in the body face at a smaller size and normal case; font-mono only for code and figures
+skills/storyfolio/library/components/pieces/expanding-cards.tsx
+  WARN 29 :104 glass: backdrop:backdrop-blur-sm over backdrop:bg-black/55 on <dialog class="m-auto max-h-[92dvh] w-[min(42r…">
+  WARN F24 :116 a hairline border under a wide soft shadow (border with shadow-xl or shadow-2xl) | fix: Commit to one: a defined edge, or elevation by shadow
+skills/storyfolio/library/demos/pieces.tsx
+  WARN F24 :35 a hairline border under a wide soft shadow (border with shadow-xl or shadow-2xl)
+skills/storyfolio/library/components/sections/about.tsx
+  WAIVED 26b :1 no :disabled styling anywhere
+sloplint: 51 FAIL, 2 REFLEX, 4 WARN, 1 WAIVED across 33 file(s).

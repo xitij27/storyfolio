@@ -73,7 +73,7 @@ export function Projects() {
 
   return (
     <Section id="projects" className="bg-muted/20">
-      <SectionHeading eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
+      <SectionHeading title={t.title} subtitle={t.subtitle} />
 
       <div className="mb-8 flex items-center justify-between gap-4 sm:flex-wrap">
         {/* On a phone the filters fold into one round button over a native
@@ -104,7 +104,7 @@ export function Projects() {
               onClick={() => setActive(f)}
               aria-pressed={active === f}
               className={cn(
-                "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                "inline-flex h-11 items-center rounded-full border px-4 text-sm font-medium transition-colors",
                 active === f
                   ? "border-transparent bg-primary text-primary-foreground"
                   : "border-border/60 bg-background text-muted-foreground hover:border-brand/40 hover:text-foreground",

@@ -104,8 +104,8 @@ function Stars({
 /** Fills its parent. Decorative: put it behind content, hidden from assistive tech. */
 export default function Starfield({
   count = 2400,
-  hue = 240,
-  saturation = 0.4,
+  hue = 38,
+  saturation = 0.12,
   twinkle = 0.4,
   speed = 1,
   still = false,

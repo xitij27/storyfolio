@@ -4,7 +4,8 @@ import * as React from "react";
 
 import type { CardLink, CardSlide, ExpandingCard } from "@/components/pieces/expanding-cards";
 import { ColouriseFigure, FeistelFigure, MazeFigure } from "@/components/figures/project-figures";
-import { person, type Project, type ProjectCategory } from "@/content/sample";
+import { ProjectCover } from "@/components/figures/project-cover";
+import { person, type Project } from "@/content/sample";
 
 /*
   A project as the project window shows it. Used by the Projects section's
@@ -12,12 +13,6 @@ import { person, type Project, type ProjectCategory } from "@/content/sample";
 */
 
 const t = person.projects;
-
-const CATEGORY_GRADIENT: Record<ProjectCategory, string> = {
-  "data-science": "from-fuchsia-500 to-pink-500",
-  swe: "from-indigo-500 to-violet-500",
-  cybersecurity: "from-amber-500 to-red-500",
-};
 
 export function toCard(project: Project): ExpandingCard {
   const links: CardLink[] = [];
@@ -36,7 +31,7 @@ export function toCard(project: Project): ExpandingCard {
     description: project.description,
     slides,
     categoryLabel: t.categories[project.category],
-    accentClassName: CATEGORY_GRADIENT[project.category],
+    cover: <ProjectCover id={project.id} />,
     highlights: project.highlights ?? [],
     tags: project.tech,
     links,

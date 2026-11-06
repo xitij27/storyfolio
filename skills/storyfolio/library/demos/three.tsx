@@ -35,7 +35,7 @@ function Scrolled({ screens, captions, controls, children }: { screens: number; 
       <ScrollStage screens={screens} captions={captions} controls={controls}>
         {children}
       </ScrollStage>
-      <div className="h-[30dvh] bg-[#0c1018]" />
+      <div className="h-[30dvh] bg-terminal" />
     </Guarded>
   );
 }
@@ -49,9 +49,7 @@ export function StarfieldDemo() {
           <Starfield still={still} />
         </Guarded>
       </div>
-      <h2 className="font-heading text-5xl font-bold tracking-tight sm:text-7xl">
-        <span className="text-gradient">{person.name}</span>
-      </h2>
+      <h2 className="font-heading text-5xl font-semibold sm:text-7xl">{person.name}</h2>
     </section>
   );
 }
