@@ -43,3 +43,14 @@ The finished site passes root's check and is served for the author at
 http://172.22.209.33:3180/. The agent's one finding about the engine, Back
 to the bare address not returning the story to its start, is fixed in the
 engine. Stage 3 waits for the author's review.
+
+## The author's review: Stage 3 closes
+
+Root served person test 6's finished site (blueprint, slide) at
+http://172.22.209.33:3180/ and asked for the author's verdict. The author
+answered, verbatim:
+
+> okay this looks fine
+
+Root takes this as the author's review that closes Stage 3. Next: the
+Stage 1 closers (run or drop, still unanswered) and Stage 4, packaging.
