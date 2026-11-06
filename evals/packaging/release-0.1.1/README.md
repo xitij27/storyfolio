@@ -76,3 +76,21 @@ Expected at validation: `engine/stitch/land.json` (1,014,188 bytes) is over
 the 256 KiB file limit, a "held for a reviewer" result, not a block.
 Whether the name `storyfolio` is free in the directory is only known at
 validation.
+
+## The portal's validation (7 November)
+
+The author ran **Validate** on `plugin @ ff5fa81` and shared the result:
+7 checks, 2 policy holds, nothing blocking. "Repository fetched"; "154
+files, 1.7MB, within the size limits"; `.claude-plugin/plugin.json` found
+and valid; 1 skill; no MCP servers; directory lints passed with warnings;
+"Name and publisher checks passed". So the portal measured the tracked
+branch, and the name is free.
+
+| Finding | Result | Reading |
+|---|---|---|
+| Files or downloads the validator couldn't inspect: `engine/stitch/land.json` | Policy hold | Expected (over 256 KiB). The scan can raise it on each new version. Splitting the file under 256 KiB would clear it; not done |
+| Uses a credential from the user's machine, shown at `plugin.json` | Policy hold | No credential is read. Most likely `env: { ...process.env, ... }` in `engine/scripts/site-check.mjs:87` and `check.mjs:52`, scripts that also make requests, all to their own server at `127.0.0.1`. Not confirmed which line the portal meant |
+| Images and fonts passed without a code check: `.claude-plugin/icon.png` | Note | Nothing to do |
+| Files outside the allowed types accepted only from Verified organizations: `engine/app/globals.css` | Note | Not refused yet. CSS (`globals.css`, `stitch/stitch.css`, `components/story/story.css`) would need another form if the rule takes effect |
+
+Root's suggestion: submit with a note to the reviewer on both holds.
