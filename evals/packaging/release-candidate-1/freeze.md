@@ -5,17 +5,18 @@ Made 6 November 2026 on the WSL machine. No model was started.
 
 ## The candidate
 
-- **Source commit:** `e1af3eb5b4b790c7c7f4e65a4caffcf24e5e58e9`
-  (2026-11-06T23:38:42+01:00), the engine on Next.js 16.4.5 with the
-  licence at the skill's root ([licence and origin](licence-origin.md)).
-  The working tree was clean.
+- **Source commit:** `a8d88bb608f6486406ea095fac774c00d0486b91`
+  (2026-11-06T23:50:36+01:00), the engine on Next.js 16.4.5, the licence
+  at the skill's root ([licence and origin](licence-origin.md)) and the
+  README of Task 5 ([public guidance](public-guidance.md)). The working
+  tree was clean.
 - **Archive:** `storyfolio-rc1.tar`, 136 files, sha256
-  `d81044f5a79c4c3cf99e27534bd0e33500b6553a61acb2493d20817643ad123c`.
+  `9e6f00bc153f814e719054f259222ff4e0a461330de56e14d1f6b8111993808d`.
   Made twice; both hashes equal. Not committed: the command remakes it.
 
 ```bash
 git archive --format=tar --prefix=storyfolio-rc1/ \
-  e1af3eb5b4b790c7c7f4e65a4caffcf24e5e58e9 \
+  a8d88bb608f6486406ea095fac774c00d0486b91 \
   .claude-plugin README.md LICENSE skills/storyfolio > storyfolio-rc1.tar
 ```
 
@@ -25,6 +26,9 @@ git archive --format=tar --prefix=storyfolio-rc1/ \
   with one more: `skills/storyfolio/LICENSE`, a copy of the root `LICENSE`.
   The scaffold copies only `engine/`, so the site the proof built is the
   same. The proof below is of these bytes.
+- **Second freeze, replaced the same day:** `e1af3eb5b4b790c7c7f4e65a4caffcf24e5e58e9`,
+  archive sha256 `d81044f5a79c4c3cf99e27534bd0e33500b6553a61acb2493d20817643ad123c`.
+  Task 5 changed `README.md` only; no other hash moved.
 - **First freeze, replaced the same day:** `5d7cf1686fcdca1470e0c265a6812f2ab173e380`,
   135 files, archive sha256 `d825b55e133ab3908c9c686b0fe6fc14a563f7174400edab10e802d87e50f9e0`.
   Task 2 found the skill folder without a licence at its root and added it.

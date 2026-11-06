@@ -215,8 +215,13 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   archive are listed by Claude Code (`.claude/skills/`) and Codex
   (`.agents/skills/`), each only from its own folder, and scaffold from
   there ([install routes](../evals/packaging/release-candidate-1/install-routes.md)).
-  Left: the README's install and limits (Task 5),
-  and the author's decision to publish.
+  The README now gives the sparse clone, the plugin route with update and
+  removal, running the site, and what has been tested (Task 5,
+  [public guidance](../evals/packaging/release-candidate-1/public-guidance.md),
+  with the name check); the freeze moved to `a8d88bb6` for it. A later
+  release must raise the plugin's `version`, or `claude plugin update`
+  keeps the old files. Left: the author's decision to publish (a tag,
+  any listing) and a push.
 
 ### For the next session
 
