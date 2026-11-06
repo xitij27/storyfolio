@@ -5,24 +5,29 @@ Made 6 November 2026 on the WSL machine. No model was started.
 
 ## The candidate
 
-- **Source commit:** `5d7cf1686fcdca1470e0c265a6812f2ab173e380`
-  (2026-11-06T23:04:34+01:00), the engine on Next.js 16.4.5. Later commits
-  touch only `docs/` and `evals/`; `git diff 5d7cf168 HEAD` over the
-  allowlist below is empty at `ed03d3c4`, and the working tree was clean.
-- **Archive:** `storyfolio-rc1.tar`, 135 files, sha256
-  `d825b55e133ab3908c9c686b0fe6fc14a563f7174400edab10e802d87e50f9e0`.
+- **Source commit:** `e1af3eb5b4b790c7c7f4e65a4caffcf24e5e58e9`
+  (2026-11-06T23:38:42+01:00), the engine on Next.js 16.4.5 with the
+  licence at the skill's root ([licence and origin](licence-origin.md)).
+  The working tree was clean.
+- **Archive:** `storyfolio-rc1.tar`, 136 files, sha256
+  `d81044f5a79c4c3cf99e27534bd0e33500b6553a61acb2493d20817643ad123c`.
   Made twice; both hashes equal. Not committed: the command remakes it.
 
 ```bash
 git archive --format=tar --prefix=storyfolio-rc1/ \
-  5d7cf1686fcdca1470e0c265a6812f2ab173e380 \
+  e1af3eb5b4b790c7c7f4e65a4caffcf24e5e58e9 \
   .claude-plugin README.md LICENSE skills/storyfolio > storyfolio-rc1.tar
 ```
 
 - **Every file and its sha256:** [manifest-sha256.txt](manifest-sha256.txt).
-  Its 132 `skills/storyfolio/` lines equal the package the second clean
+  Its `skills/storyfolio/` lines equal the package the second clean
   install used ([clean-install-2/package-sha256.txt](clean-install-2/package-sha256.txt)),
-  so the proof below is of these bytes.
+  with one more: `skills/storyfolio/LICENSE`, a copy of the root `LICENSE`.
+  The scaffold copies only `engine/`, so the site the proof built is the
+  same. The proof below is of these bytes.
+- **First freeze, replaced the same day:** `5d7cf1686fcdca1470e0c265a6812f2ab173e380`,
+  135 files, archive sha256 `d825b55e133ab3908c9c686b0fe6fc14a563f7174400edab10e802d87e50f9e0`.
+  Task 2 found the skill folder without a licence at its root and added it.
 
 ## The allowlist
 
@@ -32,7 +37,7 @@ Git's tracked files under these paths, and nothing else:
 |---|---|---|
 | `.claude-plugin/marketplace.json` | The one-entry marketplace | Repository and GitHub install |
 | `README.md`, `LICENSE` | Public guide, MIT licence | Repository |
-| `skills/storyfolio/` (132 files) | `SKILL.md`, `references/` (6), `scripts/` (scaffold and its test), `.claude-plugin/` (manifest, icon), `engine/` (121: source, config, `AGENTS.md`, `CLAUDE.md`, `README.md`, `LICENSE`, tests, check scripts, `public/plain/face.svg`, `package-lock.json`) | A plugin install copies this folder only |
+| `skills/storyfolio/` (133 files) | `SKILL.md`, `LICENSE`, `references/` (6), `scripts/` (scaffold and its test), `.claude-plugin/` (manifest, icon), `engine/` (121: source, config, `AGENTS.md`, `CLAUDE.md`, `README.md`, `LICENSE`, tests, check scripts, `public/plain/face.svg`, `package-lock.json`) | A plugin install copies this folder only |
 
 Only tracked files are archived, so dependency trees, build output, browser
 caches, check shots and local credentials cannot enter it. `library/`,
@@ -63,7 +68,6 @@ Next.js move; the plugin's file list is the same).
 
 ## For Task 2
 
-- The skill folder has no licence at its root: a plugin install copies
-  `skills/storyfolio/`, which holds `engine/LICENSE` but not the root
-  `LICENSE`, so `SKILL.md`, `references/` and `scripts/` arrive without one.
-- `engine/stitch/land.json`'s source and terms.
+Both questions the first freeze left are answered in
+[licence-origin.md](licence-origin.md): the licence now ships at the
+skill's root, and `land.json` is Natural Earth's public-domain data.
