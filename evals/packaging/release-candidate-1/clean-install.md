@@ -138,3 +138,9 @@ Evidence in [clean-install-2/](clean-install-2/).
   as the first run; nothing changed that a visitor sees.
 
 Finding 3 is closed for the shipped engine.
+
+## The author's look
+
+The second run's site was served with `next start` on port 3161 from the
+scratch folder. The author opened it and said, 6 November: "okay it looks
+fine".
