@@ -206,8 +206,11 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   ([clean install](../evals/packaging/release-candidate-1/clean-install.md)).
   It found a critical advisory in the pinned Next.js 16.3.8; on the
   author's word the engine moved to 16.4.5 and the clean install, made
-  again, passes the same way. Left: the allowlist and
-  file-and-hash manifest (Task 1), the licence and origin review (Task 2),
+  again, passes the same way. The candidate is frozen at `5d7cf168`
+  (Task 1, [freeze](../evals/packaging/release-candidate-1/freeze.md):
+  allowlist, reproducible archive hash, a sha256 for each of 135 files).
+  Left: the licence and origin review (Task 2; the skill folder lacks a
+  root licence, and `land.json`'s source is unchecked),
   the folder-copy routes (Task 3), the README's install and limits (Task 5),
   and the author's decision to publish.
 
