@@ -278,7 +278,8 @@ decisions and the test evidence, and opens with the next steps.
 Storyfolio grew out of [Kshitij's research-paper portfolio](https://xitij27.vercel.app),
 where pages become the story's structure. Its method and evaluations are
 recorded in this repository so the reasoning can be examined and improved.
-The people in its tests and screenshots are made up.
+The people in its tests and screenshots are made up. One early review
+of a real portfolio keeps only its written findings.
 
 ## Contribute
 

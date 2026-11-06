@@ -439,8 +439,11 @@ question and cost decision; the current skill remains planning-only.
 
 `review-run.mjs` evaluates one review request against an allowlisted local
 source snapshot. This is separate from the three-turn planning protocol
-and its scores. The first real case is `reviews/steve-source/case.json`;
-it is not a fictional person and does not belong under `people/`.
+and its scores. Its one case, `reviews/steve-source/case.json`, was a real
+person's portfolio, not a fictional person. On the author's word (6 November
+2026) its source, photographs and the runs' copies and screenshots were
+removed from `main`; the written findings remain. A new case needs a made-up
+person's site, or a real person's recorded consent.
 
 The case supplies an exact request, material root, relative file allowlist,
 criteria path and source provenance. A cohort freezes source bytes, skill,
@@ -448,9 +451,10 @@ request, criteria, implementation and capability settings. Only material
 and the skill enter the agent workspace. Use a fresh cohort name:
 
 ```bash
-node evals/review-run.mjs --case evals/reviews/steve-source/case.json --cohort codex-new-review-1 --invocation natural --rep 1 --dry
-node evals/review-run.mjs --case evals/reviews/steve-source/case.json --cohort codex-new-review-1 --invocation natural --rep 1 --prepare
-node evals/review-run.mjs --case evals/reviews/steve-source/case.json --cohort codex-new-review-1 --invocation natural --rep 1
+# <case> is a case.json of the shape described above
+node evals/review-run.mjs --case <case> --cohort codex-new-review-1 --invocation natural --rep 1 --dry
+node evals/review-run.mjs --case <case> --cohort codex-new-review-1 --invocation natural --rep 1 --prepare
+node evals/review-run.mjs --case <case> --cohort codex-new-review-1 --invocation natural --rep 1
 ```
 
 Dry/prepare make no model calls; the last command spends model usage. All

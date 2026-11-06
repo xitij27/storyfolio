@@ -10,7 +10,7 @@ The current structure can support that evidence without a rebuild.
 
 Reviewed the local checkout at HEAD
 `9a5603d51463eb2564f8b5a117b2242678c660b1`, including its modified lockfile.
-The frozen source is in [the case material](../../reviews/steve-source/material/repo/).
+The frozen source was in `evals/reviews/steve-source/material/repo/`, removed from `main` on 6 November 2026 on the author's word ([record](../../../docs/history/2026-11-06-release-review-decisions.md)).
 An isolated copy passed its production build and was inspected in Chromium
 at widths 320, 390, 768, 800 and 1440. These are local-source and local-browser
 findings; no deployed version or personal claim was independently verified.
