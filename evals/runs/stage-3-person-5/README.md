@@ -13,7 +13,7 @@ Approved by the author's "fine looks okay lets proceed" on 6 November
 | 3 | The sheet, then storyboard | passed: the sheet kept and recorded; storyboard written (120 s, about 168,600 uncached tokens) |
 | 4 | Look and move | recorded: looks and moves captured but not offered (read "keep everything else" as night and swing); built ahead, with three wording versions (827 s, about 287,700 uncached tokens) |
 | 5 | Words | recorded: night and swing set; three opening and closing versions shown, A and A recommended (281 s, about 315,000 uncached tokens) |
-| 6 | Finish | running |
+| 6 | Finish | done: wording applied, checks pass, the author's review pending (544 s); root's [final review](final-review/README.md) |
 
 ## Where the run lives
 
