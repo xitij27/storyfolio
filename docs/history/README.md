@@ -3,7 +3,9 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
-Newest author direction: [6 November, give the README a centred, organised layout](2026-11-06-readme-layout-direction.md).
+Newest author direction: [6 November, the comparisons and Stage 1 closers: drop 11, 12, 15; defer 13, 16; run 17; then package](2026-11-06-closers-decision.md).
+
+Earlier author direction: [6 November, give the README a centred, organised layout](2026-11-06-readme-layout-direction.md).
 
 Earlier author direction: [6 November, show every piece as a moving card and clean up the pieces' generated look](2026-11-06-pieces-direction.md).
 

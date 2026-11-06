@@ -194,9 +194,11 @@ six are small fixes; the last three are for the author's review to weigh.
 
 Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-in-order):
 
-- **Comparisons and Stage 1 closers** (14 October items 11 to 13 and 15
-  to 18). Still unanswered: which to run and which to defer. Several were
-  written for a skill that has since changed.
+- ~~**Comparisons and Stage 1 closers**~~ (decided 6 November,
+  [record](history/2026-11-06-closers-decision.md)): 11, 12 and 15 dropped;
+  13 (planning on other people) and 16 (other models) deferred, their
+  limits to be stated in the README; 17, a fresh whole-repository review,
+  to run before packaging.
 - **Stage 4, packaging** (14 October items 19 to 24): a release package
   with a manifest, a licence and origin review, `.claude-plugin/plugin.json`,
   a clean install, the README's status section brought up to date, and the
@@ -250,7 +252,7 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 6 November (Stage 3 closed): **the author reviewed person test 6's site: "okay this looks fine". Stage 3 of 4 is closed** ([record](history/2026-11-06-person-test-5-review.md#the-authors-review-stage-3-closes)). Next: which of the comparisons and Stage 1 closers to run or drop (still unanswered), then Stage 4, packaging (step 7 below). Not pushed.
+Latest, 6 November (Stage 3 closed): **the author reviewed person test 6's site: "okay this looks fine". Stage 3 of 4 is closed** ([record](history/2026-11-06-person-test-5-review.md#the-authors-review-stage-3-closes)). Then the author decided the comparisons and Stage 1 closers ([record](history/2026-11-06-closers-decision.md)): next, the fresh closing review, then Stage 4, packaging (step 7 below). Pushed: `origin/main` matched `main` on 6 November.
 
 Earlier, 6 November (person test 6): **with turn 3 naming only the world, the agent offered all nine looks and moves at stop 4, running, and waited for the choice; the finished site (blueprint, slide) passes root's check and waits for the author's review** ([run](../evals/runs/stage-3-person-6/README.md), [final review](../evals/runs/stage-3-person-6/final-review/README.md)). `stitch/` unchanged through the run. The agent's engine finding (Back to the bare address left the story where it was) is fixed in `stitch/react.tsx`. 31 minutes, about 778,400 uncached tokens. Served at http://172.22.209.33:3180/ from `/var/tmp/p6-final-site`.
 
