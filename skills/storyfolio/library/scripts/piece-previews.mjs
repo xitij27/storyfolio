@@ -112,7 +112,8 @@ for (const id of only) {
     shots.push({ at: metadata.timestamp * 1000, jpeg: Buffer.from(data, "base64") });
     cdp.send("Page.screencastFrameAck", { sessionId }).catch(() => {});
   });
-  await cdp.send("Page.startScreencast", { format: "jpeg", quality: 82, maxWidth: W, maxHeight: H, everyNthFrame: 1 });
+  // Pictures at 800x500, the size a card shows them at on a sharp screen: the still is one of them.
+  await cdp.send("Page.startScreencast", { format: "jpeg", quality: 80, maxWidth: 800, maxHeight: 500, everyNthFrame: 1 });
   const n = Math.round(plan.seconds * FPS);
   const t0 = Date.now(), done = new Set();
   for (let ms = 0; ms < n * STEP; ms = Date.now() - t0) {

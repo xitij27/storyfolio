@@ -516,3 +516,30 @@ desktop screen and two on a phone.
 **Left.** The pieces' layouts are the author's own and were kept (the V2
 sections stay centred columns inside their sections). The Lab scenes keep
 their own darker ground.
+
+## The pieces' weight, 6 November
+
+The author asked whether the recordings could be GIFs, "which is more
+memory efficient", and whether they load lazily. Measured on the local
+build:
+
+- **GIF is far heavier.** The same frames as GIF (128 colours) against
+  the VP9 recordings: skills 557 KB against 25 KB at 800x500 (158 KB at
+  400x250), about 3.3 MB against 160 KB, testimonials 3.7 MB against
+  31 KB. A GIF also plays all the time, off screen too, while a video
+  stops when its card leaves. The recordings stay video.
+- **The recordings were already lazy** (`preload="none"`, played only when
+  a card is a third on screen): 3 of 26 load on a desktop's first screen,
+  1 on a phone. **The stills were not**: as a video's `poster` all 26
+  (1.0 MB, 1200x750 each) loaded with the page, and every card's link
+  prefetched its piece page.
+- **Changed:** the still is now a lazy `<img>` at 800x500 (26 of them
+  0.54 MB), the recording fades in over it once it plays, and the cards'
+  links no longer prefetch. `scripts/piece-previews.mjs` now takes its
+  pictures at 800x500, so a new still comes out the same size.
+- **After:** the pieces' pictures loaded with the first screen went from
+  1.11 MB (26 stills and 3 recordings) to 0.25 MB on a desktop (8 stills,
+  3 recordings) and 79 KB on a phone (4 stills, 1 recording); the rest
+  load as the page is scrolled. The page's own code, styles and faces are
+  about 1 MB uncompressed, as before; GitHub Pages sends them compressed.
+  `gallery-check`, 2 sizes, 0 problems.
