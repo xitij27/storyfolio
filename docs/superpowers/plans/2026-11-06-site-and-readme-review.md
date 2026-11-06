@@ -543,3 +543,37 @@ build:
   load as the page is scrolled. The page's own code, styles and faces are
   about 1 MB uncompressed, as before; GitHub Pages sends them compressed.
   `gallery-check`, 2 sizes, 0 problems.
+
+## The README's layout, 6 November
+
+On the author's "standard repositories ... have the title or the center,
+and they look so professional, whereas my README looks so basic and
+unorganized" ([record](../../history/2026-11-06-readme-layout-direction.md)).
+Every fact the README stated is kept; only its layout and a few labels
+changed:
+
+- **A centred header**: a mark ([`docs/assets/storyfolio-mark.png`](../../assets/storyfolio-mark.png),
+  the CV sheet folded into a three-panel leaflet, the shape it takes in
+  "good at", on the site's slate, so it reads on GitHub's light and dark
+  themes), the name, the tagline, a three-line description, the badges in
+  one row (the purple "agent skill" badge and the grey ones recoloured to
+  the site's slate and amber), the main links, and the picture of the
+  sheet, linked to the moving site, with a caption.
+- **"Three worlds"** is a row of three pictures, each linking to its whole
+  site, with what the world does and how it moves
+  (`docs/assets/world-{sheet,map,book}.jpg`, from the gallery's renders:
+  the sheet's globe, the map's route, the book's school).
+- **"Get started"** is three numbered steps; the instructions for Claude
+  Code, Codex and any other agent fold away under their names.
+- **"Nothing about you is invented"** and the note on sharing material are
+  GitHub callouts (`[!NOTE]`, `[!TIP]`).
+- **The pieces** have a picture of their page; **Project status** says
+  Done, In progress and Next in words, not emoji, and folds the stage 3
+  detail away; a small row of links closes the page.
+- `concepts.md` in "What you leave with" says "The world, why it suits
+  you", no longer "The mix".
+
+Checked by rendering it with GitHub's own Markdown API and the GitHub
+stylesheet, light and dark. The same mark is the library site's icon
+(`skills/storyfolio/library/app/icon.png`), which also ends the 404 for
+a missing favicon.
