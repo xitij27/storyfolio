@@ -125,12 +125,16 @@ depend on it.
 
 <br>
 
-As a plugin, with no clone (`--sparse` fetches only the plugin):
+As a plugin, with no clone. `#plugin` reads the `plugin` branch, which
+holds only the released plugin and moves only at a release:
 
 ```bash
-claude plugin marketplace add xitij27/storyfolio --sparse .claude-plugin skills
+claude plugin marketplace add "xitij27/storyfolio#plugin"
 claude plugin install storyfolio@storyfolio
 ```
+
+To follow `main` instead, add the marketplace with
+`claude plugin marketplace add xitij27/storyfolio --sparse .claude-plugin skills`.
 
 Update with `claude plugin marketplace update storyfolio` then
 `claude plugin update storyfolio@storyfolio`; remove with

@@ -57,3 +57,15 @@ instructions, a second variant, and paid runs to prove it).
 
 The `plugin` branch stays: it costs nothing and is ready if the directory
 becomes possible.
+
+## Installing from the plugin branch (7 November)
+
+Asked whether to make `plugin` the default branch and rename `main`, root
+advised against it (the front page's README would lose its pictures and
+links, the Pages workflow runs on `main`, clones would get the release
+output, and the repository's rules name `main`) and tested the alternative:
+in a disposable `CLAUDE_CONFIG_DIR`, `claude plugin marketplace add
+"xitij27/storyfolio#plugin"` took 2 s and 2.8 MB, checked out `plugin`, and
+`claude plugin install storyfolio@storyfolio` installed 0.1.2. On the
+author's "yes", the README's Claude Code install uses it, with the
+`--sparse` line from `main` kept as an alternative.
