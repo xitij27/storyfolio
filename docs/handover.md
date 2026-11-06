@@ -28,8 +28,8 @@ for the author; the same site on the sheet was "definitely better" but "not
 there yet", and "cool transitions mean wow". On 1 November the sheet gained
 two moves the author found cool, and the person picks one at the look stop
 ([record](history/2026-11-01-person-test-4-review.md)). Stage 3 stays open.
-Next, on the author's word: the person test again with the moves (paid),
-and a push. Also open from the run: take the agent's sound engine fixes
+Next, on the author's word: the person test again with the moves (paid).
+(1 November's work is on GitHub at `8103e0a2`, found 6 November.) Also open from the run: take the agent's sound engine fixes
 from person test 4's turn 4 into the engine (a study's city, the camera for
 "good at", a navigation bar and a caption band), and the map's crowding at
 home.
@@ -242,7 +242,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 1 November (the sheet's moves): **the author found person test 4's map site without flow or wow ("cool transitions mean wow"), preferred the same site on the sheet, and found two new moves for the sheet cool; the person now picks the sheet's move at the look stop** ([record](history/2026-11-01-person-test-4-review.md), [plan](superpowers/plans/2026-11-01-sheet-transitions.md), [study](../evals/engine/sheet-moves-1/README.md)). `fold` (a pleated fan that turns and opens into the next shape) and `swing` (the camera sweeping round a higher wave) beside `slide`; `content/site.ts` holds `move`, a new site starting with `swing`; `building.md` and `SKILL.md`'s stop 4 offer the moves. 419 tests; `check-skill` ok; a fresh scaffold passes `npm run check`. No run; not pushed.
+Latest, 6 November (status): **the author asked again what is left; root's answer is [recorded](history/2026-11-06-what-is-left.md).** In order: person test 4's engine fixes, person test 5 (paid), the author's review (closes Stage 3), plan 2's smaller things, the Stage 1 closers (run or drop), Stage 4 packaging. Found: GitHub's `main` is at `8103e0a2`, so 1 November's work is pushed. Documentation only.
+
+Earlier, 1 November (the sheet's moves): **the author found person test 4's map site without flow or wow ("cool transitions mean wow"), preferred the same site on the sheet, and found two new moves for the sheet cool; the person now picks the sheet's move at the look stop** ([record](history/2026-11-01-person-test-4-review.md), [plan](superpowers/plans/2026-11-01-sheet-transitions.md), [study](../evals/engine/sheet-moves-1/README.md)). `fold` (a pleated fan that turns and opens into the next shape) and `swing` (the camera sweeping round a higher wave) beside `slide`; `content/site.ts` holds `move`, a new site starting with `swing`; `building.md` and `SKILL.md`'s stop 4 offer the moves. 419 tests; `check-skill` ok; a fresh scaffold passes `npm run check`. No run; not pushed.
 
 Earlier, 31 October (person test 4): **the person test on the one-world skill ran all six turns; root's check passes and the site waits for the author's review** ([run](../evals/runs/stage-3-person-4/README.md), [final review](../evals/runs/stage-3-person-4/final-review/README.md)). Stop 2 chose one world (the sheet) with the pieces untouched; turn 3 switched to the map; turn 4 skipped the looks and edited `stitch/` to fix engine faults and add the navigation Dawit asked for; turns 5 and 6 showed and applied the wording. Seams met (one world, camera flights only); no working project; home crowded on the map. 43 minutes; about 2.1 million uncached tokens as reported, likely overstated by resumed counters.
 
