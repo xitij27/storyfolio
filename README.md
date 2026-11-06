@@ -10,7 +10,7 @@
 GitHub links or project notes. It checks the facts with you, then builds a one-page site<br>
 told in one 3D world, where each chapter grows out of the last as you scroll.</p>
 
-[![Status: stage 3 of 4 in progress](https://img.shields.io/badge/status-stage%203%20of%204%20in%20progress-e9a23b)](#project-status) [![Library on GitHub Pages](https://github.com/xitij27/storyfolio/actions/workflows/library-pages.yml/badge.svg)](https://github.com/xitij27/storyfolio/actions/workflows/library-pages.yml) [![License: MIT](https://img.shields.io/github/license/xitij27/storyfolio?color=1b2531)](LICENSE) [![Node.js 22.18 or later](https://img.shields.io/badge/node-%3E%3D22.18-339933?logo=nodedotjs&logoColor=white)](package.json) [![Agent skill for Claude Code and Codex](https://img.shields.io/badge/agent%20skill-Claude%20Code%20%7C%20Codex-1b2531)](#get-started) [![Last commit](https://img.shields.io/github/last-commit/xitij27/storyfolio?color=1b2531)](https://github.com/xitij27/storyfolio/commits/main)
+[![Status: stage 4 of 4 in progress](https://img.shields.io/badge/status-stage%204%20of%204%20in%20progress-e9a23b)](#project-status) [![Library on GitHub Pages](https://github.com/xitij27/storyfolio/actions/workflows/library-pages.yml/badge.svg)](https://github.com/xitij27/storyfolio/actions/workflows/library-pages.yml) [![License: MIT](https://img.shields.io/github/license/xitij27/storyfolio?color=1b2531)](LICENSE) [![Node.js 22.18 or later](https://img.shields.io/badge/node-%3E%3D22.18-339933?logo=nodedotjs&logoColor=white)](package.json) [![Agent skill for Claude Code and Codex](https://img.shields.io/badge/agent%20skill-Claude%20Code%20%7C%20Codex-1b2531)](#get-started) [![Last commit](https://img.shields.io/github/last-commit/xitij27/storyfolio?color=1b2531)](https://github.com/xitij27/storyfolio/commits/main)
 
 <p>
   <a href="https://xitij27.github.io/storyfolio/transitions/whole/sheet/"><strong>Watch a site</strong></a>
@@ -246,25 +246,27 @@ Storyfolio is in active development, built in four stages.
 |---|---|---|
 | 1. Method | Reading a profile, facts the person confirms, a storyboard of the whole page | **Done**: implemented and evaluated |
 | 2. Engine | The reusable 3D scroll [engine and site scaffold](skills/storyfolio/engine/README.md) | **Done**: approved on desktop and phone |
-| 3. Build | The skill's stops 2 to 6: the site running from the second stop, then its look, its words and a checked whole site | **In progress** |
-| 4. Packaging | Release package, installation proof, full build documentation | **Next**, after stage 3 |
+| 3. Build | The skill's stops 2 to 6: the site running from the second stop, then its look, its words and a checked whole site | **Done**: six person tests; the author approved the last site |
+| 4. Packaging | Release package, installation proof, full build documentation | **In progress** |
 
 <details>
-<summary><strong>Where stage 3 stands (6 November 2026)</strong></summary>
+<summary><strong>Where it stands (6 November 2026)</strong></summary>
 
 <br>
 
 - A site is told in one world, chosen at stop 2: the sheet, the map or the
   pop-up book. A chapter goes into another world only when the person asks.
-- Two person tests have built whole sites from start to finish. On the
-  author's review the sheet tells a story best; the map's site lacked flow.
+- Six person tests have run a fresh agent through the stops for a made-up
+  person. On the author's review the sheet tells a story best; the map's
+  site lacked flow. The sixth site (the sheet, blueprint, sliding) was
+  approved on 6 November, which closed stage 3.
 - The sheet now moves between chapters in one of three ways (slide, fold
   or swing), and the person picks one at the look stop.
 - Three looks (night, daylight and blueprint), the person's own words for
   any chapter, a printable CV and project pages. One command checks the
   whole site at desktop and phone size, and without JavaScript or WebGL.
-- Next: the person test again with the sheet's moves, then the author's
-  review of that site, which closes stage 3.
+- Next: stage 4, a release package, its installation proof and this
+  README brought up to date.
 
 </details>
 

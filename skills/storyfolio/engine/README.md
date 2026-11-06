@@ -55,9 +55,10 @@ It is read from three files:
 | `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), how the sheet moves between chapters (`fold`, `swing` or `slide`), the person's own words for any chapter, the CV's address, and the site's language | Stops 4 to 6 |
 
 `/preview` shows the same story and tries things without editing:
-`?mix=<line>` another world, `?look=<id>` another look, `?move=fold` or
-`?move=swing` another way for the sheet to move between chapters (`slide`
-is the default), `?person=noa` or `?person=amara` a sample person.
+`?mix=<line>` another world, `?look=<id>` another look, `?move=fold`,
+`?move=swing` or `?move=slide` a way for the sheet to move between chapters
+(without it, `move` in `content/site.ts`, `swing` in a new site),
+`?person=noa` or `?person=amara` a sample person.
 
 The words under each chapter are written from the person's data (`captions`
 in `stitch/chapters.ts`) until the person chooses their own. Put those in
@@ -84,7 +85,7 @@ When the person asks for a scene the three worlds do not have, write it as a
 world: a module in `stitch/` that implements `World` in `stitch/world.ts` for
 the chapters the mix gives it (its own scene and camera, `pose` for any point
 of the scroll, `anchor` for the element a dive's card stands on, `pick` for a
-project under the pointer). Add its id to `WORLDS` in `stitch/mix.ts` and its
+project under the pointer). Add its id to `WorldId` and `WORLDS` in `stitch/mix.ts` and its
 factory to `FACTORIES` in `stitch/stage.ts`; it then mixes with the others.
 Draw its diagrams flat, with the pen (Drawing figures, below).
 

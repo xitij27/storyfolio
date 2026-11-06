@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, readFile, readdir, rm, symlink, writeFile } from "node:fs/promises";
+import { cp, mkdtemp, mkdir, readFile, readdir, rm, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -45,6 +45,17 @@ test("a file conflict prevents every write, including earlier alphabetic files",
   assert.deepEqual(await scaffold(f.destination, f), { copied: [], conflicts: ["package.json"] });
   assert.deepEqual(await readdir(f.destination), ["package.json"]);
   assert.equal(await readFile(join(f.destination, "package.json"), "utf8"), "keep me\n");
+});
+
+test("scaffold fills a portfolio that holds the installed skill, and refuses a folder inside the engine", async t => {
+  const f = await fixture(t);
+  const portfolio = join(f.root, "portfolio");
+  const source = join(portfolio, ".claude", "skills", "storyfolio", "engine");
+  await cp(f.source, source, { recursive: true });
+  const result = await scaffold(portfolio, { source });
+  assert.deepEqual(result, { copied: ["app/page.tsx", "package.json"], conflicts: [] });
+  assert.deepEqual((await readdir(portfolio)).sort(), [".claude", "app", "package.json"]);
+  await assert.rejects(scaffold(join(source, "app"), { source }), /inside the engine/);
 });
 
 test("scaffold refuses a symlink destination ancestor without following it", async t => {

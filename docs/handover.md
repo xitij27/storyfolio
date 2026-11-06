@@ -12,31 +12,24 @@ possible next steps so I can work on it in another session"
 Strike out a step here when it is done, and add what it found to the
 history below.
 
-**Where things stand.** Plan 2 is built and reviewed: the person's site is
-the stitched story at `/`, in three looks (night, daylight, blueprint),
-with the person's own words, a CV link and project detail, and `npm run
-check` checks it ([study](../evals/engine/stitch-2/README.md)). `main` at
-`b8980b51` is on GitHub: the author pushed it at 09:19 UTC on 28 October,
-and the Pages deploy that followed (run 40663319271) succeeded. On 31
-October the map was fixed for Dawit's places (step 1,
-[stitch-3](../evals/engine/stitch-3/README.md)); 418 tests pass and
-`check-skill` is ok. Stage 3 of 4 is still open. It closes with plan 3's
-person test and the author's review of its site.
+**Where things stand.** Stage 3 of 4 closed on 6 November: the author
+approved person test 6's site ([record](history/2026-11-06-person-test-5-review.md#the-authors-review-stage-3-closes)).
+The same day the author decided the comparisons and Stage 1 closers
+([record](history/2026-11-06-closers-decision.md)), and Stage 4 began:
+the skill installs as a Claude Code plugin from a local marketplace
+([install routes](../evals/packaging/release-candidate-1/install-routes.md)),
+and a fresh closing review was made and its fixable findings fixed
+([closing review](../evals/packaging/release-candidate-1/closing-review.md)),
+among them the scaffold refusing a portfolio that holds the installed
+skill. 422 tests pass and `check-skill` is ok. The old opening is kept in
+the decision record.
 
-**Waiting on the author.** Person test 4's map site had no flow or wow
-for the author; the same site on the sheet was "definitely better" but "not
-there yet", and "cool transitions mean wow". On 1 November the sheet gained
-two moves the author found cool, and the person picks one at the look stop
-([record](history/2026-11-01-person-test-4-review.md)). Stage 3 stays open.
-On 6 November the engine took in person test 4's sound fixes (a study's
-city, the camera for "good at", a top bar, a band of words under the
-scene, project buttons, the window as a dialog) and eased the map's
-crowding at home ([stitch-4](../evals/engine/stitch-4/README.md)). Next,
-on the author's word: person test 5, the person test again with the moves
-and these fixes (paid). (1 November's work is on GitHub at `8103e0a2`,
-found 6 November.) Also waiting since the 6 November rebuild of the site and README, now
-pushed ([what was done and left](superpowers/plans/2026-11-06-site-and-readme-review.md#what-was-done-6-november)):
-the GitHub About's website, and the author's look at the sheet on a phone.
+**Waiting on the author.** From the closing review: a real person's
+portfolio and photographs in `evals/reviews/steve-source/` (consent, or
+removal), the rest of the 11 October pre-publication checklist (raw turn
+streams and machine paths under `evals/`), and whether `library/` ships in
+the package. Also the GitHub About's website, the author's look at the
+sheet on a phone, and a push, which installing from GitHub needs.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -198,11 +191,17 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   [record](history/2026-11-06-closers-decision.md)): 11, 12 and 15 dropped;
   13 (planning on other people) and 16 (other models) deferred, their
   limits to be stated in the README; 17, a fresh whole-repository review,
-  to run before packaging.
-- **Stage 4, packaging** (14 October items 19 to 24): a release package
-  with a manifest, a licence and origin review, `.claude-plugin/plugin.json`,
-  a clean install, the README's status section brought up to date, and the
-  author's decision to publish.
+  made the same day ([findings](../evals/packaging/release-candidate-1/closing-review.md)).
+- **Stage 4, packaging** (14 October items 19 to 24, [plan](superpowers/plans/2026-10-11-packaging.md)),
+  under way since 6 November, evidence in `evals/packaging/release-candidate-1/`.
+  Done: `.claude-plugin/plugin.json` (in `skills/storyfolio/`) and the
+  root `marketplace.json`, the plugin installed from a local marketplace,
+  the README's status. Left: the allowlist and file-and-hash manifest
+  (Task 1, after the author's three review decisions above), the licence
+  and origin review (Task 2), the install from GitHub and by folder copy
+  (Task 3), a clean install and scaffolded site from the extracted package
+  (Task 4), the README's install and limits (Task 5), and the author's
+  decision to publish.
 
 ### For the next session
 

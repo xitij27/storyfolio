@@ -16,7 +16,7 @@
     --mix=TEXT      eight world ids in chapter order; default the page's own
     --person=KEY    a sample person, noa or amara; default the site's own
     --look=ID       a look, night, daylight or blueprint; default the page's own
-    --move=ID       how the sheet moves, slide, fold or swing; default slide
+    --move=ID       how the sheet moves, slide, fold or swing; default the site's move
     --size=WxH      viewport, default 1440x900
     --out=DIR       where report.json and the PNGs go, default checks/stitch
     --points        also shoot the first move between two worlds at raw

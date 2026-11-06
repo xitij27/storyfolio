@@ -4,8 +4,8 @@
 // on its own, out of the skill, so it carries this copy.
 // Usage: node skills/storyfolio/scripts/sync-stitch.mjs
 import { cp, readdir, rm } from "node:fs/promises";
-import { join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { join, resolve } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 export const SOURCE = fileURLToPath(new URL("../engine/stitch/", import.meta.url));
 export const COPY = fileURLToPath(new URL("../library/stitch/", import.meta.url));
@@ -33,7 +33,7 @@ export async function syncStitch({ source = SOURCE, copy = COPY } = {}) {
   return { copied: [...want].sort(), removed };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const { copied, removed } = await syncStitch();
   console.log(`stitch: ${copied.length} files copied to the library${removed.length ? `, removed ${removed.join(", ")}` : ""}`);
 }

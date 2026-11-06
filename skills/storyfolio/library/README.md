@@ -95,7 +95,7 @@ the person and shows it moving; a person looks here for ideas and says in
 words what they would change (the author, 28 and 31 October).
 
 The worlds are `stitch/`, a copy of the engine's (see the engine's README,
-"A stitched story"). Do not edit it here: change the engine's and run
+"The person's site"). Do not edit it here: change the engine's and run
 `node ../scripts/sync-stitch.mjs`; `scripts/stitch-copy.test.mjs` in the
 skill fails when the two differ.
 

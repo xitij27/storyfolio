@@ -42,3 +42,34 @@ OK?", the author chose:
 - **Other models (item 16, deferred).** The person tests ran one actor,
   `gpt-6.1-sol` at medium effort through Codex (`evals/lib/codex.mjs`). No
   run on another or stronger model.
+
+## The handover's opening, as it stood before this record
+
+Replaced in `docs/handover.md` the same day by the state after the
+closing review. Kept verbatim:
+
+> **Where things stand.** Plan 2 is built and reviewed: the person's site is
+> the stitched story at `/`, in three looks (night, daylight, blueprint),
+> with the person's own words, a CV link and project detail, and `npm run
+> check` checks it ([study](../../evals/engine/stitch-2/README.md)). `main` at
+> `b8980b51` is on GitHub: the author pushed it at 09:19 UTC on 28 October,
+> and the Pages deploy that followed (run 40663319271) succeeded. On 31
+> October the map was fixed for Dawit's places (step 1,
+> [stitch-3](../../evals/engine/stitch-3/README.md)); 418 tests pass and
+> `check-skill` is ok. Stage 3 of 4 is still open. It closes with plan 3's
+> person test and the author's review of its site.
+>
+> **Waiting on the author.** Person test 4's map site had no flow or wow
+> for the author; the same site on the sheet was "definitely better" but "not
+> there yet", and "cool transitions mean wow". On 1 November the sheet gained
+> two moves the author found cool, and the person picks one at the look stop
+> ([record](2026-11-01-person-test-4-review.md)). Stage 3 stays open.
+> On 6 November the engine took in person test 4's sound fixes (a study's
+> city, the camera for "good at", a top bar, a band of words under the
+> scene, project buttons, the window as a dialog) and eased the map's
+> crowding at home ([stitch-4](../../evals/engine/stitch-4/README.md)). Next,
+> on the author's word: person test 5, the person test again with the moves
+> and these fixes (paid). (1 November's work is on GitHub at `8103e0a2`,
+> found 6 November.) Also waiting since the 6 November rebuild of the site and README, now
+> pushed ([what was done and left](../superpowers/plans/2026-11-06-site-and-readme-review.md#what-was-done-6-november)):
+> the GitHub About's website, and the author's look at the sheet on a phone.

@@ -33,8 +33,9 @@ function within(parent, child) {
 export async function scaffold(folder, { source = ENGINE } = {}) {
   const destination = resolve(folder);
   const engine = resolve(source);
-  if (within(engine, destination) || within(destination, engine)) {
-    throw new Error("The destination and engine source must be separate directories");
+  // The skill may be installed inside the portfolio (.claude/skills/), so only a destination inside the engine is refused.
+  if (within(engine, destination)) {
+    throw new Error("The destination must not be inside the engine source");
   }
   const files = await entries(engine);
   const conflicts = new Set();
