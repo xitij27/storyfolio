@@ -31,7 +31,9 @@ portfolio's source, photographs and screenshots are removed from `main`
 component library moved out of the skill to `library/` at the root.
 
 **Waiting on the author.** The GitHub About's website, the author's look at the
-sheet on a phone, and a push, which installing from GitHub needs.
+sheet on a phone, and whether to move the engine from Next.js 16.3.8 to
+16.4.5 for a critical advisory ([clean install, finding 3](../evals/packaging/release-candidate-1/clean-install.md#findings)).
+The push for installing from GitHub was made on 6 November.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -197,13 +199,17 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 - **Stage 4, packaging** (14 October items 19 to 24, [plan](superpowers/plans/2026-10-11-packaging.md)),
   under way since 6 November, evidence in `evals/packaging/release-candidate-1/`.
   Done: `.claude-plugin/plugin.json` (in `skills/storyfolio/`) and the
-  root `marketplace.json`, the plugin installed from a local marketplace,
-  the README's status. Left: the allowlist and file-and-hash manifest
-  (Task 1), the licence
-  and origin review (Task 2), the install from GitHub and by folder copy
-  (Task 3), a clean install and scaffolded site from the extracted package
-  (Task 4), the README's install and limits (Task 5), and the author's
-  decision to publish.
+  root `marketplace.json`, the plugin installed from a local marketplace
+  and from GitHub with `--sparse`, the README's status, and (Task 4) a
+  clean install: the skill at `31e77813`, unpacked outside the checkout,
+  scaffolds a site that passes `npm test` (187), the type check, lint,
+  `npm run check` and `check:plain` (15 of 15), with Node 22.18.0
+  ([clean install](../evals/packaging/release-candidate-1/clean-install.md)).
+  It found that the pinned Next.js 16.3.8 has a critical advisory, fixed
+  in 16.4.5, which waits on the author. Left: the allowlist and
+  file-and-hash manifest (Task 1), the licence and origin review (Task 2),
+  the folder-copy routes (Task 3), the README's install and limits (Task 5),
+  and the author's decision to publish.
 
 ### For the next session
 

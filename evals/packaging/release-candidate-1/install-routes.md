@@ -51,4 +51,6 @@ xitij27/storyfolio --sparse .claude-plugin skills` succeeded in 2.4 s, and
   repository (1.6 GB tracked). Not tried.
 - **Skill-folder copies** for Claude Code (`.claude/skills/`) and Codex
   (`.agents/skills/`), and the agent-neutral route: Task 3's remaining
-  routes, with Task 4's clean install from the extracted package.
+  routes. The package itself, unpacked outside the checkout, scaffolds a
+  site that passes every check ([clean-install.md](clean-install.md)); no
+  client discovered it from those folders.
