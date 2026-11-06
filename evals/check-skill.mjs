@@ -21,7 +21,7 @@ const problems = [];
 const words = (text) => text.split(/\s+/).filter(Boolean).length;
 
 // Check before walking: an accidental install must not traverse dependencies.
-for (const directory of ["engine/node_modules", "engine/.next", "engine/checks", "library/node_modules", "library/.next", "library/out"]) {
+for (const directory of ["engine/node_modules", "engine/.next", "engine/checks"]) {
   const target = join(SKILL_DIR, directory);
   if (await lstat(target).catch((error) => {
     if (error.code === "ENOENT") return null;

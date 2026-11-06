@@ -236,7 +236,7 @@ world. The agent shows it to you at stop 2.
 [The pieces](https://xitij27.github.io/storyfolio/pieces/) are older
 portfolio sections and effects, from the author's own site and written
 from outside ideas, each shown working with the files to copy. Both are
-built from [`skills/storyfolio/library/`](skills/storyfolio/library/README.md).
+built from [`library/`](library/README.md).
 
 ## Project status
 

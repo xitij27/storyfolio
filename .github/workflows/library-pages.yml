@@ -1,12 +1,12 @@
-# Publishes the component library (skills/storyfolio/library) to GitHub Pages,
-# at https://xitij27.github.io/storyfolio/. The library is copied out of the
-# skill before anything is installed, as it is everywhere else.
+# Publishes the component library (library/) to GitHub Pages, at
+# https://xitij27.github.io/storyfolio/. The library is copied out of the
+# repository before anything is installed, so it builds on its own.
 name: Library on GitHub Pages
 
 on:
   push:
     branches: [main]
-    paths: ["skills/storyfolio/library/**", ".github/workflows/library-pages.yml"]
+    paths: ["library/**", ".github/workflows/library-pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -26,8 +26,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.18
-      - name: Copy the library out of the skill
-        run: cp -r skills/storyfolio/library "$RUNNER_TEMP/library"
+      - name: Copy the library out of the repository
+        run: cp -r library "$RUNNER_TEMP/library"
       - name: Test, build and export
         working-directory: ${{ runner.temp }}/library
         env:

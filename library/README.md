@@ -96,8 +96,8 @@ words what they would change (the author, 28 and 31 October).
 
 The worlds are `stitch/`, a copy of the engine's (see the engine's README,
 "The person's site"). Do not edit it here: change the engine's and run
-`node ../scripts/sync-stitch.mjs`; `scripts/stitch-copy.test.mjs` in the
-skill fails when the two differ.
+`node scripts/sync-stitch.mjs`; `scripts/stitch-copy.test.mjs` fails when
+the two differ.
 
 `scripts/piece-shots.mjs` made the 24 pictures in
 `public/transitions/pieces/` from a running build; run it again when a

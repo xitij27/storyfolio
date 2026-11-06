@@ -107,8 +107,9 @@ node scripts/stitch-check.mjs --url=http://127.0.0.1:3000 \
 
 In a person's site, use `stitch/` as it is: its pieces are the component
 library's, the ones the gallery shows. Working on the skill itself, change
-`stitch/` only here, then run `node <skill>/scripts/sync-stitch.mjs` to copy
-it to the library (a test keeps the copy byte for byte).
+`stitch/` only here, then run `node library/scripts/sync-stitch.mjs` from
+the repository to copy it to the library (a test keeps the copy byte for
+byte).
 
 The scroll runs at the examples' pace: a chapter takes 1.9 screens of
 scrolling (at least 1000 pixels), holds for its first 0.4, and the story

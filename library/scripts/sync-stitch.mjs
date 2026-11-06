@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 // Copies the engine's stitch/ over the library's, removing files no longer
 // in the engine. stitch/ is edited only in the engine; the library is built
-// on its own, out of the skill, so it carries this copy.
-// Usage: node skills/storyfolio/scripts/sync-stitch.mjs
+// on its own, outside the skill, so it carries this copy.
+// Usage: node library/scripts/sync-stitch.mjs
 import { cp, readdir, rm } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-export const SOURCE = fileURLToPath(new URL("../engine/stitch/", import.meta.url));
-export const COPY = fileURLToPath(new URL("../library/stitch/", import.meta.url));
+export const SOURCE = fileURLToPath(new URL("../../skills/storyfolio/engine/stitch/", import.meta.url));
+export const COPY = fileURLToPath(new URL("../stitch/", import.meta.url));
 
 async function files(root, prefix = "") {
   const out = [];
