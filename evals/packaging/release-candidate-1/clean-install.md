@@ -99,7 +99,42 @@ Contact sheets: [desktop](clean-install/sheets/desktop.jpg),
    default image endpoint was not checked. The other advisories
    (minimatch, zod) are in development dependencies. Moving to 16.4.5 changes
    the shipped lockfile and needs this run made again: the author's call.
-4. **Not covered.** Chromium was already cached, so a first download was not
+4. **Not covered.** npm was the system's 9.2.0 in both runs (the `node`
+   package brings no npm). Chromium was already cached, so a first download was not
    tested. Only Node 22.18.0 ran the checks (not 24). The site's dev server
    and a person's own content were not tried; the checks use the supplied
    made-up person.
+
+## Second run, after the Next.js upgrade
+
+On the author's "yes we can upgrade" (6 November), the engine moved `next`
+and `eslint-config-next` from 16.3.8 to 16.4.5 (`5d7cf168`). The lockfile
+was written with `npm install --package-lock-only` under npm 11, which also
+added Tailwind's optional wasm fallback entries (bundled in
+`@tailwindcss/oxide-wasm32-wasi`); nothing was removed. `library/` keeps
+16.3.8: it is a static export (`output: "export"`, unoptimised images)
+served by Pages, with no Next.js server to reach. `prototypes/fixture-study`
+also keeps it, as a historical study.
+
+The whole run was made again the same way from `5d7cf1686fcdca1470e0c265a6812f2ab173e380`.
+Evidence in [clean-install-2/](clean-install-2/).
+
+- `storyfolio.tar` sha256 `11c333231decfd9c056f92fc3d25d3a9442e508b4fa441122774608792b952a2`;
+  package equal to the tracked files, site equal to the package's engine.
+- `npm ci`: the first attempt failed on `ECONNRESET`, a network reset
+  ([log](clean-install-2/logs/npm-ci-attempt-1-econnreset.log)); the
+  commands after it failed for want of `node_modules` and were rerun. The
+  second: 388 packages, `next@16.4.5`.
+- `npm audit --omit=dev`: 0 vulnerabilities ([log](clean-install-2/logs/audit-prod.log)).
+  Left, in development dependencies only: minimatch and zod (8 moderate,
+  1 high).
+- `npm test` 187 of 187, typecheck, lint: exit 0.
+- `npm run check`: 0 problems, 92 s ([report](clean-install-2/site-check-report.json)).
+- `npm run check:plain`: 15 of 15, 302 s ([manifest](clean-install-2/plain-check-manifest.json)).
+- The contact sheets ([desktop](clean-install-2/sheets/desktop.jpg),
+  [phone](clean-install-2/sheets/phone.jpg),
+  [phone with words](clean-install-2/sheets/phonewords.jpg),
+  [plain story](clean-install-2/sheets/plain.jpg)) show the same pictures
+  as the first run; nothing changed that a visitor sees.
+
+Finding 3 is closed for the shipped engine.

@@ -31,9 +31,8 @@ portfolio's source, photographs and screenshots are removed from `main`
 component library moved out of the skill to `library/` at the root.
 
 **Waiting on the author.** The GitHub About's website, the author's look at the
-sheet on a phone, and whether to move the engine from Next.js 16.3.8 to
-16.4.5 for a critical advisory ([clean install, finding 3](../evals/packaging/release-candidate-1/clean-install.md#findings)).
-The push for installing from GitHub was made on 6 November.
+sheet on a phone. The push for installing from GitHub was made on
+6 November.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -205,8 +204,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   scaffolds a site that passes `npm test` (187), the type check, lint,
   `npm run check` and `check:plain` (15 of 15), with Node 22.18.0
   ([clean install](../evals/packaging/release-candidate-1/clean-install.md)).
-  It found that the pinned Next.js 16.3.8 has a critical advisory, fixed
-  in 16.4.5, which waits on the author. Left: the allowlist and
+  It found a critical advisory in the pinned Next.js 16.3.8; on the
+  author's word the engine moved to 16.4.5 and the clean install, made
+  again, passes the same way. Left: the allowlist and
   file-and-hash manifest (Task 1), the licence and origin review (Task 2),
   the folder-copy routes (Task 3), the README's install and limits (Task 5),
   and the author's decision to publish.
