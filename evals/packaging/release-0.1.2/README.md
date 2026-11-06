@@ -21,6 +21,9 @@ Checks: `claude plugin validate` nothing to report, `check-skill` ok,
 
 ## Publishing
 
-The push, tag and GitHub release were refused by the session's permission
-check as a public action without the author's word on 0.1.2; they wait
-for it. Until `main` is pushed, the privacy URL does not resolve.
+The first attempt was refused by the session's permission check as a
+public action without the author's word on 0.1.2. On their "yes publish":
+`main` and `plugin` pushed (`plugin` at `bbc7f993` on GitHub), tag
+`v0.1.2` on `60dd1e6f`, and the GitHub release
+https://github.com/xitij27/storyfolio/releases/tag/v0.1.2. The privacy URL
+answers 200, and the downloaded archive hashes to `1ea27bef...a15f`.
