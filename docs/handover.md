@@ -220,7 +220,8 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   [public guidance](../evals/packaging/release-candidate-1/public-guidance.md),
   with the name check); the freeze moved to `a8d88bb6` for it. A later
   release must raise the plugin's `version`, or `claude plugin update`
-  keeps the old files. Left: the author's decision to publish (a tag,
+  keeps the old files. Checklist: [findings](../evals/packaging/release-candidate-1/findings.md).
+  Left: the author's decision to publish (a tag,
   any listing) and a push.
 
 ### For the next session
