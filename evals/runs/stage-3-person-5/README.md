@@ -10,8 +10,8 @@ Approved by the author's "fine looks okay lets proceed" on 6 November
 |---|---|---|
 | 1 | Read | passed: questions only, no concept (123 s, about 30,500 uncached tokens) |
 | 2 | Concept (one world) | passed: the whole sheet, pieces unchanged, study at Addis Ababa by `city` (289 s, about 74,800 uncached tokens) |
-| 3 | The sheet, then storyboard | running |
-| 4 | Look and move | |
+| 3 | The sheet, then storyboard | passed: the sheet kept and recorded; storyboard written (120 s, about 168,600 uncached tokens) |
+| 4 | Look and move | running |
 | 5 | Words | |
 | 6 | Finish | |
 
