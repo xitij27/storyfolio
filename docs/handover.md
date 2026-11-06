@@ -1,6 +1,6 @@
 # Handover
 
-Current state as of 31 October 2026. Start with this page and
+Current state as of 6 November 2026. Start with this page and
 [the repository rules](../AGENTS.md). The [documentation map](README.md)
 links the design, plans, operating instructions and evidence.
 
@@ -34,7 +34,10 @@ scene, project buttons, the window as a dialog) and eased the map's
 crowding at home ([stitch-4](../evals/engine/stitch-4/README.md)). Next,
 on the author's word: person test 5, the person test again with the moves
 and these fixes (paid). (1 November's work is on GitHub at `8103e0a2`,
-found 6 November.)
+found 6 November.) Also waiting: four decisions from the [6 November review of the
+site and README](superpowers/plans/2026-11-06-site-and-readme-review.md#what-is-left-for-the-author)
+(the stale README facts, a polish of the tells, the gallery as the front
+page, a push).
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -249,6 +252,8 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 ## What happened, newest first
 
 Latest, 6 November (person test 4's engine fixes): **on the author's "yes update the documentation and continue with the recommendations", the engine took in what person test 4's agent had to fix in `stitch/`, so the next run does not redo it** ([study](../evals/engine/stitch-4/README.md), [record](history/2026-11-06-what-is-left.md#the-authors-answer)). `Study.city` for a school's city, checked, and the build stops on a person the worlds cannot draw; the map's "good at" holds on the latest job's tools; long names wrap on the map's cards; a top bar (name, Work, Contact, CV) of `#chapter` links; the chapter's words in a band under the 3D, as tall as the tallest so the view keeps its size (over the scene's foot in an all-book story); project and contact buttons in the captions; the project window a native dialog; the view follows its own size and is narrow at 720 pixels or less; a lost context gives way to the words; on the map the projects stand in their own row and a phone frames one at a time. Left out: Dawit's own lines and a "Read text" switch. Dawit's finished site with the new engine passes `npm run check`; Noa and Amara pass in every world at both sizes; a fresh scaffold and the library's gallery check pass. 420 tests; `check-skill` ok. No skill text changed, no run, not pushed.
+
+Earlier, 6 November (the site and README reviewed): **on the author's "use all the front-end design skills and a hallmark audit skills to review the website and see if it looks AI generated", the Pages site, the story's chrome and the README were reviewed, and nothing was changed** ([review](superpowers/plans/2026-11-06-site-and-readme-review.md)). Local `main` was first fast-forwarded from `bf8580b0` to `8103e0a2`. The library's index reads as generated (gradient word, mono labels, card kit, no picture); the gallery is half there (real pictures, template frame); the story is least generated but its caption, "01" and "SCROLL" chrome is tracked caps and overlaps on a phone; the README is well written but its one-world, status and stop 2 and 4 facts are stale since 31 October, and its picture shows a mixed site. The gallery cannot show the sheet's fold and swing. Four decisions wait for the author, listed at the review's end. No run, no push.
 
 Earlier, 6 November (status): **the author asked again what is left; root's answer is [recorded](history/2026-11-06-what-is-left.md).** In order: person test 4's engine fixes, person test 5 (paid), the author's review (closes Stage 3), plan 2's smaller things, the Stage 1 closers (run or drop), Stage 4 packaging. Found: GitHub's `main` is at `8103e0a2`, so 1 November's work is pushed. Documentation only.
 
