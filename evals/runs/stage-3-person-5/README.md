@@ -11,8 +11,8 @@ Approved by the author's "fine looks okay lets proceed" on 6 November
 | 1 | Read | passed: questions only, no concept (123 s, about 30,500 uncached tokens) |
 | 2 | Concept (one world) | passed: the whole sheet, pieces unchanged, study at Addis Ababa by `city` (289 s, about 74,800 uncached tokens) |
 | 3 | The sheet, then storyboard | passed: the sheet kept and recorded; storyboard written (120 s, about 168,600 uncached tokens) |
-| 4 | Look and move | running |
-| 5 | Words | |
+| 4 | Look and move | recorded: looks and moves captured but not offered (read "keep everything else" as night and swing); built ahead, with three wording versions (827 s, about 287,700 uncached tokens) |
+| 5 | Words | running |
 | 6 | Finish | |
 
 ## Where the run lives
