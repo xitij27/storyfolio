@@ -37,12 +37,18 @@ WSL machine. No model was started.
 | The installed cache against the skill's tracked files | Identical file list (the tracked skill files plus the manifest and icon), before and again after `library/` moved out |
 | `claude plugin details storyfolio` | One skill, `storyfolio`; no agents, hooks or servers; about 61 tokens always on |
 
+## From GitHub, after the author's push (6 November)
+
+In a fresh disposable `CLAUDE_CONFIG_DIR`: `claude plugin marketplace add
+xitij27/storyfolio --sparse .claude-plugin skills` succeeded in 2.4 s, and
+`claude plugin install storyfolio@storyfolio` installed 0.1.0, enabled
+(17 MB under `plugins/` in all). The Pages workflow from `library/` (run
+42298395554) succeeded, and the live gallery answers 200.
+
 ## Not yet tested
 
-- **From GitHub** (`claude plugin marketplace add xitij27/storyfolio`): needs
-  these files pushed, which is on the author's word. A plain add clones the
-  whole repository (1.6 GB tracked); `--sparse .claude-plugin skills`
-  should check out only what the plugin needs. To be tried after a push.
+- **From GitHub without `--sparse`**: a plain add clones the whole
+  repository (1.6 GB tracked). Not tried.
 - **Skill-folder copies** for Claude Code (`.claude/skills/`) and Codex
   (`.agents/skills/`), and the agent-neutral route: Task 3's remaining
   routes, with Task 4's clean install from the extracted package.
