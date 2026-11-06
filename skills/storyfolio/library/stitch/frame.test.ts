@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { equirect, mapFrame, pageFrame, fillDistance, fitDistance, spots, rise } from "./frame.ts";
+import { equirect, mapFrame, pageFrame, fillDistance, fitDistance, spots, rise, polyline } from "./frame.ts";
 import { SAMPLE_PEOPLE } from "./people.ts";
 
 test("mapFrame and pageFrame stay finite for one place", () => {
@@ -71,4 +71,22 @@ test("rise is 0.32 a year, and the longest job stands no taller than 1.65", () =
   assert.ok(Math.abs(rise(2, 2) - (0.35 + 2 * 0.32)) < 1e-9);
   assert.ok(Math.abs(rise(6.4, 6.4) - 1.65) < 1e-9);
   assert.ok(Math.abs((rise(3, 6.4) - 0.35) / (rise(6.4, 6.4) - 0.35) - 3 / 6.4) < 1e-9, "heights keep to the years");
+});
+
+const pen = () => {
+  const to: number[][] = [];
+  return { to, beginPath() {}, moveTo(x: number, y: number) { to.push([x, y]); }, lineTo(x: number, y: number) { to.push([x, y]); }, stroke() {} };
+};
+
+test("polyline strokes a part of a line by its length and says where it ends", () => {
+  const pts = [[0, 0], [10, 0], [10, 30]];
+  let p = pen();
+  assert.deepEqual(polyline(p, pts, 1), [10, 30]);
+  assert.equal(p.to.length, 3);
+  p = pen();
+  assert.deepEqual(polyline(p, pts, 0.5), [10, 10]); // 20 of 40 units: the first leg and a third of the second
+  p = pen();
+  assert.deepEqual(polyline(p, pts, 0), [0, 0]);
+  assert.equal(p.to.length, 1);
+  assert.deepEqual(polyline(pen(), pts, 2), [10, 30]);
 });

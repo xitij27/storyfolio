@@ -69,3 +69,19 @@ export function spots(points: readonly (readonly number[])[], gap: number): numb
 
 /** How tall a job of `years` stands on the map: 0.32 a year, the longest job (`longest` years) no taller than 1.65. */
 export const rise = (years: number, longest: number): number => 0.35 + years * Math.min(0.32, 1.3 / Math.max(longest, 1e-9));
+
+/** Strokes the first `part` (0 to 1) of a line through `pts`, by length, and returns where it ends. */
+export function polyline(ctx: Pick<CanvasRenderingContext2D, "beginPath" | "moveTo" | "lineTo" | "stroke">, pts: number[][], part: number): number[] {
+  const lens = pts.slice(1).map((p, i) => Math.hypot(p[0] - pts[i][0], p[1] - pts[i][1]));
+  let left = Math.max(0, Math.min(1, part)) * lens.reduce((a, b) => a + b, 0);
+  ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
+  let end = pts[0];
+  for (let i = 0; i < lens.length && left > 0; i++) {
+    const f = Math.min(1, left / (lens[i] || 1));
+    end = [pts[i][0] + (pts[i + 1][0] - pts[i][0]) * f, pts[i][1] + (pts[i + 1][1] - pts[i][1]) * f];
+    ctx.lineTo(end[0], end[1]);
+    left -= lens[i];
+  }
+  ctx.stroke();
+  return end;
+}

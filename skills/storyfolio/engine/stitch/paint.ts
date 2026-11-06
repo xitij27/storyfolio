@@ -3,6 +3,7 @@
 import * as THREE from "three";
 
 import { groundTones, type Palette } from "./look.ts";
+import { polyline } from "./frame.ts";
 
 /** System fonts, so a site builds with no remote fonts. */
 export const serif = (size: number, weight = 600, style = "") => `${style} ${weight} ${size}px Georgia, "Times New Roman", serif`;
@@ -56,7 +57,12 @@ export function rrect(ctx: CanvasRenderingContext2D, x: number, y: number, w: nu
 export const rand = (seed: number, i: number) => { const v = Math.sin(seed * 91.7 + i * 12.9898) * 43758.5453; return v - Math.floor(v); };
 
 /** A small drawing that stands for a project, by its kind. */
-export function miniPicture(ctx: CanvasRenderingContext2D, C: Palette, kind: string, x: number, y: number, w: number, h: number, seed = 1) {
+/**
+ * A project's picture of its kind. With `run` (0 to 1) it is drawn that far through doing its work, as a project window plays it:
+ * the line drawn and forecast, the before and after compared, the maze solved, the route travelled, the bars measured, the list checked off.
+ */
+export function miniPicture(ctx: CanvasRenderingContext2D, C: Palette, kind: string, x: number, y: number, w: number, h: number, seed = 1, run?: number) {
+  const r = run ?? 1;
   ctx.save();
   ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
   ctx.fillStyle = "#e8e2d4"; ctx.fillRect(x, y, w, h);
@@ -66,10 +72,11 @@ export function miniPicture(ctx: CanvasRenderingContext2D, C: Palette, kind: str
     ctx.strokeStyle = "#c9c1b0";
     for (let i = 1; i < 4; i++) { ctx.beginPath(); ctx.moveTo(x, y + (h * i) / 4); ctx.lineTo(x + w, y + (h * i) / 4); ctx.stroke(); }
     ctx.strokeStyle = C.ink; ctx.beginPath();
-    for (let i = 0; i <= 24; i++) { const px = x + (w * i) / 24, py = y + h * (0.65 - 0.3 * Math.sin(i / 3.5) * (0.6 + 0.4 * rnd(i))); if (i) ctx.lineTo(px, py); else ctx.moveTo(px, py); }
+    const drawn = Math.round(24 * Math.min(1, r / 0.7));
+    for (let i = 0; i <= drawn; i++) { const px = x + (w * i) / 24, py = y + h * (0.65 - 0.3 * Math.sin(i / 3.5) * (0.6 + 0.4 * rnd(i))); if (i) ctx.lineTo(px, py); else ctx.moveTo(px, py); }
     ctx.stroke();
     ctx.strokeStyle = C.amber; ctx.setLineDash([w / 40, w / 60]); ctx.beginPath();
-    for (let i = 16; i <= 24; i++) { const px = x + (w * i) / 24, py = y + h * (0.6 - 0.25 * Math.sin(i / 3.5)); if (i === 16) ctx.moveTo(px, py); else ctx.lineTo(px, py); }
+    for (let i = 16; i <= Math.round(16 + 8 * Math.max(0, (r - 0.6) / 0.4)); i++) { const px = x + (w * i) / 24, py = y + h * (0.6 - 0.25 * Math.sin(i / 3.5)); if (i === 16) ctx.moveTo(px, py); else ctx.lineTo(px, py); }
     ctx.stroke(); ctx.setLineDash([]);
   } else if (kind === "photo") {
     const g = ctx.createLinearGradient(x, y, x, y + h);
@@ -77,9 +84,13 @@ export function miniPicture(ctx: CanvasRenderingContext2D, C: Palette, kind: str
     ctx.fillStyle = g; ctx.fillRect(x, y, w, h);
     ctx.fillStyle = "#c46a4a"; ctx.fillRect(x + w * 0.15, y + h * 0.35, w * 0.25, h * 0.45);
     ctx.fillStyle = "#5d7f9a"; ctx.fillRect(x + w * 0.5, y + h * 0.25, w * 0.3, h * 0.55);
-    ctx.fillStyle = "rgba(120,120,120,0.92)"; ctx.fillRect(x, y, w / 2, h);
-    ctx.fillStyle = "#7a7a7a"; ctx.fillRect(x + w * 0.15, y + h * 0.35, w * 0.25, h * 0.45);
-    ctx.strokeStyle = "#fff"; ctx.beginPath(); ctx.moveTo(x + w / 2, y); ctx.lineTo(x + w / 2, y + h); ctx.stroke();
+    // Before on the left of the divider, after on its right; running, the divider sweeps across and back.
+    const cut = w * (0.5 + 0.38 * Math.sin(2 * Math.PI * r));
+    ctx.save(); ctx.beginPath(); ctx.rect(x, y, cut, h); ctx.clip();
+    ctx.fillStyle = "rgba(120,120,120,0.92)"; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "#7a7a7a"; ctx.fillRect(x + w * 0.15, y + h * 0.35, w * 0.25, h * 0.45); ctx.fillRect(x + w * 0.5, y + h * 0.25, w * 0.3, h * 0.55);
+    ctx.restore();
+    ctx.strokeStyle = "#fff"; ctx.beginPath(); ctx.moveTo(x + cut, y); ctx.lineTo(x + cut, y + h); ctx.stroke();
   } else if (kind === "maze") {
     const n = 7, cw = w / n, ch = h / n;
     ctx.strokeStyle = C.ink;
@@ -89,20 +100,18 @@ export function miniPicture(ctx: CanvasRenderingContext2D, C: Palette, kind: str
       else { ctx.moveTo(x + i * cw, y + j * ch); ctx.lineTo(x + i * cw, y + (j + 1) * ch); }
       ctx.stroke();
     }
-    ctx.strokeStyle = C.amber; ctx.lineWidth *= 1.6; ctx.beginPath();
-    ctx.moveTo(x + cw / 2, y + ch / 2); ctx.lineTo(x + cw / 2, y + ch * 3.5); ctx.lineTo(x + cw * 3.5, y + ch * 3.5); ctx.lineTo(x + cw * 3.5, y + ch * 6.5); ctx.lineTo(x + cw * 6.5, y + ch * 6.5);
-    ctx.stroke();
+    ctx.strokeStyle = C.amber; ctx.lineWidth *= 1.6;
+    polyline(ctx, [[x + cw / 2, y + ch / 2], [x + cw / 2, y + ch * 3.5], [x + cw * 3.5, y + ch * 3.5], [x + cw * 3.5, y + ch * 6.5], [x + cw * 6.5, y + ch * 6.5]], r);
   } else if (kind === "route") {
     ctx.strokeStyle = "#d3cbb9";
     for (let i = 0; i < 9; i++) { ctx.beginPath(); ctx.moveTo(x, y + rnd(i) * h); ctx.lineTo(x + w, y + rnd(i + 20) * h); ctx.stroke(); }
-    ctx.strokeStyle = C.teal; ctx.lineWidth *= 2; ctx.beginPath();
-    ctx.moveTo(x + w * 0.1, y + h * 0.85);
-    ctx.bezierCurveTo(x + w * 0.4, y + h * 0.9, x + w * 0.3, y + h * 0.3, x + w * 0.88, y + h * 0.18);
-    ctx.stroke();
-    ctx.fillStyle = C.rose; ctx.beginPath(); ctx.arc(x + w * 0.88, y + h * 0.18, w / 30, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = C.teal; ctx.lineWidth *= 2;
+    const pts = bezier([x + w * 0.1, y + h * 0.85], [x + w * 0.4, y + h * 0.9], [x + w * 0.3, y + h * 0.3], [x + w * 0.88, y + h * 0.18], 40);
+    const end = polyline(ctx, pts, r);
+    ctx.fillStyle = C.rose; ctx.beginPath(); ctx.arc(end[0], end[1], w / 30, 0, Math.PI * 2); ctx.fill();
   } else if (kind === "bars") {
     for (let i = 0; i < 14; i++) {
-      const bh = h * (0.15 + 0.35 * rnd(i)) * (i === 9 ? 1.9 : 1);
+      const bh = h * (0.15 + 0.35 * rnd(i)) * (i === 9 ? 1.9 : 1) * Math.min(1, Math.max(0, r * 1.6 - i * 0.045));
       ctx.fillStyle = i === 9 ? C.rose : "#9aa3ab";
       ctx.fillRect(x + (w * (i + 0.15)) / 14, y + h - bh - h * 0.08, (w / 14) * 0.7, bh);
     }
@@ -111,7 +120,7 @@ export function miniPicture(ctx: CanvasRenderingContext2D, C: Palette, kind: str
     for (let i = 0; i < 5; i++) {
       const ly = y + h * (0.16 + i * 0.17);
       ctx.strokeStyle = C.ink; ctx.strokeRect(x + w * 0.1, ly, h / 12, h / 12);
-      if (i < 2) { ctx.fillStyle = C.teal; ctx.fillRect(x + w * 0.1 + 3, ly + 3, h / 12 - 6, h / 12 - 6); }
+      if (i < (run === undefined ? 2 : Math.floor(r * 5.99))) { ctx.fillStyle = C.teal; ctx.fillRect(x + w * 0.1 + 3, ly + 3, h / 12 - 6, h / 12 - 6); }
       ctx.fillStyle = "#a59e90"; ctx.fillRect(x + w * 0.25, ly + h / 40, w * (0.35 + 0.3 * rnd(i)), h / 30);
     }
   }
@@ -166,5 +175,13 @@ export function backdrop(C: Palette): HTMLCanvasElement {
     const g = ctx.createRadialGradient(w / 2, h * 0.38, 0, w / 2, h * 0.38, w * 0.62);
     g.addColorStop(0, t.centre); g.addColorStop(0.55, t.middle); g.addColorStop(1, t.edge);
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+  });
+}
+
+/** Points along a cubic curve from a to b. */
+function bezier(a: number[], c1: number[], c2: number[], b: number[], n: number): number[][] {
+  return Array.from({ length: n + 1 }, (_, i) => {
+    const t = i / n, u = 1 - t;
+    return [0, 1].map((k) => u * u * u * a[k] + 3 * u * u * t * c1[k] + 3 * u * t * t * c2[k] + t * t * t * b[k]);
   });
 }

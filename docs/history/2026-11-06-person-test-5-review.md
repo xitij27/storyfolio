@@ -13,3 +13,12 @@ shows part of its wall. The author answered, verbatim:
 Root read this as: fix those weak points, and take in the agent's one
 sound engine line (reduced motion stops the idle sway). It is not a
 verdict on the site, and Stage 3 stays open.
+
+## What was done
+
+[stitch-5](../../evals/engine/stitch-5/README.md): a project's window now
+plays its picture doing its work; the phone's "worked" and "made" were
+found to pan across the whole timeline and wall (not a fault); the turn 3
+wording is noted for the next run; the agent's reduced-motion line is in
+the engine. The fixed site is served at http://172.22.209.33:3171/ for the
+author. No skill text changed, no run, no push.

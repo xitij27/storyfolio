@@ -58,3 +58,13 @@ node evals/codex-build-run.mjs --case evals/runs/stage-3-person-5/case.json \
 If it stops with "source inventory differs" (no model call is made), a
 folder the agent left outside the snapshot roots is the cause: move it out
 intact with its hashes recorded, as in `stage-3-person-1`, and run again.
+
+## For the next run
+
+Turn 3's answer here said "Keep everything else as it is, but tell the
+whole site with the sheet." The agent took "everything else" to include the
+look and move, and did not offer them at stop 4
+([gate 4](gates/after-4.json)). A later run that tests stop 4 says only
+which world to use at turn 3, such as: "Tell the whole site with the
+sheet. If it is already the sheet, keep it. Record the world and my choice,
+then work out the story and the rest of what the site needs."

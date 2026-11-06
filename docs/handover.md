@@ -179,8 +179,8 @@ six are small fixes; the last three are for the author's review to weigh.
 - Every project needs a place on the map; Dawit's talk has no city, so it
   stands at his home.
 - Project pictures are six generic kinds (chart, photo, maze, route, bars,
-  list). None is a talk or a command-line tool and none runs, so "one
-  project shown working" is not in the pieces.
+  list). None is a talk or a command-line tool. Since stitch-5 each plays
+  in its window, doing its kind of work; none runs the project itself.
 - A long "looking for" line is cut after two lines on the sheet's contact
   page.
 - From the map fix ([stitch-3, left for the author](../evals/engine/stitch-3/README.md#left-for-the-authors-review)):
@@ -204,7 +204,7 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 - Read [AGENTS.md](../AGENTS.md) first. A push and any paid run need the
   author's word.
-- Node 24.14 runs the `.ts` tests. `npm test` (420) and
+- Node 24.14 runs the `.ts` tests. `npm test` (421) and
   `node evals/check-skill.mjs` pass before each commit. On the WSL machine
   (31 October), `/usr/bin/node` is Ubuntu's 22.22.1, built without
   TypeScript support, so the 26 `.ts` test files cannot load. Node 24.14.0
@@ -248,7 +248,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 6 November (person test 5): **the person test with the sheet's moves and stitch-4's fixes ran all six turns; root's check passes and the site waits for the author's review** ([run](../evals/runs/stage-3-person-5/README.md), [final review](../evals/runs/stage-3-person-5/final-review/README.md)). The agent chose the sheet itself, used the study's `city`, and left `stitch/` and the page around the story unchanged but for one sound line (reduced motion stops the idle sway, for the engine). Stop 4's looks and moves were captured but not offered: it read turn 3's "keep everything else as it is" (root's prompt) as keeping night and swing, so the run does not test that stop. No working project; on a phone "worked" is cut at the edges. 36 minutes, about 1.26 million uncached tokens. Served at http://172.22.209.33:3170/ from `/var/tmp/p5-final-site`.
+Latest, 6 November (person test 5's weak points): **on the author's "okay fix the weak stuff", a project's window now plays its picture doing its work, and the agent's reduced-motion line is in the engine** ([study](../evals/engine/stitch-5/README.md), [record](history/2026-11-06-person-test-5-review.md)). The phone's "worked" and "made" pan across the whole timeline and wall over the hold, so they are not cut. The looks and moves not offered at stop 4 came from root's turn 3 wording, written down for the next run; the skill is unchanged. The fixed site: http://172.22.209.33:3171/ from `/var/tmp/p5-fixed-site`. 421 tests; `check-skill` ok. No run, not pushed.
+
+Earlier, 6 November (person test 5): **the person test with the sheet's moves and stitch-4's fixes ran all six turns; root's check passes and the site waits for the author's review** ([run](../evals/runs/stage-3-person-5/README.md), [final review](../evals/runs/stage-3-person-5/final-review/README.md)). The agent chose the sheet itself, used the study's `city`, and left `stitch/` and the page around the story unchanged but for one sound line (reduced motion stops the idle sway, for the engine). Stop 4's looks and moves were captured but not offered: it read turn 3's "keep everything else as it is" (root's prompt) as keeping night and swing, so the run does not test that stop. No working project; on a phone "worked" is cut at the edges. 36 minutes, about 1.26 million uncached tokens. Served at http://172.22.209.33:3170/ from `/var/tmp/p5-final-site`.
 
 Earlier, 6 November (person test 4's engine fixes): **on the author's "yes update the documentation and continue with the recommendations", the engine took in what person test 4's agent had to fix in `stitch/`, so the next run does not redo it** ([study](../evals/engine/stitch-4/README.md), [record](history/2026-11-06-what-is-left.md#the-authors-answer)). `Study.city` for a school's city, checked, and the build stops on a person the worlds cannot draw; the map's "good at" holds on the latest job's tools; long names wrap on the map's cards; a top bar (name, Work, Contact, CV) of `#chapter` links; the chapter's words in a band under the 3D, as tall as the tallest so the view keeps its size (over the scene's foot in an all-book story); project and contact buttons in the captions; the project window a native dialog; the view follows its own size and is narrow at 720 pixels or less; a lost context gives way to the words; on the map the projects stand in their own row and a phone frames one at a time. Left out: Dawit's own lines and a "Read text" switch. Dawit's finished site with the new engine passes `npm run check`; Noa and Amara pass in every world at both sizes; a fresh scaffold and the library's gallery check pass. 420 tests; `check-skill` ok. No skill text changed, no run, not pushed.
 

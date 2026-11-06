@@ -123,6 +123,8 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
 
   /** Poses and draws the story standing at s. */
   function draw(s: number, time: number) {
+    // Reduced motion stills the idle sway too, not only the following of the scroll (person test 5's agent found it).
+    if (motion.matches) time = 0;
     const st = stateAt(s, n);
     current = st;
     const a = keys[st.from], b = keys[st.to];

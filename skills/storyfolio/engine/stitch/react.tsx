@@ -182,11 +182,26 @@ function Expected({ person, words, cv }: { person: Person; words: Partial<Record
 function ProjectWindow({ project, palette, onClose }: { project: Project; palette: Palette; onClose: () => void }) {
   const pic = useRef<HTMLDivElement>(null);
   const box = useRef<HTMLDialogElement>(null);
+  // The project at work: its picture plays through what it does, then rests on the result. Reduced motion shows the result.
   useEffect(() => {
     const el = pic.current;
     if (!el) return;
-    const c = paintCanvas(800, 420, (ctx, w, h) => miniPicture(ctx, palette, project.kind, 0, 0, w, h, project.title.length));
+    const draw = (run: number) => (ctx: CanvasRenderingContext2D, w: number, h: number) => {
+      ctx.clearRect(0, 0, w, h);
+      miniPicture(ctx, palette, project.kind, 0, 0, w, h, project.title.length, run);
+    };
+    const c = paintCanvas(800, 420, draw(1));
     el.replaceChildren(c);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const ctx = c.getContext("2d")!, start = performance.now();
+    let raf = 0;
+    const frame = (now: number) => {
+      const t = ((now - start) / 1000) % 5; // four seconds of work, one at rest
+      draw(Math.min(1, t / 4))(ctx, c.width, c.height);
+      raf = requestAnimationFrame(frame);
+    };
+    raf = requestAnimationFrame(frame);
+    return () => cancelAnimationFrame(raf);
   }, [project, palette]);
   useEffect(() => {
     const d = box.current;
