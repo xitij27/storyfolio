@@ -221,8 +221,11 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   with the name check); the freeze moved to `a8d88bb6` for it. A later
   release must raise the plugin's `version`, or `claude plugin update`
   keeps the old files. Checklist: [findings](../evals/packaging/release-candidate-1/findings.md).
-  Left: the author's decision to publish (a tag,
-  any listing) and a push.
+  On the author's word the work was pushed and **v0.1.0 was released**
+  (tag on `a8d88bb6`, the frozen archive and its file hashes attached,
+  [notes](../evals/packaging/release-candidate-1/release-notes.md)):
+  https://github.com/xitij27/storyfolio/releases/tag/v0.1.0. Stage 4 is
+  done. Left, optional: listing the plugin anywhere.
 
 ### For the next session
 

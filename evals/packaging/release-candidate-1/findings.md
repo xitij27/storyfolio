@@ -39,6 +39,15 @@ State on 6 November 2026.
 - Existing-portfolio review and privacy enforcement are not built.
 - A later release must raise the plugin's `version`.
 
-## Waiting on the author
+## Released
 
-A push to `origin`, a release tag, and whether to list the plugin anywhere.
+On the author's word, 6 November 2026: the work pushed (by the author;
+`origin/main` at `3e83a4a7`), tag `v0.1.0` on `a8d88bb6`, and a public
+GitHub release, https://github.com/xitij27/storyfolio/releases/tag/v0.1.0,
+published 22:54:49 UTC with [these notes](release-notes.md),
+`storyfolio-0.1.0.tar` and `storyfolio-0.1.0-files.sha256` attached. The
+downloaded archive hashes to `9e6f00bc...808d` and its file list equals
+[manifest-sha256.txt](manifest-sha256.txt). The archive's top folder is
+`storyfolio-rc1/`, kept so the frozen hash holds.
+
+Not decided: listing the plugin anywhere.
