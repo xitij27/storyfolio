@@ -73,10 +73,11 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
     return () => { alive = false; canvas.removeEventListener("webglcontextlost", onLost); handle.current?.dispose(); handle.current = null; };
   }, [person, mixText, keys, start, look, chosenText, move]);
 
-  // Back and forward through chapter links.
+  // Back and forward through chapter links; back to the bare address is back to the start.
   useEffect(() => {
     const onHash = () => {
-      const at = keys.indexOf(window.location.hash.slice(1) as ChapterKey);
+      const hash = window.location.hash.slice(1);
+      const at = hash ? keys.indexOf(hash as ChapterKey) : 0;
       if (at >= 0) handle.current?.goTo(at, true);
     };
     window.addEventListener("hashchange", onHash);

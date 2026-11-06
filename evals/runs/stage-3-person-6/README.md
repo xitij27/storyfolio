@@ -13,7 +13,7 @@ Approved by the author's "okay let us test it" on 6 November
 | 3 | The sheet, then storyboard | passed: the sheet recorded, look and move kept provisional; storyboard written (161 s, about 100,500 uncached tokens) |
 | 4 | Look and move | recorded: all nine looks and moves shown running at /review, blueprint and slide recommended, stopped for the choice (270 s, about 137,300 uncached tokens) |
 | 5 | Words | recorded: blueprint and slide set; CV and pages built; three wording pairs at /wording, plain recommended (480 s, about 190,400 uncached tokens) |
-| 6 | Finish | running |
+| 6 | Finish | done: wording applied, checks pass, the author's review pending (479 s); root's [final review](final-review/README.md) |
 
 ## Where the run lives
 

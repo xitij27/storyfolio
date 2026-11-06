@@ -33,3 +33,13 @@ author's word. The author answered, verbatim:
 
 So person test 6 runs: person test 5 again, with turn 3 naming only the
 world.
+
+## Person test 6's result
+
+Stop 4 offers the looks and moves: the agent built all nine, each running,
+recommended blueprint with slide, and waited for the choice
+([final review](../../evals/runs/stage-3-person-6/final-review/README.md)).
+The finished site passes root's check and is served for the author at
+http://172.22.209.33:3180/. The agent's one finding about the engine, Back
+to the bare address not returning the story to its start, is fixed in the
+engine. Stage 3 waits for the author's review.
