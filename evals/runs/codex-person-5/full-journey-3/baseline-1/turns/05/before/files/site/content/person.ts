@@ -1,0 +1,46 @@
+import type { Person } from "@/stitch/person";
+
+export const person: Person = {
+  name: "Dawit Bekele",
+  first: "Dawit",
+  role: "Platform engineer",
+  line: "Migration plans, cutover checklists and a way back.",
+  seeking: "Planning a migration, or a conference programme? Write to me",
+  places: [
+    { name: "Addis Ababa", lat: 9.03, lng: 38.74, what: "studied 2009–2013; library systems until 2016" },
+    { name: "Amsterdam", lat: 52.3676, lng: 4.9041, what: "moved here in 2016 for Lumen Pay" },
+    { name: "Rotterdam", lat: 51.9244, lng: 4.4777, what: "moved here in 2020 for Kestrel Freight" },
+  ],
+  study: [{ degree: "BSc", field: "Electrical Engineering", place: "Entoto Technical University", city: "Addis Ababa", from: 2009, to: 2013,
+    note: "Feeder-load logger: one sample per second to SD card. Illustration." }],
+  work: [
+    { org: "Entoto Technical University Library", role: "Library systems", place: "Addis Ababa", from: 2013, to: 2016,
+      did: "Ran the library systems. After dropping a table in 2014, added point-in-time recovery; added a replica in 2015.", uses: [] },
+    { org: "Lumen Pay", role: "Site Reliability Engineer", place: "Amsterdam", from: 2016 + 2/12, to: 2020 + 6/12,
+      did: "Card payment systems.", uses: [] },
+    { org: "Kestrel Freight", role: "Platform engineering", place: "Rotterdam", from: 2020 + 7/12, to: null,
+      did: "Wrote the data-centre exit plan and sequenced 14 migration waves. Wrote the first runbook and still own it.", uses: [] },
+  ],
+  skills: [
+    { group: "Migration", items: ["Runbook", "14 waves", "Exit checks"] },
+    { group: "Cutover", items: ["Dual writes", "Checksums", "Rollback plan"] },
+    { group: "Reliability", items: ["SLO alerts", "Recovery", "On-call"] },
+    { group: "Learning", items: ["Google SRE book", "Release It!", "Library, 2014"] },
+  ],
+  projects: [
+    { title: "Data-centre exit", line: "310 services, 14 waves, 26 months. Illustration.", tags: ["Kestrel Freight", "2020–2022", "Illustration"], place: "Rotterdam", year: 2022, kind: "route",
+      more: "I wrote the plan and sequenced the exit from two data centres, working across a programme of about 60 engineers. Services moved in 14 dependency-based waves. Each went through preflight and a rehearsed rollback, shadow reads, dual writes where stateful, then weighted routing at 1, 10, 50 and 100 per cent. SLO checks and two weeks of soak preceded decommissioning. Both sites closed on schedule. Measured Order API availability was 99.98% over the 26 months. There were two internal incidents, each under ten minutes. Drawing is an illustration, not an internal diagram or measured trace." },
+    { title: "Orders database", line: "Postgres 11 to 15; 4 TB. Illustration.", tags: ["Kestrel Freight", "Dual writes", "Illustration"], place: "Rotterdam", year: 2022, kind: "list",
+      more: "I led the upgrade with one database engineer. A new Postgres 15 cluster received logical replication; the order service wrote to both through ferry. Hourly checksum comparisons ran for three weeks. We moved reads, then writes, and kept the old cluster warm for a month as the way back. The upgrade required no maintenance window. Drawing is an illustration." },
+    { title: "The runbook", line: "Six stages, exit checks, 40 teams. Illustration.", tags: ["Kestrel Freight", "2021–present", "Illustration"], place: "Rotterdam", year: 2021, kind: "list",
+      more: "I wrote the first version and still own it; 40 teams use it. The stages are preflight, shadow, dual write, cutover, soak and decommission. A service cannot enter the next stage until the previous exit check has passed. The runbook, cutover checklist and rollback plan are what I work from. Drawing is an illustration." },
+    { title: "On-call", line: "We went from 85 to 22 pages/week. Illustration.", tags: ["Team of nine", "2021–2022", "Illustration"], place: "Rotterdam", year: 2022, kind: "bars",
+      more: "We were nine on the rota. Over about a year, we took pages from 85 to 22 a week. About half the reduction came from deleting alerts nobody needed. We also replaced threshold alerts with SLO burn-rate alerts on the services that mattered. This was the team's result. Drawing is an illustration, not a weekly measurement series." },
+    { title: "ferry", line: "Maintainer since 2022; cutover command. Illustration.", tags: ["Go CLI", "Maintenance", "Illustration"], place: "Rotterdam", year: 2022, kind: "list",
+      more: "A former colleague created ferry in 2019. I have maintained it since 2022 and wrote its cutover command. It checks replication lag and checksum parity, switches the write target, and keeps the old target ready as a fallback for a set window. Drawing is an illustration." },
+    { title: "Boring Migrations", line: "SRE North 2024 · 30-minute talk. Illustration.", tags: ["Speaking", "Rollbacks", "Illustration"], place: "SRE North", year: 2024, kind: "list",
+      more: "I open with the production table I dropped at the university library in 2014. The catalogue was down for six hours; the restore came from the nightly dump, and a day of loans was re-entered from paper slips. It is why I care about rollbacks. The talk covers the runbook, rehearsed rollback and exit checks. The talk and slides are public; no slides or recording are reproduced here. Drawing is an illustration." },
+  ],
+  quotes: [],
+  contact: { email: "dawit@example.com", links: [] },
+};
