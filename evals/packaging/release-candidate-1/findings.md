@@ -51,3 +51,21 @@ downloaded archive hashes to `9e6f00bc...808d` and its file list equals
 `storyfolio-rc1/`, kept so the frozen hash holds.
 
 Not decided: listing the plugin anywhere.
+
+## Listings looked at (7 November)
+
+- **Agensi** (https://www.agensi.io/sell), proposed by the author: does not
+  fit. Its docs (`/docs/how-agents-load-skills`, `/docs/packaging`, read
+  7 November) say a bundled script "runs exactly as shipped" from a
+  temporary file, so it "can't read other files in your package", and
+  every load tells the agent not to "save the skill into project or skill
+  folders". The scaffold reads `../engine/` and copies it into the person's
+  project, so neither would work. Also: a 30% fee, "repackaged free
+  skills" may be rejected, and buyers get fewer rights than MIT gives. The
+  size fits (136 files against 200 text files and 6 million characters).
+- **Anthropic's plugin directory**: in-app submission forms, paid Claude
+  plan, reviewed ([submit](https://www.claude.com/docs/plugins/submit)).
+  The plugin installs the whole folder, as tested. Not yet checked
+  against its requirements.
+- **Open skill directories** that take a GitHub URL (Agent Skills Finder,
+  skills.sh, skillsdirectory.com): third-party, not checked.
