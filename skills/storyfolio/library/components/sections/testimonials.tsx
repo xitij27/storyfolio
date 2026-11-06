@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Pause, Play, Quote } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/sections/section-heading";
 import { person, type Testimonial } from "@/content/sample";
@@ -21,7 +21,6 @@ export function Testimonials() {
   return (
     <Section id="testimonials">
       <SectionHeading
-        eyebrow={t.eyebrow}
         title={t.title}
         subtitle={t.subtitle}
       />
@@ -92,13 +91,12 @@ function TestimonialCard({
       aria-hidden={clone || undefined}
       inert={clone}
       className={cn(
-        "w-[320px] shrink-0 rounded-2xl border border-border/60 bg-card p-6 shadow-sm sm:w-[380px]",
+        "w-[320px] shrink-0 rounded-xl bg-card p-6 sm:w-[380px]",
         // With no loop to keep seamless, the copy is only a duplicate.
         clone && "motion-reduce:hidden",
       )}
     >
-      <Quote className="size-6 text-brand/40" aria-hidden />
-      <p className="mt-3 text-pretty text-sm leading-relaxed text-foreground/90">
+      <p className="font-heading text-lg leading-snug text-pretty text-foreground">
         {item.quote}
       </p>
       <div className="mt-5 flex items-center gap-3">
@@ -116,7 +114,7 @@ function Avatar({ photo, initials }: { photo?: string; initials: string }) {
   const [failed, setFailed] = useState(false);
 
   return (
-    <span className="relative grid size-10 shrink-0 place-items-center overflow-hidden rounded-full bg-gradient-to-br from-brand to-brand-3 text-xs font-bold text-white">
+    <span className="relative grid size-10 shrink-0 place-items-center overflow-hidden rounded-full bg-secondary font-heading text-sm font-semibold text-foreground">
       {photo && !failed ? (
         <Image
           src={photo}

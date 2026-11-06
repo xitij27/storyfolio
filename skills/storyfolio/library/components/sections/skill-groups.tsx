@@ -55,12 +55,10 @@ export function SkillGroups({
           return (
             <div
               key={group.id}
-              className="rounded-2xl border border-border/60 bg-card p-6 shadow-sm"
+              className="border-t border-border pt-5"
             >
               <div className="mb-4 flex items-center gap-3">
-                <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-brand/15 to-brand-3/15 text-brand ring-1 ring-brand/20">
-                  <Icon className="size-5" />
-                </span>
+                <Icon className="size-5 text-brand" aria-hidden />
                 <h3 className="font-heading text-lg font-semibold">
                   {group.name}
                 </h3>
@@ -97,7 +95,7 @@ export function SkillGroups({
                         )}
                       >
                         {skill}
-                        <span className="font-mono text-[11px] text-muted-foreground tabular-nums">
+                        <span className="text-xs text-muted-foreground tabular-nums">
                           {count}
                         </span>
                       </button>

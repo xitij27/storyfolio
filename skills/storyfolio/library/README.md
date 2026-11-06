@@ -13,15 +13,22 @@ The front page, `/`, is the gallery of the three worlds (below). The older
 pieces are at `/pieces/`: `catalogue.ts` lists every one, with what it
 shows, its chapter, where it came from and which files to copy, and the
 pieces index, each piece's page (`app/p/[id]/`) and its demo (`demos/`)
-are made from that list. `/template/` is a whole page made of the V2
-sections.
+are made from that list. On the index each piece is a card with a
+recording of it working (`public/pieces/<id>.webm`, playing while it is on
+screen, a still poster under reduced motion), made by
+`scripts/piece-previews.mjs`; run it again when a piece changes. A piece's
+page opens on the piece itself, with where it comes from and its files
+below. `/template/` is a whole page made of the V2 sections.
 
 The gallery's own pages (the front page, `/pieces/`, the piece and study
 headers, the bar over a story) use the `--g-*` and `--bar-*` tokens in
 `app/globals.css` and two faces served with the site from `app/fonts/`
 (Source Serif 4 and Public Sans, both under the SIL Open Font License, the
-licences beside them). The pieces keep their own tokens and system fonts,
-as the author built them.
+licences beside them). Since 6 November the pieces take the same palette
+and faces (the story's slate, paper, ink and amber), with their
+generated-page tells removed: no gradient text or purple glow, no pill
+labels over headings, no drawn terminal window, drawn project covers in
+place of coloured blocks.
 
 | From | Folder | Pieces |
 |---|---|---|

@@ -60,8 +60,8 @@ export function ChapterRailDemo() {
       </div>
       {RAIL.map((item) => (
         <section key={item.id} id={item.id} className="mx-auto flex min-h-[80dvh] max-w-3xl flex-col justify-center border-b border-paper-rule px-page">
-          <p className="font-mono text-sm text-paper-accent">{item.number}</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold">{item.label}</h2>
+          <p className="text-sm text-paper-accent tabular-nums">{item.number}</p>
+          <h2 className="mt-2 font-heading text-5xl font-semibold">{item.label}</h2>
           <p className="mt-3 text-paper-muted">Scroll: the rail on the right marks this chapter. On a narrow screen it is hidden.</p>
         </section>
       ))}
@@ -81,11 +81,9 @@ export function LookSwitchDemo() {
     <div data-look={look} className="bg-paper-bg text-paper-ink transition-colors duration-300">
       <div className="mx-auto flex min-h-[70dvh] max-w-3xl flex-col justify-center gap-6 px-page py-16">
         <LookSwitch label="Look" looks={[...LOOKS]} />
-        <h2 className="font-heading text-4xl font-bold">{person.name}</h2>
+        <h2 className="font-heading text-5xl font-semibold">{person.name}</h2>
         <p className="max-w-xl text-paper-muted">{person.hero.tagline}</p>
-        <div className="flex items-center gap-3 border-t border-paper-rule pt-6 font-mono text-sm text-paper-faint">
-          <span className="size-3 rounded-full bg-paper-accent" /> The look is in the address: try reloading.
-        </div>
+        <p className="border-t border-paper-rule pt-6 text-sm text-paper-faint">The look is kept in the address, so a reload keeps it.</p>
       </div>
     </div>
   );

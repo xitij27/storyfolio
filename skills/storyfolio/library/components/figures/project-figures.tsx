@@ -34,7 +34,7 @@ function FigureFrame({
         aria-label={label}
         className={cn("block min-h-0 w-full flex-1 touch-pan-y", canvasClassName)}
       />
-      <figcaption className="pb-7 pt-2 text-center font-mono text-[11px] leading-snug text-muted-foreground">
+      <figcaption className="pb-7 pt-2 text-center text-[13px] leading-snug text-muted-foreground">
         {caption}
       </figcaption>
     </figure>

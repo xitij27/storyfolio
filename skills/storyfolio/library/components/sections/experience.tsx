@@ -10,7 +10,7 @@ export function Experience() {
 
   return (
     <Section id="experience">
-      <SectionHeading eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
+      <SectionHeading title={t.title} subtitle={t.subtitle} />
       <ExperienceTimeline periods={periods} />
     </Section>
   );

@@ -64,7 +64,7 @@ export function ScrollStage({
     <section
       ref={section}
       style={{ height: `${screens * 100}dvh` }}
-      className="relative bg-[#0c1018] text-white"
+      className="relative bg-terminal text-white"
     >
       <div className="sticky top-0 h-dvh overflow-hidden">
         <div className="absolute inset-0">{children(progress)}</div>
@@ -82,7 +82,7 @@ export function ScrollStage({
                     beat === i ? "opacity-100" : "translate-y-3 opacity-0",
                   )}
                 >
-                  <Title className="text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
+                  <Title className="font-heading text-4xl font-semibold text-balance sm:text-6xl">
                     {c.title}
                   </Title>
                   <p className="mt-4 text-pretty text-white/70 sm:text-lg">{c.body}</p>

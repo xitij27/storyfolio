@@ -64,13 +64,9 @@ export function TypedTerminal({
 
   let left = shown;
   return (
-    <div ref={box} className={cn("overflow-hidden rounded-xl border border-white/10 bg-[#0d1117] font-mono text-sm text-slate-200 shadow-2xl", className)}>
-      <div className="flex items-center gap-2 border-b border-white/10 px-4 py-2.5">
-        <span aria-hidden className="size-3 rounded-full bg-[#ff5f57]" />
-        <span aria-hidden className="size-3 rounded-full bg-[#febc2e]" />
-        <span aria-hidden className="size-3 rounded-full bg-[#28c840]" />
-        <span className="ml-2 text-xs text-slate-400">{title}</span>
-      </div>
+    <div ref={box} className={cn("overflow-hidden rounded-xl border border-border bg-terminal font-mono text-sm text-foreground", className)}>
+      {/* The shell's name, not a drawn window: no traffic lights, no title bar. */}
+      <div className="border-b border-border px-4 py-2 font-sans text-xs text-muted-foreground">{title}</div>
       <pre className="sr-only">{lines.map((l) => (l.kind === "command" ? `$ ${l.text}` : l.text)).join("\n")}</pre>
       <div aria-hidden className="min-h-40 space-y-1 p-4">
         {lines.map((l, i) => {
@@ -79,10 +75,10 @@ export function TypedTerminal({
           left -= l.text.length;
           if (!part) return null;
           return (
-            <div key={i} className={l.kind === "output" ? "text-slate-400" : undefined}>
-              {l.kind === "command" ? <span className="text-emerald-400">$ </span> : null}
+            <div key={i} className={l.kind === "output" ? "text-muted-foreground" : undefined}>
+              {l.kind === "command" ? <span className="text-brand">$ </span> : null}
               {part}
-              {typing ? <span className="ml-0.5 inline-block h-4 w-2 translate-y-0.5 animate-pulse bg-slate-200" /> : null}
+              {typing ? <span className="ml-0.5 inline-block h-4 w-2 translate-y-0.5 bg-foreground motion-safe:animate-pulse" /> : null}
             </div>
           );
         })}

@@ -55,7 +55,7 @@ export function LookSwitch<T extends string>({ label, looks }: { label: string; 
   };
 
   return (
-    <nav aria-label={label} className="flex w-fit gap-1 rounded-md border border-paper-rule bg-paper-bg/90 p-1 font-mono text-xs">
+    <nav aria-label={label} className="flex w-fit gap-1 rounded-md border border-paper-rule bg-paper-bg p-1 text-sm">
       {looks.map(({ id, name }) => (
         <a
           key={id}

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowRight, FileText } from "lucide-react";
+import { ArrowDown, FileText } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useReducedMotion } from "motion/react";
 
@@ -29,7 +29,7 @@ export function Hero() {
         {!reduceMotion && webgl === true && (
           <div aria-hidden className="absolute inset-0 z-0">
             <WebGLBoundary>
-              <Starfield hue={240} saturation={0.4} twinkle={0.4} />
+              <Starfield hue={38} saturation={0.12} twinkle={0.4} />
             </WebGLBoundary>
           </div>
         )}
@@ -39,27 +39,17 @@ export function Hero() {
         />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-page py-24 text-center">
-          <p
-            style={rise(0)}
-            className="rise-in text-sm font-medium tracking-wide text-muted-foreground"
-          >
-            {t.greeting}
-          </p>
-
           <h1
             style={rise(1)}
-            className="rise-in mt-3 font-heading text-5xl font-bold tracking-tight text-balance sm:text-7xl"
+            className="rise-in font-heading text-5xl font-semibold text-balance sm:text-7xl"
           >
-            <span className="text-gradient">{person.name}</span>
+            {person.name}
           </h1>
 
           <div
             style={rise(2)}
-            className="rise-in mt-4 flex items-center justify-center gap-2 text-xl font-semibold sm:text-2xl"
+            className="rise-in mt-4 flex items-center justify-center text-xl font-semibold text-brand sm:text-2xl"
           >
-            <span aria-hidden className="text-brand">
-              {"</>"}
-            </span>
             <RotatingText words={t.roles} />
           </div>
 
@@ -82,7 +72,6 @@ export function Hero() {
               )}
             >
               {t.cta}
-              <ArrowRight className="size-4" />
             </a>
             <a
               href={person.cvPath}

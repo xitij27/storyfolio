@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { CHAPTERS, PIECES } from "@/catalogue";
+import { PieceCard } from "@/components/gallery/piece-card";
 import { SiteFoot, SiteNav } from "@/components/gallery/site-nav";
+import { asset } from "@/content/sample";
 
 export const metadata: Metadata = {
   title: "Pieces",
@@ -43,24 +45,22 @@ export default function Pieces() {
           </header>
 
           {CHAPTERS.map((chapter) => (
-            <section key={chapter.id} aria-labelledby={chapter.id} className="mt-32 grid gap-x-14 gap-y-6 lg:grid-cols-12">
-              <div className="lg:col-span-4">
+            <section key={chapter.id} aria-labelledby={chapter.id} className="mt-28">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-10 gap-y-2">
                 <h2 id={chapter.id} className="font-display text-[2.75rem] leading-[1.08] font-semibold">{chapter.name}</h2>
-                <p className="mt-2 text-soft">{chapter.says}</p>
+                <p className="text-soft">{chapter.says}</p>
               </div>
-              <ul className="divide-y divide-rule border-y border-rule lg:col-span-8">
+              <ul className="mt-8 grid gap-x-8 gap-y-12 sm:grid-cols-[repeat(2,minmax(0,1fr))] lg:grid-cols-[repeat(3,minmax(0,1fr))]">
                 {PIECES.filter((p) => p.chapter === chapter.id).map((p) => (
-                  <li key={p.id}>
-                    <Link href={`/p/${p.id}/`} className="group grid gap-x-8 gap-y-1 rounded-sm py-5 sm:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]">
-                      <span className="font-display text-xl font-semibold group-hover:underline group-hover:underline-offset-4">{p.name}</span>
-                      <span>
-                        <span className="block text-pretty text-soft">{p.fits}</span>
-                        <span className="mt-1 block text-[15px] text-quiet">
-                          {source(p)}
-                          {p.scroll ? ". Scroll through it" : ""}
-                        </span>
-                      </span>
-                    </Link>
+                  <li key={p.id} className="min-w-0">
+                    <PieceCard
+                      href={`/p/${p.id}/`}
+                      name={p.name}
+                      fits={p.fits}
+                      source={`${source(p)}${p.scroll ? ". Scroll through it" : ""}`}
+                      video={asset(`/pieces/${p.id}.webm`)}
+                      poster={asset(`/pieces/${p.id}.jpg`)}
+                    />
                   </li>
                 ))}
               </ul>

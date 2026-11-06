@@ -124,12 +124,10 @@ function Entry({ exp, period }: { exp: ExperienceEntry; period: string }) {
         aria-hidden
         className={cn(
           "exp-spine absolute left-6 top-12 bottom-0 w-px sm:left-8 sm:top-16",
-          last
-            ? "bg-gradient-to-b from-brand/60 to-transparent"
-            : "bg-brand/60",
+          last ? "bg-border" : "bg-brand/60",
         )}
       />
-      <span className="exp-logo absolute left-0 top-0 size-12 overflow-hidden rounded-2xl border border-border/60 bg-white shadow-md sm:size-16">
+      <span className="exp-logo absolute left-0 top-0 size-12 overflow-hidden rounded-xl border border-border bg-primary sm:size-16">
         {exp.logo ? (
           <Image
             src={exp.logo}
@@ -139,12 +137,12 @@ function Entry({ exp, period }: { exp: ExperienceEntry; period: string }) {
             className="object-contain p-2"
           />
         ) : (
-          <span className="grid size-full place-items-center bg-gradient-to-br from-brand to-brand-3 text-xs font-bold text-white sm:text-sm">
+          <span className="grid size-full place-items-center bg-secondary font-heading text-sm font-semibold text-foreground sm:text-base">
             {exp.logoInitials}
           </span>
         )}
       </span>
-      <div className="rounded-2xl border border-border/60 bg-card p-5 shadow-sm">
+      <div className="border-t border-border pt-4">
         <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
           <h3 className="font-heading text-lg font-semibold">
             {exp.role}
@@ -154,11 +152,9 @@ function Entry({ exp, period }: { exp: ExperienceEntry; period: string }) {
           </span>
         </div>
         <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm text-muted-foreground">
-          <span className="font-medium text-foreground/80">{exp.company}</span>
-          <span className="rounded-full border border-border/60 bg-muted/40 px-2 py-0.5 text-[0.65rem] font-medium tracking-wide text-brand uppercase">
-            {t.orgTypes[exp.orgType]}
+          <span>
+            <span className="font-medium text-foreground/80">{exp.company}</span>, {t.orgTypes[exp.orgType]}
           </span>
-          <span aria-hidden>·</span>
           <span className="inline-flex items-center gap-1">
             <MapPin className="size-3.5" />
             {exp.location}
@@ -169,7 +165,7 @@ function Entry({ exp, period }: { exp: ExperienceEntry; period: string }) {
             <li key={bi} className="flex gap-2 text-sm text-muted-foreground">
               <span
                 aria-hidden
-                className="mt-2 size-1.5 shrink-0 rounded-full bg-brand/70"
+                className="mt-2.5 h-px w-2 shrink-0 bg-brand"
               />
               <span className="text-pretty">{b}</span>
             </li>

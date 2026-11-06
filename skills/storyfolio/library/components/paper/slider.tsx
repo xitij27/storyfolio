@@ -25,7 +25,7 @@ export function Slider({
   readout?: ReactNode;
 }) {
   return (
-    <label className="paper-control mt-5 flex min-h-11 w-fit items-center gap-3 font-mono text-[0.8125rem] text-paper-muted">
+    <label className="paper-control mt-5 flex min-h-11 w-fit items-center gap-3 text-sm text-paper-muted">
       <span>{label}</span>
       <input
         type="range"

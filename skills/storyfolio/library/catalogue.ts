@@ -221,7 +221,7 @@ export const PIECES: Piece[] = [
     chapter: "made",
     fits: "A project named in a sentence opens its window, so the story never sends the reader away.",
     from: "V3 paper",
-    files: ["components/paper/project-window.tsx", "components/pieces/expanding-cards.tsx", "components/sections/project-card.tsx"],
+    files: ["components/paper/project-window.tsx", "components/pieces/expanding-cards.tsx", "components/sections/project-card.tsx", "components/figures/"],
   },
   {
     id: "testimonials",
