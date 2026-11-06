@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { stateAt, follow, MAX_RATE, totalUnits, HOLD } from "./scroll.ts";
-import { chaptersFor, checkPerson, yearRange, slots, placeViews } from "./person.ts";
+import { chaptersFor, checkPerson, yearRange, slots, placeViews, studyLocation } from "./person.ts";
 import { yearText, captions, CHAPTERS, type ChapterKey } from "./chapters.ts";
 import { parseMix, formatMix, seams, chaptersOf, worldsOf, WHOLE } from "./mix.ts";
 import { SAMPLE_PEOPLE } from "./people.ts";
@@ -92,10 +92,23 @@ test("checkPerson names what makes a person unusable", () => {
     name: "",
     places: [{ ...SAMPLE_PEOPLE.noa.places[0], lat: Number.NaN }],
     work: [{ ...SAMPLE_PEOPLE.noa.work[0], from: 2022, to: 2021 }],
+    study: [],
     projects: [{ ...SAMPLE_PEOPLE.noa.projects[0], kind: "video" as never }],
   };
   const errs = checkPerson(bad);
   assert.equal(errs.length, 4, errs.join("; "));
+});
+
+test("a study stands at its city, which must be one of the places", () => {
+  const noa = SAMPLE_PEOPLE.noa, s = noa.study[0];
+  assert.equal(studyLocation(noa, s)?.name, "Delft");
+  // A school's name is not a place: its city says where it stands.
+  const school = { ...s, place: "Delft University of Technology", city: "Delft" };
+  assert.equal(studyLocation(noa, school)?.name, "Delft");
+  assert.deepEqual(checkPerson({ ...noa, study: [school] }), []);
+  assert.equal(checkPerson({ ...noa, study: [{ ...s, place: "Delft University of Technology" }] }).length, 1);
+  assert.equal(checkPerson({ ...noa, study: [{ ...school, city: "Leiden" }] }).length, 1);
+  assert.deepEqual(checkPerson({ ...noa, places: [], study: [school] }), []);
 });
 
 test("captions give each present chapter its words, and only those", () => {

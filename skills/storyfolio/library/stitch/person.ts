@@ -3,7 +3,8 @@
 import { CHAPTERS, type ChapterKey } from "./chapters.ts";
 
 export type Place = { name: string; lat: number; lng: number; what: string };
-export type Study = { degree: string; field: string; place: string; from: number; to: number; note?: string };
+/** `place` is where they studied as the site names it, such as the school; `city`, one of the places, is where it stands when `place` is not. */
+export type Study = { degree: string; field: string; place: string; city?: string; from: number; to: number; note?: string };
 export type Work = { org: string; role: string; place: string; from: number; to: number | null; did: string; uses: string[] };
 export type SkillGroup = { group: string; items: string[] };
 export const PROJECT_KINDS = ["chart", "photo", "maze", "route", "bars", "list"] as const;
@@ -30,6 +31,11 @@ export type Person = {
 /** The moment the timelines run up to, as a fractional year. */
 export const NOW = 2026.8;
 
+/** The place a study stands at: its city, or else its place. */
+export function studyLocation(p: Person, s: Study): Place | null {
+  return p.places.find((x) => x.name === (s.city ?? s.place)) ?? null;
+}
+
 /** What makes a person unusable by the worlds. Empty when they can be drawn. */
 export function checkPerson(p: Person): string[] {
   const errs: string[] = [];
@@ -41,6 +47,9 @@ export function checkPerson(p: Person): string[] {
   }
   for (const x of [...(p.work ?? []), ...(p.study ?? [])]) {
     if (x.to != null && x.from > x.to) errs.push(`${"org" in x ? x.org : x.field} starts after it ends.`);
+  }
+  for (const x of p.places?.length ? p.study ?? [] : []) {
+    if (!studyLocation(p, x)) errs.push(`The study ${x.place} is not one of the places: name its city with \`city\`.`);
   }
   for (const x of p.projects ?? []) {
     if (!(PROJECT_KINDS as readonly string[]).includes(x.kind)) errs.push(`The project ${x.title} has the unknown kind ${x.kind}.`);

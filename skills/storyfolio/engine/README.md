@@ -50,7 +50,7 @@ It is read from three files:
 
 | File | Holds | Set at |
 |---|---|---|
-| `content/person.ts` | The person's confirmed facts, in the shape of `stitch/person.ts`. The supplied one is made up: replace all of it. A chapter with nothing in it (no study, no quotes) is left out and its neighbours join | Stop 2 |
+| `content/person.ts` | The person's confirmed facts, in the shape of `stitch/person.ts`. The supplied one is made up: replace all of it. A chapter with nothing in it (no study, no quotes) is left out and its neighbours join. A study's `place` may be its school, with `city` naming the place it stands in; the build stops on a person the worlds cannot draw | Stop 2 |
 | `content/mix.ts` | The world that tells every chapter, chosen to suit the person from the library's gallery, https://xitij27.github.io/storyfolio/transitions/: `WHOLE.sheet`, `WHOLE.map` or `WHOLE.book` (`stitch/mix.ts`). As one line, `map,map,map,map,map,map,map,map`. A chapter put in another world is joined by a dive, which reads as a picture popping in: only when the person asks | Stop 2 |
 | `content/site.ts` | The look (`night`, `daylight` or `blueprint`, in `stitch/look.ts`), how the sheet moves between chapters (`fold`, `swing` or `slide`), the person's own words for any chapter, the CV's address, and the site's language | Stops 4 to 6 |
 
@@ -66,7 +66,10 @@ in `stitch/chapters.ts`) until the person chooses their own. Put those in
 page, prints theirs. Every word, each project's line and `more`, and the
 CV and project links are also written out in the page's HTML, for anyone
 without the 3D and for screen readers. Every page is titled with the
-person's name unless it gives a title of its own.
+person's name unless it gives a title of its own. A bar at the top holds
+their name and links to their work, to contact and to the CV; the
+chapter's words stand in a band under the 3D, never over it; any address
+ending in `#<chapter>` opens the story there.
 
 A project opens a window on a click: its line and tags, `more` (a paragraph)
 when it has one, and a link to `page` when it has its own page. Write a

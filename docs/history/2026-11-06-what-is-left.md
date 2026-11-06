@@ -52,3 +52,19 @@ Stage 3 of 4 is open.
 - Take person test 4's engine fixes in before the next run?
 - Launch person test 5 (paid)?
 - Which of the comparisons and Stage 1 closers to run, and which to drop?
+
+## The author's answer
+
+> yes update the documentation and continue with the recommendations
+
+Root read this as yes to the first decision, taking person test 4's engine
+fixes in before the next run, and began on it. A paid run is asked again
+before it is launched, since the answer names the recommendations, and the
+recommendation was to fix the engine first.
+
+## Person test 4's engine fixes, taken in
+
+Root took into the engine what person test 4's agent had to fix in
+`stitch/`, and eased the map's crowding at home:
+[stitch-4](../../evals/engine/stitch-4/README.md). No skill text changed,
+no run, no push. Person test 5 is asked of the author next.

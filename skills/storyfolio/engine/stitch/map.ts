@@ -3,7 +3,7 @@
 // words all come from the person's data. Browser only.
 import * as THREE from "three";
 import { CHAPTERS, yearText, type ChapterKey } from "./chapters.ts";
-import { NOW, type Person, type Project } from "./person.ts";
+import { NOW, studyLocation, type Person, type Project } from "./person.ts";
 import { canvas, dieCut, label, miniPicture, rrect, sans, serif, texture, wrap } from "./paint.ts";
 import { dotLand } from "./land.ts";
 import { groundTones, rgba, type Palette } from "./look.ts";
@@ -47,10 +47,6 @@ export const createMap: WorldFactory = async (env, chapters) => {
   const at = (lat: number, lng: number) => { const [x, z] = f.at(lat, lng); return new THREE.Vector3(x, 0, z); };
   const home = P.places[P.places.length - 1];
   const homeV = home ? at(home.lat, home.lng) : new THREE.Vector3();
-  const where = (name: string) => {
-    const p = P.places.find((x) => x.name === name) ?? home;
-    return p ? at(p.lat, p.lng) : new THREE.Vector3();
-  };
   // Places closer than a unit share one spot: their names stack, and what stands there stands in one row.
   const spotOf = spots(P.places.map((p) => f.at(p.lat, p.lng)), 1);
   const spotIndex = (name: string) => {
@@ -167,19 +163,22 @@ export const createMap: WorldFactory = async (env, chapters) => {
   if (own.has("hello")) standing(card(C, 1000, 760, (ctx, w) => {
     ctx.fillStyle = C.amber; ctx.font = sans(34, 600); ctx.fillText("HELLO, I'M", 64, 120);
     ctx.fillStyle = C.ink; ctx.font = serif(92); wrap(ctx, P.name, 64, 230, w - 128, 100, 2);
-    ctx.fillStyle = C.muted; ctx.font = sans(36, 600); ctx.fillText(P.role.toUpperCase(), 64, 470);
+    ctx.fillStyle = C.muted; ctx.font = sans(32, 600); wrap(ctx, P.role.toUpperCase(), 64, 425, w - 128, 40, 2);
     ctx.fillStyle = C.ink; ctx.font = serif(38, 400, "italic"); wrap(ctx, P.line, 64, 540, w - 128, 50, 2);
     if (home) { ctx.fillStyle = C.muted; ctx.font = sans(28); ctx.fillText(`${home.name}, now`, 64, 700); }
   }), 1.5, 1.14, signAt, "hello");
 
   // Studied: the diploma at the school.
   const s0 = P.study[0];
-  const diplomaAt = (s0 ? where(s0.place) : homeV.clone()).add(new THREE.Vector3(-0.75, 0, 0.1));
+  const studyCity = s0 ? studyLocation(P, s0) : null;
+  const schoolV = studyCity ? at(studyCity.lat, studyCity.lng) : homeV.clone();
+  const diplomaAt = schoolV.clone().add(new THREE.Vector3(-0.75, 0, 0.1));
   if (own.has("studied") && s0) standing(card(C, 1000, 700, (ctx, w) => {
     ctx.strokeStyle = C.amber; ctx.lineWidth = 6; ctx.strokeRect(30, 30, w - 60, 640);
     ctx.textAlign = "center";
-    ctx.fillStyle = C.muted; ctx.font = sans(30, 600); ctx.fillText(`${s0.place.toUpperCase()}  ·  ${s0.from} TO ${s0.to}`, w / 2, 120);
-    ctx.fillStyle = C.ink; ctx.font = serif(46); ctx.fillText(P.name, w / 2, 220);
+    ctx.fillStyle = C.muted; ctx.font = sans(30, 600); wrap(ctx, s0.place.toUpperCase(), w / 2, 95, w - 120, 38, 2);
+    ctx.font = sans(28); ctx.fillText(`${s0.from} TO ${s0.to}`, w / 2, 170);
+    ctx.fillStyle = C.ink; ctx.font = serif(46); ctx.fillText(P.name, w / 2, 245);
     ctx.font = serif(66); ctx.fillText(s0.degree, w / 2, 340);
     ctx.font = serif(44, 400); ctx.fillText(`in ${s0.field}`, w / 2, 410);
     if (s0.note) { ctx.fillStyle = C.muted; ctx.font = sans(28); wrap(ctx, s0.note, w / 2, 500, w - 160, 36, 2); }
@@ -205,8 +204,8 @@ export const createMap: WorldFactory = async (env, chapters) => {
     const fh = Math.min(0.62, hgt - 0.04);
     const face = new THREE.Mesh(new THREE.PlaneGeometry(0.62, fh), new THREE.MeshBasicMaterial({
       map: tex(card(C, 620, 620, (ctx, cw) => {
-        ctx.fillStyle = C.ink; ctx.font = serif(64); wrap(ctx, w.org, 40, 100, cw - 80, 70, 2);
-        ctx.fillStyle = C.muted; ctx.font = sans(40); wrap(ctx, w.role, 40, 300, cw - 80, 48, 2);
+        ctx.fillStyle = C.ink; ctx.font = serif(55); wrap(ctx, w.org, 40, 90, cw - 80, 65, 3);
+        ctx.fillStyle = C.muted; ctx.font = sans(40); wrap(ctx, w.role, 40, 330, cw - 80, 48, 3);
         ctx.fillStyle = C.amber; ctx.font = sans(44, 600); ctx.fillText(yearText(w), 40, 540);
       }, 0)),
     }));
@@ -219,7 +218,9 @@ export const createMap: WorldFactory = async (env, chapters) => {
       group.add(t);
       return t;
     }) : [];
-    return { group, hgt, tags, pos, foot, from: w.from };
+    // The middle of the roof's stack of what this job used.
+    const roof = pos.clone().setY(hgt + 0.24 + Math.max(0, tags.length - 1) * 0.1);
+    return { group, hgt, tags, pos, foot, roof, from: w.from };
   });
   // Someone with skills and no jobs: the skills stand in a stack at home.
   const looseTags = own.has("good") && !buildings.length ? P.skills.flatMap((g) => g.items).slice(0, 10).map((u, j) => {
@@ -229,7 +230,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
     return t;
   }) : [];
 
-  // Made: every project where it was made.
+  // Made: every project where it was made, in a row in front of what already stands there.
   const plateTurn = turns();
   const plates = own.has("made") ? P.projects.map((p, i) => {
     const n = plateTurn(p.place);
@@ -239,7 +240,7 @@ export const createMap: WorldFactory = async (env, chapters) => {
       ctx.fillStyle = C.muted; ctx.font = sans(30); wrap(ctx, p.line, 34, 492, w - 68, 36, 2);
       ctx.fillStyle = C.amber; ctx.font = sans(28, 600); ctx.fillText(`${p.year}`, 34, h - 30);
     }, 10);
-    return { item: standing(pic, 0.9, 0.72, spotAt(p.place).add(new THREE.Vector3(-0.9 + n * 1.0, 0, 0.75)), "made", n * 0.12, p), year: p.year };
+    return { item: standing(pic, 0.9, 0.72, spotAt(p.place).add(new THREE.Vector3(-0.9 + n * 1.0, 0, 1.6)), "made", n * 0.12, p), year: p.year };
   }) : [];
 
   // Others say: every quote, floating where those people worked with them.
@@ -275,7 +276,10 @@ export const createMap: WorldFactory = async (env, chapters) => {
 
   // ---------- The camera, chapter by chapter ----------
   const centroid = (vs: THREE.Vector3[]) => vs.length ? vs.reduce((a, v) => a.add(v), new THREE.Vector3()).multiplyScalar(1 / vs.length) : homeV.clone();
-  const workOrder = [...buildings].sort((a, b) => a.from - b.from).map((b) => b.foot.clone());
+  const byStart = [...buildings].sort((a, b) => a.from - b.from);
+  const workOrder = byStart.map((b) => b.foot.clone());
+  // Good at: the latest job that lists what it used. A flight from roof to roof would cross empty map between places far apart.
+  const tools = [...byStart].reverse().find((b) => b.tags.length);
   const madeOrder = [...plates].sort((a, b) => a.year - b.year).map((p) => p.item.hinge.position.clone());
   const along = (pts: THREE.Vector3[], local: number) => {
     if (!pts.length) return homeV.clone();
@@ -304,11 +308,14 @@ export const createMap: WorldFactory = async (env, chapters) => {
       phone: { target: signAt.clone().setY(0.57), width: 1.5 } }),
     // Drifting in over the hold, never nearer than the fit once the lean in (to 0.92) is taken.
     from: (l) => ({ target: new THREE.Vector3(), dist: (fromDistance(0.95) / 0.92) * (1.12 - 0.12 * l), pitch: 0.95, fitted: true }),
-    studied: () => ({ target: (s0 ? where(s0.place) : homeV.clone()).add(new THREE.Vector3(-0.5, 0.45, 0)), dist: 3.2, pitch: 0.3,
+    studied: () => ({ target: schoolV.clone().add(new THREE.Vector3(-0.5, 0.45, 0)), dist: 3.2, pitch: 0.3,
       phone: { target: diplomaAt.clone().setY(0.42), width: 1.2 } }),
     worked: (l) => ({ target: along(workOrder, l).add(new THREE.Vector3(0.5, 0.7, 0)), dist: 4.4, pitch: 0.36 }),
-    good: () => ({ target: centroid(buildings.map((b) => b.pos.clone())).add(new THREE.Vector3(0.3, 1.1, 0)), dist: 5.2 + buildings.length * 0.3, pitch: 0.42 }),
-    made: (l) => ({ target: along(madeOrder, l).add(new THREE.Vector3(0, 0.4, 0)), dist: 3.6, pitch: 0.34 }),
+    good: () => tools
+      ? { target: tools.roof.clone(), dist: 3.4, pitch: 0.2, phone: { target: tools.roof.clone(), width: 1.8 } }
+      : { target: homeV.clone().add(new THREE.Vector3(0.4, 1.2, -0.4)), dist: 4.2, pitch: 0.3 },
+    made: (l) => ({ target: along(madeOrder, l).add(new THREE.Vector3(0, 0.4, 0)), dist: 3.6, pitch: 0.34,
+      phone: { target: along(madeOrder, l).add(new THREE.Vector3(0, 0.38, 0)), width: 1.12 } }),
     // On a phone the quotes are read one at a time, the camera going from one to the next.
     say: (l) => ({ target: centroid(bubbles.map((b) => b.base.clone())), dist: 3.6 + bubbles.length * 0.45, pitch: 0.12,
       phone: { target: along(bubbles.map((b) => b.base.clone()), smooth(0.1, 0.9, l)), width: 1.75 } }),

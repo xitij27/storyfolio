@@ -69,7 +69,8 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   const spacer = spacerOf(canvas, o);
-  const narrow = () => canvas.clientWidth / Math.max(1, canvas.clientHeight) < 0.9;
+  // Narrow: a phone held either way, or any view taller than wide.
+  const narrow = () => canvas.clientWidth <= 720 || canvas.clientWidth / Math.max(1, canvas.clientHeight) < 0.9;
   const land = await loadLand();
   const palette = o.palette ?? LOOKS.night;
   const env = { person: o.person, palette, words: o.words ?? {}, renderer, land, narrow, move: o.move };
@@ -110,6 +111,9 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
   };
   resize();
   window.addEventListener("resize", resize);
+  // The page around the canvas can change its size without the window changing, as its top bar and caption band settle.
+  const sized = new ResizeObserver(resize);
+  sized.observe(canvas);
 
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let shown = Math.max(0, target());
@@ -221,6 +225,7 @@ async function mount(canvas: HTMLCanvasElement, o: StitchOptions, keys: ChapterK
     dispose() {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
+      sized.disconnect();
       canvas.removeEventListener("click", onClick);
       canvas.removeEventListener("mousemove", onMove);
       for (const world of worlds.values()) world.dispose();

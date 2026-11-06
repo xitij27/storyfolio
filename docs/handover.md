@@ -28,11 +28,13 @@ for the author; the same site on the sheet was "definitely better" but "not
 there yet", and "cool transitions mean wow". On 1 November the sheet gained
 two moves the author found cool, and the person picks one at the look stop
 ([record](history/2026-11-01-person-test-4-review.md)). Stage 3 stays open.
-Next, on the author's word: the person test again with the moves (paid).
-(1 November's work is on GitHub at `8103e0a2`, found 6 November.) Also open from the run: take the agent's sound engine fixes
-from person test 4's turn 4 into the engine (a study's city, the camera for
-"good at", a navigation bar and a caption band), and the map's crowding at
-home.
+On 6 November the engine took in person test 4's sound fixes (a study's
+city, the camera for "good at", a top bar, a band of words under the
+scene, project buttons, the window as a dialog) and eased the map's
+crowding at home ([stitch-4](../evals/engine/stitch-4/README.md)). Next,
+on the author's word: person test 5, the person test again with the moves
+and these fixes (paid). (1 November's work is on GitHub at `8103e0a2`,
+found 6 November.)
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
 
@@ -164,13 +166,13 @@ six are small fixes; the last three are for the author's review to weigh.
   (`stitch/person.ts` checks `page`, `stitch/site.ts` checks nothing).
 - `/preview?person=noa` shows the owner's CV button
   (`engine/app/preview/preview.tsx` passes `site.cv` for every person).
-- Below 4.5:1 contrast at small sizes: the project window's "More about"
-  link (`stitch/react.tsx`, `stitch/stitch.css`) and daylight's chapter
-  number.
+- Below 4.5:1 contrast at small sizes: daylight's chapter number. (The
+  project window's "More about" link and eyebrow pass since 6 November,
+  stitch-4.)
 - Unusual screens: the phone reading width is in world units (`READ_W` in
-  `stitch/sheet.ts`) and "narrow" is an aspect below 0.9
-  (`stitch/stage.ts`), so very small phones, portrait tablets and
-  landscape phones are framed less well.
+  `stitch/sheet.ts`), so very small phones, portrait tablets and
+  landscape phones are framed less well. (Since stitch-4 a view 720 pixels
+  wide or less is narrow as well as one taller than wide.)
 - The stitch-2 frames predate the fix to the sheet's contact sentence (the
   daylight phone frame still shows "yours to download"): shoot them again.
 - `/plain-story` ships, unlinked, on every person's site.
@@ -202,7 +204,7 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 - Read [AGENTS.md](../AGENTS.md) first. A push and any paid run need the
   author's word.
-- Node 24.14 runs the `.ts` tests. `npm test` (415) and
+- Node 24.14 runs the `.ts` tests. `npm test` (420) and
   `node evals/check-skill.mjs` pass before each commit. On the WSL machine
   (31 October), `/usr/bin/node` is Ubuntu's 22.22.1, built without
   TypeScript support, so the 26 `.ts` test files cannot load. Node 24.14.0
@@ -224,11 +226,15 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   instead (`ip -4 addr show eth0`, 172.22.209.33 on 31 October; it can change
   when WSL restarts). A phone needs a Windows port proxy and firewall rule,
   or `networkingMode=mirrored` in `.wslconfig`.
-- Browser: Chromium 1234 at
-  `~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome`, named by
-  `CHROMIUM`. playwright-core 1.64 wants 1248, which is not installed
-  here, so `npm run check:plain` (the old `shoot.mjs`) fails on this
-  machine; the engine's `npm run browsers` would install it (not tried).
+- Browser (6 November): Chromium 1234 is gone from `~/.cache/ms-playwright`;
+  playwright-core's own 1248 is there and the checks use it with no
+  `CHROMIUM` set. From stitch-4: Dawit's site with the new engine in
+  `/var/tmp/stitch-4-site` (port 3150), a fresh scaffold in
+  `/var/tmp/stitch-4-scaffold`, the library built with
+  `BASE_PATH=/storyfolio` in `/var/tmp/stitch-4-library`, served from
+  `/var/tmp/stitch-4-library-serve` (port 3151). The library's
+  `gallery-check.mjs` needs playwright-core in its `node_modules` (a link
+  to the site's).
 - Check production builds (`next build`, `next start`): `next dev`'s live
   reload fails here.
 - Build copies go in `/var/tmp`, not `/tmp` (a memory filesystem that
@@ -242,7 +248,9 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
 
 ## What happened, newest first
 
-Latest, 6 November (status): **the author asked again what is left; root's answer is [recorded](history/2026-11-06-what-is-left.md).** In order: person test 4's engine fixes, person test 5 (paid), the author's review (closes Stage 3), plan 2's smaller things, the Stage 1 closers (run or drop), Stage 4 packaging. Found: GitHub's `main` is at `8103e0a2`, so 1 November's work is pushed. Documentation only.
+Latest, 6 November (person test 4's engine fixes): **on the author's "yes update the documentation and continue with the recommendations", the engine took in what person test 4's agent had to fix in `stitch/`, so the next run does not redo it** ([study](../evals/engine/stitch-4/README.md), [record](history/2026-11-06-what-is-left.md#the-authors-answer)). `Study.city` for a school's city, checked, and the build stops on a person the worlds cannot draw; the map's "good at" holds on the latest job's tools; long names wrap on the map's cards; a top bar (name, Work, Contact, CV) of `#chapter` links; the chapter's words in a band under the 3D, as tall as the tallest so the view keeps its size (over the scene's foot in an all-book story); project and contact buttons in the captions; the project window a native dialog; the view follows its own size and is narrow at 720 pixels or less; a lost context gives way to the words; on the map the projects stand in their own row and a phone frames one at a time. Left out: Dawit's own lines and a "Read text" switch. Dawit's finished site with the new engine passes `npm run check`; Noa and Amara pass in every world at both sizes; a fresh scaffold and the library's gallery check pass. 420 tests; `check-skill` ok. No skill text changed, no run, not pushed.
+
+Earlier, 6 November (status): **the author asked again what is left; root's answer is [recorded](history/2026-11-06-what-is-left.md).** In order: person test 4's engine fixes, person test 5 (paid), the author's review (closes Stage 3), plan 2's smaller things, the Stage 1 closers (run or drop), Stage 4 packaging. Found: GitHub's `main` is at `8103e0a2`, so 1 November's work is pushed. Documentation only.
 
 Earlier, 1 November (the sheet's moves): **the author found person test 4's map site without flow or wow ("cool transitions mean wow"), preferred the same site on the sheet, and found two new moves for the sheet cool; the person now picks the sheet's move at the look stop** ([record](history/2026-11-01-person-test-4-review.md), [plan](superpowers/plans/2026-11-01-sheet-transitions.md), [study](../evals/engine/sheet-moves-1/README.md)). `fold` (a pleated fan that turns and opens into the next shape) and `swing` (the camera sweeping round a higher wave) beside `slide`; `content/site.ts` holds `move`, a new site starting with `swing`; `building.md` and `SKILL.md`'s stop 4 offer the moves. 419 tests; `check-skill` ok; a fresh scaffold passes `npm run check`. No run; not pushed.
 

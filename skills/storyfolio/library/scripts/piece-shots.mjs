@@ -34,7 +34,7 @@ let saved = 0;
 for (const world of ["sheet", "map", "book"]) {
   await page.goto(`${String(args.url).replace(/\/$/, "")}/transitions/whole/${world}/?p=noa`, { waitUntil: "load" });
   await page.waitForFunction(() => window.__stitch?.ready || window.__stitch?.error, null, { timeout: 60000 });
-  await page.addStyleTag({ content: "header { display: none !important } .stitch .cap, .stitch .rail, .stitch .hint, .stitch .cta { display: none !important }" });
+  await page.addStyleTag({ content: "header { display: none !important } .stitch .band, .stitch .rail, .stitch .hint { display: none !important }" });
   const keys = await page.evaluate(() => window.__stitch.keys);
   for (let k = 0; k < keys.length; k++) {
     await page.evaluate((s) => window.scrollTo({ top: window.__stitch.top() + s * window.__stitch.unit(), behavior: "instant" }), k + 0.2);

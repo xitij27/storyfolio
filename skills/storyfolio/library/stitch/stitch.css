@@ -8,64 +8,91 @@
   -webkit-font-smoothing: antialiased; min-height: 100vh;
 }
 .stitch a { color: inherit; }
-.stitch .gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
+.stitch a:focus-visible, .stitch button:focus-visible { outline: 3px solid var(--st-amber); outline-offset: 3px; }
+
+/* The screen: the top bar, the 3D view, and the band of words under it, so the words never cover the scene. */
+.stitch .frame { position: fixed; inset: 0; z-index: 0; display: flex; flex-direction: column; }
 .stitch .spacer { position: relative; z-index: -1; }
 
-.stitch .ui { position: fixed; inset: 0; pointer-events: none; z-index: 2; }
+.stitch .topbar { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 56px; padding: 10px 24px;
+  background: var(--st-bg); border-bottom: 1px solid var(--st-line); }
+.stitch .topbar a { text-decoration: none; font-size: 14px; }
+.stitch .topbar .brand { font-family: var(--st-serif); font-size: 20px; white-space: nowrap; }
+.stitch .topbar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 20px; }
+
+.stitch .view { position: relative; flex: 1; min-height: 160px; }
+.stitch .gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .stitch .rail { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 6px; }
-.stitch .rail button { pointer-events: auto; display: flex; align-items: center; justify-content: flex-end; gap: 10px; background: none; border: 0;
+.stitch .rail button { display: flex; align-items: center; justify-content: flex-end; gap: 10px; background: none; border: 0;
   color: var(--st-muted); font: 500 13px var(--st-sans); cursor: pointer; padding: 3px 0; flex-direction: row-reverse; }
 /* A halo in the caption glass's colour keeps the rail and hint readable over any world, such as the book's dark desk in a light look. */
 .stitch .rail button, .stitch .hint { text-shadow: 0 0 3px var(--st-glass), 0 0 8px var(--st-glass), 0 0 14px var(--st-glass); }
 .stitch .rail i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.5; box-shadow: 0 0 0 2px var(--st-glass); }
 .stitch .rail button.on { color: var(--st-ink); }
 .stitch .rail button.on i { background: var(--st-amber); opacity: 1; transform: scale(1.4); }
-.stitch .cap { position: absolute; left: 24px; bottom: 28px; max-width: 430px; padding: 18px 20px; border-radius: 14px;
-  background: var(--st-glass); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--st-line); }
+.stitch .hint { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); color: var(--st-muted); font-size: 13px; letter-spacing: 0.1em;
+  text-transform: uppercase; transition: opacity 0.4s; pointer-events: none; }
+
+/* Every caption stands in one cell; only the chapter's own shows. */
+.stitch .band { flex: none; display: grid; max-height: 45vh; max-height: 45dvh; overflow: auto; background: var(--st-bg); border-top: 1px solid var(--st-line); }
+.stitch .band .cap { grid-area: 1 / 1; visibility: hidden; padding: 14px 24px 16px; max-width: 760px; }
+.stitch .band .cap.on { visibility: visible; }
 .stitch .cap .num { color: var(--st-amber); font: 600 12px var(--st-sans); letter-spacing: 0.12em; }
-.stitch .cap h2 { font-family: var(--st-serif); font-weight: 600; font-size: 26px; margin: 4px 0 6px; }
+.stitch .cap h2 { font-family: var(--st-serif); font-weight: 600; font-size: 24px; margin: 2px 0 4px; }
 .stitch .cap p { margin: 0; color: var(--st-soft); line-height: 1.5; font-size: 15px; }
-.stitch .hint { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: var(--st-muted); font-size: 13px; letter-spacing: 0.1em;
-  text-transform: uppercase; transition: opacity 0.4s; }
-.stitch.nowords .cap, .stitch.nowords .rail span, .stitch.nowords .hint { display: none; }
-/* In the book the left page carries the chapter's words. */
-.stitch .cap.inbook { display: none; }
+/* In the book the left page carries the chapter's words; its buttons stay in the band. */
+.stitch .cap.inbook .words { display: none; }
+/* A story wholly in the book has only buttons in the band: they stand over the scene's foot instead of taking room from it. */
+.stitch.allbook .band { position: absolute; left: 0; right: 0; bottom: 0; background: none; border: 0; }
+.stitch .cap .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.stitch .cap .links button, .stitch .cap .links a { border: 1px solid var(--st-line); border-radius: 999px; padding: 7px 14px; min-height: 36px;
+  color: var(--st-ink); background: none; font: 500 13px var(--st-sans); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
+.stitch.allbook .cap .links button, .stitch.allbook .cap .links a:not(:first-child) { background: var(--st-glass); }
+.stitch .cap .actions a:first-child { background: var(--st-amber); border-color: var(--st-amber); color: #11161c; font-weight: 600; }
+.stitch.nowords .band, .stitch.nowords .topbar, .stitch.nowords .rail span, .stitch.nowords .hint { display: none; }
 
-.stitch .cta { position: fixed; z-index: 3; left: 50%; bottom: 34px; transform: translateX(-50%); display: flex; gap: 10px; opacity: 0; pointer-events: none; }
-.stitch .cta a { border-radius: 999px; padding: 12px 20px; font: 600 15px var(--st-sans); text-decoration: none; background: var(--st-amber); color: #11161c; white-space: nowrap; }
-.stitch .cta a + a { background: var(--st-ink); color: var(--st-on-ink); }
-
-.stitch .modal { position: fixed; inset: 0; z-index: 10; background: rgba(5, 7, 10, 0.6); display: grid; place-items: center; padding: 16px; }
-.stitch .modal .sheet { position: relative; width: min(620px, 100%); max-height: calc(100vh - 32px); overflow: auto; background: #f2ede2; color: #1c222a; border-radius: 16px; }
+.stitch dialog.modal { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: 16px;
+  background: rgba(5, 7, 10, 0.6); display: grid; place-items: center; color: inherit; }
+.stitch dialog.modal:not([open]) { display: none; }
+.stitch dialog.modal::backdrop { background: transparent; }
+.stitch .modal .sheet { position: relative; width: min(620px, 100%); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: auto; background: #f2ede2; color: #1c222a; border-radius: 16px; }
 .stitch .modal .pic canvas { width: 100%; display: block; }
 .stitch .modal .body { padding: 20px 24px 26px; }
-.stitch .modal .eyebrow { color: #b47718; font: 600 12px var(--st-sans); letter-spacing: 0.12em; text-transform: uppercase; }
+.stitch .modal .eyebrow { color: #80500b; font: 600 12px var(--st-sans); letter-spacing: 0.12em; text-transform: uppercase; }
 .stitch .modal h3 { font-family: var(--st-serif); font-size: 30px; margin: 6px 0 8px; }
 .stitch .modal p { margin: 0 0 10px; line-height: 1.55; }
-.stitch .modal .more { color: #6d7782; font-size: 14px; }
+.stitch .modal .more { color: #4f5862; font-size: 14px; }
 .stitch .modal .tags span { display: inline-block; border: 1px solid #c9c1b0; border-radius: 999px; padding: 4px 10px; font-size: 13px; margin: 0 6px 6px 0; }
 .stitch .modal [data-close] { position: absolute; top: 10px; right: 12px; border: 0; background: rgba(255, 255, 255, 0.8); border-radius: 50%;
-  width: 34px; height: 34px; font-size: 22px; line-height: 1; cursor: pointer; color: #1c222a; }
+  width: 44px; height: 44px; font-size: 22px; line-height: 1; cursor: pointer; color: #1c222a; }
+.stitch .modal button:focus-visible, .stitch .modal a:focus-visible { outline-color: #80500b; }
 
 /* The words in full: on the page without the 3D, for screen readers only with it. */
 .stitch .text { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; line-height: 1.55; }
 .stitch .text h1 { font-family: var(--st-serif); font-size: 40px; margin: 0 0 24px; }
 .stitch .text h2 { font-family: var(--st-serif); font-size: 24px; margin: 28px 0 6px; }
+.stitch .text article { scroll-margin-top: 72px; }
 .stitch[data-scene="on"] .text, .stitch[data-scene="wait"] .text {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
-.stitch[data-scene="off"] .gl, .stitch[data-scene="off"] .ui, .stitch[data-scene="off"] .cta, .stitch[data-scene="off"] .spacer { display: none; }
+/* Without the 3D only the top bar stays, at the top of the words. */
+.stitch[data-scene="off"] .frame { position: sticky; top: 0; z-index: 2; }
+.stitch[data-scene="off"] .view, .stitch[data-scene="off"] .band, .stitch[data-scene="off"] .spacer { display: none; }
 
 @media (max-width: 720px) {
+  .stitch .topbar { padding: 8px 12px; gap: 10px; }
+  .stitch .topbar .brand { font-size: 17px; }
+  .stitch .topbar nav { gap: 4px 14px; }
   .stitch .rail span { display: none; }
   .stitch .rail { right: 8px; }
-  .stitch .cap { left: 12px; right: 12px; bottom: 14px; max-width: none; padding: 12px 14px; }
-  .stitch .cap h2 { font-size: 20px; margin: 2px 0 4px; }
+  .stitch .band .cap { padding: 10px 14px 12px; }
+  .stitch .cap h2 { font-size: 20px; }
   .stitch .cap p { font-size: 14px; line-height: 1.4; }
-  .stitch .cta { bottom: 22px; }
+  .stitch .hint { display: none; }
 }
 @media (scripting: none) {
   .stitch .text { position: relative !important; width: auto !important; height: auto !important; margin: 0 auto !important; padding: 48px 20px 80px !important;
     overflow: visible !important; clip: auto !important; white-space: normal !important; }
-  .stitch .gl, .stitch .ui, .stitch .cta { display: none; }
+  .stitch .frame { position: sticky; top: 0; z-index: 2; }
+  .stitch .view, .stitch .band, .stitch .spacer { display: none; }
 }

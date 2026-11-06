@@ -1,8 +1,8 @@
 "use client";
-// A stitched story on a page: the 3D behind, the chapter's words, the
-// chapter rail, the contact buttons and a project window. The words are
+// A stitched story on a page: a top bar, the 3D, the chapter rail, a band of
+// the chapter's words under it, and a project window. The words are
 // also written out in full for anyone without the 3D.
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from "react";
 import { titleOf, wordsFor, type ChapterKey } from "./chapters.ts";
 import { chaptersFor, type Person, type Project } from "./person.ts";
 import { formatMix, parseMix, type Mix } from "./mix.ts";
@@ -22,11 +22,12 @@ function lookStyle(p: Palette): CSSProperties {
 }
 
 /**
- * `start` opens the story at that chapter when the page is at its top, as a link to one chapter's piece does.
- * `words` are the person's own words for any chapter; `cv` is where their CV is, and its button shows only with it.
+ * `start` opens the story at that chapter when the page is at its top, as a link to one chapter's piece does; an address ending in `#chapter` opens it there.
+ * `words` are the person's own words for any chapter; `cv` is where their CV is, and its link shows only with it.
+ * `topbar` is the bar of the person's name and links; a page with its own bar over the story leaves it out.
  */
-export function StitchedStory({ person, mix, showWords = true, start, look = "night", words: chosen, cv, move }: {
-  person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId; words?: Partial<Record<ChapterKey, string>>; cv?: string; move?: Move;
+export function StitchedStory({ person, mix, showWords = true, start, look = "night", words: chosen, cv, move, topbar = true }: {
+  person: Person; mix: Mix; showWords?: boolean; start?: ChapterKey; look?: LookId; words?: Partial<Record<ChapterKey, string>>; cv?: string; move?: Move; topbar?: boolean;
 }) {
   const palette = LOOKS[look];
   const keys = useMemo(() => chaptersFor(person), [person]);
@@ -35,9 +36,8 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
   const chosenText = JSON.stringify(chosen ?? {});
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
-  const capRef = useRef<HTMLDivElement>(null);
+  const bandRef = useRef<HTMLDivElement>(null);
   const hintRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
   const handle = useRef<Handle | null>(null);
   const nearRef = useRef(0);
   const [near, setNear] = useState(0);
@@ -48,60 +48,100 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
     const canvas = canvasRef.current, spacer = spacerRef.current;
     if (!canvas || !spacer) return;
     let alive = true;
-    const last = keys.length - 1;
     const onState = (st: ScrollState) => {
       const n = st.t < 0.5 ? st.from : st.to;
       if (n !== nearRef.current) { nearRef.current = n; setNear(n); }
       const fade = st.to === st.from ? 1 : 1 - smooth(0.05, 0.35, st.raw) + smooth(0.65, 0.95, st.raw);
-      if (capRef.current) capRef.current.style.opacity = fade.toFixed(3);
+      if (bandRef.current) { bandRef.current.style.opacity = fade.toFixed(3); bandRef.current.style.pointerEvents = fade > 0.5 ? "auto" : "none"; }
       if (hintRef.current) hintRef.current.style.opacity = st.s < 0.15 ? "1" : "0";
-      const cta = st.from === last ? 1 : st.to === last ? smooth(0.7, 1, st.raw) : 0;
-      if (ctaRef.current) { ctaRef.current.style.opacity = cta.toFixed(3); ctaRef.current.style.pointerEvents = cta > 0.5 ? "auto" : "none"; }
     };
+    // A lost drawing context leaves the words, as no WebGL does.
+    const onLost = (e: Event) => { e.preventDefault(); if (alive) setScene("off"); };
+    canvas.addEventListener("webglcontextlost", onLost);
     import("./stage.ts")
       .then(({ mountStitch }) => mountStitch(canvas, { person, mix: parseMix(mixText)!, palette: LOOKS[look], words: JSON.parse(chosenText), move, spacer, onState, onProject: setProject }))
       .then((h) => {
         if (!alive) { h.dispose(); return; }
         handle.current = h;
         setScene("on");
+        const asked = keys.indexOf(window.location.hash.slice(1) as ChapterKey);
         const at = start ? keys.indexOf(start) : -1;
-        if (at > 0 && window.scrollY < 2) h.goTo(at, true);
+        if (asked >= 0) h.goTo(asked, true);
+        else if (at > 0 && window.scrollY < 2) h.goTo(at, true);
       })
       .catch((e) => { console.error(e); if (alive) setScene("off"); });
-    return () => { alive = false; handle.current?.dispose(); handle.current = null; };
+    return () => { alive = false; canvas.removeEventListener("webglcontextlost", onLost); handle.current?.dispose(); handle.current = null; };
   }, [person, mixText, keys, start, look, chosenText, move]);
 
+  // Back and forward through chapter links.
   useEffect(() => {
-    if (!project) return;
-    const close = (e: KeyboardEvent) => { if (e.key === "Escape") setProject(null); };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, [project]);
+    const onHash = () => {
+      const at = keys.indexOf(window.location.hash.slice(1) as ChapterKey);
+      if (at >= 0) handle.current?.goTo(at, true);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, [keys]);
 
-  const key = keys[near];
+  /** A chapter link: with the story running it flies there; without, it goes to the chapter's words. */
+  const jump = (e: MouseEvent<HTMLAnchorElement>, k: ChapterKey) => {
+    if (scene !== "on" || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    window.history.pushState(null, "", `#${k}`);
+    handle.current?.goTo(keys.indexOf(k));
+  };
+  const chapterLink = (k: ChapterKey, text: string, className?: string) =>
+    <a className={className} href={`#${k}`} onClick={(e) => jump(e, k)}>{text}</a>;
+
   return (
-    <div className={`stitch${showWords ? "" : " nowords"}`} data-scene={scene} style={lookStyle(palette)}>
-      <canvas ref={canvasRef} className="gl" aria-hidden="true" />
-      <div ref={spacerRef} className="spacer" />
-      <div className="ui">
-        <nav className="rail" aria-label="Chapters">
-          {keys.map((k, i) => (
-            <button key={k} type="button" className={i === near ? "on" : ""} onClick={() => handle.current?.goTo(i)}>
-              <i /><span>{titleOf(k)}</span>
-            </button>
-          ))}
-        </nav>
-        <div ref={capRef} className={`cap${mix[key] === "book" ? " inbook" : ""}`} aria-live="polite">
-          <div className="num">{String(near + 1).padStart(2, "0")}</div>
-          <h2>{titleOf(key)}</h2>
-          <p>{words[key]}</p>
+    <div className={`stitch${showWords ? "" : " nowords"}${keys.every((k) => mix[k] === "book") ? " allbook" : ""}`} data-scene={scene} style={lookStyle(palette)}>
+      <div className="frame">
+        {topbar && (
+          <header className="topbar">
+            {chapterLink("hello", person.name, "brand")}
+            <nav aria-label="Main">
+              {keys.includes("made") && chapterLink("made", "Work")}
+              {chapterLink("contact", "Contact")}
+              {cv && <a href={cv}>CV</a>}
+            </nav>
+          </header>
+        )}
+        <div className="view">
+          <canvas ref={canvasRef} className="gl" aria-hidden="true" />
+          <nav className="rail" aria-label="Chapters">
+            {keys.map((k, i) => (
+              <button key={k} type="button" className={i === near ? "on" : ""} onClick={() => handle.current?.goTo(i)}>
+                <i /><span>{titleOf(k)}</span>
+              </button>
+            ))}
+          </nav>
+          <div ref={hintRef} className="hint">Scroll</div>
         </div>
-        <div ref={hintRef} className="hint">Scroll</div>
+        {/* Every chapter's caption in one place, so the band is as tall as the tallest and the view never changes size. */}
+        <div ref={bandRef} className="band" aria-live="polite">
+          {keys.map((k, i) => (
+            <div key={k} className={`cap${i === near ? " on" : ""}${mix[k] === "book" ? " inbook" : ""}`} aria-hidden={i !== near}>
+              <div className="words">
+                <div className="num">{String(i + 1).padStart(2, "0")}</div>
+                <h2>{titleOf(k)}</h2>
+                <p>{words[k]}</p>
+              </div>
+              {k === "made" && (
+                <div className="links" aria-label="Open a project">
+                  {person.projects.map((p) => <button key={p.title} type="button" onClick={() => setProject(p)}>{p.title}</button>)}
+                </div>
+              )}
+              {k === "contact" && (
+                <div className="links actions">
+                  <a href={`mailto:${person.contact.email}`}>Email {person.first}</a>
+                  {cv && <a href={cv}>CV</a>}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-      <div ref={ctaRef} className="cta">
-        <a href={`mailto:${person.contact.email}`}>Email {person.first}</a>
-        {cv && <a href={cv}>CV</a>}
-      </div>
+      <div ref={spacerRef} className="spacer" />
       <Chapters person={person} keys={keys} words={words} cv={cv} />
       <Expected person={person} words={words} cv={cv} />
       {project && <ProjectWindow project={project} palette={palette} onClose={() => setProject(null)} />}
@@ -115,7 +155,7 @@ function Chapters({ person, keys, words, cv }: { person: Person; keys: ChapterKe
     <section className="text" aria-label={`${person.name}, in words`}>
       <h1>{person.name}</h1>
       {keys.map((k) => (
-        <article key={k}>
+        <article key={k} id={k}>
           <h2>{titleOf(k)}</h2>
           <p>{words[k]}</p>
           {k === "made" && <ul>{person.projects.map((p) => <li key={p.title}><b>{p.page ? <a href={p.page}>{p.title}</a> : p.title}</b>. {p.line}{p.more && <> {p.more}</>}</li>)}</ul>}
@@ -138,19 +178,29 @@ function Expected({ person, words, cv }: { person: Person; words: Partial<Record
   return <script type="application/json" data-stitch-expect dangerouslySetInnerHTML={{ __html: JSON.stringify(wanted).replace(/</g, "\\u003c") }} />;
 }
 
+/** A native dialog: the page behind it cannot be reached, Escape closes it, and focus goes back where it was. */
 function ProjectWindow({ project, palette, onClose }: { project: Project; palette: Palette; onClose: () => void }) {
   const pic = useRef<HTMLDivElement>(null);
+  const box = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const el = pic.current;
     if (!el) return;
     const c = paintCanvas(800, 420, (ctx, w, h) => miniPicture(ctx, palette, project.kind, 0, 0, w, h, project.title.length));
     el.replaceChildren(c);
   }, [project, palette]);
+  useEffect(() => {
+    const d = box.current;
+    if (!d) return;
+    const back = document.activeElement as HTMLElement | null;
+    d.showModal();
+    return () => { d.close(); back?.focus({ preventScroll: true }); };
+  }, []);
   return (
-    <div className="modal open" role="dialog" aria-modal="true" aria-label={project.title} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+    <dialog ref={box} className="modal" aria-label={project.title}
+      onClose={onClose} onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
       <div className="sheet">
         <button type="button" data-close aria-label="Close" onClick={onClose}>&times;</button>
-        <div className="pic" ref={pic} />
+        <div className="pic" ref={pic} aria-hidden="true" />
         <div className="body">
           <div className="eyebrow">{project.place}, {project.year}</div>
           <h3>{project.title}</h3>
@@ -160,6 +210,6 @@ function ProjectWindow({ project, palette, onClose }: { project: Project; palett
           <div className="tags">{project.tags.map((t) => <span key={t}>{t}</span>)}</div>
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }

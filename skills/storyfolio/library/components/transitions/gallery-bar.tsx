@@ -76,7 +76,7 @@ export function GalleryStory({ title, how, mix }: { title: string; how: string; 
   return (
     <>
       <GalleryBar title={title} how={how} showWords={showWords} onWords={setShowWords} />
-      <StitchedStory person={SAMPLE_PEOPLE[person]} mix={mix} showWords={showWords} start={start} />
+      <StitchedStory person={SAMPLE_PEOPLE[person]} mix={mix} showWords={showWords} start={start} topbar={false} />
     </>
   );
 }
