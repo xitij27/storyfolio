@@ -1,0 +1,28 @@
+.page { min-height:100vh; background:#f2ede2; color:#1c222a; padding:0 max(24px, calc((100vw - 1160px)/2)) 48px; font-family:system-ui,sans-serif; }
+.page a { text-underline-offset:4px; }
+.page a:focus-visible { outline:3px solid #955d12; outline-offset:5px; }
+.nav { display:flex; justify-content:space-between; gap:20px; padding:24px 0; border-bottom:1px solid #c9c1b0; font-size:14px; }
+.nav a { font-weight:650; }
+.nav span { color:#505b67; }
+.header { max-width:720px; margin:56px 0 36px; }
+.eyebrow { color:#6c460d; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+.header h1 { font-family:Georgia,serif; font-size:clamp(36px,5vw,62px); font-weight:400; line-height:1.08; margin:20px 0 24px; }
+.header p { line-height:1.65; }
+.note { color:#505b67; font-size:14px; }
+.looks { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.card { min-width:0; }
+.swatch { height:230px; display:grid; place-items:center; border:1px solid #c9c1b0; overflow:hidden; }
+.paper { width:160px; height:185px; padding:26px 18px; box-shadow:8px 12px 0 #0002; transform:rotate(-6deg); }
+.paper span { font-size:9px; letter-spacing:.09em; font-weight:700; }
+.paper strong { display:block; font:27px/1.1 Georgia,serif; margin-top:22px; }
+.paper i { display:block; width:32px; height:3px; margin-top:26px; }
+.card h2,.moves h2 { font:26px Georgia,serif; margin:22px 0 12px; }
+.card p,.moves p { line-height:1.6; font-size:15px; }
+.card p { min-height:50px; }
+.links { display:grid; }
+.links a { padding:14px 0; border-top:1px solid #c9c1b0; text-decoration:none; font-size:14px; }
+.links a:hover { text-decoration:underline; }
+.links a span { float:right; }
+.moves { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:44px 0 28px; padding-top:10px; border-top:1px solid #c9c1b0; }
+.footer { font-size:13px; line-height:1.6; color:#505b67; border-top:1px solid #c9c1b0; padding-top:24px; }
+@media(max-width:700px) { .looks,.moves { grid-template-columns:1fr; } .header { margin-top:36px; } .card p { min-height:0; } .swatch { height:240px; } .nav { font-size:12px; } .moves { gap:0; } }
