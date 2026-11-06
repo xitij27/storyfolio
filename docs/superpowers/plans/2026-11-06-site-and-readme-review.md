@@ -384,3 +384,25 @@ Screenshots after: [front at 1440](../../assets/2026-11-06-site-review/after-fro
   It could point at the bare Pages address once this is pushed; that is a
   change on GitHub, on the author's word.
 - **A push**, which publishes the site and the README.
+
+## A person's site after the chrome change, 6 November
+
+Asked "anything else which we need to fix?", root ran the engine's own
+checks on a fresh copy of `skills/storyfolio/engine/` (installed outside
+the skill): 185 tests, `typecheck`, `lint` and `npm run check` all pass,
+0 problems (desktop, phone, phone with words, no JavaScript, no WebGL).
+The phone shots with words show three faults a visitor would see. None
+comes from today's change: the positions and the camera that cause them
+were not touched.
+
+1. **"Email Noa" covers the contact caption's words** on a phone
+   (`stitch.css`: on narrow screens the end buttons sit at `bottom: 22px`
+   and the caption at `bottom: 14px`).
+2. **The sheet is wider than the phone at hello and get in touch**: the
+   CV's left edge is cut ("oa Lindqvist", "ACES"). Camera framing,
+   `stitch/stage.ts` and `sheet.ts`.
+3. **The rail's dots sit over the CV's text** at the same two chapters.
+
+Also open: the front page's loop is VP9 WebM only (the ffmpeg here has no
+H.264), so a browser without WebM shows the still poster; and the skill
+folder people copy now carries the loop and the two faces (about 2.4 MB).
