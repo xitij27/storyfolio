@@ -211,8 +211,11 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   allowlist, reproducible archive hash, a sha256 for each of 136 files),
   after Task 2's licence and origin review over the shipped bytes
   ([licence and origin](../evals/packaging/release-candidate-1/licence-origin.md))
-  added the MIT licence at the skill's root. Left:
-  the folder-copy routes (Task 3), the README's install and limits (Task 5),
+  added the MIT licence at the skill's root. Folder copies from the frozen
+  archive are listed by Claude Code (`.claude/skills/`) and Codex
+  (`.agents/skills/`), each only from its own folder, and scaffold from
+  there ([install routes](../evals/packaging/release-candidate-1/install-routes.md)).
+  Left: the README's install and limits (Task 5),
   and the author's decision to publish.
 
 ### For the next session

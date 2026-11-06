@@ -45,12 +45,34 @@ xitij27/storyfolio --sparse .claude-plugin skills` succeeded in 2.4 s, and
 (17 MB under `plugins/` in all). The Pages workflow from `library/` (run
 42298395554) succeeded, and the live gallery answers 200.
 
-## Not yet tested
+## Skill-folder copies (6 November)
+
+From the frozen archive ([freeze.md](freeze.md), `e1af3eb5`), unpacked in a
+scratch folder under `/tmp`: `skills/storyfolio` copied with `cp -R` into a
+fresh git project's `.claude/skills/` and `.agents/skills/`, as the README
+says. Both copies hash equal to the manifest's `skills/storyfolio/` lines.
+Clients started with empty homes (`CLAUDE_CONFIG_DIR`, `CODEX_HOME`), no
+login, and no model was called.
+
+| Check | Result |
+|---|---|
+| Claude Code 2.1.314, `claude -p "/context"` in the project | Lists `storyfolio`, source "Project", about 80 tokens |
+| Same, with only `.agents/skills/` present | Not listed: Claude Code reads `.claude/skills/` |
+| codex-cli 0.162.1, `codex debug prompt-input` in the project (renders the model's input without calling it) | Lists `storyfolio:storyfolio` with its full description, file `<project>/.agents/skills/storyfolio/SKILL.md` |
+| Same, with only `.claude/skills/` present | Not listed: Codex reads `.agents/skills/` |
+| `node .claude/skills/storyfolio/scripts/scaffold.mjs .` from the project root | Exit 0, 121 files; the project's files outside `.claude/`, `.agents/` and `.git/` hash equal to the installed `engine/`; no source file names either skill folder |
+| The same command again | Exit 1, "Nothing written", names `.gitignore` |
+
+The site's checks on a scaffold of these bytes are in
+[clean-install.md](clean-install.md).
+
+## Not tested
 
 - **From GitHub without `--sparse`**: a plain add clones the whole
   repository (1.6 GB tracked). Not tried.
-- **Skill-folder copies** for Claude Code (`.claude/skills/`) and Codex
-  (`.agents/skills/`), and the agent-neutral route: Task 3's remaining
-  routes. The package itself, unpacked outside the checkout, scaffolds a
-  site that passes every check ([clean-install.md](clean-install.md)); no
-  client discovered it from those folders.
+- **The agent-neutral route** (an agent told to read `SKILL.md` from a
+  checkout): there is no client to list it. What it needs, relative links
+  that resolve inside the package, was checked in the clean install. No
+  model was given it.
+- **A model invoking the skill** from any of these routes: discovery and
+  listing only.
