@@ -68,3 +68,14 @@ Root took into the engine what person test 4's agent had to fix in
 `stitch/`, and eased the map's crowding at home:
 [stitch-4](../../evals/engine/stitch-4/README.md). No skill text changed,
 no run, no push. Person test 5 is asked of the author next.
+
+## Person test 5 goes ahead
+
+Root served Dawit's site with the new engine (sheet, and the map at
+`/preview`) and asked whether to launch person test 5, the paid run. The
+author answered, verbatim:
+
+> fine looks okay lets proceed
+
+Root read this as approval of stitch-4's changes and as the word to
+launch person test 5.
