@@ -406,3 +406,36 @@ were not touched.
 Also open: the front page's loop is VP9 WebM only (the ffmpeg here has no
 H.264), so a browser without WebM shows the still poster; and the skill
 folder people copy now carries the loop and the two faces (about 2.4 MB).
+
+## Merged with the engine's stitch-4, and pushed, 6 November
+
+The author wrote "unable to push": GitHub's `main` had moved on by two
+commits from another session (`9f09acf4`, and `5b2cba54`, the engine
+taking in person test 4's fixes, [stitch-4](../../../evals/engine/stitch-4/README.md)),
+and stitch-4 rewrote the story's chrome in the same two files. Root kept a
+local branch `backup/site-rebuild-2026-11-06` at the old head, rebased
+this work onto GitHub's `main`, took stitch-4's `stitch.css` and
+`react.tsx` whole, and applied the cleanup again on top of them:
+
+- stitch-4 had already put the words in a band under the scene, the
+  project and contact buttons in the captions (so "Email Noa" no longer
+  covers the contact caption: phone fault 1 above is gone), focus rings,
+  and a darker project-window accent (`#80500b`); those are kept;
+- still removed on top of it: the caption's "01", the "Scroll" cue, and
+  the project window's tracked capitals (its place and year are a
+  sentence-case line under the title); every colour in the project window
+  and the contact button is a `--st-*` token;
+- the gallery's bar passes stitch-4's `topbar={false}`, and
+  `scripts/hero-loop.mjs` hides `.stitch .band`, as stitch-4's
+  `piece-shots.mjs` does.
+
+The front page's loop was recorded before stitch-4, when the scene filled
+the screen; with the words hidden, as the recording hides them, the sheet's
+fold is the same move.
+
+Checks after the merge: 420 tests, `check-skill` and `check-people` ok;
+the engine copy's 186 tests, `typecheck`, `lint` and `npm run check`
+(0 problems); the library's 53 tests, `typecheck` and Pages build;
+`gallery-check` on the local build, 2 sizes, 0 problems. Phone faults 2
+and 3 above (the sheet cut at hello and contact, the rail over the CV)
+are left for the author's look on a phone.
