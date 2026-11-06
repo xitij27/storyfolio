@@ -11,44 +11,16 @@
 
 Storyfolio is a skill for AI coding agents. Give your agent a resume, a
 LinkedIn export, GitHub links or project notes. It checks the facts with
-you, then builds a one-page site: one long scroll in eight chapters, each a
-3D picture of what it is about, flowing into the next.
+you, then builds a one-page site told in one 3D world: a sheet of paper, a map
+or a pop-up book. Each chapter is a picture of what it is about, and grows
+out of the last as you scroll.
 
-![Four chapters of a made-up person's site: their CV on a sheet of paper, a map with a route through the places they lived, a pop-up book for their degree, and a wall of their projects.](docs/assets/storyfolio-site.jpg)
+![Four chapters of a made-up person's site on one sheet of paper: their CV, wrapped into a globe of the places they lived, unrolled into a diploma, split into a wall of projects.](docs/assets/storyfolio-sheet.jpg)
 
-[See it running](https://xitij27.github.io/storyfolio/transitions/) ·
+[Watch a site](https://xitij27.github.io/storyfolio/transitions/whole/sheet/) ·
+[Browse the gallery](https://xitij27.github.io/storyfolio/transitions/) ·
 [Get started](#get-started) · [How it works](#how-it-works) ·
-[Read the skill](skills/storyfolio/SKILL.md) · [MIT License](LICENSE)
-
-## Project status
-
-Storyfolio is in active development, built in four stages.
-
-| Stage | What it delivers | Status |
-|---|---|---|
-| 1. Method | Reading a profile, facts the person confirms, a storyboard of the whole page | ✅ Implemented and evaluated |
-| 2. Engine | The reusable 3D scroll [engine and site scaffold](skills/storyfolio/engine/README.md) | ✅ Complete, approved on desktop and phone |
-| 3. Build | The skill's stops 2 to 6: the site running from the second stop, then its look, its words and a checked whole site | 🚧 In progress |
-| 4. Packaging | Release package, installation proof, full build documentation | ⏳ Follows stage 3 |
-
-Where stage 3 stands (28 October 2026):
-
-- Sites are now built from three ready-made 3D worlds: a sheet of paper, a
-  map and a pop-up book. Each can tell any of the eight chapters, and a site
-  mixes them, one world per chapter. Between two worlds the camera dives
-  through a card into the next.
-- Three looks (night, daylight and blueprint), the person's own words for
-  any chapter, a printable CV and project pages. One command checks the
-  whole site at desktop and phone size, and without JavaScript or WebGL.
-- A dry run on a made-up person passes every check. It also showed what to
-  fix next: the map, for places very far apart or very close together,
-  and for long jobs.
-- Next: a test in which a fresh agent builds a made-up person's site from
-  start to finish, then a review of that site on a desktop and a phone,
-  which closes stage 3.
-
-[The handover](docs/handover.md) records the latest state, the author's
-decisions and the test evidence, and opens with the next steps.
+[Read the skill](skills/storyfolio/SKILL.md)
 
 ## How it works
 
@@ -58,9 +30,9 @@ it works by itself.
 | Stop | Your agent brings you | You decide |
 |---|---|---|
 | **1. Read** | A fact sheet from your material, and questions only you can answer | Confirm the facts |
-| **2. Concept** | Your site, already running: one world per chapter, with a reason for each | Accept it, or swap pieces from the [gallery](https://xitij27.github.io/storyfolio/transitions/) |
+| **2. Concept** | Your site, already running in one world, and why that world suits you | Accept it, or choose another world from the [gallery](https://xitij27.github.io/storyfolio/transitions/) |
 | **3. Storyboard** | The script of the whole page | Say yes, or ask for changes |
-| **4. Look** | The whole site in two or three looks | Choose one |
+| **4. Look** | The whole site in two or three looks, and the sheet's moves | Choose one |
 | **5. Words** | What opens on a click (each project, your CV) and three versions of the opening and closing words | Choose the wording |
 | **6. Finish** | The checked site, and what still needs your eyes | Your own review |
 
@@ -68,8 +40,8 @@ Nothing about you is invented. Every claim on the site, down to the small
 ones a sentence makes on its way, is checked against the facts you
 confirmed. The agent asks you only about facts, claims that could
 embarrass you, what a visitor sees first, and anything that publishes,
-costs money, or shows another person or an employer's work. It decides the rest and writes each decision down, with how to
-change it.
+costs money, or shows another person or an employer's work. It decides
+the rest and writes each decision down, with how to change it.
 
 If you ask only for a plan, the agent stops at the storyboard.
 
@@ -80,16 +52,18 @@ from, what I studied, where I've worked, what I'm good at, what I've made,
 what others say, get in touch. A chapter with nothing to show is left out.
 Everything on the scroll is brief, and more opens on a click.
 
+The whole site is told in one of three worlds, the one that suits you:
+
 | World | How it tells a chapter | How it moves to the next |
 |---|---|---|
-| **Sheet** | Your CV is one sheet of paper that bends into each picture: a leaflet of your skills, a wall of your projects, your contact page | It folds from one picture into the next |
+| **Sheet** | Your CV is one sheet of paper that bends into each picture: a leaflet of your skills, a wall of your projects, your contact page | It slides, folds or swings from one picture into the next; you pick the move |
 | **Map** | Each chapter stands where it happened: a route through your places, a building for each job, as tall as your years there | The camera flies from place to place |
 | **Pop-up book** | Each chapter is a spread: the words on the left, a scene standing up on the right | The page turns, folding one scene flat and raising the next |
 
 Every picture and word comes from your own details. The
 [gallery](https://xitij27.github.io/storyfolio/transitions/) shows each
 world through all eight chapters with two made-up people, and every
-chapter's piece on its own.
+chapter's picture in each world.
 
 ## Get started
 
@@ -195,7 +169,7 @@ made, and the record of how it was decided:
 your-portfolio/
 ├── content/
 │   ├── person.ts         Your confirmed facts, as the site reads them
-│   ├── mix.ts            Which world tells each chapter
+│   ├── mix.ts            Which world tells the story
 │   └── site.ts           Your look, your own words, where your CV is
 ├── app/                  The Next.js site: the story at /, your CV, project pages
 └── docs/story/
@@ -210,11 +184,45 @@ your-portfolio/
 later session, with the same agent or another, picks up from these files.
 Publishing is your call: the agent asks before anything goes live.
 
-## Component library
+## Project status
 
-[Browse the library](https://xitij27.github.io/storyfolio/): portfolio pieces
-running, listed by the chapter of a site they serve, each with the files to
-copy. Its source is [`skills/storyfolio/library/`](skills/storyfolio/library/README.md).
+Storyfolio is in active development, built in four stages.
+
+| Stage | What it delivers | Status |
+|---|---|---|
+| 1. Method | Reading a profile, facts the person confirms, a storyboard of the whole page | ✅ Implemented and evaluated |
+| 2. Engine | The reusable 3D scroll [engine and site scaffold](skills/storyfolio/engine/README.md) | ✅ Complete, approved on desktop and phone |
+| 3. Build | The skill's stops 2 to 6: the site running from the second stop, then its look, its words and a checked whole site | 🚧 In progress |
+| 4. Packaging | Release package, installation proof, full build documentation | ⏳ Follows stage 3 |
+
+Where stage 3 stands (6 November 2026):
+
+- A site is told in one world, chosen at stop 2: the sheet, the map or the
+  pop-up book. A chapter goes into another world only when the person asks.
+- Two person tests have built whole sites from start to finish. On the
+  author's review the sheet tells a story best; the map's site lacked flow.
+- The sheet now moves between chapters in one of three ways (slide, fold
+  or swing), and the person picks one at the look stop.
+- Three looks (night, daylight and blueprint), the person's own words for
+  any chapter, a printable CV and project pages. One command checks the
+  whole site at desktop and phone size, and without JavaScript or WebGL.
+- Next: the person test again with the sheet's moves, then the author's
+  review of that site, which closes stage 3.
+
+[The handover](docs/handover.md) records the latest state, the author's
+decisions and the test evidence, and opens with the next steps.
+
+## The gallery and the pieces
+
+[The gallery](https://xitij27.github.io/storyfolio/transitions/) is what a
+site is made from: the three worlds running through all eight chapters,
+with two made-up people, the sheet's three moves, and each chapter's
+picture in each world. The agent shows it to you at stop 2.
+
+[The pieces](https://xitij27.github.io/storyfolio/pieces/) are older
+portfolio sections and effects, from the author's own site and written
+from outside ideas, each with the files to copy. Both are built from
+[`skills/storyfolio/library/`](skills/storyfolio/library/README.md).
 
 ## Where it came from
 

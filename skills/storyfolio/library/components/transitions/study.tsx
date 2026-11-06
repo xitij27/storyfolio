@@ -24,7 +24,7 @@ export function Study({ way }: { way: WayId }) {
       >
         {(progress) => <Seam way={way} progress={progress} still={still} />}
       </ScrollStage>
-      <div className="h-[40dvh] bg-[#0b1416]" />
+      <div className="h-[40dvh] bg-study" />
     </Guarded>
   );
 }

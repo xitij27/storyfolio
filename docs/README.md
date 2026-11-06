@@ -248,7 +248,7 @@ For a new session, read:
 | What Storyfolio is, how to install and use it, and its licence | [Repository README](../README.md) and [MIT License](../LICENSE) |
 | README concept illustration and publication-status update | [Illustration](assets/storyfolio-overview.png), [SVG source](assets/storyfolio-overview.svg) and [publication and README record](history/2026-10-11-readme-and-publication.md) |
 | README rewritten for the site from the pieces, and the GitHub About | [Picture](assets/storyfolio-site.jpg) and [record](history/2026-10-28-readme-and-about.md) |
-| Review of the Pages site, the story's chrome and the README for a generated look, with proposals (6 November) | [Review](superpowers/plans/2026-11-06-site-and-readme-review.md) and [screenshots and linter output](assets/2026-11-06-site-review/) |
+| Review of the Pages site, the story's chrome and the README for a generated look, and the rebuild that followed (6 November) | [Review and what was done](superpowers/plans/2026-11-06-site-and-readme-review.md), [direction](history/2026-11-06-site-and-readme-direction.md), [README picture](assets/storyfolio-sheet.jpg) and [screenshots and linter output](assets/2026-11-06-site-review/) |
 | Repository-wide working rules | [AGENTS.md](../AGENTS.md) |
 | Current instructions followed by the test agent | [Skill and references](../skills/storyfolio/SKILL.md) |
 | Component library, its gallery on GitHub Pages and why it is built as it is | [Library README](../skills/storyfolio/library/README.md) and [spec](superpowers/specs/2026-10-23-component-library.md) |

@@ -3,6 +3,9 @@
   /* Night's colours; StitchedStory sets the look's own (look.ts). */
   --st-bg: #0f1318; --st-ink: #ece6d9; --st-soft: #c9cfd5; --st-muted: #9aa4ae; --st-amber: #e9a23b;
   --st-line: rgba(236, 230, 217, 0.14); --st-glass: rgba(12, 16, 21, 0.72); --st-on-ink: #11161c;
+  /* The project window is paper in every look; the amber buttons carry dark text. */
+  --st-on-amber: #11161c; --st-paper: #f2ede2; --st-paper-ink: #1c222a; --st-paper-muted: #4f5862;
+  --st-paper-line: #c9c1b0; --st-paper-accent: #80500b; --st-paper-button: rgba(255, 255, 255, 0.8); --st-shade: rgba(5, 7, 10, 0.6);
   --st-serif: Georgia, "Times New Roman", serif; --st-sans: system-ui, sans-serif;
   position: relative; color: var(--st-ink); background: var(--st-bg); font-family: var(--st-sans);
   -webkit-font-smoothing: antialiased; min-height: 100vh;
@@ -25,20 +28,17 @@
 .stitch .rail { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 6px; }
 .stitch .rail button { display: flex; align-items: center; justify-content: flex-end; gap: 10px; background: none; border: 0;
   color: var(--st-muted); font: 500 13px var(--st-sans); cursor: pointer; padding: 3px 0; flex-direction: row-reverse; }
-/* A halo in the caption glass's colour keeps the rail and hint readable over any world, such as the book's dark desk in a light look. */
-.stitch .rail button, .stitch .hint { text-shadow: 0 0 3px var(--st-glass), 0 0 8px var(--st-glass), 0 0 14px var(--st-glass); }
+/* A halo in the caption glass's colour keeps the rail readable over any world, such as the book's dark desk in a light look. */
+.stitch .rail button { text-shadow: 0 0 3px var(--st-glass), 0 0 8px var(--st-glass), 0 0 14px var(--st-glass); }
 .stitch .rail i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.5; box-shadow: 0 0 0 2px var(--st-glass); }
 .stitch .rail button.on { color: var(--st-ink); }
 .stitch .rail button.on i { background: var(--st-amber); opacity: 1; transform: scale(1.4); }
-.stitch .hint { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); color: var(--st-muted); font-size: 13px; letter-spacing: 0.1em;
-  text-transform: uppercase; transition: opacity 0.4s; pointer-events: none; }
 
 /* Every caption stands in one cell; only the chapter's own shows. */
 .stitch .band { flex: none; display: grid; max-height: 45vh; max-height: 45dvh; overflow: auto; background: var(--st-bg); border-top: 1px solid var(--st-line); }
 .stitch .band .cap { grid-area: 1 / 1; visibility: hidden; padding: 14px 24px 16px; max-width: 760px; }
 .stitch .band .cap.on { visibility: visible; }
-.stitch .cap .num { color: var(--st-amber); font: 600 12px var(--st-sans); letter-spacing: 0.12em; }
-.stitch .cap h2 { font-family: var(--st-serif); font-weight: 600; font-size: 24px; margin: 2px 0 4px; }
+.stitch .cap h2 { font-family: var(--st-serif); font-weight: 600; font-size: 24px; margin: 0 0 4px; text-wrap: balance; }
 .stitch .cap p { margin: 0; color: var(--st-soft); line-height: 1.5; font-size: 15px; }
 /* In the book the left page carries the chapter's words; its buttons stay in the band. */
 .stitch .cap.inbook .words { display: none; }
@@ -48,24 +48,24 @@
 .stitch .cap .links button, .stitch .cap .links a { border: 1px solid var(--st-line); border-radius: 999px; padding: 7px 14px; min-height: 36px;
   color: var(--st-ink); background: none; font: 500 13px var(--st-sans); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
 .stitch.allbook .cap .links button, .stitch.allbook .cap .links a:not(:first-child) { background: var(--st-glass); }
-.stitch .cap .actions a:first-child { background: var(--st-amber); border-color: var(--st-amber); color: #11161c; font-weight: 600; }
-.stitch.nowords .band, .stitch.nowords .topbar, .stitch.nowords .rail span, .stitch.nowords .hint { display: none; }
+.stitch .cap .actions a:first-child { background: var(--st-amber); border-color: var(--st-amber); color: var(--st-on-amber); font-weight: 600; }
+.stitch.nowords .band, .stitch.nowords .topbar, .stitch.nowords .rail span { display: none; }
 
 .stitch dialog.modal { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: 16px;
-  background: rgba(5, 7, 10, 0.6); display: grid; place-items: center; color: inherit; }
+  background: var(--st-shade); display: grid; place-items: center; color: inherit; }
 .stitch dialog.modal:not([open]) { display: none; }
 .stitch dialog.modal::backdrop { background: transparent; }
-.stitch .modal .sheet { position: relative; width: min(620px, 100%); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: auto; background: #f2ede2; color: #1c222a; border-radius: 16px; }
+.stitch .modal .sheet { position: relative; width: min(620px, 100%); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: auto; background: var(--st-paper); color: var(--st-paper-ink); border-radius: 16px; }
 .stitch .modal .pic canvas { width: 100%; display: block; }
 .stitch .modal .body { padding: 20px 24px 26px; }
-.stitch .modal .eyebrow { color: #80500b; font: 600 12px var(--st-sans); letter-spacing: 0.12em; text-transform: uppercase; }
-.stitch .modal h3 { font-family: var(--st-serif); font-size: 30px; margin: 6px 0 8px; }
+.stitch .modal h3 { font-family: var(--st-serif); font-size: 30px; margin: 0 0 4px; text-wrap: balance; }
+.stitch .modal .meta { color: var(--st-paper-accent); font-size: 14px; margin: 0 0 12px; }
 .stitch .modal p { margin: 0 0 10px; line-height: 1.55; }
-.stitch .modal .more { color: #4f5862; font-size: 14px; }
-.stitch .modal .tags span { display: inline-block; border: 1px solid #c9c1b0; border-radius: 999px; padding: 4px 10px; font-size: 13px; margin: 0 6px 6px 0; }
-.stitch .modal [data-close] { position: absolute; top: 10px; right: 12px; border: 0; background: rgba(255, 255, 255, 0.8); border-radius: 50%;
-  width: 44px; height: 44px; font-size: 22px; line-height: 1; cursor: pointer; color: #1c222a; }
-.stitch .modal button:focus-visible, .stitch .modal a:focus-visible { outline-color: #80500b; }
+.stitch .modal .more { color: var(--st-paper-muted); font-size: 14px; }
+.stitch .modal .tags span { display: inline-block; border: 1px solid var(--st-paper-line); border-radius: 999px; padding: 4px 10px; font-size: 13px; margin: 0 6px 6px 0; }
+.stitch .modal [data-close] { position: absolute; top: 10px; right: 12px; border: 0; background: var(--st-paper-button); border-radius: 50%;
+  width: 44px; height: 44px; font-size: 22px; line-height: 1; cursor: pointer; color: var(--st-paper-ink); }
+.stitch .modal button:focus-visible, .stitch .modal a:focus-visible { outline-color: var(--st-paper-accent); }
 
 /* The words in full: on the page without the 3D, for screen readers only with it. */
 .stitch .text { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; line-height: 1.55; }
@@ -88,7 +88,6 @@
   .stitch .band .cap { padding: 10px 14px 12px; }
   .stitch .cap h2 { font-size: 20px; }
   .stitch .cap p { font-size: 14px; line-height: 1.4; }
-  .stitch .hint { display: none; }
 }
 @media (scripting: none) {
   .stitch .text { position: relative !important; width: auto !important; height: auto !important; margin: 0 auto !important; padding: 48px 20px 80px !important;

@@ -288,3 +288,99 @@ changes, its website can be the bare Pages address.
    examples, so the next step would be the first screen built and shown,
    before the rest.
 4. A push for any of it, on the author's word.
+
+## What was done, 6 November
+
+On the author's "Yes, you can fix the README. And then you can do the
+cleanup the AI tells and yeah, you can do everything with the
+recommendation suggests" ([record](../../history/2026-11-06-site-and-readme-direction.md)).
+No push: that waits for the author's word.
+
+**The README.** Every stale fact in the table above is fixed. The new
+picture is [`docs/assets/storyfolio-sheet.jpg`](../../assets/storyfolio-sheet.jpg),
+made from the sheet's four existing renders (hello, where from, studied,
+made) with captions in the gallery's faces; the old mixed picture stays in
+`docs/assets/` for the record. The links under it go to the moving sheet
+and the gallery. The sections are in the proposed order, with Project
+status after "What you leave with" and the badges where they were. "The
+gallery and the pieces" replaces "Component library".
+
+**The story's chrome, in the engine** (`engine/stitch/stitch.css` and
+`react.tsx`, synced to the library with `scripts/sync-stitch.mjs`), so in
+every person's site:
+
+- the caption's "01" and the "SCROLL" cue are gone (the rail shows where
+  the reader is), which also ends the cue sitting on the caption on a phone;
+- the project window's place and year are a sentence-case line under the
+  title, no longer tracked capitals above it, in a darker amber
+  (`#8a5a12`, 5.1:1 on the paper, where `#b47718` was 3.2:1);
+- the caption is a solid panel of the look's own ground, no blur;
+- every colour is a `--st-*` token, and the rail, the end links and the
+  project window have a focus ring that shows at once.
+
+**The library** (the Pages site):
+
+- `/` is the gallery (`components/gallery/`), also served at
+  `/transitions/`: a nav of the wordmark and three links; a hero with
+  "How one chapter becomes the next", one sentence, "Watch the sheet" and
+  "Get the skill", beside a 12.7-second loop of the sheet's fold
+  (`public/gallery/sheet-fold.webm`, 2.2 MB, recorded by the new
+  `scripts/hero-loop.mjs`; a poster without script or under reduced
+  motion; a pause button); the three worlds, the sheet's tile larger with
+  links to its three moves; one table of chapters by worlds, its header
+  row sticky, one world at a time on a phone; "Make your own"; a footer
+  with the made-up note, Pieces, the first study, the licence and the
+  source.
+- `/pieces/` holds the older pieces as catalogue rows by chapter, with
+  their sources in words ("From the author's V2 portfolio, from an idea in
+  React Bits") in place of pills.
+- The bar over a whole example: no subtitle over the sheet, a solid band
+  behind its words, a Move switch on the sheet (`?m=`, starting with the
+  swing, as a new site does), two rows on a phone.
+- The piece pages, the study pages and the template's link use the same
+  nav and tokens; the study's first way is now "The old swap" (its text
+  said "What the engine does now").
+- Faces: Source Serif 4 and Public Sans, served from `app/fonts/` (OFL)
+  through `next/font/local`. Colours: `--g-*` and `--bar-*` tokens, the
+  map's slate ground, the story's paper and ink, amber only for what is
+  current or pressed. The pieces keep their own tokens and fonts.
+- `scripts/gallery-check.mjs` now also opens `/` and `/pieces/`, chooses
+  the map above the table on a phone before opening its piece, and checks
+  the move switch.
+
+**Checks.** The library's 52 tests, `typecheck` and `BASE_PATH=/storyfolio`
+build pass; `gallery-check` on the local build: 2 sizes, 0 problems; the
+repository's 419 tests and `check-skill` pass. The loop plays when motion
+is allowed and stops on Pause (checked in Chromium).
+
+**Hallmark, after** ([full output](../../assets/2026-11-06-site-review/sloplint-after.txt),
+the gallery's files and three local pages):
+
+| | Before | After |
+|---|---|---|
+| Front page `/` | the index: 2a, 38iii, 64, 58, 44c, 59, 77, 78, 79 | clean, but for the 83 waiver (the pictures are the product's own renders) |
+| Gallery tells (gradient word, mono labels, card kit, small heads) | all present | gone from the gallery's pages |
+| Story chrome (engine) | 67 three times, 54, 26a, 29 | none of these; left: 48 on the `.stitch` token block (the linter reads only `:root`), 62 (the end links hidden in 3D mode, with the text version below), 24b spacing |
+| Still firing, kept | | 2a and 48 on the V2 pieces' own theme blocks, 1 on their system face (the gallery's faces come through `next/font`, which the linter cannot see), 44a, 44c and 44d on the full-bleed story, 44c on `/pieces/` opening onto its rows |
+
+Screenshots after: [front at 1440](../../assets/2026-11-06-site-review/after-front-1440.jpg),
+[front, whole page](../../assets/2026-11-06-site-review/after-front-1440-full.jpg),
+[sheet story](../../assets/2026-11-06-site-review/after-sheet-story-1440.jpg),
+[phones](../../assets/2026-11-06-site-review/after-phones.jpg),
+[pieces](../../assets/2026-11-06-site-review/after-pieces-1440.jpg).
+
+**Left, and why:**
+
+- **The story's faces and the night look's palette** (findings 8 and 13)
+  are unchanged. Both are drawn into every person's 3D scenes, and the
+  author judges looks from examples; changing them is for a shown example
+  first.
+- **On a phone, the sheet runs off the right edge at hello and the rail's
+  dots sit over its text.** That is the engine's camera framing, which
+  the author approved on a physical phone; it needs their look on one.
+- **Hallmark's fresh-context finish review** was not run: it is a
+  subagent, and none was asked for.
+- **The GitHub About** still points at `/transitions/`, which still works.
+  It could point at the bare Pages address once this is pushed; that is a
+  change on GitHub, on the author's word.
+- **A push**, which publishes the site and the README.

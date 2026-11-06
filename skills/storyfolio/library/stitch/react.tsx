@@ -37,7 +37,6 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
   const bandRef = useRef<HTMLDivElement>(null);
-  const hintRef = useRef<HTMLDivElement>(null);
   const handle = useRef<Handle | null>(null);
   const nearRef = useRef(0);
   const [near, setNear] = useState(0);
@@ -53,7 +52,6 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
       if (n !== nearRef.current) { nearRef.current = n; setNear(n); }
       const fade = st.to === st.from ? 1 : 1 - smooth(0.05, 0.35, st.raw) + smooth(0.65, 0.95, st.raw);
       if (bandRef.current) { bandRef.current.style.opacity = fade.toFixed(3); bandRef.current.style.pointerEvents = fade > 0.5 ? "auto" : "none"; }
-      if (hintRef.current) hintRef.current.style.opacity = st.s < 0.15 ? "1" : "0";
     };
     // A lost drawing context leaves the words, as no WebGL does.
     const onLost = (e: Event) => { e.preventDefault(); if (alive) setScene("off"); };
@@ -115,14 +113,12 @@ export function StitchedStory({ person, mix, showWords = true, start, look = "ni
               </button>
             ))}
           </nav>
-          <div ref={hintRef} className="hint">Scroll</div>
         </div>
         {/* Every chapter's caption in one place, so the band is as tall as the tallest and the view never changes size. */}
         <div ref={bandRef} className="band" aria-live="polite">
           {keys.map((k, i) => (
             <div key={k} className={`cap${i === near ? " on" : ""}${mix[k] === "book" ? " inbook" : ""}`} aria-hidden={i !== near}>
               <div className="words">
-                <div className="num">{String(i + 1).padStart(2, "0")}</div>
                 <h2>{titleOf(k)}</h2>
                 <p>{words[k]}</p>
               </div>
@@ -202,8 +198,8 @@ function ProjectWindow({ project, palette, onClose }: { project: Project; palett
         <button type="button" data-close aria-label="Close" onClick={onClose}>&times;</button>
         <div className="pic" ref={pic} aria-hidden="true" />
         <div className="body">
-          <div className="eyebrow">{project.place}, {project.year}</div>
           <h3>{project.title}</h3>
+          <p className="meta">{project.place}, {project.year}</p>
           <p>{project.line}</p>
           {project.more && <p>{project.more}</p>}
           {project.page && <p><a className="more" href={project.page}>More about {project.title}</a></p>}

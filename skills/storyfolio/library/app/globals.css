@@ -1,8 +1,26 @@
+/* Hallmark · shape: the gallery as the front page, content kept · genre: modern-minimal · theme: brand, the story's own night palette and paper · redesign: full · posture: restrained
+ * paper: #1b2531 slate ground · accent: #e9a23b amber, for what is current or pressed · display: Source Serif 4 · body: Public Sans · hero: Stage, the head on five columns and the sheet's moving loop on seven · nav: the wordmark and three text links, no button and no rule · footer: one band, the made-up note and four links · signature: the sheet folding from a CV into a globe, a diploma and a timeline, on the first screen
+ * kept: .text-gradient and the --brand tokens belong to the V2 pieces on show (their hero and rotating word), never to the gallery's own pages */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V3 · weakest: V, a head beside a picture is a common hero; the picture is the product moving, not a still, and the chapters are a table of chapters by worlds rather than cards */
+/* Hallmark · waive 83 · every picture is a render of the product's three worlds, which is the gallery's whole content, a gallery of its own work · cutting them would hide the chapters the page exists to show */
+/* Hallmark · waive 44c · /transitions/whole/* is a full-bleed canvas eight screens tall, and /pieces/ is a catalogue · the story is drawn by the engine, and the pieces index opens straight onto its rows */
+/* Hallmark · waive 44a · /transitions/whole/* has no hero block, only the engine's canvas and its caption · the first screen of a whole site is the scene itself, as on every person's site */
+/* Hallmark · waive 77 · Good at, Others say and Contact each hold one piece in catalogue.ts · on the pieces index a chapter with one piece is one row, and the chapters stay in a site's order */
+/* Hallmark · waive 26b · no disabled attribute or aria-disabled on the gallery's pages · the world, person and move buttons are toggles that always work */
+/* Hallmark · answered F25 · on a phone the chapter table shows one world at a time, and three buttons above it bring the other two */
+/* Hallmark · answered F19 · the fourth weight on the whole-site pages is the engine's own caption and rail, shared by every person's site */
+/* Hallmark · dismissed 28a · the first lazy image is in the chapter table, far below the fold; the first paint is the hero's poster, preloaded at high priority */
+/* Hallmark · dismissed 59 · the pieces index is a catalogue of nine chapters, one section each, so it runs past nine sections by design */
+/* Hallmark · dismissed 77 · the whole-site page has no sections: it is the engine's story canvas */
+/* Hallmark · kept, not waivable: 2a and 48 fire on the V2 pieces' own theme blocks (.text-gradient, .dark, [data-look], .fig), which the pieces' pages show as the author built them; 44d fires on the full-bleed story, whose bar spans the screen by design; 1 reads --font-heading, which only the V2 pieces use (the gallery's faces come through next/font, which the linter cannot see) */
+
 @import "tailwindcss";
 
 /*
   The tokens and effects the library's pieces use, from the author's
-  portfolio. System fonts, so nothing waits on a font service.
+  portfolio, with system fonts. The gallery's own pages (the front page,
+  the pieces index, the bars) use the --g-* tokens and the two faces in
+  app/fonts, served with the site, so nothing waits on a font service.
 */
 
 @custom-variant dark (&:is(.dark *));
@@ -13,6 +31,22 @@
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-heading: var(--font-sans);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-display: var(--face-serif), Georgia, serif;
+  --font-text: var(--face-sans), system-ui, sans-serif;
+  --color-ground: var(--g-ground);
+  --color-raised: var(--g-raised);
+  --color-paper: var(--g-paper);
+  --color-ink: var(--g-ink);
+  --color-soft: var(--g-soft);
+  --color-quiet: var(--g-muted);
+  --color-rule: var(--g-line);
+  --color-signal: var(--g-signal);
+  --color-on-signal: var(--g-on-signal);
+  --color-bar-ink: var(--bar-ink);
+  --color-bar-muted: var(--bar-muted);
+  --color-bar-line: var(--bar-line);
+  --color-bar-on-ink: var(--bar-on-ink);
+  --color-study: var(--study-ground);
   --color-brand: var(--brand);
   --color-brand-2: var(--brand-2);
   --color-brand-3: var(--brand-3);
@@ -74,6 +108,24 @@
   --paper-faint: #77829b;
   --paper-accent: #f2b84b;
   --paper-rule: rgb(255 255 255 / 0.14);
+  /* The gallery: the map's slate for the ground, the story's paper, ink and amber. */
+  --g-ground: #1b2531;
+  --g-raised: #222e3c;
+  --g-paper: #f2ede2;
+  --g-ink: #ece6d9;
+  --g-soft: #c9cfd5;
+  --g-muted: #a3adb8;
+  --g-line: rgb(236 230 217 / 0.16);
+  --g-signal: #e9a23b;
+  --g-on-signal: #11161c;
+  /* The bar over a whole example sits on the story's night ground. */
+  --bar-ground: #0c1015;
+  --bar-ink: #ece6d9;
+  --bar-muted: #9aa4ae;
+  --bar-line: rgb(236 230 217 / 0.24);
+  --bar-on-ink: #11161c;
+  /* The study's scene ground, continued below its last frame. */
+  --study-ground: #0b1416;
 }
 
 .dark {
@@ -129,6 +181,16 @@
     @apply bg-background font-sans text-foreground;
     -webkit-font-smoothing: antialiased;
   }
+  html,
+  body {
+    overflow-x: clip;
+  }
+  body:has(.gallery) {
+    background-color: var(--g-ground);
+  }
+  html:has(.gallery) {
+    scrollbar-color: var(--g-muted) var(--g-ground);
+  }
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: color-mix(in oklch, var(--brand) 20%, transparent);
@@ -144,6 +206,98 @@
   padding-right: max(var(--page-gutter), env(safe-area-inset-right));
 }
 
+/* The gallery's own pages: its faces and colours, and a focus ring that shows at once. */
+.gallery {
+  font-family: var(--font-text);
+  color: var(--g-ink);
+  background-color: var(--g-ground);
+  caret-color: var(--g-signal);
+}
+.gallery ::selection {
+  background-color: color-mix(in oklab, var(--g-signal) 30%, transparent);
+}
+.gallery :focus-visible {
+  outline: 2px solid var(--g-signal);
+  outline-offset: 3px;
+}
+.gallery h1,
+.gallery h2,
+.gallery h3 {
+  overflow-wrap: break-word;
+  min-width: 0;
+  text-wrap: balance;
+}
+
+/* The bar over a whole example: solid where its words are, fading into the story below them. */
+.gallery-bar {
+  font-family: var(--font-text);
+  color: var(--bar-ink);
+  background-image: linear-gradient(to bottom, var(--bar-ground) 0, var(--bar-ground) calc(100% - 2rem), transparent 100%);
+}
+.gallery-bar :focus-visible {
+  outline: 2px solid var(--g-signal);
+  outline-offset: 3px;
+}
+
+/* The chapter table: chapters down, worlds across; on a phone, one world at a time. */
+.ct .ct-head-col {
+  width: 11rem;
+}
+.ct thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--g-ground);
+}
+.ct .ct-world {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.ct-tabs {
+  display: none;
+}
+@media (max-width: 47.99rem) {
+  .ct table,
+  .ct tbody,
+  .ct tr,
+  .ct th,
+  .ct td {
+    display: block;
+    width: auto;
+  }
+  .ct colgroup,
+  .ct thead {
+    display: none;
+  }
+  .ct-tabs {
+    display: flex;
+  }
+  .ct tbody th {
+    padding-bottom: 0;
+  }
+  .ct td {
+    padding-left: 0;
+  }
+  .ct .ct-world {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+  }
+  .ct[data-show="sheet"] td:not([data-world="sheet"]),
+  .ct[data-show="map"] td:not([data-world="map"]),
+  .ct[data-show="book"] td:not([data-world="book"]) {
+    display: none;
+  }
+}
+
+/* Kept for the V2 pieces on show (their hero and rotating word); the gallery's own pages never use it. */
 @layer utilities {
   .text-gradient {
     background-image: linear-gradient(100deg, var(--brand), var(--brand-2) 55%, var(--brand-3));

@@ -3,6 +3,8 @@
 Newest direction: [implement until Stage 3 is complete](2026-10-13-stage-3-implementation-direction.md),
 following the recommended plan and its single-fixture scope exception.
 
+Newest author direction: [6 November, fix the README, clean up the generated-page tells, build the gallery as the front page](2026-11-06-site-and-readme-direction.md).
+
 Newest author verdict: [1 November, person test 4's map site: no flow, not rich in transitions, no wow factor](2026-11-01-person-test-4-review.md).
 
 Earlier author verdict: [31 October, person test 3's site: "This is not a good portfolio website"](2026-10-31-person-test-3-review.md).

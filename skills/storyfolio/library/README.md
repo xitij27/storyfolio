@@ -9,10 +9,19 @@ Published at https://xitij27.github.io/storyfolio/ by
 
 ## What is in it
 
-`catalogue.ts` lists every piece: what it shows, its chapter, where it came
-from and which files to copy. The index page, each piece's page
-(`app/p/[id]/`) and its demo (`demos/`) are made from that list. `/template/`
-is a whole page made of the V2 sections.
+The front page, `/`, is the gallery of the three worlds (below). The older
+pieces are at `/pieces/`: `catalogue.ts` lists every one, with what it
+shows, its chapter, where it came from and which files to copy, and the
+pieces index, each piece's page (`app/p/[id]/`) and its demo (`demos/`)
+are made from that list. `/template/` is a whole page made of the V2
+sections.
+
+The gallery's own pages (the front page, `/pieces/`, the piece and study
+headers, the bar over a story) use the `--g-*` and `--bar-*` tokens in
+`app/globals.css` and two faces served with the site from `app/fonts/`
+(Source Serif 4 and Public Sans, both under the SIL Open Font License, the
+licences beside them). The pieces keep their own tokens and system fonts,
+as the author built them.
 
 | From | Folder | Pieces |
 |---|---|---|
@@ -58,19 +67,25 @@ BASE_PATH=/storyfolio npm run build   # the static site in out/, as Pages serves
 Plain image addresses (an `<img>`, a texture) need the base path, so they go
 through `asset()` in `content/sample.ts`.
 
-## The transitions gallery
+## The gallery
 
-`/transitions/` shows how one chapter of a site becomes the next, in three
-worlds: one sheet, one map, a pop-up book. It has the three whole examples
-(`/transitions/whole/<world>/`), each chapter's three pieces as pictures
-(each opens its example at that chapter, `?c=<chapter>`), and the earlier
-study of one seam joined four ways, whose swap is marked as not to use. A
-bar over every story switches between the two made-up people and hides the
-words.
+The front page (`components/gallery/gallery-page.tsx`, also served at
+`/transitions/`, the address the skill and the repository's About link to)
+shows how one chapter of a site becomes the next, in three worlds: one
+sheet, one map, a pop-up book. It opens on the sheet's fold, recorded
+(`public/gallery/sheet-fold.webm`, a still poster without script or under
+reduced motion, and a pause button), then the three whole examples
+(`/transitions/whole/<world>/`), then a table of every world's picture for
+every chapter (each opens its example at that chapter, `?c=<chapter>`; on
+a phone one world shows at a time). The earlier study of one seam joined
+four ways is linked from the footer. A bar over every story switches
+between the two made-up people, picks the sheet's move (`?m=slide`, `fold`
+or `swing`; a new site starts with the swing, so the gallery does) and
+hides the words.
 
-There is no mixer: the agent building a site chooses the pieces for each
-chapter and shows the mix moving; a person looks here for ideas and says
-in words what they would change (the author, 28 October).
+There is no mixer: the agent building a site chooses the world that suits
+the person and shows it moving; a person looks here for ideas and says in
+words what they would change (the author, 28 and 31 October).
 
 The worlds are `stitch/`, a copy of the engine's (see the engine's README,
 "A stitched story"). Do not edit it here: change the engine's and run
@@ -79,9 +94,13 @@ skill fails when the two differ.
 
 `scripts/piece-shots.mjs` made the 24 pictures in
 `public/transitions/pieces/` from a running build; run it again when a
-world changes. `scripts/gallery-check.mjs` checks a build, local or live,
-at desktop and phone sizes: no page error or failed request, no sideways
-scroll, a piece opening at its chapter, and the person switch. Both need a
+world changes. `scripts/hero-loop.mjs` recorded the front page's loop, the
+sheet's fold from hello to studied and back, with an ffmpeg that has
+libvpx-vp9 (Playwright's own build has it); run it again when the sheet
+changes. `scripts/gallery-check.mjs` checks a build, local or live, at
+desktop and phone sizes: no page error or failed request, no sideways
+scroll, the front page and the pieces index, a piece opening at its
+chapter, the person switch and the move switch. All three need a
 `playwright-core` (`PLAYWRIGHT_CORE`, such as an engine copy's), which the
 library does not install.
 
