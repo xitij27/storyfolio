@@ -68,6 +68,8 @@ Not decided: listing the plugin anywhere.
   Checked against its requirements on 7 November: the repository was too
   large and the plugin folder had no README, both fixed by release 0.1.1
   and a `plugin` branch ([release 0.1.1](../release-0.1.1/README.md)).
-  Submission is the author's, from their claude.ai account.
+  Submission is the author's, from their claude.ai account. Then 0.1.2
+  was refused: code files are accepted only from Verified organizations;
+  the author decided to skip the directory ([record](../release-0.1.2/README.md#the-directory-refuses-it-7-november)).
 - **Open skill directories** that take a GitHub URL (Agent Skills Finder,
   skills.sh, skillsdirectory.com): third-party, not checked.

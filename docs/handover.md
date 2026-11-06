@@ -30,8 +30,10 @@ portfolio's source, photographs and screenshots are removed from `main`
 (still in git history), the evaluation records stay public, and the
 component library moved out of the skill to `library/` at the root.
 
-**Waiting on the author.** The author's look at the sheet on a phone, and
-the plugin directory submission ([release 0.1.1](../evals/packaging/release-0.1.1/README.md#for-the-directory-form-the-author-submits)). The push for installing from GitHub was made on
+**Waiting on the author.** The author's look at the sheet on a phone.
+Anthropic's plugin directory refused 0.1.2: unverified publishers may ship
+only Markdown, text, JSON, YAML and images, and the engine is code. The
+author decided to skip the directory ([record](../evals/packaging/release-0.1.2/README.md#the-directory-refuses-it-7-november)). The push for installing from GitHub was made on
 6 November.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)

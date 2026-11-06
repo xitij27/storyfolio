@@ -27,3 +27,33 @@ public action without the author's word on 0.1.2. On their "yes publish":
 `v0.1.2` on `60dd1e6f`, and the GitHub release
 https://github.com/xitij27/storyfolio/releases/tag/v0.1.2. The privacy URL
 answers 200, and the downloaded archive hashes to `1ea27bef...a15f`.
+
+## The directory refuses it (7 November)
+
+The portal's check of 0.1.2, shared by the author: "Validation has
+warnings · Directory policy failed". Needs you: **Files outside the allowed
+types accepted only from Verified organizations**: "The directory accepts
+scripts, programs, and files outside the allowed types only from Verified
+organizations, and your organization isn't one, so this version is
+refused. Remove each file that, whatever its name, isn't Markdown, text,
+JSON, YAML, or a PNG, JPEG, GIF, WebP, or ICO image, each that starts with
+`#!`, and each package manager configuration file". The privacy warning is
+gone; the `land.json` and credential findings remain as warnings.
+
+On 0.1.1 the same rule was a note ("This isn't refused yet"); by 0.1.2 it
+refused. The plugin's files by type: 75 `.ts`, 23 `.tsx`, 11 `.mjs`, 3 `.css`,
+1 `.svg` (113 code files, refused) against 12 `.md`, 6 `.json`, 1 `.png`,
+`LICENSE` and `.gitignore`. The code is the engine and its scaffold, which
+the skill copies into the person's project: it cannot leave the plugin
+without the skill fetching it from elsewhere.
+
+**The author's decision:** skip the directory. Storyfolio is distributed
+through its own marketplace (`xitij27/storyfolio`, `--sparse`) and the
+README's folder copies, which work and are tested. Revisit if the rule
+changes or the publisher becomes Verified. Options not taken: asking
+Anthropic about Verified status, and an instructions-only plugin that
+downloads the engine from the pinned release (a change to the skill's
+instructions, a second variant, and paid runs to prove it).
+
+The `plugin` branch stays: it costs nothing and is ready if the directory
+becomes possible.
