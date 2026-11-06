@@ -96,28 +96,47 @@ If you ask only for a plan, the agent stops at the storyboard.
 
 **You need** an AI agent that can read the skill and write files in your
 portfolio project. To build the site, it also needs Node.js 22.18 or later
-and npm. A plan alone needs neither.
+with its built-in TypeScript support, and npm. A plan alone needs neither.
+Some Linux distributions build Node without it: if
+`node -p process.features.typescript` prints `false`, install Node from
+[nodejs.org](https://nodejs.org/) instead.
 
-**1. Get the skill.** Clone the public repository with Git, or download it
-using GitHub's **Code → Download ZIP** menu:
+**1. Get the skill.** In Claude Code you can skip to the plugin in step 2.
+Otherwise, clone only the skill from the public repository (the full
+repository also holds about 1.6 GB of test records):
 
 ```bash
-git clone https://github.com/xitij27/storyfolio.git
+git clone --depth 1 --filter=blob:none --sparse https://github.com/xitij27/storyfolio.git
 cd storyfolio
+git sparse-checkout set skills
 ```
 
 **2. Install it in your portfolio project.** Copy the complete
 `skills/storyfolio/` folder, including `references/`, `engine/` and
 `scripts/`, into your agent's skill directory, then select `storyfolio`
-the way that agent activates skills. The examples use a Bash-compatible
-shell; replace `/path/to/your-portfolio` with your project's location.
+the way that agent activates skills. Each agent reads only its own
+directory. The examples use a Bash-compatible shell; replace
+`/path/to/your-portfolio` with your project's location. To update, copy
+the folder again; to remove, delete it. A site already made does not
+depend on it.
 
 <details>
 <summary><strong>Claude Code</strong></summary>
 
 <br>
 
-From the cloned `storyfolio` directory:
+As a plugin, with no clone (`--sparse` fetches only the plugin):
+
+```bash
+claude plugin marketplace add xitij27/storyfolio --sparse .claude-plugin skills
+claude plugin install storyfolio@storyfolio
+```
+
+Update with `claude plugin marketplace update storyfolio` then
+`claude plugin update storyfolio@storyfolio`; remove with
+`claude plugin uninstall storyfolio@storyfolio`.
+
+Or copy the folder into your project, from the cloned `storyfolio` directory:
 
 ```bash
 mkdir -p /path/to/your-portfolio/.claude/skills
@@ -224,6 +243,32 @@ your-portfolio/
 later session, with the same agent or another, picks up from these files.
 Publishing is your call: the agent asks before anything goes live.
 
+<details>
+<summary><strong>Running and publishing the site yourself</strong></summary>
+
+<br>
+
+In the site's folder:
+
+```bash
+npm ci             # the exact versions in its package-lock.json
+npm run browsers   # Chromium for the checks
+npm test           # then: npm run typecheck, npm run lint
+npm run check      # build, and look at it at desktop and phone size
+npm run dev        # work on it at the local address it prints
+```
+
+On Linux, Chromium needs the system's NSS, NSPR and ALSA libraries; if a
+check fails with `libnspr4.so: cannot open shared object file`, install
+them (on Ubuntu 24.04, `libnss3`, `libnspr4` and `libasound2t64`).
+
+It is an ordinary Next.js app: `npm run build` then `npm start` serves it,
+and any host that runs Next.js can publish it. Its dependencies are yours
+from the moment it is made. It starts on Next.js 16.4.5; upgrade it as you
+would any Next.js app, and run `npm run check` after.
+
+</details>
+
 ## The gallery and the pieces
 
 <a href="https://xitij27.github.io/storyfolio/pieces/"><img src="docs/assets/storyfolio-pieces.jpg" alt="The pieces page: cards showing each piece working, grouped by the chapter of a site it serves." width="100%"></a>
@@ -247,7 +292,7 @@ Storyfolio is in active development, built in four stages.
 | 1. Method | Reading a profile, facts the person confirms, a storyboard of the whole page | **Done**: implemented and evaluated |
 | 2. Engine | The reusable 3D scroll [engine and site scaffold](skills/storyfolio/engine/README.md) | **Done**: approved on desktop and phone |
 | 3. Build | The skill's stops 2 to 6: the site running from the second stop, then its look, its words and a checked whole site | **Done**: six person tests; the author approved the last site |
-| 4. Packaging | Release package, installation proof, full build documentation | **In progress** |
+| 4. Packaging | Release package, installation proof, full build documentation | **In progress**: package frozen and proven; the release waits on the author |
 
 <details>
 <summary><strong>Where it stands (6 November 2026)</strong></summary>
@@ -265,8 +310,30 @@ Storyfolio is in active development, built in four stages.
 - Three looks (night, daylight and blueprint), the person's own words for
   any chapter, a printable CV and project pages. One command checks the
   whole site at desktop and phone size, and without JavaScript or WebGL.
-- Next: stage 4, a release package, its installation proof and this
-  README brought up to date.
+- Stage 4: the package is frozen with a hash for every file. Unpacked
+  outside this repository, it scaffolds a site that passes its tests and
+  every check. Next: the author's decision to publish a release.
+
+</details>
+
+<details>
+<summary><strong>What has been tested, and what has not</strong></summary>
+
+<br>
+
+- **Agents.** Claude Code 2.1.314 installs the plugin from GitHub and lists
+  the skill from `.claude/skills/`; Codex 0.162.1 lists it from
+  `.agents/skills/`. The route for other agents is documented, not tested.
+- **One model.** The person tests ran one model through Codex
+  (`gpt-6.1-sol`, medium effort). The skill has not been tried on another.
+- **One person for planning.** Since the second stop became a choice of one
+  world, the planning stops have been tested on one made-up person.
+- **Phones.** The checks render in software at phone size; how smoothly a
+  site runs on a real phone has to be seen on one.
+- **Without 3D.** Without JavaScript or WebGL, the page still shows the
+  person's name, every chapter's words and the links; the checks confirm it.
+- **Not part of the skill.** Reviewing an existing portfolio, and enforcing
+  privacy rules on the material, are separate work that has not been built.
 
 </details>
 
