@@ -48,6 +48,14 @@ review of every stream.
 
 ## 3. `library/` leaves the package
 
-Moved out of `skills/storyfolio/` so that an install carries only what
-building a site uses. How, and what changed with it, is in the commit that
-moves it and in the [handover](../handover.md).
+Moved from `skills/storyfolio/library/` to `library/` at the repository
+root, so that an install carries only what building a site uses: the
+plugin install fell from 9.7 MB (343 files) to 2.0 MB (132 files). With it
+moved the two contributor tools that keep its copy of `stitch/`:
+`library/scripts/sync-stitch.mjs` and `library/scripts/stitch-copy.test.mjs`.
+Changed to match: the Pages workflow (paths and copy step), the root
+`npm test` globs, `evals/check-skill.mjs`, the library and engine READMEs,
+the README and the documentation map. Historical records, plans and run
+evidence keep the old path. Checked: 422 root tests, `check-skill`, the
+library from a copy (`npm ci`, 54 tests, `BASE_PATH=/storyfolio npm run
+build`), and the plugin validated and installed again.

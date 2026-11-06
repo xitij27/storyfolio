@@ -19,7 +19,8 @@ WSL machine. No model was started.
 ## What was added
 
 - `skills/storyfolio/.claude-plugin/plugin.json`: the plugin's root is the
-  skill folder itself, so an install copies the skill (9.7 MB, 343 files)
+  skill folder itself, so an install copies the skill (9.7 MB, 343 files; 2.0 MB, 132 files
+  once `library/` moved out the same day)
   and none of the repository's evidence (1.6 GB tracked under `evals/`).
 - `skills/storyfolio/.claude-plugin/icon.png`: `docs/assets/storyfolio-mark.png`
   (512 by 512), for the directory listing.
@@ -33,7 +34,7 @@ WSL machine. No model was started.
 | `claude plugin validate skills/storyfolio` | Validation passed; plugin directory checks found nothing to report (after the icon; before it, one `ICON_MISSING` warning) |
 | `claude plugin validate .claude-plugin/marketplace.json` | Validation passed |
 | In a disposable `CLAUDE_CONFIG_DIR`: `claude plugin marketplace add <this checkout>` then `claude plugin install storyfolio@storyfolio` | Both succeeded; `claude plugin list` shows `storyfolio@storyfolio` 0.1.0, enabled |
-| The installed cache against the skill's tracked files | Identical file list (the tracked skill files plus the manifest and icon) |
+| The installed cache against the skill's tracked files | Identical file list (the tracked skill files plus the manifest and icon), before and again after `library/` moved out |
 | `claude plugin details storyfolio` | One skill, `storyfolio`; no agents, hooks or servers; about 61 tokens always on |
 
 ## Not yet tested

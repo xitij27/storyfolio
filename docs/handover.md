@@ -24,11 +24,13 @@ among them the scaffold refusing a portfolio that holds the installed
 skill. 422 tests pass and `check-skill` is ok. The old opening is kept in
 the decision record.
 
-**Waiting on the author.** From the closing review: a real person's
-portfolio and photographs in `evals/reviews/steve-source/` (consent, or
-removal), the rest of the 11 October pre-publication checklist (raw turn
-streams and machine paths under `evals/`), and whether `library/` ships in
-the package. Also the GitHub About's website, the author's look at the
+The author then decided the review's three questions
+([record](history/2026-11-06-release-review-decisions.md)): the real
+portfolio's source, photographs and screenshots are removed from `main`
+(still in git history), the evaluation records stay public, and the
+component library moved out of the skill to `library/` at the root.
+
+**Waiting on the author.** The GitHub About's website, the author's look at the
 sheet on a phone, and a push, which installing from GitHub needs.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
@@ -197,7 +199,7 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   Done: `.claude-plugin/plugin.json` (in `skills/storyfolio/`) and the
   root `marketplace.json`, the plugin installed from a local marketplace,
   the README's status. Left: the allowlist and file-and-hash manifest
-  (Task 1, after the author's three review decisions above), the licence
+  (Task 1), the licence
   and origin review (Task 2), the install from GitHub and by folder copy
   (Task 3), a clean install and scaffolded site from the extracted package
   (Task 4), the README's install and limits (Task 5), and the author's
