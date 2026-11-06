@@ -9,8 +9,8 @@ Approved by the author's "fine looks okay lets proceed" on 6 November
 | Turn | Stop | State |
 |---|---|---|
 | 1 | Read | passed: questions only, no concept (123 s, about 30,500 uncached tokens) |
-| 2 | Concept (one world) | running |
-| 3 | The sheet, then storyboard | |
+| 2 | Concept (one world) | passed: the whole sheet, pieces unchanged, study at Addis Ababa by `city` (289 s, about 74,800 uncached tokens) |
+| 3 | The sheet, then storyboard | running |
 | 4 | Look and move | |
 | 5 | Words | |
 | 6 | Finish | |
