@@ -7,7 +7,9 @@ designing anything, then builds a one-page Next.js site in one of three
 worlds (a sheet of paper, a map of your places, or a pop-up book), where
 each chapter grows out of the last as you scroll.
 
-Invoke it with `/storyfolio` in your portfolio project. It works in six
+Install it in Claude Code with
+`/plugin install storyfolio --marketplace xitij27/storyfolio`, then invoke
+it with `/storyfolio` in your portfolio project. It works in six
 stops, each ending with your approval: the facts, the world, the
 storyboard, the look, your own words, and a checked whole site.
 
@@ -35,6 +37,9 @@ storyboard, the look, your own words, and a checked whole site.
 The map's land comes from Natural Earth (public domain), bundled in
 `engine/stitch/land.json`. The site needs Node.js 22.18 or later with
 built-in TypeScript support.
+
+[Privacy](https://github.com/xitij27/storyfolio/blob/main/skills/storyfolio/PRIVACY.md):
+the skill collects nothing; your material stays in your project.
 
 Source, documentation and test records:
 https://github.com/xitij27/storyfolio. MIT licensed (`LICENSE`).
