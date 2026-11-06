@@ -65,7 +65,9 @@ Not decided: listing the plugin anywhere.
   size fits (136 files against 200 text files and 6 million characters).
 - **Anthropic's plugin directory**: in-app submission forms, paid Claude
   plan, reviewed ([submit](https://www.claude.com/docs/plugins/submit)).
-  The plugin installs the whole folder, as tested. Not yet checked
-  against its requirements.
+  Checked against its requirements on 7 November: the repository was too
+  large and the plugin folder had no README, both fixed by release 0.1.1
+  and a `plugin` branch ([release 0.1.1](../release-0.1.1/README.md)).
+  Submission is the author's, from their claude.ai account.
 - **Open skill directories** that take a GitHub URL (Agent Skills Finder,
   skills.sh, skillsdirectory.com): third-party, not checked.

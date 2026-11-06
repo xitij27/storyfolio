@@ -30,8 +30,8 @@ portfolio's source, photographs and screenshots are removed from `main`
 (still in git history), the evaluation records stay public, and the
 component library moved out of the skill to `library/` at the root.
 
-**Waiting on the author.** The GitHub About's website, the author's look at the
-sheet on a phone. The push for installing from GitHub was made on
+**Waiting on the author.** The author's look at the sheet on a phone, and
+the plugin directory submission ([release 0.1.1](../evals/packaging/release-0.1.1/README.md#for-the-directory-form-the-author-submits)). The push for installing from GitHub was made on
 6 November.
 
 ### 1. ~~Fix the map for Dawit's places~~ (done 31 October)
@@ -225,7 +225,15 @@ Items 6 and 7 of [what is left](history/2026-10-28-what-is-left.md#what-is-left-
   (tag on `a8d88bb6`, the frozen archive and its file hashes attached,
   [notes](../evals/packaging/release-candidate-1/release-notes.md)):
   https://github.com/xitij27/storyfolio/releases/tag/v0.1.0. Stage 4 is
-  done. Left, optional: listing the plugin anywhere.
+  done. On 7 November, on the author's word: the About's website set to
+  the gallery's front page, and **v0.1.1** released (a plugin README for
+  Anthropic's plugin directory, version raised; the engine unchanged) with
+  a `plugin` branch holding only the release's files, small enough for the
+  directory ([release 0.1.1](../evals/packaging/release-0.1.1/README.md),
+  with the branch refresh steps and draft form answers). Agensi does not
+  fit ([findings](../evals/packaging/release-candidate-1/findings.md#listings-looked-at-7-november)).
+  Left: the author's directory submission, and their look at the sheet
+  on a phone.
 
 ### For the next session
 
