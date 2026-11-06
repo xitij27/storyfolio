@@ -22,3 +22,14 @@ found to pan across the whole timeline and wall (not a fault); the turn 3
 wording is noted for the next run; the agent's reduced-motion line is in
 the engine. The fixed site is served at http://172.22.209.33:3171/ for the
 author. No skill text changed, no run, no push.
+
+## Person test 6 goes ahead
+
+Root said that whether stop 4 offers the moves is still untested, and that
+a person test with turn 3's corrected wording would test it, paid, on the
+author's word. The author answered, verbatim:
+
+> okay let us test it
+
+So person test 6 runs: person test 5 again, with turn 3 naming only the
+world.
